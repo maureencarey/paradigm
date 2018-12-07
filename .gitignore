@@ -1,1 +1,3 @@
-./data/aa_seqs_OrthoMCL_5.fasta
+*.dmnd
+*.log
+*.fasta
