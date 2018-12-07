@@ -1,3 +1,4 @@
 *.dmnd
 *.log
 *.fasta
+data/orthology_mapping_jun22/tgondii_toxodb.txt
