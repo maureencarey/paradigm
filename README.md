@@ -5,6 +5,12 @@ Code availability for the manuscript titled "title" by Carey *et al*.
 The article is submitted JOURNAL (DOI: XXX) and available on BioRxiv (see here: XXX).
 
 Reminder, might need to do: chmod +x /path/to/yourscript.sh to execute some bash scripts.
+
+FYI some files are to large to share on github, including (but not limited to):
+    - genome fasta files
+    - compiled diamond databases
+please see .gitignore for specific file names or groups and feel free to email for access.
+
 ## data
 
 All data in subdirectory entitled data.
@@ -38,8 +44,6 @@ outputs:
 Required licenses and files for implementation.
 Includes:
 
-## helper functions
-
 ### helper_functions.py
 
 This functions are used throughout the associated scripts and called typically as 'hf'.
@@ -61,9 +65,13 @@ NOT DONE
 
 ### gene_essentiality.ipnb
 
-## model generation
+## de novo reconstruction
 
-### build_de_novo_models.py
+### helper_functions_1.py
+
+This functions are used throughout the associated scripts and called typically as 'hf'.
+
+### step_2_build_de_novo_models.py
 
 This builds models for all genomes acquired from download_all_eupathDB_release39.R from
 the universal model acquired from BiGG.
@@ -80,9 +88,11 @@ This builds a generic biomass reaction from curation reconstrucitons and adds it
 
 ## model refinement
 
-### gapfilling.py
+### helper_functions_2.py
 
-### preliminary_iPfal17_curation.ipynb CURRENTLY NAMED iPfal17_curation_part1.ipyb
+This functions are used throughout the associated scripts and called typically as 'hf'.
+
+### step_3_curate_iPfal17.py
 
 This implements a few curation steps (see Supplemental Table XXX) to the Plasmodium
 falciparum model published in Carey et al. BMC Genomics 2017.
@@ -92,10 +102,17 @@ curation file (filename, list of curation in Supplemental Table XXX)
 Output:
 iPfal18
 
-### orthology_based_semi_curation.py
+### step_4_build_generic_biomass_reaction.py
+
+### step_5_orthology_based_semi_curation.py
 
 This performs orthology-based semi-curation for all *Plasmodium* reconstructions using the curated iPfal18 reconstruction
 for *Plasmodium falciparum*.
+
+### step_6_task_based_gapfilling.py
+
+gapfilling to generic biomass, species specific biomass (if available), and any tasks idenified in FILENAME (if available)
+
 
 ## other analyses
 
@@ -109,6 +126,22 @@ release 39. Requirements: tidyverse, RCurl, and a whole lot of memory (about XXX
 ## rmarkdown
 
 This includes files to compile the manuscript.
+
+## Slurm scripts
+
+Note: I ran the model generation pipeline on the University of Virginia's High-Performance Computing system, Rivanna, which uses Slurm job management. If run on a different system, I recommend using pipeline.sh. The functionality is identical in the group of slurm files and in pipeline.sh.
+
+### pipeline.sh
+
+This compiles all the information presented in the next three scripts for running all model building scripts.
+
+### pipeline_slurm_step1.slurm
+### pipeline_slurm_step2.slurm
+### pipeline_slurm_step3.slurm
+
+### check_logs.sh
+
+This file parse through a model building log files to identify if any infeasible solutions were generated and writes a new log file with the problems that had infeasible solutions.
 
 ## visualization
 
