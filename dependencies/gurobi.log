@@ -1,0 +1,184 @@
+
+Gurobi 8.0.0 (mac64, Python) logging started Tue Jul 17 14:55:32 2018
+
+Academic license - for non-commercial use only
+
+Gurobi 8.0.0 (mac64, Python) logging started Tue Jul 24 13:09:32 2018
+
+Academic license - for non-commercial use only
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpatfgp0jh.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmp2kw1fxxq.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpmvujn9dx.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpvdbbfty2.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpq9pjsx6j.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('3gmptex') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmp4e30ft20.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmptco842_r.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+
+Gurobi 8.0.0 (mac64, Python) logging started Tue Jul 24 13:36:45 2018
+
+Academic license - for non-commercial use only
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmp8umewpcq.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmp4rj9ft3i.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpttlb4zv8.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('3gmptex') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpwmhqwl07.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpjv3pr6_2.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmp8yzwsbv9.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+Warning: Numeric variable name in LP file ('2agpe120_LSQBKT_e_RSQBKT__t') - often the result
+         of a constant term in the left-hand side of a constraint.
+
+Read LP format model from file /var/folders/cc/8yddd0c55d93vcl9tmjbs1mc0000gn/T/tmpqklt17k6.lp
+Reading time = 0.01 seconds
+: 1022 rows, 2500 columns, 8688 nonzeros
+Changed value of parameter Method to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Parameter Method unchanged
+   Value: 0  Min: -1  Max: 5  Default: -1
+Changed value of parameter Presolve to 0
+   Prev: -1  Min: -1  Max: 2  Default: -1
+
+Gurobi 8.0.0 (mac64, Python) logging started Tue Jul 24 14:00:54 2018
+
+Academic license - for non-commercial use only

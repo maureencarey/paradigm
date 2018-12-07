@@ -1,0 +1,591 @@
+---
+title: "Building a parasite knowledgebase for comparative genomics and modeling"
+author:
+- Maureen A. Carey^[Microbiology, Immunology, and Cancer Biology, University of Virginia]
+- Gregory L. Medlock^[Department of Biomedical Engineering, University of Virginia]
+- Michal Stolarcyzk^[Department of Biology, University of Virginia]
+- Jennifer L. Guler^[Department of Biology, University of Virginia]
+- Jason A. Papin^[Department of Biomedical Engineering, University of Virginia]
+fontsize: 12pt
+output:
+  pdf_document:
+    fig_caption: yes
+  word_document: default
+header-includes:
+- \usepackage{chngcntr}
+- \usepackage{longtable}
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \usepackage[font={footnotesize}]{caption}
+geometry: top=1in, bottom=1in, left=0.5in, right=0.5in
+bibliography: biblio.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra); library(knitr); library(readxl); library(tidyverse)
+library(dplyr); library(reshape2); library(seqinr); library(msa); library(UpSetR)
+library(ggdendro); library(ggpubr)
+```
+
+# Abstract
+
+Eukaryotic single-celled parasites cause many neglected tropical diseases, such as malaria, African sleeping sickness, diarrheal disease, and leishmaniasis, with diverse clinical presentations and large global impacts. Research focused on these pathogens has been limited due to economic and experimental constraints. Accordingly, data collected in one eukaryotic pathogen are frequently extrapolated to infer knowledge about another parasite, across and within genera. Model *in vitro* (like representative apicomplexan parasite, *Toxoplasma gondii*) or *in vivo* systems (like mouse models of disease) are frequently used due to their enhanced experimental manipulability. However, characterization of functional differences among parasite species is limited to *post hoc* and single target studies, limiting the utility of this extrapolation approach. To address this challenge, we present a functional comparative analysis of 162 genomes representing 111 *Plasmodium*, *Toxoplasma*, *Cryptosporidium*, *Entamoeba*, *Trypanosoma*, *Leishmania*, and *Giardia* species, using primarily metabolic modeling. We have generated metabolic reconstructions to serve as a knowledgebase for each parasite and to use for comparative functional genomics We identify similarities and differences in gene essentiality and pathway utilization, facilitating comparison of experimental findings. Using this knowledgebase, we can improve genome annotation, identify species-specific functions, interpret experimental results, and optimize selection of experimental systems for fastidious species.
+
+# Background (to do: reference more heavily)
+
+Malaria, African sleeping sickness, many diarrheal diseases, and leishmaniasis are all caused by eukaryotic single-celled parasites (**Table \ref{tab:disease_para}**), result in over one million preventable deaths annually, and contribute to a significant reduction in disability-adjusted life years. This global health burden makes parasitic diseases a top priority of many economic development and health advocacy groups. However, effective prevention and treatment strategies are lacking. No vaccine exists for any of these diseases. Patients have limited treatment options because few drugs exist for many of these diseases, drug resistance is common, and many drugs have stage specificity. Thus, the development of novel, effective therapeutics is a pressing need. 
+
+```{r disease_para, echo=FALSE, warnings = FALSE}
+# DALYs reference 10.1371/journal.pmed.1001920
+# generated manually
+df = read_xlsx("~/local_documents/work/dissertation/dissertation/data/disease_para.xlsx")
+df$Disease[3] = "Crypto-\nsporidiosis (diarrheal disease)"; colnames(df)[5] = "Vector/\nTransmission" 
+colnames(df)[6] = "Interesting disease/\nparasite features"
+as.data.frame(df) %>%
+  kable(format = "latex",
+        caption="\\label{tab:disease_para}Disease overview. Select diseases dicussed throughout this dissertation with causal parasite and disease burden noted.",
+        caption.short = "Disease overview",
+        booktabs = T, linesep = rep("\\addlinespace",dim(df)[2]-1)) %>% kable_styling(font_size = 9, full_width = T, latex_options = c("striped","hold_position")) %>% 
+  column_spec(1, width = "1.8cm")%>% 
+  column_spec(2, width = "2.3cm", italic = T)%>% 
+  column_spec(4, width = "2.3cm")%>% 
+  column_spec(5, width = "1.8cm")%>% 
+  column_spec(6, width = "3.4cm")
+rm(df)
+
+```
+
+Beyond the economic constraints associated with antimicrobial development, antiparasitic drug development is technically challenging for three primary reasons, namely, these parasites are eukaryotes, have complex life cycles, and are challenging to grow *in vitro*. To elaborate, unlike prokaryotic pathogens, these parasites share many targetable features with their eukaryotic host and/or vector. To overcome the similarity between host and pathogen, strategies similar to the development of cancer therapeutics are necessary to minimize the negative effects on host. Enzyme kinetics can be leveraged such that the drug targets the pathogen's weak points while remaining below the lethal dose for host [@Haanstra2017-wu]. Alternatively, selection of pharmacological treatment can synergize with the host immune response (*e.g.* @Bogdan1991-nz and @Kumaratilake1997-vc). For example, parasites must often survive high redox stress caused by host immune cells; a secondary redox stressor (*i.e.* drug) can synergize with this host response. Unique parasite features (*i.e.* signalling cascades (*e.g.* @Zheng2013-at) or plastid organelles (*e.g.* @Dahl2006-np) can also be targeted, if identified. 
+Secondly, drug development itself is hampered by the parasites' complicated life cycles in one or more hosts. The malaria parasites infect multiple tissue types in host (primate, rodent, bird, or reptile) and vector (mosquito); all of these stages are required for complete development. These diverse environmental conditions are hypothesized to maintain redundancy in each parasite’s genome, as genes and functions may only be utilized during some life stages; thus, drug development must focus on function, not merely presence, of putative essential genes. 
+Many of these organisms have no *in vitro* and *in vivo* culture systems, like *P. vivax* (human malaria) and *Cryptosporidium spp.* (diarrheal disease). Some parasite species have additional unique experimental challenges hindering drug development, like resisting genetic modification. *P. falciparum*, the most lethal human malaria parasite, was considered refractory to genetic modification until recently [@Ghorbal2014-cm; @Lee2014-ml] due to extremely low transfection efficiency; *E. histolytica*, a diarrheal pathogen, has also been refractory to efficient genetic manipulation. The genomes of *Leishmania*, which causes ulcers, develop significant aneuploidy when under selective pressure due to genomic flexibility [@Downing2011-vv; @Sterkers2012-xc]. Although many of these challenges can be circumvented with new technology, the use of clinical samples, and reductionist approaches, there are minimal historic data for reference. Without adequate profiling data (genome-wide essentiality, growth profiling in diverse media conditions, etc.), we do not have the knowledge to rationally design drugs. Untargeted and unbiased screens of chemical compounds for antiparasitic effects have proven useful (if the organism is culturable) but this approach makes predicting and understanding drug resistance and resistance mechanisms challenging. 
+
+As a result, data collected in one organism are frequently extrapolated to infer knowledge about another parasite, across and within genera. Trypanosomes and *Toxoplasma* are frequently used as model organisms for other parasites due to their genetic and biochemical manipulatability. Mouse models of malaria and cryptosporidiosis are caused by different species within the same genera as their human analogs. However, the modest characterization of functional differences among parasite species limits the utility of this extrapolation approach. Computational approaches, such as comparative genomics and modeling, can address these challenges by facilitating rigorous comparisons of eukaryotic organisms to increase the utiliity of extrapolation-based knowledge transfer. Genome-scale metabolic modeling, for example, provides a framework to understand parasite genomes, highlight knowledge gaps, and generate high-confidence data-driven hypotheses. Metabolic models are built from genomic data and by inferring function to complete or connect metabolic pathways; these reconstructions are supplemented with functional genetic and biochemical studies, representing our best understanding of an organism's biochemistry and cellular biology. Here, we present a parasite knowledgebase, **Para**site **D**atabase including **G**enome-scale metabolic **M**odels (**Paradigm**), for this purpose. With Paradigm, we compare metabolic capacity, gene essentiality, and pathway utilization to better leverage experimentally tractable model systems for the study of eukaryotic parasites and antiparasitic drug development
+
+# Methods
+
+All code is available on \href{https://github.com/maureencarey/comparative_parasite_models}{\color{blue}{GitHub, linked here.}} R [@R_Core_Team2017-ie] and R packages tidyverse, ggdendro, seqinr, Biostrings, msa, reshape2, UpSetR, and ggdendro were used for analysis or visualization [@Wickham2017-mq; @De_Vries2013-ie; @Charif2007-vh; @Pages_undated-mp; @Bodenhofer2015-nz; @Wickham2012-eb; @Gehlenborg2017-cz; @De_Vries2013-ie]. Python 3.6.4, pandas, CobraPy 0.13.0 [@Ebrahim2013-au], and Medusa (**CITE**) and code from CarveMe [@Machado2018-sf] and Memote [@Lieven2018-nt] were used for genome-scale metabolic modeling.
+
+__Genomic Analyses:__ Sequences were obtained from EuPathDB release 39 [@Aurrecoechea2017-sv]. EuPathDB curates and compiles genome annotation for all genomes hosted by the database. We used open reading frames identified on EuPathDB and supplemented EuPathDB functional annotations with *de novo* Diamond annotations, described below. EuPathDB's OrthoMCL was used for mapping orthology between species. In brief, orthology was mapped within each EuPathDB database by the 'map by orthology' tool from the genome of each organism with a curated reconstruction to all other genomes within that database. The search protocol was 'new search > genes > taxonomy > organism [pick] > transform by orthology'. We mapped each organism's amino acid sequences using Diamond annotation [@Buchfink2015-ip] against proteins referenced in the BiGG databases [@King2016-cm] or against protein sequences obtained from OrthoMCL, part of EuPathDB that contains orthologous groups of parasite genes [@Li2003-ql]. Diamond is a similar approach to BLAST, with sensitive and fast performance on protein annotations [@Buchfink2015-ip]. 
+
+__Model Generation:__ We generated draft reconstructions by first annotating each organism's amino acid sequences, obtained from EuPathDB [@Aurrecoechea2017-sv], using Diamond annotation [@Buchfink2015-ip] against proteins referenced in the BiGG databases [@King2016-cm]. We next mapped all functional annotations to reactions contained in the BiGG database [@King2016-cm] inspired by the approach conducted with the reconstruction pipeline CarveMe [@Machado2018-sf]. Methods are included in the analytic code hosted on my \href{https://github.com/maureencarey/comparative_parasite_models}{\color{blue}{GitHub page, linked here.}} 
+
+Unlike the CarveMe approach [@Machado2018-sf], we included all high-scoring reactions rather than maximizing the number of high-scoring hits while building a functional network. This conservative approach generates broadly inclusive but incomplete reconstructions (*i.e.* that are not able to produce biomass until gapfilled). This approach added redundant reactions from multiple different compartments (*e.g.* peroxisome, mitochondria, and cytosol) so all reaction versions other than the cytosolic version were pruned unless contained in a relevant compartment (**Table \ref{tab:compartments}**); for genera not included in **Table \ref{tab:compartments}**, only the cytosol and extracellular space were used. For example, if a *Plasmodium* reconstruction contained a reaction in the cytosol, mitochondria, and chloroplast, only the cytoplasmic and mitochondrial reaction versions would be kept. Following this step, a large percentage of each reconstruction's reactions remained in unsupported compartments because there was no analogous cytosolic reaction. Next, reactions only found in an unsupported compartment were moved to the extracellular space or cytosol; specifically, periplasmic metabolites were moved to the extracellular space and all internal subcompartment metabolites were moved to the cytosol. However, this step removed all reactions that summarized a transport reaction from the extracellular space to periplasm or from the cytosol to an unsupported organelle. Note, the extracellular compartment corresponds to the parasitophorous vacuole space contained within the host cell for intracellular parasites (*i.e. Plasmodium*, *Toxoplasma*, *Cryptosporidium*) and the host serum for extracellular parasites (*i.e. Trypanosoma*).
+
+```{r manual_curation, echo=FALSE}
+
+# generated manually
+df = read_excel("~/local_documents/work/dissertation/dissertation/data/manual_curation_table.xlsx",sheet = 1)
+df %>% kable(format = "latex",
+             caption="\\label{tab:manual_curation}Manual modifications to our draft recontructions.",
+             caption.short="Manual modifications to our draft recontructions",
+             booktabs = T, linesep = rep("\\addlinespace",dim(df)[2]-1)) %>% kable_styling(font_size = 9, latex_options = c("striped", "hold_position"), full_width = T) %>%
+  column_spec(2, width = "11cm")
+
+x_modifications = dim(df)[1]
+rm(df)
+
+```
+
+__Manual Curation:__ We performed brief manual curation from literature sources, building on our curation conducted in @Carey2017-pn and **REF ANA's PAPER**. **Table \ref{tab:manual_curation}** contains all modifications resulting from our literature review; see code for implementation. Networks were manually curated with `r x_modifications` modifications to improve our asexual blood-stage *Plasmodium falciparum* 3D7 reconstruction iPfal17 [@Carey2017-pn], generating iPfal18.
+
+Additional manual curation was performed on lipid metabolism of the asexual blood-stage *P. falciparum* using the lipidomics study presented in @Gulati2015-bi (**Supplemental Table X**) adding *XX-XX* reactions, *XX-X * metabolites, and *XX-X* genes. This curation removed aggregate reactions representing lipid metabolism and replaced them with individual reactions for individual lipid species, as supported by the lipidomics study. This model is available (**Supplemental Material**), but was not used for the analyses presented here as the metabolic demands for lipids in our biomass reaction are also aggregated. Inclusion of these reaction is appropriate for understanding lipid metabolism but would create random distributions of flux through the individual reactions that may distract from meaningful changes in flux distributions.
+
+```{r ortho_mods, echo=FALSE}
+
+### NEW TABLE generated on Rivanna
+om = read.csv(file = "~/local_documents/work/comparative_parasite_models/paradigm_preOct2018/data/orthology_modifications_plasmodium_july25.csv", sep = ",")
+om$X = NULL 
+
+reactions_added = round(mean(om$reactions_added)); reactions_sd = zapsmall(sd(om$reactions_added), digits = 3)
+genes_add = round(mean(om$genes_added)); genes_sd = zapsmall(sd(om$genes_added), digits = 3)
+
+colnames(om)[2] = 'Starting no. of genes'
+colnames(om)[3] = 'Reactions added'; colnames(om)[4] = 'Metabolites added'; colnames(om)[5] = 'Genes added'
+
+
+om %>%
+  kable(format = "latex",
+        caption="\\label{tab:ortho_mods}Number of modifications added to each \\textit{Plasmodium} reconstruction based on orthology transformation from iPfal18.",
+        caption.short = "Number of modifications added to each \\textit{Plasmodium} reconstruction based on orthology transformation from iPfal18",
+        booktabs = T, linesep = "") %>% 
+  kable_styling(font_size = 9, full_width = T, latex_options = c("striped","hold_position") )
+
+rm(om)
+
+```
+
+__Automated orthology-driven curation:__ We developed a novel automated curation approach using orthologous transformation, similar to the approach taken by @Abdel-Haleem2018-yr. Our approach leverage the curation conducted in one organism for closely-related organisms. We applied this approach to all draft *Plasmodium* reconstructions using iPfal18 (**Figure \ref{fig:Paradigm}**). We first mapped orthology of *P. falicparum* to each other *Plasmodium* species to build an orthology thesaurus (**Figure \ref{fig:Paradigm}C**). We then added genes and associated reactions from iPfal18 if there was an orthologous gene in the target species' reconstruction (**Figure \ref{fig:Paradigm}D**) resulting in a mean `r genes_add` genes added (SD = `r genes_sd`) and a mean `r reactions_added` reactions added (SD = `r reactions_sd`, **Table \ref{tab:ortho_mods}**). Notably, this approach facilitates the compartmentalization of these reconstructions, a function many automated pipelines fail to include. This is particularly important for parasite-specific compartments like the apicoplast, which is not included in any database.
+
+Models were tested for thermodynamically-infeasible loops and energy-generating cycles; the approach outlined in @Fritzemeir2017 was used with minor modifications for eukaryotic cells. See \href{https://github.com/gulermalaria/metabolomics}{\color{blue}{code, linked here,}} for details.
+
+__Automated data-driven curation:__ Further automated curation of all reconstructions was performed by gapfilling for metabolites measured to be consumed in fluxomic or select media formulation studies. Detailed analysis is provided in our analytic code, \href{https://github.com/gulermalaria/metabolomics}{\color{blue}{on Github, linked here.}} Following an extensive literature review, we compiled data providing evidence for consumption or production of select metabolites (**Supplemental table- auxotrophies references**). Metabolites were defined as consumed by the parasite if (1) the metabolite was radiolabeled, added to media, incorporated into the parasite or converted by the parasite, and this was not seen to the same degree in uninfected host cells (2) the metabolite rescued inhibitor treatment of a metabolically upstream parasite enzyme, or (3) the metabolite is an essential media component for parasite culture. Metabolites were defined to be produced by the parasite if the metabolite was radiolabeled following growth in a media containing a radiolabeled precursor metabolite, and this was not seen to the same degree in uninfected host cells. First, import or excretion of these metabolites were added to the reconstruction. Next, the model objective was changed to an internal demand reaction for the metabolite or excretion reactions, respectively, and was gapfilled sequentially; this ensures import or synthesis of each of these measured metabolites. Reaction added due to gapfilling were given confidence scores.
+
+__Gapfilling:__ Gapfilling is an analytic process used to bridge or complete genetically-supported metabolic pathways to permit the network to fulfill metabolic functions, and was used to generate functional models. To increase the scope of a reconstruction (*i.e.* to add reactions), we perform gapfilling to fill in gaps in a pathways to ensure that the reconstruction can complete a particular task. This optimization problem adds reactions to allow the reconstruction to carry flux under given constraints. The implications of this approach are described in __Biomass Formulation__. We scored gapfilled reactions to summarize the confidence of reaction addition. In short, each gapfilled reaction has a score associated with it for each type of gapfilling performed. We gapfilled for three or four objective functions (see next section) for ten iterations each. Gapfilling confidence is based on how frequently a reaction is added in any of the gapfilling solutions and is noted as follows. For example, a reaction with the score 'OF3_1:1' appeared in 100% of solutions, but only one solution was generated, whereas a reaction with score 'OF3_3:2' as necessary in two out of three solutions. These scores are formatted as ObjectiveFunction_Y:X, with 'ObjectiveFunction' indicating which objective functions were used for gapfilling (note: this ranges from three to four for this study), 'X' indicating the number of times a reaction is added, and 'Y' indicating the number of iterations used to solve each gapfilling problem. Gapfilling was conducted following all steps involving compartmentalization, manual curation, or automated curation. 
+
+```{r biomass_table, echo=FALSE}
+
+#ADD NEW PLASMODIUM MODELS
+### NEW TABLE generated in full_pipeline.ipynb
+df = read.csv(file = "~/local_documents/work/comparative_parasite_models/paradigm_preOct2018/data/other_models/biomass_components_july23.csv", sep = ",")
+df$X = NULL
+colnames(df) = c("C. hominis (2010)", "Leishmania (2008)", "T. gondii (2015)", "iPfal17")
+df %>%
+  kable(format = "latex",
+        caption="\\label{tab:biomass_table}Variable biomass components for published reconstructions.",
+        caption.short = "Variable biomass components for published reconstructions",
+        booktabs = T, linesep = "", longtable = T) %>% 
+  kable_styling(font_size = 9, full_width = T, latex_options = c("striped","repeat_header")) #%>%
+  #column_spec(1, width = "1.75cm") %>% column_spec(2, width = "2.8cm") %>% column_spec(3, width = "4.5cm") %>% column_spec(4, width = "4.7cm")
+
+rm(df)
+
+```
+
+__Objective functions:__ We use two classes of objective functions here to robustly evaluate model performance. First, we maximize ATP production. Second, we use biomasses reactions, including a species- and genus-level curated biomass reactions (if available) and a generic biomass reaction. To generate species-level biomass reactions, we used biomass reactions from existing genome-scale metabolic models as drafts (**Table \ref{tab:biomass_table}**). Species-specific reactions were used for all other species in the genera as the genus-level biomass reaction. Our generic biomass contains metabolites from several curated reconstructions (**Table \ref{tab:biomass_table}**) and thus contains metabolites from the *Plasmodium falicparum*, *Leishmania major*, and *Cryptosporidium hominis* species-specific biomasses with the stoichometry contained in the iPfal18 biomass reaction. Unfortunately, variability in reconstruction namespace (*i.e.* the database used for metabolite and reaction nameing conventions) make it difficult to access data compiled for some parasite reconstructions, like the *Toxoplasma* and *Plasmodium* reconstructions shown, as there are not always one-to-one mappings of variable across databases. This generic biomass was used to capture the most conservatively defined required biosynthetic capacity.
+
+__Model Comparison:__ Resultant networks were compared by euclidean distance of reaction presence or of transporter capability. The BiGG reaction database includes alternative stoichiometries for several reactions; these alternate forms of a single reaction were interpreted as identical reactions. Transporter capability was identified by the presence of a reaction in the reconstruction (prior to gapfilling) that transported a metabolite from the extracellular compartment to the intracellular compartment. Thus, only genetically-supported transporters were analyzed.
+
+__Model Performance Evaluation:__ Network accuracy was evaluated against defined metabolic tasks (**Table \ref{tab:tasks}**) and gene essentiality data (**Table \ref{tab:datasets}**) if availale. In brief, metabolic tasks were defined from the literature and implemented as outlined in @Carey2017-pn. Gene essentiality is simulated by performing single deletion studies in our models. All simulations were performed in an unconstrained model (all exchange reactions were permitted to carry flux, simulating a nutrient rich environment); of note, unconstrained models do not necessarily represent the *in vitro* or *in vivo* environment in which all experiments were conducted, merely the metabolic capacity an organism encodes. Gene deletions were simulated by removing the gene of interest from the model. This change results in the inhibition of flux through all reactions that require that gene to function. If the model could not produce biomass with these constraints, the gene was deemed essential. Knockout accuracy was defined as the sum of true positives (refractory to knockout or lethal genes) and true negatives (nonlethal genes) divided by the total number of predictions. Biochemical studies were also used for model validation (**TABLE**). As targeted metabolomics data were used for model generation (by gapfilling), we excluded these data from the evaluation data, leaving untargeted metabolomics and enzyme inhibitions studies for validation.
+
+```{r tasks, echo=FALSE}
+# __Metabolic Tasks:__ Metabolic tasks were used to evaluate reconstructions and the role of an individual model feature (*i.e.* reaction) in a model. Tasks can be divided into three major types: (1) compartmentalization (*i.e.* number and name of subcellular compartments), (2) growth requirement (*i.e.* metabolites identified in designing a growth media formulations), and (3) enzyme or pathway utilization (*e.g.* an enzyme may be constitutatively active). See **Table \ref{tab:tasks}** for a list of representative metabolic tasks and my GitHub page, \href{https://github.com/maureencarey/}{\color{blue}{linked here}} for a complete list.
+# 
+# 
+# # generated manually
+# df = read_excel("~/local_documents/work/comparative_parasite_models/data/curation/curation_USE.xlsx",sheet = 1)
+# df = df[c(1,36,59,60,61,69,70,91,92,95,108,112,154),]
+# df$Gene = NULL; df$metabolite[8] = df$Enzyme[8]; df$Enzyme = NULL; colnames(df)[3] = "Enzyme/Metabolite"
+# df$notes= NULL; df$feature = NULL; df$task_type = NULL; colnames(df)[6] = 'Task'; df$met_ids = NULL
+# 
+# landscape(df %>%
+#             kable(format = "latex",
+#                   caption="\\label{tab:tasks}Metabolic tasks for all species.",
+#                   caption.short="Metabolic tasks for all species",
+#                   booktabs = T, longtable = T) %>% kable_styling(font_size = 6, latex_options = c("striped", "repeat_header")) %>%
+#             column_spec(1,width = "2cm") %>% column_spec(2, width = "1cm"),
+#           margin = "1in")
+
+```
+
+```{r task_heatmap, echo=FALSE, fig.cap="\\label{fig:task_heatmap} __ADD ACCURACY, Validation against metabolic task.__", fig.scap='Accuracy of gene essentiality model predictions', fig.align='center'}
+# __ CUT METABOLIC TASKS TO FOCUS THIS SECTION ON TOPOLOGY AND PF v PB CHAPTER ON SIMULATIONS__
+# We also used biochemical experiments, such as metabolomics data collection, fluxomics, and enzyme inhibition, for model validation (**Figure \ref{fig:task_heatmap}**). **REFERENCE PERFORMANCE ONCE DONE**
+# 
+# df = read_excel("~/local_documents/work/comparative_parasite_models/data/curation/curation_USE.xlsx",sheet = 1)
+# df = df[rowSums(is.na(df)) != ncol(df), ]; df$Gene = NULL; df$metabolite[8] = df$Enzyme[8] 
+# df$Enzyme = NULL; colnames(df)[3] = "Enzyme/Metabolite";df$notes= NULL; df$feature = NULL; 
+# df$Reference = NULL; colnames(df)[6] = 'Task'; df$met_ids = NULL
+# 
+# ### ADD ACCURACY
+# df$Accurate_prediction = sample(c(0,1), replace=TRUE, size=nrow(df))
+# ####
+# 
+# df = df %>% mutate(task_specific = paste(`Enzyme/Metabolite`, `Feature_human_readable`, sep = ', '),
+#                    Genus_species = ifelse(is.na(Species), paste(Genus, '(all)', sep = ' '), paste(Genus, Species, sep = ' ')))
+# df$Feature_human_readable = NULL; df$`Enzyme/Metabolite` = NULL; df$Genus = NULL; df$Species = NULL
+# ggplot(data = df) + 
+#   geom_tile(aes(x = task_specific, y = Genus_species, fill = as.factor(Accurate_prediction))) +
+#   xlab('Tasks') + ylab(NULL) + labs(fill="Model accuracy") +
+#   theme(axis.text.x = element_blank(),
+#         axis.ticks = element_blank())
+
+```
+
+```{r tab3, echo=FALSE, warnings = FALSE}
+# UPDATE
+# enzymatic_reactions = c()
+# enzymatic = c(length(enzymatic_reactions), paste(enzymatic_reactions, collapse = ', '))
+# new_metabolites = c()
+# new_metabolites = c(length(new_metabolites), paste(new_metabolites, collapse = ', '))
+# 
+# df <- data.frame(cbind(enzymatic,new_metabolites)); rownames(df) = c('number added','features')
+# colnames(df) = c('enzymatic reactions','new metabolites')
+# 
+# df %>%
+#   kable(format = "latex", 
+#         caption="\\label{tab:tab3}Features added from metabolomics integration", 
+#         caption.short = "Features added from metabolomics integration",
+#         booktabs = T) %>% kable_styling(font_size = 9, full_width = T) %>%
+#   column_spec(2, width = "6cm") %>% column_spec(1, width = "1cm") %>% column_spec(3, width = "7cm") %>%
+#   footnote(general = "Metabolites omitted from table if merely added to a new compartment.")
+
+```
+
+# Results
+
+## Comparative genomics
+
+```{r genome_sum1, echo=FALSE, fig.cap="\\label{fig:genome_sum1} Sequence similarity. We compare genome similarity by examining a conserved open reading frame, the lactate dehydrogenase gene. Amino acid sequences are clustered and colored by genus. Amino acid sequences were obtained by searching 'lactate dehydrogenase' on EuPathDB (omitting Fungi and Oomycetes), thus, include putative genes and validated enzymes.", fig.scap='Sequence similarity', fig.align='center'}
+
+# generated from local_documents/work/comparative_parasite_models/paradigm/LDH_seq_similarity.R
+knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/LDH_cluster.pdf")
+
+```
+
+```{r genomes, echo=FALSE, warning=FALSE}
+
+### Updated July25 generated in full_pipeline.ipynb
+df = read.csv("/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm_preOct2018/data/reaction_matrix_july25.csv", stringsAsFactors = F)
+
+#colnames(df) = gsub("_May2018.xml","",colnames(df))
+rownames(df) = df$X; df$X = NULL
+
+plasmodb = c("PadleriG01","PbergheiANKA","PbillcollinsiG01","PblacklockiG01","Pchabaudichabaudi","PcoatneyiHackeri","PcynomolgiB","PcynomolgiM","Pfalciparum3D7","PfalciparumIT","PfragileNilgiri","PgaboniG01","PgaboniSY75","Pgallinaceum8A","PinuiSanAntonio1","PknowlesiH","PknowlesiMalayanPk1A","PmalariaeUG01","PovalecurtisiGH01","PpraefalciparumG01","PreichenowiCDC","PreichenowiG01","PrelictumSGS1.like","PvinckeipetteriCR","Pvinckeivinckeivinckei","PvivaxP01","PvivaxSal1","Pyoeliiyoelii17X","Pyoeliiyoelii17XNL","PyoeliiyoeliiYM") # ALL
+cryptodb = c("Candersoni30847","Chominis30976","ChominisTU502","ChominisTU502_2012","ChominisUdeA01","CmeleagridisUKMEL1","CmurisRN66","CparvumIowaII","CtyzzeriUGA55","Cubiquitum39726","CveliaCCMP2878", "GniphandrodesUnknown", "VbrassicaformisCCMP3155")
+# removed Cbaileyi and Chominis37999 ChominisUKH1 since they don't have an annotated genome yet
+giardiadb = c("GintestinalisAssemblageADH", "GintestinalisAssemblageAWB", "GintestinalisAssemblageBGS", "GintestinalisAssemblageBGS_B", "GintestinalisAssemblageEP15", "SsalmonicidaATCC50377") # No AssemblageA
+tritrypdb = c("BayalaiB08.376","CfasciculataCfCl","EmonterogeiiLV88","LaethiopicaL147", "LarabicaLEM1108", 
+              "LbraziliensisMHOMBR75M2903", "LbraziliensisMHOMBR75M2904", "LdonovaniBPK282A1", "LenriettiiLEM3045", "LgerbilliLEM452","LinfantumJPCM5", "LmajorFriedlin", "LmajorLV39c5", 
+              "LmajorSD75", "LmexicanaMHOMGT2001U1103", "LpanamensisMHOMCOL81L13","LpanamensisMHOMPA94PSC1", "LpyrrhocorisH10", "LseymouriATCC30220", "LspMARLEM2494", "LtarentolaeParrotTarII", 
+              "LtropicaL590", "LturanicaLEM423", "PconfusumCUL13","TbruceigambienseDAL972", "TbruceiLister427", "TbruceiTREU927", "TcongolenseIL3000", "TcruziCLBrener", "TcruziCLBrenerEsmeraldo.like", 
+              "TcruziCLBrenerNon.Esmeraldo.like", "TcruzicruziDm28c","TcruziDm28c", "TcruzimarinkelleiB7", "TcruziSylvioX10.1", "TcruziSylvioX10.1.2012","TevansiSTIB805", "TgrayiANR4", "TrangeliSC58", "TvivaxY486", "TtheileriEdinburgh")
+# remove LamazonensisMHOMBR71973M2269 LdonovaniBHU1220 TcruziEsmeraldo TcruziJRcl4 TcruziTulacl2
+trichdb = c("TvaginalisG3")
+amoebadb =  c("AcastellaniiNeff", "EdisparSAW760", "EhistolyticaHM1IMSS.A", "EhistolyticaHM1IMSS.B", "EhistolyticaHM1IMSS", "EhistolyticaHM3IMSS", "EhistolyticaKU27", "EinvadensIP1", "EmoshkovskiiLaredo", "EnuttalliP19", "NfowleriATCC30863") # ALL
+# removed AcastellaniiMa AculbertsoniA1 AlenticulataPD2S AlugdunensisL3a Amauritaniensis1652 ApalestinensisReich AquinaVil3 ArhysodesSingh AspGalka AspIncertaesedis AspT4b-type AtriangularisSH621 EhistolyticaDS4 EhistolyticaHM1CA EhistolyticaKU48 EhistolyticaKU50 EhistolyticaMS96 AtriangularisSH621 EhistolyticaDS4 AquinaVil3    AastronyxisUnknown EhistolyticaRahman
+toxodb = c("CcayetanensisCHN_HEN01", "CsuisWienI","EacervulinaHoughton", "EbrunettiHoughton", "EfalciformisBayerHaberkorn1970", "EmaximaWeybridge", "EmitisHoughton", "EnecatrixHoughton", "EpraecoxHoughton", "EtenellaHoughton", "HhammondiHH34", "NcaninumLIV", "SneuronaSN3", "SneuronaSOSN1", "TgondiiARI", "TgondiiFOU", "TgondiiGAB2.2007.GAL.DOM2", "TgondiiGT1", "TgondiiMAS", "TgondiiME49", "Tgondiip89", "TgondiiRH", "TgondiiRUB", "TgondiiTgCatPRC2", "TgondiiVAND", "TgondiiVEG")
+# removed TgondiiCAST TgondiiCOUG TgondiiCtCo5 TgondiiTgCATBr5 TgondiiTgCATBr9 TgondiiTgCkUg2   
+microsporidiadb = c("AalgeraePRA109", "AalgeraePRA339", "EaedisUSNM41457", "EbieneusiH348", "EcuniculiEC1", "EcuniculiEC2", "EcuniculiEC3", "EcuniculiGBM1", "EhellemATCC50504", "EhellemSwiss", "EintestinalisATCC50506","EromaleaeSJ2008","MdaphniaeUGP3", "NausubeliERTm2", "NausubeliERTm6", "NbombycisCQ1", "NceranaeBRL01", "NdisplodereJUm2807","NparisiiERTm1", "NparisiiERTm3", "OcolligataOC4", "PneurophiliaMK1", "Slophii42_110", "ThominisUnknown", "VcorneaeATCC50505", "Vculicisfloridensis")
+# removed AalgeraeUndeen HtvaerminnensisOER-3-3
+piroplasmadb = c("BbigeminaBOND", "BbovisT2Bo", "BmicrotiRI","BovataMiyake", "CfelisWinnie", "TannulataAnkara", "TequiWA", "TorientalisShintoku", "TparvaMuguga") # ALL
+
+database = NA
+for (i in 1:ncol(df)) {
+  if (colnames(df)[i]%in%plasmodb) { y = 'PlasmoDB'
+  } else if (colnames(df)[i]%in%cryptodb) { y = 'CryptoDB'
+  } else if (colnames(df)[i]%in%giardiadb) { y = 'GiardiaDB'
+  } else if (colnames(df)[i]%in%tritrypdb) { y = 'TriTrypDB'
+  } else if (colnames(df)[i]%in%trichdb) { y = 'TrichDB'
+  } else if (colnames(df)[i]%in%amoebadb) { y = 'AmoebaDB'
+  } else if (colnames(df)[i]%in%toxodb) { y = 'ToxoDB'
+  } else if (colnames(df)[i]%in%microsporidiadb) { y = 'MicrosporidiaDB'
+  } else if (colnames(df)[i]%in%piroplasmadb) { y = 'PiroplasmaDB'
+  } else { y = 'error'
+  print(colnames(df)[i])}
+  database[i] = y }
+
+cn = colnames(df)
+metadata = as.data.frame(cbind(cn,database))
+colnames(metadata) = c('species','database')
+
+df = metadata[order(metadata$database,metadata$species),]; rownames(df) = NULL
+df$species = as.character(df$species)
+
+### ADD GENOME SIZE (MB, ORF), NUM CHROMOSOMES, NUM PLASTIDS, % ANNOT
+all_data = read.csv("/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm_preOct2018/data/all_EuPathDB_data.csv", stringsAsFactors = F)
+all_data$NCBI.taxon.ID = NULL; all_data$Data.source = NULL; all_data$Genome.version = NULL; all_data$Genome.wide.reseq = NULL
+colnames(all_data)[1] = 'species_to_merge'; colnames(all_data)[2] = "EuPathDB Database"; colnames(all_data)[3] = "Open reading frames"
+for (j in 1:length(all_data$species_to_merge)) {
+  x = as.character(all_data$species_to_merge[j])
+  if (strsplit(x," ")[[1]][1] == 'Giardia') {
+    prev = paste(paste(substring(strsplit(x," ")[[1]][1],1,1),'intestinalis',sep = ""),strsplit(x," ")[[1]][2], sep = "") }
+  else { prev = paste(substring(strsplit(x," ")[[1]][1],1,1),strsplit(x," ")[[1]][2], sep = "")}
+  for (i in 3:length(strsplit(x," ")[[1]])) {prev = paste(prev, strsplit(x," ")[[1]][i], sep = "")}
+  print(prev)
+  all_data$species_to_merge[j] = prev }
+
+for (i in 1:nrow(all_data)) {
+  if (grepl('-', all_data$species_to_merge[i])) {
+    all_data$species_to_merge[i] = gsub("-", "", all_data$species_to_merge[i]) } }
+
+for (i in 1:nrow(all_data)) {
+  if (grepl('strain', all_data$species_to_merge[i])) {
+    all_data$species_to_merge[i] = gsub("strain", "", all_data$species_to_merge[i]) } }
+
+for (i in 1:nrow(all_data)) {
+  if (grepl('str\\.', all_data$species_to_merge[i])) {
+    all_data$species_to_merge[i] = gsub("str\\.", "", all_data$species_to_merge[i]) } }
+
+for (i in 1:nrow(all_data)) {
+  if (grepl('subsp\\.', all_data$species_to_merge[i])) {
+    all_data$species_to_merge[i] = gsub("subsp\\.", "", all_data$species_to_merge[i]) } }
+
+for (i in 1:nrow(all_data)) {
+  if (grepl('sp\\.', all_data$species_to_merge[i])) {
+    all_data$species_to_merge[i] = gsub("sp\\.", "", all_data$species_to_merge[i]) } }
+
+for (i in 1:nrow(all_data)) {
+  if (grepl('isolate', all_data$species_to_merge[i])) {
+    all_data$species_to_merge[i] = gsub("isolate", "", all_data$species_to_merge[i]) } }
+
+for (i in 1:nrow(all_data)) {
+  if (grepl(':', all_data$species_to_merge[i])) {
+    all_data$species_to_merge[i] = gsub(":", "", all_data$species_to_merge[i]) } }
+
+for (i in 1:nrow(df)) {
+  if (grepl('\\.', df$species[i])) {
+    df$species[i] = gsub(".", "", df$species[i], fixed = TRUE) }
+  else { df$species[i] = df$species[i]}}
+
+# merge all_data and df
+test = merge(df,all_data, by.x = "species", by.y = "species_to_merge", all = T)
+# FIX MISSING
+# df %>%
+#   kable(format = "latex",
+#         caption="\\label{tab:genomes}Genomes from EuPathDB.",
+#         caption.short="Genomes from EuPathDB",
+#         booktabs = T, linesep = "", longtable = T) %>% kable_styling(font_size = 9, full_width = T, latex_options = c("striped","repeat_header"))
+
+rm(df, metadata, cn, database, i, y)
+
+```
+
+Comparative genomics in the field of eukaryotic pathogens and apicomplexan parasites has primarily been focused on the study of parasite surface proteins that interact with the host (**REFS**). Accordingly, we first explore an unbiased comparative genomics analysis using 162 publically available genome sequences from the EuPathDB databases (**Table \ref{tab:genomes}**); each EuPathDB is a rough phylogenetic grouping containing only organisms from one genus or several closely-related genera. Sequence-based analyses investigating genetic similarity can be biased by AT content, genome alignment and assembly, and structural genomic variants, and eukaryotic parasites include organisms with *X-X*% AT content, *X-X* chromosomes or contigs, and potential significant structural variation (*e.g.* *X-X* size, presence of plastid genomes, *X-X* chromosomes; **Table \ref{tab:genomes}**). Accordingly, we analyzed amino acid sequences by examining a conserved open reading frame across nearly all genomes (**Suppl. Fig. \ref{fig:genome_sum1}**). Lactate dehydrogenase sequence clusters by genera, but it is challenging to interpret meaningful similarities and differences across genera (**Suppl. Fig. \ref{fig:genome_sum1}**).
+
+** A V B REFERENCE IN THSI PARAGRAPH \/**
+
+```{r genome_sum2A, echo=FALSE, fig.cap="\\label{fig:genome_sum2A} Genome reannotation by species with the largest gene sets shown. Genomes were reannotated to orthoMCL genes using Diamond. Plot can be read as a Venn Diagram. Bar plots show the intersection of all gene annotations in each species indicated with a dot. For example, the first column contains only gene annotations in \\textit{T. cruzi} cruzi Dm28c, whereas the fourth column contains annotations shared by only \\textit{C. velia} CCMP2878 and \\textit{V. brassicaformis} CCMP3155.", fig.scap='Genome reannotation by species', fig.env='figure',fig.align='center'}
+#
+### NEW TABLE generated on Rivanna
+# generated from local_documents/work/comparative_parasite_models/paradigm/make_genome_sum2.R
+knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/genome_sum2_A.png")
+
+```
+
+To explore functional genomic content, we reannotated all genomes using Diamond against OrthoMCL genes and compared annotated genes in each genome. Each genome has unique gene annotations but many are shared (examples in **Fig. \ref{fig:genome_sum2A}**). For example, *Trichomonas vaginalis* G3 is the only complete genome on the *Trichomonas* database (TrichDB); this genome has the second most unique annotations by genome and TrichDB has the third most unique annotations by genome despite containing only one genome. Unsurprisingly, some of the larger genomes, including *Chromera velia* CCMP2878 (CryptoDB, 193.4 megabases), *Acanthamoeba castellani* Neff (AmoebaDB, 42 megabases), and *T. vaginalis* G3 (176.3 megabases) have the most unique annotations (**Fig. \ref{fig:genome_sum2A}**). Annotation similarities can generate novel hypotheses about functional similarities. For example, the largest overlapping annotation group (CryptoDB and AmoebaDB) contains two types gut pathogens, the causes of cryptosporidiosis and amoebiasis, and these shared annotations may be consistent with mechanisms of gut pathogenesis (**Fig. \ref{fig:genome_sum2A}**). Similarly, *Chromera velia* CCMP2878 and *Vitrella brassicaformis* CCMP3155 share a large number of annotations, likely representing the photosynthetic functions encoded by the two genomes (**Fig. \ref{fig:genome_sum2A}**). However, there are unique gene annotations associated with EuPathDB database (**Fig. \ref{fig:genome_sum2A}**), and it is unclear whether these differences arise from divergent metabolic functionality or incomplete genome annotation of these enzymes (**Table \ref{tab:genomes}**).
+
+## Model Construction
+
+```{r Paradigm, echo=FALSE, fig.cap="\\label{fig:Paradigm} Parasite Database for Genome-Scale Metabolic Models (Paradigm). A: \\textit{De novo} reconstructions are built from putative protein sequences from EuPathDB for each organism. Amino acid sequences are mapped to functional domains using Diamond. Next draft reconstructions are built by mapping functional domains to known metabolic reactions. B: Reconstruction curation is an iterative process. For \\textit{P. falciparum.}, we have curated two versions of the reconstruction, based on a network published by Plata, et al. C: Mapped orthology from the EuPathDB databases are used to generated an orthology thesaurus, or a list of gene identifiers that have orthologous functions. D: Draft reconstructions are curated into a 'semi-curated' reconstruction by adding all orthologous genes and associated reactions that are found in our well-curated reconstruction. This approach leverages the curation conducted in one organism to closely-related organisms.", fig.scap='Parasite Database for Genome-Scale Metabolic Models (Paradigm)', fig.align='center'}
+
+
+# generated manually
+knitr::include_graphics("~/local_documents/work/dissertation/figures/pipeline_figure__dissertation.pdf")
+```
+
+To address this challenge, we generated a metabolic reconstruction for each species using a novel pipeline (**Fig. \ref{fig:Paradigm}**). Genome-scale metabolic reconstructions are built from genomic data and by inferring function to complete or connect metabolic pathways; these reconstructions can be supplemented with functional genetic and biochemical studies (see __Methods__). In brief, our pipeline included generating a *de novo* reconstruction for each genome (**Fig. \ref{fig:Paradigm}A**). We next generated a semi-curated reconstruction for a subset of organisms by transforming a well-curated reconstruction (example shown in **Fig. \ref{fig:Paradigm}B** using iPfal18, curation in [@Carey2017-pn; **REF ANA's PAPER**] and in Supplemental Results) using genetic orthology (**Fig. \ref{fig:Paradigm}C** and **D**). Draft and semi-curated reconstructions were then gapfilled to produce biomass or complete literature-derived biochemical requirements. Parasites were compared using draft reconstructions at the *de novo* reconstruction step (**Fig. \ref{fig:model_sum1}**, **\ref{fig:model_sum2}**, **\ref{fig:curated_model_sum}**, **\ref{fig:transporter}**, **INCLUDE ALL FIGURES**) and using semi-curated reconstructions at the automated orthology-driven curation step (**Figure**), as well as using the predictions generated by the final gapfilled model (**Figure**). 
+
+```{r curated_model_sum, echo=FALSE, fig.cap="\\label{fig:curated_model_sum} Network similarity. Networks were clustered based on reaction presence. Color indicates genus.", fig.scap='Network similarity', fig.align='center'}
+# 
+# # calc # of reaction shared by all models
+# # cals most similar and most different models
+# #### pca of reaction presence matrix, color code by genus
+
+# ### USE GAPFILLED VERSION for paper
+# df = read.csv("/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data/reaction_matrix_july25.csv")
+# rownames(df) = df$X; df$X = NULL
+# df = df[,-which(colnames(df) == 'TgondiiRH')]
+# num_rxns_in_all = dim(subset(df, rowSums(df)==162))[1]
+# num_rxns_in_most = dim(subset(df, rowSums(df)>80))[1]
+# percent_in_most = num_rxns_in_most/dim(df)[1]
+# 
+# # d = dist(df)
+# # hc = hclust(d) 
+# # fit <- cmdscale(d,eig=TRUE) # k is the number of dim
+# # x <- fit$points[,1]; y <- fit$points[,2]; colnames(fit$points) = c('x', 'y')
+# # rxn_occurance = ggplot(data = as.data.frame(fit$points), aes(x = x, y = y)) + geom_point() + xlab('Coordinate 1') + ylab('Coordinate 2')
+# 
+# d = dist(t(df))
+# df = as.data.frame(as.matrix(d))
+# df$species1 <- rownames(df)
+# melted_df = melt(df, id.vars = c('species1')); 
+# melted_df2 = subset(melted_df, value<5);
+# melted_df1 = subset(melted_df2, value>0);
+# 
+# melted_df0 = subset(melted_df1, value<2);
+# melted_max = subset(melted_df, value>50)
+# # hc = hclust(d) 
+# fit <- cmdscale(d,eig=TRUE) # k is the number of dim
+# x <- fit$points[,1]; y <- fit$points[,2]; colnames(fit$points) = c('x', 'y')
+# approx_genus= substr(rownames(fit$points),1,1)
+# extracellular_para = ifelse(approx_genus == 'L',1,ifelse(approx_genus == 'T',1,0))
+# extracellular_para = ifelse(substring(rownames(fit$points),1,7) == 'Tgondii' ,0, extracellular_para)
+# #epithelial_para = approx_genus
+# rbc_para = ifelse(approx_genus == 'P',1,0)
+# toxo = ifelse(substring(rownames(fit$points),1,7) == 'Tgondii' ,0, 1)
+# toxo = ifelse(approx_genus == 'C',1,0)
+# 
+# p0 = ggplot(data = as.data.frame(fit$points), aes(x = x, y = y)) + geom_point(aes(color = as.factor(approx_genus))) + xlab('Coordinate 1') + ylab('Coordinate 2') + guides(color = FALSE) + ggtitle('Color by genus')
+# p1 = ggplot(data = as.data.frame(fit$points), aes(x = x, y = y)) + geom_point(aes(color = as.factor(extracellular_para))) + xlab('Coordinate 1') + ylab('Coordinate 2') + guides(color = FALSE) + ggtitle('Color by intra/extracellular parasite')
+# # p2 = ggplot(data = as.data.frame(fit$points), aes(x = x, y = y)) + geom_point(aes(color = as.factor(epithelial_para))) + xlab('Coordinate 1') + ylab('Coordinate 2') + guides(color = FALSE) + ggtitle('Color by epithelial cell invading parasite')
+# p3 = ggplot(data = as.data.frame(fit$points), aes(x = x, y = y)) + geom_point(aes(color = as.factor(rbc_para))) + xlab('Coordinate 1') + ylab('Coordinate 2') + guides(color = FALSE)   + ggtitle('Color by RBC-invading parasite')
+# 
+# p_final = ggarrange(p0, p1, p3, 
+#                     labels = c("A", "B", "C"),
+#                     ncol = 3, nrow = 1)
+# ggsave("~/local_documents/work/dissertation/dissertation/figures/reaction_content_similarity.pdf", p_final, width = 10.5, height = 3, units = "in", dpi = 600)
+# 
+# p_final
+knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/reaction_content_similarity.pdf")
+
+```
+
+```{r model_sum1, echo=FALSE, fig.cap="\\label{fig:model_sum1} Draft reconstructions for 162 genomes. Genome size (no. of open reading frames) is indicated with triangles. Model size (no. of reactions in the reconstruction) is indicated by circles. Bars represent the number of unique reactions in a reconstruction. Genomes are color coded by their EuPathDB database.", fig.scap='Draft reconstructions for 162 genomes', fig.align='center'}
+
+# UPDATED July 25 generated in local_documents/work/comparative_parasite_models/paradigm/upsetR_models_uncurated.R
+knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/model_overview_by_database25.pdf")
+
+```
+
+
+```{r model_sum2, echo=FALSE, fig.cap="\\label{fig:model_sum2} Draft reconstructions reveal unique functions in all organisms. A: Larger genomes generate larger reconstructions; size of genome measured by number of open reading frames, or ORFs. B: Larger reconstructions do not necessarily have more unique metabolic reactions, or reactions not found in any of the other 161 models. All reconstructions contain at least one unique reaction. C: Reconstructions of all sizes contain few unique features (defined as only one unique reaction), not just small reconstructions. D: Over 400 reactions are found in one reconstruction only (left side), whereas 40 reactions are found in all reconstructions (right side).", fig.scap='Draft reconstructions reveal unique functions in all organisms', fig.align='center'}
+
+# UPDATED  July 25 generated in local_documents/work/comparative_parasite_models/paradigm/upsetR_models_uncurated.R
+knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/model_sum_comparison25.pdf")
+
+### USE GAPFILLED VERSION for paper
+df = read.csv("/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm_preOct2018/data/reaction_matrix_july25.csv")
+rownames(df) = df$X; df$X = NULL
+df = df[,-which(colnames(df) == 'TgondiiRH')]
+num_rxns_in_all = dim(subset(df, rowSums(df)==162))[1]
+num_rxns_in_most = dim(subset(df, rowSums(df)>80))[1]
+percent_in_most = zapsmall(num_rxns_in_most/dim(df)[1], digits = 4)
+
+```
+
+Our *de novo* (draft) reconstructions contain only genetically supported information (**Fig. \ref{fig:Paradigm}A**), and reconstruction size correlates with genome size (**Fig. \ref{fig:model_sum2}A**). Unsurprisingly, the large genome of *Chromera velia* CCMP2878 (CryptoDB, 31,799 ORFs, 2,943 reactions) has the most unique reactions (92, **Fig. \ref{fig:model_sum1}**). However, even small reconstructions contain unique reactions (**Fig. \ref{fig:model_sum2}B**). In fact, all reconstructions contain at least one unique reaction (**Fig. \ref{fig:model_sum2}B**), and small reconstructions do not have fewer unique reactions (**Fig. \ref{fig:model_sum2}C**). A core set of reactions are contained in all 162 reconstructions (right side of **Fig. \ref{fig:model_sum2}D**), and a large set of reactions are shared by only a few models (left side of **Fig. \ref{fig:model_sum2}D**). Reactions shared by all models include functions such as glycolysis. **HOW DOES GAPFILLING CHANGE THIS**
+
+## Niche-specific network structures
+
+```{r genome_sum2B, echo=FALSE, fig.cap="\\label{fig:genome_sum2B} Genome reannotation by database. See previous figure for interpretation guidance.", fig.scap='Genome reannotation by database', fig.align='center'}
+#
+### NEW TABLE generated on Rivanna
+# generated from local_documents/work/comparative_parasite_models/paradigm/make_genome_sum2.R
+knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/genome_sum2_B.png")
+
+```
+
+We next compare network structure and the predictions generated by each model, as we compared genomic content and annotations (**Fig. \ref{fig:genome_sum1}**, **\ref{fig:genome_sum2A}**, and **\ref{fig:genome_sum2B}**). Network structures were minimally overlapping with `r num_rxns_in_all` reactions shared by all reconstructions and `r num_rxns_in_most` reactions in at least 50% of models. By comparing metabolic reactions in each reconstruction, we compare metabolic capacity of each species; two pairs, first *P. falciparum* 3D7 and IT and second *P. yoelii* yoelii YM and 17X, were most similar and *C. velia* CCMP2878 and *T. cruzi* CL-Brener were most different, in contrast with the genetic similarity (**Figure \ref{fig:genome_sum1}**). As expected, models generated from genomes in the same genus contain similar sets of reactions (**Figure \ref{fig:curated_model_sum}**). However, phylogeny does not dictate model similarity, as models often cluster within environmental niche rather than phylogenetic grouping. Apicomplexan parasites cluster tightly within genus but not across genus (**Figure**). *Cryptosporidium* parasite cluster with *Giardia* and other gut pathogens rather than other Apicomplexa (**Figure**).
+
+```{r kinase, echo=FALSE}
+
+kinase_results = read.csv("/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm_preOct2018/data/diy7bm_output/kinase_results.csv")
+kinase_results$X = NULL; kinase_results$percentage = kinase_results$percentage *100
+
+min_phosphate =  zapsmall(min(kinase_results$percentage), digits = 4)
+max_phosphate = zapsmall(max(kinase_results$percentage),digits = 4)
+
+min_phosphate_number = min(kinase_results$number)
+max_phosphate_number = max(kinase_results$number)
+
+tgondii = subset(kinase_results, 'Tgondii' == substr(species,1,7))
+plasmodium = subset(kinase_results, 'P' == substr(species,1,1))
+plasmodium = subset(plasmodium, species != 'PneurophiliaMK1')
+plasmodium = subset(plasmodium, species != 'PconfusumCUL13')
+crypto = subset(kinase_results, 'C' == substr(species,1,1))
+crypto = subset(crypto, species != 'CveliaCCMP2878')
+crypto = subset(crypto, species != 'CfasciculataCfCl')
+crypto = subset(crypto, species != 'CcayetanensisCHN_HEN01')
+crypto = subset(crypto, species != 'CfelisWinnie')
+tc = t.test(tgondii$percentage,crypto$percentage)$p.value
+tp = t.test(tgondii$percentage,plasmodium$percentage)$p.value
+
+pf = subset(plasmodium,'Pfal' == substr(species,1,4))
+pv = subset(plasmodium,'Pviv' == substr(species,1,4))
+tpp = t.test(pf$percentage,pv$percentage)$p.value
+
+kinase_results$percentage = zapsmall(kinase_results$percentage, digits = 4)
+kinase_results %>%
+  kable(format = "latex",
+        caption="\\label{tab:kinase}Number and ratio of kinase-like reactions in each model.",
+        caption.short="Number and ratio of kinase-like reactions in each model", #linesep = ""
+        booktabs = T, longtable = T, linesep = "") %>% kable_styling(font_size = 9, full_width = T,  
+                                                                     latex_options = c("striped","repeat_header"))
+rm(kinase_results,crypto,plasmodium)
+
+```
+
+```{r transporter, echo=FALSE, fig.cap="\\label{fig:transporter} Genetically-supported transporters. Dimensionality reduction of capacity for imported metabolites. A: Reconstructions cluster by some genera. B: Extracellular parasites (blue) tend to have a negative coordinate 1 score. C: Red blood cell-infecting parasites (blue) tend to have a slight positive score for coordinates 1 and 2.", fig.scap='Genetically-supported transporters', fig.align='center'}
+
+### updated
+# from transporter_similarity.ipynb
+# UPDATED generated in local_documents/work/comparative_parasite_models/paradigm/transporter_similarity.R
+#knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/transporter_similarity.pdf")
+knitr::include_graphics("~/local_documents/work/dissertation/dissertation/figures/transporter_similarity.pdf")
+
+```
+
+To explore each parasite's metabolic dependence on their host cells, we identified metabolites that could be imported via a genetically-supported transporter. We conducted a pairwise similarity between the set of metabolites that could be imported in each reconstructions. Following classical multidimensional scaling (or principal coordinates analysis, **Figure \ref{fig:transporter}A**), we compared transporter topology between genera and parasite groups. Reconstructions from organisms in the same genera had similar transport ability (**Figure \ref{fig:transporter}A**); additionally, reconstructions separate by some host cell types, like the organism's ability to divide extracellularly (**Figure \ref{fig:transporter}B**) or in a host red blood cell (**Figure \ref{fig:transporter}C**).
+
+Next, we performed automated curation. All reconstructions were gapfilled to ensure the network could consume or produce metabolites identified in **Supplemental Table X**. This gapfilling step required *X-X* additional reactions per reconstruction. Next, all *Plasmodium* reconstructions were semi-curated using our automated curation pipeline and the curated reconstruction, iPfal18 of *Plasmodium falciparum* metabolism (**Figure \ref{fig:Paradigm}**) and gapfilled to generate functional networks (*i.e.* networks that could product ATP and 'grow' as measured by the ability to produce biomass). Many modification were made to each *Plasmodium* reconstruction following semi-curation (**Figure \ref{fig:Paradigm}C** and **Table \ref{tab:ortho_mods}**), greatly improving the genome-wide coverage of the reconstructions. Lastly, reconstructions were gapfilled to generate biomass (see **Biomass** in **Methods**), adding X-X reactions and X-X metabolites. 
+
+## Final model performance
+
+```{r accuracy_multispecies, echo=FALSE, fig.cap="\\label{fig:accuracy_multispeces} Accuracy of gene essentiality model predictions. A: Functions (reaction networks) obtained via \\textit{de novo} model construction or only orthologous transformation are similar in accuracy for \\textit{P. berghei}, but the set of correct gene essentiality predictions are different using the two different networks, motivating the integrated approach presented in \ref{fig:pipeline}. B: The semi-curated reconstructions are similar to or more accurate than their corresponding draft reconstruction, and always larger in scope. C: False positives (genes that are essential \\textit{in silico} and nonessential \\textit{in vitro}) are higher in XXX and false negatives (genes that are nonessential \\textit{in silico} and essential \\textit{in vitro}) are higher in XXX.", fig.scap='Accuracy of gene essentiality model predictions', fig.align='center'}
+
+# knitr::include_graphics("")
+
+```
+
+```{r datasets, echo=FALSE}
+
+df = as.data.frame(matrix(rep(NA,5*3), nrow = 5, ncol = 3))
+colnames(df) = c('Organism','Dataset type','Reference (DOI)')
+df$Organism = c('Toxoplasma gondii GT1','Plasmodium falciparum 3D7','Plasmodium berghei ANKA','Trypanosoma brucei 2T1', 'Trypanosoma brucei  MiTat 1.2, clone 221a')
+df$`Reference (DOI)` = c('Sidik 2016 (10.1016/j.cell.2016.08.019)','Zhang 2018 (10.1126/science.aap7847)','Bushell 2017 (10.1016/j.cell.2017.06.030)','Stortz 2017 (10.1371/journal.ppat.1006477)','Alsford 2011 (10.1101/gr.115089.110)')
+df$`Dataset type` = c('CRISPR site-directed mutagenesis','piggyBac transposon mutagenesis','transfection mutagenesis','RNAi screen','RNAi screen')
+
+df %>%
+  kable(format = "latex",
+        caption="\\label{tab:datasets}Genome-wide essentiality screens for eukaryotic parasites.",
+        caption.short="Genome-wide essentiality screens for eukaryotic parasites",
+        booktabs = T) %>% kable_styling(font_size = 6, full_width = T, bootstrap_options = c("hover", "condensed", "responsive"))
+
+```
+
+To evaluate these networks, we compare *in silico* predictions to experimental results, like gene essentiality and biochemical essentiality studies. These datasets were available for only *Plasmodium falciparum* and *berghei*, *Toxoplasma gondii*, and *Trypanosoma brucei* (**Table \ref{tab:datasets}**) and implemented for *Plasmodium falciparum* and *berghei* (**Figure \ref{fig:accuracy_multispecies}**). Essentiality of select genes have been interrogated in other species, and will be explored in future studies. Reaction networks obtained via *de novo* model construction or only orthologous transformation are similar in accuracy for *P. berghei* (**Figure \ref{fig:accuracy_multispecies}A**), but the set of correct gene essentiality predictions are different using the two different networks, motivating the integrated approach presented in \ref{fig:pipeline}. The semi-curated reconstructions are larger in scope due to the addition of reactions associated with genes added via orthologous-transformation, and their gene essentiality accuracy is similar to or more accurate than their corresponding draft reconstruction (**Figure \ref{fig:accuracy_multispecies}B**). Finally, with our semi-curated reconstructions, we compared metabolic networks to identify divergent metabolism and pathways in which model organisms were similar. By exploring where each network fails to predict essentiality, we generate targeted experimental hypotheses for exploring differences between species and improving genome annotation.
+
+We tested accuracy of model predictions from the *de novo* reconstruction, the orthology-translated reconstruction, and the final semi-curated reconstruction for *P. bergehi* and compared these summary statistics to the prediction accuracy generated by our well-curated *iPfal17* (**Figure \ref{fig:multipspecies_accuracy}**). This comparison was used to motivate our approach over *de novo* reconstruction building as our pipeline generates a reconstruction more accurate than *de novo* reconstruction and comparable to a well-curated reconstruction.
+
+# Discussion
+
+Here, we presented 162 novel metabolic reconstructions for major human pathogens and closely-related species and a pipeline for generating high-quality reconstructions from genomes (**Figure \ref{fig:Paradigm}**). These reconstructions represent the first genome-scale metabolic reconstructions for many of these organisms, making Paradigm the broadest biochemical database for eukaryotic parasites to date. Paradigm uses BiGG reaction and metabolite nomenclature [@King2016-cm], facilitating future work involving host-pathogen interaction modeling, and EuPathDB gene nomenclature [@@Aurrecoechea2017-sv], consistent with field standards. Reproducible data integration approaches are used to curate each reconstruction; code and data formating are available in the **Supplemental Material**. Our draft reconstruction approach contains key features to generate comprehensive networks for eukaryotic cells, making it unique among existing automated network reconstruction pipelines. Our semi-curation approach leverages the curation conducted in manually curated reconstructions for closely-related organisms and genetic orthology, generating reconstructions that are more comprehensive than draft reconstructions. Both draft and semi-curated reconstructions can be used for comparative analyses, further curated by the modeling community, and applied to interrogate clinically and biologically relevant phenotypes.
+
+Our approach has several key features tailored to eukaryotic pathogens. For example, discussion of biomass formulation is sorely lacking in many novel reconstruction papers and the assumptions used in formulated a biomass reaction for prokaryotes may not apply to eukaryotes. These assumptions are important as the objective function (like a biomass reaction) influences gapfilling and essentiality analyses. For example, in the first genome-scale metabolic model of any *Cryptosporidium* species, *C. hominis* [@Vanee2010-wb], 30 of 117 reactions involved in lipid synthesis were unsupported by genetic evidence. The selection of biomass precursor metabolites like lipid species impact these results; for example, the 30 gapfilled reactions might not be added if alternative or fewer lipid species were included in the biomass reaction. Thus, to address these biomass-induced biases, we used multiple objective functions (ATP or biomass synthesis) and performed each gapfilling query 10 times to add confidence to our gapfilled reactions. For our semi-curated reconstructions, we also generated biomass reactions at multiple different scales: a universal and a genus-level biomass. We gapfilled each model to each of these objective reactions and added confidence scores to gapfilled reactions, corresponding to the number of gapfill solutions in which the reaction was added. These confidence scores inform our interpretation of model predictions (*i.e.* predictions involving low-confidence gapfilled reactions are low-confidence predictions) and highlight reactions for future manual curation. While including all gapfilled reactions (as opposed to just one possible solution) is not standard within the field, previous work has highlighted the uncertainty in network structure that gapfilling introduces [@Biggs2017-fw]. Thus, we believe that this uncertainty should be presented for future users and our confidence scores are a novel way to summarize this uncertainty. 
+
+```{r compart_percent, echo=FALSE}
+
+### NEED TO UPDATE DATA, code updated
+# 
+# # if made on rivanna
+# setwd("~/local_documents/work/comparative_parasite_models/paradigm/data/rivanna_output/rivanna_output/wrong_compartment_output/")
+# temp = list.files(path = "~/local_documents/work/comparative_parasite_models/paradigm/data/rivanna_output/rivanna_output/wrong_compartment_output/", pattern="*.csv")
+# myfiles = lapply(temp, read.csv)
+# df = bind_rows(myfiles); df$rowname = NULL; colnames(df) = c('Species','Percent of Reactions')
+# df$Species = lapply(df$Species, function(x) {strsplit(x,'_')[[1]][1]})
+# 
+# # if done on desktop computer
+# # df = read_csv("~/local_documents/work/comparative_parasite_models/paradigm/data/percent_reactions_in_wrong_compartment_july17.csv")
+# # colnames(df) = c('Species','Percent of Reactions')
+# # df$Species = substr(df$Species,1,nchar(df$Species)-10)
+# 
+# df %>% kable(format = "latex",
+#              caption="\\label{tab:compart_percent}UPDATE Percent of reactions remaining in an unsupported compartment.",
+#              caption.short="UPDATE Percent of reactions remaining in an unsupported compartment",
+#              booktabs = T, longtable = T) %>% kable_styling(font_size = 6, latex_options = c("striped", "repeat_header"))
+# rm(df)
+
+```
+
+```{r compartments, echo=FALSE}
+#This step also added over **XXX** reactions to the BiGG database.
+
+# generated manually  
+df = read_excel("~/local_documents/work/dissertation/dissertation/data/compartments.xlsx",sheet = 1)
+df %>% kable(format = "latex",
+             caption="\\label{tab:compartments}Subcellular compartments by genus.",
+             caption.short="Subcellular compartments by genus",
+             booktabs = T, linesep = rep("\\addlinespace",dim(df)[2]-1)) %>% 
+  kable_styling(font_size = 9, latex_options = c("striped","repeat_header","hold_position"), full_width = T) %>%
+  column_spec(2, width = "11cm")
+
+rm(df)
+
+```
+
+Similarly, compartmentalization can induce biases in a model's predictions, as demonstrated in @Carey2017-pn. Compartmentalization is particularly relevant for generating reconstructions for eukaryotic organisms and a weak step of automated reconstruction approaches. To our knowledge, no automated approach addresses compartmentalization and, thus, compartmentalization is always added manually added. Both our *de novo* reconstruction and orthology-driven approaches addresses this. Compartmentalization was incorporated into our *de novo* reconstruction pipeline and implemented for several genera (**Table \ref{tab:compartments}**). Furthermore, we used a curated model to inform the compartmentalization of each semi-curated model; genes associated with compartmentalized reactions were mapped via orthology, assuming orthologous genes has comparable localization across species. This adds compartments unique to these organisms, like the apicoplast for apicomplexan parasites (*i.e.* *Plasmodium*).
+
+However, our approach regarding compartmentalization yields one principle weakness; no curation regarding the removal of functionality is implemented. For example, because genetically supported reactions were added to all feasible compartments, this adds plausible hypothetical network functionality. If a gene-encoded enzyme maps to mitochondrial and cytoplasmic reactions in an organism that contains a mitochondria, both versions will be included, adding network redundancy that may not be biologically accurate. Alternatively, if an enzyme maps to a chloroplast reaction that is not included in the BiGG database in any other subcellular compartment, we moved the reaction to the cytosol. It is plausible that chloroplast reactions like this example are not catalyzed by the parasite. However, it is likely that parasite do have functionality not well summarized in this database, which contains no parasite reconstructions, but 6 mammalian, 5 other eukaryotic, 52 *E. coli*, and 12 other bacterial reconstructions [@King2016-cm]. These modifications are encoded in our analytic pipeline for future reference (\href{https://github.com/maureencarey/}{\color{blue}{see code, linked here}}). Consequently, our reconstructions will require manual network curation especially regarding pruning of excess functionality. This is also a weakness of our orthology-driven curation approach, which adds function without function removal, and of many modeling construction and validation (*i.e.* metabolic tasks) approaches as it is difficult to validate lack of function.
+
+Our approach generated more accurate and comprehensive models. To evaluate these networks, we compare *in silico* predictions to experimental results, like gene essentiality to targeted knockouts and genome-wide screens. Importantly, we tested accuracy of model predictions from the *de novo* reconstruction, the orthology-translated reconstruction, and the final semi-curated reconstruction for *P. bergehi* and compared these summary statistics to the prediction accuracy generated by our well-curated *iPfal17*. This comparison was used to motivate our approach over *de novo* reconstruction building as our pipeline generates a reconstruction more accurate than *de novo* reconstruction and comparable to a well-curated reconstruction (**Figure \ref{fig:accuracy_multispecies}**). However, all of our models have imperfect accuracy. False positives, or when the model incorrectly predicts a gene or enzyme as essential, are a product of the model building process; these reconstructions are built to summarize *all* metabolic capabilities of the organism, not the specific stage-dependent phenotype of an organism in the experimental system. Thus, constraining a reconstruction with *in vitro* expression data will reduce the false positive rate. False negatives, or when the model incorrectly predicts a gene or enzyme as nonessential, highlight gaps in our understanding of the organism's metabolism. These can be pursued when manually curating individual networks.
+
+Directly answering our motivating biological question, we compared metabolic networks to identify divergent or conserved metabolic pathways to better leverage model systems for drug development. Network structures were quite unique with only `r percent_in_most`% of all reactions in more than 50% of the reconstructions; network topology did however clustered by genus (**Figure \ref{fig:curated_model_sum}**) and transport ability is associated with host environment (**Figure \ref{fig:transporter}**). Despite structural similarities, minor topological differences in networks confer key metabolic strengths or weaknesses. For example, we identified a significant variation in the number of phosphate transferring reactions in *Toxoplasma gondii* and *Cryptosporidium* or *Plasmodium* (**Table \ref{tab:kinase}**), making *T. gondii* a poor model system for kinase and phosphatase-based inhibitor screens for these species as off-target effects may vary significantly between organisms. For both *Plasmodium falciparum* and *Cryptosporidium*, inhibitors for phosphatidylinositol kinases are promising antiparasitics [@Hassett2018-il;@Manjunatha2017-gg]. However, kinase inhibitors are well-known for their promiscuity [@Klaeger2017-pu], and an enrichment of kinase-like reactions in *Cryptosporidium* may result in enhanced efficacy of the inhibitor. Fortunately, there was an insignificant difference in the ratio of kinase reactions in *Plasmodium falciparum* and *Plasmodium vivax* strains (**Table \ref{tab:kinase}**). Because there is no *in vitro* culture system for *P. vivax*, inhibitor screens can only be conducted in *P. falciparum*; we predict the off-target effects would be comparable in both virulent *Plasmodium* species.
+
+# Conclusions
+
+Here, we present a Paradigm, a framework for comparing and contrasting eukaryotic parasites and their metabolic function. We demonstrate the utility of this framework by identifing several novel findings, not readily apparent by genomic analysis alone. First, all parasite genomes encode unique metabolic functions, regardless of genome size, and parasites within the same genera tend to have similar network topology overall. Parasite may also have convergently evolved to their metabolic niche as enteric pathogens, for example, share metabolic functions and host cell type is associated with genetically-encoded transport ability from the extracellular environment to the parasite cytoplasm. Lastly, networks vary in the number and ratio of phosphate-using reaction they contain and the effect of this must be explored in inhibitor screens.
+
+Paradigm provides a framework for organizing and interpreting our biochemical knowledge about eukaryotic parasites. This framework implements and builds on field-accepted standards for genome-scale metabolic modeling and the latest genome annotations in the parasitology field and can be implemented with other organisms, eukaryotic or prokaryotic. Paradigm, specifically, can be used broadly by the community and re-implemented iteratively to incorporate new genome sequences, novel datasets, and genome annotation updates. We call these networks 'semi-curated' to differentiate between the commonly used and referenced, uncurated 'draft' and well-curated network states. However, each reconstruction will require additional manual curation to maximize the utility and predictive accuracy. These reconstructions can be used to generate targeted experimental hypotheses for exploring differences between species and improving genome annotation by exploring differences between *in vitro* observations and *in silico* predictions. By applying this approach, we aim to develop a framework for identifying the best *in vitro* system or non-primate infection model of disease for drug development, and hypothesize that the best test system may vary by metabolic pathway for any one human pathogen.
