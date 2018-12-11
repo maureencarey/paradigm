@@ -6,7 +6,7 @@
 #SBATCH --partition=parallel
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=6000
-#SBATCH --account=MY_ACCOUNT
+#SBATCH --account=mac9jc
 
 module load gurobi-7.0.2
 module load anaconda3
