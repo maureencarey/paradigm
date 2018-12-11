@@ -2,7 +2,7 @@
 
 # run bioinformatic steps
 cd /Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/
-R ./data_acquistion/step_0a_download_all_eupathDB_release.R # update to 40
+Rscript ./data_acquistion/step_0a_download_all_eupathDB_release41.R
 echo "downloaded models"
 bash ./data_acquistion/step_0b_make_diamond_database
 echo "made annotation databases"
