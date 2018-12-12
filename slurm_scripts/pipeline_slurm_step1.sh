@@ -3,11 +3,10 @@
 cd ./paradigm
 
 # DOWNLOAD GENOMES
-module load R # NEED TO UNCOMMENT OUT NEXT STEP
+module load R/3.4.3
 Rscript ./data_acquistion/step_0_download_all_eupathDB_release41.R
 echo "downloaded models"
 
-# install diamond?????, gunzip, wget
 # PREP FOR ANNOTATE GENOMES
 cd ./paradigm/data
 module load diamond
@@ -46,7 +45,7 @@ echo "diamond annotation complete"
 cd .. # paradigm directory
 module load anaconda3
 source activate paradigm_env
-python ./data_acquistion/step_1_genome_annotation
+python3 ./data_acquistion/step_1_genome_annotation
 echo "processed annotations"
 
 # FINISH CURATION OF iPfal17

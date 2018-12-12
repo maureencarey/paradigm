@@ -1,4 +1,5 @@
-library(tidyverse); library(RCurl)
+# library(tidyverse)
+library(RCurl)
 # Feb 9th 2018 MAC, updated May 23rd 2018, MAC, updated July 24th 2018 MAC, updated for release 39 Oct 4th, 2018 MAC, updated for release 41 on Dec 11, 2018
 
 version = 41
