@@ -27,8 +27,8 @@ SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 SPECIES_ID_old = SPECIES_ID
 if 'final_denovo_' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID.split('final_denovo_')[1]
-if 'with_biomass_denovo_' in SPECIES_ID:
-    SPECIES_ID = SPECIES_ID.split('with_biomass_denovo_')[1]
+if 'with_biomass_' in SPECIES_ID:
+    SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 if 'ortho_' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID.split('ortho_')[1]
 if 'DIY' in SPECIES_ID:
