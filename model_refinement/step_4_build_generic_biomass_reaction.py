@@ -13,8 +13,8 @@ from datetime import date
 from datetime import datetime
 import logging
 
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+data_path = "/home/mac9jc/paradigm/data"
+model_path = "/home/mac9jc/paradigm/models"
 os.chdir(model_path)
 
 parser = argparse.ArgumentParser(description='Read in the species model')

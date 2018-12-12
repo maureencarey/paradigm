@@ -2,3 +2,4 @@
 *.log
 *.fasta
 data/orthology_mapping_jun22/tgondii_toxodb.txt
+!check_logs12_12_2018.log

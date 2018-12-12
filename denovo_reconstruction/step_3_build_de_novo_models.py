@@ -21,21 +21,21 @@ SPECIES_ID = SPECIES_ID.split('_BiGG.')[0] # get rid of extension
 
 
 day = datetime.now().strftime('%d_%m_%Y')
-logging.basicConfig(filename='step2_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
+logging.basicConfig(filename='step3_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 
-logging.info('BEGIN STEP 2')
+logging.info('BEGIN STEP 3')
 logging.info(SPECIES_ID)
 
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
-og_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/"
+data_path = "/home/mac9jc/paradigm/data"
+model_path = "/home/mac9jc/paradigm/models"
+og_path = "/home/mac9jc/paradigm/"
 
 # universal reaction bag for model generation
-os.chdir(data_path)
+os.chdir(model_path)
 universal_model = cobra.io.load_json_model('universal_model_oct26_2018.json')
 universal_model = hf.update_universal_model(universal_model)
-
+os.chdir(data_path)
 logging.info('loaded universal')
 
 # compartments in universal reaction bag
@@ -80,8 +80,7 @@ for reaction, data in universal_dict_with_alts.items():
     universal_dict_with_alts[reaction] = data_with_options
 
 # database mapping - this is for release 39, must update if using a different EuPathDB release
-plasmodb = ["PadleriG01","PbergheiANKA","PbillcollinsiG01","PblacklockiG01","Pchabaudichabaudi","PcoatneyiHackeri","PcynomolgiB","PcynomolgiM","Pfalciparum3D7","PfalciparumIT","PfragileNilgiri","PgaboniG01","PgaboniSY75","Pgallinaceum8A","PinuiSanAntonio1","PknowlesiH","PknowlesiMalayanPk1A","PmalariaeUG01","PovalecurtisiGH01","PpraefalciparumG01","PreichenowiCDC","PreichenowiG01","PrelictumSGS1-like","PvinckeipetteriCR","Pvinckeivinckeivinckei","PvivaxP01","PvivaxSal1","Pyoeliiyoelii17X","Pyoeliiyoelii17XNL","PyoeliiyoeliiYM"]
-# MUST ASK PERMISSION TO USE 3D7 as of Oct 4 2018
+plasmodb = ["PadleriG01","PbergheiANKA","PbillcollinsiG01","PblacklockiG01","Pchabaudichabaudi","PcoatneyiHackeri","PcynomolgiB","PcynomolgiM","Pfalciparum3D7","Pfalciparum7G8","PfalciparumCD01","PfalciparumDd2","PfalciparumGA01","PfalciparumGB4","PfalciparumGN01","PfalciparumHB3","PfalciparumIT","PfalciparumKE01","PfalciparumKH01","PfalciparumKH02","PfalciparumML01","PfalciparumSD01","PfalciparumSN01","PfalciparumTG01","PfragileNilgiri","PgaboniG01","PgaboniSY75","Pgallinaceum8A","PinuiSanAntonio1","PknowlesiH","PknowlesiMalayanPk1A","PmalariaeUG01","PovalecurtisiGH01","PpraefalciparumG01","PreichenowiCDC","PreichenowiG01","PrelictumSGS1-like","PvinckeipetteriCR","Pvinckeivinckeivinckei","PvivaxP01","PvivaxSal1","Pyoeliiyoelii17X","Pyoeliiyoelii17XNL","PyoeliiyoeliiYM"]
 cryptodb = ["Candersoni30847","Chominis30976","ChominisTU502","ChominisTU502_2012","ChominisUdeA01","CmeleagridisUKMEL1","CmurisRN66","CparvumIowaII","CtyzzeriUGA55", "Cubiquitum39726","CveliaCCMP2878", "GniphandrodesUnknown", "VbrassicaformisCCMP3155"]
 giardiadb = ["GintestinalisAssemblageADH", "GintestinalisAssemblageAWB", "GintestinalisAssemblageBGS", "GintestinalisAssemblageBGS_B", "GintestinalisAssemblageEP15", "SsalmonicidaATCC50377"]
 tritrypdb = ["BayalaiB08-376","CfasciculataCfCl","EmonterogeiiLV88","LaethiopicaL147", "LarabicaLEM1108", "LbraziliensisMHOMBR75M2903", "LbraziliensisMHOMBR75M2904", "LdonovaniBPK282A1", "LenriettiiLEM3045", "LgerbilliLEM452","LinfantumJPCM5", "LmajorFriedlin", "LmajorLV39c5", "LmajorSD75.1", "LmexicanaMHOMGT2001U1103", "LpanamensisMHOMCOL81L13","LpanamensisMHOMPA94PSC1", "LpyrrhocorisH10", "LseymouriATCC30220", "LspMARLEM2494", "LtarentolaeParrotTarII", "LtropicaL590", "LturanicaLEM423", "PconfusumCUL13","TbruceigambienseDAL972", "TbruceiLister427", "TbruceiTREU927", "TcongolenseIL3000", "TcruziCLBrener", "TcruziCLBrenerEsmeraldo-like", "TcruziCLBrenerNon-Esmeraldo-like", "TcruzicruziDm28c","TcruziDm28c", "TcruzimarinkelleiB7", "TcruziSylvioX10-1", "TcruziSylvioX10-1-2012","TevansiSTIB805", "TgrayiANR4", "TrangeliSC58", "TvivaxY486", "TtheileriEdinburgh"]
@@ -89,9 +88,9 @@ tritrypdb = ["BayalaiB08-376","CfasciculataCfCl","EmonterogeiiLV88","Laethiopica
 trichdb = ["TvaginalisG3"]
 amoebadb = ["AcastellaniiNeff", "EdisparSAW760", "EhistolyticaHM1IMSS-A", "EhistolyticaHM1IMSS-B", "EhistolyticaHM1IMSS", "EhistolyticaHM3IMSS", "EhistolyticaKU27", "EinvadensIP1", "EmoshkovskiiLaredo", "EnuttalliP19", "NfowleriATCC30863"]
 toxodb = ["CcayetanensisCHN_HEN01", "CsuisWienI","EacervulinaHoughton", "EbrunettiHoughton", "EfalciformisBayerHaberkorn1970", "EmaximaWeybridge", "EmitisHoughton", "EnecatrixHoughton", "EpraecoxHoughton", "EtenellaHoughton", "HhammondiHH34", "NcaninumLIV", "SneuronaSN3", "SneuronaSOSN1", "TgondiiARI", "TgondiiFOU", "TgondiiGAB2-2007-GAL-DOM2", "TgondiiGT1", "TgondiiMAS", "TgondiiME49", "Tgondiip89", "TgondiiRH", "TgondiiRUB", "TgondiiTgCatPRC2", "TgondiiVAND", "TgondiiVEG"]
-microsporidiadb = ["AalgeraePRA109", "AalgeraePRA339", "EaedisUSNM41457", "EbieneusiH348", "EcanceriGB1","EcuniculiEC1", "EcuniculiEC2", "EcuniculiEC3", "EcuniculiGBM1", "EhellemATCC50504", "EhellemSwiss", "EhepatopenaeiTH1","EintestinalisATCC50506","EromaleaeSJ2008","Heriocheircanceri","HeriocheirGB1", "MdaphniaeUGP3", "NausubeliERTm2", "NausubeliERTm6", "NbombycisCQ1", "NceranaeBRL01", "NdisplodereJUm2807","NparisiiERTm1", "NparisiiERTm3", "OcolligataOC4", "PneurophiliaMK1", "Slophii42_110", "ThominisUnknown", "VcorneaeATCC50505", "Vculicisfloridensis"]
+microsporidiadb = ["AalgeraePRA109", "AalgeraePRA339", "AspWSBS2006","EaedisUSNM41457", "EbieneusiH348", "EcanceriGB1","EcuniculiEC1", "EcuniculiEC2", "EcuniculiEC3","EcuniculiEcunIII-L","EcuniculiGBM1", "EhellemATCC50504", "EhellemSwiss", "EhepatopenaeiTH1","EintestinalisATCC50506", "EromaleaeSJ2008","Heriocheircanceri","HeriocheirGB1", "MdaphniaeUGP3", "NausubeliERTm2", "NausubeliERTm6", "NbombycisCQ1", "NceranaeBRL01", "NceranaePA08_1199","NdisplodereJUm2807","NparisiiERTm1", "NparisiiERTm3", "OcolligataOC4", "PneurophiliaMK1", "Slophii42_110", "ThominisUnknown", "VcorneaeATCC50505", "Vculicisfloridensis"]
 piroplasmadb = ["BbigeminaBOND", "BbovisT2Bo", "BmicrotiRI","BovataMiyake", "CfelisWinnie", "TannulataAnkara", "TequiWA", "TorientalisShintoku", "TparvaMuguga"]
-fungidb = ["AaculeatusATCC16872", "AbrasiliensisCBS101740", "AcampestrisIBT28561", "Acandida2VRR", "AcarbonariusITEM5010", "AclavatusNRRL1", "AfischeriNRRL181","AflavusNRRL3357","AfumigatusA1163","AfumigatusAf293", "AglaucusCBS516.65","AinvadansNJM9701", "AlaibachiiNc14", "AluchuensisCBS106.47", "AmacrogynusATCC38327", "AnidulansFGSCA4", "AnigerATCC1015", "AnigerCBS513-88", "AnovofumigatusIBT16806", "AochraceoroseusIBT24754","AoryzaeRIB40", "AsteyniiIBT23096", "AsydowiiCBS593.65", "AterreusNIH2624", "AtubingensisCBS134.48", "AversicolorCBS583.65", "AwentiiDTO134E9","AzonataCBS506.65", "BcinereaB05-10", "BdendrobatidisJEL423", "CalbicansSC5314", "CalbicansSC5314_B", "CalbicansWO1", "CaurisB8441", "Ccinereaokay7-130", "CdeuterogattiiR265", "CgattiiCA1873", "CgattiiEJB2", "CgattiiIND107", "CgattiiWM276", "CglabrataCBS138", "CimmitisH538-4", "CimmitisRS", "ClusitaniaeATCC42720", "CneoformansB-3501A", "CneoformansH99", "CneoformansJEC21", "CneoformansKN99", "CposadasiiC735deltSOWgp", "CposadasiiRMSCC3488", "CposadasiiRMSCC3700", "CposadasiiSilveira", "FfujikuroiIMI58289", "FgraminearumPH-1", "Foxysporum26406", "Foxysporum4287", "Foxysporum54006", "FoxysporumFo47", "Foxysporumrace1", "Foxysporumrace4", "Fverticillioides7600", "HarabidopsidisEmoy2", "HcapsulatumG186AR", "HcapsulatumG217B", "HcapsulatumH143", "HcapsulatumH88", "HcapsulatumNAm1", "McircinelloidesCBS277-49", "MglobosaCBS7966", "Mlarici-populina98AG31", "Moryzae70-15", "MoryzaeBR32", "NcrassaOR74A", "NdiscretaFGSC8579", "NtetraspermaFGSC2508", "PaphanidermatumDAOMBR444", "ParrhenomanesATCC12531", "PblakesleeanusNRRL1555", "PbrasiliensisPb03", "PbrasiliensisPb18", "PcapsiciLT1534", "PchrysosporiumRP-78", "PcinnamomiCBS144-22", "PgraminisCRL75-36-700-3", "PinfestansT30-4", "PirregulareDAOMBR486", "PiwayamaiDAOMBR242034", "PjiroveciiSE8", "PlutziiPb01", "PparasiticaINRA-310", "PramorumPr-102", "PrubensWisconsin54-1255", "PsojaeP6497", "PultimumBR650", "PultimumDAOMBR144", "PvexansDAOMBR484", "RdelemarRA99-880", "ScerevisiaeS288c", "SdiclinaVS20", "SjaponicusyFS275", "Smacrosporak-hell", "SoctosporusyFS286", "SparasiticaCBS223", "Spombe972h", "SpunctatusDAOMBR117", "SreilianumSRZ2", "Sschenckii1099-18", "Ssclerotiorum1980UF-70", "TmarneffeiATCC18224", "TmesentericaDSM1558", "TreeseiQM6a", "TstipitatusATCC10500", "Umaydis521", "Ureesii1704", "YlipolyticaCLIB122", "ZtriticiIPO323"]
+fungidb = ["AaculeatusATCC16872", "AbrasiliensisCBS101740", "AcampestrisIBT28561", "Acandida2VRR", "AcarbonariusITEM5010", "AclavatusNRRL1", "AfischeriNRRL181","AflavusNRRL3357","AfumigatusA1163","AfumigatusAf293", "AglaucusCBS516.65","AinvadansNJM9701", "AlaibachiiNc14", "AluchuensisCBS106.47", "AmacrogynusATCC38327", "AnidulansFGSCA4", "AnigerATCC1015", "AnigerCBS513-88", "AnovofumigatusIBT16806", "AochraceoroseusIBT24754","AoryzaeRIB40", "AsteyniiIBT23096", "AsydowiiCBS593.65", "AterreusNIH2624", "AtubingensisCBS134.48", "AversicolorCBS583.65", "AwentiiDTO134E9","AzonataCBS506.65", "BcinereaB05-10", "BdendrobatidisJEL423", "CalbicansSC5314", "CalbicansSC5314_B", "CalbicansWO1", "CaurisB8441", "Ccinereaokay7-130", "CdeuterogattiiR265", "CgattiiCA1873", "CgattiiEJB2", "CgattiiIND107", "CgattiiWM276", "CglabrataCBS138", "CimmitisH538-4", "CimmitisRS", "ClusitaniaeATCC42720", "CneoformansB-3501A", "CneoformansH99", "CneoformansJEC21", "CneoformansKN99", "CposadasiiC735deltSOWgp", "CposadasiiRMSCC3488", "CposadasiiRMSCC3700", "CposadasiiSilveira", "FfujikuroiIMI58289", "FgraminearumPH-1", "Foxysporum26406", "Foxysporum4287", "Foxysporum54006", "FoxysporumFo47", "Foxysporumrace1", "Foxysporumrace4", "Fverticillioides7600", "HarabidopsidisEmoy2", "HcapsulatumG186AR", "HcapsulatumG217B", "HcapsulatumH143", "HcapsulatumH88", "HcapsulatumNAm1", "McircinelloidesCBS277-49", "MglobosaCBS7966", "Mlarici-populina98AG31", "Moryzae70-15", "MoryzaeBR32", "NcrassaOR74A", "NdiscretaFGSC8579", "NtetraspermaFGSC2508", "PaphanidermatumDAOMBR444", "ParrhenomanesATCC12531", "PblakesleeanusNRRL1555", "PbrasiliensisPb03", "PbrasiliensisPb18", "PcapsiciLT1534", "PchrysosporiumRP-78", "PcinnamomiCBS144-22", "PgraminisCRL75-36-700-3", "PinfestansT30-4", "PirregulareDAOMBR486", "PiwayamaiDAOMBR242034", "PjiroveciiSE8", "PlutziiPb01", "PparasiticaINRA-310", "PramorumPr-102", "PrubensWisconsin54-1255", "PsojaeP6497", "PultimumBR650", "PultimumDAOMBR144", "PvexansDAOMBR484", "RdelemarRA99-880", "ScerevisiaeS288c", "SdiclinaVS20", "SjaponicusyFS275", "Smacrosporak-hell", "SoctosporusyFS286", "SparasiticaCBS223", "Spombe972h", "SpunctatusDAOMBR117", "SreilianumSRZ2", "Sschenckii1099-18", "Ssclerotiorum1980UF-70", "TmarneffeiATCC18224", "TmesentericaDSM1558", "TreeseiQM6a", "TstipitatusATCC10500", "Umaydis521", "Ureesii1704", "YlipolyticaCLIB122", "ZtriticiIPO323","AkawachiiIFO4308", "AnigerN402ATCC64974","CgattiiNT10","CparapsilosisCDC317","FproliferatumET1", "LprolificansJHH5317", "SapiospermumIHEM14462","Sbrasiliensis5110","YlipolyticaCLIB89W29"]
 
 # load annotation data file
 annotations_dict = dict()
@@ -472,8 +471,8 @@ for species, model in new_model_dict.items():
     logging.info(set(l2))
 
 os.chdir(data_path)
-modifications.to_csv('model_modifications_'+SPECIES_ID+'oct.csv')
-pd.DataFrame.from_dict(inappropriate_compartments_that_remain, orient="index").to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+"_july23.csv")
+modifications.to_csv('model_modifications_'+SPECIES_ID+'Dec.csv')
+pd.DataFrame.from_dict(inappropriate_compartments_that_remain, orient="index").to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+"_Dec.csv")
 
 def prune_unused_metabolites2(cobra_model):
     """ USE THIS UNTIL AUG 31 UPDATES ARE INTEGRATED INTO MASTER COBRAPY BRANCH

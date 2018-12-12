@@ -12,8 +12,8 @@ import argparse
 import logging
 from datetime import datetime
 
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+data_path = "/scratch/mac9jc/paradigm/data"
+model_path = "/scratch/mac9jc/paradigm/models"
 os.chdir(model_path)
 
 parser = argparse.ArgumentParser(description='Read in the species model')
@@ -50,7 +50,7 @@ for species, model in model_dict.items():
     if 'biomass' not in [r.id for r in model.reactions]:
         logger.info('biomass not in reactions anymore')
 
-os.chdir(data_path)
+os.chdir(model_path)
 universal_model = cobra.io.load_json_model('universal_model_oct26_2018.json')
 
 # extend universal by curated model
@@ -68,8 +68,8 @@ genome_ids.columns = new_header
 
 met_ids = pd.read_csv("auxotrophies_mapping_to_metID.csv")
 
-gapfilling_tasks = pd.read_excel("/Users/maureencarey/local_documents/work/\
-metabolism_review/data/auxotrophies_references.xlsx",skiprows = 1)
+os.chdir(data_path)
+gapfilling_tasks = pd.read_excel("auxotrophies_references.xlsx",skiprows = 1)
 idx2 = met_ids['BiGG'].notnull()
 temp_met_ids = met_ids.loc[idx2]
 met_dict = pd.Series(temp_met_ids.BiGG.values, index = temp_met_ids.Metabolite).to_dict()
@@ -79,7 +79,6 @@ for x in gapfilling_tasks.index:
     if gapfilling_tasks['Metabolite'].iloc[x] in met_dict.keys():
         gapfilling_tasks['Metabolite'].iloc[x] = met_dict[gapfilling_tasks['Metabolite'].\
         iloc[x]]
-
 
 for species, model in model_dict.items():
     logger.info(species)

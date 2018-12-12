@@ -28,8 +28,8 @@ logging.basicConfig(filename='step5_{}_{}.log'.format(SPECIES_ID,day), level=log
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 5')
 
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+data_path = "/home/mac9jc/paradigm/data"
+model_path = "/home/mac9jc/paradigm/models"
 os.chdir(data_path)
 iPfal18 = cobra.io.load_json_model("iPfal18.json")
 
@@ -226,16 +226,3 @@ for species, model in pf_model_dict.items():
 
 os.chdir(data_path)
 modifications_ortho.to_csv('./orthology_modifications_plasmodium_{0}.csv'.format(SPECIES_ID))
-
-# SKIP FOR NOW: 
-# os.chdir# (data_path)
-# universal_model = cobra.io.load_json_model('universal_model_may2018.json')
-# for rxn in pf_curated.reactions:
-#     if rxn.id not in [r.id for r in universal_model.reactions]:
-#         for met in rxn.metabolites:
-#             if met.id not in [m.id for m in universal_model.metabolites]:
-#                 universal_model.add_metabolites(met.copy())
-#         universal_model.add_reactions([rxn.copy()])
-# universal_model.remove_reactions(['biomass','biomass_s])
-#                                   
-# cobra.io.save_json_model(universal_model, "universal_model_extended_by_pf_july23.json")

@@ -7,12 +7,12 @@ import logging
 from datetime import datetime
 
 day = datetime.now().strftime('%d_%m_%Y')
-logging.basicConfig(filename='step3_{}.log'.format(day), level=logging.INFO, filemode='w')
+logging.basicConfig(filename='step2_{}.log'.format(day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 
-og_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm"
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+og_path = "/home/mac9jc/paradigm"
+data_path = "/home/mac9jc/paradigm/data"
+model_path = "/home/mac9jc/paradigm/models"
 
 os.chdir(model_path)
 pf_model = cobra.io.read_sbml_model("iPfal17.xml")
@@ -98,7 +98,6 @@ rename_genes_updated(pf_model,rename_dictionary)
 
 logging.info('finished renaming curation')
 
-# ana's curation for glutathione
 # this set of curation steps comes from BioRxiv Untaroiu, Carey, Guler and Papin (2018)
 pf_model.reactions.get_by_id('HMGLB').add_metabolites(\
 {pf_model.metabolites.get_by_id('h2o2_c'):1.,
@@ -550,5 +549,6 @@ for rxn in universal_model.reactions:
 logging.info('\n')
 logging.info('duplicates reactions in universal')
 logging.info(duplicates)
-# 
+#
+os.chdir(model_path)
 cobra.io.save_json_model(pf_model, "iPfal18.json")

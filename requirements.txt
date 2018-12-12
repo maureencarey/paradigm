@@ -18,11 +18,7 @@ requests==2.18.4
 regex==2018.2.8
 pytest==3.4.2
 pytest-benchmark==3.1.1
-python-dateutil==2.6.1
-numpy==1.14.0
-optlang==1.4.2
 jupyter==1.0.0
 jsonschema==2.6.0
 lxml==4.1.1
-future==0.16.0
-gurobipy==8.0.0
+gurobipy==7.0.2

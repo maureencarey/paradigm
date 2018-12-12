@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import glob
 
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
+data_path = "/scratch/mac9jc/paradigm/data"
 os.chdir(data_path)
 
 # process for visualization
@@ -33,8 +33,8 @@ for key, value in annotations_dict.items():
     annotations_dict[key] = value[value.evalue < 0.01] # remove low confidence
     annot_count[key] = annotations_dict[key].shape[0] # count annotations found for each organism
     annot_count_unique_genes[key] = len(annotations_dict[key].query_gene.unique()) # count unique gene annotations found for each organism
-pd.DataFrame.from_dict(annot_count, orient="index").to_csv("annotation_count_all_species_oct2018.csv")
-pd.DataFrame.from_dict(annot_count_unique_genes, orient="index").to_csv("unique_gene_annotation_count_all_species_oct2018.csv")
+pd.DataFrame.from_dict(annot_count, orient="index").to_csv("annotation_count_all_species_dec2018.csv")
+pd.DataFrame.from_dict(annot_count_unique_genes, orient="index").to_csv("unique_gene_annotation_count_all_species_dec2018.csv")
 
 # ORTHO_MCL annotations
 os.chdir(data_path+'/diamond_output_orthoMCL')
@@ -47,6 +47,6 @@ for species, annotations in annotations_dict_ortho.items():
     annotations_ortho_df.species.loc[species] = species
     annotations_ortho_df['OrthoMCL_gene'].loc[species] = set(annotations.OrthoMCL_gene)
 os.chdir(data_path)
-annotations_ortho_df.to_csv('ortho_annotations_per_genome_oct2018.csv')
+annotations_ortho_df.to_csv('ortho_annotations_per_genome_dec2018.csv')
 
 # use resultant files for plotting
