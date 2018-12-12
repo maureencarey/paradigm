@@ -10,7 +10,7 @@
 
 module load gurobi-8.0.1
 module load anaconda3
-source activate gurobienv
+source activate paradigm_env
 cd ./paradigm/data
 
 # PREP LIST OF PLASMODIUM SPECIES - these models will have an extra step associated with them

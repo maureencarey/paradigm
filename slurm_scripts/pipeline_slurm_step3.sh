@@ -2,7 +2,7 @@
 
 module load gurobi-7.0.2
 module load anaconda3
-source activate gurobienv
+source activate paradigm_env
 
 cd ./paradigm/data
 

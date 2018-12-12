@@ -45,7 +45,7 @@ echo "diamond annotation complete"
 # SAVE ANNOTATIONS IN TABLE FORMAT
 cd .. # paradigm directory
 module load anaconda3
-source activate gurobienv
+source activate paradigm_env
 python ./data_acquistion/step_1_genome_annotation
 echo "processed annotations"
 
