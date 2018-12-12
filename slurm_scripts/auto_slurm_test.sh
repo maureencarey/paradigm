@@ -24,5 +24,5 @@ for filename in ./diamond_output_BiGG/*_BiGG.tsv; do
     echo "python3 ../model_refinement/step_6_task_based_gapfilling_TEST.py 'with_biomass_$species_string.json'" >> $foo
     fi
     mv $foo ./slurm_scripts_for_each_species
-#        sbatch $foo
+    sbatch $foo
 done
