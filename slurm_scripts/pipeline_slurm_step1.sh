@@ -40,7 +40,7 @@ mkdir ./diamond_output_orthoMCL
 mv ./*_orthoMCL.tsv ./diamond_output_orthoMCL
 mkdir ./genomes
 mv ./*_annotated_Dec2018.fasta ./genomes
-mv orthoMCL_proteins.fasta ./data
+mv aa_seqs_OrthoMCL_5.fasta ./data
 mv orthoMCL_proteins_diamond.dmnd ./data
 echo "diamond annotation complete"
 

@@ -141,7 +141,7 @@ logging.info('finished Anas curation')
 
 # Make dictionary to make all metabolite IDs compatible with bigg
 # IN FUTURE, EXPAND TO ALL MODELS # for model in [pf_curated, chominis, leish]:
-os.chdir(data_path)
+os.chdir(model_path)
 universal_model = cobra.io.load_json_model('universal_model_oct26_2018.json')
 
 # switch _D_ to __D_ to be BiGG compatible

@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import glob
 
-data_path = "/scratch/mac9jc/paradigm/data"
+data_path = "/home/mac9jc/paradigm/data"
 os.chdir(data_path)
 
 # process for visualization
