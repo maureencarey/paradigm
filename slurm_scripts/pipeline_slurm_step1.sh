@@ -1,14 +1,13 @@
 #!/bin/bash
-# path = "/home/mac9jc/"
-cd ./paradigm
+# path = "/home/mac9jc/paradigm"
 
 # DOWNLOAD GENOMES
 module load R/3.4.3
-Rscript ./data_acquistion/step_0_download_all_eupathDB_release41.R
+Rscript ./data_acquistion/step_0_download_all_eupathDB_release41.r
 echo "downloaded models"
 
 # PREP FOR ANNOTATE GENOMES
-cd ./paradigm/data
+cd ./data
 module load diamond
 # get database sequence files to make protein database for annotating sequences
 wget -O bigg_proteins.fasta 'https://github.com/cdanielmachado/carveme/raw/master/carveme/data/input/bigg_proteins.faa'
@@ -29,8 +28,10 @@ diamond blastp -d ./bigg_proteins_diamond -q $filename -o "${filename:2:${#filen
 done
 mkdir ./diamond_output_BiGG
 mv ./*_BiGG.tsv ./diamond_output_BiGG
+mv bigg_proteins.fasta ./data
+mv bigg_proteins_diamond.dmnd ./data
 
-for filename in ./*_annotated_Oct2018.fasta; do
+for filename in ./*_annotated_Dec2018.fasta; do
 echo "$filename"
 echo "${filename:2:${#filename}-26}"
 diamond blastp -d ./orthoMCL_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_orthoMCL.tsv"
@@ -39,17 +40,20 @@ mkdir ./diamond_output_orthoMCL
 mv ./*_orthoMCL.tsv ./diamond_output_orthoMCL
 mkdir ./genomes
 mv ./*_annotated_Dec2018.fasta ./genomes
+mv orthoMCL_proteins.fasta ./data
+mv orthoMCL_proteins_diamond.dmnd ./data
 echo "diamond annotation complete"
+
 
 # SAVE ANNOTATIONS IN TABLE FORMAT
 cd .. # paradigm directory
 module load anaconda3
 source activate paradigm_env
-python3 ./data_acquistion/step_1_genome_annotation
+python3 ./data_acquistion/step_1_genome_annotation.py
 echo "processed annotations"
 
 # FINISH CURATION OF iPfal17
 module load gurobi/8.0.1
-python3 ./model_refinement/step_2_curate_iPfal17
+python3 ./model_refinement/step_2_curate_iPfal17.py
 echo "finished iPfal17 curation"
 

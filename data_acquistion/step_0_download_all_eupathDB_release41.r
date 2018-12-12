@@ -22,7 +22,9 @@ fungidb = c("AaculeatusATCC16872", "AbrasiliensisCBS101740", "AcampestrisIBT2856
 genomes = vector(mode = "list", length = 9)
 genomes[[1]] = plasmodb; genomes[[2]] = cryptodb; genomes[[3]] = giardiadb; genomes[[4]] =  tritrypdb; genomes[[5]] = trichdb; genomes[[6]] = amoebadb; genomes[[7]] = toxodb; genomes[[8]] = microsporidiadb; genomes[[9]] = piroplasmadb# ; genomes[[10]] = fungidb
 # setwd("/scratch/glm5uh/eupathdb2models/genomes_from_EuPathDB/version40/annotated")
-wd_String = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
+# wd_String = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
+wd_String = "/home/mac9jc/paradigm/data"
+stop_counter = 0
 for (i in 1:length(genomes)) { genomes_list = genomes[[i]]; db_name_uc = DataBase_uc[i]; db_name_lc = database_lc[i]
   for (x in genomes_list) {
     release_string = paste(paste(".org/common/downloads/release-",version, sep = ""),"/", sep = "")
@@ -38,6 +40,9 @@ for (i in 1:length(genomes)) { genomes_list = genomes[[i]]; db_name_uc = DataBas
         print('DOES NOT EXIST')
         print(link)
         list_o_broken_links = c(list_o_broken_links, link)}
-    # else {download.file(url = link, destfile = destination, method = "wget", quiet = T)}
+    else {download.file(url = link, destfile = destination, method = "wget", quiet = T)}
+    stop_counter = 1 + stop_counter
+    if (stop_counter > 5) {break}
   }
+  if (stop_counter > 5) {break}
 }
