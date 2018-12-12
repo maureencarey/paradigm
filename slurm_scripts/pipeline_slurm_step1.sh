@@ -50,7 +50,7 @@ python ./data_acquistion/step_1_genome_annotation
 echo "processed annotations"
 
 # FINISH CURATION OF iPfal17
-module load gurobi-8.0.1
+module load gurobi/8.0.1
 python3 ./model_refinement/step_2_curate_iPfal17
 echo "finished iPfal17 curation"
 

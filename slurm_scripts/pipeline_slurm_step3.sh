@@ -1,6 +1,6 @@
 #!/bin/bash
 
-module load gurobi-7.0.2
+module load gurobi/8.0.1
 module load anaconda3
 source activate paradigm_env
 

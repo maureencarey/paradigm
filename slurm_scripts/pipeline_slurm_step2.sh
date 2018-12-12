@@ -8,7 +8,7 @@
 #SBATCH --mem-per-cpu=6000
 #SBATCH --account=mac9jc
 
-module load gurobi-8.0.1
+module load gurobi/8.0.1
 module load anaconda3
 source activate paradigm_env
 cd ./paradigm/data
