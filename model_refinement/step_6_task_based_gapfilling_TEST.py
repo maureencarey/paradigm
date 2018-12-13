@@ -38,10 +38,8 @@ if SPECIES_ID == 'iPfal18':
 logging.basicConfig(filename='log_file.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 6')
-logger.info('SPECIES ID is')
-logger.info(SPECIES_ID)
-    
-species = SPECIES_ID
-logger.info('FINAL MODEL NAME IS gf_'+SPECIES_ID_old+'.json')
+logger.info('SPECIES ID is'+SPECIES_ID)
+logger.info('____Input MODEL NAME IS ____'+model_fname)
+logger.info('____OUTPUT MODEL NAME IS gf_'+SPECIES_ID_old+'.json____')
     
     

@@ -29,6 +29,7 @@ logger.info('BEGIN STEP 5')
 
 logger.info(SPECIES_ID)
 species = SPECIES_ID
-logger.info('output model name is = ')
-logger.info("ortho_"+species+".json")
+logger.info('SPECIES ID is'+SPECIES_ID)
+logger.info('____Input MODEL NAME IS ____'+model_fname)
+logger.info('____OUTPUT MODEL NAME IS ortho_'+species+'.json____')
 

@@ -32,10 +32,8 @@ logger.info('BEGIN STEP 4')
 logger.info('model file name = ')
 logger.info(model_fname)
 
-logger.info('species id = ')
-logger.info(SPECIES_ID)
 species = SPECIES_ID
-logger.info('output model name is =  ')
-logger.info("./with_biomass_"+species+".json")
-
+logger.info('SPECIES ID is'+SPECIES_ID)
+logger.info('____Input MODEL NAME IS ____'+model_fname)
+logger.info('____OUTPUT MODEL NAME IS with_biomass_'+species+'.json____')
 
