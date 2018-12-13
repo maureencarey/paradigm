@@ -186,7 +186,7 @@ for species, model in pf_model_dict.items():
     model.objective = 'biomass' # NOT USING GENERIC BIOMASS NOW
     pf_model_dict[species] = model
     
-    os.chdir(model_path)
+    os.chdir(data_path)
     cobra.io.save_json_model(model, "ortho_"+species+".json")
 
     if 'hb_c' in [m.id for m in model.metabolites]:

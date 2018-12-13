@@ -1,16 +1,7 @@
 ## Input = with_biomass_denovo_SPECIES.json
 ## ONLY DO PLSASMODIUMS
 
-import cobra
-import pandas as pd
-import os
-import subprocess
-import glob
-import json
-from cobra import Model, Reaction, Metabolite
-import helper_functions_2 as hf
 import argparse
-import logging
 from datetime import datetime
 
 parser = argparse.ArgumentParser(description='Read in the species model')
@@ -27,7 +18,6 @@ logging.basicConfig(filename='log_file.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 5')
 
-logger.info(SPECIES_ID)
 species = SPECIES_ID
 logger.info('SPECIES ID is'+SPECIES_ID)
 logger.info('____Input MODEL NAME IS ____'+model_fname)

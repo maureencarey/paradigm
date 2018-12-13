@@ -433,6 +433,7 @@ for species, model in model_dict.items():
 
     if 'hb_c' in [m.id for m in model.metabolites]:
         logger.info('HEMOGLOBIN PRESENT7')
+    os.chdir(model_path)
     cobra.io.save_json_model(model, 'gf_'+SPECIES_ID_old+'.json')
     
     

@@ -195,17 +195,8 @@ logging.info("done with scoring")
 
 # make model from universal model
 new_model_dict = dict()
-for x in scores_dict2.keys():
-    logging.info(x)
-    
-    if '.tsv' in x:
-        logging.info('.tsv in the annotations file string, this might cause problems')
-        species = x.split('.tsv')[0]
-    else:
-        species = x
-    if '_BiGG' in x:
-        logging.info('_BiGG in the annotations file string, this might cause problems')
-        species = species.split('_BiGG')[0]
+for species in scores_dict2.keys():
+    logging.info(species)
 
     new_model_dict[species] = universal_model.copy()
     logging.info('copied universal')
