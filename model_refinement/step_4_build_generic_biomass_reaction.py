@@ -25,7 +25,7 @@ model_fname = vars(args)['model_file']
 # parse arguments for global variables 
 SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
-SPECIES_ID = SPECIES_ID.split('final_')[1]
+SPECIES_ID = SPECIES_ID.split('denovo_')[1]
 
 day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step4_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')

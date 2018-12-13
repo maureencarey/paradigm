@@ -12,8 +12,8 @@ model_fname = vars(args)['model_file']
 SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 SPECIES_ID_old = SPECIES_ID
-if 'final_denovo_' in SPECIES_ID:
-    SPECIES_ID = SPECIES_ID.split('final_denovo_')[1]
+if 'denovo_' in SPECIES_ID:
+    SPECIES_ID = SPECIES_ID.split('denovo_')[1]
 if 'with_biomass_' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 if 'ortho_' in SPECIES_ID:
@@ -28,6 +28,6 @@ logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 6')
 logger.info('SPECIES ID is'+SPECIES_ID)
 logger.info('____Input MODEL NAME IS ____'+model_fname)
-logger.info('____OUTPUT MODEL NAME IS gf_'+SPECIES_ID_old+'.json____')
+logger.info('____OUTPUT MODEL NAME IS gf_'+SPECIES_ID+'.json____')
     
     

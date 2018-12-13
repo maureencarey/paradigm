@@ -2,7 +2,7 @@
 ## ONLY DO PLSASMODIUMS
 
 import argparse
-from datetime import datetime
+import logging
 
 parser = argparse.ArgumentParser(description='Read in the species model')
 parser.add_argument('model_file')

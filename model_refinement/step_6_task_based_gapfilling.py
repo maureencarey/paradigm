@@ -25,8 +25,8 @@ model_fname = vars(args)['model_file']
 SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 SPECIES_ID_old = SPECIES_ID
-if 'final_denovo_' in SPECIES_ID:
-    SPECIES_ID = SPECIES_ID.split('final_denovo_')[1]
+if 'denovo_' in SPECIES_ID:
+    SPECIES_ID = SPECIES_ID.split('denovo_')[1]
 if 'with_biomass_' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 if 'ortho_' in SPECIES_ID:
@@ -434,6 +434,6 @@ for species, model in model_dict.items():
     if 'hb_c' in [m.id for m in model.metabolites]:
         logger.info('HEMOGLOBIN PRESENT7')
     os.chdir(model_path)
-    cobra.io.save_json_model(model, 'gf_'+SPECIES_ID_old+'.json')
+    cobra.io.save_json_model(model, 'gf_'+SPECIES_ID+'.json')
     
     
