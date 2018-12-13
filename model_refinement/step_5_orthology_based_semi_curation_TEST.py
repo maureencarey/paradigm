@@ -23,7 +23,6 @@ SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 
-day = date.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='log_file.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 5')

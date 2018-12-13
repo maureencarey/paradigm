@@ -10,10 +10,9 @@ from cobra import Model, Reaction, Metabolite
 import helper_functions_2 as hf
 import argparse
 import logging
-from datetime import datetime
 
-data_path = "/scratch/mac9jc/paradigm/data"
-model_path = "/scratch/mac9jc/paradigm/models"
+data_path = "/home/mac9jc/paradigm/data"
+model_path = "/home/mac9jc/paradigm/models"
 os.chdir(model_path)
 
 parser = argparse.ArgumentParser(description='Read in the species model')

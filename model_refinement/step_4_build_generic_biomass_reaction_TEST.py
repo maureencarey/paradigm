@@ -9,8 +9,6 @@ import json
 from cobra import Model, Reaction, Metabolite
 import helper_functions_2 as hf
 import argparse
-from datetime import date
-from datetime import datetime
 import logging
 
 data_path = "/home/mac9jc/paradigm/data"
@@ -27,7 +25,6 @@ SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 SPECIES_ID = SPECIES_ID.split('final_')[1]
 
-day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='log_file.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 

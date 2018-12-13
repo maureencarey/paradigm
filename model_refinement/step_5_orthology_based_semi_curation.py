@@ -12,6 +12,7 @@ import helper_functions_2 as hf
 import argparse
 import logging
 from datetime import datetime
+from datatime import data
 
 parser = argparse.ArgumentParser(description='Read in the species model')
 parser.add_argument('model_file')
