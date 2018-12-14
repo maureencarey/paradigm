@@ -1,18 +1,5 @@
 #!/bin/bash
 
-#SBATCH --ntasks=1
-#SBATCH --mail-type=ALL
-#SBATCH --time=2-00:00:00
-#SBATCH --partition=parallel
-#SBATCH --cpus-per-task=4
-#SBATCH --mem-per-cpu=6000
-#SBATCH --account=mac9jc
-
-module load gurobi/8.0.1
-module load anaconda3
-source activate paradigm_env
-cd ./paradigm/data
-
 # PREP LIST OF PLASMODIUM SPECIES - these models will have an extra step associated with them
 plasmodium_list=" PadleriG01 PbergheiANKA PbillcollinsiG01 PblacklockiG01 Pchabaudichabaudi PcoatneyiHackeri PcynomolgiB PcynomolgiM Pfalciparum3D7 Pfalciparum7G8 PfalciparumCD01 PfalciparumDd2 PfalciparumGA01 PfalciparumGB4 PfalciparumGN01 PfalciparumHB3 PfalciparumIT PfalciparumKE01 PfalciparumKH01 PfalciparumKH02 PfalciparumML01 PfalciparumSD01 PfalciparumSN01 PfalciparumTG01 PfragileNilgiri PgaboniG01 PgaboniSY75 Pgallinaceum8A PinuiSanAntonio1 PknowlesiH PknowlesiMalayanPk1A PmalariaeUG01 PovalecurtisiGH01 PpraefalciparumG01 PreichenowiCDC PreichenowiG01 PrelictumSGS1-like PvinckeipetteriCR Pvinckeivinckeivinckei PvivaxP01 PvivaxSal1 Pyoeliiyoelii17X Pyoeliiyoelii17XNL PyoeliiyoeliiYM "
 

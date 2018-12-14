@@ -2,13 +2,11 @@
 # path = "/home/mac9jc/paradigm"
 
 # DOWNLOAD GENOMES
-module load R/3.4.3
 Rscript ./data_acquistion/step_0_download_all_eupathDB_release41.r
 echo "downloaded models"
 
 # PREP FOR ANNOTATE GENOMES
 cd ./data
-module load diamond
 # get database sequence files to make protein database for annotating sequences
 wget -O bigg_proteins.fasta 'https://github.com/cdanielmachado/carveme/raw/master/carveme/data/input/bigg_proteins.faa'
 diamond makedb --in bigg_proteins.fasta -d bigg_proteins_diamond
@@ -43,17 +41,4 @@ mv ./*_annotated_Dec2018.fasta ./genomes
 mv aa_seqs_OrthoMCL_5.fasta ./data
 mv orthoMCL_proteins_diamond.dmnd ./data
 echo "diamond annotation complete"
-
-
-# SAVE ANNOTATIONS IN TABLE FORMAT
-cd .. # paradigm directory
-module load anaconda3
-source activate paradigm_env
-python3 ./data_acquistion/step_1_genome_annotation.py
-echo "processed annotations"
-
-# FINISH CURATION OF iPfal17
-module load gurobi/8.0.1
-python3 ./model_refinement/step_2_curate_iPfal17.py
-echo "finished iPfal17 curation"
 
