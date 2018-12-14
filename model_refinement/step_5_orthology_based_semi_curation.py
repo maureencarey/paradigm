@@ -41,8 +41,13 @@ pf_model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)
 logger.info('loaded model')
 
 os.chdir(data_path)
-mapping = pd.read_csv("./plasmodium_gene_mapping.csv", index_col=0)
-logger.info('loaded mapping')
+mapping = pd.read_csv("plasmodium_orthology_conversion_release41.csv")
+mapping['[Organism]'] = mapping['[Organism]'].str.replace(".", "")
+mapping['[Organism]'] = mapping['[Organism]'].str.replace(" ", "")
+if SPECIES_ID not in mapping['[Organism]'].unique():
+    logger.info(SPECIES_ID+'not in orthology mapping dataframe, aka we are not converting via orthology (printing infeasible to catch this error)')
+else:
+    logger.info('loaded mapping')
 
 add_these = ['pe_prod1', 'pe_prod10', 'pe_prod11', 'pe_prod12', 'pe_prod13', 'pe_prod14',
              'pe_prod15', 'pe_prod16', 'pe_prod17', 'pe_prod18', 'pe_prod19', 'pe_prod20',
