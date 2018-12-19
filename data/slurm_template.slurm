@@ -7,7 +7,7 @@
 #SBATCH --mem-per-cpu=6000
 #SBATCH --account=csblrivanna
 
-module load anaconda3
+module load anaconda/5.2.0-py3.6
 module load gurobi/8.0.1
 source activate paradigm_env
 
