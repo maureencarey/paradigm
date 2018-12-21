@@ -2,11 +2,12 @@
 # path = "/home/mac9jc/paradigm"
 
 # DOWNLOAD GENOMES
+cd /home/mac9jc/paradigm/
 Rscript ./data_acquistion/step_0_download_all_eupathDB_release41.r
 echo "downloaded models"
 
 # PREP FOR ANNOTATE GENOMES
-cd ./data
+cd /home/mac9jc/paradigm/data
 # get database sequence files to make protein database for annotating sequences
 wget -O bigg_proteins.fasta 'https://github.com/cdanielmachado/carveme/raw/master/carveme/data/input/bigg_proteins.faa'
 diamond makedb --in bigg_proteins.fasta -d bigg_proteins_diamond
@@ -24,21 +25,14 @@ echo "$filename"
 echo "${filename:2:${#filename}-26}"
 diamond blastp -d ./bigg_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_BiGG.tsv"
 done
-mkdir ./diamond_output_BiGG
 mv ./*_BiGG.tsv ./diamond_output_BiGG
-mv bigg_proteins.fasta ./data
-mv bigg_proteins_diamond.dmnd ./data
 
 for filename in ./*_annotated_Dec2018.fasta; do
 echo "$filename"
 echo "${filename:2:${#filename}-26}"
 diamond blastp -d ./orthoMCL_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_orthoMCL.tsv"
 done
-mkdir ./diamond_output_orthoMCL
 mv ./*_orthoMCL.tsv ./diamond_output_orthoMCL
-mkdir ./genomes
 mv ./*_annotated_Dec2018.fasta ./genomes
-mv aa_seqs_OrthoMCL_5.fasta ./data
-mv orthoMCL_proteins_diamond.dmnd ./data
 echo "diamond annotation complete"
 
