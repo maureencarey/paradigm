@@ -16,13 +16,13 @@ for filename in ./diamond_output_BiGG/*_BiGG.tsv; do
     #construct name for sbatch file being generated
     foo=${species_string}".sbatch"
     cp slurm_template.slurm $foo
-    echo "python3 ../denovo_reconstruction/step_3_build_de_novo_models.py '$file_without_pre'" >> $foo
-    echo "python3 ../model_refinement/step_4_build_generic_biomass_reaction.py 'final_denovo_$species_string.json'" >> $foo #
+    echo "python3 ../denovo_reconstruction/step_3_build_de_novo_models.py $file_without_pre" >> $foo
+    echo "python3 ../model_refinement/step_4_build_generic_biomass_reaction.py final_denovo_$species_string.json" >> $foo
     if [[ " $plasmodium_list " =~ .*\ $species_string\ .* ]]; then
-    echo "python3 ../model_refinement/step_5_orthology_based_semi_curation.py 'with_biomass_$species_string.json'" >> $foo
-    echo "python3 ../model_refinement/step_6_task_based_gapfilling.py 'ortho_$species_string.json'" >> $foo
+    echo "python3 ../model_refinement/step_5_orthology_based_semi_curation.py with_biomass_$species_string.json" >> $foo
+    echo "python3 ../model_refinement/step_6_task_based_gapfilling.py ortho_$species_string.json" >> $foo
     else
-    echo "python3 ../model_refinement/step_6_task_based_gapfilling.py 'with_biomass_$species_string.json'" >> $foo
+    echo "python3 ../model_refinement/step_6_task_based_gapfilling.py with_biomass_$species_string.json" >> $foo
     fi
     sbatch $foo
     mv $foo ./slurm_scripts_for_each_species
