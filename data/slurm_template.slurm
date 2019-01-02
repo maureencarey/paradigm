@@ -9,5 +9,6 @@
 
 module load anaconda/5.2.0-py3.6
 module load gurobi/8.0.1
+export PYTHONPATH=$EBROOTGUROBI/lib/python3.6_utf32:$PYTHONPATH
 source activate paradigm_env
 

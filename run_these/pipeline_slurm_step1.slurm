@@ -12,6 +12,7 @@ module load diamond
 bash ./slurm_scripts/pipeline_slurm_step1a.sh
 
 module load anaconda/5.2.0-py3.6
-source activate paradigm_env
 module load gurobi/8.0.1
+export PYTHONPATH=$EBROOTGUROBI/lib/python3.6_utf32:$PYTHONPATH
+source activate paradigm_env
 bash ./slurm_scripts/pipeline_slurm_step1b.sh

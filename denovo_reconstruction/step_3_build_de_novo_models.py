@@ -98,7 +98,9 @@ columns = ['query_gene', 'BiGG_gene', 'pident', 'length', 'mismatch', 'gapopen',
 
 # modified for Rivanna: read in the annotation tsv
 annotations_dict = {}
-annotations_dict[SPECIES_ID] = pd.read_csv(annotation_fname,'\t')
+os.chdir(data_path)
+os.chdir("./diamond_output_BiGG")
+annotations_dict[SPECIES_ID] = pd.read_table(annotation_fname)
 columns = ['query_gene', 'BiGG_gene', 'pident', 'length', 'mismatch', 'gapopen','qstart', 'qend', 'sstart', 'send', 'evalue', 'score']
 annotations_dict[SPECIES_ID].columns = columns
 
