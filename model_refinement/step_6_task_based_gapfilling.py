@@ -171,7 +171,7 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
 for species, model in model_dict.items():
     
     logger.info(species)
-    model.solver = 'gurobi'
+    model.solver = 'glpk'
     if 'biomass' in [r.id for r in model.reactions]:
         model.objective = 'biomass'
         logger.info('was able to set objective')
@@ -361,7 +361,7 @@ P_BIOMASS = 'biomass'
 for species, model in model_dict.items():
 
     logger.info(species)
-    model.solver = 'gurobi'
+    model.solver = 'glpk'
     gf_mod_list1 = list()
     gf_mod_list2 = list()
     if 'biomass' in [r.id for r in model.reactions]:

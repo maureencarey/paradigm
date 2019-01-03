@@ -12,7 +12,7 @@ import helper_functions_2 as hf
 import argparse
 import logging
 from datetime import datetime
-from datatime import data
+from datetime import date
 
 parser = argparse.ArgumentParser(description='Read in the species model')
 parser.add_argument('model_file')
@@ -24,7 +24,7 @@ SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 
-day = date.now().strftime('%d_%m_%Y')
+day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step5_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 5')

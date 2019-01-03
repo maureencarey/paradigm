@@ -1,0 +1,66 @@
+,iPfal17,C. hominis 2010,T. gondii 2015,Leishmania 2008
+0,10-Formyltetrahydrofolate,adp[c],(9Z)-Octadecenoic acid,1-2-Diacylglycerol
+1,2-Octaprenyl-6-hydroxyphenol,ala-L[c],1-Phosphatidyl-D-myo-inositol,ADP
+2,2-Oxoglutarate,amp[c],Acetyl-CoA,AMP
+3,"5,10-Methylenetetrahydrofolate",arg-L[c],Arachidonate,ATP
+4,"5,6,7,8-Tetrahydrofolate",asn-L[c],ATP,Cardiolipin
+5,ADP C10H12N5O10P2,asp-L[c],ATP,CMP
+6,Ammonium,atp[c],C00498,dAMP
+7,ATP C10H12N5O13P3,cdlp_CT[c],C00550,dCMP
+8,Biomass: total,cdp[c],C02679,dGMP
+9,Coenzyme A,cmp[c],C04574,dTMP
+10,CTP C9H12N3O14P3,ctp[c],C06424,Ergosterol
+11,DATP C10H12N5O12P3,cys-L[c],Cholesterol,Glycine
+12,DCTP C9H12N3O13P3,d12dg_CT[c],CoA,GMP
+13,DGTP C10H12N5O13P3,datp[c],CTP,H2O
+14,Diphosphate,dctp[c],dATP,H
+15,DTTP C10H13N2O14P3,dgtp[c],dCTP,L-Alanine
+16,Fe2+ mitochondria,dttp[c],dGTP,L-Arginine
+17,Flavin adenine dinucleotide oxidized,gdp[c],dTTP,L-Asparagine
+18,Glycine,gln-L[c],FattyAcid,L-Aspartate
+19,GTP C10H12N5O14P3,glu-L[c],FMN,L-Cysteine
+20,H+,gly[c],GDP-mannose,L-Glutamate
+21,H2O H2O,gmp[c],Geranylgeranyl diphosphate,L-Glutamine
+22,hemozoin,gtp[c],Glutathione,L-Histidine
+23,Iron (Fe3+),h[c],Glycine,L-Isoleucine
+24,L-Alanine,his-L[c],GTP,L-Leucine
+25,L-Arginine,ile-L[c],H2O,L-Lysine
+26,L-Asparagine,leu-L[c],Heme,L-Methionine
+27,L-Aspartate,lys-L[c],Hexadecanoic acid,L-Phenylalanine
+28,L-Cysteine,lysylpgly_CT[c],L-Alanine,L-Proline
+29,L-Glutamate,m12dg_CT[c],L-Arginine,L-Serine
+30,L-Glutamine,met-L[c],L-Asparagine,L-Threonine
+31,L-Histidine,nad[c],L-Aspartate,L-Tryptophan
+32,L-Isoleucine,nadp[c],L-Cysteine,L-Tyrosine
+33,L-Lactate,nadph[c],L-Glutamate,L-Valine
+34,L-Leucine,pgly_CT[c],L-Glutamine,Mannan
+35,L-Lysine,phe-L[c],L-Histidine,monoacylglycerol
+36,L-Malate,pi[c],L-Isoleucine,Phosphate-HO4P
+37,L-Methionine,ppi[c],L-Leucine,phosphatidyl-1D-myo-inositol
+38,L-Phenylalanine,pro-L[c],L-Lysine,Phosphatidylcholine
+39,L-Proline,psetha_CT[c],L-Methionine,phosphatidylethanolamine
+40,L-Serine,ser-L[c],L-Phenylalanine,Putrescine
+41,L-Threonine,t12dg_CT[c],L-Proline,Spermidine
+42,L-Tryptophan,thr-L[c],L-Selenocysteine,Triglyceride
+43,L-Tyrosine,trp-L[c],L-Serine,UMP
+44,L-Valine,tyr-L[c],L-Threonine,Zymosterol
+45,lipid[c],utp[c],L-Tryptophan,
+46,Nicotinamide adenine dinucleotide,val-L[c],L-Tyrosine,
+47,Nicotinamide adenine dinucleotide phosphate,,L-Valine,
+48,Oxidized glutathione,,Linoleate,
+49,Phosphate,,NAD+,
+50,protein[c],,NADP+,
+51,Protoheme C34H30FeN4O4,,Octadecanoic acid,
+52,Putrescine,,Oxaloacetate,
+53,Pyridoxal 5'-phosphate,,Phosphatidylcholine,
+54,Reduced glutathione,,Phosphatidylethanolamine,
+55,Riboflavin C17H20N4O6,,Phosphatidylserine,
+56,S-Adenosyl-L-methionine,,Protein N6-(lipoyl)lysine,
+57,Spermidine,,Protein N6-(lipoyl)lysine,
+58,Sulfate,,Pyridoxal phosphate,
+59,Thiamine diphosphate,,S-Adenosyl-L-methionine,
+60,UTP C9H11N2O15P3,,Tetrahydrobiopterin,
+61,,,Tetrahydrofolate,
+62,,,Thiamin diphosphate,
+63,,,UDP-N-acetyl-alpha-D-glucosamine,
+64,,,UTP,
