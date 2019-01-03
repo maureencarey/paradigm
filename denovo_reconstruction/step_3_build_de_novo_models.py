@@ -38,6 +38,10 @@ universal_model = hf.update_universal_model(universal_model)
 os.chdir(data_path)
 logging.info('loaded universal')
 
+print('test writing json')
+cobra.io.save_json_model(universal_model, "test.json")
+print('success')
+
 # compartments in universal reaction bag
 compartment_options = list()
 for string in [met.id for met in universal_model.metabolites]:
@@ -193,6 +197,7 @@ for species, annotations in annotations_dict.items():
     # scores = dict(reaction_scores[['reaction', 'normalized_score']].values)
     scores_dict2[species] = reaction_scores #scores
     # carveme will maximize positive scores and minimize negative scores while maintaining a functional network
+    reaction_scores.to_csv('reaction_scores.csv')
 logging.info("done with scoring")
 
 # make model from universal model
@@ -208,7 +213,7 @@ for species in scores_dict2.keys():
     logging.info(species)
     starting = len(new_model_dict[species].reactions)
 
-    keep_scores = scores_dict2[x].loc[scores_dict2[x].score>10]
+    keep_scores = scores_dict2[species].loc[scores_dict2[species].score>10]
     if len(keep_scores.reaction) == len(set(keep_scores.reaction)):
 
         rxns_to_add = dict()
@@ -219,16 +224,30 @@ for species in scores_dict2.keys():
 
         new_model_dict[species].remove_reactions([rxn for rxn in new_model_dict[species].reactions if rxn.id not in rxns_to_add.keys()])
 
+        print('test writing json after deleting reactions')
+        cobra.io.save_json_model(new_model_dict[species], "test.json")
+        print('success 2')
+
         if not [rxn.id for rxn in new_model_dict[species].reactions if rxn.gene_reaction_rule != '']:
             for rxn in new_model_dict[species].reactions:
                     if rxn.gene_reaction_rule == '':
+                        print(rxns_to_add[rxn.id])
                         new_model_dict[species].reactions.get_by_id(rxn.id).gene_reaction_rule = rxns_to_add[rxn.id]
-                        new_model_dict[species].reactions.get_by_id(rxn.id).notes['CarveMe score'] = {rxns_to_add[rxn.id] : scores_dict2[x].loc[scores_dict2[x].GPR == rxns_to_add[rxn.id]]['score']}
+                        new_model_dict[species].reactions.get_by_id(rxn.id).notes['CarveMe score'] = {rxns_to_add[rxn.id] : scores_dict2[species].loc[scores_dict2[species].GPR == rxns_to_add[rxn.id]]['score']}
+                        print({rxns_to_add[rxn.id] : scores_dict2[species].loc[scores_dict2[species].GPR == rxns_to_add[rxn.id]]['score']})
         else:
             logging.info('some reactions already have GPRs')
 
+        print('test writing json after adding GPRs')
+        cobra.io.save_json_model(new_model_dict[species], "test.json")
+        print('success 3')
+
         logging.info('made new model from universal')
         new_model_dict[species].repair()
+	
+        print('test writing json after model repair')
+        cobra.io.save_json_model(new_model_dict[species], "test.json")
+        print('success 4')
 
         if len(rxns_to_add.keys()) == len(new_model_dict[species].reactions):
             if starting > len(rxns_to_add.keys()):
@@ -246,7 +265,7 @@ for species in scores_dict2.keys():
     logging.info('made DIY1')
     logging.info(len(model2.reactions))
     os.chdir(model_path)
-    cobra.io.save_json_model( model2, "DIY1_"+species+".json")
+    cobra.io.save_json_model(new_model_dict[species], "DIY1_"+species+".json")
     logging.info('saved DIY1')
 #temp
     logging.info('notes field')

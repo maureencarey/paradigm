@@ -8,8 +8,6 @@
 #SBATCH --account=csblrivanna
 
 module load anaconda/5.2.0-py3.6
-module load gurobi/8.0.1
-export PYTHONPATH=$EBROOTGUROBI/lib/python3.6_utf32:$PYTHONPATH
 source activate paradigm_env
 
 python3 ../denovo_reconstruction/step_3_build_de_novo_models.py PadleriG01_BiGG.tsv
