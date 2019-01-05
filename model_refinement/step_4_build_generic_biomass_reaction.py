@@ -198,7 +198,7 @@ for species, model in model_dict.items():
 
     if 'hb_c' in [m.id for m in model.metabolites]:
         logger.info('HEMOGLOBIN PRESENT')
-    os.chdir(data_path)
+    os.chdir(model_path)
     cobra.io.save_json_model(model, "./with_biomass_"+species+".json")
 
 

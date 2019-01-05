@@ -1,0 +1,36 @@
+,rxns_added
+0,T4HCINNMFM: 34hpl_m --> T4hcinnm_m + h2o_m
+1,RBFSb: 2.0 dmlz_c --> 4r5au_c + ribflv_c
+2,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+3,G1SAT: glu1sa_c --> 5aop_c
+4,PROTEIN_BS: 0.6 ala__L_c + 0.377 arg__L_c + 0.2881 asn__L_c + 0.359 asp__L_c + 0.145 cys__L_c + 0.322 gln__L_c + 0.386 glu__L_c + 0.538 gly_c + 0.143 his__L_c + 0.324 ile__L_c + 0.564 leu__L_c + 0.57 lys__L_c + 0.138 met__L_c + 0.219 phe__L_c + 0.313 pro__L_c + 0.43 ser__L_c + 0.386 thr__L_c + 0.044 trp__L_c + 0.182 tyr__L_c + 0.416 val__L_c --> protein_c
+5,SHK3Dr: 3dhsk_c + h_c + nadph_c --> nadp_c + skm_c
+6,4HBZFm: 4hbzcoa_m + h2o_m --> 4hbz_m + coa_m + h_m
+7,MI1PP: h2o_c + mi1p__D_c --> inost_c + pi_c
+8,QULNS: dhap_c + iasp_c --> 2.0 h2o_c + pi_c + quln_c
+9,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+10,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c
+11,4HBZCOAFm: coa_m + coucoa_m + h2o_m + nad_m --> 4hbzcoa_m + accoa_m + h_m + nadh_m
+12,MI3PP: h2o_c + mi3p__D_c --> inost_c + pi_c
+13,COUCOAFm: T4hcinnm_m + atp_m + coa_m --> amp_m + coucoa_m + ppi_m
+14,ASPO2: asp__L_c + nad_c --> 2.0 h_c + iasp_c + nadh_c
+15,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+16,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+17,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+18,CMPDAi: cmp_c + h2o_c + h_c --> nh4_c + ump_c
+19,HMR_6782: 34hpp_c + h_c + nadh_c --> 34hpl_c + nad_c
+20,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+21,DROPPRy: 25dhpp_c + h_c + nadph_c --> 25dthpp_c + nadp_c
+22,CO2tmt: co2_m <=> co2_c
+23,O2tmt: o2_m <=> o2_c
+24,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+25,34HPLtm: 34hpl_c + h_c --> 34hpl_m + h_m
+26,OCTDPtmt: octdp_m <=> octdp_c
+27,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+28,RTOTALFATPc: Rtotal_e + atp_c + coa_c --> Rtotalcoa_c + amp_c + ppi_c
+29,MEPCT: 2me4p_c + ctp_c + h_c --> 4c2me_c + ppi_c
+30,GLUTRR: glutrna_c + h_c + nadph_c --> glu1sa_c + nadp_c + trnaglu_c
+31,PPP9tmt: ppp9_m <=> ppp9_c
+32,FCLTm: fe2_m + ppp9_m --> 2.0 h_m + pheme_m
+33,UPP3S: hmbil_c --> h2o_c + uppg3_c
+34,FE2utm: fe2_c --> fe2_m

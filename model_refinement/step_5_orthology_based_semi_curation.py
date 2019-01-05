@@ -31,7 +31,7 @@ logger.info('BEGIN STEP 5')
 
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
-os.chdir(data_path)
+os.chdir(model_path)
 iPfal18 = cobra.io.load_json_model("iPfal18.json")
 
 logger.info(SPECIES_ID)
@@ -158,13 +158,26 @@ for species, model in pf_model_dict.items():
     if len(model.reactions) != len(set(model.reactions)):
         logger.info('duplicate reactions')
     
-        if species.startswith('Pfalciparum3D7'):
-            s = 1
-        else:
-            gene_list = [x for x in model.genes if x.id.startswith('PF3D7_')]
-            cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
-            gene_list = [x for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]
-            cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+    if species.startswith('Pfalciparum3D7'):
+        s = 1
+    else:
+        t = len(model.genes)
+        gene_list = [x.id for x in model.genes if x.id.startswith('PF3D7')]
+        gene_list_genes = [x for x in model.genes if x.id.startswith('PF3D7')]
+        print(t)
+        if len(gene_list) > 0:
+            for x in gene_list_genes:
+                if len(x.reactions) == 0:
+                    # cobra.manipulation.delete.remove_genes(model,[x.id], remove_reactions=True)
+                    model.genes.remove(x)
+                else:
+                    logging.info(x.id+' remains in model and associated with '+[r.id for r in x.reactions])
+        # cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+        if (t==len(model.genes)):
+            logger.info('THIS DELETE PF3D7 GENES STEP DID NOT WORK')
+        gene_list = [x.id for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]
+        cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+        print(len(model.genes))
 
     x3 = len(model.reactions)
     y3 = len(model.genes)
@@ -191,7 +204,7 @@ for species, model in pf_model_dict.items():
     model.objective = 'biomass' # NOT USING GENERIC BIOMASS NOW
     pf_model_dict[species] = model
     
-    os.chdir(data_path)
+    os.chdir(model_path)
     cobra.io.save_json_model(model, "ortho_"+species+".json")
 
     if 'hb_c' in [m.id for m in model.metabolites]:
@@ -199,7 +212,7 @@ for species, model in pf_model_dict.items():
     
     logger.info('saved model')
     logger.info(species)
-    logger.info('no number should print here (if a number, then your gene_IDs were not updated')
+    logger.info('no genes should print here (if a number, then your gene_IDs were not updated')
     if species != 'Pfalciparum3D7':
         for x in model.genes:
             if x.id.startswith('PF3D7'):

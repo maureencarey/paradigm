@@ -61,6 +61,7 @@ for rxn in pf_model.reactions:
             universal_model.add_reactions([rxn.copy()])
 
 logger.info('loaded universal')
+os.chdir(data_path)
 genome_ids = pd.read_csv("auxotrophies_mapping_to_genomeID.csv",header = None).T
 new_header = genome_ids.iloc[0]
 genome_ids = genome_ids[1:]
@@ -156,7 +157,9 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     else:
         logging.info('pFBA gapfilling - feasible')
     get_fluxes = set([r.id for r in universal_model_pfba.reactions]) - set([rxn.id for rxn in input_model.reactions]) ### ERROR IN ORIGINAL CODE HAD MODEL instead of INPUT_MODEL
-    add_reactions_to_model = [rxn for rxn in get_fluxes if abs(solution.x_dict[rxn]) > 1E-8]
+    print(solution)
+    print(dir(solution))
+    add_reactions_to_model = [rxn for rxn in get_fluxes if abs(solution.fluxes[rxn]) > 1E-8]
 
     # double check
     logging.info('double checking pFBA solution')
@@ -326,8 +329,8 @@ for species, model in model_dict.items():
                 -1.0, gf_model.metabolites.get_by_id(cyto_met): 1.0 })
                 add_reactions_list.append(reaction)
                     
-    if 'biomass' not in [r.id for r in gf_model.reactions]:
-        logger.info('biomass not in reactions anymore')
+        if 'biomass' not in [r.id for r in gf_model.reactions]:
+            logger.info('biomass not in reactions anymore')
     if 'hb_c' in [m.id for m in model.metabolites]:
         logger.info('HEMOGLOBIN PRESENT3')
 # is it used in any reaction intracellularly? 
