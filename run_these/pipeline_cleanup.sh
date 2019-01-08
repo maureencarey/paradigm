@@ -1,14 +1,16 @@
 #!/bin/bash
 # home/mac9jc/paradigm
 
-mkdir ./model_generation_logs
-mv ./data/*.log ./model_generation_logs
-mkdir ./models
-mv ./data/*.json ./models
+cd home/mac9jc/paradigm
+mkdir home/mac9jc/paradigm/model_generation_logs
+mv **/*.log ./model_generation_logs
+
+# mkdir ./models
+# mv ./data/*.json ./models
 
 # CHECK ALL LOGS FOR INFEASIBLE STEPS
-cd ./model_generation_logs # paradigm directory
-for filename in *2018.log; do
+cd ~/paradigm/model_generation_logs # paradigm directory
+for filename in step*.log; do
 echo "$filename"
-python ../check_logs.py $filename
+python3 ../slurm_scripts/check_logs.py $filename
 done

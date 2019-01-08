@@ -2,6 +2,10 @@
 *.out
 *.log
 *.fasta
+*.sbatch
 data/orthology_mapping_jun22/tgondii_toxodb.txt
-!check_logs12_12_2018.log
-paradigm_outline.docx
+data/ortho_annotations_per_genome_dec2018.csv
+data/diamond_output_orthoMCL/TvaginalisG3_orthoMCL.tsv
+data/aa_seqs_OrthoMCL_5.fasta
+data/orthoMCL_proteins_diamond.dmnd
+!check_logs*_2018.log

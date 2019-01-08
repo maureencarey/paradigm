@@ -55,10 +55,18 @@ universal_model = cobra.io.load_json_model('universal_model_oct26_2018.json')
 
 # extend universal by curated model
 pf_model = cobra.io.load_json_model('iPfal18.json')
+len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:
         if len(set(['hb_c','hb_e','hemozoin_c','hemozoin_e','hemozoin_fv']).intersection(set([met.id for met in rxn.metabolites.keys()]))) == 0:
             universal_model.add_reactions([rxn.copy()])
+    else: #rxn.id IS in [r.id for r in universal_model but in PF its reversible and in universal its irreversible, make reversible
+        if rxn.lower_bound < universal_model.reactions.get_by_id(rxn.id).lower_bound:
+            universal_model.reactions.get_by_id(rxn.id).lower_bound = rxn.lower_bound
+        if rxn.upper_bound > universal_model.reactions.get_by_id(rxn.id).upper_bound:
+            universal_model.reactions.get_by_id(rxn.id).upper_bound = rxn.upper_bound
+if len(universal_model.reactions) <= len_univ_rxns:
+    logger.info('ERROR - universal model does not have Pf reactions added!')
 
 logger.info('loaded universal')
 os.chdir(data_path)
@@ -181,173 +189,175 @@ for species, model in model_dict.items():
     add_reactions_list = list()
     add_mets_list = list()
     
-    mets_to_prod = tasks_dict[species]["production"]
-    mets_to_consume = tasks_dict[species]["consumption"]
-    produce_met = list()
-    consume_met = list()
-    all_mets = list()
-    cannot_gapfill = list()
-    for met in mets_to_prod:
-        if met+'_c' in universal_model.metabolites:
-            produce_met.append(met)
-            all_mets.append(met)
-        else:
-            cannot_gapfill.append(met)
-    for met in mets_to_consume:
-        if met+'_c' in universal_model.metabolites:
-            consume_met.append(met)
-            all_mets.append(met)
-        else:
-            cannot_gapfill.append(met)
-    all_mets = list(set(all_mets))
+    if species in tasks_dict.keys():
 
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT2')
-    for met in all_mets:
-        logger.info('')
-        logger.info(met)
-        extracel_met = met+'_e'
-        cyto_met = met+'_c'
-    
-        gf_model = model.copy()
-        gf_universal = universal_model.copy()
-        # make sure you are making any mets by reversing biomass production
-        if 'biomass' in [r.id for r in gf_model.reactions]:
-            gf_model.reactions.get_by_id('biomass').lb = 0.
-            gf_model.reactions.get_by_id('biomass').ub = 0.
-        elif 'generic_biomass' in [r.id for r in gf_model.reactions]:
-            gf_model.reactions.get_by_id('generic_biomass').lb = 0.
-            gf_model.reactions.get_by_id('generic_biomass').ub = 0.
-    
-        # add metabolites if necessary
-        if cyto_met not in gf_model.metabolites:
-            # already filtered list for only mets_c in universal
-            logger.info('add cyto met')
-            gf_model.add_metabolites([gf_universal.metabolites.get_by_id(cyto_met).\
-            copy()])
-            add_mets_list.append(gf_universal.metabolites.get_by_id(cyto_met).\
-            copy())
-        if extracel_met not in gf_model.metabolites:
-            logger.info('add extracel met')
-            if extracel_met in gf_universal.metabolites:
-                gf_model.add_metabolites([gf_universal.metabolites.get_by_id(\
-                extracel_met).copy()])
-                add_mets_list.append(gf_universal.metabolites.get_by_id(\
-                extracel_met).copy())
+        mets_to_prod = tasks_dict[species]["production"]
+        mets_to_consume = tasks_dict[species]["consumption"]
+        produce_met = list()
+        consume_met = list()
+        all_mets = list()
+        cannot_gapfill = list()
+        for met in mets_to_prod:
+            if met+'_c' in universal_model.metabolites:
+                produce_met.append(met)
+                all_mets.append(met)
             else:
-                met = Metabolite(extracel_met,
-                                formula = gf_universal.metabolites.get_by_id(\
-                                cyto_met).formula,
-                                name = gf_universal.metabolites.get_by_id(\
-                                cyto_met).name,
-                                compartment='e')
-                gf_model.add_metabolites([met])
-                add_mets_list.append(met)
-
-        # add objective reaction
-        gf_model.add_boundary(gf_model.metabolites.get_by_id(cyto_met), type = "demand")
-        gf_model.objective = 'DM_'+cyto_met
-
-        # add exchange
-        if 'EX_'+extracel_met not in gf_model.reactions:
-            logger.info('add exchange')
-            gf_model.add_boundary(gf_model.metabolites.get_by_id(extracel_met), \
-            type="exchange")
-            add_reactions_list.append(gf_model.reactions.get_by_id('EX_'+\
-            extracel_met).copy())
-        
-        if met in list(produce_met):
-            logger.info('produce')
-            gf_model.reactions.get_by_id('EX_'+extracel_met).lower_bound = 0.
-            gf_model.reactions.get_by_id('EX_'+extracel_met).upper_bound = 0.
-            if model.slim_optimize() < 0.01: # gapfill if can't produce
-                solution = pfba_gapfill_implementation(gf_model, gf_universal, \
-                'DM_'+cyto_met)
-                logger.info('solution')
-                logger.info(solution)
-                if len(solution) > 1:
-                    for rxn_id in solution:
-                        if rxn_id != 'DM_'+cyto_met:
-                            add_reactions_list.append(gf_universal.reactions.\
-                            get_by_id(rxn_id).copy())
-                        else:
-                            if solution[0] != 'DM_'+cyto_met:
-                               add_reactions_list.append(gf_universal.reactions.\
-                               get_by_id(solution[0]).copy())
+                cannot_gapfill.append(met)
+        for met in mets_to_consume:
+            if met+'_c' in universal_model.metabolites:
+                consume_met.append(met)
+                all_mets.append(met)
             else:
-                logger.info('no gapfilling needed')
+                cannot_gapfill.append(met)
+        all_mets = list(set(all_mets))
 
-        if met in list(consume_met):
-            logger.info('consume')
-            gf_model.reactions.get_by_id('EX_'+extracel_met).lb = -1000.
-            gf_model.reactions.get_by_id('EX_'+extracel_met).ub = 1000.
-            t = False
-            if gf_model.slim_optimize() < 0.01: # optimize and no growth
-                # add import reaction (don't use gapfill because we want an import,
-                # not biosynthetic solution)
+        if 'hb_c' in [m.id for m in model.metabolites]:
+            logger.info('HEMOGLOBIN PRESENT2')
+        for met in all_mets:
+            logger.info('')
+            logger.info(met)
+            extracel_met = met+'_e'
+            cyto_met = met+'_c'
+    
+            gf_model = model.copy()
+            gf_universal = universal_model.copy()
+            # make sure you are making any mets by reversing biomass production
+            if 'biomass' in [r.id for r in gf_model.reactions]:
+                gf_model.reactions.get_by_id('biomass').lb = 0.
+                gf_model.reactions.get_by_id('biomass').ub = 0.
+            elif 'generic_biomass' in [r.id for r in gf_model.reactions]:
+                gf_model.reactions.get_by_id('generic_biomass').lb = 0.
+                gf_model.reactions.get_by_id('generic_biomass').ub = 0.
+    
+            # add metabolites if necessary
+            if cyto_met not in gf_model.metabolites:
+                # already filtered list for only mets_c in universal
+                logger.info('add cyto met')
+                gf_model.add_metabolites([gf_universal.metabolites.get_by_id(cyto_met).copy()])
+                add_mets_list.append(gf_universal.metabolites.get_by_id(cyto_met).copy())
+            if extracel_met not in gf_model.metabolites:
+                logger.info('add extracel met')
                 if extracel_met in gf_universal.metabolites:
-                    extracellular_reactions = gf_universal.metabolites.get_by_id(\
-                    extracel_met).reactions
-                    intracellular_reactions = gf_universal.metabolites.get_by_id(\
-                    cyto_met).reactions
-                    possible_rxns = list(extracellular_reactions.intersection(\
-                    intracellular_reactions))
-                    if len(possible_rxns) >0:
-                        if len(possible_rxns) > 1:
-                            rxn_keep = ''
-                            for rxn in possible_rxns:
-                                if len(rxn.metabolites) == 2:
-                                    # add reaction that has no other substrates
-                                    rxn_keep = rxn
-                                else:
-                                    pass
-                            if rxn_keep != '':
-                                add_reactions_list.append(rxn_keep)
-                            else: add_reactions_list.append(possible_rxns[0])
-                            logger.info('possible_rxns')
-                            logger.info(rxn_keep)
-                        else:
-                            add_reactions_list.append(possible_rxns[0])
-                            logger.info('possible_rxns')
-                            logger.info(possible_rxns[0])
-                    
-                    else:
-                        t = True # if no transport in universal, make transport rxn
+                    gf_model.add_metabolites([gf_universal.metabolites.get_by_id(\
+                    extracel_met).copy()])
+                    add_mets_list.append(gf_universal.metabolites.get_by_id(\
+                    extracel_met).copy())
                 else:
-                    t = True # if extracel met isnt in universal, make transport rxn
-            else:
-                logger.info('no gapfilling needed')
+                    met = Metabolite(extracel_met,
+                                    formula = gf_universal.metabolites.get_by_id(\
+                                    cyto_met).formula,
+                                    name = gf_universal.metabolites.get_by_id(\
+                                    cyto_met).name,
+                                    compartment='e')
+                    gf_model.add_metabolites([met])
+                    add_mets_list.append(met)
+
+            # add objective reaction
+            gf_model.add_boundary(gf_model.metabolites.get_by_id(cyto_met), type = "demand")
+            gf_model.objective = 'DM_'+cyto_met
+
+            # add exchange
+            if 'EX_'+extracel_met not in gf_model.reactions:
+                logger.info('add exchange')
+                gf_model.add_boundary(gf_model.metabolites.get_by_id(extracel_met), \
+                type="exchange")
+                add_reactions_list.append(gf_model.reactions.get_by_id('EX_'+\
+                extracel_met).copy())
+        
+            if met in list(produce_met):
+                logger.info('produce')
+                gf_model.reactions.get_by_id('EX_'+extracel_met).lower_bound = 0.
+                gf_model.reactions.get_by_id('EX_'+extracel_met).upper_bound = 0.
+                if model.slim_optimize() < 0.01: # gapfill if can't produce
+                    solution = pfba_gapfill_implementation(gf_model, gf_universal, \
+                    'DM_'+cyto_met)
+                    logger.info('solution')
+                    logger.info(solution)
+                    if len(solution) > 1:
+                        for rxn_id in solution:
+                            if rxn_id != 'DM_'+cyto_met:
+                                add_reactions_list.append(gf_universal.reactions.\
+                                get_by_id(rxn_id).copy())
+                            else:
+                                if solution[0] != 'DM_'+cyto_met:
+                                   add_reactions_list.append(gf_universal.reactions.\
+                                   get_by_id(solution[0]).copy())
+                else:
+                    logger.info('no gapfilling needed')
+
+            if met in list(consume_met):
+                logger.info('consume')
+                gf_model.reactions.get_by_id('EX_'+extracel_met).lb = -1000.
+                gf_model.reactions.get_by_id('EX_'+extracel_met).ub = 1000.
+                t = False
+                if gf_model.slim_optimize() < 0.01: # optimize and no growth
+                    # add import reaction (don't use gapfill because we want an import,
+                    # not biosynthetic solution)
+                    if extracel_met in gf_universal.metabolites:
+                        extracellular_reactions = gf_universal.metabolites.get_by_id(\
+                        extracel_met).reactions
+                        intracellular_reactions = gf_universal.metabolites.get_by_id(\
+                        cyto_met).reactions
+                        possible_rxns = list(extracellular_reactions.intersection(\
+                        intracellular_reactions))
+                        if len(possible_rxns) >0:
+                            if len(possible_rxns) > 1:
+                                rxn_keep = ''
+                                for rxn in possible_rxns:
+                                    if len(rxn.metabolites) == 2:
+                                        # add reaction that has no other substrates
+                                        rxn_keep = rxn
+                                    else:
+                                        pass
+                                if rxn_keep != '':
+                                    add_reactions_list.append(rxn_keep)
+                                else: add_reactions_list.append(possible_rxns[0])
+                                logger.info('possible_rxns')
+                                logger.info(rxn_keep)
+                            else:
+                                add_reactions_list.append(possible_rxns[0])
+                                logger.info('possible_rxns')
+                                logger.info(possible_rxns[0])
+                    
+                        else:
+                            t = True # if no transport in universal, make transport rxn
+                    else:
+                        t = True # if extracel met isnt in universal, make transport rxn
+                else:
+                    logger.info('no gapfilling needed')
                     # WORKS
          
-            if t == True:
-                reaction = Reaction(met.upper()+'t')
-                reaction.name = met + 'transport'
-                reaction.subsystem = 'Transport'
-                reaction.lower_bound = -1000.
-                reaction.upper_bound = 1000.
-                reaction.add_metabolites({gf_model.metabolites.get_by_id(extracel_met): \
-                -1.0, gf_model.metabolites.get_by_id(cyto_met): 1.0 })
-                add_reactions_list.append(reaction)
+                if t == True:
+                    reaction = Reaction(met.upper()+'t')
+                    reaction.name = met + 'transport'
+                    reaction.subsystem = 'Transport'
+                    reaction.lower_bound = -1000.
+                    reaction.upper_bound = 1000.
+                    reaction.add_metabolites({gf_model.metabolites.get_by_id(extracel_met): \
+                    -1.0, gf_model.metabolites.get_by_id(cyto_met): 1.0 })
+                    add_reactions_list.append(reaction)
                     
-        if 'biomass' not in [r.id for r in gf_model.reactions]:
-            logger.info('biomass not in reactions anymore')
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT3')
-# is it used in any reaction intracellularly? 
-# if not, cannot do anything about it, except curate in future
+            if 'biomass' not in [r.id for r in gf_model.reactions]:
+                logger.info('biomass not in reactions anymore')
+        if 'hb_c' in [m.id for m in model.metabolites]:
+            logger.info('HEMOGLOBIN PRESENT3')
+    # is it used in any reaction intracellularly? 
+    # if not, cannot do anything about it, except curate in future
 
-    add_reactions_list = flatten_mixed_list(add_reactions_list)
-    df = pd.DataFrame({'rxns_added':add_reactions_list})
-    df.to_csv('gapfilling_additions_{0}_tasks.csv'.format(species))
+        add_reactions_list = flatten_mixed_list(add_reactions_list)
+        df = pd.DataFrame({'rxns_added':add_reactions_list})
+        df.to_csv('gapfilling_additions_{0}_tasks.csv'.format(species))
 
-    for met in add_mets_list:
-        if met.id not in [m.id for m in model.metabolites]:
-            model.add_metabolites([met])
-    for rxn in add_reactions_list:
-        if rxn.id not in [r.id for r in model.reactions]:
-            model.add_reactions([rxn])
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT4')
+        for met in add_mets_list:
+            if met.id not in [m.id for m in model.metabolites]:
+                model.add_metabolites([met])
+        for rxn in add_reactions_list:
+            if rxn.id not in [r.id for r in model.reactions]:
+                model.add_reactions([rxn])
+        if 'hb_c' in [m.id for m in model.metabolites]:
+            logger.info('HEMOGLOBIN PRESENT4')
+    else:
+        logger.info("no data to gapfill for")
 
     logger.info("---------------------------------------------------")
     logger.info(species)

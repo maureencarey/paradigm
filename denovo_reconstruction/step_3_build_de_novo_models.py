@@ -304,7 +304,8 @@ for species in new_model_dict.keys():
 
     compartment_dictionary[species] = model_compartments
 
-columns = ['species','reactions_removed1','mets_removed1','reactions_removed2','mets_removed2','reactions_added', 'mets_added','gene_change']
+# columns = ['species','reactions_removed1','mets_removed1','reactions_removed2','mets_removed2','reactions_added', 'mets_added','gene_change']
+columns = ['species','reactions_removed1','reactions_added']
 modifications = pd.DataFrame(index = new_model_dict.keys(), columns=columns)
 inappropriate_compartments_that_remain = dict()
 transport_for_inappropariate_compartment_dict = dict()

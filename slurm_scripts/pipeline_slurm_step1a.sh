@@ -20,6 +20,7 @@ wget -O bigg_metabolites.txt 'http://bigg.ucsd.edu/static/namespace/bigg_models_
 echo "made annotation databases and other necessary files"
 
 # ANNOTATE GENOMES
+# cd /home/mac9jc/paradigm/data/
 for filename in ./*_annotated_Dec2018.fasta; do
 echo "$filename"
 echo "${filename:2:${#filename}-26}"
@@ -27,6 +28,7 @@ diamond blastp -d ./bigg_proteins_diamond -q $filename -o "${filename:2:${#filen
 done
 mv ./*_BiGG.tsv ./diamond_output_BiGG
 
+# cd /home/mac9jc/paradigm/data/
 for filename in ./*_annotated_Dec2018.fasta; do
 echo "$filename"
 echo "${filename:2:${#filename}-26}"
