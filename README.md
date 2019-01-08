@@ -143,24 +143,51 @@ This compiles all the information presented in the next three scripts for runnin
 
 This file parse through a model building log files to identify if any infeasible solutions were generated and writes a new log file with the problems that had infeasible solutions.
 
-## visualization
-
-### upsetR_models.R
-
-This script generates figure XXX. Requirements: UpSetR.
-
-### transporter_similarity.R
-
-This script generates figure XXX. Requirements:
-
-## RUN ORDER
-
-0. DOwnload FILENAMES
-1. download_all_eupathDB_release39.R
-2. make_diamond_database.sh
-3.
-
 
 ## Contact
 
 Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
+
+## RUN ORDER ON RIVANNA
+
+# manually doubel check latest EuPathDB release to see if any extra files need to run
+sbatch ./run_these/pipeline_slurm_step1.slurm 
+bash ./run_these/pipeline_auto_slurm_for_step2.sh
+# fix LmajorSD third line, remove ‘.1’
+module load anaconda/5.2.0-py3.6
+bash ./run_these/pipeline_cleanup.sh 
+	# not in orthology mapping dataframe:
+		# PcynomolgiB and PcynomolgiM
+		# PfragileNilgiri
+		# PgaboniG01 and PgaboniSY75
+		# PvinckeipetteriCR
+		# PvivaxSal1
+	# infeasible
+		# step6_EhistolyticaHM1IMSS_07_01_2019.log
+		# step6_EhistolyticaHM3IMSS_07_01_2019.log
+		# step6_EhistolyticaHM1IMSS-B_07_01_2019.log
+		# step6_EhistolyticaKU27_07_01_2019.log
+		# step6_LmexicanaMHOMGT2001U1103_07_01_2019.log
+		# step6_PbergheiANKA_07_01_2019.log
+		# step6_TbruceigambienseDAL972_07_01_2019.log
+		# step6_TbruceiLister427_07_01_2019.log
+		# step6_TbruceiTREU927_07_01_2019.log
+		# step6_TgondiiARI_07_01_2019
+		# step6_TgondiiFOU_07_01_2019
+		# step6_TgondiiGAB2-2007-GAL-DOM2_07_01_2019
+		# step6_TgondiiGT1_07_01_2019
+		# step6_TgondiiMAS_07_01_2019
+		# step6_TgondiiME49_07_01_2019
+		# step6_TgondiiVAND_07_01_2019
+			# pFBA gapfilling for DM_mal__D_c is infeasible!
+
+mkdir ./slurm_outputs
+mv *.out ./slurm_outputs
+mkdir ./model_modifications
+mv model_modifications_* ./model_modifications
+mkdir ./ortho_modifications
+mv orthology_modifications_* ./ortho_modifications
+mkdir ./gapfilling_additions
+mv gapfilling_additions_* ./gapfilling_additions
+mkdir ./percent_wrong_comp
+mv percent_reactions_in_* ./percent_wrong_com
