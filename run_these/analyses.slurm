@@ -7,10 +7,6 @@
 #SBATCH --mem-per-cpu=6000
 #SBATCH --account=csblrivanna
 
-module load R/3.3.0
-module load diamond
-bash ./slurm_scripts/pipeline_slurm_step1a.sh
-
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env
-bash ./slurm_scripts/pipeline_slurm_step1b.sh
+python3 ./model_evaluation/reaction_matrix_and_transporter.py
