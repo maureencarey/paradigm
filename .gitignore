@@ -1,7 +1,6 @@
 *.dmnd
 *.out
 *.log
-*.fasta
 *.sbatch
 data/orthology_mapping_jun22/tgondii_toxodb.txt
 data/ortho_annotations_per_genome_dec2018.csv
