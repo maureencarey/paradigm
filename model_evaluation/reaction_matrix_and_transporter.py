@@ -11,13 +11,13 @@ os.chdir(path)
 for filename in glob.glob(os.path.join(path, 'final_denovo_*.json')):
     key = filename.split('/')[len(filename.split('/'))-1]
     key = key[:-5]
-    key = key[3:]
+    key = key[13:]
     print(key)
     model_dict[key] = cobra.io.load_json_model(filename)
 for filename in glob.glob(os.path.join(path, 'ortho_*.json')):
     key = filename.split('/')[len(filename.split('/'))-1]
     key = key[:-5]
-    key = key[3:]
+    key = key[6:]
     print(key)
     model_dict[key] = cobra.io.load_json_model(filename)
 
@@ -104,14 +104,14 @@ for species, model in essentiality_screen_models.items():
     for rxn in model.reactions:
         if rxn.id == 'generic_biomass' or rxn.id == 'biomass':
             continue
-            with model as cobra_model:
-                cobra_model.reactions.get_by_id(rxn.id).knock_out()
-                f = cobra_model.slim_optimize()
-                if f < 0.1*max_biomass:
-                    interpreted_results[rxn.id] = 'lethal'
-                else:
-                    interpreted_results[rxn.id] = 'nonlethal'
-                raw_results[rxn.id] = f
+        with model as cobra_model:
+            cobra_model.reactions.get_by_id(rxn.id).knock_out()
+            f = cobra_model.slim_optimize()
+            if f < 0.1*max_biomass:
+                interpreted_results[rxn.id] = 'lethal'
+            else:
+                interpreted_results[rxn.id] = 'nonlethal'
+            raw_results[rxn.id] = f
 
     # save
     essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results
@@ -121,30 +121,30 @@ for species, model in essentiality_screen_models.items():
         # set objective
         model.objective = "biomass"
             
-            # don't accidentally use other biomass reaction
-            model.reactions.get_by_id('biomass').upper_bound = 1000.
-            model.reactions.get_by_id('biomass').lower_bound = 0.
-            model.reactions.get_by_id('generic_biomass').upper_bound = 0.
-            model.reactions.get_by_id('generic_biomass').lower_bound = 0.
+        # don't accidentally use other biomass reaction
+        model.reactions.get_by_id('biomass').upper_bound = 1000.
+        model.reactions.get_by_id('biomass').lower_bound = 0.
+        model.reactions.get_by_id('generic_biomass').upper_bound = 0.
+        model.reactions.get_by_id('generic_biomass').lower_bound = 0.
             
-            max_biomass = model.slim_optimize()
+        max_biomass = model.slim_optimize()
             
-            # knockout and record growth
-            for rxn in model.reactions:
-                if rxn.id == 'generic_biomass' or rxn.id == 'biomass':
-                    continue
-                with model as cobra_model:
-                    cobra_model.reactions.get_by_id(rxn.id).knock_out()
-                    f = cobra_model.slim_optimize()
-                    if f < 0.1*max_biomass:
-                        interpreted_results[rxn.id] = 'lethal'
-                    else:
-                        interpreted_results[rxn.id] = 'nonlethal'
-                    raw_results[rxn.id] = f
+        # knockout and record growth
+        for rxn in model.reactions:
+            if rxn.id == 'generic_biomass' or rxn.id == 'biomass':
+                continue
+            with model as cobra_model:
+                cobra_model.reactions.get_by_id(rxn.id).knock_out()
+                f = cobra_model.slim_optimize()
+                if f < 0.1*max_biomass:
+                    interpreted_results[rxn.id] = 'lethal'
+                else:
+                    interpreted_results[rxn.id] = 'nonlethal'
+                raw_results[rxn.id] = f
 
-    # save
-    essentiality_screen_results_raw[species+'_species_biomass'] = raw_results
-    essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
+        # save
+        essentiality_screen_results_raw[species+'_species_biomass'] = raw_results
+        essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
 matrix_of_essentiality = pd.DataFrame(index = list_o_reactions,columns=essentiality_screen_results_raw.keys())
 for species, rxn_list in essentiality_screen_results_raw.items():
