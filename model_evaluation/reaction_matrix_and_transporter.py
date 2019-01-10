@@ -142,7 +142,13 @@ for species, model in essentiality_screen_models.items():
         essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
 matrix_of_essentiality = pd.DataFrame(index = list_o_reactions,columns=essentiality_screen_results_raw.keys())
-for species, rxn_list in essentiality_screen_results_raw.items():
+for species_long, rxn_list in essentiality_screen_results_raw.items():
+    if '_generic' in species:
+        species = species_long.split('_generic')[0]
+    elif '_species' in species_long:
+        species = species_long.split('_species')[0]
+    else:
+        print('ERROR, what biomass are we using?')
     for rxn in list_o_reactions:
         matrix_of_essentiality.loc[rxn,species] = essentiality_screen_results_raw[species][rxn]
 matrix_of_essentiality.to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_jan.csv")
