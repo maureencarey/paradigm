@@ -12,14 +12,14 @@ for filename in glob.glob(os.path.join(path, 'final_denovo_*.json')):
     key = filename.split('/')[len(filename.split('/'))-1]
     key = key[:-5]
     key = key[13:]
-    print(key)
+#    print(key)
     model_dict[key] = cobra.io.load_json_model(filename)
-for filename in glob.glob(os.path.join(path, 'ortho_*.json')):
-    key = filename.split('/')[len(filename.split('/'))-1]
-    key = key[:-5]
-    key = key[6:]
-    print(key)
-    model_dict[key] = cobra.io.load_json_model(filename)
+# for filename in glob.glob(os.path.join(path, 'ortho_*.json')):
+  #  key = filename.split('/')[len(filename.split('/'))-1]
+   # key = key[:-5]
+  #  key = key[6:]
+  #  print(key)
+  #  model_dict[key] = cobra.io.load_json_model(filename)
 
 # these metabolites are transported INTO the cell
 imported_mets_dict = dict()
@@ -44,11 +44,8 @@ met_list = list(set([val for sublist in met_list for val in sublist]))
 presence_matrix_of_transporters = pd.DataFrame(index = met_list,columns=model_dict.keys())
 for species, imported_mets in imported_mets_dict.items():
     for met in met_list:
-        print(met)
-        print(species)
         if met in imported_mets:
             presence_matrix_of_transporters.loc[met,species] = 1
-            print(1)
         else:
             presence_matrix_of_transporters.loc[met,species] = 0
 presence_matrix_of_transporters.to_csv("/home/mac9jc/paradigm/data/transporter_presence_before_gapfilling_jan.csv")
@@ -64,22 +61,20 @@ list_o_reactions = list(set(list_o_reactions))
 presence_matrix_of_reactions = pd.DataFrame(index = list_o_reactions,columns=model_dict.keys())
 for species, rxn_list in reactions_in_model.items():
     for rxn in rxn_list:
-        print(rxn)
-        print(species)
         if rxn in list_o_reactions:
             presence_matrix_of_reactions.loc[rxn,species] = 1
-            print(1)
         else:
             presence_matrix_of_reactions.loc[rxn,species] = 0
 presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/rxn_presence_before_gapfilling_jan.csv")
 
 # get essential reactions
+os.chdir("/home/mac9jc/paradigm/models")
 essentiality_screen_models = dict()
-essentiality_screen_models['TgondiiRH'] = model_dict['TgondiiRH']
-essentiality_screen_models['Pfalciparum3D7'] = model_dict['Pfalciparum3D7']
-essentiality_screen_models['PbergheiANKA'] = model_dict['PbergheiANKA']
-essentiality_screen_models['ChominisTU502_2012'] = model_dict['ChominisTU502_2012']
-essentiality_screen_models['CparvumIowaII'] = model_dict['CparvumIowaII']
+essentiality_screen_models['TgondiiRH'] = cobra.io.load_json_model('gf_TgondiiRH.json')
+essentiality_screen_models['Pfalciparum3D7'] = cobra.io.load_json_model('gf_Pfalciparum3D7.json')
+essentiality_screen_models['PbergheiANKA'] = cobra.io.load_json_model('gf_PbergheiANKA.json')
+essentiality_screen_models['ChominisTU502_2012'] = cobra.io.load_json_model('gf_ChominisTU502_2012.json')
+essentiality_screen_models['CparvumIowaII'] = cobra.io.load_json_model('gf_CparvumIowaII.json')
 
 essentiality_screen_results_raw= dict()
 essentiality_screen_results_interpreted = dict()
