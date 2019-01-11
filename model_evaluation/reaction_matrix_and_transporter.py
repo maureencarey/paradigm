@@ -71,8 +71,10 @@ from cobra.core import Gene, Metabolite, Reaction
 os.chdir("/home/mac9jc/paradigm/models")
 essentiality_screen_models = dict()
 essentiality_screen_models['TgondiiRH'] = cobra.io.load_json_model('gf_TgondiiRH.json')
+essentiality_screen_models['TgondiiME49'] = cobra.io.load_json_model('gf_TgondiiME49.json')
 essentiality_screen_models['Pfalciparum3D7'] = cobra.io.load_json_model('gf_Pfalciparum3D7.json')
 essentiality_screen_models['PbergheiANKA'] = cobra.io.load_json_model('gf_PbergheiANKA.json')
+essentiality_screen_models['PvivaxSal1'] = cobra.io.load_json_model('gf_PvivaxSal1.json')
 essentiality_screen_models['ChominisTU502_2012'] = cobra.io.load_json_model('gf_ChominisTU502_2012.json')
 essentiality_screen_models['CparvumIowaII'] = cobra.io.load_json_model('gf_CparvumIowaII.json')
 
@@ -155,6 +157,7 @@ list_o_reactions2 = list(set(list_o_reactions2))
 print(essentiality_screen_results_raw.keys())
 
 matrix_of_essentiality = pd.DataFrame(index = list_o_reactions2,columns=essentiality_screen_results_raw.keys())
+matrix_interpreted = pd.DataFrame(index = list_o_reactions2,columns=essentiality_screen_results_interpreted.keys())
 for species_long, rxn_list in essentiality_screen_results_raw.items():
     print(species_long)
     if '_generic' in species_long:
@@ -165,10 +168,13 @@ for species_long, rxn_list in essentiality_screen_results_raw.items():
         print('ERROR, what biomass are we using?')
     for rxn in list_o_reactions2:
         if rxn in essentiality_screen_results_raw[species_long].keys():
-            matrix_of_essentiality.loc[rxn,species] = essentiality_screen_results_raw[species_long][rxn]
+            matrix_of_essentiality.loc[rxn,species_long] = essentiality_screen_results_raw[species_long][rxn]
+            matrix_interpreted.loc[rxn,species_long] = essentiality_screen_results_interpreted[species_long][rxn]
         else:
-            matrix_of_essentiality.loc[rxn,species] = 'NA'
+            matrix_of_essentiality.loc[rxn,species_long] = 'NA'
+            matrix_interpreted.loc[rxn,species_long] = 'NA'
 matrix_of_essentiality.to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_jan.csv")
+matrix_interpreted.to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_interpreted_jan.csv")
 
 
 
