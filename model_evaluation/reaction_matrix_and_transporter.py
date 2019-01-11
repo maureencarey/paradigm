@@ -141,23 +141,31 @@ for species, model in essentiality_screen_models.items():
         essentiality_screen_results_raw[species+'_species_biomass'] = raw_results
         essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
+import json
+
+with open('essentiality_data.json', 'w') as fp:
+    json.dump(essentiality_screen_results_interpreted, fp)
+
 list_o_reactions2 = list()
 for species, model in essentiality_screen_models.items():
     list_o_reactions2.append([x.id for x in model.reactions])
-list_o_reactions2 = [val for sublist in list_o_reactions for val in sublist]
-list_o_reactions2 = list(set(list_o_reactions))
+list_o_reactions2 = [val for sublist in list_o_reactions2 for val in sublist]
+list_o_reactions2 = list(set(list_o_reactions2))
 
-matrix_of_essentiality = pd.DataFrame(index = list_o_reactions,columns=essentiality_screen_results_raw.keys())
+print(essentiality_screen_results_raw.keys())
+
+matrix_of_essentiality = pd.DataFrame(index = list_o_reactions2,columns=essentiality_screen_results_raw.keys())
 for species_long, rxn_list in essentiality_screen_results_raw.items():
-    if '_generic' in species:
+    print(species_long)
+    if '_generic' in species_long:
         species = species_long.split('_generic')[0]
     elif '_species' in species_long:
         species = species_long.split('_species')[0]
     else:
         print('ERROR, what biomass are we using?')
     for rxn in list_o_reactions2:
-        if rxn in essentiality_screen_results_raw[species].keys():
-            matrix_of_essentiality.loc[rxn,species] = essentiality_screen_results_raw[species][rxn]
+        if rxn in essentiality_screen_results_raw[species_long].keys():
+            matrix_of_essentiality.loc[rxn,species] = essentiality_screen_results_raw[species_long][rxn]
         else:
             matrix_of_essentiality.loc[rxn,species] = 'NA'
 matrix_of_essentiality.to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_jan.csv")
