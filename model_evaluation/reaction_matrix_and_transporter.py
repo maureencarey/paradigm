@@ -68,15 +68,15 @@ from cobra.core import Gene, Metabolite, Reaction
 #presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/rxn_presence_before_gapfilling_jan.csv")
 
 # ##### get essential reactions
-#os.chdir("/home/mac9jc/paradigm/models")
-#essentiality_screen_models = dict()
-#essentiality_screen_models['TgondiiRH'] = cobra.io.load_json_model('gf_TgondiiRH.json')
-#essentiality_screen_models['TgondiiME49'] = cobra.io.load_json_model('gf_TgondiiME49.json')
-#essentiality_screen_models['Pfalciparum3D7'] = cobra.io.load_json_model('gf_Pfalciparum3D7.json')
-#essentiality_screen_models['PbergheiANKA'] = cobra.io.load_json_model('gf_PbergheiANKA.json')
-#essentiality_screen_models['PvivaxSal1'] = cobra.io.load_json_model('gf_PvivaxSal1.json')
-#essentiality_screen_models['ChominisTU502_2012'] = cobra.io.load_json_model('gf_ChominisTU502_2012.json')
-#essentiality_screen_models['CparvumIowaII'] = cobra.io.load_json_model('gf_CparvumIowaII.json')
+os.chdir("/home/mac9jc/paradigm/models")
+essentiality_screen_models = dict()
+essentiality_screen_models['TgondiiRH'] = cobra.io.load_json_model('gf_TgondiiRH.json')
+essentiality_screen_models['TgondiiME49'] = cobra.io.load_json_model('gf_TgondiiME49.json')
+essentiality_screen_models['Pfalciparum3D7'] = cobra.io.load_json_model('gf_Pfalciparum3D7.json')
+essentiality_screen_models['PbergheiANKA'] = cobra.io.load_json_model('gf_PbergheiANKA.json')
+essentiality_screen_models['PvivaxSal1'] = cobra.io.load_json_model('gf_PvivaxSal1.json')
+essentiality_screen_models['ChominisTU502_2012'] = cobra.io.load_json_model('gf_ChominisTU502_2012.json')
+essentiality_screen_models['CparvumIowaII'] = cobra.io.load_json_model('gf_CparvumIowaII.json')
 #
 #essentiality_screen_results_raw= dict()
 #essentiality_screen_results_interpreted = dict()
@@ -207,7 +207,7 @@ for species, model in essentiality_screen_models.items():
                 interpreted_results[gene.id] = 'lethal'
             else:
                 interpreted_results[gene.id] = 'nonlethal'
-            raw_results[rxn.id] = f/max_biomass
+            raw_results[gene.id] = f/max_biomass
             cobra.manipulation.undelete_model_genes(cobra_model)
 
     # save
@@ -235,7 +235,7 @@ for species, model in essentiality_screen_models.items():
                     interpreted_results[gene.id] = 'lethal'
                 else:
                     interpreted_results[gene.id] = 'nonlethal'
-                raw_results[rxn.id] = f/max_biomass
+                raw_results[gene.id] = f/max_biomass
                 cobra.manipulation.undelete_model_genes(cobra_model)
 
         # save
@@ -243,17 +243,17 @@ for species, model in essentiality_screen_models.items():
         gene_essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
 cols = ['gene_id', 'normalized_growth']
-pd.DataFrame(gene_essentiality_screen_results_raw['TgondiiRH_generic_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiRH_generic_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['TgondiiME49_generic_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiME49_generic_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['Pfalciparum3D7_generic_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_Pfalciparum3D7_generic_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['PvivaxSal1_generic_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PvivaxSal1_generic_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['PbergheiANKA_generic_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PbergheiANKA_generic_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['ChominisTU502_2012_generic_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_ChominisTU502_2012_generic_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['CparvumIowaII_generic_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_CparvumIowaII_generic_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiRH_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiRH_generic_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiME49_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiME49_generic_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['Pfalciparum3D7_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_Pfalciparum3D7_generic_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['PvivaxSal1_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PvivaxSal1_generic_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['PbergheiANKA_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PbergheiANKA_generic_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['ChominisTU502_2012_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_ChominisTU502_2012_generic_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['CparvumIowaII_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_CparvumIowaII_generic_biomass.csv")
 
-pd.DataFrame(gene_essentiality_screen_results_raw['Pfalciparum3D7_species_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_Pfalciparum3D7_species_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['PvivaxSal1_species_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PvivaxSal1_species_biomass.csv")
-pd.DataFrame(gene_essentiality_screen_results_raw['PbergheiANKA_species_biomass'].items(), columns = cols).to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PbergheiANKA_species_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['Pfalciparum3D7_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_Pfalciparum3D7_species_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['PvivaxSal1_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PvivaxSal1_species_biomass.csv")
+pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['PbergheiANKA_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_PbergheiANKA_species_biomass.csv")
 
 def met_ids_without_comp(model,met_id):
     
