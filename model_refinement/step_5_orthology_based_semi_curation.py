@@ -43,7 +43,10 @@ logger.info('loaded model')
 os.chdir(data_path)
 mapping = pd.read_csv("plasmodium_orthology_conversion_release41.csv")
 mapping['[Organism]'] = mapping['[Organism]'].str.replace(".", "")
+mapping['[Organism]'] = mapping['[Organism]'].str.replace("strain", "")
+mapping['[Organism]'] = mapping['[Organism]'].str.replace("Strain", "")
 mapping['[Organism]'] = mapping['[Organism]'].str.replace(" ", "")
+mapping['[Organism]'] = mapping['[Organism]'].str.replace("Sal-1", "Sal1")
 if SPECIES_ID not in mapping['[Organism]'].unique():
     logger.info(SPECIES_ID+'not in orthology mapping dataframe, aka we are not converting via orthology (printing infeasible to catch this error)')
 else:
