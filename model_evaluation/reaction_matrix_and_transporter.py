@@ -243,7 +243,21 @@ for species, model in essentiality_screen_models.items():
         gene_essentiality_screen_results_raw[species+'_species_biomass'] = raw_results
         gene_essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
+iPfal18 = cobra.io.load_json_model('iPfal18.json')
+iPfal18.reactions.get_by_id('biomass').upper_bound = 1000.
+iPfal18.reactions.get_by_id('biomass').lower_bound = 0.
+iPfal18.objective = "biomass"
+raw_results = dict()
+max_biomass = iPfal18.slim_optimize()
+for gene in iPfal18.genes:
+    with iPfal18 as cobra_model:
+        cobra.manipulation.delete_model_genes(cobra_model, [gene.id], cumulative_deletions=True)
+        f = cobra_model.slim_optimize()
+        raw_results[gene.id] = f/max_biomass
+        cobra.manipulation.undelete_model_genes(cobra_model)
+
 cols = ['gene_id', 'normalized_growth']
+pd.DataFrame.from_dict(raw_results, orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_iPfal18.csv")
 pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiRH_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiRH_generic_biomass.csv")
 pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiME49_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiME49_generic_biomass.csv")
 pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiGT1_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiGT1_generic_biomass.csv")
