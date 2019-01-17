@@ -71,6 +71,7 @@ from cobra.core import Gene, Metabolite, Reaction
 os.chdir("/home/mac9jc/paradigm/models")
 essentiality_screen_models = dict()
 essentiality_screen_models['TgondiiRH'] = cobra.io.load_json_model('gf_TgondiiRH.json')
+essentiality_screen_models['TgondiiGT1'] = cobra.io.load_json_model('gf_TgondiiGT1.json')
 essentiality_screen_models['TgondiiME49'] = cobra.io.load_json_model('gf_TgondiiME49.json')
 essentiality_screen_models['Pfalciparum3D7'] = cobra.io.load_json_model('gf_Pfalciparum3D7.json')
 essentiality_screen_models['PbergheiANKA'] = cobra.io.load_json_model('gf_PbergheiANKA.json')
