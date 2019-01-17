@@ -59,7 +59,14 @@ len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:
         if len(set(['hb_c','hb_e','hemozoin_c','hemozoin_e','hemozoin_fv']).intersection(set([met.id for met in rxn.metabolites.keys()]))) == 0:
-            universal_model.add_reactions([rxn.copy()])
+            universal_model.add_reactions([rxn.copy()]) # extend universal by Pf reactions, but remove gene IDs
+            if len(rxn.genes) > 0:
+                genes = rxn.genes
+                universal_model.reactions.get_by_id(rxn.id).gene_reaction_rule = ''
+                for gene in genes:
+                    if len(universal_model.genes.get_by_id(gene.id).reactions) == 0:
+                           gene_list = universal_model.genes.get_by_id(gene.id)
+                           cobra.manipulation.delete.remove_genes(universal_model, gene_list, remove_reactions=True)
     else: #rxn.id IS in [r.id for r in universal_model but in PF its reversible and in universal its irreversible, make reversible
         if rxn.lower_bound < universal_model.reactions.get_by_id(rxn.id).lower_bound:
             universal_model.reactions.get_by_id(rxn.id).lower_bound = rxn.lower_bound
