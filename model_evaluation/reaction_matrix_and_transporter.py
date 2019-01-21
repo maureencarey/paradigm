@@ -369,17 +369,19 @@ for species, model in model_dict.items():
     for met_id in list_o_mets:
         if met_id in [m.id for m in model.metabolites]:
             
-            if met_ids_without_comp(model,met_id) in mets_consumed_in_model[species] and mets_produced_in_model[species]:
-                matrix_of_mets.loc[met_id,species] = 'both'
             if met_ids_without_comp(model,met_id) in mets_consumed_in_model[species]:
-                matrix_of_mets.loc[met_id,species] = 'consumed'
-            if met_ids_without_comp(model,met_id) in mets_produced_in_model[species]:
-                matrix_of_mets.loc[met_id,species] = 'produced'
+                if met_ids_without_comp(model,met_id) in mets_produced_in_model[species]:
+                    matrix_of_mets.loc[met_id,species] = 'both'
+                else:                
+                    matrix_of_mets.loc[met_id,species] = 'consumed'
             else:
-                matrix_of_mets.loc[met_id,species] = 'neither'
+                if met_ids_without_comp(model,met_id) in mets_produced_in_model[species]:
+                    matrix_of_mets.loc[met_id,species] = 'produced'
+                else:
+                    matrix_of_mets.loc[met_id,species] = 'neither'
         else:
             matrix_of_mets.loc[met_id,species] = 'not present in model'
-                pd.DataFrame.from_dict(mets_consumed_in_model[species], orient='index').to_csv("/home/mac9jc/paradigm/data/mets_consumed{}.csv".format(species))
+pd.DataFrame.from_dict(mets_consumed_in_model, orient='index').to_csv("/home/mac9jc/paradigm/data/mets_consumed.csv")
 matrix_of_mets.to_csv("/home/mac9jc/paradigm/data/met_presence_after_gapfilling_jan.csv")
 
 
