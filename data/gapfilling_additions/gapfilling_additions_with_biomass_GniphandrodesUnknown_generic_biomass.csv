@@ -1,6 +1,6 @@
 ,rxns_added
-0,PDYXPT_c: pydam_c + pyr_c --> ala__L_c + pydx_c
-1,SULO: h2o_c + o2_c + so3_c --> h2o2_c + h_c + so4_c
-2,BIOMASS_SA_only_AA: 6.6 ala__L_c + 3.88 arg__L_c + 4.48 asn__L_c + 4.48 asp__L_c + 0.79 cys__L_c + 8.72 gln__L_c + 8.72 glu__L_c + 3.51 gly_c + 1.45 his__L_c + 4.06 ile__L_c + 5.21 leu__L_c + 5.45 lys__L_c + 1.94 met__L_c + 3.33 phe__L_c + 2.12 pro__L_c + 2.6 ser__L_c + 2.54 thr__L_c + 1.27 trp__L_c + 2.3 tyr__L_c + 4.12 val__L_c --> h2o_c
-3,AMPt: amp_e --> amp_c
-4,PROTEIN_BS: 0.6 ala__L_c + 0.377 arg__L_c + 0.2881 asn__L_c + 0.359 asp__L_c + 0.145 cys__L_c + 0.322 gln__L_c + 0.386 glu__L_c + 0.538 gly_c + 0.143 his__L_c + 0.324 ile__L_c + 0.564 leu__L_c + 0.57 lys__L_c + 0.138 met__L_c + 0.219 phe__L_c + 0.313 pro__L_c + 0.43 ser__L_c + 0.386 thr__L_c + 0.044 trp__L_c + 0.182 tyr__L_c + 0.416 val__L_c --> protein_c
+0,BIOMASS_SA_only_AA: 6.6 ala__L_c + 3.88 arg__L_c + 4.48 asn__L_c + 4.48 asp__L_c + 0.79 cys__L_c + 8.72 gln__L_c + 8.72 glu__L_c + 3.51 gly_c + 1.45 his__L_c + 4.06 ile__L_c + 5.21 leu__L_c + 5.45 lys__L_c + 1.94 met__L_c + 3.33 phe__L_c + 2.12 pro__L_c + 2.6 ser__L_c + 2.54 thr__L_c + 1.27 trp__L_c + 2.3 tyr__L_c + 4.12 val__L_c --> h2o_c
+1,PROTEIN_BS: 0.6 ala__L_c + 0.377 arg__L_c + 0.2881 asn__L_c + 0.359 asp__L_c + 0.145 cys__L_c + 0.322 gln__L_c + 0.386 glu__L_c + 0.538 gly_c + 0.143 his__L_c + 0.324 ile__L_c + 0.564 leu__L_c + 0.57 lys__L_c + 0.138 met__L_c + 0.219 phe__L_c + 0.313 pro__L_c + 0.43 ser__L_c + 0.386 thr__L_c + 0.044 trp__L_c + 0.182 tyr__L_c + 0.416 val__L_c --> protein_c
+2,PDYXPT_c: pydam_c + pyr_c --> ala__L_c + pydx_c
+3,SULO: h2o_c + o2_c + so3_c --> h2o2_c + h_c + so4_c
+4,AMPt: amp_e --> amp_c
