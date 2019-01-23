@@ -5868,39 +5868,20 @@
 "formula":[]
 },
 {
-"id":"12dgr140_c",
-"name":"1,2-Diacyl-sn-glycerol (ditetradecanoyl, n-C14:0)",
+"id":"12dgr180_c",
+"name":"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",
 "compartment":"cytosol",
 "charge":[
 0
 ],
 "formula":[
-"C31H60O5"
+"C39H76O5"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
 {
-"link":"http://identifiers.org/metanetx.chemical/MNXM146479",
-"id":"MNXM146479"
-}
-]
-}
-},
-{
-"id":"12dgr161_c",
-"name":"1,2-Diacyl-sn-glycerol (dihexadec-9-enoyl, n-C16:1)",
-"compartment":"cytosol",
-"charge":[
-0
-],
-"formula":[
-"C35H64O5"
-],
-"notes":{
-"MetaNetX (MNX) Chemical":[
-{
-"link":"http://identifiers.org/metanetx.chemical/MNXM3774",
-"id":"MNXM3774"
+"link":"http://identifiers.org/metanetx.chemical/MNXM4217",
+"id":"MNXM4217"
 }
 ]
 }
@@ -5930,25 +5911,6 @@
 "compartment":"cytosol",
 "charge":[],
 "formula":[]
-},
-{
-"id":"12dgr180_c",
-"name":"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",
-"compartment":"cytosol",
-"charge":[
-0
-],
-"formula":[
-"C39H76O5"
-],
-"notes":{
-"MetaNetX (MNX) Chemical":[
-{
-"link":"http://identifiers.org/metanetx.chemical/MNXM4217",
-"id":"MNXM4217"
-}
-]
-}
 },
 {
 "id":"12dgr160_c",
@@ -6003,6 +5965,44 @@
 {
 "link":"http://identifiers.org/metanetx.chemical/MNXM3775",
 "id":"MNXM3775"
+}
+]
+}
+},
+{
+"id":"12dgr140_c",
+"name":"1,2-Diacyl-sn-glycerol (ditetradecanoyl, n-C14:0)",
+"compartment":"cytosol",
+"charge":[
+0
+],
+"formula":[
+"C31H60O5"
+],
+"notes":{
+"MetaNetX (MNX) Chemical":[
+{
+"link":"http://identifiers.org/metanetx.chemical/MNXM146479",
+"id":"MNXM146479"
+}
+]
+}
+},
+{
+"id":"12dgr161_c",
+"name":"1,2-Diacyl-sn-glycerol (dihexadec-9-enoyl, n-C16:1)",
+"compartment":"cytosol",
+"charge":[
+0
+],
+"formula":[
+"C35H64O5"
+],
+"notes":{
+"MetaNetX (MNX) Chemical":[
+{
+"link":"http://identifiers.org/metanetx.chemical/MNXM3774",
+"id":"MNXM3774"
 }
 ]
 }
@@ -6672,36 +6672,10 @@
 }
 },
 {
-"id":"dgl_prod3",
-"name":"dgl_prod3",
+"id":"dgl_prod7",
+"name":"dgl_prod7",
 "metabolites":{
-"12dgr140_c":-1.0,
-"all_dgl_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"subsystem":"Lipids LipidProduction",
-"notes":{
-"AUTHORS":[
-""
-],
-"CONFIDENCE LEVEL":[
-""
-],
-"EC NUMBER":[
-""
-],
-"GENE ASSOCIATION":[
-""
-]
-}
-},
-{
-"id":"dgl_prod6",
-"name":"dgl_prod6",
-"metabolites":{
-"12dgr161_c":-1.0,
+"12dgr180_c":-1.0,
 "all_dgl_c":1.0
 },
 "lower_bound":0.0,
@@ -6755,32 +6729,6 @@
 "metabolites":{
 "all_dgl_c":1.0,
 "dag_c":-1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"subsystem":"Lipids LipidProduction",
-"notes":{
-"AUTHORS":[
-""
-],
-"CONFIDENCE LEVEL":[
-""
-],
-"EC NUMBER":[
-""
-],
-"GENE ASSOCIATION":[
-""
-]
-}
-},
-{
-"id":"dgl_prod7",
-"name":"dgl_prod7",
-"metabolites":{
-"12dgr180_c":-1.0,
-"all_dgl_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
@@ -6858,6 +6806,58 @@
 "name":"dgl_prod8",
 "metabolites":{
 "12dgr181_c":-1.0,
+"all_dgl_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"subsystem":"Lipids LipidProduction",
+"notes":{
+"AUTHORS":[
+""
+],
+"CONFIDENCE LEVEL":[
+""
+],
+"EC NUMBER":[
+""
+],
+"GENE ASSOCIATION":[
+""
+]
+}
+},
+{
+"id":"dgl_prod3",
+"name":"dgl_prod3",
+"metabolites":{
+"12dgr140_c":-1.0,
+"all_dgl_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"subsystem":"Lipids LipidProduction",
+"notes":{
+"AUTHORS":[
+""
+],
+"CONFIDENCE LEVEL":[
+""
+],
+"EC NUMBER":[
+""
+],
+"GENE ASSOCIATION":[
+""
+]
+}
+},
+{
+"id":"dgl_prod6",
+"name":"dgl_prod6",
+"metabolites":{
+"12dgr161_c":-1.0,
 "all_dgl_c":1.0
 },
 "lower_bound":0.0,

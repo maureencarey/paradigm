@@ -180,7 +180,7 @@ bash ./run_these/pipeline_cleanup.sh
 		# step6_TgondiiME49_07_01_2019
 		# step6_TgondiiVAND_07_01_2019
 			# pFBA gapfilling for DM_mal__D_c is infeasible!
-
+sbatch ./run_these/make_plasmodium_model_history.sbatch 
 mkdir ./slurm_outputs
 mv *.out ./slurm_outputs
 mkdir ./model_modifications

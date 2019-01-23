@@ -16182,23 +16182,6 @@
 ]
 },
 {
-"id":"pgp140_e",
-"name":"Phosphatidylglycerophosphate (ditetradecanoyl, n-C14:0)",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"pgp140",
-"pgp140_p"
-]
-},
-"annotation":[
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM5272"
-]
-]
-},
-{
 "id":"pg180_e",
 "name":"Phosphatidylglycerol (dioctadecanoyl, n-C18:0)",
 "compartment":"",
@@ -16232,6 +16215,23 @@
 [
 "SEED Compound",
 "http://identifiers.org/seed.compound/cpd23600"
+]
+]
+},
+{
+"id":"pgp140_e",
+"name":"Phosphatidylglycerophosphate (ditetradecanoyl, n-C14:0)",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"pgp140",
+"pgp140_p"
+]
+},
+"annotation":[
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM5272"
 ]
 ]
 },
@@ -16285,6 +16285,23 @@
 [
 "SEED Compound",
 "http://identifiers.org/seed.compound/cpd29054"
+]
+]
+},
+{
+"id":"hghhlipa_e",
+"name":"Heptosyl-glucosyl-heptosyl-heptosyl-kdo2-lipidA",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"hghhlipa",
+"hghhlipa_p"
+]
+},
+"annotation":[
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM147479"
 ]
 ]
 },
@@ -16427,6 +16444,52 @@
 ]
 },
 {
+"id":"ps161_e",
+"name":"Phosphatidylserine (dihexadec-9-enoyl, n-C16:1)",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"ps161",
+"ps161_p"
+]
+},
+"annotation":[
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM7660"
+]
+]
+},
+{
+"id":"pgp161_e",
+"name":"Phosphatidylglycerophosphate (dihexadec-9-enoyl, n-C16:1)",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"pgp161",
+"pgp161_p"
+]
+},
+"annotation":[
+[
+"BioCyc",
+"http://identifiers.org/biocyc/META:CPD0-2230"
+],
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM75103"
+],
+[
+"SEED Compound",
+"http://identifiers.org/seed.compound/cpd15546"
+],
+[
+"SEED Compound",
+"http://identifiers.org/seed.compound/cpd26451"
+]
+]
+},
+{
 "id":"pa140_e",
 "name":"1,2-ditetradecanoyl-sn-glycerol 3-phosphate",
 "compartment":"",
@@ -16476,48 +16539,31 @@
 ]
 },
 {
-"id":"ps161_e",
-"name":"Phosphatidylserine (dihexadec-9-enoyl, n-C16:1)",
+"id":"pgp180_e",
+"name":"Phosphatidylglycerophosphate (dioctadecanoyl, n-C18:0)",
 "compartment":"",
 "notes":{
 "original_bigg_ids":[
-"ps161",
-"ps161_p"
-]
-},
-"annotation":[
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM7660"
-]
-]
-},
-{
-"id":"pgp161_e",
-"name":"Phosphatidylglycerophosphate (dihexadec-9-enoyl, n-C16:1)",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"pgp161",
-"pgp161_p"
+"pgp180",
+"pgp180_p"
 ]
 },
 "annotation":[
 [
 "BioCyc",
-"http://identifiers.org/biocyc/META:CPD0-2230"
+"http://identifiers.org/biocyc/META:CPD-12820"
 ],
 [
 "MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM75103"
+"http://identifiers.org/metanetx.chemical/MNXM75104"
 ],
 [
 "SEED Compound",
-"http://identifiers.org/seed.compound/cpd15546"
+"http://identifiers.org/seed.compound/cpd15547"
 ],
 [
 "SEED Compound",
-"http://identifiers.org/seed.compound/cpd26451"
+"http://identifiers.org/seed.compound/cpd23598"
 ]
 ]
 },
@@ -16567,35 +16613,6 @@
 [
 "SEED Compound",
 "http://identifiers.org/seed.compound/cpd26147"
-]
-]
-},
-{
-"id":"pgp180_e",
-"name":"Phosphatidylglycerophosphate (dioctadecanoyl, n-C18:0)",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"pgp180",
-"pgp180_p"
-]
-},
-"annotation":[
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:CPD-12820"
-],
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM75104"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd15547"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd23598"
 ]
 ]
 },
@@ -16662,6 +16679,23 @@
 ]
 },
 {
+"id":"pg141_e",
+"name":"Phosphatidylglycerol (ditetradec-7-enoyl, n-C14:1)",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"pg141",
+"pg141_p"
+]
+},
+"annotation":[
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM2029"
+]
+]
+},
+{
 "id":"pa181_e",
 "name":"1,2-dioctadec-11-enoyl-sn-glycerol 3-phosphate",
 "compartment":"",
@@ -16717,39 +16751,6 @@
 [
 "MetaNetX (MNX) Chemical",
 "http://identifiers.org/metanetx.chemical/MNXM7659"
-]
-]
-},
-{
-"id":"pe140_e",
-"name":"Phosphatidylethanolamine (ditetradecanoyl, n-C14:0)",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"pe140",
-"pe140_p"
-]
-},
-"annotation":[
-[
-"Human Metabolome Database",
-"http://identifiers.org/hmdb/HMDB05313"
-],
-[
-"Human Metabolome Database",
-"http://identifiers.org/hmdb/HMDB08821"
-],
-[
-"LipidMaps",
-"http://identifiers.org/lipidmaps/LMGP02010352"
-],
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:CPD-17087"
-],
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM2859"
 ]
 ]
 },
@@ -16812,6 +16813,39 @@
 [
 "SEED Compound",
 "http://identifiers.org/seed.compound/cpd23595"
+]
+]
+},
+{
+"id":"pe140_e",
+"name":"Phosphatidylethanolamine (ditetradecanoyl, n-C14:0)",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"pe140",
+"pe140_p"
+]
+},
+"annotation":[
+[
+"Human Metabolome Database",
+"http://identifiers.org/hmdb/HMDB05313"
+],
+[
+"Human Metabolome Database",
+"http://identifiers.org/hmdb/HMDB08821"
+],
+[
+"LipidMaps",
+"http://identifiers.org/lipidmaps/LMGP02010352"
+],
+[
+"BioCyc",
+"http://identifiers.org/biocyc/META:CPD-17087"
+],
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM2859"
 ]
 ]
 },
@@ -16923,27 +16957,6 @@
 ]
 },
 {
-"id":"pa141_e",
-"name":"1,2-ditetradec-7-enoyl-sn-glycerol 3-phosphate",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"pa141",
-"pa141_p"
-]
-},
-"annotation":[
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM90512"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd15523"
-]
-]
-},
-{
 "id":"pe120_e",
 "name":"Phosphatidylethanolamine (didodecanoyl, n-C12:0)",
 "compartment":"",
@@ -16969,48 +16982,23 @@
 ]
 },
 {
-"id":"pg161_e",
-"name":"Phosphatidylglycerol (dihexadec-9-enoyl, n-C16:1)",
+"id":"pa141_e",
+"name":"1,2-ditetradec-7-enoyl-sn-glycerol 3-phosphate",
 "compartment":"",
 "notes":{
 "original_bigg_ids":[
-"pg161",
-"pg161_p"
-]
-},
-"annotation":[
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:CPD0-2330"
-],
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM75101"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd15539"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd26463"
-]
-]
-},
-{
-"id":"pgp120_e",
-"name":"Phosphatidylglycerophosphate (didodecanoyl, n-C12:0)",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"pgp120",
-"pgp120_p"
+"pa141",
+"pa141_p"
 ]
 },
 "annotation":[
 [
 "MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM5266"
+"http://identifiers.org/metanetx.chemical/MNXM90512"
+],
+[
+"SEED Compound",
+"http://identifiers.org/seed.compound/cpd15523"
 ]
 ]
 },
@@ -17072,19 +17060,48 @@
 ]
 },
 {
-"id":"pgp141_e",
-"name":"Phosphatidylglycerophosphate (ditetradec-7-enoyl, n-C14:1)",
+"id":"pg161_e",
+"name":"Phosphatidylglycerol (dihexadec-9-enoyl, n-C16:1)",
 "compartment":"",
 "notes":{
 "original_bigg_ids":[
-"pgp141",
-"pgp141_p"
+"pg161",
+"pg161_p"
+]
+},
+"annotation":[
+[
+"BioCyc",
+"http://identifiers.org/biocyc/META:CPD0-2330"
+],
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM75101"
+],
+[
+"SEED Compound",
+"http://identifiers.org/seed.compound/cpd15539"
+],
+[
+"SEED Compound",
+"http://identifiers.org/seed.compound/cpd26463"
+]
+]
+},
+{
+"id":"pgp120_e",
+"name":"Phosphatidylglycerophosphate (didodecanoyl, n-C12:0)",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"pgp120",
+"pgp120_p"
 ]
 },
 "annotation":[
 [
 "MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM5271"
+"http://identifiers.org/metanetx.chemical/MNXM5266"
 ]
 ]
 },
@@ -17102,6 +17119,23 @@
 [
 "MetaNetX (MNX) Chemical",
 "http://identifiers.org/metanetx.chemical/MNXM2150"
+]
+]
+},
+{
+"id":"pgp141_e",
+"name":"Phosphatidylglycerophosphate (ditetradec-7-enoyl, n-C14:1)",
+"compartment":"",
+"notes":{
+"original_bigg_ids":[
+"pgp141",
+"pgp141_p"
+]
+},
+"annotation":[
+[
+"MetaNetX (MNX) Chemical",
+"http://identifiers.org/metanetx.chemical/MNXM5271"
 ]
 ]
 },
@@ -17152,23 +17186,6 @@
 ]
 },
 {
-"id":"hghhlipa_e",
-"name":"Heptosyl-glucosyl-heptosyl-heptosyl-kdo2-lipidA",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"hghhlipa",
-"hghhlipa_p"
-]
-},
-"annotation":[
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM147479"
-]
-]
-},
-{
 "id":"hghhlipan_e",
 "name":"Heptosyl-glucosyl-heptosyl-heptosyl-kdo2-lipidA (glucosediamine)",
 "compartment":"",
@@ -17182,23 +17199,6 @@
 [
 "MetaNetX (MNX) Chemical",
 "http://identifiers.org/metanetx.chemical/MNXM147480"
-]
-]
-},
-{
-"id":"pg141_e",
-"name":"Phosphatidylglycerol (ditetradec-7-enoyl, n-C14:1)",
-"compartment":"",
-"notes":{
-"original_bigg_ids":[
-"pg141",
-"pg141_p"
-]
-},
-"annotation":[
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM2029"
 ]
 ]
 },
@@ -20531,89 +20531,6 @@
 "formula":[]
 },
 {
-"id":"12dgr180_c",
-"name":"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",
-"compartment":"cytosol",
-"charge":[
-0
-],
-"formula":[
-"C39H76O5"
-],
-"notes":{
-"MetaNetX (MNX) Chemical":[
-{
-"link":"http://identifiers.org/metanetx.chemical/MNXM4217",
-"id":"MNXM4217"
-}
-]
-}
-},
-{
-"id":"12dgr120_c",
-"name":"1,2-Diacyl-sn-glycerol (didodecanoyl, n-C12:0)",
-"compartment":"cytosol",
-"charge":[
-0
-],
-"formula":[
-"C27H52O5"
-],
-"notes":{
-"MetaNetX (MNX) Chemical":[
-{
-"link":"http://identifiers.org/metanetx.chemical/MNXM4939",
-"id":"MNXM4939"
-}
-]
-}
-},
-{
-"id":"dag_c",
-"name":"diacylglycerols (total)",
-"compartment":"cytosol",
-"charge":[],
-"formula":[]
-},
-{
-"id":"12dgr160_c",
-"name":"1,2-Diacyl-sn-glycerol (dihexadecanoyl, n-C16:0)",
-"compartment":"cytosol",
-"charge":[
-0
-],
-"formula":[
-"C35H68O5"
-],
-"notes":{
-"MetaNetX (MNX) Chemical":[
-{
-"link":"http://identifiers.org/metanetx.chemical/MNXM3132",
-"id":"MNXM3132"
-}
-]
-}
-},
-{
-"id":"12dgr181_c",
-"name":"1,2-Diacyl-sn-glycerol (dioctadec-11-enoyl, n-C18:1)",
-"compartment":"cytosol",
-"charge":[
-0
-],
-"formula":[
-"C39H72O5"
-],
-"notes":{
-"MetaNetX (MNX) Chemical":[
-{
-"link":"http://identifiers.org/metanetx.chemical/MNXM3775",
-"id":"MNXM3775"
-}
-]
-}
-},
-{
 "id":"12dgr140_c",
 "name":"1,2-Diacyl-sn-glycerol (ditetradecanoyl, n-C14:0)",
 "compartment":"cytosol",
@@ -20652,6 +20569,51 @@
 }
 },
 {
+"id":"12dgr181_c",
+"name":"1,2-Diacyl-sn-glycerol (dioctadec-11-enoyl, n-C18:1)",
+"compartment":"cytosol",
+"charge":[
+0
+],
+"formula":[
+"C39H72O5"
+],
+"notes":{
+"MetaNetX (MNX) Chemical":[
+{
+"link":"http://identifiers.org/metanetx.chemical/MNXM3775",
+"id":"MNXM3775"
+}
+]
+}
+},
+{
+"id":"12dgr180_c",
+"name":"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",
+"compartment":"cytosol",
+"charge":[
+0
+],
+"formula":[
+"C39H76O5"
+],
+"notes":{
+"MetaNetX (MNX) Chemical":[
+{
+"link":"http://identifiers.org/metanetx.chemical/MNXM4217",
+"id":"MNXM4217"
+}
+]
+}
+},
+{
+"id":"dag_c",
+"name":"diacylglycerols (total)",
+"compartment":"cytosol",
+"charge":[],
+"formula":[]
+},
+{
 "id":"12dgr141_c",
 "name":"1,2-Diacyl-sn-glycerol (ditetradec-7-enoyl, n-C14:1)",
 "compartment":"cytosol",
@@ -20666,6 +20628,44 @@
 {
 "link":"http://identifiers.org/metanetx.chemical/MNXM4940",
 "id":"MNXM4940"
+}
+]
+}
+},
+{
+"id":"12dgr160_c",
+"name":"1,2-Diacyl-sn-glycerol (dihexadecanoyl, n-C16:0)",
+"compartment":"cytosol",
+"charge":[
+0
+],
+"formula":[
+"C35H68O5"
+],
+"notes":{
+"MetaNetX (MNX) Chemical":[
+{
+"link":"http://identifiers.org/metanetx.chemical/MNXM3132",
+"id":"MNXM3132"
+}
+]
+}
+},
+{
+"id":"12dgr120_c",
+"name":"1,2-Diacyl-sn-glycerol (didodecanoyl, n-C12:0)",
+"compartment":"cytosol",
+"charge":[
+0
+],
+"formula":[
+"C27H52O5"
+],
+"notes":{
+"MetaNetX (MNX) Chemical":[
+{
+"link":"http://identifiers.org/metanetx.chemical/MNXM4939",
+"id":"MNXM4939"
 }
 ]
 }
@@ -27194,36 +27194,36 @@
 ]
 },
 {
-"id":"TCHOLABCtc",
-"name":"Bile Acid Transport by ABCa8",
+"id":"CAATPS_1",
+"name":"Ca ATPase",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
+"ca2_c":-1.0,
+"ca2_e":1.0,
 "h2o_c":-1.0,
-"h_c":1.0,
-"pi_c":1.0,
-"tchola_c":1.0,
-"tchola_e":-1.0
+"h_e":1.0,
+"pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "notes":{
 "original_bigg_ids":[
-"TCHOLABCtc"
+"CAATPS"
 ]
 },
 "annotation":[]
 },
 {
-"id":"HMR_0188",
-"name":"Long-Chain-Fatty-Acid Coenzyme A Ligase",
+"id":"PALFATPtc",
+"name":"Uptake of Hexadecanoate by the enterocytes",
 "metabolites":{
 "amp_c":1.0,
 "atp_c":-1.0,
 "coa_c":-1.0,
-"ddca_c":-1.0,
-"ddcacoa_c":1.0,
+"hdca_e":-1.0,
+"pmtcoa_c":1.0,
 "ppi_c":1.0
 },
 "lower_bound":0.0,
@@ -27231,31 +27231,46 @@
 "gene_reaction_rule":"",
 "notes":{
 "original_bigg_ids":[
-"HMR_0188"
+"PALFATPtc"
 ]
 },
-"annotation":[]
+"annotation":[
+[
+"MetaNetX (MNX) Equation",
+"http://identifiers.org/metanetx.reaction/MNXR102341"
+],
+[
+"EC Number",
+"http://identifiers.org/ec-code/6.2.1.3"
+]
+]
 },
 {
-"id":"RE2912M",
-"name":"Long-Chain-Fatty-Acid- Coenzyme A Ligase",
+"id":"CAATPS",
+"name":"CAATPS",
 "metabolites":{
-"amp_m":1.0,
-"atp_m":-1.0,
-"coa_m":-1.0,
-"hdcea_m":-1.0,
-"hdcoa_m":1.0,
-"ppi_m":1.0
+"adp_c":1.0,
+"atp_c":-1.0,
+"ca2_c":-2.0,
+"ca2_e":2.0,
+"h2o_c":-1.0,
+"h_e":1.0,
+"pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "notes":{
 "original_bigg_ids":[
-"RE2912M"
+"CAATPS"
 ]
 },
-"annotation":[]
+"annotation":[
+[
+"MetaNetX (MNX) Equation",
+"http://identifiers.org/metanetx.reaction/MNXR96438"
+]
+]
 },
 {
 "id":"r1530",
@@ -27321,36 +27336,6 @@
 ]
 },
 {
-"id":"PALFATPtc",
-"name":"Uptake of Hexadecanoate by the enterocytes",
-"metabolites":{
-"amp_c":1.0,
-"atp_c":-1.0,
-"coa_c":-1.0,
-"hdca_e":-1.0,
-"pmtcoa_c":1.0,
-"ppi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"notes":{
-"original_bigg_ids":[
-"PALFATPtc"
-]
-},
-"annotation":[
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR102341"
-],
-[
-"EC Number",
-"http://identifiers.org/ec-code/6.2.1.3"
-]
-]
-},
-{
 "id":"MG2abc",
 "name":"Magnesium transport via ABC system",
 "metabolites":{
@@ -27406,6 +27391,27 @@
 ]
 },
 {
+"id":"FACOAL_160_m",
+"name":"Long-chain acyl-CoA synthetase (16:0)",
+"metabolites":{
+"amp_m":1.0,
+"atp_m":-1.0,
+"coa_m":-1.0,
+"hdca_m":-1.0,
+"pmtcoa_m":1.0,
+"ppi_m":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"notes":{
+"original_bigg_ids":[
+"FACOAL_160_m"
+]
+},
+"annotation":[]
+},
+{
 "id":"TTDCAFATPc",
 "name":"Uptake of uptake of Hexadecanoate by the enterocytes by the enterocytes",
 "metabolites":{
@@ -27432,14 +27438,14 @@
 ]
 },
 {
-"id":"FACOAL_160_m",
-"name":"Long-chain acyl-CoA synthetase (16:0)",
+"id":"RE2912M",
+"name":"Long-Chain-Fatty-Acid- Coenzyme A Ligase",
 "metabolites":{
 "amp_m":1.0,
 "atp_m":-1.0,
 "coa_m":-1.0,
-"hdca_m":-1.0,
-"pmtcoa_m":1.0,
+"hdcea_m":-1.0,
+"hdcoa_m":1.0,
 "ppi_m":1.0
 },
 "lower_bound":0.0,
@@ -27447,64 +27453,21 @@
 "gene_reaction_rule":"",
 "notes":{
 "original_bigg_ids":[
-"FACOAL_160_m"
+"RE2912M"
 ]
 },
 "annotation":[]
 },
 {
-"id":"TCHOLAt3",
-"name":"ABC bile acid transporter",
+"id":"GTHRDt",
+"name":"Glutathione transport into mitochondria",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
+"gthrd_c":-1.0,
+"gthrd_m":1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"pi_c":1.0,
-"tchola_c":-1.0,
-"tchola_e":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"notes":{
-"original_bigg_ids":[
-"TCHOLAt3"
-]
-},
-"annotation":[
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR104744"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/50055#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/50054#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/50053#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/50052#1"
-]
-]
-},
-{
-"id":"CAATPS",
-"name":"CAATPS",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"ca2_c":-2.0,
-"ca2_e":2.0,
-"h2o_c":-1.0,
-"h_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
@@ -27512,37 +27475,51 @@
 "gene_reaction_rule":"",
 "notes":{
 "original_bigg_ids":[
-"CAATPS"
+"GTHRDt"
 ]
 },
 "annotation":[
 [
+"RHEA",
+"http://identifiers.org/rhea/29791#2"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/29792#2"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/29787#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/29788#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/29789#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/29790#1"
+],
+[
 "MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR96438"
+"http://identifiers.org/metanetx.reaction/MNXR100447"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/29793#2"
+],
+[
+"BioCyc",
+"http://identifiers.org/biocyc/META:RXN0-21"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/29794#2"
 ]
 ]
-},
-{
-"id":"CAATPS_1",
-"name":"Ca ATPase",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"ca2_c":-1.0,
-"ca2_e":1.0,
-"h2o_c":-1.0,
-"h_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"notes":{
-"original_bigg_ids":[
-"CAATPS"
-]
-},
-"annotation":[]
 },
 {
 "id":"CA2abc",
@@ -27600,6 +27577,61 @@
 ]
 },
 {
+"id":"NIabc",
+"name":"Nickel transport via ABC system",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"ni2_c":1.0,
+"ni2_e":-1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"notes":{
+"original_bigg_ids":[
+"NIabc"
+]
+},
+"annotation":[
+[
+"MetaNetX (MNX) Equation",
+"http://identifiers.org/metanetx.reaction/MNXR101959"
+],
+[
+"BioCyc",
+"http://identifiers.org/biocyc/META:ABC-20-RXN"
+],
+[
+"BioCyc",
+"http://identifiers.org/biocyc/META:3.6.3.24-RXN"
+],
+[
+"EC Number",
+"http://identifiers.org/ec-code/3.6.3.24"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/15557#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/15560#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/15559#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/15558#1"
+]
+]
+},
+{
 "id":"VALTRSm",
 "name":"Valyl tRNA synthetase  mitochondrial",
 "metabolites":{
@@ -27640,6 +27672,70 @@
 "http://identifiers.org/ec-code/6.1.1.9"
 ]
 ]
+},
+{
+"id":"TCHOLAt3",
+"name":"ABC bile acid transporter",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"pi_c":1.0,
+"tchola_c":-1.0,
+"tchola_e":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"notes":{
+"original_bigg_ids":[
+"TCHOLAt3"
+]
+},
+"annotation":[
+[
+"MetaNetX (MNX) Equation",
+"http://identifiers.org/metanetx.reaction/MNXR104744"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/50055#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/50054#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/50053#1"
+],
+[
+"RHEA",
+"http://identifiers.org/rhea/50052#1"
+]
+]
+},
+{
+"id":"HMR_0188",
+"name":"Long-Chain-Fatty-Acid Coenzyme A Ligase",
+"metabolites":{
+"amp_c":1.0,
+"atp_c":-1.0,
+"coa_c":-1.0,
+"ddca_c":-1.0,
+"ddcacoa_c":1.0,
+"ppi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"notes":{
+"original_bigg_ids":[
+"HMR_0188"
+]
+},
+"annotation":[]
 },
 {
 "id":"CYSabc",
@@ -27730,122 +27826,92 @@
 "annotation":[]
 },
 {
-"id":"GTHRDt",
-"name":"Glutathione transport into mitochondria",
+"id":"TCHOLABCtc",
+"name":"Bile Acid Transport by ABCa8",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
-"gthrd_c":-1.0,
-"gthrd_m":1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"pi_c":1.0
+"pi_c":1.0,
+"tchola_c":1.0,
+"tchola_e":-1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "notes":{
 "original_bigg_ids":[
-"GTHRDt"
+"TCHOLABCtc"
 ]
 },
-"annotation":[
-[
-"RHEA",
-"http://identifiers.org/rhea/29791#2"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/29792#2"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/29787#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/29788#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/29789#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/29790#1"
-],
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR100447"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/29793#2"
-],
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:RXN0-21"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/29794#2"
-]
-]
+"annotation":[]
 },
 {
-"id":"NIabc",
-"name":"Nickel transport via ABC system",
+"id":"AACPS4_1c",
+"name":"Long-chain-fatty-acid-[acyl-carrier-protein] ligase (16:1(9Z))",
+"metabolites":{
+"ACP_c":-1.0,
+"amp_c":1.0,
+"atp_c":-1.0,
+"h_c":1.0,
+"hdcea_c":-1.0,
+"hdeACP_c":1.0,
+"ppi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
+},
+{
+"id":"PG180abcppc",
+"name":"Phosphatidylglycerol transport via ABC system (n-C18:0, periplasm)",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"ni2_c":1.0,
-"ni2_e":-1.0,
+"pg180_c":-1.0,
+"pg180_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":"",
-"notes":{
-"original_bigg_ids":[
-"NIabc"
-]
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
-"annotation":[
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR101959"
-],
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:ABC-20-RXN"
-],
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:3.6.3.24-RXN"
-],
-[
-"EC Number",
-"http://identifiers.org/ec-code/3.6.3.24"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/15557#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/15560#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/15559#1"
-],
-[
-"RHEA",
-"http://identifiers.org/rhea/15558#1"
-]
-]
+{
+"id":"FACOAL100t2ppc",
+"name":"Fatty-acid-CoA ligase (decanoate transport via vectoral Co-A coupling)",
+"metabolites":{
+"amp_c":1.0,
+"atp_c":-1.0,
+"coa_c":-1.0,
+"dca_e":-1.0,
+"dcacoa_c":1.0,
+"h_c":1.0,
+"h_e":-1.0,
+"ppi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
+},
+{
+"id":"FACOAL161t2ppc",
+"name":"Fatty-acid-CoA ligase (hexadecenoate transport via vectoral Co-A coupling)",
+"metabolites":{
+"amp_c":1.0,
+"atp_c":-1.0,
+"coa_c":-1.0,
+"h_c":1.0,
+"h_e":-1.0,
+"hdcea_e":-1.0,
+"hdcoa_c":1.0,
+"ppi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
 },
 {
 "id":"FACOAL180t2ppc",
@@ -27881,22 +27947,6 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
-"id":"PG180abcppc",
-"name":"Phosphatidylglycerol transport via ABC system (n-C18:0, periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pg180_c":-1.0,
-"pg180_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
-},
-{
 "id":"PE160abcppc",
 "name":"Phosphatidylethanolamine transport via ABC system (n-C16:0, periplasm)",
 "metabolites":{
@@ -27911,6 +27961,22 @@
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
+},
+{
+"id":"GM1LIPAabcppc",
+"name":"Geobacter metallireucens modelified lipid A transport via ABC system (periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"hghhlipa_c":-1.0,
+"hghhlipa_e":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
 },
 {
 "id":"PE161abcppc",
@@ -27929,20 +27995,19 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
 },
 {
-"id":"LIPACabcppc",
-"name":"Lipid (cold) A transport via ABC system (periplasm)",
+"id":"CHLDA2tuc",
+"name":"Chlorophyllide a transport via ABC system, thylakoid lumen",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
+"chlld_c":1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"lipa_cold_c":-1.0,
-"lipa_cold_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
+"gene_reaction_rule":"TcCLB.457101.30:mRNA-p1"
 },
 {
 "id":"PG120abcppc",
@@ -27961,15 +28026,15 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
-"id":"LIPAabcppc",
-"name":"Lipid A transport via ABC system (periplasm)",
+"id":"LIPACabcppc",
+"name":"Lipid (cold) A transport via ABC system (periplasm)",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"lipa_c":-1.0,
-"lipa_e":1.0,
+"lipa_cold_c":-1.0,
+"lipa_cold_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
@@ -27986,6 +28051,22 @@
 "h_c":1.0,
 "pg140_c":-1.0,
 "pg140_e":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
+},
+{
+"id":"LIPAabcppc",
+"name":"Lipid A transport via ABC system (periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"lipa_c":-1.0,
+"lipa_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
@@ -28041,22 +28122,6 @@
 "gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
 },
 {
-"id":"PA140abcppc",
-"name":"Phosphatidate transport via ABC system (n-C14:0, periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pa140_c":-1.0,
-"pa140_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
-},
-{
 "id":"FACOAL140t2ppc",
 "name":"Fatty-acid-CoA ligase (tetradecanoate transport via vectoral Co-A coupling)",
 "metabolites":{
@@ -28106,20 +28171,36 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
 },
 {
-"id":"PA160abcppc",
-"name":"Phosphatidate transport via ABC system (n-C16:0, periplasm)",
+"id":"PA140abcppc",
+"name":"Phosphatidate transport via ABC system (n-C14:0, periplasm)",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"pa160_c":-1.0,
-"pa160_e":1.0,
+"pa140_c":-1.0,
+"pa140_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
+},
+{
+"id":"PGP180abcppc",
+"name":"Phosphatidylglycerophosphate transport via ABC system (n-C18:0, periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"pgp180_c":-1.0,
+"pgp180_e":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
 },
 {
 "id":"FACOAL141t2ppc",
@@ -28139,20 +28220,20 @@
 "gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
 },
 {
-"id":"PGP180abcppc",
-"name":"Phosphatidylglycerophosphate transport via ABC system (n-C18:0, periplasm)",
+"id":"PA160abcppc",
+"name":"Phosphatidate transport via ABC system (n-C16:0, periplasm)",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"pgp180_c":-1.0,
-"pgp180_e":1.0,
+"pa160_c":-1.0,
+"pa160_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
 "id":"FACOAL160t2ppc",
@@ -28238,6 +28319,22 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
+"id":"PG141abcppc",
+"name":"Phosphatidylglycerol transport via ABC system (n-C14:1, periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"pg141_c":-1.0,
+"pg141_e":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
+},
+{
 "id":"PA181abcppc",
 "name":"Phosphatidate transport via ABC system (n-C18:1, periplasm)",
 "metabolites":{
@@ -28286,22 +28383,6 @@
 "gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
 },
 {
-"id":"PE140abcppc",
-"name":"Phosphatidylethanolamine transport via ABC system (n-C14:0, periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pe140_c":-1.0,
-"pe140_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
-},
-{
 "id":"PS140abcppc",
 "name":"Phosphatidylserine transport via ABC system (n-C14:0, periplasm)",
 "metabolites":{
@@ -28334,20 +28415,20 @@
 "gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
 },
 {
-"id":"AACPS5_1c",
-"name":"Long-chain-fatty-acid-[acyl-carrier-protein] ligase (18:1(11Z))",
+"id":"PE140abcppc",
+"name":"Phosphatidylethanolamine transport via ABC system (n-C14:0, periplasm)",
 "metabolites":{
-"ACP_c":-1.0,
-"amp_c":1.0,
+"adp_c":1.0,
 "atp_c":-1.0,
+"h2o_c":-1.0,
 "h_c":1.0,
-"ocdcea_c":-1.0,
-"octeACP_c":1.0,
-"ppi_c":1.0
+"pe140_c":-1.0,
+"pe140_e":1.0,
+"pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
 "id":"PS180abcppc",
@@ -28364,6 +28445,22 @@
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
+},
+{
+"id":"AACPS5_1c",
+"name":"Long-chain-fatty-acid-[acyl-carrier-protein] ligase (18:1(11Z))",
+"metabolites":{
+"ACP_c":-1.0,
+"amp_c":1.0,
+"atp_c":-1.0,
+"h_c":1.0,
+"ocdcea_c":-1.0,
+"octeACP_c":1.0,
+"ppi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
 },
 {
 "id":"AACPS6_1c",
@@ -28414,6 +28511,38 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
+"id":"PE120abcppc",
+"name":"Phosphatidylethanolamine transport via ABC system (n-C12:0, periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"pe120_c":-1.0,
+"pe120_e":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
+},
+{
+"id":"COLIPAabcppc",
+"name":"Core oligosaccharide lipid A transport via ABC system (periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"colipa_c":-1.0,
+"colipa_e":1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
+},
+{
 "id":"PA141abcppc",
 "name":"Phosphatidate transport via ABC system (n-C14:1, periplasm)",
 "metabolites":{
@@ -28430,15 +28559,15 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
-"id":"PE120abcppc",
-"name":"Phosphatidylethanolamine transport via ABC system (n-C12:0, periplasm)",
+"id":"PE180abcppc",
+"name":"Phosphatidylethanolamine transport via ABC system (n-C18:0, periplasm)",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"pe120_c":-1.0,
-"pe120_e":1.0,
+"pe180_c":-1.0,
+"pe180_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
@@ -28478,38 +28607,6 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
 },
 {
-"id":"PE180abcppc",
-"name":"Phosphatidylethanolamine transport via ABC system (n-C18:0, periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pe180_c":-1.0,
-"pe180_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
-},
-{
-"id":"PGP141abcppc",
-"name":"Phosphatidylglycerophosphate transport via ABC system (n-C14:1, periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pgp141_c":-1.0,
-"pgp141_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
-},
-{
 "id":"FACOAL120t2ppc",
 "name":"Fatty-acid-CoA ligase (dodecanoate transport via vectoral Co-A coupling)",
 "metabolites":{
@@ -28541,6 +28638,39 @@
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
+},
+{
+"id":"PGP141abcppc",
+"name":"Phosphatidylglycerophosphate transport via ABC system (n-C14:1, periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"pgp141_c":-1.0,
+"pgp141_e":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
+},
+{
+"id":"FACOAL80t2ppc",
+"name":"Fatty-acid-CoA ligase (octanoate transport via vectoral Co-A coupling)",
+"metabolites":{
+"amp_c":1.0,
+"atp_c":-1.0,
+"coa_c":-1.0,
+"h_c":1.0,
+"h_e":-1.0,
+"occoa_c":1.0,
+"octa_e":-1.0,
+"ppi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
 },
 {
 "id":"PGP160abcppc",
@@ -28575,55 +28705,6 @@
 "gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
 },
 {
-"id":"FACOAL80t2ppc",
-"name":"Fatty-acid-CoA ligase (octanoate transport via vectoral Co-A coupling)",
-"metabolites":{
-"amp_c":1.0,
-"atp_c":-1.0,
-"coa_c":-1.0,
-"h_c":1.0,
-"h_e":-1.0,
-"occoa_c":1.0,
-"octa_e":-1.0,
-"ppi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
-},
-{
-"id":"PGP181abcppc",
-"name":"Phosphatidylglycerophosphate transport via ABC system (n-C18:1, periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pgp181_c":-1.0,
-"pgp181_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
-},
-{
-"id":"GM1LIPAabcppc",
-"name":"Geobacter metallireucens modelified lipid A transport via ABC system (periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"hghhlipa_c":-1.0,
-"hghhlipa_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
-},
-{
 "id":"AACP1819ZSc",
 "name":"Long-chain-fatty-acid-[acyl-carrier-protein] ligase (18:1(9Z))",
 "metabolites":{
@@ -28655,35 +28736,20 @@
 "gene_reaction_rule":"TcCLB.457101.30:mRNA-p1"
 },
 {
-"id":"GM2LIPAabcppc",
-"name":"Geobacter metallireucens modelified lipid A transport via ABC system (periplasm)",
+"id":"PGP181abcppc",
+"name":"Phosphatidylglycerophosphate transport via ABC system (n-C18:1, periplasm)",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
 "h2o_c":-1.0,
 "h_c":1.0,
-"hghhlipan_c":-1.0,
-"hghhlipan_e":1.0,
+"pgp181_c":-1.0,
+"pgp181_e":1.0,
 "pi_c":1.0
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
-},
-{
-"id":"CHLDA2tuc",
-"name":"Chlorophyllide a transport via ABC system, thylakoid lumen",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"chlld_c":1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.457101.30:mRNA-p1"
+"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1 or TcCLB.510785.10:mRNA-p1)"
 },
 {
 "id":"AACPS1_1c",
@@ -28702,6 +28768,22 @@
 "gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
 },
 {
+"id":"GM2LIPAabcppc",
+"name":"Geobacter metallireucens modelified lipid A transport via ABC system (periplasm)",
+"metabolites":{
+"adp_c":1.0,
+"atp_c":-1.0,
+"h2o_c":-1.0,
+"h_c":1.0,
+"hghhlipan_c":-1.0,
+"hghhlipan_e":1.0,
+"pi_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"TcCLB.506417.10:pseudogenic_transcript-p1"
+},
+{
 "id":"AACPS3_1c",
 "name":"Long-chain-fatty-acid-[acyl-carrier-protein] ligase (16:0)",
 "metabolites":{
@@ -28711,88 +28793,6 @@
 "h_c":1.0,
 "hdca_c":-1.0,
 "palmACP_c":1.0,
-"ppi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
-},
-{
-"id":"COLIPAabcppc",
-"name":"Core oligosaccharide lipid A transport via ABC system (periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"colipa_c":-1.0,
-"colipa_e":1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
-},
-{
-"id":"PG141abcppc",
-"name":"Phosphatidylglycerol transport via ABC system (n-C14:1, periplasm)",
-"metabolites":{
-"adp_c":1.0,
-"atp_c":-1.0,
-"h2o_c":-1.0,
-"h_c":1.0,
-"pg141_c":-1.0,
-"pg141_e":1.0,
-"pi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"(TcCLB.506417.10:pseudogenic_transcript-p1 or TcCLB.506417.83:pseudogenic_transcript-p1)"
-},
-{
-"id":"AACPS4_1c",
-"name":"Long-chain-fatty-acid-[acyl-carrier-protein] ligase (16:1(9Z))",
-"metabolites":{
-"ACP_c":-1.0,
-"amp_c":1.0,
-"atp_c":-1.0,
-"h_c":1.0,
-"hdcea_c":-1.0,
-"hdeACP_c":1.0,
-"ppi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
-},
-{
-"id":"FACOAL100t2ppc",
-"name":"Fatty-acid-CoA ligase (decanoate transport via vectoral Co-A coupling)",
-"metabolites":{
-"amp_c":1.0,
-"atp_c":-1.0,
-"coa_c":-1.0,
-"dca_e":-1.0,
-"dcacoa_c":1.0,
-"h_c":1.0,
-"h_e":-1.0,
-"ppi_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"TcCLB.506261.10:mRNA-p1"
-},
-{
-"id":"FACOAL161t2ppc",
-"name":"Fatty-acid-CoA ligase (hexadecenoate transport via vectoral Co-A coupling)",
-"metabolites":{
-"amp_c":1.0,
-"atp_c":-1.0,
-"coa_c":-1.0,
-"h_c":1.0,
-"h_e":-1.0,
-"hdcea_e":-1.0,
-"hdcoa_c":1.0,
 "ppi_c":1.0
 },
 "lower_bound":0.0,
@@ -28993,136 +28993,6 @@
 }
 },
 {
-"id":"dgl_prod7",
-"name":"dgl_prod7",
-"metabolites":{
-"12dgr180_c":-1.0,
-"all_dgl_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"subsystem":"Lipids LipidProduction",
-"notes":{
-"AUTHORS":[
-""
-],
-"CONFIDENCE LEVEL":[
-""
-],
-"EC NUMBER":[
-""
-],
-"GENE ASSOCIATION":[
-""
-]
-}
-},
-{
-"id":"dgl_prod2",
-"name":"dgl_prod2",
-"metabolites":{
-"12dgr120_c":-1.0,
-"all_dgl_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"subsystem":"Lipids LipidProduction",
-"notes":{
-"AUTHORS":[
-""
-],
-"CONFIDENCE LEVEL":[
-""
-],
-"EC NUMBER":[
-""
-],
-"GENE ASSOCIATION":[
-""
-]
-}
-},
-{
-"id":"dgl_prod1",
-"name":"dgl_prod1",
-"metabolites":{
-"all_dgl_c":1.0,
-"dag_c":-1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"subsystem":"Lipids LipidProduction",
-"notes":{
-"AUTHORS":[
-""
-],
-"CONFIDENCE LEVEL":[
-""
-],
-"EC NUMBER":[
-""
-],
-"GENE ASSOCIATION":[
-""
-]
-}
-},
-{
-"id":"dgl_prod5",
-"name":"dgl_prod5",
-"metabolites":{
-"12dgr160_c":-1.0,
-"all_dgl_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"subsystem":"Lipids LipidProduction",
-"notes":{
-"AUTHORS":[
-""
-],
-"CONFIDENCE LEVEL":[
-""
-],
-"EC NUMBER":[
-""
-],
-"GENE ASSOCIATION":[
-""
-]
-}
-},
-{
-"id":"dgl_prod8",
-"name":"dgl_prod8",
-"metabolites":{
-"12dgr181_c":-1.0,
-"all_dgl_c":1.0
-},
-"lower_bound":0.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"subsystem":"Lipids LipidProduction",
-"notes":{
-"AUTHORS":[
-""
-],
-"CONFIDENCE LEVEL":[
-""
-],
-"EC NUMBER":[
-""
-],
-"GENE ASSOCIATION":[
-""
-]
-}
-},
-{
 "id":"dgl_prod3",
 "name":"dgl_prod3",
 "metabolites":{
@@ -29175,10 +29045,140 @@
 }
 },
 {
+"id":"dgl_prod8",
+"name":"dgl_prod8",
+"metabolites":{
+"12dgr181_c":-1.0,
+"all_dgl_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"subsystem":"Lipids LipidProduction",
+"notes":{
+"AUTHORS":[
+""
+],
+"CONFIDENCE LEVEL":[
+""
+],
+"EC NUMBER":[
+""
+],
+"GENE ASSOCIATION":[
+""
+]
+}
+},
+{
+"id":"dgl_prod7",
+"name":"dgl_prod7",
+"metabolites":{
+"12dgr180_c":-1.0,
+"all_dgl_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"subsystem":"Lipids LipidProduction",
+"notes":{
+"AUTHORS":[
+""
+],
+"CONFIDENCE LEVEL":[
+""
+],
+"EC NUMBER":[
+""
+],
+"GENE ASSOCIATION":[
+""
+]
+}
+},
+{
+"id":"dgl_prod1",
+"name":"dgl_prod1",
+"metabolites":{
+"all_dgl_c":1.0,
+"dag_c":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"subsystem":"Lipids LipidProduction",
+"notes":{
+"AUTHORS":[
+""
+],
+"CONFIDENCE LEVEL":[
+""
+],
+"EC NUMBER":[
+""
+],
+"GENE ASSOCIATION":[
+""
+]
+}
+},
+{
 "id":"dgl_prod4",
 "name":"dgl_prod4",
 "metabolites":{
 "12dgr141_c":-1.0,
+"all_dgl_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"subsystem":"Lipids LipidProduction",
+"notes":{
+"AUTHORS":[
+""
+],
+"CONFIDENCE LEVEL":[
+""
+],
+"EC NUMBER":[
+""
+],
+"GENE ASSOCIATION":[
+""
+]
+}
+},
+{
+"id":"dgl_prod5",
+"name":"dgl_prod5",
+"metabolites":{
+"12dgr160_c":-1.0,
+"all_dgl_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"subsystem":"Lipids LipidProduction",
+"notes":{
+"AUTHORS":[
+""
+],
+"CONFIDENCE LEVEL":[
+""
+],
+"EC NUMBER":[
+""
+],
+"GENE ASSOCIATION":[
+""
+]
+}
+},
+{
+"id":"dgl_prod2",
+"name":"dgl_prod2",
+"metabolites":{
+"12dgr120_c":-1.0,
 "all_dgl_c":1.0
 },
 "lower_bound":0.0,
@@ -29513,19 +29513,6 @@
 }
 },
 {
-"id":"EX_pgp140_e",
-"name":"Phosphatidylglycerophosphate (ditetradecanoyl, n-C14:0) exchange",
-"metabolites":{
-"pgp140_e":-1
-},
-"lower_bound":-1000.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
 "id":"EX_pg180_e",
 "name":"Phosphatidylglycerol (dioctadecanoyl, n-C18:0) exchange",
 "metabolites":{
@@ -29539,10 +29526,36 @@
 }
 },
 {
+"id":"EX_pgp140_e",
+"name":"Phosphatidylglycerophosphate (ditetradecanoyl, n-C14:0) exchange",
+"metabolites":{
+"pgp140_e":-1
+},
+"lower_bound":-1000.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"annotation":{
+"sbo":"SBO:0000627"
+}
+},
+{
 "id":"EX_pe160_e",
 "name":"Phosphatidylethanolamine (dihexadecanoyl, n-C16:0) exchange",
 "metabolites":{
 "pe160_e":-1
+},
+"lower_bound":-1000.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"annotation":{
+"sbo":"SBO:0000627"
+}
+},
+{
+"id":"EX_hghhlipa_e",
+"name":"Heptosyl-glucosyl-heptosyl-heptosyl-kdo2-lipidA exchange",
+"metabolites":{
+"hghhlipa_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29630,19 +29643,6 @@
 }
 },
 {
-"id":"EX_pa140_e",
-"name":"1,2-ditetradecanoyl-sn-glycerol 3-phosphate exchange",
-"metabolites":{
-"pa140_e":-1
-},
-"lower_bound":-1000.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
 "id":"EX_ps161_e",
 "name":"Phosphatidylserine (dihexadec-9-enoyl, n-C16:1) exchange",
 "metabolites":{
@@ -29669,10 +29669,10 @@
 }
 },
 {
-"id":"EX_pa160_e",
-"name":"1,2-dihexadecanoyl-sn-glycerol 3-phosphate exchange",
+"id":"EX_pa140_e",
+"name":"1,2-ditetradecanoyl-sn-glycerol 3-phosphate exchange",
 "metabolites":{
-"pa160_e":-1
+"pa140_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29686,6 +29686,19 @@
 "name":"Phosphatidylglycerophosphate (dioctadecanoyl, n-C18:0) exchange",
 "metabolites":{
 "pgp180_e":-1
+},
+"lower_bound":-1000.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"annotation":{
+"sbo":"SBO:0000627"
+}
+},
+{
+"id":"EX_pa160_e",
+"name":"1,2-dihexadecanoyl-sn-glycerol 3-phosphate exchange",
+"metabolites":{
+"pa160_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29712,6 +29725,19 @@
 "name":"1,2-dioctadecanoyl-sn-glycerol 3-phosphate exchange",
 "metabolites":{
 "pa180_e":-1
+},
+"lower_bound":-1000.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"annotation":{
+"sbo":"SBO:0000627"
+}
+},
+{
+"id":"EX_pg141_e",
+"name":"Phosphatidylglycerol (ditetradec-7-enoyl, n-C14:1) exchange",
+"metabolites":{
+"pg141_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29760,19 +29786,6 @@
 }
 },
 {
-"id":"EX_pe140_e",
-"name":"Phosphatidylethanolamine (ditetradecanoyl, n-C14:0) exchange",
-"metabolites":{
-"pe140_e":-1
-},
-"lower_bound":-1000.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
 "id":"EX_ps140_e",
 "name":"Phosphatidylserine (ditetradecanoyl, n-C14:0) exchange",
 "metabolites":{
@@ -29790,6 +29803,19 @@
 "name":"Phosphatidylserine (dihexadecanoyl, n-C16:0) exchange",
 "metabolites":{
 "ps160_e":-1
+},
+"lower_bound":-1000.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"annotation":{
+"sbo":"SBO:0000627"
+}
+},
+{
+"id":"EX_pe140_e",
+"name":"Phosphatidylethanolamine (ditetradecanoyl, n-C14:0) exchange",
+"metabolites":{
+"pe140_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29838,6 +29864,19 @@
 }
 },
 {
+"id":"EX_pe120_e",
+"name":"Phosphatidylethanolamine (didodecanoyl, n-C12:0) exchange",
+"metabolites":{
+"pe120_e":-1
+},
+"lower_bound":-1000.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"",
+"annotation":{
+"sbo":"SBO:0000627"
+}
+},
+{
 "id":"EX_pa141_e",
 "name":"1,2-ditetradec-7-enoyl-sn-glycerol 3-phosphate exchange",
 "metabolites":{
@@ -29851,10 +29890,10 @@
 }
 },
 {
-"id":"EX_pe120_e",
-"name":"Phosphatidylethanolamine (didodecanoyl, n-C12:0) exchange",
+"id":"EX_pe180_e",
+"name":"Phosphatidylethanolamine (dioctadecanoyl, n-C18:0) exchange",
 "metabolites":{
-"pe120_e":-1
+"pe180_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29890,10 +29929,10 @@
 }
 },
 {
-"id":"EX_pe180_e",
-"name":"Phosphatidylethanolamine (dioctadecanoyl, n-C18:0) exchange",
+"id":"EX_pe181_e",
+"name":"Phosphatidylethanolamine (dioctadec-11-enoyl, n-C18:1) exchange",
 "metabolites":{
-"pe180_e":-1
+"pe181_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29907,19 +29946,6 @@
 "name":"Phosphatidylglycerophosphate (ditetradec-7-enoyl, n-C14:1) exchange",
 "metabolites":{
 "pgp141_e":-1
-},
-"lower_bound":-1000.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
-"id":"EX_pe181_e",
-"name":"Phosphatidylethanolamine (dioctadec-11-enoyl, n-C18:1) exchange",
-"metabolites":{
-"pe181_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -29955,36 +29981,10 @@
 }
 },
 {
-"id":"EX_hghhlipa_e",
-"name":"Heptosyl-glucosyl-heptosyl-heptosyl-kdo2-lipidA exchange",
-"metabolites":{
-"hghhlipa_e":-1
-},
-"lower_bound":-1000.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
 "id":"EX_hghhlipan_e",
 "name":"Heptosyl-glucosyl-heptosyl-heptosyl-kdo2-lipidA (glucosediamine) exchange",
 "metabolites":{
 "hghhlipan_e":-1
-},
-"lower_bound":-1000.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
-"id":"EX_pg141_e",
-"name":"Phosphatidylglycerol (ditetradec-7-enoyl, n-C14:1) exchange",
-"metabolites":{
-"pg141_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -30021,11 +30021,11 @@
 "name":""
 },
 {
-"id":"TcCLB.510837.20:mRNA-p1",
+"id":"TcCLB.510837.9:mRNA-p1",
 "name":""
 },
 {
-"id":"TcCLB.510837.9:mRNA-p1",
+"id":"TcCLB.510837.20:mRNA-p1",
 "name":""
 },
 {
@@ -30041,19 +30041,19 @@
 "name":""
 },
 {
-"id":"TcCLB.506919.110:pseudogenic_transcript-p1",
-"name":""
-},
-{
-"id":"TcCLB.506169.10:pseudogenic_transcript-p1",
-"name":""
-},
-{
 "id":"TcCLB.506843.50:pseudogenic_transcript-p1",
 "name":""
 },
 {
+"id":"TcCLB.506919.110:pseudogenic_transcript-p1",
+"name":""
+},
+{
 "id":"TcCLB.505919.70:pseudogenic_transcript-p1",
+"name":""
+},
+{
+"id":"TcCLB.506169.10:pseudogenic_transcript-p1",
 "name":""
 },
 {
@@ -30093,11 +30093,11 @@
 "name":""
 },
 {
-"id":"TcCLB.510779.10:pseudogenic_transcript-p1",
+"id":"TcCLB.509963.30:pseudogenic_transcript-p1",
 "name":""
 },
 {
-"id":"TcCLB.509963.30:pseudogenic_transcript-p1",
+"id":"TcCLB.510779.10:pseudogenic_transcript-p1",
 "name":""
 },
 {

@@ -1,0 +1,8 @@
+,rxns_added
+0,EX_4abut_e: 4abut_e <=> 
+1,EX_succ_e: succ_e <=> 
+2,FRD: fadh2_c + fum_c --> fad_c + succ_c
+3,AKO: akg_c + fad_c + h2o_c --> co2_c + fadh2_c + succ_c
+4,FRD2: fum_c + mql8_c --> mqn8_c + succ_c
+5,SUCOAACTr: ac_c + succoa_c --> accoa_c + succ_c
+6,EX_mal__D_e: mal__D_e <=> 

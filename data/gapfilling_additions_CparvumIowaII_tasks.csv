@@ -1,0 +1,5 @@
+,rxns_added
+0,EX_sprm_e: sprm_e <=> 
+1,SPRMti: sprm_e --> sprm_c
+2,EX_chsterol_e: chsterol_e <=> 
+3,CHOLESTTDe: chsterol_c --> chsterol_e

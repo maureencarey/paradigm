@@ -65,7 +65,7 @@ for rxn in pf_model.reactions:
                 universal_model.reactions.get_by_id(rxn.id).gene_reaction_rule = ''
                 for gene in genes:
                     if len(universal_model.genes.get_by_id(gene.id).reactions) == 0:
-                           gene_list = universal_model.genes.get_by_id(gene.id)
+                           gene_list = [universal_model.genes.get_by_id(gene.id)]
                            cobra.manipulation.delete.remove_genes(universal_model, gene_list, remove_reactions=True)
     else: #rxn.id IS in [r.id for r in universal_model but in PF its reversible and in universal its irreversible, make reversible
         if rxn.lower_bound < universal_model.reactions.get_by_id(rxn.id).lower_bound:
