@@ -37,7 +37,7 @@ if SPECIES_ID == 'iPfal18':
     SPECIES_ID = 'Pfalciparum3D7'
 
 day = datetime.now().strftime('%d_%m_%Y')
-logging.basicConfig(filename='step6_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
+logging.basicConfig(filename='step6_{}_{}.log'.format(SPECIES_ID_old,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 6')
     

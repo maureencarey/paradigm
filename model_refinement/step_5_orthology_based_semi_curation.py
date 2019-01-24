@@ -22,11 +22,12 @@ model_fname = vars(args)['model_file']
 # parse arguments for global variables 
 SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
-SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 
 day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step5_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
+
+SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 logger.info('BEGIN STEP 5')
 
 data_path = "/home/mac9jc/paradigm/data"
