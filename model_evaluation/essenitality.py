@@ -92,8 +92,7 @@ essentiality_screen_results_interpreted = dict()
 for species, model in essentiality_screen_models.items():
     raw_results = dict()
     interpreted_results = dict()
-    
-    print(species+', rxn essenitality screen')
+
     # set objective
     model.objective = "generic_biomass"
 
@@ -124,8 +123,6 @@ for species, model in essentiality_screen_models.items():
     essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
 
     if species.startswith('P'):
-        
-        print(species+', PLASMO SPECIFIC rxn essenitality screen')
         # set objective
         model.objective = "biomass"
 
@@ -197,7 +194,6 @@ for species, model in essentiality_screen_models.items():
     raw_results = dict()
     interpreted_results = dict()
 
-    print(species+', gene essenitality screen')
     # set objective
     model.objective = "generic_biomass"
 
@@ -227,8 +223,6 @@ for species, model in essentiality_screen_models.items():
     gene_essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
 
     if species.startswith('P'):
-
-        print(species+', gene essenitality screen')
         # set objective
         model.objective = "biomass"
 
