@@ -75,6 +75,9 @@ for rxn in pf_model.reactions:
 if len(universal_model.reactions) <= len_univ_rxns:
     logger.info('ERROR - universal model does not have Pf reactions added!')
 
+# remove duplicate reaction
+universal_model.remove_reactions([universal_model.reactions.get_by_id('PROTEIN_BS')])
+
 logger.info('loaded universal')
 os.chdir(data_path)
 genome_ids = pd.read_csv("auxotrophies_mapping_to_genomeID.csv",header = None).T
