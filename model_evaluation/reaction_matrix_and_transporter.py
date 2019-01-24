@@ -123,7 +123,7 @@ for species, model in essentiality_screen_models.items():
     essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results
     essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
 
-    if species.startswith('P'):
+    if species.startswith('P') and not species.endswith('_ortho'):
         
         print(species+', PLASMO SPECIFIC rxn essenitality screen')
         # set objective
@@ -226,7 +226,7 @@ for species, model in essentiality_screen_models.items():
     gene_essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results
     gene_essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
 
-    if species.startswith('P'):
+    if species.startswith('P') and not species.endswith('_ortho'):
 
         print(species+', gene essenitality screen')
         # set objective
