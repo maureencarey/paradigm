@@ -32,6 +32,17 @@ logger = logging.getLogger(__name__)
 
 SPECIES_ID = SPECIES_ID.split('denovo_')[1]
 
+if SPECIES_ID.startswith('P'):
+    if SPECIES_ID != 'PneurophiliaMK1':
+        if SPECIES_ID != 'PconfusumCUL13':
+            plasmo = TRUE
+        else:
+            plasmo = FALSE
+    else:
+        plasmo = FALSE
+else:
+    plasmo = FALSE
+
 logger.info('BEGIN STEP 4')
 
 # modified for Rivanna: read in the models
@@ -137,8 +148,12 @@ for species, model in model_dict.items():
     new_rxn.upper_bound = 1000.
     model.add_reactions([new_rxn])
     
-    logger.info('added biomass')
+    logger.info('added generic biomass')
     
+    if plasmo:
+        model.add_reactions([pf_curated.reactions.biomass.copy()])
+    logger.info('added plasmodium biomass')
+
     # protein production, transport, exchange
     # biomass 'sink', lipid exchange
     for x in ['Protein', 'Protein_t','DM_biomass_c','EX_lipid_c','Lipid_prod']: #'Protein_ex',

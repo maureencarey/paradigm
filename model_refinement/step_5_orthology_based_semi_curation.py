@@ -73,7 +73,7 @@ add_these = ['pe_prod1', 'pe_prod10', 'pe_prod11', 'pe_prod12', 'pe_prod13', 'pe
              'acylpg_prod6','acylpg_prod7',  'dolichol_t',#'TTDCAt',#'FEROpp',
              'XOLEST2te','PCt','pail_uptake','pc_prod', 'Htap','Htmt','2agpg181_e_t',
              'CHSTEROLt','HBtr','SM_host','HMBZex','Hfv','O2St','O2Stm']
-# bm models already have biomass_generic 'protein_t_e', 'dgl_prod1','dgl_prod2',
+# bm models already have biomass biomass_generic 'protein_t_e', 'dgl_prod1','dgl_prod2',
 # 'Lipid_prod','dgl_prod3', 'dgl_prod4', 'dgl_prod5','dgl_prod6', 'dgl_prod7','Protein',
 
 columns = ['species','starting_genes','reactions_added', 'mets_added','genes_added']
@@ -102,14 +102,6 @@ for species, model in pf_model_dict.items():
         model.add_reactions([rxn])
 
     logger.info('added basic reactions')
-    
-    # add Pf biomass (now these models have generic biomass and pf biomass
-    rxn = iPfal18.reactions.get_by_id('biomass').copy()
-    for met in rxn.metabolites:
-        if met.id not in [m.id for m in model.metabolites]:
-            model.add_metabolites([met.copy()])
-    model.add_reactions([rxn])
-    logger.info('added biomass')
     
     x2 = len(model.reactions)
     y2 = len(model.genes)
