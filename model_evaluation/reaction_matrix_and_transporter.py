@@ -271,7 +271,6 @@ for gene in iPfal18.genes:
 
 cols = ['gene_id', 'normalized_growth']
 pd.DataFrame.from_dict(raw_results, orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_iPfal18.csv")
-pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiRH_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiRH_generic_biomass.csv")
 pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiME49_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiME49_generic_biomass.csv")
 pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['TgondiiGT1_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_TgondiiGT1_generic_biomass.csv")
 pd.DataFrame.from_dict(gene_essentiality_screen_results_raw['Pfalciparum3D7_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_Pfalciparum3D7_generic_biomass.csv")
