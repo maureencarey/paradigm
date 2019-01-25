@@ -356,7 +356,7 @@ for species, model in model_dict.items():
 
         add_reactions_list = flatten_mixed_list(add_reactions_list)
         df = pd.DataFrame({'rxns_added':add_reactions_list})
-        df.to_csv('gapfilling_additions_{0}_tasks.csv'.format(species))
+        df.to_csv('no_ortho_gapfilling_additions_{0}_tasks.csv'.format(species))
 
         for met in add_mets_list:
             if met.id not in [m.id for m in model.metabolites]:
@@ -409,7 +409,7 @@ for species, model in model_dict.items():
                      get_by_id(rxn_id).copy())
         os.chdir(data_path)
         df = pd.DataFrame({'rxns_added':gf_mod_list1})
-        df.to_csv('gapfilling_additions_{0}_generic_biomass.csv'.format(SPECIES_ID_old))
+        df.to_csv('no_ortho_gapfilling_additions_{0}_generic_biomass.csv'.format(SPECIES_ID_old))
         logger.info("wrote generic bioamss file")
     else:
         logger.info('error: no generic biomass reaction')
@@ -457,6 +457,6 @@ for species, model in model_dict.items():
     if 'hb_c' in [m.id for m in model.metabolites]:
         logger.info('HEMOGLOBIN PRESENT7')
     os.chdir(model_path)
-    cobra.io.save_json_model(model, 'gf_'+SPECIES_ID+'.json')
+    cobra.io.save_json_model(model, 'no_ortho_gf_'+SPECIES_ID+'.json')
     
     

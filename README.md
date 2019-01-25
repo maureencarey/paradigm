@@ -150,18 +150,15 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
 
 ## RUN ORDER ON RIVANNA
 
-# manually doubel check latest EuPathDB release to see if any extra files need to run
-sbatch ./run_these/pipeline_slurm_step1.slurm 
-bash ./run_these/pipeline_auto_slurm_for_step2.sh
-# fix LmajorSD third line, remove ‘.1’
-module load anaconda/5.2.0-py3.6
-bash ./run_these/pipeline_cleanup.sh 
-	# not in orthology mapping dataframe:
-		# PcynomolgiB and PcynomolgiM
-		# PfragileNilgiri
-		# PgaboniG01 and PgaboniSY75
-		# PvinckeipetteriCR
-		# PvivaxSal1
+    # # manually doubel check latest EuPathDB release to see if any extra files need to run
+    # # get data
+    sbatch ./run_these/pipeline_slurm_step1.slurm
+    # # make all models
+    bash ./run_these/pipeline_auto_slurm_for_step2.sh
+    # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
+    # # clean things up - especially log files
+    module load anaconda/5.2.0-py3.6
+    bash ./run_these/pipeline_cleanup.sh
 	# infeasible
 		# step6_EhistolyticaHM1IMSS_07_01_2019.log
 		# step6_EhistolyticaHM3IMSS_07_01_2019.log
@@ -180,14 +177,22 @@ bash ./run_these/pipeline_cleanup.sh
 		# step6_TgondiiME49_07_01_2019
 		# step6_TgondiiVAND_07_01_2019
 			# pFBA gapfilling for DM_mal__D_c is infeasible!
-sbatch ./run_these/make_plasmodium_model_history.sbatch 
-mkdir ./slurm_outputs
-mv *.out ./slurm_outputs
-mkdir ./model_modifications
-mv model_modifications_* ./model_modifications
-mkdir ./ortho_modifications
-mv orthology_modifications_* ./ortho_modifications
-mkdir ./gapfilling_additions
-mv gapfilling_additions_* ./gapfilling_additions
-mkdir ./percent_wrong_comp
-mv percent_reactions_in_* ./percent_wrong_com
+    # # gapfill plasmodium models prior to orthology conversion to test differences
+    bash ./run_these/pipeline_auto_slurm_for_plasmodium.sh
+    # # move things to convenient locations
+    # mkdir ./slurm_outputs
+    mv *.out ./slurm_outputs
+    # mkdir ./model_modifications
+    mv model_modifications_* ./model_modifications
+    # mkdir ./ortho_modifications
+    mv orthology_modifications_* ./ortho_modifications
+    # mkdir ./gapfilling_additions
+    mv gapfilling_additions_* ./gapfilling_additions
+    # mkdir ./percent_wrong_comp
+    mv percent_reactions_in_* ./percent_wrong_com
+    # # run analyses
+    sbatch ./run_these/follow_up_analyses/analyses_part1.slurm
+    sbatch ./run_these/follow_up_analyses/analyses_part2.slurm
+    sbatch ./run_these/follow_up_analyses/analyses_part3.slurm
+    sbatch ./run_these/follow_up_analyses/analyses_part4.slurm
+    
