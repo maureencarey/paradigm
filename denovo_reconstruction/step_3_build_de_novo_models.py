@@ -458,6 +458,7 @@ for species, model in new_model_dict.items():
             new_rxn.lower_bound = rxn.lower_bound
             new_rxn.upper_bound = rxn.upper_bound
             new_rxn.gene_reaction_rule = rxn.gene_reaction_rule
+            new_rxn.notes = {'created for paradigm': 'true', 'notes': rxn.notes} # NOT SURE IF THIS IS THE BEST WAY
             model.add_reactions([new_rxn])
             reactions_added.append(new_rxn.id)
 
