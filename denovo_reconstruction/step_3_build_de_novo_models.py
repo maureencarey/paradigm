@@ -33,7 +33,7 @@ og_path = "/home/mac9jc/paradigm/"
 
 # universal reaction bag for model generation
 os.chdir(model_path)
-universal_model = cobra.io.load_json_model('universal_model_oct26_2018.json')
+universal_model = cobra.io.load_json_model('universal_model_updated.json')
 universal_model = hf.update_universal_model(universal_model)
 os.chdir(data_path)
 logging.info('loaded universal')

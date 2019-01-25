@@ -76,8 +76,8 @@ for rxn in universal.reactions:
     rxn.notes = x['database_links']
     # also have info on x['pseudoreaction']
 
-### WHAT ABOUT METS AND REACTIONS IN OTHER COMPARTMENTS
-
-## SAVE MODEL
+# SAVE
+os.chdir(model_path)
+cobra.io.save_json_model('universal_model_updated.json')
 
 

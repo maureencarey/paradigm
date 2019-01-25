@@ -51,7 +51,7 @@ for species, model in model_dict.items():
         logger.info('biomass not in reactions anymore')
 
 os.chdir(model_path)
-universal_model = cobra.io.load_json_model('universal_model_oct26_2018.json')
+universal_model = cobra.io.load_json_model('universal_model_updated.json')
 
 # extend universal by curated model
 pf_model = cobra.io.load_json_model('iPfal18.json')
@@ -74,9 +74,6 @@ for rxn in pf_model.reactions:
             universal_model.reactions.get_by_id(rxn.id).upper_bound = rxn.upper_bound
 if len(universal_model.reactions) <= len_univ_rxns:
     logger.info('ERROR - universal model does not have Pf reactions added!')
-
-# remove duplicate reaction
-universal_model.remove_reactions([universal_model.reactions.get_by_id('PROTEIN_BS')])
 
 logger.info('loaded universal')
 os.chdir(data_path)

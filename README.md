@@ -27,10 +27,6 @@ ORF information. Note, there may be more genomes available in future releases.
 
 This script processes some files for visualization. The visualization is not used in this version of the document, but is still useful for spreadsheet-izing some of the data.
 
-### update_universal_reaction_set.sh
-
-This script removes the biomass reactions from the universal reaction set from BiGG and adds some annotation info that is stored on BiGG to the metabolites and reactions. NOT YET COMPLETE - DO BEFORE FINAL PIPELINE RUN
-
 ## de novo reconstruction
 
 ### helper_functions_1.py
@@ -116,6 +112,10 @@ This script is used to interpret log files from the reconstruction process.
 
 This slurm script runs the data acquisition scripts in subdirecotry *slurm_scripts*.
 
+### update_universal_reaction_set.py
+
+This script removes the biomass reactions from the universal reaction set from BiGG and adds some annotation info that is stored on BiGG to the metabolites and reactions. 
+
 ## slurm scripts
 
 ### check_logs.py
@@ -150,11 +150,12 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # manually doubel check latest EuPathDB release to see if any extra files need to run
     # # get data
     sbatch ./run_these/pipeline_slurm_step1.slurm
+    module load anaconda/5.2.0-py3.6
+    python 3 ./run_these/update_universal_reaction_set.py
     # # make all models
     bash ./run_these/pipeline_auto_slurm_for_step2.sh
     # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
     # # clean things up - especially log files
-    module load anaconda/5.2.0-py3.6
     bash ./run_these/pipeline_cleanup.sh
 	# infeasible
 		# step6_EhistolyticaHM1IMSS_07_01_2019.log
