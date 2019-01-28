@@ -164,5 +164,7 @@ cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
 #        rxn.annotation = x['database_links'] # check if compartment info
 ## also have info on x['pseudoreaction']
 #
+# model.reactions.get_by_id('biomass_s').name = 'biomass sink'
+# model.reactions.get_by_id('biomass_s').id = 'SK_bm'
 #save_json_model(model,  'iPfal18_updated.json')
 
