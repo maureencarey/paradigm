@@ -1,111 +1,114 @@
-﻿category,Metabolite,BiGG
-amino acid,Alanine,ala__L
-amino acid,Arginine,arg__L
-amino acid,Asparagine,asn__L
-amino acid,Aspartic acid,asp__L
-amino acid,Cysteine,cys__L
-amino acid,Glutamine,gln__L
-amino acid,Glutamic acid,glu__L
-amino acid,Glycine,gly
-amino acid,Histidine,his__L
-amino acid,Isoleucine,ile__L
-amino acid,Leucine,leu__L
-amino acid,Lysine,lys__L
-amino acid,Methionine,met__L
-amino acid,Phenylalanine,phe__L
-amino acid,Proline,pro__L
-amino acid,Serine,ser__L
-amino acid,Threonine,thr__L
-amino acid,Tryptophan,trp__L
-amino acid,Tyrosine,tyr__L
-amino acid,Valine,val__L
-nucleotide,hypoxanthine,hxan
-nucleotide,Adenine,ade
-nucleotide,Deoxyadenosine,dad_2
-nucleotide,Adenosine,and
-nucleotide,Inosine,isn
-nucleotide,Thymine,thym
-nucleotide,Guanine,gua
-nucleotide,Guanosine,gsn
-nucleotide,Cytosine,csn
-nucleotide,Uracil,ura
-nucleotide,orotic acid,orot
-vitamin,Vitamin A (Retinoids),
-vitamin,Vitamin B1 (Thiamine),thm
-cofactor (vitamin product),Thiamine diphosphate,thmpp
-vitamin,Vitamin B2 (Riboflavin),ribflv
-cofactor (vitamin product),Flavin mononucleotide,
-cofactor (vitamin product),FAD,fad
-cofactor (vitamin product),Coenzyme F420,
-vitamin,Vitamin B3 (Niacin),
-cofactor (vitamin product),NAD+/NADP+,
-vitamin,Vitamin B5 (Pantothenic acid),pnto__R
-cofactor (vitamin product),Coenzyme A,coa
-vitamin,Vitamin B6 (Pyridoxine),pydxn
-cofactor (vitamin product),Pyridoxal phosphate,pdx5p
-vitamin,Vitamin B9 (Folic acid),
-cofactor (vitamin product),5-Formyltetrahydrofolate/Folinic acid,
-cofactor (vitamin product),Methyltetrahydrofolate,
-cofactor (vitamin product),Tetrahydrofolic acid,
-vitamin,Vitamin B12 (Cobalamin),
-vitamin,Vitamin H/B7 (Biotin),
-vitamin/cofactor,Vitamin C (Ascorbic acid),ascb__L
-vitamin,"Vitamin D (Calciferol, ergocalciferol, cholecalciferol)",
-cofactor,geranylgeranyl pyrophosphate,
-cofactor,tocopherolquinone,
-vitamin,Vitamin E (tocopherol),
-vitamin,Vitamin K,
-cofactor (vitamin product),Menaquinone,
-cofactor (for heme),aminolevulinic acid,
-cofactor,Heme,
-cofactor,S-adenosyl methionine,
-cofactor,Coenzyme B,
-cofactor,Coenzyme M,
-cofactor,Coenzyme Q,
-redox proteins,Glutathione,
-redox proteins,glutathione-like proteins,
-other lipids,Lipoamine,
-membrane precursor,Short chain fatty acids,
-membrane precursor,Medium chain fatty acids,
-membrane precursor,Long chain fatty acids,
-lipids,DAGs,dag
-lipids,TAGs,tag
-other lipids,Cholesterol,chsterol
-other lipids,ceramide,crm
-other lipids,Sphingomyelin,sphmyln
-other,ATP,atp
-sugar,glucose,glc__D
-sugar,mannose,man
-sugar,fructose,fru
-sugar,galactose,gal__L
-other,citrulline,citr__L
-polyamine,spermine,sprm
-polyamine,spermidine,spmd
-polyamine,ornithine,orn
-polyamine,putrescine,ptrc
-sugar,lactate,lac__L
-sugar,succinate,succ
-sugar,malate,mal__D
-sugar,citrate,cit
-sugar,acetate,ac
-sugar,fumarate,fum
-other,isopentenyl pyrophosphate,ipdp
-other lipids,lipoic acid,lipoate
-other lipids,choline,chol
-other lipids,ethanolamine,etha
-other,ethanol,etoh
-other,GABA,4abut
-,pyruvate,pyr
-,methionine sulfoxide,metsox_S__L
-,acetyl-glucosamine 1-phosphate,acgam1p
-,acetyl-glucosamine 6-phosphate,acgam6p
-,nicotinate,nac
-,phosphoserine,pser__L
-,phosphoglycerate,2pg
-,sedoheptulose 7-phosphate,s7p
-,amp,amp
-,fructose 6-phosphate,f6p
-,glycerol 3-phosphate,glyc3p
-,glucose 1-phosphate,g1p
-,glucose 6-phosphate,g6p
-,Dihydroxyacetone phosphate,dhap
+﻿category,Metabolite,BiGG,,,,
+amino acid,Alanine,ala__L,,,,
+amino acid,Arginine,arg__L,,,,
+amino acid,Asparagine,asn__L,,,,
+amino acid,Aspartic acid,asp__L,,,,
+amino acid,Cysteine,cys__L,,,,
+amino acid,Glutamine,gln__L,,,,
+amino acid,Glutamic acid,glu__L,,,,
+amino acid,Glycine,gly,,,,
+amino acid,Histidine,his__L,,,,
+amino acid,Isoleucine,ile__L,,,,
+amino acid,Leucine,leu__L,,,,
+amino acid,Lysine,lys__L,,,,
+amino acid,Methionine,met__L,,,,
+amino acid,Phenylalanine,phe__L,,,,
+amino acid,Proline,pro__L,,,,
+amino acid,Serine,ser__L,,,,
+amino acid,Threonine,thr__L,,,,
+amino acid,Tryptophan,trp__L,,,,
+amino acid,Tyrosine,tyr__L,,,,
+amino acid,Valine,val__L,,,,
+nucleotide,hypoxanthine,hxan,,,,
+nucleotide,Adenine,ade,,,,
+nucleotide,Deoxyadenosine,dad_2,,,,
+nucleotide,Adenosine,and,,,,
+nucleotide,Inosine,isn,,,,
+nucleotide,Thymine,thym,,,,
+nucleotide,Guanine,gua,,,,
+nucleotide,Guanosine,gsn,,,,
+nucleotide,Cytosine,csn,,,,
+nucleotide,Uracil,ura,,,,
+nucleotide,orotic acid,orot,,,,
+vitamin,Vitamin A (Retinoids),retinol,,,,
+vitamin,Vitamin B1 (Thiamine),thm,,,,
+cofactor (vitamin product),Thiamine diphosphate,thmpp,,,,
+vitamin,Vitamin B2 (Riboflavin),ribflv,,,,
+cofactor (vitamin product),Flavin mononucleotide,fmnRD,,,,
+cofactor (vitamin product),FAD,fad,,,,
+cofactor (vitamin product),Coenzyme F420,f430,,,,
+vitamin,Vitamin B3 (Niacin),nac,,,,
+cofactor (vitamin product),NAD+/NADP+,,,,,
+vitamin,Vitamin B5 (Pantothenic acid),pnto__R,,,,
+cofactor (vitamin product),Coenzyme A,coa,,,,
+vitamin,Vitamin B6 (Pyridoxine),pydxn,,,,
+cofactor (vitamin product),Pyridoxal phosphate,pdx5p,,,,
+vitamin,Vitamin B9 (Folic acid),,,,,
+cofactor (vitamin product),5-Formyltetrahydrofolate/Folinic acid,5fthf,,,,
+cofactor (vitamin product),Methyltetrahydrofolate,5mthf,,,,
+cofactor (vitamin product),Tetrahydrofolic acid,,,,,
+vitamin,Vitamin B12 (Cobalamin),,,,,
+vitamin,Vitamin H/B7 (Biotin),,,,,
+vitamin/cofactor,Vitamin C (Ascorbic acid),ascb__L,,,,
+vitamin,"Vitamin D (Calciferol, ergocalciferol, cholecalciferol)",,,,,
+cofactor,geranylgeranyl pyrophosphate,gdpp,,,,
+cofactor,tocopherolquinone (alpha),CE5022,,,,
+vitamin,Vitamin E (alph-tocopherol),avite1,,,,
+vitamin,Vitamin K,,,,,
+cofactor (vitamin product),Menaquinone (4),mqn4,,,,
+cofactor (for heme),aminolevulinic acid,5aop,,,,
+cofactor,Heme,pheme,,,,
+cofactor,S-adenosyl methionine,amet,,,,
+cofactor,Coenzyme B,cob,,,,
+cofactor,Coenzyme M,com,,,,
+cofactor,Coenzyme Q,q,,,,
+cofactor,Coenzyme Q8,q8,,,,
+cofactor,Coenzyme Q9,q9,,,,
+cofactor,Coenzyme Q10,q10,,,,
+redox proteins,Glutathione (ox),gthox,,,,
+redox proteins,Glutathione (rd),gthrd,,,,
+redox proteins,glutathione-like proteins,,,,,
+other lipids,Lipoamine,,,,,
+membrane precursor,Short chain fatty acids,,,,,
+membrane precursor,Medium chain fatty acids,,,,,
+membrane precursor,Long chain fatty acids,,,,,
+lipids,DAGs,dag,,,,
+lipids,TAGs,tag,,,,
+other lipids,Cholesterol,chsterol,,,,
+other lipids,ceramide,crm,,,,
+other lipids,Sphingomyelin,sphmyln,,,,
+other,ATP,atp,,,,
+sugar,glucose,glc__D,,,,
+sugar,mannose,man,,,,
+sugar,fructose,fru,,,,
+sugar,galactose,gal__L,,,,
+other,citrulline,citr__L,,,,
+polyamine,spermine,sprm,,,,
+polyamine,spermidine,spmd,,,,
+polyamine,ornithine,orn,,,,
+polyamine,putrescine,ptrc,,,,
+sugar,lactate,lac__L,,,,
+sugar,succinate,succ,,,,
+sugar,malate,mal__D,,,,
+sugar,citrate,cit,,,,
+sugar,acetate,ac,,,,
+sugar,fumarate,fum,,,,
+other,isopentenyl pyrophosphate,ipdp,,,,
+other lipids,lipoic acid,lipoate,,,,
+other lipids,choline,chol,,,,
+other lipids,ethanolamine,etha,,,,
+other,ethanol,etoh,,,,
+other,GABA,4abut,,,,
+,pyruvate,pyr,,,,
+,methionine sulfoxide,metsox_S__L,,,,
+,acetyl-glucosamine 1-phosphate,acgam1p,,,,
+,acetyl-glucosamine 6-phosphate,acgam6p,,,,
+,phosphoserine,pser__L,,,,
+,phosphoglycerate,2pg,,,,
+,sedoheptulose 7-phosphate,s7p,,,,
+,amp,amp,,,,
+,fructose 6-phosphate,f6p,,,,
+,glycerol 3-phosphate,glyc3p,,,,
+,glucose 1-phosphate,g1p,,,,
+,glucose 6-phosphate,g6p,,,,
+,Dihydroxyacetone phosphate,dhap,,,,
