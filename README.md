@@ -114,7 +114,7 @@ This slurm script runs the data acquisition scripts in subdirecotry *slurm_scrip
 
 ### update_universal_reaction_set.py
 
-This script removes the biomass reactions from the universal reaction set from BiGG and adds some annotation info that is stored on BiGG to the metabolites and reactions. 
+This script removes the biomass reactions from the universal reaction set from BiGG and adds some annotation info that is stored on BiGG to the metabolites and reactions.
 
 ## slurm scripts
 
@@ -151,7 +151,9 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # get data
     sbatch ./run_these/pipeline_slurm_step1.slurm
     module load anaconda/5.2.0-py3.6
+    # # would like to run Memote here on iPfal18
     python 3 ./run_these/update_universal_reaction_set.py
+    # # would like to run Memote again on iPfal18
     # # make all models
     bash ./run_these/pipeline_auto_slurm_for_step2.sh
     # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
@@ -194,4 +196,5 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     sbatch ./run_these/follow_up_analyses/analyses_part3.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part4.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part5.slurm
+    # # would like to run Memote again on all models
     

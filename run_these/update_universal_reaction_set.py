@@ -72,7 +72,6 @@ for rxn in universal.reactions:
     x = m.json()
     rxn.name = x['name']
     rxn.reaction = x['reaction_string']
-    rxn.name = x['name']
     rxn.notes = x['database_links']
     # also have info on x['pseudoreaction']
 
@@ -80,4 +79,35 @@ for rxn in universal.reactions:
 os.chdir(model_path)
 cobra.io.save_json_model('universal_model_updated.json')
 
+rxn_list = [r.id for r in universal.reactions]
+met_list = [m.id for m in universal.metabolites]
 
+# same for Pf model
+os.chdir(model_path)
+model = cobra.io.load_json_model('iPfal18.json')
+
+# add full met info
+for met in model.metabolites:
+    met_id = met_ids_without_comp(met.id)
+    
+    if met_id+'_c' in met_list:
+        m = requests.get('http://bigg.ucsd.edu/api/v2/universal/metabolites/{}'.format(met_id+'_c')))
+        x = m.json()
+        met.name = x['name']
+        met.notes = x['database_links']
+        met.formula = x['formulae'][0]
+        met.charge = x['charges'][0]
+
+# add full reaction info
+need_info = list()
+for rxn in universal.reactions:
+    rxn_id = rxn.id
+    
+    if rxn_id in rxn_list:
+        m = requests.get('http://bigg.ucsd.edu/api/v2/universal/reactions/{}'.format(rxn_id))
+        x = m.json()
+        rxn.name = x['name']
+        rxn.notes = x['database_links']
+# also have info on x['pseudoreaction']
+
+save_json_model(model,  'iPfal18.json')
