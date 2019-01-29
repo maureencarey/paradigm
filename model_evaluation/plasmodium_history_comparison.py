@@ -31,7 +31,7 @@ model_dict['pkno2018'] = cobra.io.read_sbml_model('pkno2018_abdel_haleem.xml')
 model_dict['pcyn2018'] = cobra.io.read_sbml_model('pcyn2018_abdel_haleem.xml')
 model_dict['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chiappino_pepe.xml')
 os.chdir("/home/mac9jc/paradigm/models/")
-model_dict['iPfal18'] = cobra.io.load_json_model('iPfal18.json')
+model_dict['iPfal18'] = cobra.io.load_json_model('iPfal18_updated.json')
 
 reactions_in_model = dict()
 list_o_reactions = list()

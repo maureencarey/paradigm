@@ -36,7 +36,7 @@ model_dict['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chiappino_pepe.xml')
 model_dict['tg2015'] = cobra.io.read_sbml_model('tg2015_tymoshenko.xml')
 
 os.chdir("/home/mac9jc/paradigm/models")
-model_dict['iPfal18'] = cobra.io.load_json_model('iPfal18.json')
+model_dict['iPfal18'] = cobra.io.load_json_model('iPfal18_updated.json')
 
 gene_essentiality_screen_results_raw= dict()
 gene_essentiality_screen_results_interpreted = dict()

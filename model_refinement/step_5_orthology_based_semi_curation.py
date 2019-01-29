@@ -33,7 +33,7 @@ logger.info('BEGIN STEP 5')
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
 os.chdir(model_path)
-iPfal18 = cobra.io.load_json_model("iPfal18.json")
+iPfal18 = cobra.io.load_json_model("iPfal18_updated.json")
 
 logger.info(SPECIES_ID)
 # modified for Rivanna: read in the models

@@ -54,7 +54,7 @@ os.chdir(model_path)
 chominis = cobra.io.read_sbml_model('chominis_vanee2010.xml')
 tgondii = cobra.io.read_sbml_model('tg_tymoshenko2015.xml')
 leish = cobra.io.read_sbml_model('iAC560_leishmania_Chavali2008.xml')
-pf_curated = cobra.io.load_json_model("iPfal18.json")
+pf_curated = cobra.io.load_json_model("iPfal18_updated.json")
 
 logger.info('loaded models')
 

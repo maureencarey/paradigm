@@ -54,7 +54,7 @@ os.chdir(model_path)
 universal_model = cobra.io.load_json_model('universal_model_updated.json')
 
 # extend universal by curated model
-pf_model = cobra.io.load_json_model('iPfal18.json')
+pf_model = cobra.io.load_json_model('iPfal18_updated.json')
 len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:
