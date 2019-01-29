@@ -30,27 +30,27 @@ os.chdir(model_path)
 #cobra.manipulation.modify.escape_ID(universal)
 #logger.info('finished escape')
 #
-#def met_ids_without_comp(met_id):
-#    # only one id listed
-#    # print list of metabolites without the compartment associated
-#    # this needs to be updated if you have different compartments than those listed below
-#    m = met_id
-#    if m.endswith('_c') or m.endswith('_e') or m.endswith('_f') or \
-#    m.endswith('_g') or m.endswith('_h') or m.endswith('_i') or \
-#    m.endswith('_l') or m.endswith('_m') or m.endswith('_n') or \
-#    m.endswith('_p') or m.endswith('_r') or m.endswith('_s') or \
-#    m.endswith('_u') or m.endswith('_v') or m.endswith('_x'):
-#        id_withou_c = m[:-2]
-#    elif m.endswith('_cx') or m.endswith('_um') or m.endswith('_im') \
-#    or m.endswith('_ap') or m.endswith('_fv') or m.endswith('_cm'):
-#        id_withou_c = m[:-3]
-#    else:
-#        print('unknown compartment')
-#        print(m)
-#        id_withou_c = ''
-#
-#    return(id_withou_c)
-#
+def met_ids_without_comp(met_id):
+    # only one id listed
+    # print list of metabolites without the compartment associated
+    # this needs to be updated if you have different compartments than those listed below
+    m = met_id
+    if m.endswith('_c') or m.endswith('_e') or m.endswith('_f') or \
+    m.endswith('_g') or m.endswith('_h') or m.endswith('_i') or \
+    m.endswith('_l') or m.endswith('_m') or m.endswith('_n') or \
+    m.endswith('_p') or m.endswith('_r') or m.endswith('_s') or \
+    m.endswith('_u') or m.endswith('_v') or m.endswith('_x'):
+        id_withou_c = m[:-2]
+    elif m.endswith('_cx') or m.endswith('_um') or m.endswith('_im') \
+    or m.endswith('_ap') or m.endswith('_fv') or m.endswith('_cm'):
+        id_withou_c = m[:-3]
+    else:
+        print('unknown compartment')
+        print(m)
+        id_withou_c = ''
+
+    return(id_withou_c)
+
 ## remove reactions
 #rxn_list_to_delete = [r.id for r in universal.reactions if r.id.startswith('BIOMASS_')]
 #universal.remove_reactions(rxn_list_to_delete)
@@ -209,7 +209,7 @@ for rxn in model.reactions:
         # COULD ADD SBO TERM HERE
 # also have info on x['pseudoreaction']
 
-model.reactions.get_by_id('biomass_s').name = 'biomass sink'
-model.reactions.get_by_id('biomass_s').id = 'SK_bm'
-save_json_model(model,  'iPfal18_updated.json')
+model.reactions.get_by_id('DM_biomass_c').name = 'unblock biomass'
+model.reactions.get_by_id('DM_biomass_c').id = 'DM_bm'
+cobra.io.save_json_model(model,  'iPfal18_updated.json')
 
