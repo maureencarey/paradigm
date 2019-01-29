@@ -115,7 +115,8 @@ for rxn in universal.reactions:
                     rxn.notes[sub_list[0]] = [rxn.notes[sub_list[0]]].append(sub_list[1])
         else:
             rxn.notes[sub_list[0]] = sub_list[0]
-    rxn.reaction = x['reaction_string']
+    if rxn.reaction == '':
+        rxn.reaction = x['reaction_string']
     rxn.annotation = x['database_links']
     # also have info on x['pseudoreaction']
     # COULD ADD SBO TERM HERE
@@ -123,7 +124,7 @@ for rxn in universal.reactions:
 # SAVE
 os.chdir(model_path)
 cobra.io.save_json_model(universal, 'universal_model_updated.json')
-cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
+#cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
 
 #rxn_list = [r.id for r in universal.reactions]
 #met_list = [m.id for m in universal.metabolites]
@@ -132,6 +133,13 @@ cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
 #os.chdir(model_path)
 #model = cobra.io.load_json_model('iPfal18.json')
 #cobra.manipulation.modify.escape_ID(model)
+#
+#model.reactions.MLTHFtap.lower_bound = -1000.
+#model.reactions.MLTHFte3.lower_bound = -1000.
+#model.reactions.MLTHFtmt.lower_bound = -1000.
+#model.reactions.MLTHFtap.upper_bound = 1000.
+#model.reactions.MLTHFte3.upper_bound = 1000.
+#model.reactions.MLTHFtmt.upper_bound = 1000.
 #
 ## add full met info
 #for met in model.metabolites:
