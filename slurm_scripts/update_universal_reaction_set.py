@@ -15,10 +15,10 @@ logger = logging.getLogger(__name__)
 
 logger.info('begin: update of universal reaction set')
 
-#data_path = "/home/mac9jc/paradigm/data/"
-#model_path = "/home/mac9jc/paradigm/models/"
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+data_path = "/home/mac9jc/paradigm/data/"
+model_path = "/home/mac9jc/paradigm/models/"
+#data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
+#model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
 
 os.chdir(model_path)
 universal = cobra.io.load_json_model('universal_model_oct26_2018.json')
