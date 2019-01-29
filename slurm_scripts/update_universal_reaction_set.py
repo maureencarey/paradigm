@@ -42,7 +42,7 @@ def met_ids_without_comp(met_id):
     m.endswith('_u') or m.endswith('_v') or m.endswith('_x'):
         id_withou_c = m[:-2]
     elif m.endswith('_cx') or m.endswith('_um') or m.endswith('_im') \
-    or m.endswith('_ap') or m.endswith('_fv'):
+    or m.endswith('_ap') or m.endswith('_fv') or m.endswith('_cm'):
         id_withou_c = m[:-3]
     else:
         print('unknown compartment')
@@ -131,6 +131,7 @@ cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
 ## same for Pf model
 #os.chdir(model_path)
 #model = cobra.io.load_json_model('iPfal18.json')
+#cobra.manipulation.modify.escape_ID(model)
 #
 ## add full met info
 #for met in model.metabolites:
