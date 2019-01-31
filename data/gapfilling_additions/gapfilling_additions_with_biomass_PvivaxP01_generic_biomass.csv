@@ -1,0 +1,138 @@
+,rxns_added
+0,G6PBDHh: g6p_B_h + nadp_h --> 6pgl_h + h_h + nadph_h
+1,RBPCh: co2_h + h2o_h + rb15bp_h --> 2.0 3pg_h + 2.0 h_h
+2,ASADH: 4pasp_h + h_h + nadph_h --> aspsa_h + nadp_h + pi_h
+3,ASPtmt: asp__L_m <=> asp__L_c
+4,trna_met: trnamet_c <=> 
+5,FACOAE160: h2o_c + pmtcoa_c --> coa_c + h_c + hdca_c
+6,TRPAS1: cys__L_c + h2o_c --> h2s_c + h_c + nh4_c + pyr_c
+7,PGKh: 13dpg_h + adp_h --> 3pg_h + atp_h
+8,GLNGLU: adp_c + glntrna_c + glu__L_c + pi_c <=> atp_c + gln__L_c + glutrna_c
+9,Htu: h_h --> h_u
+10,ACSERL_c: acser_c + seln_c --> ac_c + selcys_c
+11,FDMO2: fmnh2_c + mso3_c + o2_c --> fald_c + fmn_c + h2o_c + h_c + so3_c
+12,ACHBS: 2obut_c + h_c + pyr_c --> 2ahbut_c + co2_c
+13,G6PB_pi_th: g6p_B_c + pi_h --> g6p_B_h + pi_c
+14,PYK_h: adp_h + h_h + pep_h --> atp_h + pyr_h
+15,trna_cys: trnacys_c <=> 
+16,H2Ot: h2o_e <=> h2o_c
+17,LEUtec: leu__L_e --> leu__L_c
+18,ALCD19y: glyald_c + h_c + nadph_c <=> glyc_c + nadp_c
+19,PGCD: 3pg_c + nad_c --> 3php_c + h_c + nadh_c
+20,TRPS1: 3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c
+21,trna_asn: trnaasn_c <=> 
+22,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+23,MSULR: ch4s_c + 3.0 h2o_c + 3.0 nadp_c --> 4.0 h_c + mso3_c + 3.0 nadph_c
+24,trna_lys: trnalys_c <=> 
+25,ALDD1: fald_c + h2o_c + nad_c --> for_c + 2.0 h_c + nadh_c
+26,trna_arg: trnaarg_c <=> 
+27,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+28,VPAMTr: 3mob_c + ala__L_c --> pyr_c + val__L_c
+29,ACOAD2: h_c + hx2coa_c + nadh_c --> hxcoa_c + nad_c
+30,FORthi: for_h + h_h --> for_c + h_c
+31,FldAct: fald_c + thf_c --> h2o_c + mlthf_c
+32,PGLh: 6pgl_h + h2o_h --> 6pgc_h + h_h
+33,ARTPLM1: Rtotalcoa_c --> pmtcoa_c
+34,ACSERthi: acser_h --> acser_c
+35,LDHm: lac__D_m + nad_m --> h_m + nadh_m + pyr_m
+36,4HPRO_LTtm: 4hpro_LT_c --> 4hpro_LT_m
+37,D_LACtm: h_c + lac__D_c --> h_m + lac__D_m
+38,FACOAE141: h2o_c + tdecoa_c --> coa_c + h_c + ttdcea_c
+39,PSERT: 3php_c + glu__L_c --> akg_c + pser__L_c
+40,DAPDC: 26dap__M_c + h_c --> co2_c + lys__L_c
+41,DDPGAm: 4h2oglt_m --> glx_m + pyr_m
+42,FDH7: co2_c + fdxr_42_c + h_c --> fdxo_42_c + for_c
+43,EHGLAT2m: e4hglu_m + oaa_m --> 4h2oglt_m + asp__L_m
+44,PRUK: atp_c + ru5p__D_c --> adp_c + h_c + rb15bp_c
+45,CHORM: chor_c --> pphn_c
+46,PYRtm: pyr_c --> pyr_m
+47,PPND: nad_c + pphn_c --> 34hpp_c + co2_c + nadh_c
+48,THRS: h2o_c + phom_c --> pi_c + thr__L_c
+49,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+50,ASPK_1: asp__L_h + atp_h --> 4pasp_h + adp_h
+51,trna_phe: trnaphe_c <=> 
+52,ARTCOAL1: Rtotal_c + coa_c --> Rtotalcoa_c
+53,PRUK_1: atp_h + ru5p__D_h --> adp_h + h_h + rb15bp_h
+54,OCBT: cbp_c + orn_c --> citr__L_c + h_c + pi_c
+55,HSDH_h: aspsa_h + h_h + nadh_h --> hom__L_h + nad_h
+56,G3P_pi_thr: g3p_c + pi_h --> g3p_h + pi_c
+57,HPROym: 4hpro_LT_m + nadp_m --> 1p3h5c_m + 2.0 h_m + nadph_m
+58,ALAGLUE: LalaDglu_c --> LalaLglu_c
+59,HSK_1: atp_h + hom__L_h --> adp_h + h_h + phom_h
+60,ANPRT: anth_c + prpp_c --> ppi_c + pran_c
+61,trna_leu: trnaleu_c <=> 
+62,trna_trp: trnatrp_c <=> 
+63,KARA1im: alac__S_m + h_m + nadph_m --> 23dhmb_m + nadp_m
+64,SHKK: atp_c + skm_c --> adp_c + h_c + skm5p_c
+65,trna_gln: trnagln_c <=> 
+66,PHSERt_h: phom_h --> phom_c
+67,trna_ser: trnaser_c <=> 
+68,GAPDHh: g3p_h + nad_h + pi_h --> 13dpg_h + h_h + nadh_h
+69,ALCD19: glyald_c + h_c + nadh_c --> glyc_c + nad_c
+70,GMPR: gmp_c + 2.0 h_c + nadph_c --> imp_c + nadp_c + nh4_c
+71,KARA2: 2ahbut_c + h_c + nadph_c --> 23dhmp_c + nadp_c
+72,DHAD1m: 23dhmb_m --> 3mob_m + h2o_m
+73,GLUS: akg_h + gln__L_h + h_h + nadh_h --> 2.0 glu__L_h + nad_h
+74,aratyr2: 3mop_c + tyr__L_c --> 34hpp_c + ile__L_c
+75,EX_his__L_e: his__L_e <=> 
+76,MALSm: accoa_m + glx_m + h2o_m --> coa_m + h_m + mal__L_m
+77,PSP: h2o_h + pser__L_h --> pi_h + ser__L_h
+78,PSAT: 3php_h + glu__L_h --> akg_h + pser__L_h
+79,PSCVT: pep_c + skm5p_c <=> 3psme_c + pi_c
+80,PRAIi: pran_c --> 2cpr5p_c
+81,FBA: fdp_c <=> dhap_c + g3p_c
+82,trna_thr: trnathr_c <=> 
+83,PYDXO: 2.0 h2o_c + nh4_c + 0.5 o2_c + pydx_c --> 2.0 h2o2_c + pydam_c
+84,GLUth: glu__L_h + h_h --> glu__L_c + h_c
+85,GLYOX_2: h2o_c + lgt__S_c --> gthrd_c + h_c + lac__D_c + mthgxl_c
+86,HCO3E: co2_c + h2o_c --> h_c + hco3_c
+87,SULR_1: 3.0 h2o_c + h2s_c + 3.0 nadp_c --> 4.0 h_c + 3.0 nadph_c + so3_c
+88,PEPPIth: pep_c + pi_h --> pep_h + pi_c
+89,r0686: 1p3h5c_m + 2.0 h2o_m + nadp_m --> e4hglu_m + h_m + nadph_m
+90,GLNth: gln__L_c + h_c --> gln__L_h + h_h
+91,4PCP: LalaDgluMdapDala_c + h2o_c --> LalaDgluMdap_c + ala__D_c
+92,GMPt6: gmp_e + h_e --> gmp_c + h_c
+93,ACCOAth: accoa_c + coa_h --> accoa_h + coa_c
+94,LADGMDH: LalaDgluMdap_c + h2o_c --> 26dap__M_c + LalaDglu_c
+95,METGL: h2o_c + met__L_c --> 2obut_c + ch4s_c + nh4_c
+96,PFLh: coa_h + pyr_h --> accoa_h + for_h
+97,PGLYDH: 3pg_h + nad_h --> 3php_h + h_h + nadh_h
+98,H2Oth: h2o_c --> h2o_h
+99,PSP_L: h2o_c + pser__L_c --> pi_c + ser__L_c
+100,CBMKr: atp_c + co2_c + nh4_c --> adp_c + cbp_c + 2.0 h_c
+101,ACOAD1z: b2coa_c + fdxo_42_c + 2.0 nadh_c --> btcoa_c + fdxr_42_c + 2.0 nad_c
+102,RBPC: co2_c + h2o_c + rb15bp_c --> 2.0 3pg_c + 2.0 h_c
+103,PPNDH: h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+104,ASPTA6: ala__L_c + oaa_c --> asp__L_c + pyr_c
+105,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+106,ARGSL: argsuc_c --> arg__L_c + fum_c
+107,trna_asp: trnaasp_c <=> 
+108,CYSLY3: cys__L_c + h_c + nadph_c --> ala__L_c + h2s_c + nadp_c
+109,trna_pro: trnapro_c <=> 
+110,DHAD2: 23dhmp_c --> 3mop_c + h2o_c
+111,PPS: atp_c + h2o_c + pyr_c --> amp_c + 2.0 h_c + pep_c + pi_c
+112,SAT: accoa_h + ser__L_h --> acser_h + coa_h
+113,FACOAE180: h2o_c + stcoa_c --> coa_c + h_c + ocdca_c
+114,3MOBtmt: 3mob_m <=> 3mob_c
+115,ACLSm: h_m + 2.0 pyr_m --> alac__S_m + co2_m
+116,HISSNAT5tc: h_c + his__L_e + na1_e --> h_e + his__L_c + na1_c
+117,ASPth: asp__L_c + h_c --> asp__L_h + h_h
+118,FACOAE60: h2o_c + hxcoa_c --> coa_c + h_c + hxa_c
+119,ATPSu: 3.0 adp_c + 14.0 h_u + 3.0 pi_c --> 3.0 atp_c + 3.0 h2o_c + 11.0 h_c
+120,LALGP: LalaLglu_c + h2o_c --> ala__L_c + glu__L_c
+121,CO2tmt: co2_m <=> co2_c
+122,lipid1: Rtotal_c <=> dca_c + ddca_c + hdca_c + hdcea_c + hxa_c + ocdca_c + ocdcea_c + octa_c + ttdca_c + ttdcea_c
+123,trna_ala: trnaala_c <=> 
+124,trna_gly: trnagly_c <=> 
+125,IGPS: 2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c
+126,PGDHh: 6pgc_h + nadp_h --> co2_h + nadph_h + ru5p__D_h
+127,trna_ile: trnaile_c <=> 
+128,trna_his: trnahis_c <=> 
+129,trna_val: trnaval_c <=> 
+130,ORNt: orn_e --> orn_c
+131,PIt_h: h_c + pi_c --> h_h + pi_h
+132,NTRIR2y: 5.0 h_c + 3.0 nadph_c + no2_c --> 2.0 h2o_c + 3.0 nadp_c + nh4_c
+133,EX_leu__L_e: leu__L_e <=> 
+134,ARGSS: asp__L_c + atp_c + citr__L_c --> amp_c + argsuc_c + h_c + ppi_c
+135,RBK: atp_c + rib__D_c --> adp_c + h_c + r5p_c
+136,trna_tyr: trnatyr_c <=> 

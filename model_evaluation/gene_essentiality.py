@@ -19,24 +19,24 @@ essentiality_screen_models['CparvumIowaII'] = cobra.io.load_json_model('gf_Cparv
 essentiality_screen_models['PknowlesiH'] = cobra.io.load_json_model('gf_PknowlesiH.json')
 essentiality_screen_models['PcynomolgiB'] = cobra.io.load_json_model('gf_PcynomolgiB.json')
 
-essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.load_json_model('no_ortho_gf_without_ortho_Pfalciparum3D7.json')
-essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.load_json_model('no_ortho_gf_without_ortho_PbergheiANKA.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('no_ortho_gf_without_ortho_PcynomolgiB.json')
-essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.load_json_model('no_ortho_gf_without_ortho_PvivaxSal1.json')
-essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.load_json_model('no_ortho_gf_without_ortho_PknowlesiH.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('no_ortho_gf_without_ortho_PcynomolgiB.json')
+essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_Pfalciparum3D7.json')
+essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PbergheiANKA.json')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PcynomolgiB.json')
+essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PvivaxSal1.json')
+essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PknowlesiH.json')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PcynomolgiB.json')
 
 os.chdir("/home/mac9jc/paradigm/data/published_models")
-model_dict['pfal2018'] = cobra.io.read_sbml_model('pfal2018_abdel_haleem.xml')
-model_dict['pviv2018'] = cobra.io.read_sbml_model('pviv2018_abdel_haleem.xml')
-model_dict['pber2018'] = cobra.io.read_sbml_model('pber2018_abdel_haleem.xml')
-model_dict['pkno2018'] = cobra.io.read_sbml_model('pkno2018_abdel_haleem.xml')
-model_dict['pcyn2018'] = cobra.io.read_sbml_model('pcyn2018_abdel_haleem.xml')
-model_dict['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chiappino_pepe.xml')
-model_dict['tg2015'] = cobra.io.read_sbml_model('tg2015_tymoshenko.xml')
+essentiality_screen_models['pfal2018'] = cobra.io.read_sbml_model('pfal2018_abdel_haleem.xml')
+essentiality_screen_models['pviv2018'] = cobra.io.read_sbml_model('pviv2018_abdel_haleem.xml')
+essentiality_screen_models['pber2018'] = cobra.io.read_sbml_model('pber2018_abdel_haleem.xml')
+essentiality_screen_models['pkno2018'] = cobra.io.read_sbml_model('pkno2018_abdel_haleem.xml')
+essentiality_screen_models['pcyn2018'] = cobra.io.read_sbml_model('pcyn2018_abdel_haleem.xml')
+essentiality_screen_models['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chiappino_pepe.xml')
+essentiality_screen_models['tg2015'] = cobra.io.read_sbml_model('tg2015_tymoshenko.xml')
 
 os.chdir("/home/mac9jc/paradigm/models")
-model_dict['iPfal18'] = cobra.io.load_json_model('iPfal18_updated.json')
+essentiality_screen_models['iPfal18'] = cobra.io.load_json_model('iPfal18_updated.json')
 
 gene_essentiality_screen_results_raw= dict()
 gene_essentiality_screen_results_interpreted = dict()
@@ -47,35 +47,50 @@ for species, model in essentiality_screen_models.items():
 
     print(species+', gene essenitality screen')
     
+    use_second_biomass = False
     if species == 'tg2015':
         model.objective = "Biomass"
+        model.reactions.get_by_id('Biomass').upper_bound = 1000.
+        model.reactions.get_by_id('Biomass').lower_bound = 0.
     elif species == 'ipfa2017':
         model.objective == 'Biomass_rxn_c'
-    elif species in ['pfal2018','pviv2018','pber2018','pkno2018','pcyn2018']:
+        model.reactions.get_by_id('Biomass_rxn_c').upper_bound = 1000.
+       	model.reactions.get_by_id('Biomass_rxn_c').lower_bound = 0.
+    elif species in ['iPfal18','pfal2018','pviv2018','pber2018','pkno2018','pcyn2018']:
         model.objective = "biomass"
+        model.reactions.get_by_id('biomass').upper_bound = 1000.
+       	model.reactions.get_by_id('biomass').lower_bound = 0.
+    elif species in ['TgondiiGT1','TgondiiME49','ChominisTU502_2012','CparvumIowaII']:
+        model.objective = 'generic_biomass'
+        model.reactions.get_by_id('generic_biomass').upper_bound = 1000.
+        model.reactions.get_by_id('generic_biomass').lower_bound = 0.  
     else:
         model.objective = "generic_biomass"
         use_second_biomass = True
-
-    # don't accidentally use other biomass reaction
-    if 'biomass' in [rxn.id for rxn in model.reactions]:
         model.reactions.get_by_id('generic_biomass').upper_bound = 1000.
         model.reactions.get_by_id('generic_biomass').lower_bound = 0.
+        # don't accidentally use other biomass reaction
         model.reactions.get_by_id('biomass').upper_bound = 0.
         model.reactions.get_by_id('biomass').lower_bound = 0.
 
     max_biomass = model.slim_optimize()
-
+    if max_biomass < 0.01:
+        print('model doesnt grow')
+        print(species)
+          
     # knockout and record growth
     for gene in model.genes:
         with model as cobra_model:
             cobra.manipulation.delete_model_genes(cobra_model, [gene.id], cumulative_deletions=True)
             f = cobra_model.slim_optimize()
-            if f < 0.1*max_biomass:
-                interpreted_results[gene.id] = 'lethal'
+            if max_biomass < 0.01:
+       	       	print(species)
             else:
-                interpreted_results[gene.id] = 'nonlethal'
-            raw_results[gene.id] = f/max_biomass
+                if f < 0.1*max_biomass:
+                    interpreted_results[gene.id] = 'lethal'
+                else:
+                    interpreted_results[gene.id] = 'nonlethal'
+                raw_results[gene.id] = f/max_biomass
             cobra.manipulation.undelete_model_genes(cobra_model)
 
     # save
@@ -105,17 +120,23 @@ for species, model in essentiality_screen_models.items():
         model.reactions.get_by_id('generic_biomass').lower_bound = 0.
 
         max_biomass = model.slim_optimize()
+        if max_biomass < 0.01:
+            print('model doesnt grow')
+            print(species)
 
         # knockout and record growth
         for gene in model.genes:
             with model as cobra_model:
                 cobra.manipulation.delete_model_genes(cobra_model, [gene.id], cumulative_deletions=True)
                 f = cobra_model.slim_optimize()
-                if f < 0.1*max_biomass:
-                    interpreted_results[gene.id] = 'lethal'
+                if max_biomass < 0.01:
+       	       	    print(species)
                 else:
-                    interpreted_results[gene.id] = 'nonlethal'
-                raw_results[gene.id] = f/max_biomass
+                    if f < 0.1*max_biomass:
+                        interpreted_results[gene.id] = 'lethal'
+                    else:
+                        interpreted_results[gene.id] = 'nonlethal'
+                    raw_results[gene.id] = f/max_biomass
                 cobra.manipulation.undelete_model_genes(cobra_model)
 
         # save

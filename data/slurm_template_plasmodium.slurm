@@ -4,7 +4,7 @@
 #SBATCH --time=2-00:00:00
 #SBATCH --partition=standard
 #SBATCH --cpus-per-task=1
-#SBATCH --mem-per-cpu=6000
+#SBATCH --mem-per-cpu=12000
 #SBATCH --account=csblrivanna
 
 module load anaconda/5.2.0-py3.6

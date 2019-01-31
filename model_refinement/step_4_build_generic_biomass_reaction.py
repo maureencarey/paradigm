@@ -35,13 +35,13 @@ SPECIES_ID = SPECIES_ID.split('denovo_')[1]
 if SPECIES_ID.startswith('P'):
     if SPECIES_ID != 'PneurophiliaMK1':
         if SPECIES_ID != 'PconfusumCUL13':
-            plasmo = TRUE
+            plasmo = True
         else:
-            plasmo = FALSE
+            plasmo = False
     else:
-        plasmo = FALSE
+        plasmo = False
 else:
-    plasmo = FALSE
+    plasmo = False
 
 logger.info('BEGIN STEP 4')
 
@@ -156,7 +156,7 @@ for species, model in model_dict.items():
 
     # protein production, transport, exchange
     # biomass 'sink', lipid exchange
-    for x in ['Protein', 'Protein_t','DM_biomass_c','EX_lipid_c','Lipid_prod']: #'Protein_ex',
+    for x in ['Protein', 'Protein_t','DM_bm','EX_lipid_c','Lipid_prod']: #'Protein_ex',
         new_rxn = pf_curated.reactions.get_by_id(x).copy()
         for met in new_rxn.metabolites:
             if met.id not in [x.id for x in model.metabolites]:

@@ -1,0 +1,9 @@
+,rxns_added
+0,EX_mal__D_e: mal__D_e <=> 
+1,EX_4abut_e: 4abut_e <=> 
+2,EX_succ_e: succ_e <=> 
+3,FRD: fadh2_c + fum_c --> fad_c + succ_c
+4,SUCOAACTr: ac_c + succoa_c --> accoa_c + succ_c
+5,AKO: akg_c + fad_c + h2o_c --> co2_c + fadh2_c + succ_c
+6,EX_5aop_e: 5aop_e <=> 
+7,5AOPt: 5aop_c + 2.0 h_c --> 5aop_e + 2.0 h_e

@@ -1,0 +1,21 @@
+,rxns_added
+0,CHORM: chor_c --> pphn_c
+1,GMPt6: gmp_e + h_e --> gmp_c + h_c
+2,PPNDH: h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+3,PSCVT: pep_c + skm5p_c <=> 3psme_c + pi_c
+4,TRPS1: 3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c
+5,IGPS: 2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c
+6,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+7,ANS: chor_c + gln__L_c --> anth_c + glu__L_c + h_c + pyr_c
+8,GMPR: gmp_c + 2.0 h_c + nadph_c --> imp_c + nadp_c + nh4_c
+9,ANPRT: anth_c + prpp_c --> ppi_c + pran_c
+10,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+11,SHKK: atp_c + skm_c --> adp_c + h_c + skm5p_c
+12,PRAIi: pran_c --> 2cpr5p_c
+13,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+14,DHQTi: 3dhq_c --> 3dhsk_c + h2o_c
+15,PROTEIN_BS: 0.6 ala__L_c + 0.377 arg__L_c + 0.2881 asn__L_c + 0.359 asp__L_c + 0.145 cys__L_c + 0.322 gln__L_c + 0.386 glu__L_c + 0.538 gly_c + 0.143 his__L_c + 0.324 ile__L_c + 0.564 leu__L_c + 0.57 lys__L_c + 0.138 met__L_c + 0.219 phe__L_c + 0.313 pro__L_c + 0.43 ser__L_c + 0.386 thr__L_c + 0.044 trp__L_c + 0.182 tyr__L_c + 0.416 val__L_c --> protein_c
+16,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+17,PPND2: nadp_c + pphn_c --> 34hpp_c + co2_c + nadph_c
+18,GAPP: g3p_c + h2o_c --> glyald_c + pi_c
+19,CHORS: 3psme_c --> chor_c + pi_c
