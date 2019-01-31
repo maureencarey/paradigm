@@ -176,7 +176,7 @@ for species_long, rxn_list in essentiality_screen_results_raw.items():
     elif '_species' in species_long:
         species = species_long.split('_species')[0]
     else:
-        print('ERROR, what biomass are we using?')
+        species = species_long
     for rxn in list_o_reactions2:
         if rxn in essentiality_screen_results_raw[species_long].keys():
             matrix_of_essentiality.loc[rxn,species_long] = essentiality_screen_results_raw[species_long][rxn]
