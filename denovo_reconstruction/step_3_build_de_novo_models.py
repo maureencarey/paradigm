@@ -38,10 +38,6 @@ universal_model = hf.update_universal_model(universal_model)
 os.chdir(data_path)
 logging.info('loaded universal')
 
-# print('test writing json')
-# cobra.io.save_json_model(universal_model, "test.json")
-# print('success')
-
 # compartments in universal reaction bag
 compartment_options = list()
 for string in [met.id for met in universal_model.metabolites]:
@@ -83,7 +79,7 @@ for reaction, data in universal_dict_with_alts.items():
     data_with_options['alternative_reactions'] = alternative_reactions
     universal_dict_with_alts[reaction] = data_with_options
 
-# database mapping - this is for release 39, must update if using a different EuPathDB release
+# database mapping - this is for release 41, must update if using a different EuPathDB release
 plasmodb = ["PadleriG01","PbergheiANKA","PbillcollinsiG01","PblacklockiG01","Pchabaudichabaudi","PcoatneyiHackeri","PcynomolgiB","PcynomolgiM","Pfalciparum3D7","Pfalciparum7G8","PfalciparumCD01","PfalciparumDd2","PfalciparumGA01","PfalciparumGB4","PfalciparumGN01","PfalciparumHB3","PfalciparumIT","PfalciparumKE01","PfalciparumKH01","PfalciparumKH02","PfalciparumML01","PfalciparumSD01","PfalciparumSN01","PfalciparumTG01","PfragileNilgiri","PgaboniG01","PgaboniSY75","Pgallinaceum8A","PinuiSanAntonio1","PknowlesiH","PknowlesiMalayanPk1A","PmalariaeUG01","PovalecurtisiGH01","PpraefalciparumG01","PreichenowiCDC","PreichenowiG01","PrelictumSGS1-like","PvinckeipetteriCR","Pvinckeivinckeivinckei","PvivaxP01","PvivaxSal1","Pyoeliiyoelii17X","Pyoeliiyoelii17XNL","PyoeliiyoeliiYM"]
 cryptodb = ["Candersoni30847","Chominis30976","ChominisTU502","ChominisTU502_2012","ChominisUdeA01","CmeleagridisUKMEL1","CmurisRN66","CparvumIowaII","CtyzzeriUGA55", "Cubiquitum39726","CveliaCCMP2878", "GniphandrodesUnknown", "VbrassicaformisCCMP3155"]
 giardiadb = ["GintestinalisAssemblageADH", "GintestinalisAssemblageAWB", "GintestinalisAssemblageBGS", "GintestinalisAssemblageBGS_B", "GintestinalisAssemblageEP15", "SsalmonicidaATCC50377"]
@@ -94,7 +90,7 @@ amoebadb = ["AcastellaniiNeff", "EdisparSAW760", "EhistolyticaHM1IMSS-A", "Ehist
 toxodb = ["CcayetanensisCHN_HEN01", "CsuisWienI","EacervulinaHoughton", "EbrunettiHoughton", "EfalciformisBayerHaberkorn1970", "EmaximaWeybridge", "EmitisHoughton", "EnecatrixHoughton", "EpraecoxHoughton", "EtenellaHoughton", "HhammondiHH34", "NcaninumLIV", "SneuronaSN3", "SneuronaSOSN1", "TgondiiARI", "TgondiiFOU", "TgondiiGAB2-2007-GAL-DOM2", "TgondiiGT1", "TgondiiMAS", "TgondiiME49", "Tgondiip89", "TgondiiRH", "TgondiiRUB", "TgondiiTgCatPRC2", "TgondiiVAND", "TgondiiVEG"]
 microsporidiadb = ["AalgeraePRA109", "AalgeraePRA339", "AspWSBS2006","EaedisUSNM41457", "EbieneusiH348", "EcanceriGB1","EcuniculiEC1", "EcuniculiEC2", "EcuniculiEC3","EcuniculiEcunIII-L","EcuniculiGBM1", "EhellemATCC50504", "EhellemSwiss", "EhepatopenaeiTH1","EintestinalisATCC50506", "EromaleaeSJ2008","Heriocheircanceri","HeriocheirGB1", "MdaphniaeUGP3", "NausubeliERTm2", "NausubeliERTm6", "NbombycisCQ1", "NceranaeBRL01", "NceranaePA08_1199","NdisplodereJUm2807","NparisiiERTm1", "NparisiiERTm3", "OcolligataOC4", "PneurophiliaMK1", "Slophii42_110", "ThominisUnknown", "VcorneaeATCC50505", "Vculicisfloridensis"]
 piroplasmadb = ["BbigeminaBOND", "BbovisT2Bo", "BmicrotiRI","BovataMiyake", "CfelisWinnie", "TannulataAnkara", "TequiWA", "TorientalisShintoku", "TparvaMuguga"]
-fungidb = ["AaculeatusATCC16872", "AbrasiliensisCBS101740", "AcampestrisIBT28561", "Acandida2VRR", "AcarbonariusITEM5010", "AclavatusNRRL1", "AfischeriNRRL181","AflavusNRRL3357","AfumigatusA1163","AfumigatusAf293", "AglaucusCBS516.65","AinvadansNJM9701", "AlaibachiiNc14", "AluchuensisCBS106.47", "AmacrogynusATCC38327", "AnidulansFGSCA4", "AnigerATCC1015", "AnigerCBS513-88", "AnovofumigatusIBT16806", "AochraceoroseusIBT24754","AoryzaeRIB40", "AsteyniiIBT23096", "AsydowiiCBS593.65", "AterreusNIH2624", "AtubingensisCBS134.48", "AversicolorCBS583.65", "AwentiiDTO134E9","AzonataCBS506.65", "BcinereaB05-10", "BdendrobatidisJEL423", "CalbicansSC5314", "CalbicansSC5314_B", "CalbicansWO1", "CaurisB8441", "Ccinereaokay7-130", "CdeuterogattiiR265", "CgattiiCA1873", "CgattiiEJB2", "CgattiiIND107", "CgattiiWM276", "CglabrataCBS138", "CimmitisH538-4", "CimmitisRS", "ClusitaniaeATCC42720", "CneoformansB-3501A", "CneoformansH99", "CneoformansJEC21", "CneoformansKN99", "CposadasiiC735deltSOWgp", "CposadasiiRMSCC3488", "CposadasiiRMSCC3700", "CposadasiiSilveira", "FfujikuroiIMI58289", "FgraminearumPH-1", "Foxysporum26406", "Foxysporum4287", "Foxysporum54006", "FoxysporumFo47", "Foxysporumrace1", "Foxysporumrace4", "Fverticillioides7600", "HarabidopsidisEmoy2", "HcapsulatumG186AR", "HcapsulatumG217B", "HcapsulatumH143", "HcapsulatumH88", "HcapsulatumNAm1", "McircinelloidesCBS277-49", "MglobosaCBS7966", "Mlarici-populina98AG31", "Moryzae70-15", "MoryzaeBR32", "NcrassaOR74A", "NdiscretaFGSC8579", "NtetraspermaFGSC2508", "PaphanidermatumDAOMBR444", "ParrhenomanesATCC12531", "PblakesleeanusNRRL1555", "PbrasiliensisPb03", "PbrasiliensisPb18", "PcapsiciLT1534", "PchrysosporiumRP-78", "PcinnamomiCBS144-22", "PgraminisCRL75-36-700-3", "PinfestansT30-4", "PirregulareDAOMBR486", "PiwayamaiDAOMBR242034", "PjiroveciiSE8", "PlutziiPb01", "PparasiticaINRA-310", "PramorumPr-102", "PrubensWisconsin54-1255", "PsojaeP6497", "PultimumBR650", "PultimumDAOMBR144", "PvexansDAOMBR484", "RdelemarRA99-880", "ScerevisiaeS288c", "SdiclinaVS20", "SjaponicusyFS275", "Smacrosporak-hell", "SoctosporusyFS286", "SparasiticaCBS223", "Spombe972h", "SpunctatusDAOMBR117", "SreilianumSRZ2", "Sschenckii1099-18", "Ssclerotiorum1980UF-70", "TmarneffeiATCC18224", "TmesentericaDSM1558", "TreeseiQM6a", "TstipitatusATCC10500", "Umaydis521", "Ureesii1704", "YlipolyticaCLIB122", "ZtriticiIPO323","AkawachiiIFO4308", "AnigerN402ATCC64974","CgattiiNT10","CparapsilosisCDC317","FproliferatumET1", "LprolificansJHH5317", "SapiospermumIHEM14462","Sbrasiliensis5110","YlipolyticaCLIB89W29"]
+fungidb = ["AaculeatusATCC16872", "AbrasiliensisCBS101740", "AcampestrisIBT28561", "Acandida2VRR", "AcarbonariusITEM5010", "AclavatusNRRL1", "AfischeriNRRL181","AflavusNRRL3357","AfumigatusA1163","AfumigatusAf293", "AglaucusCBS516.65","AinvadansNJM9701", "AlaibachiiNc14", "AluchuensisCBS106.47", "AmacrogynusATCC38327", "AnidulansFGSCA4", "AnigerATCC1015", "AnigerCBS513-88", "AnovofumigatusIBT16806", "AochraceoroseusIBT24754","AoryzaeRIB40", "AsteyniiIBT23096", "AsydowiiCBS593.65", "AterreusNIH2624", "AtubingensisCBS134.48", "AversicolorCBS583.65", "AwentiiDTO134E9","AzonataCBS506.65", "BcinereaB05-10", "BdendrobatidisJEL423", "CalbicansSC5314", "CalbicansSC5314_B", "CalbicansWO1", "CaurisB8441", "Ccinereaokay7-130", "CdeuterogattiiR265", "CgattiiCA1873", "CgattiiEJB2", "CgattiiIND107", "CgattiiWM276", "CglabrataCBS138", "CimmitisH538-4", "CimmitisRS", "ClusitaniaeATCC42720", "CneoformansB-3501A", "CneoformansH99", "CneoformansJEC21", "CneoformansKN99", "CposadasiiC735deltSOWgp", "CposadasiiRMSCC3488", "CposadasiiRMSCC3700", "CposadasiiSilveira", "FfujikuroiIMI58289", "FgraminearumPH-1", "Foxysporum26406", "Foxysporum4287", "Foxysporum54006", "FoxysporumFo47", "Foxysporumrace1", "Foxysporumrace4", "Fverticillioides7600", "HarabidopsidisEmoy2", "HcapsulatumG186AR", "HcapsulatumG217B", "HcapsulatumH143", "HcapsulatumH88", "HcapsulatumNAm1", "McircinelloidesCBS277-49", "MglobosaCBS7966", "Mlarici-populina98AG31", "Moryzae70-15", "MoryzaeBR32", "NcrassaOR74A", "NdiscretaFGSC8579", "NtetraspermaFGSC2508", "PaphanidermatumDAOMBR444", "ParrhenomanesATCC12531", "PblakesleeanusNRRL1555", "PbrasiliensisPb03", "PbrasiliensisPb18", "PcapsiciLT1534", "PchrysosporiumRP-78", "PcinnamomiCBS144-22", "PgraminisCRL75-36-700-3", "PinfestansT30-4", "PirregulareDAOMBR486", "PiwayamaiDAOMBR242034", "PjiroveciiSE8", "PlutziiPb01", "PparasiticaINRA-310", "PramorumPr-102", "PrubensWisconsin54-1255", "PsojaeP6497", "PultimumBR650", "PultimumDAOMBR144", "PvexansDAOMBR484", "RdelemarRA99-880", "ScerevisiaeS288c", "SdiclinaVS20", "SjaponicusyFS275", "Smacrosporak-hell", "SoctosporusyFS286", "SparasiticaCBS223", "Spombe972h", "SpunctatusDAOMBR117", "SreilianumSRZ2", "Sschenckii1099-18", "Ssclerotiorum1980UF-70", "TmarneffeiATCC18224", "TmesentericaDSM1558", "TreeseiQM6a", "TstipitatusATCC10500", "Umaydis521", "Ureesii1704", "YlipolyticaCLIB122", "ZtriticiIPO323", "AkawachiiIFO4308", "AnigerN402ATCC64974","CgattiiNT10","CparapsilosisCDC317","FproliferatumET1", "LprolificansJHH5317","SapiospermumIHEM14462","Sbrasiliensis5110", "YlipolyticaCLIB89W29"]
 
 # load annotation data file
 annotations_dict = dict()
@@ -108,7 +104,6 @@ annotations_dict[SPECIES_ID] = pd.read_table(annotation_fname)
 columns = ['query_gene', 'BiGG_gene', 'pident', 'length', 'mismatch', 'gapopen','qstart', 'qend', 'sstart', 'send', 'evalue', 'score']
 annotations_dict[SPECIES_ID].columns = columns
 
-logging.info('loading gprs')
 # map annotations to BiGG functions for model generation
 os.chdir(data_path)
 gprs = pd.read_csv('./bigg_gprs.csv') # From CarveMe
@@ -203,14 +198,12 @@ logging.info("done with scoring")
 # make model from universal model
 new_model_dict = dict()
 for species in scores_dict2.keys():
-    logging.info(species)
 
     new_model_dict[species] = universal_model.copy()
     logging.info('copied universal')
     new_model_dict[species].name = species
     new_model_dict[species].id = species
 
-    logging.info(species)
     starting = len(new_model_dict[species].reactions)
 
     keep_scores = scores_dict2[species].loc[scores_dict2[species].score>10]
@@ -224,10 +217,6 @@ for species in scores_dict2.keys():
 
         new_model_dict[species].remove_reactions([rxn for rxn in new_model_dict[species].reactions if rxn.id not in rxns_to_add.keys()])
 
-#        print('test writing json after deleting reactions')
-#        cobra.io.save_json_model(new_model_dict[species], "test.json")
-#        print('success 2')
-
         if not [rxn.id for rxn in new_model_dict[species].reactions if rxn.gene_reaction_rule != '']:
             for rxn in new_model_dict[species].reactions:
                     if rxn.gene_reaction_rule == '':
@@ -236,18 +225,10 @@ for species in scores_dict2.keys():
                         new_model_dict[species].reactions.get_by_id(rxn.id).notes['CarveMe score'] = {rxns_to_add[rxn.id] : scores_dict2[species].loc[scores_dict2[species].reaction == rxn.id]['score'].values[0]}
 #                        print({rxns_to_add[rxn.id] : scores_dict2[species].loc[scores_dict2[species].reaction == rxn.id]['score'].values[0]})
         else:
-            logging.info('some reactions already have GPRs')
-
-#        print('test writing json after adding GPRs')
-#        cobra.io.save_json_model(new_model_dict[species], "test.json")
-#        print('success 3')
+            logging.info('error - some reactions already have GPRs')
 
         logging.info('made new model from universal')
         new_model_dict[species].repair()
-	
-#        print('test writing json after model repair')
-#        cobra.io.save_json_model(new_model_dict[species], "test.json")
-#        print('success 4')
 
         if len(rxns_to_add.keys()) == len(new_model_dict[species].reactions):
             if starting > len(rxns_to_add.keys()):
@@ -268,7 +249,7 @@ for species in scores_dict2.keys():
     cobra.io.save_json_model(new_model_dict[species], "DIY1_"+species+".json")
     logging.info('saved DIY1')
 #temp
-    logging.info('notes field')
+    logging.info('printing notes field')
     logging.info([rxn.notes for rxn in model2.reactions])
     logging.info('------------------------------------------')
     
@@ -312,7 +293,6 @@ transport_for_inappropariate_compartment_dict = dict()
 
 for species, model in new_model_dict.items():
 
-    logging.info(species)
     logging.info('finding good or bad reactions')
     compartment = compartment_dictionary[species]
     not_compartments = compartment_options - set(compartment)
@@ -324,7 +304,7 @@ for species, model in new_model_dict.items():
     for rxn_object in model.reactions: # if a reaction does not contain any bad compartments
         rxn_bad_counter = 0
         for x in not_compartments:
-            if x in rxn_object.reaction or rxn_object.reaction.endswith(x[:-1]):
+            if x in rxn_object.reaction or rxn_object.reaction.endswith(x):
                 rxn_bad_counter = rxn_bad_counter + 1
         if rxn_bad_counter == 0:
             good_rxns.append(rxn_object.id)
@@ -371,13 +351,12 @@ for species, model in new_model_dict.items():
     model.remove_reactions(remove_rxn)
     model.repair()
     if len(remove_rxn) != (x - len(model.reactions)):
-        logging.info('reaction not removed properly')
+        logging.info('error - reaction not removed properly')
     x1 = x - len(model.reactions)
     y1 = y - len(model.metabolites)
 
     # save this number
     inappropriate_compartments_that_remain[species] = (len(bad_rxns_keep_rewrite)/len(model.reactions))*100
-    logging.info((len(bad_rxns_keep_rewrite)/len(model.reactions))*100)
 
     modifications.species.loc[species] = species
     modifications.reactions_removed1.loc[species] = x1
@@ -417,7 +396,7 @@ for species, model in new_model_dict.items():
     og = len(model.reactions)
     og_mets= len(model.metabolites)
 
-    logging.info('starting to move reactions to the right compartment, if this function isnt yet in BiGG')
+    logging.info('starting to move reactions to the right compartment')
     for rxn in fix_these_reactions_list:
 
         if [hf.met_ids_without_comp(model,x.id) for x in rxn.reactants] == [hf.met_ids_without_comp(model,x.id) for x in rxn.products]:
@@ -468,7 +447,7 @@ for species, model in new_model_dict.items():
     model.repair()
     logging.info('finished moving reactions to the right compartment')
 
-    logging.info('reactions added overall')
+    logging.info('reactions added overall:')
     logging.info(len(model.reactions) - og)
     # logging.info('mets added')
     # logging.info(len(model.metabolites) - og_mets)
@@ -486,8 +465,8 @@ for species, model in new_model_dict.items():
     logging.info(set(l2))
 
 os.chdir(data_path)
-modifications.to_csv('model_modifications_'+SPECIES_ID+'Dec.csv')
-pd.DataFrame.from_dict(inappropriate_compartments_that_remain, orient="index").to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+"_Dec.csv")
+modifications.to_csv('model_modifications_'+SPECIES_ID+'_jan2019.csv')
+pd.DataFrame.from_dict(inappropriate_compartments_that_remain, orient="index").to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+"_jan2019.csv")
 
 def prune_unused_metabolites2(cobra_model):
     """ USE THIS UNTIL AUG 31 UPDATES ARE INTEGRATED INTO MASTER COBRAPY BRANCH
@@ -524,7 +503,7 @@ for species, model in new_model_dict.items():
     for m in model_pruned.metabolites:
         list_om2.append(m.id[-2:])
     if set(list_om) != set(list_om2):
-        logging.info('extra compartments are present, pruning of unused metabolites did not work')
+        logging.info('error - extra compartments are present, pruning of unused metabolites did not work')
     
     os.chdir(model_path)
     cobra.io.save_json_model(model_pruned, "final_denovo_"+species+".json")

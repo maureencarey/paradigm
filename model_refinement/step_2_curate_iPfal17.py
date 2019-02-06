@@ -207,6 +207,28 @@ pf_model.reactions.get_by_id('EX_g6p_LPAREN_e_RPAREN_').remove_from_model() # no
 pf_model.reactions.get_by_id('EX_cytd_LPAREN_e_RPAREN_').remove_from_model() # not needed
 pf_model.reactions.get_by_id('EX_dcyt_LPAREN_e_RPAREN_').remove_from_model() # not needed
 
+# should have small bounds because of inefficiency -
+# add info from notes from curation for iPfal17 -
+# they did not save in the model for some reason
+pf_model.reactions.MLTHFtap
+pf_model.reactions.MLTHFte3
+pf_model.reactions.MLTHFtmt
+
+# replace some bad practice curation from iPfal17
+pf_model.reactions.get_by_id('mthgxl_s').id = 'MGSA'
+pf_model.reactions.get_by_id('2_PERIOD_1_PERIOD_1_PERIOD_12').id = 'METMT'
+pf_model.reactions.get_by_id('METMT').name = 'Methionine methyltransferase'
+pf_model.reactions.get_by_id('uri_gf').id = 'ATPUP'
+pf_model.reactions.get_by_id('ATPUP').name = 'ATP:uridine 5-phosphotransferase'
+pf_model.reactions.get_by_id('ATPUP').notes['KEGG'] = 'R00964'
+pf_model.reactions.get_by_id('ATPUP').notes['EC NUMBER'] = '2.7.1.48 or 2.7.1.213'
+pf_model.reactions.get_by_id('ATPUP').notes['RHEA'] = '16828'
+
+pf_model.reactions.get_by_id('1_7_1_1m').id = 'NITRm'
+pf_model.reactions.get_by_id('NITRm').name = 'Nitrate reductase (NADH), mitochondrial'
+pf_model.reactions.get_by_id('1_7_1_1m').id = 'NTRIRym'
+pf_model.reactions.get_by_id('NTRIRym').name = 'Nitrate reductase (NADPH), mitochondrial'
+
 
 def prune_unused_metabolites2(cobra_model):
     """ USE THIS UNTIL AUG 31 UPDATES ARE INTEGRATED INTO MASTER COBRAPY BRANCH
@@ -522,7 +544,11 @@ logging.info('\n')
 logging.info('not in universal')
 logging.info(need_info_rxn)
 
-# no production of protein_t_e or protein_t_c 
+# no production of protein_t_e or protein_t_c
+
+pf_model.metabolites.get_by_id('5mti_c').charge = 0.
+pf_model.metabolites.get_by_id('5mti_c').formula = 'C11H14N4O4S'
+pf_model.metabolites.get_by_id('5mti_c').notes = {'KEGG id' : 'C19787'}
 
 # PRINT DUPLICATE REACTIONS
 duplicates = dict()

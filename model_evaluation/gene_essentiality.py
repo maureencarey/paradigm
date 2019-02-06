@@ -19,12 +19,12 @@ essentiality_screen_models['CparvumIowaII'] = cobra.io.load_json_model('gf_Cparv
 essentiality_screen_models['PknowlesiH'] = cobra.io.load_json_model('gf_PknowlesiH.json')
 essentiality_screen_models['PcynomolgiB'] = cobra.io.load_json_model('gf_PcynomolgiB.json')
 
-essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_Pfalciparum3D7.json')
-essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PbergheiANKA.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PcynomolgiB.json')
-essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PvivaxSal1.json')
-essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PknowlesiH.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PcynomolgiB.json')
+essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_Pfalciparum3D7.json')
+essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PbergheiANKA.json')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PcynomolgiB.json')
+essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PvivaxSal1.json')
+essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PknowlesiH.json')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PcynomolgiB.json')
 
 os.chdir("/home/mac9jc/paradigm/data/published_models")
 essentiality_screen_models['pfal2018'] = cobra.io.read_sbml_model('pfal2018_abdel_haleem.xml')
@@ -98,16 +98,17 @@ for species, model in essentiality_screen_models.items():
 
         gene_essentiality_screen_results_raw[species] = raw_results
         gene_essentiality_screen_results_interpreted[species] = interpreted_results
-        cols = ['gene_id', 'normalized_growth']
-        pd.DataFrame.from_dict(gene_essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_{}.csv".format(species))
-        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_interpreted_{}.csv".format(species))
+        
+        os.chdir("/home/mac9jc/paradigm/data")
+        pd.DataFrame.from_dict(gene_essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_{}.csv".format(species))
+        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_interpreted_{}.csv".format(species))
 
     else:
         gene_essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results
         gene_essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
-        cols = ['gene_id', 'normalized_growth']
-        pd.DataFrame.from_dict(gene_essentiality_screen_results_raw[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_{}.csv".format(species+'_generic_biomass'))
-        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_interpreted_{}.csv".format(species+'_generic_biomass'))
+        
+        pd.DataFrame.from_dict(gene_essentiality_screen_results_raw[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_{}.csv".format(species+'_generic_biomass'))
+        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_interpreted_{}.csv".format(species+'_generic_biomass'))
 
         print(species+', gene essenitality screen')
         # set objective
@@ -143,9 +144,8 @@ for species, model in essentiality_screen_models.items():
         gene_essentiality_screen_results_raw[species+'_species_biomass'] = raw_results
         gene_essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
-        cols = ['gene_id', 'normalized_growth']
-        pd.DataFrame.from_dict(gene_essentiality_screen_results_raw[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_{}.csv".format(species+'_species_biomass'))
-        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/gene_essentiality_matrix_interpreted_{}.csv".format(species+'_species_biomass'))
+        pd.DataFrame.from_dict(gene_essentiality_screen_results_raw[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_{}.csv".format(species+'_species_biomass'))
+        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_interpreted_{}.csv".format(species+'_species_biomass'))
 
 
 

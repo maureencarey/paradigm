@@ -16,7 +16,7 @@ for filename in glob.glob(os.path.join(path, 'gf_P*.json')):
     if key is not 'PconfusumCUL13' and key is not 'PneurophiliaMK1':
         model_dict[key] = cobra.io.load_json_model(filename)
 
-for filename in glob.glob(os.path.join(path, 'no_ortho_gf_*.json')):
+for filename in glob.glob(os.path.join(path, 'gf_no_ortho_*.json')):
     key = filename.split('/')[len(filename.split('/'))-1]
     key = key[:-5]
     key = key[12:]
@@ -52,7 +52,7 @@ for species, rxn_list in reactions_in_model.items():
             presence_matrix_of_reactions.loc[rxn,species] = 1
         else:
             presence_matrix_of_reactions.loc[rxn,species] = 0
-presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/rxn_presence_plasmodium_history.csv")
+presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/results/rxn_presence_plasmodium_history.csv")
 
 
 

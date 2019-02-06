@@ -115,7 +115,8 @@ df = pd.DataFrame( {'iPfal17': pf_biomass_mets_ids,
 					'C. hominis 2010': chominis_biomass_mets_ids,
                   	'T. gondii 2015': tgondii_biomass_mets_ids, 
                   	'Leishmania 2008': leish_biomass_mets_ids })
-df.to_csv('biomass_components_{}.csv'.format(str(date.today())), header=True, index=True)
+os.chdir(data_path)
+df.to_csv('./results/biomass_components_{}.csv'.format(str(date.today())), header=True, index=True)
 
 logger.info('wrote biomass components')
 

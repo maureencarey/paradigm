@@ -29,5 +29,10 @@ with open(log_fname) as f:
             logging.info(prev_line)
             logging.info(line)
             logging.info('__________________________________')
+        if 'error' in line or 'Error' in line:
+            logging.info('error message in {}'.format(log_fname))
+            logging.info(prev_line)
+            logging.info(line)
+            logging.info('__________________________________')
         prev_line = line
 

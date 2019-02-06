@@ -21,12 +21,12 @@ essentiality_screen_models['PcynomolgiB'] = cobra.io.load_json_model('gf_Pcynomo
 
 print('model set 1 loaded')
 
-essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_Pfalciparum3D7.json')
-essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PbergheiANKA.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PcynomolgiB.json')
-essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PvivaxSal1.json')
-essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PknowlesiH.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_without_ortho_PcynomolgiB.json')
+essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_Pfalciparum3D7.json')
+essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PbergheiANKA.json')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PcynomolgiB.json')
+essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PvivaxSal1.json')
+essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PknowlesiH.json')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PcynomolgiB.json')
 
 print('model set 2 loaded')
 
@@ -111,16 +111,16 @@ for species, model in essentiality_screen_models.items():
         
         essentiality_screen_results_raw[species] = raw_results
         essentiality_screen_results_interpreted[species] = interpreted_results
-        cols = ['gene_id', 'normalized_growth']
-        pd.DataFrame.from_dict(essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_{}.csv".format(species))
-        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_interpreted_{}.csv".format(species))
+     
+        pd.DataFrame.from_dict(essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}.csv".format(species))
+        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}.csv".format(species))
         
     else:
         essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results
         essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
-        cols = ['gene_id', 'normalized_growth']
-        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_{}.csv".format(species+'_generic_biomass'))
-        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_interpreted_{}.csv".format(species+'_generic_biomass'))
+
+        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}.csv".format(species+'_generic_biomass'))
+        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}.csv".format(species+'_generic_biomass'))
 
         
         print(species+', PLASMO SPECIFIC rxn essenitality screen')
@@ -158,8 +158,8 @@ for species, model in essentiality_screen_models.items():
         essentiality_screen_results_raw[species+'_species_biomass'] = raw_results
         essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
-        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_{}.csv".format(species+'_species_biomass'))
-        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_interpreted_{}.csv".format(species+'_species_biomass'))
+        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}.csv".format(species+'_species_biomass'))
+        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}.csv".format(species+'_species_biomass'))
 
 list_o_reactions2 = list()
 for species, model in essentiality_screen_models.items():
@@ -184,8 +184,9 @@ for species_long, rxn_list in essentiality_screen_results_raw.items():
         else:
             matrix_of_essentiality.loc[rxn,species_long] = 'NA'
             matrix_interpreted.loc[rxn,species_long] = 'NA'
-matrix_of_essentiality.to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_jan.csv")
-matrix_interpreted.to_csv("/home/mac9jc/paradigm/data/rxn_essentiality_matrix_interpreted_jan.csv")
+
+matrix_of_essentiality.to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_jan.csv")
+matrix_interpreted.to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_jan.csv")
 
 
 

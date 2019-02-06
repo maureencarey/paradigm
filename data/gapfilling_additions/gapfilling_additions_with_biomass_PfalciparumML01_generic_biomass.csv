@@ -1,4 +1,0 @@
-,rxns_added
-0,PROTEIN_BS: 0.6 ala__L_c + 0.377 arg__L_c + 0.2881 asn__L_c + 0.359 asp__L_c + 0.145 cys__L_c + 0.322 gln__L_c + 0.386 glu__L_c + 0.538 gly_c + 0.143 his__L_c + 0.324 ile__L_c + 0.564 leu__L_c + 0.57 lys__L_c + 0.138 met__L_c + 0.219 phe__L_c + 0.313 pro__L_c + 0.43 ser__L_c + 0.386 thr__L_c + 0.044 trp__L_c + 0.182 tyr__L_c + 0.416 val__L_c --> protein_c
-1,LEUyLAThtc: arg__L_c + h_e + leu__L_e --> arg__L_e + h_c + leu__L_c
-2,HISyLATtc: arg__L_c + his__L_e + na1_e --> arg__L_e + his__L_c + na1_c

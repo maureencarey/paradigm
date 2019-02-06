@@ -121,10 +121,22 @@ for rxn in universal.reactions:
     # also have info on x['pseudoreaction']
     # COULD ADD SBO TERM HERE
 
+for met in universal.metabolites:
+    if isinstance(met.charge, list):
+        if len(met.charge) == 0:
+            met.charge = int(0)
+        else:
+            met.charge = met.charge[0]
+    if isinstance(met.formula, list):
+        if len(met.formula) == 0:
+            met.formula = ''
+        else:
+            met.formula = met.formula[0]
+
 # SAVE
 os.chdir(model_path)
 cobra.io.save_json_model(universal, 'universal_model_updated.json')
-#cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
+cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
 
 #universal = cobra.io.load_json_model('universal_model_updated.json')
 rxn_list = [r.id for r in universal.reactions]
@@ -134,13 +146,6 @@ met_list = [m.id for m in universal.metabolites]
 os.chdir(model_path)
 model = cobra.io.load_json_model('iPfal18.json')
 cobra.manipulation.modify.escape_ID(model)
-
-model.reactions.MLTHFtap.lower_bound = -1000.
-model.reactions.MLTHFte3.lower_bound = -1000.
-model.reactions.MLTHFtmt.lower_bound = -1000.
-model.reactions.MLTHFtap.upper_bound = 1000.
-model.reactions.MLTHFte3.upper_bound = 1000.
-model.reactions.MLTHFtmt.upper_bound = 1000.
 
 # add full met info
 for met in model.metabolites:
@@ -214,5 +219,21 @@ for rxn in model.reactions:
 
 model.reactions.get_by_id('DM_biomass_c').name = 'unblock biomass'
 model.reactions.get_by_id('DM_biomass_c').id = 'DM_bm'
+
+for met in model.metabolites:
+    if isinstance(met.charge, list):
+        if len(met.charge) == 0:
+            met.charge = int(0)
+        else:
+            met.charge = met.charge[0]
+    if isinstance(met.formula, list):
+        if len(met.formula) == 0:
+            met.formula = ''
+        else:
+            met.formula = met.formula[0]
+    if met.compartment == 'food vacuole':
+        met.compartment = 'food_vacuole'
+
 cobra.io.save_json_model(model,  'iPfal18_updated.json')
+cobra.io.write_sbml_model(model,  'iPfal18_updated.xml')
 
