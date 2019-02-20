@@ -499,5 +499,6 @@ for species, model in model_dict.items():
         logger.info('HEMOGLOBIN PRESENT7')
     os.chdir(model_path)
     cobra.io.save_json_model(model, 'gf_no_ortho_'+SPECIES_ID+'.json')
+    cobra.io.write_sbml_model(model,'gf_no_ortho_'+SPECIES_ID+'.xml')
     
     

@@ -19,6 +19,34 @@ pf_model = cobra.io.read_sbml_model("iPfal17.xml")
 logging.info('finished loading model')
 
 ## ADD NOTES FROM FILE
+os.chdir(data_path)
+edits = pd.read_csv("iPfal17_edits_BMCGenomics_Carey.csv")
+
+for x in edits.index:
+    
+    rxn_id_string = edits['Unnamed: 0'][x]
+    
+    if rxn_id_string in pf_model.reactions:
+        pf_model.reactions.get_by_id(rxn_id_string).notes['SUBSYSTEM'] = edits.Subsystem[x]
+        pf_model.reactions.get_by_id(rxn_id_string).notes['CONFIDENCE'] = edits.Confidence[x]
+        pf_model.reactions.get_by_id(rxn_id_string).notes['EC_NUMBER'] = edits['EC number'][x]
+        pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = dict{'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+    elif '[' in rxn_id_string:
+        rxn_id_string_brackets = rxn_id_string.replace('[','_LSQBKT_').replace(']','_RSQBKT_')
+        if rxn_id_string_brackets in pf_model.reactions:
+            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['SUBSYSTEM'] = edits.Subsystem[x]
+            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['CONFIDENCE'] = edits.Confidence[x]
+            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['EC_NUMBER'] = edits['EC number'][x]
+            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = dict{'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+    elif '.' in rxn_id_string:
+        rxn_id_string_period = rxn_id_string.replace('.','_PERIOD_')
+        if rxn_id_string_period in pf_model.reactions:
+            pf_model.reactions.get_by_id(rxn_id_string_period).notes['SUBSYSTEM'] = edits.Subsystem[x]
+            pf_model.reactions.get_by_id(rxn_id_string_period).notes['CONFIDENCE'] = edits.Confidence[x]
+            pf_model.reactions.get_by_id(rxn_id_string_period).notes['EC_NUMBER'] = rxn_id_string
+            pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = dict{'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+    else:
+        logging.info(edits['Unnamed: 0'][x]+'is in the edits file, but not in the model???')
 
 # update gene identifiers to latest EuPathDB/PlasmoDB version
 os.chdir(data_path)
@@ -102,7 +130,7 @@ logging.info('finished renaming curation')
 pf_model.reactions.get_by_id('HMGLB').add_metabolites(\
 {pf_model.metabolites.get_by_id('h2o2_c'):1.,
 pf_model.metabolites.get_by_id('h_c'):-2.})
-pf_model.reactions.get_by_id('HMGLB').notes['References'] = \
+pf_model.reactions.get_by_id('HMGLB').notes['REFERENCES'] = \
 'doi: 10.1073/pnas.0601876103; DOI: 10.1111/j.1365-2141.1975.tb00540.x'
 
 pheme_c = pf_model.metabolites.get_by_id('pheme_c')
@@ -122,7 +150,7 @@ new_rxn.add_metabolites({pheme_c : -1,gthrd_c : -1,
     gthox_c : +1,    heme_degraded_c : +1 })
 new_rxn.lower_bound = 0.
 new_rxn.upper_bound = 1000.
-new_rxn.notes['References'] = 'doi: 10.1074/jbc.270.42.24876'
+new_rxn.notes['REFERENCES'] = 'doi: 10.1074/jbc.270.42.24876'
 pf_model.add_reactions([new_rxn])
 
 new_rxn = Reaction()
@@ -131,7 +159,7 @@ new_rxn.id = 'perox_heme'
 new_rxn.add_metabolites({pheme_fv : -1, h2o2_c : -1, heme_degraded_fv : +1 })
 new_rxn.lower_bound = 0.
 new_rxn.upper_bound = 1000.
-new_rxn.notes['References'] = 'doi: 10.1042/bj1740893'
+new_rxn.notes['REFERENCES'] = 'doi: 10.1042/bj1740893'
 pf_model.add_reactions([new_rxn])
 
 pf_model.add_boundary(heme_degraded_c, type="sink", reaction_id="SK_heme_degraded_c",lb=0, ub=1000.0)

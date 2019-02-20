@@ -197,4 +197,5 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     sbatch ./run_these/follow_up_analyses/analyses_part4.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part5.slurm
     # # would like to run Memote again on all models
+    ## need to move all xml gf models to other directory for memote
     

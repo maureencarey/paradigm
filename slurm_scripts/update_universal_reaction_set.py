@@ -133,6 +133,9 @@ for met in universal.metabolites:
         else:
             met.formula = met.formula[0]
 
+
+universal.reactions.PGM.lower_bound = -1000. # make reversible
+
 # SAVE
 os.chdir(model_path)
 cobra.io.save_json_model(universal, 'universal_model_updated.json')
@@ -233,6 +236,25 @@ for met in model.metabolites:
             met.formula = met.formula[0]
     if met.compartment == 'food vacuole':
         met.compartment = 'food_vacuole'
+
+
+## add notes field from previous curation rounds
+
+os.chdir(data_path)
+curation_file1 = pd.read_csv("")
+curation_file2 = pd.read_csv("")
+
+for rxn in model.reactions:
+    if rxn.id in curation_file1['reaction']:
+    if rxn.id in curation_file2['reaction']:
+    
+    if isinstance(rxn.notes,dict):
+        rxn.notes['notes'] =
+        rxn.notes['reference'] =
+    elif isinstance(rxn.notes,list):
+    else:
+
+
 
 cobra.io.save_json_model(model,  'iPfal18_updated.json')
 cobra.io.write_sbml_model(model,  'iPfal18_updated.xml')
