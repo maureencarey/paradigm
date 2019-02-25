@@ -18,7 +18,7 @@ os.chdir(model_path)
 pf_model = cobra.io.read_sbml_model("iPfal17.xml")
 logging.info('finished loading model')
 
-## ADD NOTES FROM FILE
+## adding notes from previous curation
 os.chdir(data_path)
 edits = pd.read_csv("iPfal17_edits_BMCGenomics_Carey.csv")
 
@@ -606,3 +606,4 @@ logging.info(duplicates)
 #
 os.chdir(model_path)
 cobra.io.save_json_model(pf_model, "iPfal18.json")
+cobra.io.write_sbml_model(universal, "iPfal18.xml")
