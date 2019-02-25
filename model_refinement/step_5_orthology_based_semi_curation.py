@@ -202,6 +202,7 @@ for species, model in pf_model_dict.items():
     
     os.chdir(model_path)
     cobra.io.save_json_model(model, "ortho_"+species+".json")
+    cobra.io.write_sbml_model(model, "ortho_"+species+".xml")
 
     if 'hb_c' in [m.id for m in model.metabolites]:
         logger.info('HEMOGLOBIN PRESENT')

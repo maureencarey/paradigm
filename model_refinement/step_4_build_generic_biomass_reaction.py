@@ -217,5 +217,6 @@ for species, model in model_dict.items():
         logger.info('HEMOGLOBIN PRESENT')
     os.chdir(model_path)
     cobra.io.save_json_model(model, "./with_biomass_"+species+".json")
+    cobra.io.write_sbml_model(model, "./with_biomass_"+species+".xml")
 
 
