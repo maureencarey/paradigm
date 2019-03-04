@@ -22,20 +22,21 @@ echo "made annotation databases and other necessary files"
 
 # ANNOTATE GENOMES
 # cd /home/mac9jc/paradigm/data/
-for filename in ./*_annotated_Dec2018.fasta; do
-echo "$filename"
-echo "${filename:2:${#filename}-26}"
+for filename in ./*_annotated_Feb2018.fasta; do
+#echo "$filename"
+#echo "${filename:2:${#filename}-26}"
 diamond blastp -d ./bigg_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_BiGG.tsv"
 done
+echo "diamond annotation against BiGG done"
 mv ./*_BiGG.tsv ./diamond_output_BiGG
 
 # cd /home/mac9jc/paradigm/data/
-for filename in ./*_annotated_Dec2018.fasta; do
-echo "$filename"
-echo "${filename:2:${#filename}-26}"
+for filename in ./*_annotated_Feb2018.fasta; do
+#echo "$filename"
+#echo "${filename:2:${#filename}-26}"
 diamond blastp -d ./orthoMCL_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_orthoMCL.tsv"
 done
 mv ./*_orthoMCL.tsv ./diamond_output_orthoMCL
-mv ./*_annotated_Dec2018.fasta ./genomes
-echo "diamond annotation complete"
+mv ./*_annotated_Feb2018.fasta ./genomes
+echo "diamond annotations complete"
 

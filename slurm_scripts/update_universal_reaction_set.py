@@ -79,26 +79,45 @@ def add_full_met_info(model, met, met_id):
                 if sub_list[0] not in met.notes.keys():
                     met.notes[sub_list[0]] = sub_list[1]
                 else: met.notes[sub_list[0]] = [met.notes[sub_list[0]]].append(sub_list[1])
-        else: met.notes[sub_list[0]] = sub_list[0]
+    
+    list_o_problem_types = list() # database links is not a list
+    list_o_problem_types_2 = list() # database links doesn't have IDs
+    list_o_problem_mets = list() # no database links
 
     # get annotation for requests object
-    temp_annotation = x['database_links']
+    if 'database_links' in x.keys():
+        temp_annotation = x['database_links']
+    else: 
+        temp_annotation = dict()
+        list_o_problem_mets.append(met.id)
+
     #if met.id in universal_model.metabolites:
+    met.annotation = dict()
     met.annotation['bigg.metabolite'] = met.id
+
     for key in id_map.keys():
         if key in temp_annotation.keys():
-            if len(temp_annotation[key]) > 1:
+            if isinstance(temp_annotation[key],list):
                 list_o_ids = list()
-                for mini_dict in temp_annotation[key]:
-                    list_o_ids.append(mini_dict['id'])
-                    met.annotation[id_map[key]] = list(set(list_o_ids))
-            else: met.annotation[id_map[key]] = temp_annotation[key]['id']
+                for item_in_list in temp_annotation[key]:
+                    if isinstance(item_in_list,dict):
+                        if 'id' in item_in_list.keys():
+                            list_o_ids.append(item_in_list['id'])
+                    else: list_o_problem_types_2.append({met.id:key})
+                met.annotation[id_map[key]] = list(set(list_o_ids))
+            else: list_o_problem_types.append({met.id:key})
 
     if x['formulae'] != [] and len(x['formulae'])>0:
         met.formula = x['formulae'][0]
     if x['charges'] != [] and len(x['charges'])>0:
         met.charge = x['charges'][0]
-
+    
+    if len(list_o_problem_types)>0:
+        print(met.id, ' database links is not a list')
+    if len(list_o_problem_types_2)>0:
+       	print(met.id, ' database links are formated incorrectly (no id)')
+    if len(list_o_problem_mets)>0:
+       	print(met.id, ' has no database links')
     return(model)
 
 def add_full_rxn_info(model,rxn, rxn_id):
@@ -116,6 +135,10 @@ def add_full_rxn_info(model,rxn, rxn_id):
     
     if rxn.name == '': rxn.name = x['name']
     
+    list_o_problem_types = list() # database links is not a list
+    list_o_problem_types_2 = list() # database links doesn't have IDs
+    list_o_problem_rxns = list() # no database links
+
     # fix current reaction.annotation field that is in list form
     # this fix will allow universal to be written as as a xml file, not just json
     # however save the info just in case it is not duplicated elsewhere
@@ -128,21 +151,37 @@ def add_full_rxn_info(model,rxn, rxn_id):
                     rxn.notes[sub_list[0]] = sub_list[1]
                 else:
                     rxn.notes[sub_list[0]] = [rxn.notes[sub_list[0]]].append(sub_list[1])
-        else:
-            rxn.notes[sub_list[0]] = sub_list[0]
+
     if rxn.reaction == '':
         rxn.reaction = x['reaction_string']
 
-    temp_annotation = x['database_links']
+    rxn.annotation = dict()
+
+    if 'database_links' in x.keys():
+        temp_annotation = x['database_links']
+    else: 
+        temp_annotation = dict()
+        list_o_problem_rxns.append(rxn.id)
+
     for key in id_map.keys():
         if key in temp_annotation.keys():
-            if len(temp_annotation[key]) > 1:
+            if isinstance(temp_annotation[key],list):
                 list_o_ids = list()
-                for mini_dict in temp_annotation[key]:
-                    list_o_ids.append(mini_dict['id'])
-                    rxn.annotation[id_map[key]] = list(set(list_o_ids))
-                else: rxn.annotation[id_map[key]] = temp_annotation[key]['id']
+                for item_in_list in temp_annotation[key]:
+                    if isinstance(item_in_list,dict):
+                        if 'id' in item_in_list.keys():
+                            list_o_ids.append(item_in_list['id'])
+                    else: list_o_problem_types_2.append({rxn.id:key})
+                rxn.annotation[id_map[key]] = list(set(list_o_ids))
+            else: list_o_problem_types.append({met.id:key})
     # also have info on x['pseudoreaction']
+
+    if len(list_o_problem_types)>0:
+        print(rxn.id, ' database links is not a list')
+    if len(list_o_problem_types_2)>0:
+        print(rxn.id, ' database links are formated incorrectly (no id)')
+    if len(list_o_problem_rxns)>0:
+        print(rxn.id, ' has no database links')
 
     return(model)
 
@@ -176,13 +215,16 @@ universal.remove_reactions(rxn_list_to_delete)
 for met in universal.metabolites:
     universal = add_full_met_info(universal, met, met_ids_without_comp(met.id))
 for rxn in universal.reactions:
-    universal = add_ful_rxn_info(universal, rxn, rxn.id)
+    universal = add_full_rxn_info(universal, rxn, rxn.id)
 
 # fix charges and formulas
 universal = fix_charge_or_formula(universal)
 
 # manual curation
 universal.reactions.PGM.lower_bound = -1000. # make reversible
+#universal.reactions.ATPM # pseudoreaction for ATP maintenance and sampe as NTP1
+#universal.reactions.RPEc # duplicate with RPEc
+universal.remove_reactions([universal.reactions.RPEc,universal.reactions.ATPM])
 
 # Add SBO terms
 universal = add_sbo_terms(universal)
@@ -205,7 +247,7 @@ cobra.manipulation.modify.escape_ID(model)
 for met in model.metabolites:
     met_id = met_ids_without_comp(met.id)
     if met_id+'_c' in met_list:
-        model = add_full_met_info(model, met, met_id+'_c')
+        model = add_full_met_info(model, met, met_id)
 
 # add full reaction info
 for rxn in model.reactions:

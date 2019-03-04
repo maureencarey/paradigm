@@ -150,9 +150,10 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # manually doubel check latest EuPathDB release to see if any extra files need to run
     # # get data
     sbatch ./run_these/pipeline_slurm_step1.slurm
+    mv step2_27_02_2019.log ./model_generation_logs/
     module load anaconda/5.2.0-py3.6
     # # would like to run Memote here on iPfal18
-    python 3 ./run_these/update_universal_reaction_set.py
+    sbatch ./run_these/update_universal_reaction_set.slurm
     # # would like to run Memote again on iPfal18
     # # make all models
     bash ./run_these/pipeline_auto_slurm_for_step2.sh

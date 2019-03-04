@@ -27,24 +27,51 @@ for x in edits.index:
     rxn_id_string = edits['Unnamed: 0'][x]
     
     if rxn_id_string in pf_model.reactions:
-        pf_model.reactions.get_by_id(rxn_id_string).notes['SUBSYSTEM'] = edits.Subsystem[x]
-        pf_model.reactions.get_by_id(rxn_id_string).notes['CONFIDENCE'] = edits.Confidence[x]
-        pf_model.reactions.get_by_id(rxn_id_string).notes['EC_NUMBER'] = edits['EC number'][x]
-        pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = dict{'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+        if isinstance(edits.Subsystem[x],str) or str(float(edits.Subsystem[x])).lower() != 'nan':
+            pf_model.reactions.get_by_id(rxn_id_string).notes['SUBSYSTEM'] = edits.Subsystem[x]
+        if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
+            pf_model.reactions.get_by_id(rxn_id_string).notes['CONFIDENCE'] = edits['Confidence Score'][x]
+       	if isinstance(edits['EC Number'][x],str) or str(float(edits['EC Number'][x])).lower() != 'nan':            
+            pf_model.reactions.get_by_id(rxn_id_string).notes['EC_NUMBER'] = edits['EC Number'][x]
+        if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
+            if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+            else:
+                pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
+        elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+            pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
     elif '[' in rxn_id_string:
         rxn_id_string_brackets = rxn_id_string.replace('[','_LSQBKT_').replace(']','_RSQBKT_')
         if rxn_id_string_brackets in pf_model.reactions:
-            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['SUBSYSTEM'] = edits.Subsystem[x]
-            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['CONFIDENCE'] = edits.Confidence[x]
-            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['EC_NUMBER'] = edits['EC number'][x]
-            pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = dict{'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+            if isinstance(edits.Subsystem[x],str) or str(float(edits.Subsystem[x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['SUBSYSTEM'] = edits.Subsystem[x]
+            if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['CONFIDENCE'] = edits['Confidence Score'][x]
+            if isinstance(edits['EC Number'][x],str) or str(float(edits['EC Number'][x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['EC_NUMBER'] = edits['EC Number'][x]
+            if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
+                if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+                    pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+                else:
+                    pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
+            elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
     elif '.' in rxn_id_string:
         rxn_id_string_period = rxn_id_string.replace('.','_PERIOD_')
-        if rxn_id_string_period in pf_model.reactions:
-            pf_model.reactions.get_by_id(rxn_id_string_period).notes['SUBSYSTEM'] = edits.Subsystem[x]
-            pf_model.reactions.get_by_id(rxn_id_string_period).notes['CONFIDENCE'] = edits.Confidence[x]
+        if rxn_id_string_period in pf_model.reactions: 
+            if isinstance(edits.Subsystem[x],str) or str(float(edits.Subsystem[x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string_period).notes['SUBSYSTEM'] = edits.Subsystem[x]
+            if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string_period).notes['CONFIDENCE'] = edits['Confidence Score'][x]    
             pf_model.reactions.get_by_id(rxn_id_string_period).notes['EC_NUMBER'] = rxn_id_string
-            pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = dict{'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+            if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
+                if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+                    pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+                else:
+                    pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
+            elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+                pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
+    
     else:
         logging.info(edits['Unnamed: 0'][x]+'is in the edits file, but not in the model???')
 
@@ -238,9 +265,9 @@ pf_model.reactions.get_by_id('EX_dcyt_LPAREN_e_RPAREN_').remove_from_model() # n
 # should have small bounds because of inefficiency -
 # add info from notes from curation for iPfal17 -
 # they did not save in the model for some reason
-pf_model.reactions.MLTHFtap
-pf_model.reactions.MLTHFte3
-pf_model.reactions.MLTHFtmt
+#pf_model.reactions.MLTHFtap
+#pf_model.reactions.MLTHFte3
+#pf_model.reactions.MLTHFtmt
 
 # replace some bad practice curation from iPfal17
 pf_model.reactions.get_by_id('mthgxl_s').id = 'MGSA'
@@ -252,9 +279,9 @@ pf_model.reactions.get_by_id('ATPUP').notes['KEGG'] = 'R00964'
 pf_model.reactions.get_by_id('ATPUP').notes['EC NUMBER'] = '2.7.1.48 or 2.7.1.213'
 pf_model.reactions.get_by_id('ATPUP').notes['RHEA'] = '16828'
 
-pf_model.reactions.get_by_id('1_7_1_1m').id = 'NITRm'
+pf_model.reactions.get_by_id('1_7_1_1_mt').id = 'NITRm'
 pf_model.reactions.get_by_id('NITRm').name = 'Nitrate reductase (NADH), mitochondrial'
-pf_model.reactions.get_by_id('1_7_1_1m').id = 'NTRIRym'
+pf_model.reactions.get_by_id('1_7_1_3_mt').id = 'NTRIRym'
 pf_model.reactions.get_by_id('NTRIRym').name = 'Nitrate reductase (NADPH), mitochondrial'
 
 
@@ -535,6 +562,11 @@ for rxn in pf_model.reactions:
         rxn.id = 'EX_'+rxn.reactants[0].id
     if rxn.id.endswith('_mt'): 
         rxn.id = rxn.id.replace('_mt','m')
+
+# rename reactions if not using BiGG canonical ID
+for rxn in pf_model.reactions:
+    if rxn.id in rxn_dict.keys():
+        rxn.id = rxn_dict[rxn.id]
         
 for met in pf_model.metabolites:
     if '___' in met.id:
@@ -606,4 +638,4 @@ logging.info(duplicates)
 #
 os.chdir(model_path)
 cobra.io.save_json_model(pf_model, "iPfal18.json")
-cobra.io.write_sbml_model(universal, "iPfal18.xml")
+cobra.io.write_sbml_model(pf_model, "iPfal18.xml")
