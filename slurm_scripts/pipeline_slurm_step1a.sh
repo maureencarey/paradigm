@@ -18,6 +18,8 @@ wget -O bigg_gprs.csv.gz 'https://github.com/cdanielmachado/carveme/raw/master/c
 gunzip bigg_gprs.csv.gz
 wget -O bigg_metabolites.txt 'http://bigg.ucsd.edu/static/namespace/bigg_models_metabolites.txt'
 wget -O bigg_reactions.txt 'http://bigg.ucsd.edu/static/namespace/bigg_models_reactions.txt'
+#wget -O metanetx_chem_prop.tsv 'https://www.metanetx.org/cgi-bin/mnxget/mnxref/chem_prop.tsv'
+#must uncomment out header of metanetx_chem_prop
 echo "made annotation databases and other necessary files"
 
 # ANNOTATE GENOMES

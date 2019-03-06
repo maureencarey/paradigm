@@ -34,21 +34,21 @@ def add_sbo_terms(model):
     # Add SBO terms to objects
 
     for met in model.metabolites:
-        met.annotation['sbo'] = 'SBO:0000247'
+        met.annotation['sbo'] = ['SBO:0000247']
     for gene in model.genes:
-        gene.annotation['sbo'] = 'SBO:0000243'
+        gene.annotation['sbo'] = ['SBO:0000243']
     for rxn in model.reactions:
         if 'Biomass' in rxn.id or 'biomass' in rxn.id:
-            rxn.annotation['sbo'] = 'SBO:0000629'
+            rxn.annotation['sbo'] = ['SBO:0000629']
         elif rxn.id.startswith('EX_'):
-            rxn.annotation['sbo'] = 'SBO:0000627'
+            rxn.annotation['sbo'] = ['SBO:0000627']
         elif rxn.id.startswith('DM_'):
-            rxn.annotation['sbo'] = 'SBO:0000628'
+            rxn.annotation['sbo'] = ['SBO:0000628']
         elif rxn.id.startswith('SK_'):
-            rxn.annotation['sbo'] = 'SBO:0000632'
+            rxn.annotation['sbo'] = ['SBO:0000632']
         elif [met_ids_without_comp(met.id) for met in rxn.reactants] == [met_ids_without_comp(met.id) for met in rxn.products]:
-            rxn.annotation['sbo'] = 'SBO:0000185'
-        else: rxn.annotation['sbo'] = 'SBO:0000176'
+            rxn.annotation['sbo'] = ['SBO:0000185']
+        else: rxn.annotation['sbo'] = ['SBO:0000176']
 
     return(model)
 
@@ -93,7 +93,7 @@ def add_full_met_info(model, met, met_id):
 
     #if met.id in universal_model.metabolites:
     met.annotation = dict()
-    met.annotation['bigg.metabolite'] = met.id
+    met.annotation['bigg.metabolite'] = [met.id]
 
     for key in id_map.keys():
         if key in temp_annotation.keys():
@@ -118,6 +118,16 @@ def add_full_met_info(model, met, met_id):
        	print(met.id, ' database links are formated incorrectly (no id)')
     if len(list_o_problem_mets)>0:
        	print(met.id, ' has no database links')
+
+    data_path = "/home/mac9jc/paradigm/data"
+    os.chdir(data_path)
+    df = pd.read_table('metanetx_chem_prop.tsv', sep='\t', comment='#')
+    if 'metanetx.chemical' in met.annotation.keys():
+        id_string = met.annotation['metanetx.chemical'][0]
+        if id_string in df['MNX_ID']:
+            met.annotation['inchi'] = [str(df.loc[df['MNX_ID'] == id_string]['InChI'].values[0])]
+            met.annotation['inchikey'] = [str(df.loc[df['MNX_ID'] == id_string]['InChIKey'].values[0])]
+
     return(model)
 
 def add_full_rxn_info(model,rxn, rxn_id):
@@ -156,6 +166,8 @@ def add_full_rxn_info(model,rxn, rxn_id):
         rxn.reaction = x['reaction_string']
 
     rxn.annotation = dict()
+
+    rxn.annotation['bigg.reaction'] = [rxn.id]
 
     if 'database_links' in x.keys():
         temp_annotation = x['database_links']
@@ -267,11 +279,14 @@ for met in model.metabolites:
 
 # TO DO: ask Memote to recognized EuPathDB gene IDs
 for gene in model.genes:
-    gene.annotation['EuPathDB.genes'] = gene.id
+    gene.annotation['EuPathDB.genes'] = [gene.id]
 
 # Add SBO terms
 model = add_sbo_terms(model)
 
+model.metabolites.get_by_id('5mti_c').charge = int(model.metabolites.get_by_id('5mti_c').charge)
+
+model.name = 'iPfal19, curated P. falciparum 3D7'
 cobra.io.save_json_model(model,  'iPfal18_updated.json')
 cobra.io.write_sbml_model(model,  'iPfal18_updated.xml')
 
