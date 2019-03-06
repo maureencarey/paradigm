@@ -1,4 +1,4 @@
-# Input with_biomass_speciesname.json and iPfal18.json
+# Input with_biomass_speciesname.json and iPfal19.json
 
 import cobra
 import pandas as pd
@@ -33,7 +33,7 @@ if 'ortho_' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID.split('ortho_')[1]
 if 'DIY' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID[5:]
-if SPECIES_ID == 'iPfal18':
+if SPECIES_ID == 'iPfal19':
     SPECIES_ID = 'Pfalciparum3D7'
 
 day = datetime.now().strftime('%d_%m_%Y')
@@ -54,7 +54,7 @@ os.chdir(model_path)
 universal_model = cobra.io.load_json_model('universal_model_updated.json')
 
 # extend universal by curated model
-pf_model = cobra.io.load_json_model('iPfal18_updated.json')
+pf_model = cobra.io.load_json_model('iPfal19_updated.json')
 len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:
@@ -157,9 +157,6 @@ for species, model in model_dict.items():
                 "production":production_species['Metabolite']}
     if 'biomass' not in [r.id for r in model.reactions]:
         logger.info('biomass not in reactions anymore')
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT')
-
 # tasks_dict # key = species, value = dictionary
 # tasks_dict[species][consumption] = dataframe of met Ids with column name 'Metabolite'
 # tasks_dict[species][production] = dataframe of met Ids with column name 'Metabolite'
@@ -262,8 +259,6 @@ for species, model in model_dict.items():
                 cannot_gapfill.append(met)
         all_mets = list(set(all_mets))
 
-        if 'hb_c' in [m.id for m in model.metabolites]:
-            logger.info('HEMOGLOBIN PRESENT2')
         for met in all_mets:
             logger.info('')
             logger.info(met)
@@ -390,8 +385,7 @@ for species, model in model_dict.items():
                     
             if 'biomass' not in [r.id for r in gf_model.reactions]:
                 logger.info('biomass not in reactions anymore')
-        if 'hb_c' in [m.id for m in model.metabolites]:
-            logger.info('HEMOGLOBIN PRESENT3')
+
     # is it used in any reaction intracellularly? 
     # if not, cannot do anything about it, except curate in future
 
@@ -405,8 +399,6 @@ for species, model in model_dict.items():
         for rxn in add_reactions_list:
             if rxn.id not in [r.id for r in model.reactions]:
                 model.add_reactions([rxn])
-        if 'hb_c' in [m.id for m in model.metabolites]:
-            logger.info('HEMOGLOBIN PRESENT4')
     else:
         logger.info("no data to gapfill for")
 
@@ -454,9 +446,6 @@ for species, model in model_dict.items():
         logger.info("wrote generic bioamss file")
     else:
         logger.info('error: no generic biomass reaction')
-
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT5')
     
     logger.info('biomass in reactions')
     logger.info('biomass' in [r.id for r in model.reactions])
@@ -484,9 +473,6 @@ for species, model in model_dict.items():
         df.to_csv('gapfilling_additions_no_ortho_{0}_species_biomass.csv'.format(SPECIES_ID_old))
         logger.info("wrote species biomass file")
 
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT6')
-
     add_reactions_list2 = list(set(flatten_mixed_list([gf_mod_list1,gf_mod_list2])))
     logger.info('going to add these reactions:')
     logger.info(add_reactions_list2)
@@ -495,8 +481,6 @@ for species, model in model_dict.items():
             model.add_reactions([rxn])
     logger.info('added reactions')
 
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT7')
     os.chdir(model_path)
     cobra.io.save_json_model(model, 'gf_no_ortho_'+SPECIES_ID+'.json')
     cobra.io.write_sbml_model(model,'gf_no_ortho_'+SPECIES_ID+'.xml')

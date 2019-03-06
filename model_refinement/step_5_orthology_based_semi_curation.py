@@ -33,7 +33,7 @@ logger.info('BEGIN STEP 5')
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
 os.chdir(model_path)
-iPfal18 = cobra.io.load_json_model("iPfal18_updated.json")
+iPfal19 = cobra.io.load_json_model("iPfal19_updated.json")
 
 logger.info(SPECIES_ID)
 # modified for Rivanna: read in the models
@@ -91,7 +91,7 @@ for species, model in pf_model_dict.items():
     
     # add reactions that are necessary for biomass (aggregation and transport rxns)
     for x in add_these:
-        rxn = iPfal18.reactions.get_by_id(x).copy()
+        rxn = iPfal19.reactions.get_by_id(x).copy()
         if rxn.gene_reaction_rule:
             logger.info(rxn.id)
             logger.info('has the following GPR:')
@@ -114,8 +114,8 @@ for species, model in pf_model_dict.items():
         new_gene = row['[Gene ID]']
         if ',' not in row['[Input Ortholog(s)]']:
             gene = row['[Input Ortholog(s)]'].strip()
-            if gene in [x.id for x in iPfal18.genes]:
-                gene = iPfal18.genes.get_by_id(gene)
+            if gene in [x.id for x in iPfal19.genes]:
+                gene = iPfal19.genes.get_by_id(gene)
                 rxn_to_add = gene.reactions.copy()
                 for rxn in rxn_to_add:
                     if rxn.id not in [x.id for x in model.reactions]:
@@ -133,8 +133,8 @@ for species, model in pf_model_dict.items():
         else:
             for i in range(0,len(row['[Input Ortholog(s)]'].split(', ')),1):
                 gene = row['[Input Ortholog(s)]'].split(', ')[i].strip()
-                if gene in [x.id for x in iPfal18.genes]:
-                    gene = iPfal18.genes.get_by_id(gene)
+                if gene in [x.id for x in iPfal19.genes]:
+                    gene = iPfal19.genes.get_by_id(gene)
                     rxn_to_add = gene.reactions.copy()
                     for rxn in rxn_to_add:
                         if rxn.id not in [x.id for x in model.reactions]:

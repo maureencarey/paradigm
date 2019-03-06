@@ -465,8 +465,8 @@ for species, model in new_model_dict.items():
     logging.info(set(l2))
 
 os.chdir(data_path)
-modifications.to_csv('model_modifications_'+SPECIES_ID+'_jan2019.csv')
-pd.DataFrame.from_dict(inappropriate_compartments_that_remain, orient="index").to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+"_jan2019.csv")
+modifications.to_csv('model_modifications_'+SPECIES_ID+day+'.csv')
+pd.DataFrame.from_dict(inappropriate_compartments_that_remain, orient="index").to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+day+".csv")
 
 def prune_unused_metabolites2(cobra_model):
     """ USE THIS UNTIL AUG 31 UPDATES ARE INTEGRATED INTO MASTER COBRAPY BRANCH

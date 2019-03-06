@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 import glob
 from cobra.core import Gene, Metabolite, Reaction
+from datetime import datetime
+
+day = datetime.now().strftime('%d_%m_%Y')
 
 ## ##### get essential reactions
 os.chdir("/home/mac9jc/paradigm/models")
@@ -42,7 +45,7 @@ essentiality_screen_models['tg2015'] = cobra.io.read_sbml_model('tg2015_tymoshen
 print('model set 3 loaded')
 
 os.chdir("/home/mac9jc/paradigm/models")
-essentiality_screen_models['iPfal18'] = cobra.io.load_json_model('iPfal18_updated.json')
+essentiality_screen_models['iPfal19'] = cobra.io.load_json_model('iPfal19_updated.json')
 
 essentiality_screen_results_raw= dict()
 essentiality_screen_results_interpreted = dict()
@@ -66,7 +69,7 @@ for species, model in essentiality_screen_models.items():
         model.objective == 'Biomass_rxn_c'
         model.reactions.get_by_id('Biomass_rxn_c').upper_bound = 1000.
        	model.reactions.get_by_id('Biomass_rxn_c').lower_bound = 0.
-    elif species in ['iPfal18','pfal2018','pviv2018','pber2018','pkno2018','pcyn2018']:
+    elif species in ['iPfal19','pfal2018','pviv2018','pber2018','pkno2018','pcyn2018']:
         model.objective = "biomass"
         model.reactions.get_by_id('biomass').upper_bound = 1000.
         model.reactions.get_by_id('biomass').lower_bound = 0.
@@ -112,15 +115,15 @@ for species, model in essentiality_screen_models.items():
         essentiality_screen_results_raw[species] = raw_results
         essentiality_screen_results_interpreted[species] = interpreted_results
      
-        pd.DataFrame.from_dict(essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}.csv".format(species))
-        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}.csv".format(species))
+        pd.DataFrame.from_dict(essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}_{}.csv".format(species,day))
+        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}_{}.csv".format(species,day))
         
     else:
         essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results
         essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
 
-        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}.csv".format(species+'_generic_biomass'))
-        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}.csv".format(species+'_generic_biomass'))
+        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}_{}.csv".format(species+'_generic_biomass',day))
+        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_generic_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}_{}.csv".format(species+'_generic_biomass',day))
 
         
         print(species+', PLASMO SPECIFIC rxn essenitality screen')
@@ -158,8 +161,8 @@ for species, model in essentiality_screen_models.items():
         essentiality_screen_results_raw[species+'_species_biomass'] = raw_results
         essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
-        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}.csv".format(species+'_species_biomass'))
-        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}.csv".format(species+'_species_biomass'))
+        pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}_{}.csv".format(species+'_species_biomass',day))
+pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}_{}.csv".format(species+'_species_biomass',day))
 
 list_o_reactions2 = list()
 for species, model in essentiality_screen_models.items():
@@ -185,8 +188,8 @@ for species_long, rxn_list in essentiality_screen_results_raw.items():
             matrix_of_essentiality.loc[rxn,species_long] = 'NA'
             matrix_interpreted.loc[rxn,species_long] = 'NA'
 
-matrix_of_essentiality.to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_jan.csv")
-matrix_interpreted.to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_jan.csv")
+matrix_of_essentiality.to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}.csv".format(day))
+matrix_interpreted.to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}.csv".format(day))
 
 
 

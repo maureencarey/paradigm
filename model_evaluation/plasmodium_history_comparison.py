@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 import glob
 from cobra.core import Gene, Metabolite, Reaction
+from datetime import datetime
+
+day = datetime.now().strftime('%d_%m_%Y')
 
 model_dict = dict()
 path = "/home/mac9jc/paradigm/models/"
@@ -31,7 +34,7 @@ model_dict['pkno2018'] = cobra.io.read_sbml_model('pkno2018_abdel_haleem.xml')
 model_dict['pcyn2018'] = cobra.io.read_sbml_model('pcyn2018_abdel_haleem.xml')
 model_dict['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chiappino_pepe.xml')
 os.chdir("/home/mac9jc/paradigm/models/")
-model_dict['iPfal18'] = cobra.io.load_json_model('iPfal18_updated.json')
+model_dict['iPfal19'] = cobra.io.load_json_model('iPfal19_updated.json')
 
 reactions_in_model = dict()
 list_o_reactions = list()
@@ -52,7 +55,7 @@ for species, rxn_list in reactions_in_model.items():
             presence_matrix_of_reactions.loc[rxn,species] = 1
         else:
             presence_matrix_of_reactions.loc[rxn,species] = 0
-presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/results/rxn_presence_plasmodium_history.csv")
+presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/results/rxn_presence_plasmodium_history_{}.csv".format(day))
 
 
 

@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 import glob
 from cobra.core import Gene, Metabolite, Reaction
+from datetime import datetime
+
+day = datetime.now().strftime('%d_%m_%Y')
 
 model_dict = dict()
 path = "/home/mac9jc/paradigm/models/"
@@ -42,7 +45,7 @@ for species, imported_mets in imported_mets_dict.items():
             presence_matrix_of_transporters.loc[met,species] = 1
         else:
             presence_matrix_of_transporters.loc[met,species] = 0
-presence_matrix_of_transporters.to_csv("/home/mac9jc/paradigm/data/results/transporter_presence_before_gapfilling_jan.csv")
+presence_matrix_of_transporters.to_csv("/home/mac9jc/paradigm/data/results/transporter_presence_before_gapfilling_{}.csv".format(day))
 
 # get matrix of reactions
 reactions_in_model = dict()
@@ -59,4 +62,4 @@ for species, rxn_list in reactions_in_model.items():
             presence_matrix_of_reactions.loc[rxn,species] = 1
         else:
             presence_matrix_of_reactions.loc[rxn,species] = 0
-presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/results/rxn_presence_before_gapfilling_jan.csv")
+presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/results/rxn_presence_before_gapfilling_{}.csv".format(day))

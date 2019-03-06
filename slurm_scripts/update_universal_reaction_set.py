@@ -4,10 +4,10 @@ import pandas as pd
 from cobra.core import Gene, Metabolite, Reaction
 import requests
 
-data_path = "/home/mac9jc/paradigm/data/"
-model_path = "/home/mac9jc/paradigm/models/"
-#data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-#model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+#data_path = "/home/mac9jc/paradigm/data/"
+#model_path = "/home/mac9jc/paradigm/models/"
+data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
+model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
 
 def met_ids_without_comp(met_id):
     # only one id listed
@@ -119,7 +119,8 @@ def add_full_met_info(model, met, met_id):
     if len(list_o_problem_mets)>0:
        	print(met.id, ' has no database links')
 
-    data_path = "/home/mac9jc/paradigm/data"
+#data_path = "/home/mac9jc/paradigm/data"
+    data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
     os.chdir(data_path)
     df = pd.read_table('metanetx_chem_prop.tsv', sep='\t', comment='#')
     if 'metanetx.chemical' in met.annotation.keys():
@@ -216,43 +217,43 @@ def fix_charge_or_formula(model):
 
 # load universal model
 os.chdir(model_path)
-universal = cobra.io.load_json_model('universal_model_oct26_2018.json')
-cobra.manipulation.modify.escape_ID(universal)
+#universal = cobra.io.load_json_model('universal_model_oct26_2018.json')
+#cobra.manipulation.modify.escape_ID(universal)
+#
+## remove Biomass reactions
+#rxn_list_to_delete = [r.id for r in universal.reactions if r.id.startswith('BIOMASS_')]
+#universal.remove_reactions(rxn_list_to_delete)
+#
+## add full met and rxn info
+#for met in universal.metabolites:
+#    universal = add_full_met_info(universal, met, met_ids_without_comp(met.id))
+#for rxn in universal.reactions:
+#    universal = add_full_rxn_info(universal, rxn, rxn.id)
+#
+## fix charges and formulas
+#universal = fix_charge_or_formula(universal)
+#
+## manual curation
+#universal.reactions.PGM.lower_bound = -1000. # make reversible
+##universal.reactions.ATPM # pseudoreaction for ATP maintenance and sampe as NTP1
+##universal.reactions.RPEc # duplicate with RPEc
+#universal.remove_reactions([universal.reactions.RPEc,universal.reactions.ATPM])
+#
+## Add SBO terms
+#universal = add_sbo_terms(universal)
+#
+## SAVE
+#os.chdir(model_path)
+#cobra.io.save_json_model(universal, 'universal_model_updated.json')
+#cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
 
-# remove Biomass reactions
-rxn_list_to_delete = [r.id for r in universal.reactions if r.id.startswith('BIOMASS_')]
-universal.remove_reactions(rxn_list_to_delete)
-
-# add full met and rxn info
-for met in universal.metabolites:
-    universal = add_full_met_info(universal, met, met_ids_without_comp(met.id))
-for rxn in universal.reactions:
-    universal = add_full_rxn_info(universal, rxn, rxn.id)
-
-# fix charges and formulas
-universal = fix_charge_or_formula(universal)
-
-# manual curation
-universal.reactions.PGM.lower_bound = -1000. # make reversible
-#universal.reactions.ATPM # pseudoreaction for ATP maintenance and sampe as NTP1
-#universal.reactions.RPEc # duplicate with RPEc
-universal.remove_reactions([universal.reactions.RPEc,universal.reactions.ATPM])
-
-# Add SBO terms
-universal = add_sbo_terms(universal)
-
-# SAVE
-os.chdir(model_path)
-cobra.io.save_json_model(universal, 'universal_model_updated.json')
-cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
-
-#universal = cobra.io.load_json_model('universal_model_updated.json')
+universal = cobra.io.load_json_model('universal_model_updated.json')
 rxn_list = [r.id for r in universal.reactions]
 met_list = [m.id for m in universal.metabolites]
 
 # same for Pf model
 os.chdir(model_path)
-model = cobra.io.load_json_model('iPfal18.json')
+model = cobra.io.load_json_model('iPfal19.json')
 cobra.manipulation.modify.escape_ID(model)
 
 # add full met info
@@ -286,7 +287,8 @@ model = add_sbo_terms(model)
 
 model.metabolites.get_by_id('5mti_c').charge = int(model.metabolites.get_by_id('5mti_c').charge)
 
+os.chdir(model_path)
 model.name = 'iPfal19, curated P. falciparum 3D7'
-cobra.io.save_json_model(model,  'iPfal18_updated.json')
-cobra.io.write_sbml_model(model,  'iPfal18_updated.xml')
+cobra.io.save_json_model(model,  'iPfal19_updated.json')
+cobra.io.write_sbml_model(model,  'iPfal19_updated.xml')
 

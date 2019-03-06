@@ -637,5 +637,5 @@ logging.info('duplicates reactions in universal')
 logging.info(duplicates)
 #
 os.chdir(model_path)
-cobra.io.save_json_model(pf_model, "iPfal18.json")
-cobra.io.write_sbml_model(pf_model, "iPfal18.xml")
+cobra.io.save_json_model(pf_model, "iPfal19.json")
+cobra.io.write_sbml_model(pf_model, "iPfal19.xml")

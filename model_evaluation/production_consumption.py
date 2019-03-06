@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 import glob
 from cobra.core import Gene, Metabolite, Reaction
+from datetime import datetime
+
+day = datetime.now().strftime('%d_%m_%Y')
 
 def met_ids_without_comp(model,met_id):
     
@@ -115,8 +118,8 @@ for species, model in model_dict.items():
                     matrix_of_mets.loc[met_id,species] = 'neither'
         else:
             matrix_of_mets.loc[met_id,species] = 'not present in model'
-pd.DataFrame.from_dict(mets_consumed_in_model, orient='index').to_csv("/home/mac9jc/paradigm/data/results/mets_consumed.csv")
-matrix_of_mets.to_csv("/home/mac9jc/paradigm/data/results/met_presence_after_gapfilling_jan.csv")
+pd.DataFrame.from_dict(mets_consumed_in_model, orient='index').to_csv("/home/mac9jc/paradigm/data/results/mets_consumed_{}.csv".format(day))
+matrix_of_mets.to_csv("/home/mac9jc/paradigm/data/results/met_presence_after_gapfilling_{}.csv".format(day))
 
 
 

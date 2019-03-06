@@ -33,7 +33,7 @@ for (i in 1:length(genomes)) { genomes_list = genomes[[i]]; db_name_uc = DataBas
     downstream_link = paste(paste(version, x, sep = "_"),"_AnnotatedProteins.fasta", sep = "")
     link = (paste(paste(upstream_link,middle_link,sep = ""), downstream_link,sep = "-")) 
     print(link)
-    destination = paste(wd_String,paste(x,paste("annotated_Feb2018",".fasta", sep = ""), sep = "_"), sep = "/")
+    destination = paste(wd_String,paste(x,paste("annotated_March2019",".fasta", sep = ""), sep = "_"), sep = "/")
     print(destination)
     if (!url.exists(link)) {
         print('------------------------------------------------------')
