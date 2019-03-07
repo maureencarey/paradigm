@@ -4,10 +4,10 @@ import pandas as pd
 from cobra.core import Gene, Metabolite, Reaction
 import requests
 
-#data_path = "/home/mac9jc/paradigm/data/"
-#model_path = "/home/mac9jc/paradigm/models/"
-data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
-model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+data_path = "/home/mac9jc/paradigm/data/"
+model_path = "/home/mac9jc/paradigm/models/"
+#data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
+#model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
 
 def met_ids_without_comp(met_id):
     # only one id listed
@@ -119,8 +119,8 @@ def add_full_met_info(model, met, met_id):
     if len(list_o_problem_mets)>0:
        	print(met.id, ' has no database links')
 
-#data_path = "/home/mac9jc/paradigm/data"
-    data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
+    data_path = "/home/mac9jc/paradigm/data"
+    #data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
     os.chdir(data_path)
     df = pd.read_table('metanetx_chem_prop.tsv', sep='\t', comment='#')
     if 'metanetx.chemical' in met.annotation.keys():

@@ -4,7 +4,7 @@
 *.fasta
 *.sbatch
 data/metanetx_chem_prop.tsv
-data/ortho_annotations_per_genome_feb2019.csv 
+data/ortho_annotations_per_genome_feb2019.csv
 data/diamond_output_orthoMCL/TvaginalisG3_orthoMCL.tsv
 data/aa_seqs_OrthoMCL_5.fasta
 data/orthoMCL_proteins_diamond.dmnd
