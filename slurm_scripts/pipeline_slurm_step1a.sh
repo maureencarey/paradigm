@@ -20,6 +20,8 @@ wget -O bigg_metabolites.txt 'http://bigg.ucsd.edu/static/namespace/bigg_models_
 wget -O bigg_reactions.txt 'http://bigg.ucsd.edu/static/namespace/bigg_models_reactions.txt'
 #wget -O metanetx_chem_prop.tsv 'https://www.metanetx.org/cgi-bin/mnxget/mnxref/chem_prop.tsv'
 #must uncomment out header of metanetx_chem_prop
+wget -O Unique_ModelSEED_Compound_Aliases.txt 'https://raw.githubusercontent.com/ModelSEED/ModelSEEDDatabase/dev/Biochemistry/Aliases/Unique_ModelSEED_Compound_Aliases.txt'
+wget -O All_ModelSEED_Structures.txt 'https://raw.githubusercontent.com/ModelSEED/ModelSEEDDatabase/dev/Biochemistry/Structures/All_ModelSEED_Structures.txt'
 echo "made annotation databases and other necessary files"
 
 # ANNOTATE GENOMES

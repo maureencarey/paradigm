@@ -32,23 +32,73 @@ def met_ids_without_comp(met_id):
 
 def add_sbo_terms(model):
     # Add SBO terms to objects
+    # all other annotation values are list, but memote will not recognize SBO terms embedded in lists
 
     for met in model.metabolites:
-        met.annotation['sbo'] = ['SBO:0000247']
+        met.annotation['sbo'] = 'SBO:0000247'
     for gene in model.genes:
-        gene.annotation['sbo'] = ['SBO:0000243']
+        gene.annotation['sbo'] = 'SBO:0000243'
     for rxn in model.reactions:
+        annotations = []
         if 'Biomass' in rxn.id or 'biomass' in rxn.id:
-            rxn.annotation['sbo'] = ['SBO:0000629']
+            annotations.append('SBO:0000629')
         elif rxn.id.startswith('EX_'):
-            rxn.annotation['sbo'] = ['SBO:0000627']
+            annotations.append('SBO:0000627')
         elif rxn.id.startswith('DM_'):
-            rxn.annotation['sbo'] = ['SBO:0000628']
+            annotations.append('SBO:0000628')
         elif rxn.id.startswith('SK_'):
-            rxn.annotation['sbo'] = ['SBO:0000632']
+            annotations.append('SBO:0000632')
         elif [met_ids_without_comp(met.id) for met in rxn.reactants] == [met_ids_without_comp(met.id) for met in rxn.products]:
-            rxn.annotation['sbo'] = ['SBO:0000185']
-        else: rxn.annotation['sbo'] = ['SBO:0000176']
+            annotations.append('SBO:0000185')
+        else: annotations.append('SBO:0000176')
+
+        if len(annotations) > 1:
+            rxn.annotation['sbo'] = annotations
+            print(reaction.id + ' has more than one SBO annotation. Memote will not like this.')
+        else:
+            rxn.annotation['sbo'] = annotations[0]
+
+    return(model)
+
+def add_partial_met_info(model, met, met_id):
+    # add met info from notes field
+
+    id_map = {'EC Number':'ec-code','RHEA':'rhea', 'KEGG Reaction':'kegg.reaction',
+            'KEGG Compound':'kegg.compound', 'SEED Reaction':'seed.reaction',
+            'SEED Compound':'seed.compound', 'MetaNetX (MNX) Equation':'metanetx.reaction',
+            'MetaNetX (MNX) Chemical':'metanetx.chemical', 'PubChem':'pubchem.compound',
+            'BioCyc':'biocyc','Reactome':'reactome','Brenda':'brenda','LipidMaps':'lipidmaps',
+            'Human Metabolome Database':'hmdb','CHEBI':'chebi','InChI':'inchikey'}
+
+    # fix current reaction.annotation field that is in list form
+    # this fix will allow universal to be written as as a xml file, not just json
+    # however save the info just in case it is not duplicated elsewhere
+
+    # move inappropriately formated annotations object into notes field
+    annot_list = met.annotation
+    if isinstance(annot_list, list):
+        if len(annot_list) >1:
+            for sub_list in annot_list:
+                if sub_list[0] not in met.notes.keys():
+                    met.notes[sub_list[0]] = sub_list[1]
+                else: met.notes[sub_list[0]] = [met.notes[sub_list[0]]].append(sub_list[1])
+
+    met.annotation = dict()
+    met.annotation['bigg.metabolite'] = [met.id]
+
+    if isinstance(met.notes, dict):
+        for key, value in met.notes.items():
+            list_o_ids = list()
+            if isinstance(value,list) and len(value) > 0:
+                for list_item in value:
+                    if isinstance(list_item,dict) and 'id' in list_item.keys():
+                        list_o_ids.append(list_item['id'])
+                    else: list_o_ids = [value] 
+   
+            if key in id_map.keys():
+                met.annotation[id_map[key]] = list_o_ids
+            else:
+                met.annotation[key] = list_o_ids
 
     return(model)
 
@@ -125,9 +175,51 @@ def add_full_met_info(model, met, met_id):
     df = pd.read_table('metanetx_chem_prop.tsv', sep='\t', comment='#')
     if 'metanetx.chemical' in met.annotation.keys():
         id_string = met.annotation['metanetx.chemical'][0]
-        if id_string in df['MNX_ID']:
+        if id_string in df['MNX_ID'].tolist():
             met.annotation['inchi'] = [str(df.loc[df['MNX_ID'] == id_string]['InChI'].values[0])]
             met.annotation['inchikey'] = [str(df.loc[df['MNX_ID'] == id_string]['InChIKey'].values[0])]
+
+    return(model)
+
+def add_partial_rxn_info(model, rxn, rxn_id):
+    # add rxn info from notes field
+
+    id_map = {'EC Number':'ec-code','RHEA':'rhea', 'KEGG Reaction':'kegg.reaction',
+            'KEGG Compound':'kegg.compound', 'SEED Reaction':'seed.reaction',
+            'SEED Compound':'seed.compound', 'MetaNetX (MNX) Equation':'metanetx.reaction',
+            'MetaNetX (MNX) Chemical':'metanetx.chemical', 'PubChem':'pubchem.compound',
+            'BioCyc':'biocyc','Reactome':'reactome','Brenda':'brenda','LipidMaps':'lipidmaps',
+            'Human Metabolome Database':'hmdb','CHEBI':'chebi','InChI':'inchikey'}
+
+    # fix current reaction.annotation field that is in list form
+    # this fix will allow universal to be written as as a xml file, not just json
+    # however save the info just in case it is not duplicated elsewhere
+
+    # move inappropriately formated annotations object into notes field
+    annot_list = rxn.annotation
+    if isinstance(annot_list, list):
+        if len(annot_list) >1:
+            for sub_list in annot_list:
+                if sub_list[0] not in rxn.notes.keys():
+                    rxn.notes[sub_list[0]] = sub_list[1]
+                else: rxn.notes[sub_list[0]] = [rxb.notes[sub_list[0]]].append(sub_list[1])
+
+    rxn.annotation = dict()
+    rxn.annotation['bigg.metabolite'] = [rxn.id]
+
+    if isinstance(rxn.notes, dict):
+        for key, value in rxn.notes.items():
+            list_o_ids = list()
+            if isinstance(value,list) and len(value) > 0:
+                for list_item in value:
+                    if isinstance(list_item,dict) and 'id' in list_item.keys():
+       	       	        list_o_ids.append(list_item['id'])
+            else: list_o_ids = [value]
+   
+            if key in id_map.keys():
+                rxn.annotation[id_map[key]] = list_o_ids   
+            else:
+                rxn.annotation[key] = list_o_ids
 
     return(model)
 
@@ -259,12 +351,13 @@ cobra.manipulation.modify.escape_ID(model)
 # add full met info
 for met in model.metabolites:
     met_id = met_ids_without_comp(met.id)
-    if met_id+'_c' in met_list:
-        model = add_full_met_info(model, met, met_id)
+    if met_id+'_c' in met_list: model = add_full_met_info(model, met, met_id)
+    else: model = add_partial_met_info(model,met,met_id)
 
 # add full reaction info
 for rxn in model.reactions:
     if rxn.id in rxn_list: model = add_full_rxn_info(model, rxn, rxn.id)
+    else: model = add_partial_rxn_info(model, rxn, rxn.id)
 
 # change id so that Memote doesn't think its the biomass reaction
 model.reactions.get_by_id('DM_biomass_c').name = 'unblock biomass'
@@ -285,7 +378,24 @@ for gene in model.genes:
 # Add SBO terms
 model = add_sbo_terms(model)
 
+# fix some formatting issues that memote highlights
 model.metabolites.get_by_id('5mti_c').charge = int(model.metabolites.get_by_id('5mti_c').charge)
+model.reactions.ATPtm.annotation['kegg.reaction'] = 'R00124' # incorrect as 'R00124#2'
+model.reactions.CHSTEROLt.annotation['rhea'] = ['39051', '39052', '39054', '39053'] # ['39051#1', '39052#1', '39054#1', '39053#1']
+model.reactions.OIVD1m.annotation['ec-code'] = ['1.2.1.25'] # ['1.2.1', '1.2.1.25']
+model.reactions.OIVD3m.annotation['ec-code'] = ['1.2.1.25'] #['1.2.1', '1.2.1.25']
+model.reactions.PPM.annotation['ec-code'] = ['5.4.2.7', '5.4.2.2'] # ['5.4.2', '5.4.2.7', '5.4.2.2']
+model.reactions.UDCPDPS.annotation['ec-code'] = ['2.5.1.31'] # ['2.5.1.M1', '2.5.1.31', '2.5.1']
+model.reactions.GLUTRS.annotation['ec-code'] = ['6.1.1.17', '6.1.1.24'] # ['6.1.1.17', '6.1.1', '6.1.1.24']
+met_list = ["adp_ap","adp_c","adp_m","cmp_ap","cmp_c","gdp_c","gdp_m","gdpfuc_c","gdpmann_c","malt_c","malt_e","uacgam_c","udp_c","udpg_c","gdp_ap"]
+for met_id in met_list:
+    new_list_o_kegg_ids = list()
+    for option in model.metabolites.get_by_id(met_id).annotation['kegg.compound']:
+        if option.startswith('C'): # else starts with G -> glycan id
+            new_list_o_kegg_ids.append(option)
+    model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = new_list_o_kegg_ids
+
+
 
 os.chdir(model_path)
 model.name = 'iPfal19, curated P. falciparum 3D7'
