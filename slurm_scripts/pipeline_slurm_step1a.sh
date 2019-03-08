@@ -25,22 +25,19 @@ wget -O All_ModelSEED_Structures.txt 'https://raw.githubusercontent.com/ModelSEE
 echo "made annotation databases and other necessary files"
 
 # ANNOTATE GENOMES
-# cd /home/mac9jc/paradigm/data/
-for filename in ./*_annotated_Feb2018.fasta; do
+cd /home/mac9jc/paradigm/data/genomes/protein
+for filename in ./*_annotatedProteins_March2019.fasta; do
 #echo "$filename"
-#echo "${filename:2:${#filename}-26}"
-diamond blastp -d ./bigg_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_BiGG.tsv"
+#echo "${filename:2:${#filename}-34}"
+diamond blastp -d ./bigg_proteins_diamond -q $filename -o "${filename:2:${#filename}-36}_BiGG.tsv"
 done
 echo "diamond annotation against BiGG done"
 mv ./*_BiGG.tsv ./diamond_output_BiGG
 
 # cd /home/mac9jc/paradigm/data/
-for filename in ./*_annotated_Feb2018.fasta; do
-#echo "$filename"
-#echo "${filename:2:${#filename}-26}"
-diamond blastp -d ./orthoMCL_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_orthoMCL.tsv"
+for filename in ./*_annotatedProteins_March2019.fasta; do
+diamond blastp -d ./orthoMCL_proteins_diamond -q $filename -o "${filename:2:${#filename}-36}_orthoMCL.tsv"
 done
 mv ./*_orthoMCL.tsv ./diamond_output_orthoMCL
-mv ./*_annotated_Feb2018.fasta ./genomes
 echo "diamond annotations complete"
 
