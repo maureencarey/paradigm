@@ -610,6 +610,25 @@ pf_model.metabolites.get_by_id('5mti_c').charge = 0.
 pf_model.metabolites.get_by_id('5mti_c').formula = 'C11H14N4O4S'
 pf_model.metabolites.get_by_id('5mti_c').notes = {'KEGG id' : 'C19787'}
 
+
+# convert biomass to same aggregate format as for the rest of the models
+pf_model.reactions.Protein.id = 'protein_biomass'
+pf_model.reactions.protein_biomass.name = 'protein aggregate reaction for biomass'
+pf_model.reactions.Lipid_prod.id = 'lipid_biomass'
+pf_model.reactions.lipid_biomass.name   = 'lipid aggregate reaction for biomass'
+
+bm_rna = universal_model.metabolites.get_by_id('bm_rna_c').copy()
+bm_dna = universal_model.metabolites.get_by_id('bm_dna_c').copy()
+bm_lipid = universal_model.metabolites.get_by_id('bm_lipid_c').copy()
+pf_model.metabolites.protein_c.id = 'bm_protein_c'
+pf_model.metabolites.lipid_c.id = 'bm_lipid_c'
+
+# add growth associated ATP demand
+atpm = universal_model.reactions.ATPM
+pf_model.add_reactions([atpm])
+pf_model.reactions.ATPM.lower_bound = 0.001
+pf_model.reactions.ATPM.upper_bound = 1000.
+
 # PRINT DUPLICATE REACTIONS
 duplicates = dict()
 temp_dict = dict() # get products and reactants for every reaction
@@ -635,7 +654,7 @@ for rxn in universal_model.reactions:
 logging.info('\n')
 logging.info('duplicates reactions in universal')
 logging.info(duplicates)
-#
+
 os.chdir(model_path)
 cobra.io.save_json_model(pf_model, "iPfal19.json")
 cobra.io.write_sbml_model(pf_model, "iPfal19.xml")

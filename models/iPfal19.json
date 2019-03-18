@@ -588,8 +588,8 @@
 0
 ],
 "formula":[
-"C21H42NO7P1",
-"C21H42NO7P"
+"C21H42NO7P",
+"C21H42NO7P1"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -608,8 +608,8 @@
 0
 ],
 "formula":[
-"C23H48NO7P",
-"C23H48NO7P1"
+"C23H48NO7P1",
+"C23H48NO7P"
 ],
 "notes":{
 "BioCyc":[
@@ -1105,8 +1105,8 @@
 -2
 ],
 "formula":[
-"C19H37O7P",
-"C19H37O7P1"
+"C19H37O7P1",
+"C19H37O7P"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -1131,8 +1131,8 @@
 -2
 ],
 "formula":[
-"C19H37O7P",
-"C19H37O7P1"
+"C19H37O7P1",
+"C19H37O7P"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -1157,8 +1157,8 @@
 -2
 ],
 "formula":[
-"C21H39O7P",
-"C21H39O7P1"
+"C21H39O7P1",
+"C21H39O7P"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -1183,8 +1183,8 @@
 -2
 ],
 "formula":[
-"C21H39O7P",
-"C21H39O7P1"
+"C21H39O7P1",
+"C21H39O7P"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -1209,8 +1209,8 @@
 -2
 ],
 "formula":[
-"C21H41O7P1",
-"C21H41O7P"
+"C21H41O7P",
+"C21H41O7P1"
 ],
 "notes":{
 "BioCyc":[
@@ -1257,8 +1257,8 @@
 -2
 ],
 "formula":[
-"C21H41O7P1",
-"C21H41O7P"
+"C21H41O7P",
+"C21H41O7P1"
 ],
 "notes":{
 "BioCyc":[
@@ -3272,8 +3272,8 @@
 -1
 ],
 "formula":[
-"C10H10N5O7P",
-"C10H11N5O7P"
+"C10H11N5O7P",
+"C10H10N5O7P"
 ],
 "notes":{
 "BioCyc":[
@@ -3354,8 +3354,8 @@
 -1
 ],
 "formula":[
-"C10H10N5O7P",
-"C10H11N5O7P"
+"C10H11N5O7P",
+"C10H10N5O7P"
 ],
 "notes":{
 "BioCyc":[
@@ -3758,8 +3758,8 @@
 -1
 ],
 "formula":[
-"C396H623O144N96P1S3",
-"C23H41N2O9PRS"
+"C23H41N2O9PRS",
+"C396H623O144N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -3810,8 +3810,8 @@
 -1
 ],
 "formula":[
-"C27H49N2O9PRS",
-"C400H631O144N96P1S3"
+"C400H631O144N96P1S3",
+"C27H49N2O9PRS"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -3837,9 +3837,9 @@
 -1
 ],
 "formula":[
-"C402H635O144N96P1S3",
 "C29H53N2O9PRS",
-"C18H33O2SR"
+"C18H33O2SR",
+"C402H635O144N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -3865,9 +3865,9 @@
 -1
 ],
 "formula":[
-"C396H625O144N96P1S3",
+"C23H43N2O9PRS",
 "C12H23O2SR",
-"C23H43N2O9PRS"
+"C396H625O144N96P1S3"
 ],
 "notes":{
 "CHEBI":[
@@ -3951,9 +3951,9 @@
 -1
 ],
 "formula":[
-"C390H613O144N96P1S3",
 "C6H11O2SR",
-"C17H31N2O9PRS"
+"C17H31N2O9PRS",
+"C390H613O144N96P1S3"
 ],
 "notes":{
 "CHEBI":[
@@ -4062,8 +4062,8 @@
 ],
 "formula":[
 "C398H629O144N96P1S3",
-"C14H27O2SR",
-"C25H47N2O9PRS"
+"C25H47N2O9PRS",
+"C14H27O2SR"
 ],
 "notes":{
 "BioCyc":[
@@ -4102,8 +4102,8 @@
 ],
 "formula":[
 "C392H617O144N96P1S3",
-"C8H15O2SR",
-"C19H35N2O9PRS"
+"C19H35N2O9PRS",
+"C8H15O2SR"
 ],
 "notes":{
 "BioCyc":[
@@ -4141,9 +4141,9 @@
 -1
 ],
 "formula":[
+"C18H35O2SR",
 "C29H55N2O9PRS",
-"C402H637O144N96P1S3",
-"C18H35O2SR"
+"C402H637O144N96P1S3"
 ],
 "notes":{
 "KEGG Compound":[
@@ -4176,8 +4176,8 @@
 ],
 "formula":[
 "C16H31O2SR",
-"C27H51N2O9PRS",
-"C400H633O144N96P1S3"
+"C400H633O144N96P1S3",
+"C27H51N2O9PRS"
 ],
 "notes":{
 "KEGG Compound":[
@@ -4508,8 +4508,8 @@
 -1
 ],
 "formula":[
-"C23H39N2O9PRS",
-"C396H621O144N96P1S3"
+"C396H621O144N96P1S3",
+"C23H39N2O9PRS"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -4587,9 +4587,9 @@
 -1
 ],
 "formula":[
-"C18H31O2SR",
+"C29H51N2O9PRS",
 "C402H633O144N96P1S3",
-"C29H51N2O9PRS"
+"C18H31O2SR"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -4777,9 +4777,9 @@
 -1
 ],
 "formula":[
-"C396H623O144N96P1S3",
+"C23H41N2O9PRS",
 "C12H21O2SR",
-"C23H41N2O9PRS"
+"C396H623O144N96P1S3"
 ],
 "notes":{
 "BioCyc":[
@@ -5040,8 +5040,8 @@
 ],
 "formula":[
 "C390H611O144N96P1S3",
-"C6H9O2SR",
-"C17H29N2O9PRS"
+"C17H29N2O9PRS",
+"C6H9O2SR"
 ],
 "notes":{
 "BioCyc":[
@@ -5092,8 +5092,8 @@
 ],
 "formula":[
 "C398H627O144N96P1S3",
-"C14H25O2SR",
-"C25H45N2O9PRS"
+"C25H45N2O9PRS",
+"C14H25O2SR"
 ],
 "notes":{
 "BioCyc":[
@@ -5210,9 +5210,9 @@
 -1
 ],
 "formula":[
-"C19H33N2O9PRS",
 "C392H615O144N96P1S3",
-"C8H13O2SR"
+"C8H13O2SR",
+"C19H33N2O9PRS"
 ],
 "notes":{
 "BioCyc":[
@@ -5262,9 +5262,9 @@
 -1
 ],
 "formula":[
-"C402H635O144N96P1S3",
 "C29H53N2O9PRS",
-"C18H33O2SR"
+"C18H33O2SR",
+"C402H635O144N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -5355,10 +5355,10 @@
 -1
 ],
 "formula":[
-"C16H29O2SR",
-"C27H49N2O9PRS",
 "C400H631O144N96P1S3",
-"C16H29O2RS"
+"C16H29O2RS",
+"C16H29O2SR",
+"C27H49N2O9PRS"
 ],
 "notes":{
 "BioCyc":[
@@ -7034,8 +7034,8 @@
 -3
 ],
 "formula":[
-"C9H14NO8P",
-"C9H15NO8P"
+"C9H15NO8P",
+"C9H14NO8P"
 ],
 "notes":{
 "BioCyc":[
@@ -7114,8 +7114,8 @@
 -3
 ],
 "formula":[
-"C12H19N2O9PS",
-"C12H20N2O9PS"
+"C12H20N2O9PS",
+"C12H19N2O9PS"
 ],
 "notes":{
 "BioCyc":[
@@ -7556,8 +7556,11 @@
 "id":"5mti_c",
 "name":"5-methyl thioinosine",
 "compartment":"cytosol",
-"charge":[],
-"formula":[]
+"charge":0.0,
+"formula":"C11H14N4O4S",
+"notes":{
+"KEGG id":"C19787"
+}
 },
 {
 "id":"5mtr1p_c",
@@ -8045,11 +8048,11 @@
 -1
 ],
 "formula":[
-"X",
-"C11H21N2O7PRS",
-"HX",
 "C384H603N96O142P1S3",
-"HSR"
+"HSR",
+"HX",
+"C11H21N2O7PRS",
+"X"
 ],
 "notes":{
 "BioCyc":[
@@ -8100,8 +8103,8 @@
 0
 ],
 "formula":[
-"XH",
-"C5H7N3O3R2"
+"C5H7N3O3R2",
+"XH"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -9500,9 +9503,9 @@
 ],
 "formula":[
 "C4H5O2RS",
-"C15H25N2O9PRS",
 "C388H607O144N96P1S3",
-"C4H5O2SR"
+"C4H5O2SR",
+"C15H25N2O9PRS"
 ],
 "notes":{
 "BioCyc":[
@@ -10504,8 +10507,8 @@
 -4
 ],
 "formula":[
-"C9H12N5O13P3",
-"C9H11N5O13P3"
+"C9H11N5O13P3",
+"C9H12N5O13P3"
 ],
 "notes":{
 "BioCyc":[
@@ -11465,8 +11468,8 @@
 ],
 "formula":[
 "C18H28NO17P2R3",
-"C3H7NOR",
-"C3H6NOR"
+"C3H6NOR",
+"C3H7NOR"
 ],
 "notes":{
 "CHEBI":[
@@ -12509,9 +12512,9 @@
 0
 ],
 "formula":[
-"C373H583N94O136S2",
 "RHO",
-"HSR"
+"HSR",
+"C373H583N94O136S2"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -13958,9 +13961,9 @@
 -1
 ],
 "formula":[
-"C15H25N2O8PRS",
 "C4H5OSR",
-"C388H607O143N96P1S3"
+"C388H607O143N96P1S3",
+"C15H25N2O8PRS"
 ],
 "notes":{
 "KEGG Compound":[
@@ -13992,9 +13995,9 @@
 -1
 ],
 "formula":[
-"C4H7OSR",
+"C15H27N2O8PRS",
 "C388H609O143N96P1S3",
-"C15H27N2O8PRS"
+"C4H7OSR"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -14320,8 +14323,8 @@
 -1
 ],
 "formula":[
-"C396H623O143N96P1S3",
-"C23H41N2O8PRS"
+"C23H41N2O8PRS",
+"C396H623O143N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -18218,9 +18221,9 @@
 -2
 ],
 "formula":[
-"C18H28NO17P2SR3",
+"C3H6NOSR",
 "C3H7NOSR",
-"C3H6NOSR"
+"C18H28NO17P2SR3"
 ],
 "notes":{
 "CHEBI":[
@@ -18717,10 +18720,10 @@
 -1
 ],
 "formula":[
-"C394H621O143N96P1S3",
 "C10H19ORS",
 "C10H19OSR",
-"C21H39N2O8PRS"
+"C21H39N2O8PRS",
+"C394H621O143N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -19089,10 +19092,10 @@
 -1
 ],
 "formula":[
-"C23H43N2O8PRS",
-"C12H23OSR",
 "C12H23ORS",
-"C396H625O143N96P1S3"
+"C23H43N2O8PRS",
+"C396H625O143N96P1S3",
+"C12H23OSR"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -21132,8 +21135,8 @@
 ],
 "formula":[
 "C95H156O",
-"C15H28O",
-"C55H92O"
+"C55H92O",
+"C15H28O"
 ],
 "notes":{
 "BioCyc":[
@@ -21219,8 +21222,8 @@
 -2
 ],
 "formula":[
-"C55H91O4P",
 "C15H27O4P",
+"C55H91O4P",
 "C95H155O4P"
 ],
 "notes":{
@@ -23297,8 +23300,8 @@
 -2
 ],
 "formula":[
-"C17H19N4O9P",
-"X"
+"X",
+"C17H19N4O9P"
 ],
 "notes":{
 "BioCyc":[
@@ -23336,8 +23339,8 @@
 -2
 ],
 "formula":[
-"XH2",
-"C17H21N4O9P"
+"C17H21N4O9P",
+"XH2"
 ],
 "notes":{
 "BioCyc":[
@@ -23445,10 +23448,10 @@
 -2
 ],
 "formula":[
-"C6H11NO3SX",
 "C6H10NO2SR",
 "C21H32NO18P2SR3",
-"C6H9NO2SR"
+"C6H9NO2SR",
+"C6H11NO3SX"
 ],
 "notes":{
 "CHEBI":[
@@ -23508,8 +23511,8 @@
 -2
 ],
 "formula":[
-"C17H19N4O9P",
-"C17H18N4O9P"
+"C17H18N4O9P",
+"C17H19N4O9P"
 ],
 "notes":{
 "BioCyc":[
@@ -23714,8 +23717,8 @@
 -1
 ],
 "formula":[
-"CH1O2",
-"CHO2"
+"CHO2",
+"CH1O2"
 ],
 "notes":{
 "BioCyc":[
@@ -23834,8 +23837,8 @@
 -1
 ],
 "formula":[
-"CH1O2",
-"CHO2"
+"CHO2",
+"CH1O2"
 ],
 "notes":{
 "BioCyc":[
@@ -24823,8 +24826,8 @@
 0
 ],
 "formula":[
-"C93H153N5O73R2",
-"C88H147N2O70X"
+"C88H147N2O70X",
+"C93H153N5O73R2"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -27447,11 +27450,11 @@
 -3
 ],
 "formula":[
-"C20H29NO19P2R3",
+"C5H7NO3R",
 "C20H28N6O13PR",
-"C5H8NO3R",
 "C5H8NO4X",
-"C5H7NO3R"
+"C20H29NO19P2R3",
+"C5H8NO3R"
 ],
 "notes":{
 "CHEBI":[
@@ -29238,8 +29241,8 @@
 0
 ],
 "formula":[
-"C5H5N5O",
-"C5H4N5O"
+"C5H4N5O",
+"C5H5N5O"
 ],
 "notes":{
 "BioCyc":[
@@ -29314,8 +29317,8 @@
 0
 ],
 "formula":[
-"C5H5N5O",
-"C5H4N5O"
+"C5H4N5O",
+"C5H5N5O"
 ],
 "notes":{
 "BioCyc":[
@@ -32702,8 +32705,8 @@
 -1
 ],
 "formula":[
-"C27H49N2O8PRS",
 "C16H29OSR",
+"C27H49N2O8PRS",
 "C400H631O143N96P1S3"
 ],
 "notes":{
@@ -32799,9 +32802,9 @@
 -1
 ],
 "formula":[
-"C17H31N2O8PRS",
+"C6H11OSR",
 "C390H613O143N96P1S3",
-"C6H11OSR"
+"C17H31N2O8PRS"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -33287,8 +33290,8 @@
 ],
 "formula":[
 "C6H9N3OR",
-"C21H30N3O17P2R3",
-"C6H8N3OR"
+"C6H8N3OR",
+"C21H30N3O17P2R3"
 ],
 "notes":{
 "CHEBI":[
@@ -34399,8 +34402,8 @@
 -2
 ],
 "formula":[
-"C21H34NO17P2R3",
 "C6H12NOR",
+"C21H34NO17P2R3",
 "C6H13NOR"
 ],
 "notes":{
@@ -35918,9 +35921,9 @@
 -2
 ],
 "formula":[
-"C21H34O17P2R3N",
+"C6H13NOR",
 "C6H12NOR",
-"C6H13NOR"
+"C21H34O17P2R3N"
 ],
 "notes":{
 "CHEBI":[
@@ -36375,8 +36378,8 @@
 ],
 "formula":[
 "C3H2O3RS",
-"C3H2O3SR",
 "C14H22N2O10PRS",
+"C3H2O3SR",
 "C387H604O145N96P1S3"
 ],
 "notes":{
@@ -36677,8 +36680,8 @@
 -5
 ],
 "formula":[
-"C24H34N7O19P3S",
-"C24H33N7O19P3S"
+"C24H33N7O19P3S",
+"C24H34N7O19P3S"
 ],
 "notes":{
 "BioCyc":[
@@ -37702,9 +37705,9 @@
 -2
 ],
 "formula":[
-"C5H11NO2SX",
-"C20H32NO17P2SR3",
 "C5H11NOSR",
+"C20H32NO17P2SR3",
+"C5H11NO2SX",
 "C5H10NOSR"
 ],
 "notes":{
@@ -38323,9 +38326,9 @@
 ],
 "formula":[
 "C25H47N2O8PRS",
-"C398H629O143N96P1S3",
 "C14H27OSR",
-"C14H27ORS"
+"C14H27ORS",
+"C398H629O143N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -42234,8 +42237,8 @@
 "formula":[
 "C19H35N2O8PRS",
 "C392H617O143N96P1S3",
-"C8H15OSR",
-"C8H15ORS"
+"C8H15ORS",
+"C8H15OSR"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -42523,8 +42526,8 @@
 ],
 "formula":[
 "C29H55N2O8PRS",
-"C402H637O143N96P1S3",
-"C18H35OSR"
+"C18H35OSR",
+"C402H637O143N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -43506,9 +43509,9 @@
 -1
 ],
 "formula":[
-"C29H53N2O8PRS",
 "C402H635O143N96P1S3",
-"C18H33OSR"
+"C18H33OSR",
+"C29H53N2O8PRS"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -44893,8 +44896,8 @@
 -2
 ],
 "formula":[
-"C31H59O8P1",
-"C31H59O8P"
+"C31H59O8P",
+"C31H59O8P1"
 ],
 "notes":{
 "BioCyc":[
@@ -44953,8 +44956,8 @@
 -2
 ],
 "formula":[
-"C31H59O8P1",
-"C31H59O8P"
+"C31H59O8P",
+"C31H59O8P1"
 ],
 "notes":{
 "BioCyc":[
@@ -45063,8 +45066,8 @@
 -2
 ],
 "formula":[
-"C35H67O8P1",
-"C35H67O8P"
+"C35H67O8P",
+"C35H67O8P1"
 ],
 "notes":{
 "BioCyc":[
@@ -45125,8 +45128,8 @@
 -2
 ],
 "formula":[
-"C35H67O8P1",
-"C35H67O8P"
+"C35H67O8P",
+"C35H67O8P1"
 ],
 "notes":{
 "BioCyc":[
@@ -45405,10 +45408,10 @@
 -1
 ],
 "formula":[
-"C27H51N2O8PRS",
-"C16H31ORS",
 "C16H31OSR",
-"C400H633O143N96P1S3"
+"C400H633O143N96P1S3",
+"C27H51N2O8PRS",
+"C16H31ORS"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -45427,8 +45430,8 @@
 -2
 ],
 "formula":[
-"C11H21N2O7PS",
-"C11H20N2O7PS"
+"C11H20N2O7PS",
+"C11H21N2O7PS"
 ],
 "notes":{
 "BioCyc":[
@@ -46200,8 +46203,8 @@
 0
 ],
 "formula":[
-"C41H82N1O8P1",
-"C41H82NO8P"
+"C41H82NO8P",
+"C41H82N1O8P1"
 ],
 "notes":{
 "BioCyc":[
@@ -46270,8 +46273,8 @@
 0
 ],
 "formula":[
-"C41H82N1O8P1",
-"C41H82NO8P"
+"C41H82NO8P",
+"C41H82N1O8P1"
 ],
 "notes":{
 "BioCyc":[
@@ -46787,8 +46790,8 @@
 -1
 ],
 "formula":[
-"C38H74O10P",
-"C38H74O10P1"
+"C38H74O10P1",
+"C38H74O10P"
 ],
 "notes":{
 "BioCyc":[
@@ -47421,8 +47424,8 @@
 ],
 "formula":[
 "C34H30FeN4O4",
-"C34H32FeN4O4",
-"C34FeH30N4O4"
+"C34FeH30N4O4",
+"C34H32FeN4O4"
 ],
 "notes":{
 "BioCyc":[
@@ -47491,8 +47494,8 @@
 ],
 "formula":[
 "C34H30FeN4O4",
-"C34H32FeN4O4",
-"C34FeH30N4O4"
+"C34FeH30N4O4",
+"C34H32FeN4O4"
 ],
 "notes":{
 "BioCyc":[
@@ -47561,8 +47564,8 @@
 ],
 "formula":[
 "C34H30FeN4O4",
-"C34H32FeN4O4",
-"C34FeH30N4O4"
+"C34FeH30N4O4",
+"C34H32FeN4O4"
 ],
 "notes":{
 "BioCyc":[
@@ -47737,8 +47740,8 @@
 -2
 ],
 "formula":[
-"HPO4",
 "H1O4P",
+"HPO4",
 "HO4P"
 ],
 "notes":{
@@ -47897,8 +47900,8 @@
 -2
 ],
 "formula":[
-"HPO4",
 "H1O4P",
+"HPO4",
 "HO4P"
 ],
 "notes":{
@@ -48057,8 +48060,8 @@
 -2
 ],
 "formula":[
-"HPO4",
 "H1O4P",
+"HPO4",
 "HO4P"
 ],
 "notes":{
@@ -48217,8 +48220,8 @@
 -2
 ],
 "formula":[
-"HPO4",
 "H1O4P",
+"HPO4",
 "HO4P"
 ],
 "notes":{
@@ -50655,8 +50658,8 @@
 -2
 ],
 "formula":[
-"C9H13N2O9P",
-"C9H11N2O9P"
+"C9H11N2O9P",
+"C9H13N2O9P"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -51130,8 +51133,8 @@
 -2
 ],
 "formula":[
-"C8H8NO6P",
-"C8H7NO6P"
+"C8H7NO6P",
+"C8H8NO6P"
 ],
 "notes":{
 "BioCyc":[
@@ -52814,8 +52817,8 @@
 -1
 ],
 "formula":[
-"H1Se",
 "HSe",
+"H1Se",
 "H2Se"
 ],
 "notes":{
@@ -53339,9 +53342,9 @@
 -2
 ],
 "formula":[
-"C3H6NO2R",
 "C18H28NO18P2R3",
-"C3H7NO2R"
+"C3H7NO2R",
+"C3H6NO2R"
 ],
 "notes":{
 "KEGG Compound":[
@@ -53372,8 +53375,8 @@
 1
 ],
 "formula":[
-"C3H6NO2R",
-"C3H7NO2R"
+"C3H7NO2R",
+"C3H6NO2R"
 ],
 "notes":{
 "CHEBI":[
@@ -53576,8 +53579,8 @@
 -2
 ],
 "formula":[
-"O4S",
-"SO4"
+"SO4",
+"O4S"
 ],
 "notes":{
 "BioCyc":[
@@ -53686,8 +53689,8 @@
 -2
 ],
 "formula":[
-"O4S",
-"SO4"
+"SO4",
+"O4S"
 ],
 "notes":{
 "BioCyc":[
@@ -54769,8 +54772,8 @@
 -1
 ],
 "formula":[
-"C402H633O143N96P1S3",
-"C29H51N2O8PRS"
+"C29H51N2O8PRS",
+"C402H633O143N96P1S3"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -54795,8 +54798,8 @@
 -1
 ],
 "formula":[
-"C23H39N2O8PRS",
-"C396H621O143N96P1S3"
+"C396H621O143N96P1S3",
+"C23H39N2O8PRS"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -55172,9 +55175,9 @@
 -1
 ],
 "formula":[
-"C396H623O143N96P1S3",
 "C23H41N2O8PRS",
-"C12H21OSR"
+"C12H21OSR",
+"C396H623O143N96P1S3"
 ],
 "notes":{
 "BioCyc":[
@@ -55223,8 +55226,8 @@
 -1
 ],
 "formula":[
-"C25H45N2O8PRS",
-"C398H627O143N96P1S3"
+"C398H627O143N96P1S3",
+"C25H45N2O8PRS"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -55244,8 +55247,8 @@
 -1
 ],
 "formula":[
-"C10H17OSR",
 "C21H37N2O8PRS",
+"C10H17OSR",
 "C394H619O143N96P1S3"
 ],
 "notes":{
@@ -55347,8 +55350,8 @@
 -1
 ],
 "formula":[
-"C17H29N2O8PRS",
 "C6H9OSR",
+"C17H29N2O8PRS",
 "C390H611O143N96P1S3"
 ],
 "notes":{
@@ -56211,9 +56214,9 @@
 -1
 ],
 "formula":[
-"C25H45N2O8PRS",
 "C14H25OSR",
-"C398H627O143N96P1S3"
+"C398H627O143N96P1S3",
+"C25H45N2O8PRS"
 ],
 "notes":{
 "BioCyc":[
@@ -56264,8 +56267,8 @@
 ],
 "formula":[
 "C19H33N2O8PRS",
-"C392H615O143N96P1S3",
-"C8H13OSR"
+"C8H13OSR",
+"C392H615O143N96P1S3"
 ],
 "notes":{
 "BioCyc":[
@@ -56309,9 +56312,9 @@
 -1
 ],
 "formula":[
-"C29H53N2O8PRS",
 "C402H635O143N96P1S3",
-"C18H33OSR"
+"C18H33OSR",
+"C29H53N2O8PRS"
 ],
 "notes":{
 "BioCyc":[
@@ -56359,8 +56362,8 @@
 -1
 ],
 "formula":[
-"C27H49N2O8PRS",
 "C16H29OSR",
+"C27H49N2O8PRS",
 "C400H631O143N96P1S3"
 ],
 "notes":{
@@ -56411,8 +56414,8 @@
 ],
 "formula":[
 "X",
-"C10H12N4O4S2R4",
-"C6H7NO2S2R2"
+"C6H7NO2S2R2",
+"C10H12N4O4S2R4"
 ],
 "notes":{
 "BioCyc":[
@@ -56481,9 +56484,9 @@
 0
 ],
 "formula":[
-"XH2",
+"C10H14N4O4S2R4",
 "C6H9NO2S2R2",
-"C10H14N4O4S2R4"
+"XH2"
 ],
 "notes":{
 "BioCyc":[
@@ -56536,9 +56539,9 @@
 0
 ],
 "formula":[
-"XH2",
+"C10H14N4O4S2R4",
 "C6H9NO2S2R2",
-"C10H14N4O4S2R4"
+"XH2"
 ],
 "notes":{
 "BioCyc":[
@@ -56662,8 +56665,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -56867,8 +56870,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -56936,8 +56939,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -57003,11 +57006,11 @@
 -2
 ],
 "formula":[
-"HOX",
 "HR",
+"HOX",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -57209,8 +57212,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -57278,8 +57281,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -57413,11 +57416,11 @@
 -2
 ],
 "formula":[
-"HOX",
 "HR",
+"HOX",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -57786,8 +57789,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -57855,8 +57858,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -57920,8 +57923,8 @@
 "formula":[
 "HR",
 "R",
-"C15H23O16P2R3",
-"C15H21N5O10PR"
+"C15H21N5O10PR",
+"C15H23O16P2R3"
 ],
 "notes":{
 "BioCyc":[
@@ -58865,8 +58868,8 @@
 -2
 ],
 "formula":[
-"C9H11NO2R",
 "C9H10NO2R",
+"C9H11NO2R",
 "C24H32NO18P2R3"
 ],
 "notes":{
@@ -59487,8 +59490,8 @@
 0
 ],
 "formula":[
-"CH5N2O",
-"CH4N2O"
+"CH4N2O",
+"CH5N2O"
 ],
 "notes":{
 "BioCyc":[
@@ -59593,8 +59596,8 @@
 0
 ],
 "formula":[
-"CH5N2O",
-"CH4N2O"
+"CH4N2O",
+"CH5N2O"
 ],
 "notes":{
 "BioCyc":[
@@ -60132,8 +60135,8 @@
 -2
 ],
 "formula":[
-"C5H10NOR",
 "C20H32NO17P2R3",
+"C5H10NOR",
 "C5H11NOR"
 ],
 "notes":{
@@ -60799,8 +60802,8 @@
 ],
 "formula":[
 "C95H156O",
-"C15H28O",
-"C55H92O"
+"C55H92O",
+"C15H28O"
 ],
 "notes":{
 "BioCyc":[
@@ -60867,8 +60870,8 @@
 -1
 ],
 "formula":[
-"H1Se",
 "HSe",
+"H1Se",
 "H2Se"
 ],
 "notes":{
@@ -61946,9 +61949,9 @@
 0
 ],
 "formula":[
-"C373H583N94O136S2",
 "RHO",
-"HSR"
+"HSR",
+"C373H583N94O136S2"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -62056,10 +62059,10 @@
 -1
 ],
 "formula":[
-"C386H605O143N96P1S3",
-"C13H23N2O8PRS",
 "C2H3OSR",
-"C2H3ORS"
+"C13H23N2O8PRS",
+"C2H3ORS",
+"C386H605O143N96P1S3"
 ],
 "notes":{
 "BioCyc":[
@@ -62110,8 +62113,8 @@
 0
 ],
 "formula":[
-"XH",
-"C5H7N3O3R2"
+"C5H7N3O3R2",
+"XH"
 ],
 "notes":{
 "MetaNetX (MNX) Chemical":[
@@ -62130,8 +62133,8 @@
 0
 ],
 "formula":[
-"C6H14N3O3",
-"C6H13N3O3"
+"C6H13N3O3",
+"C6H14N3O3"
 ],
 "notes":{
 "BioCyc":[
@@ -62436,9 +62439,9 @@
 -1
 ],
 "formula":[
+"C21H36N4O17P2R3",
 "C6H14N4OR",
-"C6H15N4OR",
-"C21H36N4O17P2R3"
+"C6H15N4OR"
 ],
 "notes":{
 "CHEBI":[
@@ -63239,8 +63242,8 @@
 ],
 "formula":[
 "C34H30FeN4O4",
-"C34H32FeN4O4",
-"C34FeH30N4O4"
+"C34FeH30N4O4",
+"C34H32FeN4O4"
 ],
 "notes":{
 "BioCyc":[
@@ -63346,8 +63349,8 @@
 -2
 ],
 "formula":[
-"C11H11N2OR",
 "C26H33N2O17P2R3",
+"C11H11N2OR",
 "C11H12N2OR"
 ],
 "notes":{
@@ -64124,10 +64127,10 @@
 -2
 ],
 "formula":[
+"C14H23N2O12PR2",
 "C14H24N2O12PR2",
-"C19H29N2O18P2R3",
 "C4H8N2O2R",
-"C14H23N2O12PR2"
+"C19H29N2O18P2R3"
 ],
 "notes":{
 "CHEBI":[
@@ -64191,9 +64194,9 @@
 -2
 ],
 "formula":[
-"C9H10NOR",
 "C9H11NOR",
-"C24H32NO17P2R3"
+"C24H32NO17P2R3",
+"C9H10NOR"
 ],
 "notes":{
 "CHEBI":[
@@ -64392,9 +64395,9 @@
 -2
 ],
 "formula":[
-"C5H8NOR",
+"C5H9NOR",
 "C20H30NO17P2R3",
-"C5H9NOR"
+"C5H8NOR"
 ],
 "notes":{
 "CHEBI":[
@@ -64450,9 +64453,9 @@
 -3
 ],
 "formula":[
-"C4H6NO3R",
 "C4H5NO3R",
-"C19H27NO19P2R3"
+"C19H27NO19P2R3",
+"C4H6NO3R"
 ],
 "notes":{
 "KEGG Compound":[
@@ -64484,9 +64487,9 @@
 -2
 ],
 "formula":[
+"C2H4NOR",
 "C17H26NO17P2R3",
-"C2H5NOR",
-"C2H4NOR"
+"C2H5NOR"
 ],
 "notes":{
 "CHEBI":[
@@ -64542,9 +64545,9 @@
 -1
 ],
 "formula":[
-"C6H15N2OR",
+"C21H36N2O17P2R3",
 "C6H14N2OR",
-"C21H36N2O17P2R3"
+"C6H15N2OR"
 ],
 "notes":{
 "CHEBI":[
@@ -65504,8 +65507,8 @@
 ],
 "formula":[
 "X",
-"C10H12N4O4S2R4",
-"C6H7NO2S2R2"
+"C6H7NO2S2R2",
+"C10H12N4O4S2R4"
 ],
 "notes":{
 "BioCyc":[
@@ -66828,8 +66831,8 @@
 -5
 ],
 "formula":[
-"C24H34N7O19P3S",
-"C24H33N7O19P3S"
+"C24H33N7O19P3S",
+"C24H34N7O19P3S"
 ],
 "notes":{
 "BioCyc":[
@@ -67050,72 +67053,42 @@
 }
 ]
 },
-"annotation":[
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-1131972"
+"annotation":{
+"bigg.metabolite":[
+"adprib_e"
 ],
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-2393945"
+"biocyc":[
+"META:ADENOSINE_DIPHOSPHATE_RIBOSE"
 ],
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-8870342"
+"chebi":[
+"CHEBI:2351",
+"CHEBI:13231",
+"CHEBI:40752",
+"CHEBI:32889",
+"CHEBI:57967",
+"CHEBI:20850",
+"CHEBI:16960"
 ],
-[
-"KEGG Compound",
-"http://identifiers.org/kegg.compound/C00301"
+"kegg.compound":[
+"C01882",
+"C00301"
 ],
-[
-"KEGG Compound",
-"http://identifiers.org/kegg.compound/C01882"
+"metanetx.chemical":[
+"MNXM48596"
 ],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:13231"
+"reactome":[
+"1131972",
+"8870342",
+"2393945"
 ],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:16960"
+"sbo":[
+"SBO:0000247"
 ],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:20850"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:2351"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:32889"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:40752"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:57967"
-],
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:ADENOSINE_DIPHOSPHATE_RIBOSE"
-],
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM48596"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd00251"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd01296"
+"seed.compound":[
+"cpd01296",
+"cpd00251"
 ]
-]
+}
 },
 {
 "id":"adprib_c",
@@ -67205,72 +67178,42 @@
 }
 ]
 },
-"annotation":[
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-1131972"
+"annotation":{
+"bigg.metabolite":[
+"adprib_c"
 ],
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-2393945"
+"biocyc":[
+"META:ADENOSINE_DIPHOSPHATE_RIBOSE"
 ],
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-8870342"
+"chebi":[
+"CHEBI:2351",
+"CHEBI:13231",
+"CHEBI:40752",
+"CHEBI:32889",
+"CHEBI:57967",
+"CHEBI:20850",
+"CHEBI:16960"
 ],
-[
-"KEGG Compound",
-"http://identifiers.org/kegg.compound/C00301"
+"kegg.compound":[
+"C01882",
+"C00301"
 ],
-[
-"KEGG Compound",
-"http://identifiers.org/kegg.compound/C01882"
+"metanetx.chemical":[
+"MNXM48596"
 ],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:13231"
+"reactome":[
+"1131972",
+"8870342",
+"2393945"
 ],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:16960"
+"sbo":[
+"SBO:0000247"
 ],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:20850"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:2351"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:32889"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:40752"
-],
-[
-"CHEBI",
-"http://identifiers.org/chebi/CHEBI:57967"
-],
-[
-"BioCyc",
-"http://identifiers.org/biocyc/META:ADENOSINE_DIPHOSPHATE_RIBOSE"
-],
-[
-"MetaNetX (MNX) Chemical",
-"http://identifiers.org/metanetx.chemical/MNXM48596"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd00251"
-],
-[
-"SEED Compound",
-"http://identifiers.org/seed.compound/cpd01296"
+"seed.compound":[
+"cpd01296",
+"cpd00251"
 ]
-]
+}
 }
 ],
 "reactions":[
@@ -71870,7 +71813,7 @@
 }
 },
 {
-"id":"EX_glc_e",
+"id":"EX_glc__D_e",
 "name":"EX glc e ",
 "metabolites":{
 "glc__D_e":-1.0
@@ -82573,7 +82516,7 @@
 }
 },
 {
-"id":"AKGDHm",
+"id":"AKGDm",
 "name":"AKGDH mt",
 "metabolites":{
 "akg_m":-1.0,
@@ -88444,7 +88387,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"Reversible for import"
+}
 }
 },
 {
@@ -88469,7 +88417,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0411500) or (PF3D7_0620800) or (PF3D7_0702700)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88494,7 +88447,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0714700)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88519,7 +88477,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_1370100)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88544,7 +88507,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_1103200) or (PF3D7_1370200)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88569,7 +88537,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0706900)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88594,7 +88567,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0312700) or (PF3D7_0410200)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88619,7 +88597,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0510600) or (PF3D7_0527800) or (PF3D7_0620900) or (PF3D7_0714800) or (PF3D7_1103300)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88644,7 +88627,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0707100) or (PF3D7_0707000)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88669,7 +88657,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_1216800) or (PF3D7_1418400) or (PF3D7_1339200)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88694,7 +88687,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_1438200)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88719,7 +88717,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0410100) or (PF3D7_0621600) or (PF3D7_0714900) or (PF3D7_1337600)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88744,7 +88747,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0706800) or (PF3D7_0730700) or (PF3D7_1355400)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88769,7 +88777,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0702800)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88794,7 +88807,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0312600) or (PF3D7_0730600) or (PF3D7_1251900)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88819,7 +88837,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0529600) or (PF3D7_1370000) or (PF3D7_1369800) or (PF3D7_1341000)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88844,7 +88867,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_1438300) or (PF3D7_1339100)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88869,7 +88897,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0403000)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88894,7 +88927,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0203500)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88919,7 +88957,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0411600) or (PF3D7_0527700) or (PF3D7_1252000)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88944,7 +88987,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_0514400)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88969,7 +89017,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF3D7_1369900)"
-]
+],
+"SUBSYSTEM":"AminoAcids tRNA ; Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"adding gene to tRNA"
+}
 }
 },
 {
@@ -88994,7 +89047,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89019,7 +89073,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89044,7 +89099,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"Uptake from host"
+}
 }
 },
 {
@@ -89070,7 +89130,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -89096,7 +89157,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ap"
 }
 },
 {
@@ -89122,7 +89184,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ap"
 }
 },
 {
@@ -89148,7 +89211,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ap"
 }
 },
 {
@@ -89174,7 +89238,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport m",
+"iPfal17_notes":{
+"NOTES":"oxidized or reduced version?"
+}
 }
 },
 {
@@ -89202,7 +89270,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Expression",
+"iPfal17_notes":{
+"NOTES":"ADD GENES: oxidized or reduced version?"
+}
 }
 },
 {
@@ -89228,7 +89300,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport m ; Transport ap ; Cofactors PorphyrinMetabolism ",
+"iPfal17_notes":{
+"REFERENCE":"MPMP"
+}
 }
 },
 {
@@ -89253,7 +89329,11 @@
 ],
 "GENE ASSOCIATION":[
 "(PFI1140w)"
-]
+],
+"SUBSYSTEM":"Expression",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/S1995-7645(11)60042-4"
+}
 }
 },
 {
@@ -89282,7 +89362,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Lipids GPIAnchorBiosynthesis",
+"iPfal17_notes":{
+"NOTES":"Subsystem change"
+}
 }
 },
 {
@@ -89307,7 +89391,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"from host"
+}
 }
 },
 {
@@ -89332,7 +89421,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"from host"
+}
 }
 },
 {
@@ -89357,7 +89451,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"MAYBE NOT from host"
+}
 }
 },
 {
@@ -89383,7 +89482,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -89409,7 +89509,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -89435,7 +89536,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -89460,7 +89562,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PMID: 887085"
+}
 }
 },
 {
@@ -89486,7 +89592,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"REFERENCE":"PMID: 887085"
+}
 }
 },
 {
@@ -89511,7 +89621,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1093/nar/gkj450, 10.1271/bbb.90306"
+}
 }
 },
 {
@@ -89537,7 +89651,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -89562,7 +89677,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89587,7 +89703,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89612,7 +89729,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89637,7 +89755,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89662,7 +89781,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89687,7 +89807,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89712,7 +89833,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89737,7 +89859,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89762,7 +89885,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89787,7 +89911,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89812,7 +89937,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89837,7 +89963,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89862,7 +89989,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89887,7 +90015,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89912,7 +90041,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -89938,7 +90068,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -89964,7 +90095,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -89990,7 +90122,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90016,7 +90149,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90042,7 +90176,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90068,7 +90203,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90094,7 +90230,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90120,7 +90257,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90146,7 +90284,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90172,7 +90311,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90198,7 +90338,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90224,7 +90365,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90250,7 +90392,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90276,7 +90419,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90302,7 +90446,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90328,7 +90473,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ap"
 }
 },
 {
@@ -90354,7 +90500,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ap"
 }
 },
 {
@@ -90380,7 +90527,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ",
+"iPfal17_notes":{
+"NOTES":"No genetic evidence; gap filled to removed blocked reaction"
+}
 }
 },
 {
@@ -90405,7 +90556,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90430,7 +90586,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90455,7 +90616,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90480,7 +90646,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90505,7 +90676,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90530,7 +90706,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90555,7 +90736,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90580,7 +90766,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90605,7 +90796,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.chom.2015.08.003",
+"NOTES":"From host cell"
+}
 }
 },
 {
@@ -90630,7 +90826,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"PMID: 855717"
+}
 }
 },
 {
@@ -90656,7 +90856,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"REFERENCE":"PMID: 855717"
+}
 }
 },
 {
@@ -90682,7 +90886,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90708,7 +90913,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90734,7 +90940,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90760,7 +90967,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90786,7 +90994,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90812,7 +91021,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90838,7 +91048,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90864,7 +91075,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90890,7 +91102,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -90915,7 +91128,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFB0385w)"
-]
+],
+"SUBSYSTEM":"Expression",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"Added ACP gene"
+}
 }
 },
 {
@@ -90941,7 +91159,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ap"
 }
 },
 {
@@ -90968,9 +91187,15 @@
 "EC NUMBER":[
 "2.7.8.7"
 ],
+"EC_NUMBER":"2.7.8.7",
 "GENE ASSOCIATION":[
 "(PFD0980w)"
-]
+],
+"SUBSYSTEM":"Cofactors CoABiosynthesis",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; MPMP",
+"NOTES":"added ACP gene; moved to apicoplast"
+}
 }
 },
 {
@@ -90999,9 +91224,15 @@
 "EC NUMBER":[
 "6.4.1.2"
 ],
+"EC_NUMBER":"6.4.1.2",
 "GENE ASSOCIATION":[
 "(PF14_0664) and (PF14_0573) and (PF10_0409)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; MPMP",
+"NOTES":"Add genes"
+}
 }
 },
 {
@@ -91029,9 +91260,15 @@
 "EC NUMBER":[
 "2.3.1.41"
 ],
+"EC_NUMBER":"2.3.1.41",
 "GENE ASSOCIATION":[
 "(PFF1275c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; MPMP",
+"NOTES":"REMOVE gene"
+}
 }
 },
 {
@@ -91058,9 +91295,14 @@
 "EC NUMBER":[
 "1.1.1.100"
 ],
+"EC_NUMBER":"1.1.1.100",
 "GENE ASSOCIATION":[
 "(PFI1125c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis",
+"iPfal17_notes":{
+"NOTES":"MAKE UNIDIRECTIONAL"
+}
 }
 },
 {
@@ -91088,9 +91330,15 @@
 "EC NUMBER":[
 "2.3.1.41"
 ],
+"EC_NUMBER":"2.3.1.41",
 "GENE ASSOCIATION":[
 "(PFF1275c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; MPMP",
+"NOTES":"REMOVE GENE; change met"
+}
 }
 },
 {
@@ -91115,7 +91363,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -91141,7 +91390,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -91152,7 +91402,14 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"SUBSYSTEM":"Export",
+"iPfal17_notes":{
+"REFERENCE":"DOI:\u00a0http://dx.doi.org/10.1016/j.celrep.2015.03.011",
+"NOTES":"No urea cycle; cannot be consumed"
+}
+}
 },
 {
 "id":"DM_anth_c",
@@ -91176,12 +91433,17 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Export",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Unknown removal"
+}
 }
 },
 {
-"id":"uri_gf",
-"name":"uri_gf",
+"id":"ATPUP",
+"name":"ATP:uridine 5-phosphotransferase",
 "metabolites":{
 "adp_c":1.0,
 "atp_c":-1.0,
@@ -91199,12 +91461,16 @@
 "CONFIDENCE LEVEL":[
 ""
 ],
-"EC NUMBER":[
-""
-],
+"EC NUMBER":"2.7.1.48 or 2.7.1.213",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"KEGG":"R00964",
+"RHEA":"16828",
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism",
+"iPfal17_notes":{
+"NOTES":"Added with no genetic evidence (gap filled)"
+}
 }
 },
 {
@@ -91231,9 +91497,15 @@
 "EC NUMBER":[
 "1.1.1.21"
 ],
+"EC_NUMBER":"1.1.1.21",
 "GENE ASSOCIATION":[
 "(MAL13P1_324)"
-]
+],
+"SUBSYSTEM":"Carbohydrates PyruvateMetabolism ; Carbohydrates Glycolysis",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; PlasmoDB",
+"NOTES":"not reversible; nadph on wrong side"
+}
 }
 },
 {
@@ -91260,13 +91532,18 @@
 "EC NUMBER":[
 "1.1.1.21"
 ],
+"EC_NUMBER":"1.1.1.21",
 "GENE ASSOCIATION":[
 "(MAL13P1_324)"
-]
+],
+"SUBSYSTEM":"Carbohydrates PyruvateMetabolism ; Carbohydrates Glycolysis",
+"iPfal17_notes":{
+"NOTES":"Reversible"
+}
 }
 },
 {
-"id":"mthgxl_s",
+"id":"MGSA",
 "name":"mthgxl_s",
 "metabolites":{
 "dhap_c":-1.0,
@@ -91288,7 +91565,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Spontaneous",
+"iPfal17_notes":{
+"NOTES":"Spontaneous"
+}
 }
 },
 {
@@ -91313,7 +91594,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -91339,9 +91621,15 @@
 "EC NUMBER":[
 "3.1.3.2"
 ],
+"EC_NUMBER":"3.1.3.2",
 "GENE ASSOCIATION":[
 "(PFI0880c) or (PF14_0282) or (PF14_0036)"
-]
+],
+"SUBSYSTEM":"Cofactors RiboflavinMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP, PlasmoDb",
+"NOTES":"Added 2 genes"
+}
 }
 },
 {
@@ -91370,9 +91658,15 @@
 "EC NUMBER":[
 "2.8.1.7"
 ],
+"EC_NUMBER":"2.8.1.7",
 "GENE ASSOCIATION":[
 "((MAL7P1_150) or (PF07_0068)) and ((PF13_0182) or (PF13_0344))"
-]
+],
+"SUBSYSTEM":"Cofactors ThiamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added 2 genes"
+}
 }
 },
 {
@@ -91399,9 +91693,15 @@
 "EC NUMBER":[
 "2.7.7.13"
 ],
+"EC_NUMBER":"2.7.7.13",
 "GENE ASSOCIATION":[
 "(PF14_0774) or (PFL0675c)"
-]
+],
+"SUBSYSTEM":"Carbohydrates MannoseFructoseMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP, uni dir?",
+"NOTES":"added 2nd gene"
+}
 }
 },
 {
@@ -91428,9 +91728,15 @@
 "EC NUMBER":[
 "2.7.7.9"
 ],
+"EC_NUMBER":"2.7.7.9",
 "GENE ASSOCIATION":[
 "(MAL13P1_218) or (PFE0875c)"
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDb",
+"NOTES":"added 2nd gene"
+}
 }
 },
 {
@@ -91457,9 +91763,15 @@
 "EC NUMBER":[
 "2.1.1.64"
 ],
+"EC_NUMBER":"2.1.1.64",
 "GENE ASSOCIATION":[
 "(MAL7P1_130) or (PFI0815c)"
-]
+],
+"SUBSYSTEM":"Cofactors UbiquinoneMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added 2nd gene (irrev.)"
+}
 }
 },
 {
@@ -91486,9 +91798,15 @@
 "EC NUMBER":[
 "2.1.1.64"
 ],
+"EC_NUMBER":"2.1.1.64",
 "GENE ASSOCIATION":[
 "(MAL7P1_130) or (PFI0815c)"
-]
+],
+"SUBSYSTEM":"Cofactors UbiquinoneMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added 2nd gene (irrev.)"
+}
 }
 },
 {
@@ -91515,9 +91833,15 @@
 "EC NUMBER":[
 "2.7.1.50"
 ],
+"EC_NUMBER":"2.7.1.50",
 "GENE ASSOCIATION":[
 "(PFF1335c) or (PFL1920c) or (PF11_0453)"
-]
+],
+"SUBSYSTEM":"Cofactors ThiamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added 3rd gene"
+}
 }
 },
 {
@@ -91543,9 +91867,15 @@
 "EC NUMBER":[
 "2.5.1.31"
 ],
+"EC_NUMBER":"2.5.1.31",
 "GENE ASSOCIATION":[
 "(MAL8P1_22)"
-]
+],
+"SUBSYSTEM":"Lipids TerpenoidMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Expasy, MPMP",
+"NOTES":"added EC and gene"
+}
 }
 },
 {
@@ -91571,9 +91901,15 @@
 "EC NUMBER":[
 "2.5.1.90"
 ],
+"EC_NUMBER":"2.5.1.90",
 "GENE ASSOCIATION":[
 "(PFB0130w)"
-]
+],
+"SUBSYSTEM":"Lipids TerpenoidMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Expasy, DOI: 10.1042/BJ20050441",
+"NOTES":"added EC and gene"
+}
 }
 },
 {
@@ -91600,9 +91936,15 @@
 "EC NUMBER":[
 "2.1.1.201"
 ],
+"EC_NUMBER":"2.1.1.201",
 "GENE ASSOCIATION":[
 "(PFB0220w) or (PFD0350w)"
-]
+],
+"SUBSYSTEM":"Cofactors UbiquinoneMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added EC, second gene (irrev.)"
+}
 }
 },
 {
@@ -91629,9 +91971,15 @@
 "EC NUMBER":[
 "2.7.1.23"
 ],
+"EC_NUMBER":"2.7.1.23",
 "GENE ASSOCIATION":[
 "(PFI0650c)"
-]
+],
+"SUBSYSTEM":"Cofactors NicotinateNicotinamideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP, PlasmoDB",
+"NOTES":"added gene"
+}
 }
 },
 {
@@ -91658,9 +92006,15 @@
 "EC NUMBER":[
 "2.3.1.24"
 ],
+"EC_NUMBER":"2.3.1.24",
 "GENE ASSOCIATION":[
 "(PFE0405c) or (PF14_0034)"
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added gene"
+}
 }
 },
 {
@@ -91687,9 +92041,15 @@
 "EC NUMBER":[
 "2.7.1.40"
 ],
+"EC_NUMBER":"2.7.1.40",
 "GENE ASSOCIATION":[
 "(PFF1300w)"
-]
+],
+"SUBSYSTEM":"Carbohydrates Glycolysis ; Carbohydrates PyruvateMetabolism ; Lipids IsoprenoidsMetabolism ; Lipids FattyAcidSynthesis",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added gene"
+}
 }
 },
 {
@@ -91715,9 +92075,15 @@
 "EC NUMBER":[
 "3.1.3.41"
 ],
+"EC_NUMBER":"3.1.3.41",
 "GENE ASSOCIATION":[
 "(PF07_0059)"
-]
+],
+"SUBSYSTEM":"Cofactors VitB6Metabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; PlasmoDb",
+"NOTES":"added gene, changed EC"
+}
 }
 },
 {
@@ -91743,9 +92109,15 @@
 "EC NUMBER":[
 "3.1.3.41"
 ],
+"EC_NUMBER":"3.1.3.41",
 "GENE ASSOCIATION":[
 "(PF07_0059)"
-]
+],
+"SUBSYSTEM":"Cofactors VitB6Metabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; PlasmoDb",
+"NOTES":"added gene, changed EC"
+}
 }
 },
 {
@@ -91771,9 +92143,15 @@
 "EC NUMBER":[
 "3.1.3.41"
 ],
+"EC_NUMBER":"3.1.3.41",
 "GENE ASSOCIATION":[
 "(PF07_0059)"
-]
+],
+"SUBSYSTEM":"Cofactors VitB6Metabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; PlasmoDb",
+"NOTES":"added gene, changed EC"
+}
 }
 },
 {
@@ -91799,9 +92177,15 @@
 "EC NUMBER":[
 "4.1.1.18"
 ],
+"EC_NUMBER":"4.1.1.18",
 "GENE ASSOCIATION":[
 "(PFD0285c) or (PFD0670c)"
-]
+],
+"SUBSYSTEM":"AminoAcids LysMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added second gene"
+}
 }
 },
 {
@@ -91826,9 +92210,15 @@
 "EC NUMBER":[
 "4.6.1.1"
 ],
+"EC_NUMBER":"4.6.1.1",
 "GENE ASSOCIATION":[
 "(PF14_0788) or (MAL8P1.150)"
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added second gene (irrev.)"
+}
 }
 },
 {
@@ -91856,9 +92246,15 @@
 "EC NUMBER":[
 "6.1.1.19"
 ],
+"EC_NUMBER":"6.1.1.19",
 "GENE ASSOCIATION":[
 "(PFL0900c) or (PFI0680c)"
-]
+],
+"SUBSYSTEM":"AminoAcids ArgProMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added second gene; trna annotation"
+}
 }
 },
 {
@@ -91882,9 +92278,15 @@
 "EC NUMBER":[
 "5.4.2.1"
 ],
+"EC_NUMBER":"5.4.2.1",
 "GENE ASSOCIATION":[
 "(PF11_0208) or (PFD0660w) or (PFC0430w)"
-]
+],
+"SUBSYSTEM":"Carbohydrates Glycolysis",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added third gene (rev.)"
+}
 }
 },
 {
@@ -91913,9 +92315,15 @@
 "EC NUMBER":[
 "1.14.-.-"
 ],
+"EC_NUMBER":"1.14.-.-",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added EC, and o2, H2o"
+}
 }
 },
 {
@@ -91943,9 +92351,15 @@
 "EC NUMBER":[
 "1.14.-.-"
 ],
+"EC_NUMBER":"1.14.-.-",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added EC, and o2, H2o"
+}
 }
 },
 {
@@ -91972,9 +92386,15 @@
 "EC NUMBER":[
 "1.4.3.5"
 ],
+"EC_NUMBER":"1.4.3.5",
 "GENE ASSOCIATION":[
 "(PF14_0570)"
-]
+],
+"SUBSYSTEM":"Cofactors VitB6Metabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added h2o"
+}
 }
 },
 {
@@ -92000,9 +92420,15 @@
 "EC NUMBER":[
 "1.6.1.1"
 ],
+"EC_NUMBER":"1.6.1.1",
 "GENE ASSOCIATION":[
 "(PF14_0508)"
-]
+],
+"SUBSYSTEM":"Cofactors NicotinateNicotinamideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"KEGG",
+"NOTES":"chanced h[e] to h[c]"
+}
 }
 },
 {
@@ -92029,9 +92455,14 @@
 "EC NUMBER":[
 "3.6.1.1"
 ],
+"EC_NUMBER":"3.6.1.1",
 "GENE ASSOCIATION":[
 "(PF14_0541) or (PFC0710w)"
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism ; Lipids TerpenoidMetabolism",
+"iPfal17_notes":{
+"NOTES":"diphosphate to two phosphates"
+}
 }
 },
 {
@@ -92057,9 +92488,15 @@
 "EC NUMBER":[
 "2.5.1.39"
 ],
+"EC_NUMBER":"2.5.1.39",
 "GENE ASSOCIATION":[
 "(PFF0370w)"
-]
+],
+"SUBSYSTEM":"Cofactors UbiquinoneMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"EC change, add phosphate"
+}
 }
 },
 {
@@ -92087,9 +92524,15 @@
 "EC NUMBER":[
 "1.4.1.2"
 ],
+"EC_NUMBER":"1.4.1.2",
 "GENE ASSOCIATION":[
 "(PF08_0132)"
-]
+],
+"SUBSYSTEM":"AminoAcids GluMetabolism ; AminoAcids NitrogenMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"expasy",
+"NOTES":"removed extra H"
+}
 }
 },
 {
@@ -92117,9 +92560,15 @@
 "EC NUMBER":[
 "1.4.1.4"
 ],
+"EC_NUMBER":"1.4.1.4",
 "GENE ASSOCIATION":[
 "(PF14_0164)"
-]
+],
+"SUBSYSTEM":"AminoAcids GluMetabolism ; AminoAcids NitrogenMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"removed extra H"
+}
 }
 },
 {
@@ -92147,9 +92596,15 @@
 "EC NUMBER":[
 "1.4.1.4"
 ],
+"EC_NUMBER":"1.4.1.4",
 "GENE ASSOCIATION":[
 "(PF14_0286)"
-]
+],
+"SUBSYSTEM":"AminoAcids GluMetabolism ; AminoAcids NitrogenMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"removed extra H"
+}
 }
 },
 {
@@ -92175,9 +92630,14 @@
 "EC NUMBER":[
 "2.7.8.15"
 ],
+"EC_NUMBER":"2.7.8.15",
 "GENE ASSOCIATION":[
 "(PFC0935c)"
-]
+],
+"SUBSYSTEM":"Carbohydrates AminosugarsMetabolism",
+"iPfal17_notes":{
+"NOTES":"replaced dolp_L with dolp"
+}
 }
 },
 {
@@ -92204,9 +92664,14 @@
 "EC NUMBER":[
 "3.6.1.43"
 ],
+"EC_NUMBER":"3.6.1.43",
 "GENE ASSOCIATION":[
 "(MAL8P1_202)"
-]
+],
+"SUBSYSTEM":"Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"NOTES":"replaced dolp_L with dolp"
+}
 }
 },
 {
@@ -92233,9 +92698,14 @@
 "EC NUMBER":[
 "2.4.1.130"
 ],
+"EC_NUMBER":"2.4.1.130",
 "GENE ASSOCIATION":[
 "(MAL13P1_210)"
-]
+],
+"SUBSYSTEM":"Lipids GPIAnchorBiosynthesis ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"NOTES":"replaced dolp_L with dolp"
+}
 }
 },
 {
@@ -92262,9 +92732,14 @@
 "EC NUMBER":[
 "2.4.1.130"
 ],
+"EC_NUMBER":"2.4.1.130",
 "GENE ASSOCIATION":[
 "(MAL13P1_210)"
-]
+],
+"SUBSYSTEM":"Lipids GPIAnchorBiosynthesis ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"NOTES":"replaced dolp_L with dolp"
+}
 }
 },
 {
@@ -92291,9 +92766,14 @@
 "EC NUMBER":[
 "2.4.1.130"
 ],
+"EC_NUMBER":"2.4.1.130",
 "GENE ASSOCIATION":[
 "(MAL13P1_210)"
-]
+],
+"SUBSYSTEM":"Lipids GPIAnchorBiosynthesis ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"NOTES":"replaced dolp_L with dolp"
+}
 }
 },
 {
@@ -92320,9 +92800,14 @@
 "EC NUMBER":[
 "2.4.1.130"
 ],
+"EC_NUMBER":"2.4.1.130",
 "GENE ASSOCIATION":[
 "(MAL13P1_210)"
-]
+],
+"SUBSYSTEM":"Lipids GPIAnchorBiosynthesis ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"NOTES":"replaced dolp_L with dolp"
+}
 }
 },
 {
@@ -92347,7 +92832,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"NOTES":"added "
+}
 }
 },
 {
@@ -92398,7 +92887,12 @@
 "GENE ASSOCIATION":[
 "((((PF14_0076) and (PF14_0077) and (PF14_0078) and (PF14_0075) and (PF13_0133) and (PF3D7_0311700) and (PF3D7_1033800) and (PF3D7_1465700) and (PF3D7_1430200) and (PF3D7_0808200)) or ((PF11_0161) and (PF11_0162) and (PF11_0165))) and (MAL13P1_56) and (PF14_0015) and (PF14_0517) and (PFI1570c) and (PF11_0174) and (PFL2290w) and (PF13_0322) and (PF14_0439) and (PFE1360c) and (MAL8P1_140) and (PF10_0150) and (PF14_0327) and (PFF1430c) and (PFE0355c) and (PFE0370c) and (PF11_0381) and (PF14_0574))"
 ],
-"References":"doi: 10.1073/pnas.0601876103; DOI: 10.1111/j.1365-2141.1975.tb00540.x"
+"REFERENCES":"doi: 10.1073/pnas.0601876103; DOI: 10.1111/j.1365-2141.1975.tb00540.x",
+"SUBSYSTEM":"Hemoglobin digestion",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi: 10.1073/pnas.0601876103",
+"NOTES":"ADD Fer; for ECs see: http://mpmp.huji.ac.il/maps/hemoglobinpolpath.html; made Plasmepsins and Falcipains OR relationship; added several Plasmepsins"
+}
 }
 },
 {
@@ -92424,9 +92918,15 @@
 "EC NUMBER":[
 "4.1.3.38"
 ],
+"EC_NUMBER":"4.1.3.38",
 "GENE ASSOCIATION":[
 "(PF14_0557)"
-]
+],
+"SUBSYSTEM":"Cofactors ShikimateBiosynthesis, Cofactors FolateBiosynthesis",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"Added Folate annotations, corrected gene"
+}
 }
 },
 {
@@ -92455,9 +92955,15 @@
 "EC NUMBER":[
 "4.2.1.1"
 ],
+"EC_NUMBER":"4.2.1.1",
 "GENE ASSOCIATION":[
 "(PF11_0410)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Lipids FattyAcidSynthesis ; Carbohydrates PyruvateMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"Added irrev. Note: PF11_0411 is same gene"
+}
 }
 },
 {
@@ -92484,9 +92990,15 @@
 "EC NUMBER":[
 "2.9.1.1"
 ],
+"EC_NUMBER":"2.9.1.1",
 "GENE ASSOCIATION":[
 "(PFL0255c) and (PFF1425w)"
-]
+],
+"SUBSYSTEM":"AminoAcids SelenocysteineMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added second gene; broke into two steps (including pstk reaction); uncertain ec (could be 2.9.1.2"
+}
 }
 },
 {
@@ -92514,9 +93026,15 @@
 "EC NUMBER":[
 "6.1.1.2"
 ],
+"EC_NUMBER":"6.1.1.2",
 "GENE ASSOCIATION":[
 "(PF13_0205) or (PFL2485c)"
-]
+],
+"SUBSYSTEM":"AminoAcids TrpMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added subsystem; changed to Trp"
+}
 }
 },
 {
@@ -92542,9 +93060,15 @@
 "EC NUMBER":[
 "2.6.1.5"
 ],
+"EC_NUMBER":"2.6.1.5",
 "GENE ASSOCIATION":[
 "(PFB0200c)"
-]
+],
+"SUBSYSTEM":"Carbohydrates PyruvateMetabolism ; AminoAcids GluMetabolism ; AminoAcids PheTyrMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added subsystems; ec also 2.6.1.1 if in mito, check??? (kegg)"
+}
 }
 },
 {
@@ -92572,9 +93096,15 @@
 "EC NUMBER":[
 "6.1.1.18"
 ],
+"EC_NUMBER":"6.1.1.18",
 "GENE ASSOCIATION":[
 "(PF13_0170)"
-]
+],
+"SUBSYSTEM":"AminoAcids GluMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"Added tRNA, MPMP wrong genes"
+}
 }
 },
 {
@@ -92600,9 +93130,15 @@
 "EC NUMBER":[
 "3.1.3.2"
 ],
+"EC_NUMBER":"3.1.3.2",
 "GENE ASSOCIATION":[
 "(PF07_0059)"
-]
+],
+"SUBSYSTEM":"Cofactors RiboflavinMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP/DOI: 10.1016/j.jsb.2012.02.009",
+"NOTES":"changed gene"
+}
 }
 },
 {
@@ -92628,9 +93164,15 @@
 "EC NUMBER":[
 "2.2.1.1"
 ],
+"EC_NUMBER":"2.2.1.1",
 "GENE ASSOCIATION":[
 "(PFF0530w)"
-]
+],
+"SUBSYSTEM":"Carbohydrates PentosePhosphateCycle",
+"iPfal17_notes":{
+"REFERENCE":"MPMP, expasy",
+"NOTES":"checked, needs thmpp[c] cofactor"
+}
 }
 },
 {
@@ -92656,9 +93198,15 @@
 "EC NUMBER":[
 "2.2.1.1"
 ],
+"EC_NUMBER":"2.2.1.1",
 "GENE ASSOCIATION":[
 "(PFF0530w)"
-]
+],
+"SUBSYSTEM":"Carbohydrates PentosePhosphateCycle",
+"iPfal17_notes":{
+"REFERENCE":"expasy",
+"NOTES":"checked, needs thmpp[c] cofactor"
+}
 }
 },
 {
@@ -92684,9 +93232,15 @@
 "EC NUMBER":[
 "2.7.4.9"
 ],
+"EC_NUMBER":"2.7.4.9",
 "GENE ASSOCIATION":[
 "(PFL2465c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.203",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92712,9 +93266,15 @@
 "EC NUMBER":[
 "2.7.4.9"
 ],
+"EC_NUMBER":"2.7.4.9",
 "GENE ASSOCIATION":[
 "(PFL2465c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.204",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92740,9 +93300,15 @@
 "EC NUMBER":[
 "2.7.4.14"
 ],
+"EC_NUMBER":"2.7.4.14",
 "GENE ASSOCIATION":[
 "(PFA0555c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.205",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92768,9 +93334,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.206",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92796,9 +93368,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.207",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92824,9 +93402,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.208",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92852,9 +93436,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.209",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92880,9 +93470,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.210",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92908,9 +93504,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.211",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92936,9 +93538,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; doi:  10.1038/nprot.2009.212",
+"NOTES":"checked; reversibility assumption"
+}
 }
 },
 {
@@ -92964,9 +93572,15 @@
 "EC NUMBER":[
 "3.6.1.1"
 ],
+"EC_NUMBER":"3.6.1.1",
 "GENE ASSOCIATION":[
 "(PF14_0541) or (PFC0710w)"
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism ; Lipids TerpenoidMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; MPMP",
+"NOTES":"corrected stoic, checked"
+}
 }
 },
 {
@@ -92993,9 +93607,15 @@
 "EC NUMBER":[
 "1.1.1.49"
 ],
+"EC_NUMBER":"1.1.1.49",
 "GENE ASSOCIATION":[
 "(PF14_0511)"
-]
+],
+"SUBSYSTEM":"Carbohydrates PentosePhosphateCycle",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"made irrev"
+}
 }
 },
 {
@@ -93023,9 +93643,15 @@
 "EC NUMBER":[
 "1.14.13.8"
 ],
+"EC_NUMBER":"1.14.13.8",
 "GENE ASSOCIATION":[
 "(PF08_0068)"
-]
+],
+"SUBSYSTEM":"Cofactors UbiquinoneMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"NADPH, EC, gene added; irreversible"
+}
 }
 },
 {
@@ -93051,9 +93677,15 @@
 "EC NUMBER":[
 "2.6.1.42"
 ],
+"EC_NUMBER":"2.6.1.42",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"AminoAcids LeuIleValMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"expasy, Plasmodb",
+"NOTES":"removed gene; made unidirectional because ile import is needed for growth"
+}
 }
 },
 {
@@ -93082,9 +93714,15 @@
 "EC NUMBER":[
 "6.3.4.16"
 ],
+"EC_NUMBER":"6.3.4.16",
 "GENE ASSOCIATION":[
 "(PF13_0044)"
-]
+],
+"SUBSYSTEM":"AminoAcids NitrogenMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"removed Glu met"
+}
 }
 },
 {
@@ -93110,14 +93748,20 @@
 "EC NUMBER":[
 "2.6.1.1"
 ],
+"EC_NUMBER":"2.6.1.1",
 "GENE ASSOCIATION":[
 "(PFB0200c)"
-]
+],
+"SUBSYSTEM":"AminoAcids AsnAspMetabolism ; Carbohydrates PyruvateMetabolism ; AminoAcids GluMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Wrenger et al, J Mol Biol 2010",
+"NOTES":"removed Mitochondrial version"
+}
 }
 },
 {
-"id":"1_7_1_3m",
-"name":"1_7_1_3_mt",
+"id":"NTRIRym",
+"name":"Nitrate reductase (NADPH), mitochondrial",
 "metabolites":{
 "h2o_m":1.0,
 "h_m":-1.0,
@@ -93140,14 +93784,19 @@
 "EC NUMBER":[
 "1.7.1.3"
 ],
+"EC_NUMBER":"1.7.1.3",
 "GENE ASSOCIATION":[
 "(PF13_0353)"
-]
+],
+"SUBSYSTEM":"AminoAcids NitrogenMetabolism",
+"iPfal17_notes":{
+"NOTES":"requires Fe as cofactor"
+}
 }
 },
 {
-"id":"1_7_1_1m",
-"name":"1_7_1_1_mt",
+"id":"NITRm",
+"name":"Nitrate reductase (NADH), mitochondrial",
 "metabolites":{
 "h2o_m":1.0,
 "h_m":-1.0,
@@ -93170,9 +93819,15 @@
 "EC NUMBER":[
 "1.7.1.1"
 ],
+"EC_NUMBER":"1.7.1.1",
 "GENE ASSOCIATION":[
 "(PF13_0353)"
-]
+],
+"SUBSYSTEM":"AminoAcids NitrogenMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"expasy",
+"NOTES":"requires Fe as cofactor; also 1.7.1.3"
+}
 }
 },
 {
@@ -93198,9 +93853,14 @@
 "EC NUMBER":[
 "2.7.4.14"
 ],
+"EC_NUMBER":"2.7.4.14",
 "GENE ASSOCIATION":[
 "(PFA0555c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism",
+"iPfal17_notes":{
+"NOTES":"reversibility assumption"
+}
 }
 },
 {
@@ -93226,9 +93886,14 @@
 "EC NUMBER":[
 "2.7.4.14"
 ],
+"EC_NUMBER":"2.7.4.14",
 "GENE ASSOCIATION":[
 "(PFA0555c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism",
+"iPfal17_notes":{
+"NOTES":"reversibility assumption"
+}
 }
 },
 {
@@ -93255,9 +93920,15 @@
 "EC NUMBER":[
 "2.7.1.71"
 ],
+"EC_NUMBER":"2.7.1.71",
 "GENE ASSOCIATION":[
 "(PF02_0059) and (PF02_0060) and (PF3D7_0206400) and (PFB0279w) and (PFB0280w)"
-]
+],
+"SUBSYSTEM":"Cofactors ShikimateBiosynthesis",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"shikimate 3p or 5p? replaced gene"
+}
 }
 },
 {
@@ -93282,9 +93953,15 @@
 "EC NUMBER":[
 "2.1.1.10"
 ],
+"EC_NUMBER":"2.1.1.10",
 "GENE ASSOCIATION":[
 "(PFL1625w)"
-]
+],
+"SUBSYSTEM":"AminoAcids MetPolyamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP, Expasy, PlasmoDb",
+"NOTES":"added"
+}
 }
 },
 {
@@ -93310,14 +93987,20 @@
 "EC NUMBER":[
 "2.1.3.3"
 ],
+"EC_NUMBER":"2.1.3.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_221)"
-]
+],
+"SUBSYSTEM":"AminoAcids MetPolyamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added"
+}
 }
 },
 {
-"id":"2_PERIOD_1_PERIOD_1_PERIOD_12",
-"name":"2.1.1.12",
+"id":"METMT",
+"name":"Methionine methyltransferase",
 "metabolites":{
 "ahcys_c":1.0,
 "amet_c":-1.0,
@@ -93338,9 +94021,15 @@
 "EC NUMBER":[
 "2.1.1.12"
 ],
+"EC_NUMBER":"2.1.1.12",
 "GENE ASSOCIATION":[
 "(PF10_0197)"
-]
+],
+"SUBSYSTEM":"AminoAcids MetPolyamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; PlasmoDb",
+"NOTES":"added"
+}
 }
 },
 {
@@ -93364,9 +94053,15 @@
 "EC NUMBER":[
 "4.99.1.8"
 ],
+"EC_NUMBER":"4.99.1.8",
 "GENE ASSOCIATION":[
 "(PF14_0446)"
-]
+],
+"SUBSYSTEM":"Hemozoin production",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added"
+}
 }
 },
 {
@@ -93392,7 +94087,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Hemoglobin digestion",
+"iPfal17_notes":{
+"NOTES":"added"
+}
 }
 },
 {
@@ -93417,7 +94116,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added"
+}
 }
 },
 {
@@ -93443,7 +94147,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Hemozoin production",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added"
+}
 }
 },
 {
@@ -93469,7 +94178,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Export",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added"
+}
 }
 },
 {
@@ -93492,15 +94206,22 @@
 "AUTHORS":[
 "MPMP"
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
 "EC NUMBER":[
 "6.3.5.7"
 ],
+"EC_NUMBER":"6.3.5.7",
 "GENE ASSOCIATION":[
 "(PFD0780w) and (PFF1395c)"
-]
+],
+"SUBSYSTEM":"AminoAcids GluMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added reaction"
+}
 }
 },
 {
@@ -93526,9 +94247,15 @@
 "EC NUMBER":[
 "2.7.1.164"
 ],
+"EC_NUMBER":"2.7.1.164",
 "GENE ASSOCIATION":[
 "(PFA0185w)"
-]
+],
+"SUBSYSTEM":"AminoAcids SelenocysteineMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"MPMP, expasy",
+"NOTES":"Added reaction"
+}
 }
 },
 {
@@ -93546,15 +94273,22 @@
 "AUTHORS":[
 "MPMP"
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
 "EC NUMBER":[
 "1.1.1.21"
 ],
+"EC_NUMBER":"1.1.1.21",
 "GENE ASSOCIATION":[
 "(MAL13P1_324) or (PF14_0088)"
-]
+],
+"SUBSYSTEM":"Cofactors VitB6Metabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added reaction"
+}
 }
 },
 {
@@ -93580,7 +94314,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFI0775w)"
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism ; Export",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added reaction"
+}
 }
 },
 {
@@ -93606,9 +94345,15 @@
 "EC NUMBER":[
 "2.4.1.141"
 ],
+"EC_NUMBER":"2.4.1.141",
 "GENE ASSOCIATION":[
 "(PFB0515w) or (MAL8P1_133)"
-]
+],
+"SUBSYSTEM":"Carbohydrates AminosugarsMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added reaction"
+}
 }
 },
 {
@@ -93634,7 +94379,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFB0465c) or (PFI1295c)"
-]
+],
+"SUBSYSTEM":"Export",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added reaction"
+}
 }
 },
 {
@@ -93663,9 +94413,15 @@
 "EC NUMBER":[
 "2.8.1.7"
 ],
+"EC_NUMBER":"2.8.1.7",
 "GENE ASSOCIATION":[
 "((MAL7P1_150) or (PF07_0068)) and ((PF13_0182) or (PF13_0344))"
-]
+],
+"SUBSYSTEM":"Cofactors ThiamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added reaction (alt AA), added 2 genes"
+}
 }
 },
 {
@@ -93692,9 +94448,15 @@
 "EC NUMBER":[
 "2.7.1.40"
 ],
+"EC_NUMBER":"2.7.1.40",
 "GENE ASSOCIATION":[
 "(PF10_0363)"
-]
+],
+"SUBSYSTEM":"Carbohydrates Glycolysis ; Carbohydrates PyruvateMetabolism ; Lipids IsoprenoidsMetabolism ; Lipids FattyAcidSynthesis",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added reaction (alt Pi acceptor)"
+}
 }
 },
 {
@@ -93720,9 +94482,15 @@
 "EC NUMBER":[
 "2.7.4.10"
 ],
+"EC_NUMBER":"2.7.4.10",
 "GENE ASSOCIATION":[
 "(PFD0755c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added reaction from MPMP"
+}
 }
 },
 {
@@ -93748,9 +94516,14 @@
 "EC NUMBER":[
 "2.7.4.10"
 ],
+"EC_NUMBER":"2.7.4.10",
 "GENE ASSOCIATION":[
 "(PFD0755c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"NOTES":"Added reaction from MPMP"
+}
 }
 },
 {
@@ -93777,9 +94550,15 @@
 "EC NUMBER":[
 "2.5.1.16"
 ],
+"EC_NUMBER":"2.5.1.16",
 "GENE ASSOCIATION":[
 "(PF11_0301)"
-]
+],
+"SUBSYSTEM":"AminoAcids MetPolyamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2005.04.004",
+"NOTES":"alternate- added"
+}
 }
 },
 {
@@ -93806,9 +94585,15 @@
 "EC NUMBER":[
 "1.17.4.1"
 ],
+"EC_NUMBER":"1.17.4.1",
 "GENE ASSOCIATION":[
 "(PF10_0154) and (PF14_0053) and (PF14_0352)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"add reaction; or to and (subunits)"
+}
 }
 },
 {
@@ -93834,9 +94619,15 @@
 "EC NUMBER":[
 "3.1.3.5"
 ],
+"EC_NUMBER":"3.1.3.5",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"(remove duplicate) IMP specific gene"
+}
 }
 },
 {
@@ -93862,9 +94653,15 @@
 "EC NUMBER":[
 "3.1.3.5"
 ],
+"EC_NUMBER":"3.1.3.5",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"(remove duplicate) IMP specific gene"
+}
 }
 },
 {
@@ -93890,9 +94687,15 @@
 "EC NUMBER":[
 "3.1.3.5"
 ],
+"EC_NUMBER":"3.1.3.5",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"(remove duplicate) IMP specific gene"
+}
 }
 },
 {
@@ -93918,9 +94721,15 @@
 "EC NUMBER":[
 "3.1.3.5"
 ],
+"EC_NUMBER":"3.1.3.5",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"(remove duplicate) IMP specific gene"
+}
 }
 },
 {
@@ -93946,9 +94755,15 @@
 "EC NUMBER":[
 "3.1.3.5"
 ],
+"EC_NUMBER":"3.1.3.5",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"(remove duplicate) IMP specific gene"
+}
 }
 },
 {
@@ -93974,9 +94789,15 @@
 "EC NUMBER":[
 "3.1.3.5"
 ],
+"EC_NUMBER":"3.1.3.5",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"(remove duplicate) IMP specific gene"
+}
 }
 },
 {
@@ -94002,9 +94823,15 @@
 "EC NUMBER":[
 "3.1.3.5"
 ],
+"EC_NUMBER":"3.1.3.5",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"(remove duplicate) IMP specific gene"
+}
 }
 },
 {
@@ -94030,9 +94857,15 @@
 "EC NUMBER":[
 "2.6.1.42"
 ],
+"EC_NUMBER":"2.6.1.42",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"AminoAcids LeuIleValMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"expasy, Plasmodb",
+"NOTES":"removed gene"
+}
 }
 },
 {
@@ -94058,9 +94891,15 @@
 "EC NUMBER":[
 "2.6.1.42"
 ],
+"EC_NUMBER":"2.6.1.42",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"AminoAcids LeuIleValMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"expasy, Plasmodb",
+"NOTES":"removed gene"
+}
 }
 },
 {
@@ -94087,9 +94926,15 @@
 "EC NUMBER":[
 "3.1.3.2"
 ],
+"EC_NUMBER":"3.1.3.2",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Cofactors RiboflavinMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1016/j.jsb.2012.02.009",
+"NOTES":"Removed gene"
+}
 }
 },
 {
@@ -94115,7 +94960,12 @@
 ],
 "GENE ASSOCIATION":[
 "(MAL8P1_13) or (PF11_0172)"
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb; DOI: 10.1074/jbc.M111.286054",
+"NOTES":"removed PF10_0215"
+}
 }
 },
 {
@@ -94143,9 +94993,14 @@
 "EC NUMBER":[
 "6.1.1.17"
 ],
+"EC_NUMBER":"6.1.1.17",
 "GENE ASSOCIATION":[
 "(MAL13P1_281) or (PF13_0257)"
-]
+],
+"SUBSYSTEM":"AminoAcids GluMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"NOTES":"Removed PF13_0170"
+}
 }
 },
 {
@@ -94171,7 +95026,11 @@
 ],
 "GENE ASSOCIATION":[
 "(PFA0160c) or (MAL8P1_32) or (PF13_0252) or (PF14_0662)"
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"NOTES":"Removed PF13_0352"
+}
 }
 },
 {
@@ -94199,9 +95058,15 @@
 "EC NUMBER":[
 "6.1.1.10"
 ],
+"EC_NUMBER":"6.1.1.10",
 "GENE ASSOCIATION":[
 "(PF10_0053) or (PF10_0340)"
-]
+],
+"SUBSYSTEM":"AminoAcids MetPolyamineMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"Removed PF14_0401"
+}
 }
 },
 {
@@ -94229,9 +95094,15 @@
 "EC NUMBER":[
 "6.1.1.22"
 ],
+"EC_NUMBER":"6.1.1.22",
 "GENE ASSOCIATION":[
 "(PFB0525w) or (PFE0475w)"
-]
+],
+"SUBSYSTEM":"AminoAcids AsnAspMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Removed PFE0715w; added trna"
+}
 }
 },
 {
@@ -94258,9 +95129,15 @@
 "EC NUMBER":[
 "2.7.7.2"
 ],
+"EC_NUMBER":"2.7.7.2",
 "GENE ASSOCIATION":[
 "(PF10_0147)"
-]
+],
+"SUBSYSTEM":"Cofactors RiboflavinMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1016/j.jsb.2012.02.009",
+"NOTES":"Removed second gene"
+}
 }
 },
 {
@@ -94288,9 +95165,14 @@
 "EC NUMBER":[
 "6.1.1.20"
 ],
+"EC_NUMBER":"6.1.1.20",
 "GENE ASSOCIATION":[
 "((PF11_0051) and (PFL1540c)) or (PFA0480w) or (PFF0180w)"
-]
+],
+"SUBSYSTEM":"AminoAcids PheTyrMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"NOTES":"Added and statement; added tRNA"
+}
 }
 },
 {
@@ -94317,9 +95199,15 @@
 "EC NUMBER":[
 "1.17.4.1"
 ],
+"EC_NUMBER":"1.17.4.1",
 "GENE ASSOCIATION":[
 "(PF10_0154) and (PF14_0053) and (PF14_0352)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"or to and (subunits)"
+}
 }
 },
 {
@@ -94346,9 +95234,15 @@
 "EC NUMBER":[
 "1.17.4.1"
 ],
+"EC_NUMBER":"1.17.4.1",
 "GENE ASSOCIATION":[
 "(PF10_0154) and (PF14_0053) and (PF14_0352)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"or to and (subunits)"
+}
 }
 },
 {
@@ -94375,9 +95269,15 @@
 "EC NUMBER":[
 "1.17.4.1"
 ],
+"EC_NUMBER":"1.17.4.1",
 "GENE ASSOCIATION":[
 "(PF10_0154) and (PF14_0053) and (PF14_0352)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"or to and (subunits)"
+}
 }
 },
 {
@@ -94404,9 +95304,15 @@
 "EC NUMBER":[
 "1.17.4.1"
 ],
+"EC_NUMBER":"1.17.4.1",
 "GENE ASSOCIATION":[
 "(PF10_0154) and (PF14_0053) and (PF14_0352)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb",
+"NOTES":"or to and (subunits)"
+}
 }
 },
 {
@@ -94435,7 +95341,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Lipids GPIAnchorBiosynthesis ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"NOTES":"Added Dolichol"
+}
 }
 },
 {
@@ -94461,9 +95371,15 @@
 "EC NUMBER":[
 "2.6.1.85"
 ],
+"EC_NUMBER":"2.6.1.85",
 "GENE ASSOCIATION":[
 "(PFI1100w)"
-]
+],
+"SUBSYSTEM":"Cofactors FolateBiosynthesis, Cofactors ShikimateBiosynthesis",
+"iPfal17_notes":{
+"REFERENCE":"direction?",
+"NOTES":"Added Shikimate annotation"
+}
 }
 },
 {
@@ -94490,9 +95406,15 @@
 "EC NUMBER":[
 "2.7.1.11"
 ],
+"EC_NUMBER":"2.7.1.11",
 "GENE ASSOCIATION":[
 "(PF11_0294) or (PFI0755c)"
-]
+],
+"SUBSYSTEM":"Carbohydrates Glycolysis ; Carbohydrates MannoseFructoseMetabolism ; Carbohydrates PentosePhosphateCycle",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added subsystems"
+}
 }
 },
 {
@@ -94520,9 +95442,14 @@
 "EC NUMBER":[
 "6.1.1.15"
 ],
+"EC_NUMBER":"6.1.1.15",
 "GENE ASSOCIATION":[
 "(PFI1240c) or (PFL0670c)"
-]
+],
+"SUBSYSTEM":"AminoAcids ArgProMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"NOTES":"added tRNA"
+}
 }
 },
 {
@@ -94550,9 +95477,14 @@
 "EC NUMBER":[
 "6.1.1.12"
 ],
+"EC_NUMBER":"6.1.1.12",
 "GENE ASSOCIATION":[
 "(PFA0145c) or (PFE0715w)"
-]
+],
+"SUBSYSTEM":"AminoAcids AsnAspMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"NOTES":"Added trna"
+}
 }
 },
 {
@@ -94580,9 +95512,14 @@
 "EC NUMBER":[
 "6.1.1.14"
 ],
+"EC_NUMBER":"6.1.1.14",
 "GENE ASSOCIATION":[
 "(PF14_0198)"
-]
+],
+"SUBSYSTEM":"AminoAcids GlySerMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"NOTES":"added tRNA"
+}
 }
 },
 {
@@ -94610,9 +95547,14 @@
 "EC NUMBER":[
 "6.1.1.6"
 ],
+"EC_NUMBER":"6.1.1.6",
 "GENE ASSOCIATION":[
 "(PF13_0262) or (PF14_0166)"
-]
+],
+"SUBSYSTEM":"AminoAcids LysMetabolism ; AminoAcids tRNA",
+"iPfal17_notes":{
+"NOTES":"added tRNA annotation"
+}
 }
 },
 {
@@ -94639,9 +95581,15 @@
 "EC NUMBER":[
 "3.6.1.17"
 ],
+"EC_NUMBER":"3.6.1.17",
 "GENE ASSOCIATION":[
 "(PFE1035c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Expasy",
+"NOTES":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism"
+}
 }
 },
 {
@@ -94668,9 +95616,15 @@
 "EC NUMBER":[
 "3.6.1.17"
 ],
+"EC_NUMBER":"3.6.1.17",
 "GENE ASSOCIATION":[
 "(PFE1035c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Expasy",
+"NOTES":"Removed pyrimidine association"
+}
 }
 },
 {
@@ -94695,9 +95649,15 @@
 "EC NUMBER":[
 "1.14.13.8"
 ],
+"EC_NUMBER":"1.14.13.8",
 "GENE ASSOCIATION":[
 "(PF08_0068)"
-]
+],
+"SUBSYSTEM":"Cofactors UbiquinoneMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Added EC"
+}
 }
 },
 {
@@ -94723,9 +95683,15 @@
 "EC NUMBER":[
 "4.1.1.-"
 ],
+"EC_NUMBER":"4.1.1.-",
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Cofactors UbiquinoneMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"EC added"
+}
 }
 },
 {
@@ -94751,9 +95717,15 @@
 "EC NUMBER":[
 "3.1.4.35"
 ],
+"EC_NUMBER":"3.1.4.35",
 "GENE ASSOCIATION":[
 "(MAL13P1_118) or (MAL13P1_119) or (PF14_0672) or (PFL0475w)"
-]
+],
+"SUBSYSTEM":"Nucleotides PurineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"Expasy",
+"NOTES":"switched to GMP specific EC"
+}
 }
 },
 {
@@ -94768,7 +95740,14 @@
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"SUBSYSTEM":"AminoAcids MetPolyamineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"PMCID:\u00a0PMC2366754",
+"NOTES":"Gap filled; no genetic evidence but cystine is incorporated"
+}
+}
 },
 {
 "id":"EX_progly_e",
@@ -94792,7 +95771,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -94818,7 +95798,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e"
 }
 },
 {
@@ -94847,7 +95828,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Others BiosynthesisCytochrome",
+"iPfal17_notes":{
+"NOTES":"Fldrd must be reoxidized"
+}
 }
 },
 {
@@ -94874,9 +95859,15 @@
 "EC NUMBER":[
 "1.18.1.2"
 ],
+"EC_NUMBER":"1.18.1.2",
 "GENE ASSOCIATION":[
 "(PF07_0085) or (PF11_0407) or (PFF1115w)"
-]
+],
+"SUBSYSTEM":"Others BiosynthesisCytochrome",
+"iPfal17_notes":{
+"REFERENCE":"EXPASY",
+"NOTES":"Changed stoichiometry and direction of reaction"
+}
 }
 },
 {
@@ -94904,9 +95895,15 @@
 "EC NUMBER":[
 "1.9.3.1"
 ],
+"EC_NUMBER":"1.9.3.1",
 "GENE ASSOCIATION":[
 "(mal_mito_2) and (mal_mito_1) and (PF14_0288) and (PFI1365w) and (PFI1375w) and (PF14_0331) and (PF14_0721)"
-]
+],
+"SUBSYSTEM":"Others MitochondrialElectronFlow",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"Change Gene IDs; remove cytoB (mal_mito_3), add mal_mito_2; or to and relationship"
+}
 }
 },
 {
@@ -94934,9 +95931,15 @@
 "EC NUMBER":[
 "1.10.2.2"
 ],
+"EC_NUMBER":"1.10.2.2",
 "GENE ASSOCIATION":[
 "(PF14_0248) and (PF14_0373) and (PF10_0120) and (PF3D7_0211300) and (mal_mito_3)"
-]
+],
+"SUBSYSTEM":"Others MitochondrialElectronFlow",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"Add h+; or to and relationship; added PF10_0120, PF3D7_0211300 mal_mito_3"
+}
 }
 },
 {
@@ -94963,9 +95966,15 @@
 "EC NUMBER":[
 "1.6.5.3"
 ],
+"EC_NUMBER":"1.6.5.3",
 "GENE ASSOCIATION":[
 "(PFI0735c)"
-]
+],
+"SUBSYSTEM":"Others MitochondrialElectronFlow",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"Move to mito"
+}
 }
 },
 {
@@ -94991,9 +96000,15 @@
 "EC NUMBER":[
 "1.3.5.1"
 ],
+"EC_NUMBER":"1.3.5.1",
 "GENE ASSOCIATION":[
 "(PF10_0334) or (PFL0630w)"
-]
+],
+"SUBSYSTEM":"Others MitochondrialElectronFlow",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; doi: 10.1111/j.1574-6976.2006.00027.x",
+"NOTES":"add PFL0630w"
+}
 }
 },
 {
@@ -95019,9 +96034,15 @@
 "EC NUMBER":[
 "1.3.5.2"
 ],
+"EC_NUMBER":"1.3.5.2",
 "GENE ASSOCIATION":[
 "(PFF0160c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Others MitochondrialElectronFlow",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB",
+"NOTES":"EC obsolete, changed"
+}
 }
 },
 {
@@ -95049,9 +96070,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95079,9 +96106,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95109,9 +96142,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95139,9 +96178,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95169,9 +96214,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95199,9 +96250,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95229,9 +96286,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95259,9 +96322,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95289,9 +96358,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95319,9 +96394,15 @@
 "EC NUMBER":[
 "6.2.1.3"
 ],
+"EC_NUMBER":"6.2.1.3",
 "GENE ASSOCIATION":[
 "(MAL13P1_485) or (PF07_0129) or (PF14_0751) or (PF14_0761) or (PFB0685c) or (PFB0695c) or (PFC0050c) or (PFD0085c) or (PFE1250w) or (PFF0945c) or (PFL1880w) or (PFL2570w) or (PFL0035c)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Lipids SphingomyelinCeramideMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"doi: 10.1016/j.molbiopara.2006.06.004",
+"NOTES":"Added AcylCoA synthetase 7 (PFL0035c)"
+}
 }
 },
 {
@@ -95346,7 +96427,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -95371,7 +96453,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -95396,7 +96479,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -95421,7 +96505,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -95446,7 +96531,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange"
 }
 },
 {
@@ -95473,9 +96559,15 @@
 "EC NUMBER":[
 "3.1.4.46"
 ],
+"EC_NUMBER":"3.1.4.46",
 "GENE ASSOCIATION":[
 "(PF14_0060)"
-]
+],
+"SUBSYSTEM":"Lipids PhosphatidylcholineMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"doi:10.1016/j.molbiopara.2012.09.004",
+"NOTES":"ADD CITATION ONLY"
+}
 }
 },
 {
@@ -95502,9 +96594,15 @@
 "EC NUMBER":[
 "3.1.4.46"
 ],
+"EC_NUMBER":"3.1.4.46",
 "GENE ASSOCIATION":[
 "(PF14_0060)"
-]
+],
+"SUBSYSTEM":"Lipids PhosphatidylcholineMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"doi:10.1016/j.molbiopara.2012.09.004",
+"NOTES":"ADD CITATION ONLY"
+}
 }
 },
 {
@@ -95531,9 +96629,15 @@
 "EC NUMBER":[
 "3.1.4.46"
 ],
+"EC_NUMBER":"3.1.4.46",
 "GENE ASSOCIATION":[
 "(PF14_0060)"
-]
+],
+"SUBSYSTEM":"Lipids PhosphatidylcholineMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"doi:10.1016/j.molbiopara.2012.09.004",
+"NOTES":"ADD CITATION ONLY"
+}
 }
 },
 {
@@ -95560,9 +96664,15 @@
 "EC NUMBER":[
 "3.1.4.46"
 ],
+"EC_NUMBER":"3.1.4.46",
 "GENE ASSOCIATION":[
 "(PF14_0060)"
-]
+],
+"SUBSYSTEM":"Lipids PhosphatidylcholineMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"doi:10.1016/j.molbiopara.2012.09.004",
+"NOTES":"ADD CITATION ONLY"
+}
 }
 },
 {
@@ -95589,9 +96699,15 @@
 "EC NUMBER":[
 "3.1.4.46"
 ],
+"EC_NUMBER":"3.1.4.46",
 "GENE ASSOCIATION":[
 "(PF14_0060)"
-]
+],
+"SUBSYSTEM":"Lipids PhosphatidylcholineMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"doi:10.1016/j.molbiopara.2012.09.004",
+"NOTES":"ADD CITATION ONLY"
+}
 }
 },
 {
@@ -95617,9 +96733,15 @@
 "EC NUMBER":[
 "2.7.4.6"
 ],
+"EC_NUMBER":"2.7.4.6",
 "GENE ASSOCIATION":[
 "(PF13_0349) or (PFF0275c)"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; Nucleotides PurineMetabolism ; Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDb",
+"NOTES":"Added"
+}
 }
 },
 {
@@ -95646,9 +96768,15 @@
 "EC NUMBER":[
 "3.1.4.12"
 ],
+"EC_NUMBER":"3.1.4.12",
 "GENE ASSOCIATION":[
 "(PFL1870c)"
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1042/bj3460671",
+"NOTES":"Add citation only, and second reaction name"
+}
 }
 },
 {
@@ -95675,9 +96803,15 @@
 "EC NUMBER":[
 "2.7.8.3"
 ],
+"EC_NUMBER":"2.7.8.3",
 "GENE ASSOCIATION":[
 "(PFF1215w) or (PFF1210w)"
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; MPMP",
+"NOTES":"Added second gene; no experimental evidence for using cpdchol as a substrate (also uncommon throughout eukaryotes), thus, low confidence"
+}
 }
 },
 {
@@ -95703,9 +96837,15 @@
 "EC NUMBER":[
 "2.7.8.27"
 ],
+"EC_NUMBER":"2.7.8.27",
 "GENE ASSOCIATION":[
 "(PFF1215w) or (PFF1210w)"
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"PlasmoDB; MPMP",
+"NOTES":"Added second gene"
+}
 }
 },
 {
@@ -95731,7 +96871,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1016/S0166-6851(00)00336-4",
+"NOTES":"Added"
+}
 }
 },
 {
@@ -95756,7 +96901,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1016/S0166-6851(00)00336-4",
+"NOTES":"Added"
+}
 }
 },
 {
@@ -95783,9 +96933,15 @@
 "EC NUMBER":[
 "3.1.4.12"
 ],
+"EC_NUMBER":"3.1.4.12",
 "GENE ASSOCIATION":[
 "(PFL1870c)"
-]
+],
+"SUBSYSTEM":"Lipids SphingomyelinCeramideMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1042/bj3460671, 10.1016/S0166-6851(00)00336-4",
+"NOTES":"Added host sphingomyelin breakdown"
+}
 }
 },
 {
@@ -95811,9 +96967,15 @@
 "EC NUMBER":[
 "2.7.2.3"
 ],
+"EC_NUMBER":"2.7.2.3",
 "GENE ASSOCIATION":[
 "(PFI1105w) or (MAL13P1.40)"
-]
+],
+"SUBSYSTEM":"Carbohydrates Glycolysis",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"added second gene (made irrev.)"
+}
 }
 },
 {
@@ -95838,7 +97000,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"NOTES":"Name change (from DM to EX)"
+}
 }
 },
 {
@@ -95863,7 +97029,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"NOTES":"Name change (from DM to EX)"
+}
 }
 },
 {
@@ -95891,7 +97061,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFF1430c) or (PFL0420w) or (PFL1515c) or (PFB0435c) or (PFE0775c) or (PF11_0334)"
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"REFERENCE":"doi:10.1182/blood-2005-11-026963",
+"NOTES":"Add gene PF11_0335; remove H+ and add Leu; low confidence for genes"
+}
 }
 },
 {
@@ -95917,9 +97092,14 @@
 "EC NUMBER":[
 "2.4.1.83"
 ],
+"EC_NUMBER":"2.4.1.83",
 "GENE ASSOCIATION":[
 "(PF11_0427)"
-]
+],
+"SUBSYSTEM":"Lipids DolicholMetabolism",
+"iPfal17_notes":{
+"NOTES":"dolmanp to dolmanp_L"
+}
 }
 },
 {
@@ -95945,9 +97125,15 @@
 "EC NUMBER":[
 "1.15.1.1"
 ],
+"EC_NUMBER":"1.15.1.1",
 "GENE ASSOCIATION":[
 "(PF08_0071)"
-]
+],
+"SUBSYSTEM":"Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1016/j.molbiopara.2004.05.005",
+"NOTES":"only one gene to cyto"
+}
 }
 },
 {
@@ -95973,9 +97159,15 @@
 "EC NUMBER":[
 "1.15.1.1"
 ],
+"EC_NUMBER":"1.15.1.1",
 "GENE ASSOCIATION":[
 "(PFF1130c)"
-]
+],
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1016/j.molbiopara.2004.05.005",
+"NOTES":"only one gene to mito"
+}
 }
 },
 {
@@ -96001,7 +97193,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511",
+"NOTES":"No evidence that gene governs import"
+}
 }
 },
 {
@@ -96027,7 +97224,12 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511",
+"NOTES":"No evidence that gene governs import"
+}
 }
 },
 {
@@ -96053,7 +97255,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFA0590w)"
-]
+],
+"SUBSYSTEM":"Transport ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511",
+"NOTES":"Always export (may want to set lower bound >0 for some simulations)"
+}
 }
 },
 {
@@ -96079,7 +97286,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFA0590w)"
-]
+],
+"SUBSYSTEM":"Transport ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511",
+"NOTES":"Separate from import reaction, because import doesn't use gene"
+}
 }
 },
 {
@@ -96106,9 +97318,15 @@
 "EC NUMBER":[
 "1.8.1.7"
 ],
+"EC_NUMBER":"1.8.1.7",
 "GENE ASSOCIATION":[
 "(PF14_0192)"
-]
+],
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1371/journal.ppat.1001242",
+"NOTES":"apico and cyto not mito; generally not thought of as reversible, but no evidence for only forward direction"
+}
 }
 },
 {
@@ -96135,9 +97353,15 @@
 "EC NUMBER":[
 "1.8.1.7"
 ],
+"EC_NUMBER":"1.8.1.7",
 "GENE ASSOCIATION":[
 "(PF14_0192)"
-]
+],
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.1371/journal.ppat.1001242",
+"NOTES":"apico and cyto not mito"
+}
 }
 },
 {
@@ -96153,7 +97377,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.9",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"move to apico (from mito); made irreversible"
+}
+}
 },
 {
 "id":"GST12_c",
@@ -96177,9 +97409,14 @@
 "EC NUMBER":[
 "2.5.1.18"
 ],
+"EC_NUMBER":"2.5.1.18",
 "GENE ASSOCIATION":[
 "(PF3D7_1419300)"
-]
+],
+"SUBSYSTEM":"Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511"
+}
 }
 },
 {
@@ -96205,7 +97442,11 @@
 ],
 "GENE ASSOCIATION":[
 "(PFA0590w)"
-]
+],
+"SUBSYSTEM":"Transport ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511"
+}
 }
 },
 {
@@ -96230,7 +97471,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511"
+}
 }
 },
 {
@@ -96255,9 +97500,14 @@
 "EC NUMBER":[
 "2.5.1.18"
 ],
+"EC_NUMBER":"2.5.1.18",
 "GENE ASSOCIATION":[
 "(PF3D7_1121600)"
-]
+],
+"SUBSYSTEM":"Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"DOI: 10.3390/molecules200610511"
+}
 }
 },
 {
@@ -96273,7 +97523,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.15",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"TPx1 is cytosolic; remove one gene and move to cyto"
+}
+}
 },
 {
 "id":"THIORDXim",
@@ -96288,7 +97546,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.15",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"TPx2 is mito; remove one gene"
+}
+}
 },
 {
 "id":"GTHP_c",
@@ -96303,7 +97569,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.9",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"copy; move to cyto (from mito); made irreversible"
+}
+}
 },
 {
 "id":"ROOH_mEx",
@@ -96327,7 +97601,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem"
 }
 },
 {
@@ -96352,7 +97627,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism"
 }
 },
 {
@@ -96377,7 +97653,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem"
 }
 },
 {
@@ -96402,7 +97679,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism"
 }
 },
 {
@@ -96416,7 +97694,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.9",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"copy GTHP_c but alternative substrates"
+}
+}
 },
 {
 "id":"GTHP_ap2",
@@ -96429,7 +97715,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.9",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"copy GTHP[ap] but alternative substrates"
+}
+}
 },
 {
 "id":"Stress_protein_m",
@@ -96439,7 +97733,14 @@
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"Only occurs during state of stress"
+}
+}
 },
 {
 "id":"disulfide_protein_m",
@@ -96463,7 +97764,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem"
 }
 },
 {
@@ -96474,7 +97776,14 @@
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"Only occurs during state of stress"
+}
+}
 },
 {
 "id":"disulfide_protein_ap",
@@ -96498,7 +97807,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism"
 }
 },
 {
@@ -96512,7 +97822,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.15",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"copy THIORDX but alt substrate"
+}
+}
 },
 {
 "id":"THIORDXi_mt2",
@@ -96525,7 +97843,15 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"EC_NUMBER":"1.11.1.15",
+"SUBSYSTEM":"Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"copy THIORDX but alt substrate"
+}
+}
 },
 {
 "id":"Stress_protein_c",
@@ -96535,7 +97861,14 @@
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"notes":{
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem",
+"iPfal17_notes":{
+"REFERENCE":"\u00a0doi: 10.1371/journal.ppat.1001242; doi: 10.1111/j.1365-2958.2006.05303.x",
+"NOTES":"Only occurs during state of stress"
+}
+}
 },
 {
 "id":"disulfide_protein_c",
@@ -96559,7 +97892,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange ; Redox RedoxMetabolism ; Redox MitochondrialAntioxidantSystem"
 }
 },
 {
@@ -96585,7 +97919,8 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport"
 }
 },
 {
@@ -96603,6 +97938,7 @@
 "AUTHORS":[
 ""
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
@@ -96611,7 +97947,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport ; Redox RedoxMetabolism",
+"iPfal17_notes":{
+"NOTES":"Gap-filled"
+}
 }
 },
 {
@@ -96628,6 +97968,7 @@
 "AUTHORS":[
 ""
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
@@ -96636,7 +97977,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Exchange",
+"iPfal17_notes":{
+"NOTES":"Gap-filled"
+}
 }
 },
 {
@@ -96654,6 +97999,7 @@
 "AUTHORS":[
 ""
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
@@ -96662,7 +98008,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"NOTES":"Gap-filled"
+}
 }
 },
 {
@@ -96680,6 +98030,7 @@
 "AUTHORS":[
 ""
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
@@ -96688,7 +98039,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"NOTES":"Gap-filled"
+}
 }
 },
 {
@@ -96716,7 +98071,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"NOTES":"Export only or else glycolysis is unnecessary"
+}
 }
 },
 {
@@ -96734,6 +98093,7 @@
 "AUTHORS":[
 ""
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
@@ -96742,7 +98102,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"NOTES":"Gap-filled; necessary for 2ohph[m] generation "
+}
 }
 },
 {
@@ -96760,6 +98124,7 @@
 "AUTHORS":[
 ""
 ],
+"CONFIDENCE":"low",
 "CONFIDENCE LEVEL":[
 ""
 ],
@@ -96768,7 +98133,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"NOTES":"Gap-filled; necessary for 2ohph[m] generation "
+}
 }
 },
 {
@@ -96796,9 +98165,15 @@
 "EC NUMBER":[
 "1.2.4.1+2.3.1.12+1.8.1.4"
 ],
+"EC_NUMBER":"1.2.4.1+2.3.1.12+1.8.1.4",
 "GENE ASSOCIATION":[
 "((PF11_0256) or (PF14_0441)) and (PF10_0407) and (PFC0170c) and ((PF08_0066) or (PFL1550w))"
-]
+],
+"SUBSYSTEM":"Carbohydrates PyruvateMetabolism ; Lipids FattyAcidSynthesis",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Removed TCA association and extra genes"
+}
 }
 },
 {
@@ -96824,9 +98199,15 @@
 "EC NUMBER":[
 "1.1.5.3/1.1.5.4"
 ],
+"EC_NUMBER":"1.1.5.3/1.1.5.4",
 "GENE ASSOCIATION":[
 "(PFC0275w)"
-]
+],
+"SUBSYSTEM":"Carbohydrates Glycolysis ; Others MitochondrialElectronFlow",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"G3P shuttle system occurs on outside of membrane, so glycerol3P and dhap should be cytoplasmic. Also, FAD/FADH2 are cofactors to this reaction and QH2/Q component are needed. Added EC and subsystem"
+}
 }
 },
 {
@@ -96853,9 +98234,15 @@
 "EC NUMBER":[
 "1.1.1.8"
 ],
+"EC_NUMBER":"1.1.1.8",
 "GENE ASSOCIATION":[
 "(PFL0780w) or (PF11_0157)"
-]
+],
+"SUBSYSTEM":"Lipids FattyAcidSynthesis ; Others MitochondrialElectronFlow ; Carbohydrates Glycolysis ; Lipids UtilizationPhospholipids",
+"iPfal17_notes":{
+"REFERENCE":"MPMP; PlasmoDb",
+"NOTES":"Added second gene"
+}
 }
 },
 {
@@ -96882,9 +98269,15 @@
 "EC NUMBER":[
 "1.1.1.37"
 ],
+"EC_NUMBER":"1.1.1.37",
 "GENE ASSOCIATION":[
 "(PFF0895w)"
-]
+],
+"SUBSYSTEM":"Others MitochondrialTCACycle ; Carbohydrates PyruvateMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Made irrev"
+}
 }
 },
 {
@@ -96912,7 +98305,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF08_0031)"
-]
+],
+"SUBSYSTEM":"Transport MT",
+"iPfal17_notes":{
+"REFERENCE":"Nozawa et al 2011",
+"NOTES":"Membrane topology not shown, but presumed to be unidirectional"
+}
 }
 },
 {
@@ -96940,7 +98338,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PF08_0031)"
-]
+],
+"SUBSYSTEM":"Transport MT",
+"iPfal17_notes":{
+"REFERENCE":"Nozawa et al 2011",
+"NOTES":"Membrane topology not shown, but presumed to be unidirectional; gene found to also transport oxaloacetate"
+}
 }
 },
 {
@@ -96967,9 +98370,15 @@
 "EC NUMBER":[
 "1.1.1.37"
 ],
+"EC_NUMBER":"1.1.1.37",
 "GENE ASSOCIATION":[
 "(PFF0895w)"
-]
+],
+"SUBSYSTEM":"Others MitochondrialTCACycle ; Carbohydrates PyruvateMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Made irrev"
+}
 }
 },
 {
@@ -96996,9 +98405,15 @@
 "EC NUMBER":[
 "2.7.6.1"
 ],
+"EC_NUMBER":"2.7.6.1",
 "GENE ASSOCIATION":[
 "(PF13_0143) or (PF13_0157)"
-]
+],
+"SUBSYSTEM":"Carbohydrates PentosePhosphateCycle",
+"iPfal17_notes":{
+"REFERENCE":"MPMP",
+"NOTES":"Made irreversible, otherwise, abberant ATP production mechanism"
+}
 }
 },
 {
@@ -97024,7 +98439,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport lipid",
+"iPfal17_notes":{
+"NOTES":"Removed ATP and other supporting substrates- they permitted ATP production from host PE import"
+}
 }
 },
 {
@@ -97051,9 +98470,15 @@
 "EC NUMBER":[
 "2.1.2.1"
 ],
+"EC_NUMBER":"2.1.2.1",
 "GENE ASSOCIATION":[
 "PFL1720w"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; AminoAcids GlySerMetabolism ; Cofactors FolateBiosynthesis",
+"iPfal17_notes":{
+"REFERENCE":"Pornthanakasem et al 2012; Read et al 2010; Maenpuen et al 2009",
+"NOTES":"PF14_0534 not active; note PFL1720w has stage-specific expression in all organelles"
+}
 }
 },
 {
@@ -97080,9 +98505,15 @@
 "EC NUMBER":[
 "2.1.2.1"
 ],
+"EC_NUMBER":"2.1.2.1",
 "GENE ASSOCIATION":[
 "PFL1720w"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; AminoAcids GlySerMetabolism ; Cofactors FolateBiosynthesis",
+"iPfal17_notes":{
+"REFERENCE":"Pornthanakasem et al 2012; Read et al 2010; Maenpuen et al 2009",
+"NOTES":"PF14_0534 not active; note PFL1720w has stage-specific expression in all organelles"
+}
 }
 },
 {
@@ -97109,9 +98540,15 @@
 "EC NUMBER":[
 "2.1.2.1"
 ],
+"EC_NUMBER":"2.1.2.1",
 "GENE ASSOCIATION":[
 "PFL1720w"
-]
+],
+"SUBSYSTEM":"Nucleotides PyrimidineMetabolism ; AminoAcids GlySerMetabolism ; Cofactors FolateBiosynthesis",
+"iPfal17_notes":{
+"REFERENCE":"Pornthanakasem et al 2012; Read et al 2010; Maenpuen et al 2009",
+"NOTES":"PF14_0534 not active; note PFL1720w has stage-specific expression in all organelles"
+}
 }
 },
 {
@@ -97140,9 +98577,15 @@
 "EC NUMBER":[
 "1.4.4.2+2.1.2.10+1.8.1.4"
 ],
+"EC_NUMBER":"1.4.4.2+2.1.2.10+1.8.1.4",
 "GENE ASSOCIATION":[
 "((PF13_0345) or (MAL13P1.390) or (PF14_0497)) and (PFL1550w) and (PF11_0339)"
-]
+],
+"SUBSYSTEM":"AminoAcids GlySerMetabolism",
+"iPfal17_notes":{
+"REFERENCE":"http://dx.doi.org/10.1016/j.pt.2005.07.001",
+"NOTES":"Reversible; also requires Hprotein (currentlyunaccounted for as gene is unknown); added gene for 1.8.1.4; removed apicoplast gene"
+}
 }
 },
 {
@@ -97168,7 +98611,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFB0210c)"
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"REFERENCE":"Woodrow 1999, Joet 2003, 2004, Blume 2011",
+"NOTES":"Added gene"
+}
 }
 },
 {
@@ -97194,7 +98642,11 @@
 ],
 "GENE ASSOCIATION":[
 ""
-]
+],
+"SUBSYSTEM":"Transport MT",
+"iPfal17_notes":{
+"NOTES":"Unidirectional"
+}
 }
 },
 {
@@ -97220,7 +98672,12 @@
 ],
 "GENE ASSOCIATION":[
 "(PFB0210c)"
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"REFERENCE":"Blume 2011",
+"NOTES":"Added gene"
+}
 }
 },
 {
@@ -97246,7 +98703,12 @@
 ],
 "GENE ASSOCIATION":[
 "(MAL13P1_206)"
-]
+],
+"SUBSYSTEM":"Transport",
+"iPfal17_notes":{
+"REFERENCE":"Saliba 2006",
+"NOTES":"NA coupled, not H+ coupled"
+}
 }
 },
 {
@@ -97272,7 +98734,12 @@
 ],
 "GENE ASSOCIATION":[
 "(MAL8P1_13) or (PF11_0172)"
-]
+],
+"SUBSYSTEM":"Transport AP",
+"iPfal17_notes":{
+"REFERENCE":" DOI: 10.1074/jbc.M111.286054",
+"NOTES":"Poor uptake"
+}
 }
 },
 {
@@ -97298,7 +98765,12 @@
 ],
 "GENE ASSOCIATION":[
 "(MAL8P1_13) or (PF11_0172)"
-]
+],
+"SUBSYSTEM":"Transport e",
+"iPfal17_notes":{
+"REFERENCE":"Plasmodb; DOI: 10.1074/jbc.M111.286054",
+"NOTES":"Added reaction; transporter can also import 10fthf, but this subsrate is not normally in human serum"
+}
 }
 },
 {
@@ -97324,7 +98796,12 @@
 ],
 "GENE ASSOCIATION":[
 "(MAL8P1_13) or (PF11_0172)"
-]
+],
+"SUBSYSTEM":"Transport MT",
+"iPfal17_notes":{
+"REFERENCE":" DOI: 10.1074/jbc.M111.286054",
+"NOTES":"Poor uptake"
+}
 }
 },
 {
@@ -97350,7 +98827,12 @@
 ],
 "GENE ASSOCIATION":[
 "(MAL8P1_13) or (PF11_0172)"
-]
+],
+"SUBSYSTEM":"Transport MT",
+"iPfal17_notes":{
+"REFERENCE":" DOI: 10.1074/jbc.M111.286054",
+"NOTES":"Poor uptake"
+}
 }
 },
 {
@@ -99257,8 +100739,8 @@
 }
 },
 {
-"id":"Protein",
-"name":"Protein",
+"id":"protein_biomass",
+"name":"protein aggregate reaction for biomass",
 "metabolites":{
 "alatrna_c":-0.1364,
 "argtrna_c":-0.1349,
@@ -99354,8 +100836,8 @@
 }
 },
 {
-"id":"Lipid_prod",
-"name":"Lipid_prod",
+"id":"lipid_biomass",
+"name":"lipid aggregate reaction for biomass",
 "metabolites":{
 "all_apg_c":-0.2,
 "all_dgl_c":-4.0,
@@ -99545,7 +101027,7 @@
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "notes":{
-"References":"doi: 10.1074/jbc.270.42.24876"
+"REFERENCES":"doi: 10.1074/jbc.270.42.24876"
 }
 },
 {
@@ -99560,7 +101042,7 @@
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "notes":{
-"References":"doi: 10.1042/bj1740893"
+"REFERENCES":"doi: 10.1042/bj1740893"
 }
 },
 {
@@ -99613,20 +101095,26 @@
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "notes":{
+"MetaNetX (MNX) Equation":"http://identifiers.org/metanetx.reaction/MNXR102089",
+"Reactome":"http://www.reactome.org/content/detail/R-ALL-REACT_R-HSA-1222342",
 "original_bigg_ids":[
 "O2St"
 ]
 },
-"annotation":[
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR102089"
+"annotation":{
+"bigg.reaction":[
+"O2St"
 ],
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-REACT_R-HSA-1222342"
+"metanetx.reaction":[
+"MNXR102089"
+],
+"reactome":[
+"REACT_R-HSA-1222342"
+],
+"sbo":[
+"SBO:0000185"
 ]
-]
+}
 },
 {
 "id":"O2Stm",
@@ -99639,20 +101127,26 @@
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "notes":{
+"MetaNetX (MNX) Equation":"http://identifiers.org/metanetx.reaction/MNXR102089",
+"Reactome":"http://www.reactome.org/content/detail/R-ALL-REACT_R-HSA-1222342",
 "original_bigg_ids":[
 "O2Stm"
 ]
 },
-"annotation":[
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR102089"
+"annotation":{
+"bigg.reaction":[
+"O2Stm"
 ],
-[
-"Reactome",
-"http://www.reactome.org/content/detail/R-ALL-REACT_R-HSA-1222342"
+"metanetx.reaction":[
+"MNXR102089"
+],
+"reactome":[
+"REACT_R-HSA-1222342"
+],
+"sbo":[
+"SBO:0000185"
 ]
-]
+}
 },
 {
 "id":"EX_adprib_e",
@@ -99671,12 +101165,17 @@
 "EX_adprib_e_"
 ]
 },
-"annotation":[
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR98234"
+"annotation":{
+"bigg.reaction":[
+"EX_adprib_e"
+],
+"metanetx.reaction":[
+"MNXR98234"
+],
+"sbo":[
+"SBO:0000627"
 ]
-]
+}
 },
 {
 "id":"ADPRIBt",
@@ -99693,12 +101192,17 @@
 "ADPRIBt"
 ]
 },
-"annotation":[
-[
-"MetaNetX (MNX) Equation",
-"http://identifiers.org/metanetx.reaction/MNXR95481"
+"annotation":{
+"bigg.reaction":[
+"ADPRIBt"
+],
+"metanetx.reaction":[
+"MNXR95481"
+],
+"sbo":[
+"SBO:0000185"
 ]
-]
+}
 },
 {
 "id":"EX_12dgr120_e",
@@ -100030,19 +101534,6 @@
 "name":"Glycocholate exchange",
 "metabolites":{
 "gchola_e":-1
-},
-"lower_bound":-1000.0,
-"upper_bound":1000.0,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
-"id":"EX_glc__D_e",
-"name":"D-Glucose exchange",
-"metabolites":{
-"glc__D_e":-1
 },
 "lower_bound":-1000.0,
 "upper_bound":1000.0,
@@ -100497,11 +101988,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1216000",
+"id":"PF3D7_0717700",
 "name":""
 },
 {
-"id":"PF3D7_0717700",
+"id":"PF3D7_1216000",
 "name":""
 },
 {
@@ -100521,7 +102012,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1232200",
+"id":"PF3D7_0504600",
 "name":""
 },
 {
@@ -100533,15 +102024,15 @@
 "name":""
 },
 {
-"id":"PF3D7_0504600",
-"name":""
-},
-{
-"id":"PF3D7_1461900",
+"id":"PF3D7_1232200",
 "name":""
 },
 {
 "id":"PF3D7_0311200",
+"name":""
+},
+{
+"id":"PF3D7_1461900",
 "name":""
 },
 {
@@ -100617,11 +102108,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0919600",
+"id":"PF3D7_1116600",
 "name":""
 },
 {
-"id":"PF3D7_1116600",
+"id":"PF3D7_0919600",
 "name":""
 },
 {
@@ -100653,11 +102144,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1324900",
+"id":"PF3D7_1325200",
 "name":""
 },
 {
-"id":"PF3D7_1325200",
+"id":"PF3D7_1324900",
 "name":""
 },
 {
@@ -100933,11 +102424,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0211400",
+"id":"PF3D7_0626300",
 "name":""
 },
 {
-"id":"PF3D7_0626300",
+"id":"PF3D7_0211400",
 "name":""
 },
 {
@@ -100973,11 +102464,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0705500",
+"id":"PF3D7_1354200",
 "name":""
 },
 {
-"id":"PF3D7_1354200",
+"id":"PF3D7_0705500",
 "name":""
 },
 {
@@ -101073,19 +102564,15 @@
 "name":""
 },
 {
-"id":"PF3D7_1038900",
-"name":""
-},
-{
-"id":"PF3D7_0702200",
-"name":""
-},
-{
 "id":"PF3D7_0709700",
 "name":""
 },
 {
-"id":"PF3D7_1401500",
+"id":"PF3D7_1476700",
+"name":""
+},
+{
+"id":"PF3D7_1038900",
 "name":""
 },
 {
@@ -101093,7 +102580,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1476700",
+"id":"PF3D7_0702200",
+"name":""
+},
+{
+"id":"PF3D7_1401500",
 "name":""
 },
 {
@@ -101137,11 +102628,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1008900",
+"id":"PF3D7_0415600",
 "name":""
 },
 {
-"id":"PF3D7_0415600",
+"id":"PF3D7_1008900",
 "name":""
 },
 {
@@ -101157,11 +102648,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1360500",
+"id":"PF3D7_1138400",
 "name":""
 },
 {
-"id":"PF3D7_1138400",
+"id":"PF3D7_1360500",
 "name":""
 },
 {
@@ -101185,11 +102676,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1321500",
-"name":""
-},
-{
-"id":"PF3D7_1470500",
+"id":"PF3D7_1321600",
 "name":""
 },
 {
@@ -101197,7 +102684,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1321600",
+"id":"PF3D7_1470500",
+"name":""
+},
+{
+"id":"PF3D7_1321500",
 "name":""
 },
 {
@@ -101257,6 +102748,22 @@
 "name":""
 },
 {
+"id":"PF3D7_1227900",
+"name":""
+},
+{
+"id":"PF3D7_0521500",
+"name":""
+},
+{
+"id":"PF3D7_0219500",
+"name":""
+},
+{
+"id":"PF3D7_0908700",
+"name":""
+},
+{
 "id":"PF3D7_0914000",
 "name":""
 },
@@ -101265,31 +102772,15 @@
 "name":""
 },
 {
-"id":"PF3D7_0521500",
-"name":""
-},
-{
-"id":"PF3D7_0908700",
-"name":""
-},
-{
-"id":"PF3D7_1227900",
-"name":""
-},
-{
-"id":"PF3D7_0219500",
-"name":""
-},
-{
 "id":"PF3D7_1342100",
 "name":""
 },
 {
-"id":"PF3D7_1320800",
+"id":"PF3D7_0820700",
 "name":""
 },
 {
-"id":"PF3D7_0820700",
+"id":"PF3D7_1320800",
 "name":""
 },
 {
@@ -101317,11 +102808,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0827900",
+"id":"PF3D7_1134100",
 "name":""
 },
 {
-"id":"PF3D7_1352500",
+"id":"PF3D7_0827900",
 "name":""
 },
 {
@@ -101329,11 +102820,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1134100",
+"id":"PF3D7_0919400",
 "name":""
 },
 {
-"id":"PF3D7_0919400",
+"id":"PF3D7_1352500",
 "name":""
 },
 {
@@ -101353,19 +102844,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1231400",
-"name":""
-},
-{
 "id":"PF3D7_0629500",
-"name":""
-},
-{
-"id":"PF3D7_0209600",
-"name":""
-},
-{
-"id":"PF3D7_0515500",
 "name":""
 },
 {
@@ -101373,7 +102852,19 @@
 "name":""
 },
 {
+"id":"PF3D7_0209600",
+"name":""
+},
+{
 "id":"PF3D7_1208400",
+"name":""
+},
+{
+"id":"PF3D7_1231400",
+"name":""
+},
+{
+"id":"PF3D7_0515500",
 "name":""
 },
 {
@@ -101385,11 +102876,7 @@
 "name":""
 },
 {
-"id":"PF3D7_0824400",
-"name":""
-},
-{
-"id":"PF3D7_1469400",
+"id":"PF3D7_1347200",
 "name":""
 },
 {
@@ -101397,7 +102884,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1347200",
+"id":"PF3D7_0824400",
+"name":""
+},
+{
+"id":"PF3D7_1469400",
 "name":""
 },
 {
@@ -101417,7 +102908,19 @@
 "name":""
 },
 {
+"id":"PF3D7_0705900",
+"name":""
+},
+{
 "id":"PF3D7_1311300",
+"name":""
+},
+{
+"id":"PF3D7_1310000",
+"name":""
+},
+{
+"id":"PF3D7_0217100",
 "name":""
 },
 {
@@ -101429,18 +102932,6 @@
 "name":""
 },
 {
-"id":"PF3D7_0217100",
-"name":""
-},
-{
-"id":"PF3D7_0705900",
-"name":""
-},
-{
-"id":"PF3D7_1310000",
-"name":""
-},
-{
 "id":"PF3D7_1235700",
 "name":""
 },
@@ -101449,15 +102940,15 @@
 "name":""
 },
 {
-"id":"PF3D7_0702700",
-"name":""
-},
-{
 "id":"PF3D7_0620800",
 "name":""
 },
 {
 "id":"PF3D7_0411500",
+"name":""
+},
+{
+"id":"PF3D7_0702700",
 "name":""
 },
 {
@@ -101481,23 +102972,15 @@
 "name":""
 },
 {
-"id":"PF3D7_0410200",
-"name":""
-},
-{
 "id":"PF3D7_0312700",
 "name":""
 },
 {
-"id":"PF3D7_0510600",
+"id":"PF3D7_0410200",
 "name":""
 },
 {
 "id":"PF3D7_0714800",
-"name":""
-},
-{
-"id":"PF3D7_1103300",
 "name":""
 },
 {
@@ -101509,6 +102992,14 @@
 "name":""
 },
 {
+"id":"PF3D7_0510600",
+"name":""
+},
+{
+"id":"PF3D7_1103300",
+"name":""
+},
+{
 "id":"PF3D7_0707100",
 "name":""
 },
@@ -101517,11 +103008,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1418400",
+"id":"PF3D7_1339200",
 "name":""
 },
 {
-"id":"PF3D7_1339200",
+"id":"PF3D7_1418400",
 "name":""
 },
 {
@@ -101533,7 +103024,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1337600",
+"id":"PF3D7_0714900",
 "name":""
 },
 {
@@ -101541,15 +103032,15 @@
 "name":""
 },
 {
-"id":"PF3D7_0714900",
-"name":""
-},
-{
 "id":"PF3D7_0410100",
 "name":""
 },
 {
-"id":"PF3D7_1355400",
+"id":"PF3D7_1337600",
+"name":""
+},
+{
+"id":"PF3D7_0730700",
 "name":""
 },
 {
@@ -101557,7 +103048,7 @@
 "name":""
 },
 {
-"id":"PF3D7_0730700",
+"id":"PF3D7_1355400",
 "name":""
 },
 {
@@ -101569,11 +103060,15 @@
 "name":""
 },
 {
+"id":"PF3D7_0312600",
+"name":""
+},
+{
 "id":"PF3D7_0730600",
 "name":""
 },
 {
-"id":"PF3D7_0312600",
+"id":"PF3D7_1341000",
 "name":""
 },
 {
@@ -101586,10 +103081,6 @@
 },
 {
 "id":"PF3D7_0529600",
-"name":""
-},
-{
-"id":"PF3D7_1341000",
 "name":""
 },
 {
@@ -101609,15 +103100,15 @@
 "name":""
 },
 {
-"id":"PF3D7_0527700",
-"name":""
-},
-{
 "id":"PF3D7_1252000",
 "name":""
 },
 {
 "id":"PF3D7_0411600",
+"name":""
+},
+{
+"id":"PF3D7_0527700",
 "name":""
 },
 {
@@ -101641,7 +103132,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1026900",
+"id":"PF3D7_1469600",
 "name":""
 },
 {
@@ -101649,7 +103140,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1469600",
+"id":"PF3D7_1026900",
+"name":""
+},
+{
+"id":"PF3D7_0918000",
 "name":""
 },
 {
@@ -101661,11 +103156,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0918000",
+"id":"PF3D7_0716600",
 "name":""
 },
 {
-"id":"PF3D7_0727200",
+"id":"PF3D7_1365400",
 "name":""
 },
 {
@@ -101673,11 +103168,7 @@
 "name":""
 },
 {
-"id":"PF3D7_0716600",
-"name":""
-},
-{
-"id":"PF3D7_1365400",
+"id":"PF3D7_0727200",
 "name":""
 },
 {
@@ -101701,7 +103192,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1239600",
+"id":"PF3D7_1143900",
 "name":""
 },
 {
@@ -101709,7 +103200,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1143900",
+"id":"PF3D7_1239600",
 "name":""
 },
 {
@@ -101745,11 +103236,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0405700",
+"id":"PF3D7_0413700",
 "name":""
 },
 {
-"id":"PF3D7_0413700",
+"id":"PF3D7_0405700",
 "name":""
 },
 {
@@ -101769,11 +103260,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1120100",
+"id":"PF3D7_0413500",
 "name":""
 },
 {
-"id":"PF3D7_0413500",
+"id":"PF3D7_1120100",
 "name":""
 },
 {
@@ -101781,11 +103272,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0316300",
+"id":"PF3D7_1456800",
 "name":""
 },
 {
-"id":"PF3D7_1456800",
+"id":"PF3D7_0316300",
 "name":""
 },
 {
@@ -101817,15 +103308,7 @@
 "name":""
 },
 {
-"id":"PF3D7_0507500",
-"name":""
-},
-{
-"id":"PF3D7_1360800",
-"name":""
-},
-{
-"id":"PF3D7_1430200",
+"id":"PF3D7_1033800",
 "name":""
 },
 {
@@ -101833,75 +103316,7 @@
 "name":""
 },
 {
-"id":"PF3D7_0932300",
-"name":""
-},
-{
-"id":"PF3D7_1460100",
-"name":""
-},
-{
-"id":"PF3D7_1407800",
-"name":""
-},
-{
 "id":"PF3D7_1115700",
-"name":""
-},
-{
-"id":"PF3D7_1407900",
-"name":""
-},
-{
-"id":"PF3D7_0808200",
-"name":""
-},
-{
-"id":"PF3D7_1454400",
-"name":""
-},
-{
-"id":"PF3D7_1408000",
-"name":""
-},
-{
-"id":"PF3D7_1408100",
-"name":""
-},
-{
-"id":"PF3D7_0527300",
-"name":""
-},
-{
-"id":"PF3D7_0311700",
-"name":""
-},
-{
-"id":"PF3D7_1434600",
-"name":""
-},
-{
-"id":"PF3D7_1465700",
-"name":""
-},
-{
-"id":"PF3D7_1015300",
-"name":""
-},
-{
-"id":"PF3D7_1115300",
-"name":""
-},
-{
-"id":"PF3D7_1033800",
-"name":""
-},
-{
-"id":"PF3D7_1115400",
-"name":""
-},
-{
-"id":"PF3D7_0507200",
 "name":""
 },
 {
@@ -101909,15 +103324,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1136900",
+"id":"PF3D7_1115300",
 "name":""
 },
 {
-"id":"PF3D7_1401300",
-"name":""
-},
-{
-"id":"PF3D7_1116700",
+"id":"PF3D7_1360800",
 "name":""
 },
 {
@@ -101929,6 +103340,86 @@
 "name":""
 },
 {
+"id":"PF3D7_0808200",
+"name":""
+},
+{
+"id":"PF3D7_1407900",
+"name":""
+},
+{
+"id":"PF3D7_1015300",
+"name":""
+},
+{
+"id":"PF3D7_1407800",
+"name":""
+},
+{
+"id":"PF3D7_1430200",
+"name":""
+},
+{
+"id":"PF3D7_0527300",
+"name":""
+},
+{
+"id":"PF3D7_1136900",
+"name":""
+},
+{
+"id":"PF3D7_0507500",
+"name":""
+},
+{
+"id":"PF3D7_1115400",
+"name":""
+},
+{
+"id":"PF3D7_1116700",
+"name":""
+},
+{
+"id":"PF3D7_1460100",
+"name":""
+},
+{
+"id":"PF3D7_0507200",
+"name":""
+},
+{
+"id":"PF3D7_1408100",
+"name":""
+},
+{
+"id":"PF3D7_1408000",
+"name":""
+},
+{
+"id":"PF3D7_0311700",
+"name":""
+},
+{
+"id":"PF3D7_0932300",
+"name":""
+},
+{
+"id":"PF3D7_1434600",
+"name":""
+},
+{
+"id":"PF3D7_1465700",
+"name":""
+},
+{
+"id":"PF3D7_1401300",
+"name":""
+},
+{
+"id":"PF3D7_1454400",
+"name":""
+},
+{
 "id":"PF3D7_1458400",
 "name":""
 },
@@ -101937,11 +103428,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1205100",
+"id":"PF3D7_0629400",
 "name":""
 },
 {
-"id":"PF3D7_0629400",
+"id":"PF3D7_1205100",
 "name":""
 },
 {
@@ -101989,11 +103480,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0628800",
+"id":"PF3D7_0416100",
 "name":""
 },
 {
-"id":"PF3D7_0416100",
+"id":"PF3D7_0628800",
 "name":""
 },
 {
@@ -102009,11 +103500,15 @@
 "name":""
 },
 {
+"id":"PF3D7_0806400",
+"name":""
+},
+{
 "id":"PF3D7_0211600",
 "name":""
 },
 {
-"id":"PF3D7_0806400",
+"id":"PF3D7_0926400",
 "name":""
 },
 {
@@ -102021,7 +103516,7 @@
 "name":""
 },
 {
-"id":"PF3D7_0926400",
+"id":"PF3D7_1405600",
 "name":""
 },
 {
@@ -102033,15 +103528,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1405600",
+"id":"PF3D7_0828600",
 "name":""
 },
 {
 "id":"PF3D7_1116500",
-"name":""
-},
-{
-"id":"PF3D7_0828600",
 "name":""
 },
 {
@@ -102053,15 +103544,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1034900",
-"name":""
-},
-{
 "id":"PF3D7_1005000",
 "name":""
 },
 {
-"id":"PF3D7_0211800",
+"id":"PF3D7_1034900",
 "name":""
 },
 {
@@ -102069,7 +103556,15 @@
 "name":""
 },
 {
+"id":"PF3D7_0211800",
+"name":""
+},
+{
 "id":"PF3D7_1015000",
+"name":""
+},
+{
+"id":"PF3D7_1104000",
 "name":""
 },
 {
@@ -102077,15 +103572,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0603700",
-"name":""
-},
-{
 "id":"PF3D7_1232000",
 "name":""
 },
 {
-"id":"PF3D7_1104000",
+"id":"PF3D7_0603700",
 "name":""
 },
 {
@@ -102113,15 +103604,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1416800",
-"name":""
-},
-{
 "id":"PF3D7_1350100",
 "name":""
 },
 {
-"id":"PF3D7_1139700",
+"id":"PF3D7_1416800",
 "name":""
 },
 {
@@ -102129,7 +103616,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1435000",
+"id":"PF3D7_1139700",
 "name":""
 },
 {
@@ -102137,7 +103624,7 @@
 "name":""
 },
 {
-"id":"PF3D7_0928000",
+"id":"mal_mito_2",
 "name":""
 },
 {
@@ -102145,11 +103632,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1430900",
+"id":"PF3D7_1435000",
 "name":""
 },
 {
-"id":"mal_mito_2",
+"id":"PF3D7_1430900",
 "name":""
 },
 {
@@ -102157,11 +103644,15 @@
 "name":""
 },
 {
+"id":"PF3D7_0928000",
+"name":""
+},
+{
 "id":"PF3D7_0211300",
 "name":""
 },
 {
-"id":"PF3D7_1012300",
+"id":"mal_mito_3",
 "name":""
 },
 {
@@ -102173,7 +103664,7 @@
 "name":""
 },
 {
-"id":"mal_mito_3",
+"id":"PF3D7_1012300",
 "name":""
 },
 {
@@ -102193,39 +103684,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1253400",
-"name":""
-},
-{
-"id":"PF3D7_0215300",
-"name":""
-},
-{
-"id":"PF3D7_0301000",
-"name":""
-},
-{
 "id":"PF3D7_0215000",
 "name":""
 },
 {
 "id":"PF3D7_0401900",
-"name":""
-},
-{
-"id":"PF3D7_1479000",
-"name":""
-},
-{
-"id":"PF3D7_1372400",
-"name":""
-},
-{
-"id":"PF3D7_0619500",
-"name":""
-},
-{
-"id":"PF3D7_0525100",
 "name":""
 },
 {
@@ -102237,11 +103700,39 @@
 "name":""
 },
 {
+"id":"PF3D7_0301000",
+"name":""
+},
+{
+"id":"PF3D7_1253400",
+"name":""
+},
+{
+"id":"PF3D7_0525100",
+"name":""
+},
+{
 "id":"PF3D7_0731600",
 "name":""
 },
 {
+"id":"PF3D7_1372400",
+"name":""
+},
+{
+"id":"PF3D7_0619500",
+"name":""
+},
+{
+"id":"PF3D7_1479000",
+"name":""
+},
+{
 "id":"PF3D7_1238800",
+"name":""
+},
+{
+"id":"PF3D7_0215300",
 "name":""
 },
 {
@@ -102261,11 +103752,11 @@
 "name":""
 },
 {
-"id":"PF3D7_0922500",
+"id":"PF3D7_1308500",
 "name":""
 },
 {
-"id":"PF3D7_1308500",
+"id":"PF3D7_0922500",
 "name":""
 },
 {
@@ -102293,15 +103784,15 @@
 "name":""
 },
 {
-"id":"PF3D7_1020800",
-"name":""
-},
-{
 "id":"PF3D7_1446400",
 "name":""
 },
 {
 "id":"PF3D7_1124500",
+"name":""
+},
+{
+"id":"PF3D7_1020800",
 "name":""
 },
 {
@@ -102333,11 +103824,11 @@
 "name":""
 },
 {
-"id":"PF3D7_1365500",
+"id":"PF3D7_1344000",
 "name":""
 },
 {
-"id":"PF3D7_1452200",
+"id":"PF3D7_1365500",
 "name":""
 },
 {
@@ -102345,7 +103836,7 @@
 "name":""
 },
 {
-"id":"PF3D7_1344000",
+"id":"PF3D7_1452200",
 "name":""
 },
 {
