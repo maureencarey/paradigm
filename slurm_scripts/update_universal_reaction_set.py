@@ -3,11 +3,19 @@ import os
 import pandas as pd
 from cobra.core import Gene, Metabolite, Reaction
 import requests
+import time
+import logging
 
 data_path = "/home/mac9jc/paradigm/data/"
 model_path = "/home/mac9jc/paradigm/models/"
 #data_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/data"
 #model_path = "/Users/maureencarey/local_documents/work/comparative_parasite_models/paradigm/models"
+
+os.chdir(data_path)
+
+logging.basicConfig(filename='update.log', level=logging.INFO, filemode='w')
+logger = logging.getLogger(__name__)
+logger.info('BEGIN UPDATE')
 
 def met_ids_without_comp(met_id):
     # only one id listed
@@ -111,9 +119,16 @@ def add_full_met_info(model, met, met_id):
             'MetaNetX (MNX) Chemical':'metanetx.chemical', 'PubChem':'pubchem.compound',
             'BioCyc':'biocyc','Reactome':'reactome','Brenda':'brenda','LipidMaps':'lipidmaps',
             'Human Metabolome Database':'hmdb','CHEBI':'chebi','InChI':'inchikey'}
-
-    m = requests.get('http://bigg.ucsd.edu/api/v2/universal/metabolites/{}'.format(met_id))
-    x = m.json()
+    x = dict()
+    m = ''
+    while m == '':
+        try:
+            m = requests.get('http://bigg.ucsd.edu/api/v2/universal/metabolites/{}'.format(met_id))
+            x = m.json()
+            break
+        except:
+            time.sleep(1)
+            continue
     
     if met.name == '': met.name = x['name']
         
@@ -232,9 +247,16 @@ def add_full_rxn_info(model,rxn, rxn_id):
             'MetaNetX (MNX) Chemical':'metanetx.chemical','PubChem':'pubchem.compound',
             'BioCyc':'biocyc','Reactome':'reactome','Brenda':'brenda','LipidMaps':'lipidmaps',
             'Human Metabolome Database':'hmdb','CHEBI':'chebi','InChI':'inchikey'}
-    
-    m = requests.get('http://bigg.ucsd.edu/api/v2/universal/reactions/{}'.format(rxn_id))
-    x = m.json()
+    x = dict()
+    m = ''
+    while m == '':
+        try:
+            m = requests.get('http://bigg.ucsd.edu/api/v2/universal/reactions/{}'.format(rxn_id))
+            x = m.json()
+            break
+        except:
+            time.sleep(1)
+            continue
     
     if rxn.name == '': rxn.name = x['name']
     
@@ -311,15 +333,26 @@ def fix_charge_or_formula(model):
 os.chdir(model_path)
 universal = cobra.io.load_json_model('universal_model_oct26_2018.json')
 cobra.manipulation.modify.escape_ID(universal)
+logger.info('loaded universal')
+
 
 # remove Biomass reactions
 rxn_list_to_delete = [r.id for r in universal.reactions if r.id.startswith('BIOMASS_')]
 universal.remove_reactions(rxn_list_to_delete)
+logger.info('removed biomasses from universal')
 
 # add full met and rxn info
+met_counter = 0
+rxn_counter = 0
 for met in universal.metabolites:
+    if met_counter % 10 == 0:
+        logger.info(met_counter)
+    met_counter = met_counter + 1
     universal = add_full_met_info(universal, met, met_ids_without_comp(met.id))
 for rxn in universal.reactions:
+    if rxn_counter % 10 == 0:
+        logger.info(rxn_counter)
+    rxn_counter = rxn_counter +1
     universal = add_full_rxn_info(universal, rxn, rxn.id)
 
 # fix charges and formulas
@@ -343,6 +376,7 @@ cobra.io.save_json_model(universal, 'universal_model_updated_withATPM.json')
 cobra.io.write_sbml_model(universal, 'universal_model_updated_withATPM.xml')
 cobra.io.save_json_model(universal, 'universal_model_updated.json')
 cobra.io.write_sbml_model(universal, 'universal_model_updated.xml')
+logger.info('SAVED UNIVERSAL')
 
 # universal = cobra.io.load_json_model('universal_model_updated.json')
 rxn_list = [r.id for r in universal.reactions]
@@ -352,15 +386,24 @@ met_list = [m.id for m in universal.metabolites]
 os.chdir(model_path)
 model = cobra.io.load_json_model('iPfal19.json')
 cobra.manipulation.modify.escape_ID(model)
+logger.info('LOADED IPFAL')
 
 # add full met info
+met_counter = 0
 for met in model.metabolites:
+    if met_counter % 10 == 0:
+       	logger.info(met_counter)
+    met_counter = met_counter +1
     met_id = met_ids_without_comp(met.id)
     if met_id+'_c' in met_list: model = add_full_met_info(model, met, met_id)
     else: model = add_partial_met_info(model,met,met_id)
 
 # add full reaction info
+rxn_counter = 0
 for rxn in model.reactions:
+    if rxn_counter % 10 == 0:
+       	logger.info(rxn_counter)
+    rxn_counter = rxn_counter +1
     if rxn.id in rxn_list: model = add_full_rxn_info(model, rxn, rxn.id)
     else: model = add_partial_rxn_info(model, rxn, rxn.id)
 
@@ -382,6 +425,7 @@ for gene in model.genes:
 
 # Add SBO terms
 model = add_sbo_terms(model)
+logger.info('fixed SBO terms')
 
 # fix some formatting issues that memote highlights
 model.metabolites.get_by_id('5mti_c').charge = int(model.metabolites.get_by_id('5mti_c').charge)
@@ -399,6 +443,8 @@ for met_id in met_list:
         if option.startswith('C'): # else starts with G -> glycan id
             new_list_o_kegg_ids.append(option)
     model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = new_list_o_kegg_ids
+
+logger.info('fixed formatting issues')
 
 os.chdir(model_path)
 model.name = 'iPfal19, curated P. falciparum 3D7'

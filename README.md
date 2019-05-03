@@ -151,7 +151,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # get data
     sbatch ./run_these/pipeline_slurm_step1.slurm
     mv step2_27_02_2019.log ./model_generation_logs/
-    module load anaconda/5.2.0-py3.6
+    mkdir ./data/results
     # # would like to run Memote here on iPfal18
     sbatch ./run_these/update_universal_reaction_set.slurm
     # # would like to run Memote again on iPfal18
