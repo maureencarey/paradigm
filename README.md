@@ -154,6 +154,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     mkdir ./data/results
     # # would like to run Memote here on iPfal18
     sbatch ./run_these/update_universal_reaction_set.slurm
+    mv ./data/update.log ./model_generation_logs/update.log
     # # would like to run Memote again on iPfal18
     # # make all models
     bash ./run_these/pipeline_auto_slurm_for_step2.sh

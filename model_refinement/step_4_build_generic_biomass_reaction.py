@@ -130,8 +130,8 @@ lower_lm = set([met.lower().split('_')[0] for met in leish_biomass_mets_ids])
 lower_ch = set([met.lower().split('_')[0] for met in chominis_biomass_mets_ids])
 biomass_mets = list(lower_ch.intersection(lower_lm).intersection(lower_pf))
 biomass_mets.append('biomass')
-biomass_mets.append('protein')
-biomass_mets.append('lipid') # plus DAG begause in all reactions
+biomass_mets.append('bm_protein')
+biomass_mets.append('bm_lipid') # plus DAG begause in all reactions
 
 logger.info('made biomass mets')
 
@@ -157,7 +157,7 @@ for species, model in model_dict.items():
 
     # protein production, transport, exchange
     # biomass 'sink', lipid exchange
-    for x in ['Protein', 'Protein_t','DM_bm','EX_lipid_c','Lipid_prod']: #'Protein_ex',
+    for x in ['protein_biomass', 'Protein_t','DM_bm','EX_lipid_c','lipid_biomass']: #'Protein_ex',
         new_rxn = pf_curated.reactions.get_by_id(x).copy()
         for met in new_rxn.metabolites:
             if met.id not in [x.id for x in model.metabolites]:
@@ -169,7 +169,7 @@ for species, model in model_dict.items():
     
     # lipid production
     for r in pf_curated.metabolites.get_by_id('all_dgl_c').reactions:
-        if r.id != 'Lipid_prod':
+        if r.id != 'Lipid_prod' and r.id != 'lipid_biomass':
             new_rxn = pf_curated.reactions.get_by_id(r.id).copy()
             for met in new_rxn.metabolites:
                 if met.id not in [x.id for x in model.metabolites]:
@@ -180,10 +180,10 @@ for species, model in model_dict.items():
                     model.genes.remove(gene)
     new_rxn = Reaction()
     met_dict = {pf_curated.metabolites.get_by_id('all_dgl_c'): -1,
-        pf_curated.metabolites.get_by_id('lipid_c'): +1}
+        pf_curated.metabolites.get_by_id('bm_lipid_c'): +1}
     new_rxn.add_metabolites(met_dict)
-    new_rxn.name = 'Lipid_prod'
-    new_rxn.id = 'Lipid_prod'
+    new_rxn.name = 'lipid aggregate reaction for biomass'
+    new_rxn.id = 'lipid_biomass'
     new_rxn.lower_bound = 0.
     new_rxn.upper_bound = 1000.
     for met in new_rxn.metabolites:

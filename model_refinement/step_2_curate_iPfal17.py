@@ -24,56 +24,31 @@ edits = pd.read_csv("iPfal17_edits_BMCGenomics_Carey.csv")
 
 for x in edits.index:
     
-    rxn_id_string = edits['Unnamed: 0'][x]
-    
+    rxn_id_string = edits['Unnamed: 0'][x]    
     if rxn_id_string in pf_model.reactions:
-        if isinstance(edits.Subsystem[x],str) or str(float(edits.Subsystem[x])).lower() != 'nan':
-            pf_model.reactions.get_by_id(rxn_id_string).notes['SUBSYSTEM'] = edits.Subsystem[x]
-        if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
-            pf_model.reactions.get_by_id(rxn_id_string).notes['CONFIDENCE'] = edits['Confidence Score'][x]
-       	if isinstance(edits['EC Number'][x],str) or str(float(edits['EC Number'][x])).lower() != 'nan':            
-            pf_model.reactions.get_by_id(rxn_id_string).notes['EC_NUMBER'] = edits['EC Number'][x]
-        if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
-            if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
-            else:
-                pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
-        elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-            pf_model.reactions.get_by_id(rxn_id_string).notes['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
-    elif '[' in rxn_id_string:
-        rxn_id_string_brackets = rxn_id_string.replace('[','_LSQBKT_').replace(']','_RSQBKT_')
-        if rxn_id_string_brackets in pf_model.reactions:
-            if isinstance(edits.Subsystem[x],str) or str(float(edits.Subsystem[x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['SUBSYSTEM'] = edits.Subsystem[x]
-            if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['CONFIDENCE'] = edits['Confidence Score'][x]
-            if isinstance(edits['EC Number'][x],str) or str(float(edits['EC Number'][x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['EC_NUMBER'] = edits['EC Number'][x]
-            if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
-                if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-                    pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
-                else:
-                    pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
-            elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string_brackets).notes['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
-    elif '.' in rxn_id_string:
-        rxn_id_string_period = rxn_id_string.replace('.','_PERIOD_')
-        if rxn_id_string_period in pf_model.reactions: 
-            if isinstance(edits.Subsystem[x],str) or str(float(edits.Subsystem[x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string_period).notes['SUBSYSTEM'] = edits.Subsystem[x]
-            if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string_period).notes['CONFIDENCE'] = edits['Confidence Score'][x]    
-            pf_model.reactions.get_by_id(rxn_id_string_period).notes['EC_NUMBER'] = rxn_id_string
-            if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
-                if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-                    pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
-                else:
-                    pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
-            elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-                pf_model.reactions.get_by_id(rxn_id_string_period).notes['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
-    
+        rxn_id_string_use = rxn_id_string
+    elif '.' in rxn_id_string and rxn_id_string.replace('.','_PERIOD_') in pf_model.reactions:
+        rxn_id_string_use = rxn_id_string.replace('.','_PERIOD_')
+    elif '[' in rxn_id_string and rxn_id_string.replace('[','_LSQBKT_').replace(']','_RSQBKT_') in pf_model.reactions:
+        rxn_id_string_use = rxn_id_string.replace('[','_LSQBKT_').replace(']','_RSQBKT_')
     else:
         logging.info(edits['Unnamed: 0'][x]+'is in the edits file, but not in the model???')
+        continue
+
+    if isinstance(edits.Subsystem[x],str) or str(float(edits.Subsystem[x])).lower() != 'nan':
+        pf_model.reactions.get_by_id(rxn_id_string_use).subsystem = edits.Subsystem[x]
+    if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
+        pf_model.reactions.get_by_id(rxn_id_string_use).annotation['CONFIDENCE'] = edits['Confidence Score'][x]
+    if isinstance(edits['EC Number'][x],str) or str(float(edits['EC Number'][x])).lower() != 'nan':            
+        pf_model.reactions.get_by_id(rxn_id_string_use).annotation['EC_NUMBER'] = edits['EC Number'][x]
+    if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
+        pf_model.reactions.get_by_id(rxn_id_string_use).annotation['REFERENCE'] = edits.References[x]
+        if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+            pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+        else:
+            pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
+    elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
+        pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
 
 # update gene identifiers to latest EuPathDB/PlasmoDB version
 os.chdir(data_path)
@@ -311,18 +286,6 @@ pf_model, unused = prune_unused_metabolites2(pf_model)
 # # pf_model.reactions.PUNP8 # CURATED SOMETHING WRONG
 # pf_model.reactions.UP4UH1
 # # pf_model.reactions.get_by_id('PYRDAT') # SOMETHING WRONG, genes don't make sense
-
-
-# for rxn in pf_model.reactions:
-#     if rxn.id not in [r.id for r in universal_model.reactions]:
-#         logging.info(rxn.id)
-#         logging.info(rxn.reaction)
-# 
-# for met in pf_model.metabolites:
-#     if met.id.split('_')[0] not in [m.id.split('_')[0] for m in universal_model.metabolites]:
-#         logging.info(met.id)
-#         logging.info(met.name)
-        
         
 os.chdir(data_path)
 met_document = pd.read_table('bigg_metabolites.txt')
@@ -331,42 +294,7 @@ cobra.manipulation.modify.escape_ID(pf_model)
 logging.info('finished escape')
 
 # add metabolite info 
-need_info = list()
-for met in pf_model.metabolites:
-    if met.id in [m.id for m in universal_model.metabolites]:
-        if met.id.startswith('protein') or met.id.startswith('lipid'):
-            test_string  = 's'
-        else:
-            met_row = met_document[met_document['bigg_id'] == met.id]
-            met_row['universal_bigg_id']
-            m = requests.get('http://bigg.ucsd.edu/api/v2/universal/metabolites/{}'.\
-            format(met_row['universal_bigg_id'][met_row['universal_bigg_id'].index[0]]))
-            x = m.json()
-            met.name = x['name']
-            met.notes = x['database_links']
-            met.formula = x['formulae']
-            met.charge = x['charges']
-    elif met.id.endswith('_ap') or met.id.endswith('_fv'):
-        if met.id[:-3] in [met.id[:-2] for met in universal_model.metabolites]:
-            m = requests.get('http://bigg.ucsd.edu/api/v2/universal/metabolites/{}'.\
-            format(met.id[:-3]))
-            x = m.json()
-            met.name = x['name']
-            met.notes = x['database_links']
-            met.formula = x['formulae']
-            met.charge = x['charges']
-        else:
-            need_info.append(met.id)
-    elif met.id[:-2] in [met.id[:-2] for met in universal_model.metabolites]:
-        m = requests.get('http://bigg.ucsd.edu/api/v2/universal/metabolites/{}'.\
-        format(met.id[:-2]))
-        x = m.json()
-        met.name = x['name']
-        met.notes = x['database_links']
-        met.formula = x['formulae']
-        met.charge = x['charges']
-    else:
-        need_info.append(met.id)
+# this section is cut because it is done in the update_universal_reaction_set.slurm script
 
 # add some new metabolites
 change_mets = {'hb_e':{'name':'host hemoglobin','formula':[], 'charge':[]}, 
@@ -432,7 +360,6 @@ for met in pf_model.metabolites:
         met.name = change_mets[met.id]['name']
         met.formula = change_mets[met.id]['formula']
         met.charge = change_mets[met.id]['charge']
-        if met.id in need_info: need_info.remove(met.id)
     if met.id.endswith('_ap'):
         met.compartment = 'apicoplast'
     elif met.id.endswith('_c'):
@@ -445,9 +372,6 @@ for met in pf_model.metabolites:
         met.compartment = 'extracellular'
     else:
         met.compartment = 'other'
-logging.info('these mets arent in universal')
-logging.info(need_info)
-logging.info('-----------------------')
 
 pf_model.reactions.get_by_id('ACCOAL').id = 'ACCOAL2_temp'
 pf_model.reactions.get_by_id('ACCOAL2').id = 'ACCOAL'
@@ -617,17 +541,17 @@ pf_model.reactions.protein_biomass.name = 'protein aggregate reaction for biomas
 pf_model.reactions.Lipid_prod.id = 'lipid_biomass'
 pf_model.reactions.lipid_biomass.name   = 'lipid aggregate reaction for biomass'
 
-bm_rna = universal_model.metabolites.get_by_id('bm_rna_c').copy()
-bm_dna = universal_model.metabolites.get_by_id('bm_dna_c').copy()
-bm_lipid = universal_model.metabolites.get_by_id('bm_lipid_c').copy()
+# bm_rna = universal_model.metabolites.get_by_id('bm_rna_c').copy()
+# bm_dna = universal_model.metabolites.get_by_id('bm_dna_c').copy()
+# bm_lipid = universal_model.metabolites.get_by_id('bm_lipid_c').copy()
 pf_model.metabolites.protein_c.id = 'bm_protein_c'
 pf_model.metabolites.lipid_c.id = 'bm_lipid_c'
 
 # add growth associated ATP demand
-atpm = universal_model.reactions.ATPM
-pf_model.add_reactions([atpm])
-pf_model.reactions.ATPM.lower_bound = 0.001
-pf_model.reactions.ATPM.upper_bound = 1000.
+# atpm = universal_model.reactions.ATPM
+# pf_model.add_reactions([atpm])
+# pf_model.reactions.ATPM.lower_bound = 0.001
+# pf_model.reactions.ATPM.upper_bound = 1000.
 
 # PRINT DUPLICATE REACTIONS
 duplicates = dict()

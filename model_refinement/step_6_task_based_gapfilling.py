@@ -47,33 +47,46 @@ model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)
 logger.info('loaded model')
 
 for species, model in model_dict.items():
-    if 'biomass' not in [r.id for r in model.reactions]:
+    if 'biomass' not in [r.id for r in model.reactions] and 'generic_biomass' not in [r.id for r in model.reactions]:
         logger.info('biomass not in reactions anymore')
 
 os.chdir(model_path)
 universal_model = cobra.io.load_json_model('universal_model_updated.json')
 
+if '2OBUTt' not in universal_model.reactions: # REMOVE
+    logger.info('test here 1')
+
 # extend universal by curated model
 pf_model = cobra.io.load_json_model('iPfal19_updated.json')
 len_univ_rxns = len(universal_model.reactions)
+print('loop 1') # REMOVE
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:
         if len(set(['hb_c','hb_e','hemozoin_c','hemozoin_e','hemozoin_fv']).intersection(set([met.id for met in rxn.metabolites.keys()]))) == 0:
             universal_model.add_reactions([rxn.copy()]) # extend universal by Pf reactions, but remove gene IDs
             if len(rxn.genes) > 0:
                 genes = rxn.genes
+                if rxn.id not in universal_model.reactions: # REMOVE
+                    print('troubleshooting option 1') # REMOVE
+                    logger.info('troubleshooting option 1') # REMOVE
                 universal_model.reactions.get_by_id(rxn.id).gene_reaction_rule = ''
                 for gene in genes:
                     if len(universal_model.genes.get_by_id(gene.id).reactions) == 0:
                            gene_list = [universal_model.genes.get_by_id(gene.id)]
                            cobra.manipulation.delete.remove_genes(universal_model, gene_list, remove_reactions=True)
     else: #rxn.id IS in [r.id for r in universal_model but in PF its reversible and in universal its irreversible, make reversible
+        if rxn.id not in universal_model.reactions: # REMOVE
+            logger.info('troubleshooting option 2') # REMOVE
+            print('troubleshooting option 2') # REMOVE
         if rxn.lower_bound < universal_model.reactions.get_by_id(rxn.id).lower_bound:
             universal_model.reactions.get_by_id(rxn.id).lower_bound = rxn.lower_bound
         if rxn.upper_bound > universal_model.reactions.get_by_id(rxn.id).upper_bound:
             universal_model.reactions.get_by_id(rxn.id).upper_bound = rxn.upper_bound
 if len(universal_model.reactions) <= len_univ_rxns:
     logger.info('ERROR - universal model does not have Pf reactions added!')
+
+if '2OBUTt' not	in universal_model.reactions:  # REMOVE
+   logger.info('test here 2')
 
 ## prep for removing universal reactions that are in the wrong compartment for this model
 # database mapping - this is for release 42, must update if using a different EuPathDB release
@@ -86,6 +99,8 @@ amoebadb = ["AcastellaniiNeff", "EdisparSAW760", "EhistolyticaHM1IMSS-A", "Ehist
 toxodb = ["CcayetanensisCHN_HEN01", "CsuisWienI","EacervulinaHoughton", "EbrunettiHoughton", "EfalciformisBayerHaberkorn1970", "EmaximaWeybridge", "EmitisHoughton", "EnecatrixHoughton", "EpraecoxHoughton", "EtenellaHoughton", "HhammondiHH34", "NcaninumLIV", "SneuronaSN3", "SneuronaSOSN1", "TgondiiARI", "TgondiiFOU", "TgondiiGAB2-2007-GAL-DOM2", "TgondiiGT1", "TgondiiMAS", "TgondiiME49", "Tgondiip89", "TgondiiRH", "TgondiiRUB", "TgondiiTgCatPRC2", "TgondiiVAND", "TgondiiVEG"]
 microsporidiadb = ["AalgeraePRA109", "AalgeraePRA339", "AspWSBS2006","EaedisUSNM41457", "EbieneusiH348", "EcanceriGB1","EcuniculiEC1", "EcuniculiEC2", "EcuniculiEC3","EcuniculiEcunIII-L","EcuniculiGBM1", "EhellemATCC50504", "EhellemSwiss", "EhepatopenaeiTH1","EintestinalisATCC50506", "EromaleaeSJ2008","Heriocheircanceri","HeriocheirGB1", "MdaphniaeUGP3", "NausubeliERTm2", "NausubeliERTm6", "NbombycisCQ1", "NceranaeBRL01","NceranaePA08_1199","NdisplodereJUm2807","NparisiiERTm1", "NparisiiERTm3", "OcolligataOC4", "PneurophiliaMK1", "Slophii42_110", "ThominisUnknown", "VcorneaeATCC50505", "Vculicisfloridensis"]
 piroplasmadb = ["BbigeminaBOND", "BbovisT2Bo", "Bdivergens1802A","BmicrotiRI","BovataMiyake", "CfelisWinnie", "TannulataAnkara", "TequiWA", "TorientalisShintoku", "TparvaMuguga"]
+
+print('loop 2') # REMOVE 
 
 compartment_dictionary = dict()
 for species in model_dict.keys():
@@ -129,13 +144,16 @@ for x in gapfilling_tasks.index:
         gapfilling_tasks['Metabolite'].iloc[x] = met_dict[gapfilling_tasks['Metabolite'].\
         iloc[x]]
 
+GENERIC_BIOMASS = 'generic_biomass'
+P_BIOMASS = 'biomass'
+tasks_dict = dict()
+
+print('loop 3') # REMOVE
+
 for species, model in model_dict.items():
     logger.info(species)
     logger.info(model.objective.expression)
-    logger.info('')
 
-tasks_dict = dict()
-for species, model in model_dict.items():
     if sum(genome_ids['strain_ID'].isin([species])): # does the model have any tasks?
         idx = genome_ids.index[genome_ids['strain_ID'] == species].tolist()
         sp = genome_ids.loc[idx]['species'] # get species name
@@ -155,7 +173,7 @@ for species, model in model_dict.items():
             
             tasks_dict[species] = {"consumption":consumption_species['Metabolite'],
                 "production":production_species['Metabolite']}
-    if 'biomass' not in [r.id for r in model.reactions]:
+    if 'biomass' not in [r.id for r in model.reactions] and 'generic_biomass' not in [r.id for r in model.reactions]:
         logger.info('biomass not in reactions anymore')
 
 # tasks_dict # key = species, value = dictionary
@@ -163,6 +181,8 @@ for species, model in model_dict.items():
 # tasks_dict[species][production] = dataframe of met Ids with column name 'Metabolite'
 
 from cobra.flux_analysis.parsimonious import add_pfba
+
+print('loop 4') # REMOVE
 
 def flatten_mixed_list(list_of_interest):
     new_list = list()
@@ -221,9 +241,12 @@ for species, model in model_dict.items():
     
     logger.info(species)
     model.solver = 'glpk'
-    if 'biomass' in [r.id for r in model.reactions]:
-        model.objective = 'biomass'
-        logger.info('was able to set objective')
+    if 'biomass' in [r.id for r in model.reactions]: 
+        model.objective = 'biomass' # never using this, just a test
+        logger.info('was able to set objective to biomass')
+    elif 'generic_biomass' in [r.id for r in model.reactions]:
+        model.objective = 'generic_biomass' # never using this,	just a test
+        logger.info('was able to set objective to generic biomass')
     add_reactions_list = list()
     add_mets_list = list()
 
@@ -237,6 +260,10 @@ for species, model in model_dict.items():
             if x in rxn_metabolite_list:
                 l.append(rxn.id)
     universal_model_for_species.remove_reactions(l)
+    if '2OBUTt' not in universal_model_for_species.reactions:  # REMOVE
+        logger.info('test here 3')
+
+    print('loop 5') # REMOVE
 
     if species in tasks_dict.keys():
 
@@ -323,10 +350,14 @@ for species, model in model_dict.items():
                     if len(solution) > 1:
                         for rxn_id in solution:
                             if rxn_id != 'DM_'+cyto_met:
+                                if rxn_id not in gf_universal.reactions: # REMOVE
+                                   logger.info('troubleshooting option 3') # REMOVE
                                 add_reactions_list.append(gf_universal.reactions.\
                                 get_by_id(rxn_id).copy())
                             else:
                                 if solution[0] != 'DM_'+cyto_met:
+                                   if solution[0] not in gf_universal.reactions: # REMOVE
+       	       	                      logger.info('troubleshooting option 4') # REMOVE
                                    add_reactions_list.append(gf_universal.reactions.\
                                    get_by_id(solution[0]).copy())
                 else:
@@ -415,10 +446,6 @@ for species, model in model_dict.items():
     model_dict[species] = model
     # save models
 
-GENERIC_BIOMASS = 'generic_biomass'
-P_BIOMASS = 'biomass'
-for species, model in model_dict.items():
-
     logger.info(species)
     model.solver = 'glpk'
     gf_mod_list1 = list()
@@ -430,15 +457,19 @@ for species, model in model_dict.items():
         model.reactions.get_by_id('generic_biomass').lb = 0.
         model.reactions.get_by_id('generic_biomass').ub = 1000.
 
+    print('loop 6') # REMOVE
+
     if GENERIC_BIOMASS in [r.id for r in model.reactions]:
         gf_model = model.copy()
-        gf_universal = universal_model.copy()
+        gf_universal = universal_model_for_species.copy()
         gf_model.objective = GENERIC_BIOMASS
         if gf_model.slim_optimize() < 0.01: # gapfill if can't produce
              solution = pfba_gapfill_implementation(gf_model, gf_universal, \
              GENERIC_BIOMASS)
              if len(solution) >= 1:
                  for rxn_id in solution:
+                     if rxn_id not in gf_universal.reactions: # REMOVE
+                        logger.info('troubleshooting option 5') # REMOVE
                      add_reactions_list.append(gf_universal.reactions.\
                      get_by_id(rxn_id).copy())
                      gf_mod_list1.append(gf_universal.reactions.\
@@ -446,7 +477,7 @@ for species, model in model_dict.items():
         os.chdir(data_path)
         df = pd.DataFrame({'rxns_added':gf_mod_list1})
         df.to_csv('gapfilling_additions_{0}_generic_biomass.csv'.format(SPECIES_ID_old))
-        logger.info("wrote generic bioamss file")
+        logger.info("wrote generic biomass file")
     else:
         logger.info('error: no generic biomass reaction')
     
@@ -456,7 +487,7 @@ for species, model in model_dict.items():
 
     if 'biomass' in [r.id for r in model.reactions]:
         gf_model = model.copy()
-        gf_universal = universal_model.copy()
+        gf_universal = universal_model_for_species.copy()
         gf_model.objective = 'biomass'
         logger.info('set objective')
         logger.info(gf_model.slim_optimize())
@@ -467,6 +498,8 @@ for species, model in model_dict.items():
                  logger.info('reactions to add')
                  logger.info(len(solution))
                  for rxn_id in solution:
+                     if rxn_id not in gf_universal.reactions: # REMOVE
+                        logger.info('troubleshooting option 6') # REMOVE
                      add_reactions_list.append(gf_universal.reactions.\
                      get_by_id(rxn_id).copy())
                      gf_mod_list2.append(gf_universal.reactions.\

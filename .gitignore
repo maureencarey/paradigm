@@ -3,6 +3,7 @@
 *.log
 *.fasta
 *.sbatch
+data/ortho_annotations_per_genome_29_03_2019.csv
 data/ortho_annotations_per_genome_11_03_2019.csv
 data/metanetx_chem_prop.tsv
 data/ortho_annotations_per_genome_feb2019.csv

@@ -1,9 +1,9 @@
 # library(tidyverse)
 library(RCurl)
 # Feb 9th 2018 MAC, updated May 23rd 2018, MAC, updated July 24th 2018 MAC, updated for release 39 Oct 4th, 2018 MAC, updated for release 41 on Dec 11, 2018
-# Updated March 8th for release 42
+# Updated March 8th for release 42, May 3rd for release 43 (no new genomes)
 
-version = 42
+version = 43
 database_lc = c("plasmodb","cryptodb","giardiadb","tritrypdb","trichdb","amoebadb","toxodb","microsporidiadb", "piroplasmadb")
 DataBase_uc = c("PlasmoDB","CryptoDB","GiardiaDB","TriTrypDB","TrichDB","AmoebaDB","ToxoDB","MicrosporidiaDB", "PiroplasmaDB")
 plasmodb = c("PadleriG01","PbergheiANKA","PbillcollinsiG01","PblacklockiG01","Pchabaudichabaudi","PcoatneyiHackeri","PcynomolgiB","PcynomolgiM","Pfalciparum3D7","Pfalciparum7G8","PfalciparumCD01","PfalciparumDd2","PfalciparumGA01","PfalciparumGB4","PfalciparumGN01","PfalciparumHB3","PfalciparumIT","PfalciparumKE01","PfalciparumKH01","PfalciparumKH02","PfalciparumML01","PfalciparumSD01","PfalciparumSN01","PfalciparumTG01","PfragileNilgiri","PgaboniG01","PgaboniSY75","Pgallinaceum8A","PinuiSanAntonio1","PknowlesiH","PknowlesiMalayanPk1A","PmalariaeUG01","PovalecurtisiGH01","PpraefalciparumG01","PreichenowiCDC","PreichenowiG01","PrelictumSGS1-like","PvinckeipetteriCR","Pvinckeivinckeivinckei","Pvivax-likePvl01","PvivaxP01","PvivaxSal1","Pyoeliiyoelii17X","Pyoeliiyoelii17XNL","PyoeliiyoeliiYM")
