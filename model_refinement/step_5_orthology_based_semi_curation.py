@@ -42,13 +42,14 @@ pf_model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)
 logger.info('loaded model')
 
 os.chdir(data_path)
-mapping = pd.read_csv("plasmodium_orthology_conversion_release41.csv")
-mapping['[Organism]'] = mapping['[Organism]'].str.replace(".", "")
-mapping['[Organism]'] = mapping['[Organism]'].str.replace("strain", "")
-mapping['[Organism]'] = mapping['[Organism]'].str.replace("Strain", "")
-mapping['[Organism]'] = mapping['[Organism]'].str.replace(" ", "")
-mapping['[Organism]'] = mapping['[Organism]'].str.replace("Sal-1", "Sal1")
-if SPECIES_ID not in mapping['[Organism]'].unique():
+mapping = pd.read_csv("plasmodium_orthology_conversion_release43.tsv", sep='\t')
+mapping['Organism'] = mapping['Organism'].str.replace(".", "")
+mapping['Organism'] = mapping['Organism'].str.replace("strain", "")
+mapping['Organism'] = mapping['Organism'].str.replace("Strain", "")
+mapping['Organism'] = mapping['Organism'].str.replace(" ", "")
+mapping['Organism'] = mapping['Organism'].str.replace("Sal-1", "Sal1")
+mapping['Organism'] = mapping['Organism'].str.replace("nilgiri","Nilgiri")
+if SPECIES_ID not in mapping['Organism'].unique():
     logger.info(SPECIES_ID+'not in orthology mapping dataframe, aka we are not converting via orthology (printing infeasible to catch this error)')
 else:
     logger.info('loaded mapping')
@@ -107,13 +108,13 @@ for species, model in pf_model_dict.items():
     y2 = len(model.genes)
     z2 = len(model.metabolites)
 
-    species_specific_mapping = mapping[mapping['[Organism]'] == species]
+    species_specific_mapping = mapping[mapping['Organism'] == species]
     logger.info('pruned mapping file')
     
     for index, row in species_specific_mapping.iterrows():
-        new_gene = row['[Gene ID]']
-        if ',' not in row['[Input Ortholog(s)]']:
-            gene = row['[Input Ortholog(s)]'].strip()
+        new_gene = row['Gene ID']
+        if ',' not in row['Input Ortholog(s)']:
+            gene = row['Input Ortholog(s)'].strip()
             if gene in [x.id for x in iPfal19.genes]:
                 gene = iPfal19.genes.get_by_id(gene)
                 rxn_to_add = gene.reactions.copy()
@@ -131,8 +132,8 @@ for species, model in pf_model_dict.items():
                                 model.reactions.get_by_id(rxn.id).gene_reaction_rule + ' or ' +new_gene
     #                     else:logger.info('gene already there')
         else:
-            for i in range(0,len(row['[Input Ortholog(s)]'].split(', ')),1):
-                gene = row['[Input Ortholog(s)]'].split(', ')[i].strip()
+            for i in range(0,len(row['Input Ortholog(s)'].split(', ')),1):
+                gene = row['Input Ortholog(s)'].split(', ')[i].strip()
                 if gene in [x.id for x in iPfal19.genes]:
                     gene = iPfal19.genes.get_by_id(gene)
                     rxn_to_add = gene.reactions.copy()

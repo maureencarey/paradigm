@@ -1,0 +1,21 @@
+,rxns_added
+0,CHORS: 3psme_c --> chor_c + pi_c
+1,CITt2r: cit_e + h_e <=> cit_c + h_c
+2,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+3,GMPR: gmp_c + 2.0 h_c + nadph_c --> imp_c + nadp_c + nh4_c
+4,ANPRT: anth_c + prpp_c --> ppi_c + pran_c
+5,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+6,PSCVT: pep_c + skm5p_c <=> 3psme_c + pi_c
+7,TRPS1: 3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c
+8,ORNCD: orn_c --> nh4_c + pro__L_c
+9,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+10,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+11,TSULR3e: 2.0 gthrd_c + tsul_c --> gthox_c + h2s_c + so3_c
+12,DHQTi: 3dhq_c --> 3dhsk_c + h2o_c
+13,PPNDH: h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+14,PRAIi: pran_c --> 2cpr5p_c
+15,IGPS: 2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c
+16,CHORM: chor_c --> pphn_c
+17,SHKK: atp_c + skm_c --> adp_c + h_c + skm5p_c
+18,GMPt6: gmp_e + h_e --> gmp_c + h_c
+19,GLYVESSEC: atp_c + 3.0 gly_c + h2o_c --> adp_c + 3.0 gly_e + h_c + pi_c

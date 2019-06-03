@@ -40,6 +40,33 @@ day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step6_no_ortho_{}_{}.log'.format(SPECIES_ID_old,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 6 for a Plasmodium model - WITHOUT ORTHOLOGY TRANSFORMATION')
+
+def intersection(rxn_list_compartments, acceptable_compartments):
+    temp = set(acceptable_compartments)
+    unacceptable_comp = [value for value in rxn_list_compartments if value not in temp]
+    return(unacceptable_comp)
+
+def get_comp(model,met_id):
+
+    # get compartment associated with a metabolite(s)
+    if met_id in [met.id for met in model.metabolites]:
+        for m in [model.metabolites.get_by_id(met_id)]:
+            if m.id.endswith('_c') or m.id.endswith('_e') or m.id.endswith('_f') or \
+            m.id.endswith('_g') or m.id.endswith('_h') or m.id.endswith('_i') or \
+            m.id.endswith('_l') or m.id.endswith('_m') or m.id.endswith('_n') or \
+            m.id.endswith('_p') or m.id.endswith('_r') or m.id.endswith('_s') or \
+            m.id.endswith('_u') or m.id.endswith('_v') or m.id.endswith('_x'):
+                id_withou_c = m.id[-2:]
+            elif m.id.endswith('_cx') or m.id.endswith('_um') or m.id.endswith('_im') or \
+             m.id.endswith('_cm') or m.id.endswith('_ap') or m.id.endswith('_fv'):
+                id_withou_c = m.id[-3:]
+            else:
+                print('unknown compartment')
+                print(m.id)
+                id_withou_c = ''
+    else:
+        id_withou_c = ''
+    return(id_withou_c)
     
 # modified for Rivanna: read in the models
 model_dict = {}
@@ -216,6 +243,9 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
         logging.info('pFBA solution is infeasible!')
     return(add_reactions_to_model)
 
+GENERIC_BIOMASS = 'generic_biomass'
+P_BIOMASS = 'biomass'
+
 for species, model in model_dict.items():
     
     logger.info(species)
@@ -229,13 +259,11 @@ for species, model in model_dict.items():
     # remove reactions that are not in eligible compartments
     compartments = compartment_dictionary[species]
     universal_model_for_species = universal_model.copy()
-    l = list()
     for rxn in universal_model_for_species.reactions:
-        rxn_metabolite_list = '\t'.join([m.id for m in rxn.metabolites])
-        for x in compartments:
-            if x in rxn_metabolite_list:
-                l.append(rxn.id)
-    universal_model_for_species.remove_reactions(l)
+        # rxn_metabolite_list = '\t'.join([m.id for m in rxn.metabolites])
+        rxn_metabolite_list = [get_comp(universal_model_for_species,m.id) for m in rxn.metabolites]
+        if len(intersection(rxn_metabolite_list, compartments))>0:
+            universal_model_for_species.remove_reactions([rxn])    
 
     if species in tasks_dict.keys():
 
@@ -266,7 +294,7 @@ for species, model in model_dict.items():
             cyto_met = met+'_c'
     
             gf_model = model.copy()
-            gf_universal = universal_model.copy()
+            gf_universal = universal_model_for_species.copy()
             # make sure you are making any mets by reversing biomass production
             if 'biomass' in [r.id for r in gf_model.reactions]:
                 gf_model.reactions.get_by_id('biomass').lb = 0.
@@ -412,10 +440,6 @@ for species, model in model_dict.items():
     model_dict[species] = model
     # save models
 
-GENERIC_BIOMASS = 'generic_biomass'
-P_BIOMASS = 'biomass'
-for species, model in model_dict.items():
-
     logger.info(species)
     model.solver = 'glpk'
     gf_mod_list1 = list()
@@ -429,7 +453,7 @@ for species, model in model_dict.items():
 
     if GENERIC_BIOMASS in [r.id for r in model.reactions]:
         gf_model = model.copy()
-        gf_universal = universal_model.copy()
+        gf_universal = universal_model_for_species.copy()
         gf_model.objective = GENERIC_BIOMASS
         if gf_model.slim_optimize() < 0.01: # gapfill if can't produce
              solution = pfba_gapfill_implementation(gf_model, gf_universal, \

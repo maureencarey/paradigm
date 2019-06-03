@@ -162,7 +162,7 @@ for species, model in essentiality_screen_models.items():
         essentiality_screen_results_interpreted[species+'_species_biomass'] = interpreted_results
 
         pd.DataFrame.from_dict(essentiality_screen_results_raw[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}_{}.csv".format(species+'_species_biomass',day))
-pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}_{}.csv".format(species+'_species_biomass',day))
+        pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species+'_species_biomass'], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}_{}.csv".format(species+'_species_biomass',day))
 
 list_o_reactions2 = list()
 for species, model in essentiality_screen_models.items():

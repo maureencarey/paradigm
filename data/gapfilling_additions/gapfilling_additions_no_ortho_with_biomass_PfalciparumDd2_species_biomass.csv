@@ -1,0 +1,51 @@
+,rxns_added
+0,r1978: arg__L_c + na1_e + thr__L_e --> arg__L_e + na1_c + thr__L_c
+1,trna_phe: trnaphe_c <=> 
+2,DROPPRx: 25dhpp_c + h_c + nadh_c --> 25dthpp_c + nad_c
+3,trna_val: trnaval_c <=> 
+4,CMPDAi: cmp_c + h2o_c + h_c --> nh4_c + ump_c
+5,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c
+6,r2040: gly_c + his__L_e --> gly_e + his__L_c
+7,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+8,EX_inositol: ptd1ino_e <=> 
+9,trna_tyr: trnatyr_c <=> 
+10,trna_asn: trnaasn_c <=> 
+11,trna_thr: trnathr_c <=> 
+12,r1957: leu__L_e + lys__L_c + na1_e --> leu__L_c + lys__L_e + na1_c
+13,PTD1INOt: ptd1ino_c <=> ptd1ino_e
+14,QULNS_1: dhap_c + iasp_c --> 2.0 h2o_c + h_c + pi_c + quln_c
+15,trna_leu: trnaleu_c <=> 
+16,trna_met: trnamet_c <=> 
+17,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+18,HISyLATtc: arg__L_c + his__L_e + na1_e --> arg__L_e + his__L_c + na1_c
+19,trna_trp: trnatrp_c <=> 
+20,trna_glu: trnaglu_c <=> 
+21,OPHHXm: 2oph_m + nadph_m + 0.5 o2_m --> 2ohph_m + h2o_m + nadp_m
+22,NADK1: gtp_c + nad_c --> gdp_c + h_c + nadp_c
+23,OCTDPtmt: octdp_m <=> octdp_c
+24,trna_lys: trnalys_c <=> 
+25,PHEMEtm: pheme_m <=> pheme_c
+26,4HBZtm: 4hbz_c --> 4hbz_m
+27,trna_ile: trnaile_c <=> 
+28,trna_ala: trnaala_c <=> 
+29,trna_cys: trnacys_c <=> 
+30,trna_arg: trnaarg_c <=> 
+31,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+32,HBZOPTm: 4hbz_m + octdp_m --> 3ophb_m + 2.0 ppi_m
+33,RBFSb_1: 2.0 dmlz_c --> 4r5au_c + h_c + ribflv_c
+34,MI3PP: h2o_c + mi3p__D_c --> inost_c + pi_c
+35,trna_ser: trnaser_c <=> 
+36,FTHFLi: atp_c + for_c + thf_c --> 10fthf_c + adp_c + pi_c
+37,lipid4: cdpdag_c <=> cdpdddecg_c + cdpdhdec9eg_c + cdpdhdecg_c + cdpdodec11eg_c + cdpdodecg_c + cdpdtdec7eg_c + cdpdtdecg_c
+38,trna_his: trnahis_c <=> 
+39,MTHFC: h2o_c + methf_c <=> 10fthf_c + h_c
+40,trna_gly: trnagly_c <=> 
+41,ASPO6: asp__L_c + o2_c --> h2o2_c + h_c + iasp_c
+42,CHRPL: chor_c --> 4hbz_c + pyr_c
+43,PINOS: 0.01 cdpdag_c + inost_c --> cmp_c + h_c + 0.01 ptd1ino_c
+44,trna_asp: trnaasp_c <=> 
+45,trna_gln: trnagln_c <=> 
+46,trna_pro: trnapro_c <=> 
+47,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+48,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+49,r1977: lys__L_c + na1_e + thr__L_e --> lys__L_e + na1_c + thr__L_c

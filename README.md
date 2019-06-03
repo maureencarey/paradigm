@@ -13,6 +13,10 @@ Please see .gitignore for specific file names or groups and feel free to email f
 
 All data in subdirectory entitled data.
 
+#### plasmodium_orthology_conversion.csv
+
+This is acquired from PlasmoDB.org by doing gene search> by orthology (P. falciparum 3D7) > add step (transform by orthology (all))
+
 ## data acquisition
 
 ### step_0_download_all_eupathDB_release41.r
@@ -160,25 +164,9 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     bash ./run_these/pipeline_auto_slurm_for_step2.sh
     # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
     # # clean things up - especially log files
+    module load anaconda/5.2.0-py3.6
     bash ./run_these/pipeline_cleanup.sh
 	# infeasible
-		# step6_EhistolyticaHM1IMSS_07_01_2019.log
-		# step6_EhistolyticaHM3IMSS_07_01_2019.log
-		# step6_EhistolyticaHM1IMSS-B_07_01_2019.log
-		# step6_EhistolyticaKU27_07_01_2019.log
-		# step6_LmexicanaMHOMGT2001U1103_07_01_2019.log
-		# step6_PbergheiANKA_07_01_2019.log
-		# step6_TbruceigambienseDAL972_07_01_2019.log
-		# step6_TbruceiLister427_07_01_2019.log
-		# step6_TbruceiTREU927_07_01_2019.log
-		# step6_TgondiiARI_07_01_2019
-		# step6_TgondiiFOU_07_01_2019
-		# step6_TgondiiGAB2-2007-GAL-DOM2_07_01_2019
-		# step6_TgondiiGT1_07_01_2019
-		# step6_TgondiiMAS_07_01_2019
-		# step6_TgondiiME49_07_01_2019
-		# step6_TgondiiVAND_07_01_2019
-			# pFBA gapfilling for DM_mal__D_c is infeasible!
     # # gapfill plasmodium models prior to orthology conversion to test differences
     bash ./run_these/pipeline_auto_slurm_for_plasmodium.sh
     # # move things to convenient locations
@@ -191,8 +179,10 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # mkdir ./gapfilling_additions
     mv gapfilling_additions_* ./gapfilling_additions
     # mkdir ./percent_wrong_comp
-    mv percent_reactions_in_* ./percent_wrong_com
+    mv percent_reactions_in_* ./percent_wrong_comp
     # # run analyses
+    mkdir ./data/results/rxn_essentiality
+    mkdir ./data/results/gene_essentiality
     sbatch ./run_these/follow_up_analyses/analyses_part1.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part2.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part3.slurm

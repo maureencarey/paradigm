@@ -1,0 +1,6 @@
+,rxns_added
+0,AMPt: amp_e --> amp_c
+1,GLYCL_2: co2_c + mlthf_c + nadh_c + nh4_c --> gly_c + nad_c + thf_c
+2,GHMT2r: ser__L_c + thf_c <=> gly_c + h2o_c + mlthf_c
+3,EX_val__L_e: val__L_e <=> 
+4,r1855: na1_e + ser__L_c + val__L_e --> na1_c + ser__L_e + val__L_c

@@ -341,6 +341,12 @@ rxn_list_to_delete = [r.id for r in universal.reactions if r.id.startswith('BIOM
 universal.remove_reactions(rxn_list_to_delete)
 logger.info('removed biomasses from universal')
 
+# add exchange reactions
+for met in universal.metabolites:
+    if met.id.endswith('_e'):
+        if 'EX_'+met.id not in universal.reactions:
+            universal.add_boundary(met,type = "exchange")
+
 # add full met and rxn info
 met_counter = 0
 rxn_counter = 0

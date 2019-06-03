@@ -19,8 +19,6 @@ log_fname = vars(args)['log_file']
 # parse arguments for global variables
 INFO_name = log_fname
 
-logging.info('these steps were infeasible:')
-
 with open(log_fname) as f:
     prev_line = ' '
     for i, line in enumerate(f):
@@ -35,4 +33,5 @@ with open(log_fname) as f:
             logging.info(line)
             logging.info('__________________________________')
         prev_line = line
+    logging.info('{} is complete'.format(log_fname))
 

@@ -1,0 +1,10 @@
+,rxns_added
+0,PPDK: atp_c + pi_c + pyr_c --> amp_c + h_c + pep_c + ppi_c
+1,PDYXPT_c: pydam_c + pyr_c --> ala__L_c + pydx_c
+2,SO3ti: so3_c --> so3_e
+3,CITt2r: cit_e + h_e <=> cit_c + h_c
+4,GLYCL_2: co2_c + mlthf_c + nadh_c + nh4_c --> gly_c + nad_c + thf_c
+5,AMPt: amp_e --> amp_c
+6,NH4ti: nh4_c --> nh4_e
+7,SULO: h2o_c + o2_c + so3_c --> h2o2_c + h_c + so4_c
+8,HMR_3951: na1_c + so3_c --> na1_e + so3_e

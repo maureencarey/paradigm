@@ -1,0 +1,48 @@
+,rxns_added
+0,FAOXC1811603m: 5.0 coa_m + 4.0 fad_m + 5.0 h2o_m + 5.0 nad_m + odecoa_m --> 5.0 accoa_m + 4.0 fadh2_m + 5.0 h_m + 5.0 nadh_m + occoa_m
+1,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+2,trna_ile: trnaile_c <=> 
+3,4HBZtmt: 4hbz_m <=> 4hbz_c
+4,trna_gln: trnagln_c <=> 
+5,trna_arg: trnaarg_c <=> 
+6,trna_ser: trnaser_c <=> 
+7,trna_thr: trnathr_c <=> 
+8,trna_val: trnaval_c <=> 
+9,trna_leu: trnaleu_c <=> 
+10,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+11,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+12,QMO2: 2.0 o2_c + q8h2_c --> 2.0 h_c + 2.0 o2s_c + q8_c
+13,trna_asp: trnaasp_c <=> 
+14,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+15,trna_pro: trnapro_c <=> 
+16,CO2tmt: co2_m <=> co2_c
+17,RBFSb: 2.0 dmlz_c --> 4r5au_c + ribflv_c
+18,OCTDPtmt: octdp_m <=> octdp_c
+19,trna_lys: trnalys_c <=> 
+20,ASPO3_1: asp__L_c + q8_c --> iasp_c + q8h2_c
+21,TALA: g3p_c + s7p_c --> e4p_c + f6p_c
+22,trna_gly: trnagly_c <=> 
+23,FAOXC80: 3.0 coa_m + 3.0 fad_m + 3.0 h2o_m + 3.0 nad_m + occoa_m --> 4.0 accoa_m + 3.0 fadh2_m + 3.0 h_m + 3.0 nadh_m
+24,RTOTALFATPc: Rtotal_e + atp_c + coa_c --> Rtotalcoa_c + amp_c + ppi_c
+25,trna_ala: trnaala_c <=> 
+26,trna_trp: trnatrp_c <=> 
+27,PHEMEtm: pheme_m <=> pheme_c
+28,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+29,trna_his: trnahis_c <=> 
+30,trna_phe: trnaphe_c <=> 
+31,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+32,ACCOAtm_1: accoa_c <=> accoa_m
+33,MEPCT: 2me4p_c + ctp_c + h_c --> 4c2me_c + ppi_c
+34,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+35,MET_SLV: 5mtr1p_c --> met__L_c
+36,trna_asn: trnaasn_c <=> 
+37,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+38,DROPPRy: 25dhpp_c + h_c + nadph_c --> 25dthpp_c + nadp_c
+39,trna_cys: trnacys_c <=> 
+40,r1467: odecoa_c --> odecoa_m
+41,QULNS: dhap_c + iasp_c --> 2.0 h2o_c + pi_c + quln_c
+42,trna_met: trnamet_c <=> 
+43,trna_tyr: trnatyr_c <=> 
+44,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+45,DCTPD2: ctp_c + h2o_c + h_c --> nh4_c + utp_c
+46,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c

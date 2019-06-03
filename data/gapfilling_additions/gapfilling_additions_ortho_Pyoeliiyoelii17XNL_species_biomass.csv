@@ -1,0 +1,51 @@
+,rxns_added
+0,RTOTALFATPc: Rtotal_e + atp_c + coa_c --> Rtotalcoa_c + amp_c + ppi_c
+1,DROPPRy: 25dhpp_c + h_c + nadph_c --> 25dthpp_c + nadp_c
+2,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+3,ASPO4_1: asp__L_c + mqn8_c --> iasp_c + mql8_c
+4,trna_arg: trnaarg_c <=> 
+5,trna_phe: trnaphe_c <=> 
+6,trna_tyr: trnatyr_c <=> 
+7,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c
+8,trna_gly: trnagly_c <=> 
+9,PINOS: 0.01 cdpdag_c + inost_c --> cmp_c + h_c + 0.01 ptd1ino_c
+10,MEPCT: 2me4p_c + ctp_c + h_c --> 4c2me_c + ppi_c
+11,trna_asn: trnaasn_c <=> 
+12,HMDHPS_c: ahdt_c + h2o_c --> 6hmhpt_c + ac_c + h_c + pppi_c
+13,trna_lys: trnalys_c <=> 
+14,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+15,FAOXC80: 3.0 coa_m + 3.0 fad_m + 3.0 h2o_m + 3.0 nad_m + occoa_m --> 4.0 accoa_m + 3.0 fadh2_m + 3.0 h_m + 3.0 nadh_m
+16,RBFSb: 2.0 dmlz_c --> 4r5au_c + ribflv_c
+17,QULNS: dhap_c + iasp_c --> 2.0 h2o_c + pi_c + quln_c
+18,trna_his: trnahis_c <=> 
+19,trna_met: trnamet_c <=> 
+20,trna_gln: trnagln_c <=> 
+21,trna_ala: trnaala_c <=> 
+22,FAOXC1811603m: 5.0 coa_m + 4.0 fad_m + 5.0 h2o_m + 5.0 nad_m + odecoa_m --> 5.0 accoa_m + 4.0 fadh2_m + 5.0 h_m + 5.0 nadh_m + occoa_m
+23,OCTDPtmt: octdp_m <=> octdp_c
+24,trna_val: trnaval_c <=> 
+25,ASPO3_1: asp__L_c + q8_c --> iasp_c + q8h2_c
+26,QMO3: mql8_c + 2.0 o2_c --> 2.0 h_c + mqn8_c + 2.0 o2s_c
+27,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+28,PHEMEtm: pheme_m <=> pheme_c
+29,trna_ile: trnaile_c <=> 
+30,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+31,trna_leu: trnaleu_c <=> 
+32,MET_SLV: 5mtr1p_c --> met__L_c
+33,trna_asp: trnaasp_c <=> 
+34,FBA3: s17bp_c --> dhap_c + e4p_c
+35,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+36,trna_pro: trnapro_c <=> 
+37,r1467: odecoa_c --> odecoa_m
+38,4HBZtmt: 4hbz_m <=> 4hbz_c
+39,trna_thr: trnathr_c <=> 
+40,trna_trp: trnatrp_c <=> 
+41,trna_ser: trnaser_c <=> 
+42,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+43,CO2tmt: co2_m <=> co2_c
+44,trna_cys: trnacys_c <=> 
+45,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+46,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+47,ACCOAtm_1: accoa_c <=> accoa_m
+48,DCTPD2: ctp_c + h2o_c + h_c --> nh4_c + utp_c
+49,DRTPPD: 25dthpp_c + h2o_c + h_c --> 5aprbu_c + nh4_c

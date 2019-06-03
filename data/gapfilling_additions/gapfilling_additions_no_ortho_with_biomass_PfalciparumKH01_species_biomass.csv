@@ -1,0 +1,52 @@
+,rxns_added
+0,trna_gly: trnagly_c <=> 
+1,ASPO6: asp__L_c + o2_c --> h2o2_c + h_c + iasp_c
+2,trna_arg: trnaarg_c <=> 
+3,OPHHXm: 2oph_m + nadph_m + 0.5 o2_m --> 2ohph_m + h2o_m + nadp_m
+4,lipid4: cdpdag_c <=> cdpdddecg_c + cdpdhdec9eg_c + cdpdhdecg_c + cdpdodec11eg_c + cdpdodecg_c + cdpdtdec7eg_c + cdpdtdecg_c
+5,PHEMEtm: pheme_m <=> pheme_c
+6,PINOS: 0.01 cdpdag_c + inost_c --> cmp_c + h_c + 0.01 ptd1ino_c
+7,trna_his: trnahis_c <=> 
+8,r1959: leu__L_e + na1_e + orn_c --> leu__L_c + na1_c + orn_e
+9,HBZOPTm: 4hbz_m + octdp_m --> 3ophb_m + 2.0 ppi_m
+10,OCTDPtmt: octdp_m <=> octdp_c
+11,trna_gln: trnagln_c <=> 
+12,FTHFLi: atp_c + for_c + thf_c --> 10fthf_c + adp_c + pi_c
+13,r2046: his__L_e + phe__L_c --> his__L_c + phe__L_e
+14,trna_leu: trnaleu_c <=> 
+15,CHRPL: chor_c --> 4hbz_c + pyr_c
+16,trna_ile: trnaile_c <=> 
+17,trna_asp: trnaasp_c <=> 
+18,trna_ser: trnaser_c <=> 
+19,trna_ala: trnaala_c <=> 
+20,r1979: na1_e + orn_c + thr__L_e --> na1_c + orn_e + thr__L_c
+21,MTHFC_1: h2o_c + methf_c --> 10fthf_c
+22,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+23,DCTPD2: ctp_c + h2o_c + h_c --> nh4_c + utp_c
+24,DROPPRy: 25dhpp_c + h_c + nadph_c --> 25dthpp_c + nadp_c
+25,trna_glu: trnaglu_c <=> 
+26,4HBZtm: 4hbz_c --> 4hbz_m
+27,trna_val: trnaval_c <=> 
+28,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+29,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+30,LEUPHELAT2tc: leu__L_e + phe__L_c --> leu__L_c + phe__L_e
+31,PTD1INOt: ptd1ino_c <=> ptd1ino_e
+32,DCTPD: dctp_c + h2o_c + h_c --> dutp_c + nh4_c
+33,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+34,trna_trp: trnatrp_c <=> 
+35,RBFSb: 2.0 dmlz_c --> 4r5au_c + ribflv_c
+36,trna_met: trnamet_c <=> 
+37,trna_pro: trnapro_c <=> 
+38,MI1PP: h2o_c + mi1p__D_c --> inost_c + pi_c
+39,trna_cys: trnacys_c <=> 
+40,r1818: leu__L_e + na1_e + val__L_c --> leu__L_c + na1_c + val__L_e
+41,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+42,trna_phe: trnaphe_c <=> 
+43,trna_tyr: trnatyr_c <=> 
+44,trna_asn: trnaasn_c <=> 
+45,QULNS_1: dhap_c + iasp_c --> 2.0 h2o_c + h_c + pi_c + quln_c
+46,trna_lys: trnalys_c <=> 
+47,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c
+48,trna_thr: trnathr_c <=> 
+49,EX_inositol: ptd1ino_e <=> 
+50,NADK1: gtp_c + nad_c --> gdp_c + h_c + nadp_c

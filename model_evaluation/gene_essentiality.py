@@ -105,7 +105,7 @@ for species, model in essentiality_screen_models.items():
         
         os.chdir("/home/mac9jc/paradigm/data")
         pd.DataFrame.from_dict(gene_essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_{}_{}.csv".format(species,day))
-        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_interpreted_{}_{}.csv".format(species.day))
+        pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_interpreted_{}_{}.csv".format(species,day))
 
     else:
         gene_essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results

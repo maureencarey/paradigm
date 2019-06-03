@@ -1,0 +1,65 @@
+,rxns_added
+0,trna_trp: trnatrp_c <=> 
+1,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+2,PPRGL: atp_c + gly_c + pram_c --> adp_c + gar_c + 2.0 h_c + pi_c
+3,GLYCOX1: gly_c + o2_c --> h2o2_c + imgly_c
+4,trna_ala: trnaala_c <=> 
+5,trna_phe: trnaphe_c <=> 
+6,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+7,r2514m: crn_m + hdcea_c --> crn_c + hdcea_m
+8,trna_cys: trnacys_c <=> 
+9,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+10,QMO2: 2.0 o2_c + q8h2_c --> 2.0 h_c + 2.0 o2s_c + q8_c
+11,trna_tyr: trnatyr_c <=> 
+12,PRFGS: atp_c + fgam_c + gln__L_c + h2o_c --> adp_c + fpram_c + glu__L_c + h_c + pi_c
+13,MAGAH2264Z7Z10Z13Z16Z19Z_c: h2o_c + mag226n3_c --> crvnc_c + glyc_c + h_c
+14,THISAT: atp_c + h_c + this_c --> athis_c + ppi_c
+15,trna_ile: trnaile_c <=> 
+16,OCTDPtmt: octdp_m <=> octdp_c
+17,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+18,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+19,RBFSb_1: 2.0 dmlz_c --> 4r5au_c + h_c + ribflv_c
+20,trna_arg: trnaarg_c <=> 
+21,CO2tmt: co2_m <=> co2_c
+22,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c
+23,CHOPT_DHA_DHA_c: 12dgr226n3_c + cdpchol_c --> cmp_c + h_c + pc226n3_c
+24,trna_asp: trnaasp_c <=> 
+25,trna_gly: trnagly_c <=> 
+26,AMPMS2: air_c + h2o_c + nad_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_c
+27,DCTPD2: ctp_c + h2o_c + h_c --> nh4_c + utp_c
+28,DXYTST: dxyl5p_c + imgly_c + thissh_c --> 2c4mthzep_c + 2.0 h2o_c + h_c + this_c
+29,THII: athis_c + iscssh_c + nadph_c --> amp_c + iscsh_c + nadp_c + thissh_c
+30,FAOXC16180m: 4.0 coa_m + 3.0 fad_m + 4.0 h2o_m + hdcoa_m + 4.0 nad_m --> 4.0 accoa_m + 3.0 fadh2_m + 4.0 h_m + 4.0 nadh_m + occoa_m
+31,trna_ser: trnaser_c <=> 
+32,DROPPRx: 25dhpp_c + h_c + nadh_c --> 25dthpp_c + nad_c
+33,C226CPT2: c226crn_m + coa_m --> c226coa_m + crn_m
+34,QULNS: dhap_c + iasp_c --> 2.0 h2o_c + pi_c + quln_c
+35,PHEMEtm: pheme_m <=> pheme_c
+36,CYSDES: cys__L_c + iscsh_c --> ala__L_c + h_c + iscssh_c
+37,PRAIS: atp_c + fpram_c --> adp_c + air_c + 2.0 h_c + pi_c
+38,trna_gln: trnagln_c <=> 
+39,trna_asn: trnaasn_c <=> 
+40,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+41,FAOXC80: 3.0 coa_m + 3.0 fad_m + 3.0 h2o_m + 3.0 nad_m + occoa_m --> 4.0 accoa_m + 3.0 fadh2_m + 3.0 h_m + 3.0 nadh_m
+42,THZT: 2c4mthzep_c --> cthzp_c
+43,4HBZtm: 4hbz_c --> 4hbz_m
+44,RTOTALFATPc: Rtotal_e + atp_c + coa_c --> Rtotalcoa_c + amp_c + ppi_c
+45,trna_lys: trnalys_c <=> 
+46,trna_val: trnaval_c <=> 
+47,FACOAL226: atp_c + coa_c + crvnc_c --> amp_c + c226coa_c + ppi_c
+48,trna_thr: trnathr_c <=> 
+49,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+50,C226CPT1: c226coa_c + crn_c --> c226crn_c + coa_c
+51,GLUPRT: gln__L_c + h2o_c + prpp_c --> glu__L_c + ppi_c + pram_c
+52,ASPO2y: asp__L_c + nadp_c --> 2.0 h_c + iasp_c + nadph_c
+53,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+54,FAOXC226: c226coa_m + 10.0 coa_m + 4.0 fad_m + 10.0 h2o_m + 10.0 nad_m --> 11.0 accoa_m + 4.0 fadh2_m + 10.0 h_m + 10.0 nadh_m
+55,TMPPP_1: 2mahmp_c + cthzp_c + 2.0 h_c --> co2_c + ppi_c + thmmp_c
+56,trna_pro: trnapro_c <=> 
+57,GARFT: 10fthf_c + gar_c --> fgam_c + h_c + thf_c
+58,DAGAH_DHA_DHA_c: 12dgr226n3_c + h2o_c --> crvnc_c + h_c + mag226n3_c
+59,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+60,trna_met: trnamet_c <=> 
+61,trna_his: trnahis_c <=> 
+62,trna_leu: trnaleu_c <=> 
+63,C226CRNt: c226crn_c --> c226crn_m

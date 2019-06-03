@@ -1,0 +1,5 @@
+,rxns_added
+0,r1977: lys__L_c + na1_e + thr__L_e --> lys__L_e + na1_c + thr__L_c
+1,r1957: leu__L_e + lys__L_c + na1_e --> leu__L_c + lys__L_e + na1_c
+2,r2055: his__L_e + ile__L_c --> his__L_c + ile__L_e
+3,HISyLATtc: arg__L_c + his__L_e + na1_e --> arg__L_e + his__L_c + na1_c
