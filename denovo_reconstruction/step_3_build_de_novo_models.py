@@ -19,14 +19,14 @@ annotation_fname = vars(args)['annotation_file']
 SPECIES_ID = annotation_fname.split('/')[-1] # ID is annotation filename minus directory
 SPECIES_ID = SPECIES_ID.split('_BiGG.')[0] # get rid of extension
 
-
+# set up log file
 day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step3_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 
+# begin
 logging.info('BEGIN STEP 3')
 logging.info(SPECIES_ID)
-
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
 og_path = "/home/mac9jc/paradigm/"
@@ -55,10 +55,10 @@ for rxn in universal_model.reactions:
     check_rxn_products = rxn.products
     check_rxn_reactants = rxn.reactants
     all_mets = rxn.metabolites
-    compart = set([x.id[-2:] for x in all_mets])
+    compart = set([hf.get_comp(universal_model,x) for x in all_mets])
 
-    rxn_dict['reactants'] = [x.id[:-2] for x in check_rxn_reactants]
-    rxn_dict['products'] = [x.id[:-2] for x in check_rxn_products]
+    rxn_dict['reactants'] = [hf.met_ids_without_comp(universal_model,x) for x in check_rxn_reactants]
+    rxn_dict['products'] = [hf.met_ids_without_comp(universal_model,x) for x in check_rxn_products]
     rxn_dict['compartment'] = list(compart)
 
     universal_dict[rxn.id] = rxn_dict
@@ -91,379 +91,252 @@ microsporidiadb = ["AalgeraePRA109", "AalgeraePRA339", "AspWSBS2006","EaedisUSNM
 piroplasmadb = ["BbigeminaBOND", "BbovisT2Bo", "Bdivergens1802A","BmicrotiRI","BovataMiyake", "CfelisWinnie", "TannulataAnkara", "TequiWA", "TorientalisShintoku", "TparvaMuguga"]
 
 # load annotation data file
-annotations_dict = dict()
-columns = ['query_gene', 'BiGG_gene', 'pident', 'length', 'mismatch', 'gapopen','qstart', 'qend', 'sstart', 'send', 'evalue', 'score']
-
-# modified for Rivanna: read in the annotation tsv
-annotations_dict = {}
 os.chdir(data_path)
 os.chdir("./diamond_output_BiGG")
-annotations_dict[SPECIES_ID] = pd.read_table(annotation_fname)
-columns = ['query_gene', 'BiGG_gene', 'pident', 'length', 'mismatch', 'gapopen','qstart', 'qend', 'sstart', 'send', 'evalue', 'score']
-annotations_dict[SPECIES_ID].columns = columns
+annotations_file = pd.read_table(annotation_fname)
+annotations_file.columns = ['query_gene', 'BiGG_gene', 'pident', 'length', 'mismatch', 'gapopen','qstart', 'qend', 'sstart', 'send', 'evalue', 'score']
 
 # map annotations to BiGG functions for model generation
 os.chdir(data_path)
 gprs = pd.read_csv('./bigg_gprs.csv') # From CarveMe
 gprs.reaction = [x[2:] for x in gprs.reaction]
 gprs = gprs[gprs.reaction.isin([rxn.id for rxn in universal_model.reactions])] # updated from CarveMe
+logging.info("loaded gprs")
 
-logging.info('loaded gprs')
-
-def merge_subunits(genes): # From CarveMe
-    """ Merge list of protein subunit genes into complex
-    Args: genes (pandas.Series): list of genes
-    Returns: str: boolean rule
-    """
-    genes = genes.dropna()
-
-    if len(genes) == 0:
-        return None
-    else:
-        protein = ' and '.join(sorted(genes))
-        if len(genes) > 1:
-            return '(' + protein + ')'
-        else:
-            return protein
-
-def merge_subunit_scores(scores): # From CarveMe
-    """ Merge scores of all genes in a protein complex.
-    Calculates the mean score among all subunits.
-    Args: scores: individual gene scores
-    Returns: float: merged score
-    """
-    return scores.fillna(0).mean()
-
-def merge_proteins(proteins): # From CarveMe
-    """ Merge all isozymes that catalyze a given reaction.
-    Automatically removes all isozymes with missing score.
-    Args: proteins (pandas.Series): list of proteins
-    Returns: str: boolean rule
-    """
-    proteins = set(proteins.dropna())
-    if not proteins:
-        return None
-    gpr_str = ' or '.join(sorted(proteins))
-    if len(proteins) > 1:
-        return '(' + gpr_str + ')'
-    else:
-        return gpr_str
-
-def merge_protein_scores(scores): # From CarveMe
-    """ Merge scores of all isozymes that catalyze a given reaction.
-    Calculates the maximum score among all isozymes.
-    Args: scores (pandas.Series): protein scores
-    Returns: float: merged score
-    """
-    return scores.max(skipna=True)
-
-def reaction_scoring(annotation, gprs, spontaneous_score=0.0, debug_output=None): # From CarveMe
-    """ Calculate reaction scores using new eggnog output.
-    Args: annotation (pandas.DataFrame): gene annotation results
-        gprs (pandas.DataFrame): BiGG GPR rules
-        spontaneous_score (float): score to give to spontaneous reactions (default: 0.0)
-    Returns: pandas.DataFrame: reaction scores
-    """
-
-    # filter best match for each gene
-    gene2gene = annotation.sort_values(by='score', ascending=False) \
-                          .groupby('BiGG_gene', as_index=False).apply(lambda x: x.iloc[0])
-    # merge with gpr table
-    gprs['BiGG_gene'] = gprs.apply(lambda row: '{}.{}'.format(row['model'], row['gene'][2:]), axis=1)
-    gene_scores = pd.merge(gene2gene, gprs, how='right')
-    # add default scores for spontaneous genes
-    spontaneous = {'G_s0001', 'G_S0001', 'G_s_0001', 'G_S_0001', 'G_KPN_SPONT'}
-    gene_scores.loc[gene_scores.gene.isin(spontaneous), 'score'] = spontaneous_score
-    gene_scores.loc[gene_scores.gene.isin(spontaneous), 'query_gene'] = 'spontaneous'
-    # from gene to protein scores
-    protein_scores = gene_scores.groupby(['protein', 'reaction', 'model'], as_index=False) \
-        .agg({'query_gene': merge_subunits, 'score': merge_subunit_scores})
-    protein_scores.rename(columns={'query_gene': 'GPR'}, inplace=True)
-    # from protein to reaction scores
-    reaction_scores = protein_scores.groupby(['reaction'], as_index=False) \
-        .agg({'GPR': merge_proteins, 'score': merge_protein_scores}).dropna()
-    return(reaction_scores)
-
-scores_dict2 = dict()
-for species, annotations in annotations_dict.items():
-    reaction_scores = reaction_scoring(annotations, gprs)
-    # scores = dict(reaction_scores[['reaction', 'normalized_score']].values)
-    scores_dict2[species] = reaction_scores #scores
-    # carveme will maximize positive scores and minimize negative scores while maintaining a functional network
-    # reaction_scores.to_csv('reaction_scores.csv')
+# score reactions per annotations
+scores_file = hf.reaction_scoring(annotations_file, gprs)
+# carveme will maximize positive scores and minimize negative scores while maintaining a functional network
+# we will just add any positive scoring reaction above a certain threshold and make it functional later
+keep_scores = scores_file.loc[scores_file.score>10]
 logging.info("done with scoring")
 
 # make model from universal model
-new_model_dict = dict()
-for species in scores_dict2.keys():
+new_model = universal_model.copy()
+new_model.name = SPECIES_ID
+new_model.id = SPECIES_ID
+starting_rxn_ct = len(new_model.reactions)
 
-    new_model_dict[species] = universal_model.copy()
-    logging.info('copied universal')
-    new_model_dict[species].name = species
-    new_model_dict[species].id = species
+if len(keep_scores.reaction) == len(set(keep_scores.reaction)):
+    
+    rxns_to_add = dict()
+    scores_for_rxns = dict()
+    for index, row in keep_scores.iterrows():
+        rxns_to_add[row['reaction']] = row['GPR']
+        scores_for_rxns[row['reaction']] = row['score']
+    new_model.remove_reactions([rxn for rxn in new_model.reactions if rxn.id not in rxns_to_add.keys()])
 
-    starting = len(new_model_dict[species].reactions)
-
-    keep_scores = scores_dict2[species].loc[scores_dict2[species].score>10]
-    if len(keep_scores.reaction) == len(set(keep_scores.reaction)):
-
-        rxns_to_add = dict()
-        scores_for_rxns = dict()
-        for index, row in keep_scores.iterrows():
-            rxns_to_add[row['reaction']] = row['GPR']
-            scores_for_rxns[row['reaction']] = row['score']
-
-        new_model_dict[species].remove_reactions([rxn for rxn in new_model_dict[species].reactions if rxn.id not in rxns_to_add.keys()])
-
-        if not [rxn.id for rxn in new_model_dict[species].reactions if rxn.gene_reaction_rule != '']:
-            for rxn in new_model_dict[species].reactions:
-                    if rxn.gene_reaction_rule == '':
-#                        print(rxns_to_add[rxn.id])
-                        new_model_dict[species].reactions.get_by_id(rxn.id).gene_reaction_rule = rxns_to_add[rxn.id]
-                        new_model_dict[species].reactions.get_by_id(rxn.id).notes['CarveMe score'] = {rxns_to_add[rxn.id] : scores_dict2[species].loc[scores_dict2[species].reaction == rxn.id]['score'].values[0]}
-#                        print({rxns_to_add[rxn.id] : scores_dict2[species].loc[scores_dict2[species].reaction == rxn.id]['score'].values[0]})
-        else:
-            logging.info('error - some reactions already have GPRs')
-
-        logging.info('made new model from universal')
-        new_model_dict[species].repair()
-
-        if len(rxns_to_add.keys()) == len(new_model_dict[species].reactions):
-            if starting > len(rxns_to_add.keys()):
-                logging.info(' ')
-            else:
-                logging.info('error with original model, reactions already removed')
-        else:
-            logging.info('error with reaction removal, resultant len(model.reactions) != rxns_to_keep')
+    if not [rxn.id for rxn in new_model.reactions if rxn.gene_reaction_rule != '']:
+        for rxn in new_model.reactions:
+                if rxn.gene_reaction_rule == '':
+                    new_model.reactions.get_by_id(rxn.id).gene_reaction_rule = rxns_to_add[rxn.id]
+                    new_model.reactions.get_by_id(rxn.id).notes['CarveMe score'] = {rxns_to_add[rxn.id] : scores_file.loc[scores_file.reaction == rxn.id]['score'].values[0]}
     else:
-        logging.info('duplicate keep_scores.reaction')
+        logging.info('error - some reactions already have GPRs')
+    logging.info('made new model from universal')
+    new_model.repair()
 
-    if len(rxns_to_add.keys()) != len(new_model_dict[species].reactions):
-        logging.info('error in universal reaction pruning')
-    model2 = new_model_dict[species].copy()
-    logging.info('made DIY1')
-    logging.info(len(model2.reactions))
-    os.chdir(model_path)
-#    cobra.io.save_json_model(new_model_dict[species], "DIY1_"+species+".json")
-#    logging.info('saved DIY1')
-#temp
-    logging.info('printing notes field')
-    logging.info([rxn.notes for rxn in model2.reactions])
-    logging.info('------------------------------------------')
+    if len(rxns_to_add.keys()) == len(new_model.reactions):
+        if starting_rxn_ct <= len(rxns_to_add.keys()):
+            logging.info('error with original model, reactions already removed')
+    else:
+        logging.info('error with reaction removal, resultant len(model.reactions) != rxns_to_keep')
+else:
+    logging.info('duplicate keep_scores.reaction')
+
+if len(rxns_to_add.keys()) != len(new_model.reactions):
+    logging.info('error in universal reaction pruning')
+
+logging.info('made first draft model')
+logging.info(len(new_model.reactions))
+logging.info('printing notes field')
+logging.info([rxn.notes for rxn in new_model.reactions])
+logging.info('------------------------------------------')
     
 # remove duplciate reactions in mulitple compartments
 total_compartments = ["_c","_e","_m","_ap","_fv","_k","_glc","_pm"]
 # cytosol, extracellular, mitochondrdia, apicoplast, food vacuole, kinetoplast, glycosome, pseudomitochondria
 
-compartment_dictionary = dict()
-for species in new_model_dict.keys():
+if SPECIES_ID in plasmodb: # Plasmodium = cytosol, extracellular, mitochondrdia, apicoplast, food vacuole
+    model_compartments = ["_c","_e","_m","_ap","_fv"]
+elif SPECIES_ID in tritrypdb: # Leishmania = cytosol, extracellular, mitochondrdia, kinetoplast, glycosome
+    model_compartments = ["_c","_e","_m","_k","_glc"]
+elif SPECIES_ID in cryptodb: # Cryptosporidium = cytosol, extracellular, pseudomitochondria (USE MITO)
+    model_compartments = ["_c","_e","_m"]
+elif SPECIES_ID in toxodb: # Toxoplasma = cytosol, extracellular, mitochondrdia, apicoplast
+    model_compartments = ["_c","_e","_ap","_m"]
+elif SPECIES_ID in giardiadb or species in amoebadb: # Giardia, Entamoeba = cytosol, extracellular
+    model_compartments = ["_c","_e"]
+else:
+    model_compartments = ["_c","_e"]
+compartment = model_compartments
 
-    # Plasmodium = cytosol, extracellular, mitochondrdia, apicoplast, food vacuole
-    if species in plasmodb:
-        model_compartments = ["_c","_e","_m","_ap","_fv"]
-
-    # Leishmania = cytosol, extracellular, mitochondrdia, kinetoplast, glycosome
-    elif species in tritrypdb:
-        model_compartments = ["_c","_e","_m","_k","_glc"]
-
-    # Cryptosporidium = cytosol, extracellular, pseudomitochondria (USE MITO)
-    elif species in cryptodb:
-        model_compartments = ["_c","_e","_m"]
-
-    # Toxoplasma = cytosol, extracellular, mitochondrdia, apicoplast
-    elif species in toxodb:
-        model_compartments = ["_c","_e","_ap","_m"]
-
-    # Giardia, Entamoeba = cytosol, extracellular
-    elif species in giardiadb or species in amoebadb:
-        model_compartments = ["_c","_e"]
-
-    else:
-        model_compartments = ["_c","_e"]
-
-    compartment_dictionary[species] = model_compartments
-
-# columns = ['species','reactions_removed1','mets_removed1','reactions_removed2','mets_removed2','reactions_added', 'mets_added','gene_change']
 columns = ['species','reactions_removed1','reactions_added']
-modifications = pd.DataFrame(index = new_model_dict.keys(), columns=columns)
-inappropriate_compartments_that_remain = dict()
-transport_for_inappropariate_compartment_dict = dict()
+modifications = pd.DataFrame(index = SPECIES_ID, columns=columns)
 
-for species, model in new_model_dict.items():
+model = new_model ## SHOULD THIS BE UPDATED TO MODEL2
+logging.info('finding good or bad reactions')
+not_compartments = compartment_options - set(compartment)
 
-    logging.info('finding good or bad reactions')
-    compartment = compartment_dictionary[species]
-    not_compartments = compartment_options - set(compartment)
+# get reactions that use/make at least one metabolite that is in an inappropariate compartment
+good_rxns = list()
+bad_rxns = list()
+not_compartments = [x+' ' for x in not_compartments]
+for rxn_object in model.reactions: # if a reaction does not contain any bad compartments
+    rxn_bad_counter = 0
+    for x in not_compartments:
+        if x in rxn_object.reaction or rxn_object.reaction.endswith(x):
+            rxn_bad_counter = rxn_bad_counter + 1
+    if rxn_bad_counter == 0:
+        good_rxns.append(rxn_object.id)
+    else:
+        bad_rxns.append(rxn_object.id)
 
-    # get reactions that use/make at least one metabolite that is in an inappropariate compartment
-    good_rxns = list()
-    bad_rxns = list()
-    not_compartments = [x+' ' for x in not_compartments]
-    for rxn_object in model.reactions: # if a reaction does not contain any bad compartments
-        rxn_bad_counter = 0
-        for x in not_compartments:
-            if x in rxn_object.reaction or rxn_object.reaction.endswith(x):
-                rxn_bad_counter = rxn_bad_counter + 1
-        if rxn_bad_counter == 0:
-            good_rxns.append(rxn_object.id)
-        else:
-            bad_rxns.append(rxn_object.id)
-
-    logging.info('found good or bad reactions, now doing things')
-    bad_rxns_keep_rewrite = list()
-    add_reaction = list()
-    remove_rxn = list()
-    for rxn_id in bad_rxns:
-        if len(universal_dict_with_alts[rxn_id]['alternative_reactions']) == 0:
-            bad_rxns_keep_rewrite.append(rxn_id) # no alternative, keep reaction - will have to change via strings
-        else:
-            alt_rxns = universal_dict_with_alts[rxn_id]['alternative_reactions']
-            keep_og = 0
-            for alt_rxn_1, locations in alt_rxns.items():
-                keep_alt = 0
-                for loc in locations:
-                    if loc in compartment: keep_alt = keep_alt
-                    else: keep_alt = keep_alt + 1
-                if keep_alt == 0:
-                    keep_og = 1
-                    add_reaction.append(alt_rxn_1)
-                else:
-                    keep_og = keep_og
-            if keep_og == 0:
-                bad_rxns_keep_rewrite.append(rxn_id) # no usable alternative - will have to change via strings
+logging.info('found good or bad reactions, now doing things')
+bad_rxns_keep_rewrite = list()
+add_reaction = list()
+remove_rxn = list()
+for rxn_id in bad_rxns:
+    if len(universal_dict_with_alts[rxn_id]['alternative_reactions']) == 0:
+        bad_rxns_keep_rewrite.append(rxn_id) # no alternative, keep reaction - will have to change via strings
+    else:
+        alt_rxns = universal_dict_with_alts[rxn_id]['alternative_reactions']
+        keep_og = 0
+        for alt_rxn_1, locations in alt_rxns.items():
+            keep_alt = 0
+            for loc in locations:
+                if loc in compartment: keep_alt = keep_alt
+                else: keep_alt = keep_alt + 1
+            if keep_alt == 0:
+                keep_og = 1
+                add_reaction.append(alt_rxn_1)
             else:
-                remove_rxn.append(rxn_id)
-    add_reaction = list(set(add_reaction))
-
-    if (len((bad_rxns)) == (len((remove_rxn)) + len((bad_rxns_keep_rewrite)))):
-        logging.info('bad reactions are split into remove reactions and bad reactions to rewrite - math is good')
-
-    logging.info('no. reactions removed')
-    logging.info(len(remove_rxn))
-    logging.info('no. reactions to add')
-    logging.info(len(add_reaction))
-
-    # remove reactions
-    x = len(model.reactions)
-    y = len(model.metabolites)
-    model.remove_reactions(remove_rxn)
-    model.repair()
-    if len(remove_rxn) != (x - len(model.reactions)):
-        logging.info('error - reaction not removed properly')
-    x1 = x - len(model.reactions)
-    y1 = y - len(model.metabolites)
-
-    # save this number
-    inappropriate_compartments_that_remain[species] = (len(bad_rxns_keep_rewrite)/len(model.reactions))*100
-
-    modifications.species.loc[species] = species
-    modifications.reactions_removed1.loc[species] = x1
-    #     modifications.mets_removed1.loc[species] = y1
-
-    for rxn_id in add_reaction: #there are ids in add_reaction that are in the model already
-        rxn = universal_model.reactions.get_by_id(rxn_id).copy()
-        for met in rxn.metabolites:
-            if met.id not in [m.id for m in model.metabolites]:
-                model.add_metabolites(met.copy())
-    rxns_to_add_list = [universal_model.reactions.get_by_id(x).copy() for x in add_reaction if x not in [r.id for r in model.reactions]]
-    # if reaction is already there, it is because the reaction was in multiple compartments
-    # logging.info([rxn.id for rxn in rxns_to_add_list if rxn.id not in add_reaction])
-    model.add_reactions(rxns_to_add_list)
-    modifications.reactions_added.loc[species] = len(model.reactions) - x1 # CHECK
-
-#     if '_x' in ([x.id[-2:] for x in model.metabolites]): logging.info('ERROR, UNACCEPTABLE COMPARTMENTS, should be some here')
-#     logging.info('the right number of reactions are being added and removed')
-
-    for rxn in model.reactions:
-        if rxn.lower_bound == 0 and rxn.upper_bound == 0:
-            logging.info(rxn.id + ' has bounds == 0 in '+key)
-            rxn.lower_bound = -1000.
-            rxn.upper_bound = 1000.
-            # NOTHING SHOULD PRINT - this was a problem in CarveMe
-
-    new_model_dict[species] = model
-    os.chdir(model_path)
-#    cobra.io.save_json_model(model, "DIY2_"+species+".json")
-
-    fix_these_reactions_list = list(set([model.reactions.get_by_id(x) for x in bad_rxns_keep_rewrite]))
-
-    reactions_added = list()
-    transport_for_inappropariate_compartment = list()
-
-    og = len(model.reactions)
-    og_mets= len(model.metabolites)
-
-    logging.info('starting to move reactions to the right compartment')
-    for rxn in fix_these_reactions_list:
-
-        if [hf.met_ids_without_comp(model,x.id) for x in rxn.reactants] == [hf.met_ids_without_comp(model,x.id) for x in rxn.products]:
-            # remove things like x_p + y_p => x_e + y_e
-            transport_for_inappropariate_compartment.append(rxn.id)
-            new_rxn = list()
+                keep_og = keep_og
+        if keep_og == 0:
+            bad_rxns_keep_rewrite.append(rxn_id) # no usable alternative - will have to change via strings
         else:
+            remove_rxn.append(rxn_id)
+add_reaction = list(set(add_reaction))
 
-            new_rxn = Reaction()
-            met_dict = dict()
+if (len((bad_rxns)) == (len((remove_rxn)) + len((bad_rxns_keep_rewrite)))):
+    logging.info('bad reactions are split into remove reactions and bad reactions to rewrite - math is good')
 
-            for met in rxn.metabolites:
+logging.info('no. reactions removed')
+logging.info(len(remove_rxn))
+logging.info('no. reactions to add')
+logging.info(len(add_reaction))
 
-                if hf.get_comp(model,met.id) == '_p': # move periplasmic metabolites to extracellular instead of cytosol
-                    if hf.met_ids_without_comp(model,met.id)+'_e' not in [x.id for x in model.metabolites]:
-                        met2 = met.copy()
-                        met2.id = hf.met_ids_without_comp(model,met.id)+'_e'
-                        met_dict[met2] = rxn.metabolites[met]
-                        model.add_metabolites(met2) # []
-                    else:
-                        met2 = model.metabolites.get_by_id(hf.met_ids_without_comp(model,met.id)+'_e')
-                        met_dict[met2] = rxn.metabolites[met]
-                else: # non periplasmic metabolite
-                    if hf.met_ids_without_comp(model,met.id)+'_c' not in [x.id for x in model.metabolites]:
-                        met2 = met.copy()
-                        met2.id = hf.met_ids_without_comp(model,met.id)+'_c'
-                        met_dict[met2] = rxn.metabolites[met]
-                        model.add_metabolites(met2) # []
-                    else:
-                        met2 = model.metabolites.get_by_id(hf.met_ids_without_comp(model,met.id)+'_c')
-                        met_dict[met2] = rxn.metabolites[met]
+# remove reactions
+x = len(model.reactions)
+y = len(model.metabolites)
+model.remove_reactions(remove_rxn)
+model.repair()
+if len(remove_rxn) != (x - len(model.reactions)):
+    logging.info('error - reaction not removed properly')
+x1 = x - len(model.reactions)
+y1 = y - len(model.metabolites)
 
-        # fix reaction variables
-        if new_rxn:
-            new_rxn.add_metabolites(met_dict)
-            new_rxn.name = rxn.name
-            new_rxn.id = rxn.id+'c'
-            new_rxn.lower_bound = rxn.lower_bound
-            new_rxn.upper_bound = rxn.upper_bound
-            new_rxn.gene_reaction_rule = rxn.gene_reaction_rule
-            new_rxn.notes = rxn.notes
-            new_rxn.notes['created for paradigm'] = 'true'
-            model.add_reactions([new_rxn])
-            reactions_added.append(new_rxn.id)
+# save this number
+inappropriate_compartments_that_remain = (len(bad_rxns_keep_rewrite)/len(model.reactions))*100
 
-        model.remove_reactions([rxn])
+modifications.species.loc[SPECIES_ID] = species
+modifications.reactions_removed1.loc[SPECIES_ID] = x1
 
-    model.repair()
-    logging.info('finished moving reactions to the right compartment')
+for rxn_id in add_reaction: #there are ids in add_reaction that are in the model already
+    rxn = universal_model.reactions.get_by_id(rxn_id).copy()
+    for met in rxn.metabolites:
+        if met.id not in [m.id for m in model.metabolites]:
+            model.add_metabolites(met.copy())
+rxns_to_add_list = [universal_model.reactions.get_by_id(x).copy() for x in add_reaction if x not in [r.id for r in model.reactions]]
+# if reaction is already there, it is because the reaction was in multiple compartments
+model.add_reactions(rxns_to_add_list)
+modifications.reactions_added.loc[SPECIES_ID] = len(model.reactions) - x1 # CHECK
 
-    logging.info('reactions added overall:')
-    logging.info(len(model.reactions) - og)
-    # logging.info('mets added')
-    # logging.info(len(model.metabolites) - og_mets)
-    transport_for_inappropariate_compartment_dict[species] = list(set(transport_for_inappropariate_compartment))
+# ADD IN THIS WARNING:::
+for c in not_compartments:
+    if c in ([hf.get_comp(model,x) for x in model.metabolites]):
+        logging.info('ERROR, UNACCEPTABLE COMPARTMENTS:')
+        loggin.info(c)
 
-    new_model_dict[species] = model
+# make sure all reactions can carry flux, problem with some versions of the universal model
+for rxn in model.reactions:
+    if rxn.lower_bound == 0 and rxn.upper_bound == 0:
+        logging.info(rxn.id + ' has bounds == 0 in '+key)
+        rxn.lower_bound = -1000.
+        rxn.upper_bound = 1000.
+        # NOTHING SHOULD PRINT - this was a problem in CarveMe
 
-    os.chdir(model_path)
-#    cobra.io.save_json_model(model, "DIY3_"+species+".json")
-    l2 = list()
-    for rxn in model.reactions:
-        for suffix in [m.id[-2:] for m in rxn.metabolites]:
-            l2.append(suffix)
-    logging.info('compartments:')
-    logging.info(set(l2))
+fix_these_reactions_list = list(set([model.reactions.get_by_id(x) for x in bad_rxns_keep_rewrite]))
+
+reactions_added = list()
+transport_for_inappropariate_compartment = list()
+
+og = len(model.reactions)
+og_mets= len(model.metabolites)
+
+logging.info('starting to move reactions to the right compartment')
+for rxn in fix_these_reactions_list:
+
+    if [hf.met_ids_without_comp(model,x.id) for x in rxn.reactants] == [hf.met_ids_without_comp(model,x.id) for x in rxn.products]:
+        # remove things like x_p + y_p => x_e + y_e
+        transport_for_inappropariate_compartment.append(rxn.id)
+        new_rxn = list()
+    else:
+
+        new_rxn = Reaction()
+        met_dict = dict()
+        for met in rxn.metabolites:
+
+            if hf.get_comp(model,met.id) == '_p': # move periplasmic metabolites to extracellular instead of cytosol
+                if hf.met_ids_without_comp(model,met.id)+'_e' not in [x.id for x in model.metabolites]:
+                    met2 = met.copy()
+                    met2.id = hf.met_ids_without_comp(model,met.id)+'_e'
+                    met_dict[met2] = rxn.metabolites[met]
+                    model.add_metabolites(met2) # []
+                else:
+                    met2 = model.metabolites.get_by_id(hf.met_ids_without_comp(model,met.id)+'_e')
+                    met_dict[met2] = rxn.metabolites[met]
+            else: # non periplasmic metabolite
+                if hf.met_ids_without_comp(model,met.id)+'_c' not in [x.id for x in model.metabolites]:
+                    met2 = met.copy()
+                    met2.id = hf.met_ids_without_comp(model,met.id)+'_c'
+                    met_dict[met2] = rxn.metabolites[met]
+                    model.add_metabolites(met2) # []
+                else:
+                    met2 = model.metabolites.get_by_id(hf.met_ids_without_comp(model,met.id)+'_c')
+                    met_dict[met2] = rxn.metabolites[met]
+
+    # fix reaction variables
+    if new_rxn:
+        new_rxn.add_metabolites(met_dict)
+        new_rxn.name = rxn.name
+        new_rxn.id = rxn.id+'c'
+        new_rxn.lower_bound = rxn.lower_bound
+        new_rxn.upper_bound = rxn.upper_bound
+        new_rxn.gene_reaction_rule = rxn.gene_reaction_rule
+        new_rxn.notes = rxn.notes
+        new_rxn.notes['created for paradigm'] = 'true'
+        model.add_reactions([new_rxn])
+        reactions_added.append(new_rxn.id)
+
+    model.remove_reactions([rxn])
+
+model.repair()
+logging.info('finished moving reactions to the right compartment')
+
+logging.info('reactions added overall:')
+logging.info(len(model.reactions) - og)
+transport_for_inappropariate_compartment_dict = list(set(transport_for_inappropariate_compartment))
+
+l2 = list()
+for rxn in model.reactions:
+    for suffix in [hf.get_comp(model,m) for m in rxn.metabolites]:
+        l2.append(suffix)
+logging.info('compartments:')
+logging.info(set(l2))
 
 os.chdir(data_path)
 modifications.to_csv('model_modifications_'+SPECIES_ID+day+'.csv')
-pd.DataFrame.from_dict(inappropriate_compartments_that_remain, orient="index").to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+day+".csv")
+pd.DataFrame(inappropriate_compartments_that_remain).to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+day+".csv")
 
 def prune_unused_metabolites2(cobra_model):
     """ USE THIS UNTIL AUG 31 UPDATES ARE INTEGRATED INTO MASTER COBRAPY BRANCH
@@ -485,22 +358,19 @@ def prune_unused_metabolites2(cobra_model):
     output_model.remove_metabolites(inactive_metabolites)
     return output_model, inactive_metabolites
 
-for species, model in new_model_dict.items():
-    
-    model_pruned, unused = prune_unused_metabolites2(model)
-    model_pruned.solver = 'glpk'
-    new_model_dict[species] = model_pruned
-    
-    # check compartments
-    list_om= list()
-    list_om2= list()
-    for rxn in model_pruned.reactions:
-        for m in rxn.metabolites:
-            list_om.append(m.id[-2:])
-    for m in model_pruned.metabolites:
-        list_om2.append(m.id[-2:])
-    if set(list_om) != set(list_om2):
-        logging.info('error - extra compartments are present, pruning of unused metabolites did not work')
-    
-    os.chdir(model_path)
-    cobra.io.save_json_model(model_pruned, "final_denovo_"+species+".json")
+model, unused = prune_unused_metabolites2(model)
+model.solver = 'glpk'
+
+# check compartments
+list_om= list()
+list_om2= list()
+for rxn in model.reactions:
+    for m in rxn.metabolites:
+        list_om.append(hf.get_comp(model,m))
+for m in model.metabolites:
+    list_om2.append(hf.get_comp(model,m))
+if set(list_om) != set(list_om2):
+    logging.info('error - extra compartments are present, pruning of unused metabolites did not work')
+
+os.chdir(model_path)
+cobra.io.save_json_model(model, "final_denovo_"+SPECIES_ID+".json")
