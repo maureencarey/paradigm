@@ -7,6 +7,7 @@
 #SBATCH --mem-per-cpu=6000
 #SBATCH --account=csblrivanna
 
+module load gcc/7.1.0
 module load R/3.3.0
 module load diamond
 bash ./slurm_scripts/pipeline_slurm_step1a.sh
