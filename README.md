@@ -19,9 +19,9 @@ This is acquired from PlasmoDB.org by doing gene search> by orthology (P. falcip
 
 ## data acquisition
 
-### step_0_download_all_eupathDB_release41.r
+### step_0_download_all_eupathDB_release44.r
 
-This downloads all specified genomes from EuPathDB, release 41. The specified genomes are
+This downloads all specified genomes from EuPathDB, release 44. The specified genomes are
 listed in this script and were selected if they had fasta files for the annotated protein
 sequences. Per communication with EuPathDB, the annotated protein sequences are derived 
 from the official genome sequence and include a collection of manual and automatic 
@@ -190,4 +190,4 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     sbatch ./run_these/follow_up_analyses/analyses_part5.slurm
     # # would like to run Memote again on all models
     ## need to move all xml gf models to other directory for memote
-    
+    # scp mac9jc@rivanna.hpc.virginia.edu:/home/mac9jc/paradigm/data/ortho_annotations_per_genome_17_05_2019.csv .    

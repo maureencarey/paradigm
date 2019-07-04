@@ -42,7 +42,7 @@ pf_model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)
 logger.info('loaded model')
 
 os.chdir(data_path)
-mapping = pd.read_csv("plasmodium_orthology_conversion_release43.tsv", sep='\t')
+mapping = pd.read_csv("plasmodium_orthology_conversion_release44.tsv", sep='\t')
 mapping['Organism'] = mapping['Organism'].str.replace(".", "")
 mapping['Organism'] = mapping['Organism'].str.replace("strain", "")
 mapping['Organism'] = mapping['Organism'].str.replace("Strain", "")
