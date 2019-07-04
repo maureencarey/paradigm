@@ -1,6 +1,0 @@
-,rxns_added
-0,r1957: leu__L_e + lys__L_c + na1_e --> leu__L_c + lys__L_e + na1_c
-1,HIStN1: h_c + his__L_e + 2.0 na1_e --> h_e + his__L_c + 2.0 na1_c
-2,THRCYSNaEx: cys__L_c + na1_e + thr__L_e --> cys__L_e + na1_c + thr__L_c
-3,r1807: gly_c + leu__L_e + na1_e --> gly_e + leu__L_c + na1_c
-4,THRGLYexR: gly_c + thr__L_e <=> gly_e + thr__L_c

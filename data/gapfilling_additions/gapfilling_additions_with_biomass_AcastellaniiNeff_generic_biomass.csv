@@ -1,4 +1,0 @@
-,rxns_added
-0,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
-1,GAPD: g3p_c + nad_c + pi_c <=> 13dpg_c + h_c + nadh_c
-2,RBK: atp_c + rib__D_c --> adp_c + h_c + r5p_c

@@ -1022,23 +1022,23 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/adprib_e"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:ADENOSINE_DIPHOSPHATE_RIBOSE"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16960"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40752"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57967"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2351"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13231"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:20850"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32889"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16960"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57967"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13231"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40752"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2351"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C15H23N5O14P2/c16-12-7-13(18-3-17-12)20(4-19-7)14-10(23)8(21)5(32-14)1-30-35(26,27)34-36(28,29)31-2-6-9(22)11(24)15(25)33-6/h3-6,8-11,14-15,21-25H,1-2H2,(H,26,27)(H,28,29)(H2,16,17,18)/p-2/t5-,6-,8-,9-,10-,11-,14-,15?/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/SRNWOUGRCWSEMX-TYASJMOZSA-L"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01882"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00301"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01882"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM48596"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/1131972"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/8870342"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/2393945"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01296"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00251"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01296"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1053,23 +1053,23 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/adprib_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:ADENOSINE_DIPHOSPHATE_RIBOSE"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16960"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40752"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57967"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2351"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13231"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:20850"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32889"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16960"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57967"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13231"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40752"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2351"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C15H23N5O14P2/c16-12-7-13(18-3-17-12)20(4-19-7)14-10(23)8(21)5(32-14)1-30-35(26,27)34-36(28,29)31-2-6-9(22)11(24)15(25)33-6/h3-6,8-11,14-15,21-25H,1-2H2,(H,26,27)(H,28,29)(H2,16,17,18)/p-2/t5-,6-,8-,9-,10-,11-,14-,15?/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/SRNWOUGRCWSEMX-TYASJMOZSA-L"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01882"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00301"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01882"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM48596"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/1131972"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/8870342"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/2393945"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01296"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00251"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01296"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1088,16 +1088,16 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0922600" fbc:label="PF3D7_0922600" fbc:name="PF3D7_0922600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1025100" fbc:label="PF3D7_1025100" fbc:name="PF3D7_1025100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0918900" fbc:label="PF3D7_0918900" fbc:name="PF3D7_0918900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0717700" fbc:label="PF3D7_0717700" fbc:name="PF3D7_0717700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1216000" fbc:label="PF3D7_1216000" fbc:name="PF3D7_1216000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0717700" fbc:label="PF3D7_0717700" fbc:name="PF3D7_0717700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1240000" fbc:label="PF3D7_1240000" fbc:name="PF3D7_1240000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1332900" fbc:label="PF3D7_1332900" fbc:name="PF3D7_1332900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0622800" fbc:label="PF3D7_0622800" fbc:name="PF3D7_0622800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0828200" fbc:label="PF3D7_0828200" fbc:name="PF3D7_0828200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0622800" fbc:label="PF3D7_0622800" fbc:name="PF3D7_0622800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0815900" fbc:label="PF3D7_0815900" fbc:name="PF3D7_0815900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1232200" fbc:label="PF3D7_1232200" fbc:name="PF3D7_1232200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0303700" fbc:label="PF3D7_0303700" fbc:name="PF3D7_0303700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0504600" fbc:label="PF3D7_0504600" fbc:name="PF3D7_0504600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1232200" fbc:label="PF3D7_1232200" fbc:name="PF3D7_1232200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0311200" fbc:label="PF3D7_0311200" fbc:name="PF3D7_0311200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1461900" fbc:label="PF3D7_1461900" fbc:name="PF3D7_1461900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0219100" fbc:label="PF3D7_0219100" fbc:name="PF3D7_0219100"/>
@@ -1110,16 +1110,16 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0907900" fbc:label="PF3D7_0907900" fbc:name="PF3D7_0907900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0720400" fbc:label="PF3D7_0720400" fbc:name="PF3D7_0720400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0204500" fbc:label="PF3D7_0204500" fbc:name="PF3D7_0204500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0807900" fbc:label="PF3D7_0807900" fbc:name="PF3D7_0807900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1117500" fbc:label="PF3D7_1117500" fbc:name="PF3D7_1117500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0807900" fbc:label="PF3D7_0807900" fbc:name="PF3D7_0807900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0910400" fbc:label="PF3D7_0910400" fbc:name="PF3D7_0910400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1367700" fbc:label="PF3D7_1367700" fbc:name="PF3D7_1367700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1015200" fbc:label="PF3D7_1015200" fbc:name="PF3D7_1015200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1445100" fbc:label="PF3D7_1445100" fbc:name="PF3D7_1445100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1126000" fbc:label="PF3D7_1126000" fbc:name="PF3D7_1126000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1130000" fbc:label="PF3D7_1130000" fbc:name="PF3D7_1130000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0919600" fbc:label="PF3D7_0919600" fbc:name="PF3D7_0919600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1116600" fbc:label="PF3D7_1116600" fbc:name="PF3D7_1116600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0919600" fbc:label="PF3D7_0919600" fbc:name="PF3D7_0919600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1343600" fbc:label="PF3D7_1343600" fbc:name="PF3D7_1343600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1364600" fbc:label="PF3D7_1364600" fbc:name="PF3D7_1364600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1015900" fbc:label="PF3D7_1015900" fbc:name="PF3D7_1015900"/>
@@ -1127,10 +1127,10 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1462800" fbc:label="PF3D7_1462800" fbc:name="PF3D7_1462800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1351600" fbc:label="PF3D7_1351600" fbc:name="PF3D7_1351600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0624000" fbc:label="PF3D7_0624000" fbc:name="PF3D7_0624000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1324900" fbc:label="PF3D7_1324900" fbc:name="PF3D7_1324900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1325200" fbc:label="PF3D7_1325200" fbc:name="PF3D7_1325200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0915400" fbc:label="PF3D7_0915400" fbc:name="PF3D7_0915400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1324900" fbc:label="PF3D7_1324900" fbc:name="PF3D7_1324900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1128300" fbc:label="PF3D7_1128300" fbc:name="PF3D7_1128300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0915400" fbc:label="PF3D7_0915400" fbc:name="PF3D7_0915400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1436000" fbc:label="PF3D7_1436000" fbc:name="PF3D7_1436000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1012500" fbc:label="PF3D7_1012500" fbc:name="PF3D7_1012500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1439900" fbc:label="PF3D7_1439900" fbc:name="PF3D7_1439900"/>
@@ -1149,8 +1149,8 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1450900" fbc:label="PF3D7_1450900" fbc:name="PF3D7_1450900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1437700" fbc:label="PF3D7_1437700" fbc:name="PF3D7_1437700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0627800" fbc:label="PF3D7_0627800" fbc:name="PF3D7_0627800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0406400" fbc:label="PF3D7_0406400" fbc:name="PF3D7_0406400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1205700" fbc:label="PF3D7_1205700" fbc:name="PF3D7_1205700"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0406400" fbc:label="PF3D7_0406400" fbc:name="PF3D7_0406400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1113700" fbc:label="PF3D7_1113700" fbc:name="PF3D7_1113700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0604700" fbc:label="PF3D7_0604700" fbc:name="PF3D7_0604700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0616800" fbc:label="PF3D7_0616800" fbc:name="PF3D7_0616800"/>
@@ -1159,11 +1159,11 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0927300" fbc:label="PF3D7_0927300" fbc:name="PF3D7_0927300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1431600" fbc:label="PF3D7_1431600" fbc:name="PF3D7_1431600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1443700" fbc:label="PF3D7_1443700" fbc:name="PF3D7_1443700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1420600" fbc:label="PF3D7_1420600" fbc:name="PF3D7_1420600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1437400" fbc:label="PF3D7_1437400" fbc:name="PF3D7_1437400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1420600" fbc:label="PF3D7_1420600" fbc:name="PF3D7_1420600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0816100" fbc:label="PF3D7_0816100" fbc:name="PF3D7_0816100"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1102400" fbc:label="PF3D7_1102400" fbc:name="PF3D7_1102400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0412300" fbc:label="PF3D7_0412300" fbc:name="PF3D7_0412300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1102400" fbc:label="PF3D7_1102400" fbc:name="PF3D7_1102400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0704700" fbc:label="PF3D7_0704700" fbc:name="PF3D7_0704700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1226100" fbc:label="PF3D7_1226100" fbc:name="PF3D7_1226100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0417200" fbc:label="PF3D7_0417200" fbc:name="PF3D7_0417200"/>
@@ -1197,8 +1197,8 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0109900" fbc:label="PF3D7_0109900" fbc:name="PF3D7_0109900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1147500" fbc:label="PF3D7_1147500" fbc:name="PF3D7_1147500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0922900" fbc:label="PF3D7_0922900" fbc:name="PF3D7_0922900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0211400" fbc:label="PF3D7_0211400" fbc:name="PF3D7_0211400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0626300" fbc:label="PF3D7_0626300" fbc:name="PF3D7_0626300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0211400" fbc:label="PF3D7_0211400" fbc:name="PF3D7_0211400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1444300" fbc:label="PF3D7_1444300" fbc:name="PF3D7_1444300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0615100" fbc:label="PF3D7_0615100" fbc:name="PF3D7_0615100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1212500" fbc:label="PF3D7_1212500" fbc:name="PF3D7_1212500"/>
@@ -1207,8 +1207,8 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1323000" fbc:label="PF3D7_1323000" fbc:name="PF3D7_1323000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0624700" fbc:label="PF3D7_0624700" fbc:name="PF3D7_0624700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0615300" fbc:label="PF3D7_0615300" fbc:name="PF3D7_0615300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1354200" fbc:label="PF3D7_1354200" fbc:name="PF3D7_1354200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0705500" fbc:label="PF3D7_0705500" fbc:name="PF3D7_0705500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1354200" fbc:label="PF3D7_1354200" fbc:name="PF3D7_1354200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1316100" fbc:label="PF3D7_1316100" fbc:name="PF3D7_1316100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0511800" fbc:label="PF3D7_0511800" fbc:name="PF3D7_0511800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1013500" fbc:label="PF3D7_1013500" fbc:name="PF3D7_1013500"/>
@@ -1224,20 +1224,20 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1316600" fbc:label="PF3D7_1316600" fbc:name="PF3D7_1316600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1401800" fbc:label="PF3D7_1401800" fbc:name="PF3D7_1401800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0628300" fbc:label="PF3D7_0628300" fbc:name="PF3D7_0628300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0930500" fbc:label="PF3D7_0930500" fbc:name="PF3D7_0930500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1471400" fbc:label="PF3D7_1471400" fbc:name="PF3D7_1471400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0930500" fbc:label="PF3D7_0930500" fbc:name="PF3D7_0930500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1409900" fbc:label="PF3D7_1409900" fbc:name="PF3D7_1409900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1124600" fbc:label="PF3D7_1124600" fbc:name="PF3D7_1124600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1347700" fbc:label="PF3D7_1347700" fbc:name="PF3D7_1347700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0927900" fbc:label="PF3D7_0927900" fbc:name="PF3D7_0927900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1366800" fbc:label="PF3D7_1366800" fbc:name="PF3D7_1366800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1315600" fbc:label="PF3D7_1315600" fbc:name="PF3D7_1315600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1038900" fbc:label="PF3D7_1038900" fbc:name="PF3D7_1038900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0702200" fbc:label="PF3D7_0702200" fbc:name="PF3D7_0702200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1476700" fbc:label="PF3D7_1476700" fbc:name="PF3D7_1476700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1401500" fbc:label="PF3D7_1401500" fbc:name="PF3D7_1401500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0709700" fbc:label="PF3D7_0709700" fbc:name="PF3D7_0709700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1476800" fbc:label="PF3D7_1476800" fbc:name="PF3D7_1476800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1038900" fbc:label="PF3D7_1038900" fbc:name="PF3D7_1038900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1476700" fbc:label="PF3D7_1476700" fbc:name="PF3D7_1476700"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1401500" fbc:label="PF3D7_1401500" fbc:name="PF3D7_1401500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0209100" fbc:label="PF3D7_0209100" fbc:name="PF3D7_0209100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0820200" fbc:label="PF3D7_0820200" fbc:name="PF3D7_0820200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0409500" fbc:label="PF3D7_0409500" fbc:name="PF3D7_0409500"/>
@@ -1248,8 +1248,8 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0511200" fbc:label="PF3D7_0511200" fbc:name="PF3D7_0511200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0629300" fbc:label="PF3D7_0629300" fbc:name="PF3D7_0629300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1029600" fbc:label="PF3D7_1029600" fbc:name="PF3D7_1029600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0415600" fbc:label="PF3D7_0415600" fbc:name="PF3D7_0415600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1008900" fbc:label="PF3D7_1008900" fbc:name="PF3D7_1008900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0415600" fbc:label="PF3D7_0415600" fbc:name="PF3D7_0415600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0206700" fbc:label="PF3D7_0206700" fbc:name="PF3D7_0206700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1329400" fbc:label="PF3D7_1329400" fbc:name="PF3D7_1329400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0928900" fbc:label="PF3D7_0928900" fbc:name="PF3D7_0928900"/>
@@ -1257,18 +1257,18 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1360500" fbc:label="PF3D7_1360500" fbc:name="PF3D7_1360500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1012400" fbc:label="PF3D7_1012400" fbc:name="PF3D7_1012400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0920800" fbc:label="PF3D7_0920800" fbc:name="PF3D7_0920800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1349100" fbc:label="PF3D7_1349100" fbc:name="PF3D7_1349100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1431800" fbc:label="PF3D7_1431800" fbc:name="PF3D7_1431800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1349100" fbc:label="PF3D7_1349100" fbc:name="PF3D7_1349100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1206100" fbc:label="PF3D7_1206100" fbc:name="PF3D7_1206100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1321500" fbc:label="PF3D7_1321500" fbc:name="PF3D7_1321500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1321600" fbc:label="PF3D7_1321600" fbc:name="PF3D7_1321600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1209500" fbc:label="PF3D7_1209500" fbc:name="PF3D7_1209500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1470500" fbc:label="PF3D7_1470500" fbc:name="PF3D7_1470500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1321600" fbc:label="PF3D7_1321600" fbc:name="PF3D7_1321600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0513300" fbc:label="PF3D7_0513300" fbc:name="PF3D7_0513300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1354500" fbc:label="PF3D7_1354500" fbc:name="PF3D7_1354500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1012600" fbc:label="PF3D7_1012600" fbc:name="PF3D7_1012600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0605600" fbc:label="PF3D7_0605600" fbc:name="PF3D7_0605600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1366500" fbc:label="PF3D7_1366500" fbc:name="PF3D7_1366500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0605600" fbc:label="PF3D7_0605600" fbc:name="PF3D7_0605600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1410200" fbc:label="PF3D7_1410200" fbc:name="PF3D7_1410200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1349400" fbc:label="PF3D7_1349400" fbc:name="PF3D7_1349400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1472900" fbc:label="PF3D7_1472900" fbc:name="PF3D7_1472900"/>
@@ -1278,123 +1278,123 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0520600" fbc:label="PF3D7_0520600" fbc:name="PF3D7_0520600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1344800" fbc:label="PF3D7_1344800" fbc:name="PF3D7_1344800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1308200" fbc:label="PF3D7_1308200" fbc:name="PF3D7_1308200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0521500" fbc:label="PF3D7_0521500" fbc:name="PF3D7_0521500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0914000" fbc:label="PF3D7_0914000" fbc:name="PF3D7_0914000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0219500" fbc:label="PF3D7_0219500" fbc:name="PF3D7_0219500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1227900" fbc:label="PF3D7_1227900" fbc:name="PF3D7_1227900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0908700" fbc:label="PF3D7_0908700" fbc:name="PF3D7_0908700"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0521500" fbc:label="PF3D7_0521500" fbc:name="PF3D7_0521500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1018000" fbc:label="PF3D7_1018000" fbc:name="PF3D7_1018000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1342100" fbc:label="PF3D7_1342100" fbc:name="PF3D7_1342100"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1312600" fbc:label="PF3D7_1312600" fbc:name="PF3D7_1312600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0820700" fbc:label="PF3D7_0820700" fbc:name="PF3D7_0820700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1320800" fbc:label="PF3D7_1320800" fbc:name="PF3D7_1320800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1312600" fbc:label="PF3D7_1312600" fbc:name="PF3D7_1312600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1022500" fbc:label="PF3D7_1022500" fbc:name="PF3D7_1022500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1108500" fbc:label="PF3D7_1108500" fbc:name="PF3D7_1108500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1345700" fbc:label="PF3D7_1345700" fbc:name="PF3D7_1345700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0512200" fbc:label="PF3D7_0512200" fbc:name="PF3D7_0512200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0923800" fbc:label="PF3D7_0923800" fbc:name="PF3D7_0923800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1134100" fbc:label="PF3D7_1134100" fbc:name="PF3D7_1134100"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1352500" fbc:label="PF3D7_1352500" fbc:name="PF3D7_1352500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0919400" fbc:label="PF3D7_0919400" fbc:name="PF3D7_0919400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0827900" fbc:label="PF3D7_0827900" fbc:name="PF3D7_0827900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1134100" fbc:label="PF3D7_1134100" fbc:name="PF3D7_1134100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1472600" fbc:label="PF3D7_1472600" fbc:name="PF3D7_1472600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0919400" fbc:label="PF3D7_0919400" fbc:name="PF3D7_0919400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1352500" fbc:label="PF3D7_1352500" fbc:name="PF3D7_1352500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0609100" fbc:label="PF3D7_0609100" fbc:name="PF3D7_0609100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0204700" fbc:label="PF3D7_0204700" fbc:name="PF3D7_0204700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1132800" fbc:label="PF3D7_1132800" fbc:name="PF3D7_1132800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0316600" fbc:label="PF3D7_0316600" fbc:name="PF3D7_0316600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1208400" fbc:label="PF3D7_1208400" fbc:name="PF3D7_1208400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1231400" fbc:label="PF3D7_1231400" fbc:name="PF3D7_1231400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0515500" fbc:label="PF3D7_0515500" fbc:name="PF3D7_0515500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0209600" fbc:label="PF3D7_0209600" fbc:name="PF3D7_0209600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1132500" fbc:label="PF3D7_1132500" fbc:name="PF3D7_1132500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0629500" fbc:label="PF3D7_0629500" fbc:name="PF3D7_0629500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1231400" fbc:label="PF3D7_1231400" fbc:name="PF3D7_1231400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0209600" fbc:label="PF3D7_0209600" fbc:name="PF3D7_0209600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0508300" fbc:label="PF3D7_0508300" fbc:name="PF3D7_0508300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0530200" fbc:label="PF3D7_0530200" fbc:name="PF3D7_0530200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1347200" fbc:label="PF3D7_1347200" fbc:name="PF3D7_1347200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0824400" fbc:label="PF3D7_0824400" fbc:name="PF3D7_0824400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1469400" fbc:label="PF3D7_1469400" fbc:name="PF3D7_1469400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0103200" fbc:label="PF3D7_0103200" fbc:name="PF3D7_0103200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0824400" fbc:label="PF3D7_0824400" fbc:name="PF3D7_0824400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1104800" fbc:label="PF3D7_1104800" fbc:name="PF3D7_1104800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1241600" fbc:label="PF3D7_1241600" fbc:name="PF3D7_1241600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1037300" fbc:label="PF3D7_1037300" fbc:name="PF3D7_1037300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1004800" fbc:label="PF3D7_1004800" fbc:name="PF3D7_1004800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1037300" fbc:label="PF3D7_1037300" fbc:name="PF3D7_1037300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0705900" fbc:label="PF3D7_0705900" fbc:name="PF3D7_0705900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1311300" fbc:label="PF3D7_1311300" fbc:name="PF3D7_1311300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0715500" fbc:label="PF3D7_0715500" fbc:name="PF3D7_0715500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1235700" fbc:label="PF3D7_1235700" fbc:name="PF3D7_1235700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1147700" fbc:label="PF3D7_1147700" fbc:name="PF3D7_1147700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1310000" fbc:label="PF3D7_1310000" fbc:name="PF3D7_1310000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1311300" fbc:label="PF3D7_1311300" fbc:name="PF3D7_1311300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1235700" fbc:label="PF3D7_1235700" fbc:name="PF3D7_1235700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0217100" fbc:label="PF3D7_0217100" fbc:name="PF3D7_0217100"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1310000" fbc:label="PF3D7_1310000" fbc:name="PF3D7_1310000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0715500" fbc:label="PF3D7_0715500" fbc:name="PF3D7_0715500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1202200" fbc:label="PF3D7_1202200" fbc:name="PF3D7_1202200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0620800" fbc:label="PF3D7_0620800" fbc:name="PF3D7_0620800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0702700" fbc:label="PF3D7_0702700" fbc:name="PF3D7_0702700"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0620800" fbc:label="PF3D7_0620800" fbc:name="PF3D7_0620800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0411500" fbc:label="PF3D7_0411500" fbc:name="PF3D7_0411500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0714700" fbc:label="PF3D7_0714700" fbc:name="PF3D7_0714700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1370100" fbc:label="PF3D7_1370100" fbc:name="PF3D7_1370100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1370200" fbc:label="PF3D7_1370200" fbc:name="PF3D7_1370200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1103200" fbc:label="PF3D7_1103200" fbc:name="PF3D7_1103200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0706900" fbc:label="PF3D7_0706900" fbc:name="PF3D7_0706900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0312700" fbc:label="PF3D7_0312700" fbc:name="PF3D7_0312700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0410200" fbc:label="PF3D7_0410200" fbc:name="PF3D7_0410200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0714800" fbc:label="PF3D7_0714800" fbc:name="PF3D7_0714800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0312700" fbc:label="PF3D7_0312700" fbc:name="PF3D7_0312700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0527800" fbc:label="PF3D7_0527800" fbc:name="PF3D7_0527800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1103300" fbc:label="PF3D7_1103300" fbc:name="PF3D7_1103300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0714800" fbc:label="PF3D7_0714800" fbc:name="PF3D7_0714800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0510600" fbc:label="PF3D7_0510600" fbc:name="PF3D7_0510600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0620900" fbc:label="PF3D7_0620900" fbc:name="PF3D7_0620900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1103300" fbc:label="PF3D7_1103300" fbc:name="PF3D7_1103300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0707000" fbc:label="PF3D7_0707000" fbc:name="PF3D7_0707000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0707100" fbc:label="PF3D7_0707100" fbc:name="PF3D7_0707100"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0707000" fbc:label="PF3D7_0707000" fbc:name="PF3D7_0707000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1339200" fbc:label="PF3D7_1339200" fbc:name="PF3D7_1339200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1216800" fbc:label="PF3D7_1216800" fbc:name="PF3D7_1216800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1418400" fbc:label="PF3D7_1418400" fbc:name="PF3D7_1418400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1339200" fbc:label="PF3D7_1339200" fbc:name="PF3D7_1339200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1438200" fbc:label="PF3D7_1438200" fbc:name="PF3D7_1438200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1337600" fbc:label="PF3D7_1337600" fbc:name="PF3D7_1337600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0621600" fbc:label="PF3D7_0621600" fbc:name="PF3D7_0621600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0714900" fbc:label="PF3D7_0714900" fbc:name="PF3D7_0714900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0410100" fbc:label="PF3D7_0410100" fbc:name="PF3D7_0410100"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0714900" fbc:label="PF3D7_0714900" fbc:name="PF3D7_0714900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1337600" fbc:label="PF3D7_1337600" fbc:name="PF3D7_1337600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1355400" fbc:label="PF3D7_1355400" fbc:name="PF3D7_1355400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0706800" fbc:label="PF3D7_0706800" fbc:name="PF3D7_0706800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0730700" fbc:label="PF3D7_0730700" fbc:name="PF3D7_0730700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1355400" fbc:label="PF3D7_1355400" fbc:name="PF3D7_1355400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0702800" fbc:label="PF3D7_0702800" fbc:name="PF3D7_0702800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1251900" fbc:label="PF3D7_1251900" fbc:name="PF3D7_1251900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0730600" fbc:label="PF3D7_0730600" fbc:name="PF3D7_0730600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0312600" fbc:label="PF3D7_0312600" fbc:name="PF3D7_0312600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0730600" fbc:label="PF3D7_0730600" fbc:name="PF3D7_0730600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1369800" fbc:label="PF3D7_1369800" fbc:name="PF3D7_1369800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1370000" fbc:label="PF3D7_1370000" fbc:name="PF3D7_1370000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1341000" fbc:label="PF3D7_1341000" fbc:name="PF3D7_1341000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0529600" fbc:label="PF3D7_0529600" fbc:name="PF3D7_0529600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1341000" fbc:label="PF3D7_1341000" fbc:name="PF3D7_1341000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1370000" fbc:label="PF3D7_1370000" fbc:name="PF3D7_1370000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1438300" fbc:label="PF3D7_1438300" fbc:name="PF3D7_1438300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1339100" fbc:label="PF3D7_1339100" fbc:name="PF3D7_1339100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0403000" fbc:label="PF3D7_0403000" fbc:name="PF3D7_0403000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0203500" fbc:label="PF3D7_0203500" fbc:name="PF3D7_0203500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0527700" fbc:label="PF3D7_0527700" fbc:name="PF3D7_0527700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0411600" fbc:label="PF3D7_0411600" fbc:name="PF3D7_0411600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1252000" fbc:label="PF3D7_1252000" fbc:name="PF3D7_1252000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0527700" fbc:label="PF3D7_0527700" fbc:name="PF3D7_0527700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0514400" fbc:label="PF3D7_0514400" fbc:name="PF3D7_0514400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1369900" fbc:label="PF3D7_1369900" fbc:name="PF3D7_1369900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0923200" fbc:label="PF3D7_0923200" fbc:name="PF3D7_0923200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0208500" fbc:label="PF3D7_0208500" fbc:name="PF3D7_0208500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0420200" fbc:label="PF3D7_0420200" fbc:name="PF3D7_0420200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1026900" fbc:label="PF3D7_1026900" fbc:name="PF3D7_1026900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1469600" fbc:label="PF3D7_1469600" fbc:name="PF3D7_1469600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1460000" fbc:label="PF3D7_1460000" fbc:name="PF3D7_1460000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1026900" fbc:label="PF3D7_1026900" fbc:name="PF3D7_1026900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1430300" fbc:label="PF3D7_1430300" fbc:name="PF3D7_1430300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0918000" fbc:label="PF3D7_0918000" fbc:name="PF3D7_0918000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1403900" fbc:label="PF3D7_1403900" fbc:name="PF3D7_1403900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0716600" fbc:label="PF3D7_0716600" fbc:name="PF3D7_0716600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1365400" fbc:label="PF3D7_1365400" fbc:name="PF3D7_1365400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1333200" fbc:label="PF3D7_1333200" fbc:name="PF3D7_1333200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0716600" fbc:label="PF3D7_0716600" fbc:name="PF3D7_0716600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0727200" fbc:label="PF3D7_0727200" fbc:name="PF3D7_0727200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1420900" fbc:label="PF3D7_1420900" fbc:name="PF3D7_1420900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1333200" fbc:label="PF3D7_1333200" fbc:name="PF3D7_1333200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1213900" fbc:label="PF3D7_1213900" fbc:name="PF3D7_1213900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1420900" fbc:label="PF3D7_1420900" fbc:name="PF3D7_1420900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0517500" fbc:label="PF3D7_0517500" fbc:name="PF3D7_0517500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0724300" fbc:label="PF3D7_0724300" fbc:name="PF3D7_0724300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0916600" fbc:label="PF3D7_0916600" fbc:name="PF3D7_0916600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0724300" fbc:label="PF3D7_0724300" fbc:name="PF3D7_0724300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0627500" fbc:label="PF3D7_0627500" fbc:name="PF3D7_0627500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1143900" fbc:label="PF3D7_1143900" fbc:name="PF3D7_1143900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1239600" fbc:label="PF3D7_1239600" fbc:name="PF3D7_1239600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0826400" fbc:label="PF3D7_0826400" fbc:name="PF3D7_0826400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0204900" fbc:label="PF3D7_0204900" fbc:name="PF3D7_0204900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0407100" fbc:label="PF3D7_0407100" fbc:name="PF3D7_0407100"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0204900" fbc:label="PF3D7_0204900" fbc:name="PF3D7_0204900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0913300" fbc:label="PF3D7_0913300" fbc:name="PF3D7_0913300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0508200" fbc:label="PF3D7_0508200" fbc:name="PF3D7_0508200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1403700" fbc:label="PF3D7_1403700" fbc:name="PF3D7_1403700"/>
@@ -1406,11 +1406,11 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1404600" fbc:label="PF3D7_1404600" fbc:name="PF3D7_1404600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0913900" fbc:label="PF3D7_0913900" fbc:name="PF3D7_0913900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1218600" fbc:label="PF3D7_1218600" fbc:name="PF3D7_1218600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1120100" fbc:label="PF3D7_1120100" fbc:name="PF3D7_1120100"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0413500" fbc:label="PF3D7_0413500" fbc:name="PF3D7_0413500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0310300" fbc:label="PF3D7_0310300" fbc:name="PF3D7_0310300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1456800" fbc:label="PF3D7_1456800" fbc:name="PF3D7_1456800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0413500" fbc:label="PF3D7_0413500" fbc:name="PF3D7_0413500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1120100" fbc:label="PF3D7_1120100" fbc:name="PF3D7_1120100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0316300" fbc:label="PF3D7_0316300" fbc:name="PF3D7_0316300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1456800" fbc:label="PF3D7_1456800" fbc:name="PF3D7_1456800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0607500" fbc:label="PF3D7_0607500" fbc:name="PF3D7_0607500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0802000" fbc:label="PF3D7_0802000" fbc:name="PF3D7_0802000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1416500" fbc:label="PF3D7_1416500" fbc:name="PF3D7_1416500"/>
@@ -1418,40 +1418,40 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0321200" fbc:label="PF3D7_0321200" fbc:name="PF3D7_0321200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0805600" fbc:label="PF3D7_0805600" fbc:name="PF3D7_0805600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1341600" fbc:label="PF3D7_1341600" fbc:name="PF3D7_1341600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1454400" fbc:label="PF3D7_1454400" fbc:name="PF3D7_1454400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1115700" fbc:label="PF3D7_1115700" fbc:name="PF3D7_1115700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0808200" fbc:label="PF3D7_0808200" fbc:name="PF3D7_0808200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1401300" fbc:label="PF3D7_1401300" fbc:name="PF3D7_1401300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1323500" fbc:label="PF3D7_1323500" fbc:name="PF3D7_1323500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1115300" fbc:label="PF3D7_1115300" fbc:name="PF3D7_1115300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0804400" fbc:label="PF3D7_0804400" fbc:name="PF3D7_0804400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1360800" fbc:label="PF3D7_1360800" fbc:name="PF3D7_1360800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1033800" fbc:label="PF3D7_1033800" fbc:name="PF3D7_1033800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1407800" fbc:label="PF3D7_1407800" fbc:name="PF3D7_1407800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1430200" fbc:label="PF3D7_1430200" fbc:name="PF3D7_1430200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1323500" fbc:label="PF3D7_1323500" fbc:name="PF3D7_1323500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1446200" fbc:label="PF3D7_1446200" fbc:name="PF3D7_1446200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1116700" fbc:label="PF3D7_1116700" fbc:name="PF3D7_1116700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1407900" fbc:label="PF3D7_1407900" fbc:name="PF3D7_1407900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0507200" fbc:label="PF3D7_0507200" fbc:name="PF3D7_0507200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1460100" fbc:label="PF3D7_1460100" fbc:name="PF3D7_1460100"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1408000" fbc:label="PF3D7_1408000" fbc:name="PF3D7_1408000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1247800" fbc:label="PF3D7_1247800" fbc:name="PF3D7_1247800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1136900" fbc:label="PF3D7_1136900" fbc:name="PF3D7_1136900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1454400" fbc:label="PF3D7_1454400" fbc:name="PF3D7_1454400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1115400" fbc:label="PF3D7_1115400" fbc:name="PF3D7_1115400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1446200" fbc:label="PF3D7_1446200" fbc:name="PF3D7_1446200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1033800" fbc:label="PF3D7_1033800" fbc:name="PF3D7_1033800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1360800" fbc:label="PF3D7_1360800" fbc:name="PF3D7_1360800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0507500" fbc:label="PF3D7_0507500" fbc:name="PF3D7_0507500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0804400" fbc:label="PF3D7_0804400" fbc:name="PF3D7_0804400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1407800" fbc:label="PF3D7_1407800" fbc:name="PF3D7_1407800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1408100" fbc:label="PF3D7_1408100" fbc:name="PF3D7_1408100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0932300" fbc:label="PF3D7_0932300" fbc:name="PF3D7_0932300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0311700" fbc:label="PF3D7_0311700" fbc:name="PF3D7_0311700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0507500" fbc:label="PF3D7_0507500" fbc:name="PF3D7_0507500"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1015300" fbc:label="PF3D7_1015300" fbc:name="PF3D7_1015300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1465700" fbc:label="PF3D7_1465700" fbc:name="PF3D7_1465700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1116700" fbc:label="PF3D7_1116700" fbc:name="PF3D7_1116700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0527300" fbc:label="PF3D7_0527300" fbc:name="PF3D7_0527300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1434600" fbc:label="PF3D7_1434600" fbc:name="PF3D7_1434600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1460100" fbc:label="PF3D7_1460100" fbc:name="PF3D7_1460100"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1465700" fbc:label="PF3D7_1465700" fbc:name="PF3D7_1465700"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1115700" fbc:label="PF3D7_1115700" fbc:name="PF3D7_1115700"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0527300" fbc:label="PF3D7_0527300" fbc:name="PF3D7_0527300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1401300" fbc:label="PF3D7_1401300" fbc:name="PF3D7_1401300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0808200" fbc:label="PF3D7_0808200" fbc:name="PF3D7_0808200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1247800" fbc:label="PF3D7_1247800" fbc:name="PF3D7_1247800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1136900" fbc:label="PF3D7_1136900" fbc:name="PF3D7_1136900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1408000" fbc:label="PF3D7_1408000" fbc:name="PF3D7_1408000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1015300" fbc:label="PF3D7_1015300" fbc:name="PF3D7_1015300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1430200" fbc:label="PF3D7_1430200" fbc:name="PF3D7_1430200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0311700" fbc:label="PF3D7_0311700" fbc:name="PF3D7_0311700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1458400" fbc:label="PF3D7_1458400" fbc:name="PF3D7_1458400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1140000" fbc:label="PF3D7_1140000" fbc:name="PF3D7_1140000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1205100" fbc:label="PF3D7_1205100" fbc:name="PF3D7_1205100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0629400" fbc:label="PF3D7_0629400" fbc:name="PF3D7_0629400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1336900" fbc:label="PF3D7_1336900" fbc:name="PF3D7_1336900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1205100" fbc:label="PF3D7_1205100" fbc:name="PF3D7_1205100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1251700" fbc:label="PF3D7_1251700" fbc:name="PF3D7_1251700"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1336900" fbc:label="PF3D7_1336900" fbc:name="PF3D7_1336900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1331700" fbc:label="PF3D7_1331700" fbc:name="PF3D7_1331700"/>
       <fbc:geneProduct fbc:id="G_PFF0530w" fbc:label="PFF0530w" fbc:name="PFF0530w"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1251300" fbc:label="PF3D7_1251300" fbc:name="PF3D7_1251300"/>
@@ -1466,8 +1466,8 @@
       <fbc:geneProduct fbc:id="G_PF3D7_0103700" fbc:label="PF3D7_0103700" fbc:name="PF3D7_0103700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1409100" fbc:label="PF3D7_1409100" fbc:name="PF3D7_1409100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0915800" fbc:label="PF3D7_0915800" fbc:name="PF3D7_0915800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0806400" fbc:label="PF3D7_0806400" fbc:name="PF3D7_0806400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0211600" fbc:label="PF3D7_0211600" fbc:name="PF3D7_0211600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0806400" fbc:label="PF3D7_0806400" fbc:name="PF3D7_0806400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0210300" fbc:label="PF3D7_0210300" fbc:name="PF3D7_0210300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0926400" fbc:label="PF3D7_0926400" fbc:name="PF3D7_0926400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1437200" fbc:label="PF3D7_1437200" fbc:name="PF3D7_1437200"/>
@@ -1475,56 +1475,56 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1405600" fbc:label="PF3D7_1405600" fbc:name="PF3D7_1405600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1116500" fbc:label="PF3D7_1116500" fbc:name="PF3D7_1116500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0828600" fbc:label="PF3D7_0828600" fbc:name="PF3D7_0828600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1357200" fbc:label="PF3D7_1357200" fbc:name="PF3D7_1357200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1349200" fbc:label="PF3D7_1349200" fbc:name="PF3D7_1349200"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1357200" fbc:label="PF3D7_1357200" fbc:name="PF3D7_1357200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1034900" fbc:label="PF3D7_1034900" fbc:name="PF3D7_1034900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1005000" fbc:label="PF3D7_1005000" fbc:name="PF3D7_1005000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0211800" fbc:label="PF3D7_0211800" fbc:name="PF3D7_0211800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0509600" fbc:label="PF3D7_0509600" fbc:name="PF3D7_0509600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1015000" fbc:label="PF3D7_1015000" fbc:name="PF3D7_1015000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0603700" fbc:label="PF3D7_0603700" fbc:name="PF3D7_0603700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1104000" fbc:label="PF3D7_1104000" fbc:name="PF3D7_1104000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0109800" fbc:label="PF3D7_0109800" fbc:name="PF3D7_0109800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1232000" fbc:label="PF3D7_1232000" fbc:name="PF3D7_1232000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1104000" fbc:label="PF3D7_1104000" fbc:name="PF3D7_1104000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0603700" fbc:label="PF3D7_0603700" fbc:name="PF3D7_0603700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0922400" fbc:label="PF3D7_0922400" fbc:name="PF3D7_0922400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0925300" fbc:label="PF3D7_0925300" fbc:name="PF3D7_0925300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1213800" fbc:label="PF3D7_1213800" fbc:name="PF3D7_1213800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0514300" fbc:label="PF3D7_0514300" fbc:name="PF3D7_0514300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0925300" fbc:label="PF3D7_0925300" fbc:name="PF3D7_0925300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0102900" fbc:label="PF3D7_0102900" fbc:name="PF3D7_0102900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0514300" fbc:label="PF3D7_0514300" fbc:name="PF3D7_0514300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1420400" fbc:label="PF3D7_1420400" fbc:name="PF3D7_1420400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1350100" fbc:label="PF3D7_1350100" fbc:name="PF3D7_1350100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1416800" fbc:label="PF3D7_1416800" fbc:name="PF3D7_1416800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1350100" fbc:label="PF3D7_1350100" fbc:name="PF3D7_1350100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1139700" fbc:label="PF3D7_1139700" fbc:name="PF3D7_1139700"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0623200" fbc:label="PF3D7_0623200" fbc:name="PF3D7_0623200"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0928000" fbc:label="PF3D7_0928000" fbc:name="PF3D7_0928000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0927800" fbc:label="PF3D7_0927800" fbc:name="PF3D7_0927800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1475300" fbc:label="PF3D7_1475300" fbc:name="PF3D7_1475300"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1430900" fbc:label="PF3D7_1430900" fbc:name="PF3D7_1430900"/>
       <fbc:geneProduct fbc:id="G_mal_mito_2" fbc:label="mal_mito_2" fbc:name="mal_mito_2"/>
       <fbc:geneProduct fbc:id="G_mal_mito_1" fbc:label="mal_mito_1" fbc:name="mal_mito_1"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0927800" fbc:label="PF3D7_0927800" fbc:name="PF3D7_0927800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1430900" fbc:label="PF3D7_1430900" fbc:name="PF3D7_1430900"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0928000" fbc:label="PF3D7_0928000" fbc:name="PF3D7_0928000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1435000" fbc:label="PF3D7_1435000" fbc:name="PF3D7_1435000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1439400" fbc:label="PF3D7_1439400" fbc:name="PF3D7_1439400"/>
+      <fbc:geneProduct fbc:id="G_mal_mito_3" fbc:label="mal_mito_3" fbc:name="mal_mito_3"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1426900" fbc:label="PF3D7_1426900" fbc:name="PF3D7_1426900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1012300" fbc:label="PF3D7_1012300" fbc:name="PF3D7_1012300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0211300" fbc:label="PF3D7_0211300" fbc:name="PF3D7_0211300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1439400" fbc:label="PF3D7_1439400" fbc:name="PF3D7_1439400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1426900" fbc:label="PF3D7_1426900" fbc:name="PF3D7_1426900"/>
-      <fbc:geneProduct fbc:id="G_mal_mito_3" fbc:label="mal_mito_3" fbc:name="mal_mito_3"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0915000" fbc:label="PF3D7_0915000" fbc:name="PF3D7_0915000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1034400" fbc:label="PF3D7_1034400" fbc:name="PF3D7_1034400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1212800" fbc:label="PF3D7_1212800" fbc:name="PF3D7_1212800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0603300" fbc:label="PF3D7_0603300" fbc:name="PF3D7_0603300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1479000" fbc:label="PF3D7_1479000" fbc:name="PF3D7_1479000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0401900" fbc:label="PF3D7_0401900" fbc:name="PF3D7_0401900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1477900" fbc:label="PF3D7_1477900" fbc:name="PF3D7_1477900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0215300" fbc:label="PF3D7_0215300" fbc:name="PF3D7_0215300"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1372400" fbc:label="PF3D7_1372400" fbc:name="PF3D7_1372400"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0215000" fbc:label="PF3D7_0215000" fbc:name="PF3D7_0215000"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1238800" fbc:label="PF3D7_1238800" fbc:name="PF3D7_1238800"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0525100" fbc:label="PF3D7_0525100" fbc:name="PF3D7_0525100"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1479000" fbc:label="PF3D7_1479000" fbc:name="PF3D7_1479000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0619500" fbc:label="PF3D7_0619500" fbc:name="PF3D7_0619500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0525100" fbc:label="PF3D7_0525100" fbc:name="PF3D7_0525100"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1477900" fbc:label="PF3D7_1477900" fbc:name="PF3D7_1477900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1200700" fbc:label="PF3D7_1200700" fbc:name="PF3D7_1200700"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_0301000" fbc:label="PF3D7_0301000" fbc:name="PF3D7_0301000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0401900" fbc:label="PF3D7_0401900" fbc:name="PF3D7_0401900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1253400" fbc:label="PF3D7_1253400" fbc:name="PF3D7_1253400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0301000" fbc:label="PF3D7_0301000" fbc:name="PF3D7_0301000"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1238800" fbc:label="PF3D7_1238800" fbc:name="PF3D7_1238800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_0215000" fbc:label="PF3D7_0215000" fbc:name="PF3D7_0215000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0731600" fbc:label="PF3D7_0731600" fbc:name="PF3D7_0731600"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1372400" fbc:label="PF3D7_1372400" fbc:name="PF3D7_1372400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1406300" fbc:label="PF3D7_1406300" fbc:name="PF3D7_1406300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1238600" fbc:label="PF3D7_1238600" fbc:name="PF3D7_1238600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0625000" fbc:label="PF3D7_0625000" fbc:name="PF3D7_0625000"/>
@@ -1537,20 +1537,20 @@
       <fbc:geneProduct fbc:id="G_PF3D7_1419800" fbc:label="PF3D7_1419800" fbc:name="PF3D7_1419800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1419300" fbc:label="PF3D7_1419300" fbc:name="PF3D7_1419300"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1121600" fbc:label="PF3D7_1121600" fbc:name="PF3D7_1121600"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1124500" fbc:label="PF3D7_1124500" fbc:name="PF3D7_1124500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1446400" fbc:label="PF3D7_1446400" fbc:name="PF3D7_1446400"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1124500" fbc:label="PF3D7_1124500" fbc:name="PF3D7_1124500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1020800" fbc:label="PF3D7_1020800" fbc:name="PF3D7_1020800"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0306400" fbc:label="PF3D7_0306400" fbc:name="PF3D7_0306400"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1216200" fbc:label="PF3D7_1216200" fbc:name="PF3D7_1216200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0618500" fbc:label="PF3D7_0618500" fbc:name="PF3D7_0618500"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0823900" fbc:label="PF3D7_0823900" fbc:name="PF3D7_0823900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1325100" fbc:label="PF3D7_1325100" fbc:name="PF3D7_1325100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1327800" fbc:label="PF3D7_1327800" fbc:name="PF3D7_1327800"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1325100" fbc:label="PF3D7_1325100" fbc:name="PF3D7_1325100"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1235600" fbc:label="PF3D7_1235600" fbc:name="PF3D7_1235600"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1365500" fbc:label="PF3D7_1365500" fbc:name="PF3D7_1365500"/>
+      <fbc:geneProduct fbc:id="G_PF3D7_1344000" fbc:label="PF3D7_1344000" fbc:name="PF3D7_1344000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1452200" fbc:label="PF3D7_1452200" fbc:name="PF3D7_1452200"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1132900" fbc:label="PF3D7_1132900" fbc:name="PF3D7_1132900"/>
-      <fbc:geneProduct fbc:id="G_PF3D7_1344000" fbc:label="PF3D7_1344000" fbc:name="PF3D7_1344000"/>
       <fbc:geneProduct fbc:id="G_PF3D7_1340900" fbc:label="PF3D7_1340900" fbc:name="PF3D7_1340900"/>
       <fbc:geneProduct fbc:id="G_PF3D7_0322300" fbc:label="PF3D7_0322300" fbc:name="PF3D7_0322300"/>
     </fbc:listOfGeneProducts>

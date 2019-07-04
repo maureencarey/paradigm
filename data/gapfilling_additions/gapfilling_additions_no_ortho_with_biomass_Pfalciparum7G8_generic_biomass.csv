@@ -1,6 +1,0 @@
-,rxns_added
-0,r1979: na1_e + orn_c + thr__L_e --> na1_c + orn_e + thr__L_c
-1,r1808: ala__L_c + leu__L_e + na1_e --> ala__L_e + leu__L_c + na1_c
-2,HIStN1: h_c + his__L_e + 2.0 na1_e --> h_e + his__L_c + 2.0 na1_c
-3,r1959: leu__L_e + na1_e + orn_c --> leu__L_c + na1_c + orn_e
-4,r1809: gln__L_c + leu__L_e + na1_e --> gln__L_e + leu__L_c + na1_c
