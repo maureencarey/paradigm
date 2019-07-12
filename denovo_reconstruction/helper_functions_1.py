@@ -1,3 +1,5 @@
+import pandas as pd
+
 def met_ids_without_comp(model,met_id):
     
     # print list of metabolites without the compartment associated
@@ -11,7 +13,7 @@ def met_ids_without_comp(model,met_id):
             m.id.endswith('_u') or m.id.endswith('_v') or m.id.endswith('_x'):
                 id_withou_c = m.id[:-2]
             elif m.id.endswith('_cx') or m.id.endswith('_um') or m.id.endswith('_im') \
-            or m.id.endswith('_ap') or m.id.endswith('_fv'):
+            or m.id.endswith('_ap') or m.id.endswith('_fv') or m.id.endswith('_cm'):
                 id_withou_c = m.id[:-3]
             else:
                 print('unknown compartment')
@@ -33,7 +35,7 @@ def get_comp(model,met_id):
             m.id.endswith('_u') or m.id.endswith('_v') or m.id.endswith('_x'):
                 id_withou_c = m.id[-2:]
             elif m.id.endswith('_cx') or m.id.endswith('_um') or m.id.endswith('_im') or \
-             m.id.endswith('_ap') or m.id.endswith('_fv'):
+             m.id.endswith('_ap') or m.id.endswith('_fv') or m.id.endswith('_cm'):
                 id_withou_c = m.id[-3:]
             else:
                 print('unknown compartment')
@@ -135,3 +137,24 @@ def reaction_scoring(annotation, gprs, spontaneous_score=0.0, debug_output=None)
     reaction_scores = protein_scores.groupby(['reaction'], as_index=False) \
         .agg({'GPR': merge_proteins, 'score': merge_protein_scores}).dropna()
     return(reaction_scores)
+
+
+def prune_unused_metabolites2(cobra_model):
+    """ USE THIS UNTIL AUG 31 UPDATES ARE INTEGRATED INTO MASTER COBRAPY BRANCH
+    Remove metabolites that are not involved in any reactions and
+    returns pruned model
+    Parameters
+    ----------
+    cobra_model: class:`~cobra.core.Model.Model` object
+        the model to remove unused metabolites from
+    Returns
+    -------
+    output_model: class:`~cobra.core.Model.Model` object
+        input model with unused metabolites removed
+    inactive_metabolites: list of class:`~cobra.core.reaction.Reaction`
+        list of metabolites that were removed
+    """
+    output_model = cobra_model.copy()
+    inactive_metabolites = [m for m in output_model.metabolites if len(m.reactions) == 0]
+    output_model.remove_metabolites(inactive_metabolites)
+    return output_model, inactive_metabolites

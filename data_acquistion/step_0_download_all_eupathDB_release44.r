@@ -37,9 +37,9 @@ for (i in 1:length(genomes)) { genomes_list = genomes[[i]]; db_name_uc = DataBas
     link_protein = (paste(paste(upstream_link,middle_link,sep = ""), downstream_link_protein,sep = "-"))
     link_RNA = (paste(paste(upstream_link,middle_link,sep = ""), downstream_link_RNA,sep = "-"))
     link_DNA = (paste(paste(upstream_link,middle_link,sep = ""), downstream_link_DNA,sep = "-"))
-    destination_protein = paste(wd_String_protein,paste(x,paste("annotatedProteins_March2019",".fasta", sep = ""), sep = "_"), sep = "/")
-    destination_RNA = paste(wd_String_RNA,paste(x,paste("annotatedTranscripts_March2019",".fasta", sep = ""), sep = "_"), sep = "/")
-    destination_DNA = paste(wd_String_DNA,paste(x,paste("annotatedGenome_March2019",".fasta", sep = ""), sep = "_"), sep = "/")
+    destination_protein = paste(wd_String_protein,paste(x,paste("annotatedProteins",".fasta", sep = ""), sep = "_"), sep = "/")
+    destination_RNA = paste(wd_String_RNA,paste(x,paste("annotatedTranscripts",".fasta", sep = ""), sep = "_"), sep = "/")
+    destination_DNA = paste(wd_String_DNA,paste(x,paste("annotatedGenome",".fasta", sep = ""), sep = "_"), sep = "/")
     print(destination_protein)
     if (!url.exists(link_protein)) {
         list_o_broken_links = c(list_o_broken_links, link_protein)}

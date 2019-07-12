@@ -2,6 +2,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mail-type=ALL
 #SBATCH --time=2-00:00:00
+#SBATCH --output=/home/mac9jc/paradigm/pipeline_step1.out
 #SBATCH --partition=standard
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=6000

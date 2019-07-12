@@ -46,6 +46,8 @@ for string in [met.id for met in universal_model.metabolites]:
     else:
         compartment_options.append('_'+string.split('_')[len(string.split('_'))-1])
 compartment_options = set(compartment_options)
+compartment_options = [x.split()[0] for x in compartment_options]
+logging.info(compartment_options)
 
 # get metabolites involved in each reaction in universal model in dictionary format
 universal_dict = dict() 
@@ -55,10 +57,10 @@ for rxn in universal_model.reactions:
     check_rxn_products = rxn.products
     check_rxn_reactants = rxn.reactants
     all_mets = rxn.metabolites
-    compart = set([hf.get_comp(universal_model,x) for x in all_mets])
+    compart = set([hf.get_comp(universal_model,x.id) for x in all_mets])
 
-    rxn_dict['reactants'] = [hf.met_ids_without_comp(universal_model,x) for x in check_rxn_reactants]
-    rxn_dict['products'] = [hf.met_ids_without_comp(universal_model,x) for x in check_rxn_products]
+    rxn_dict['reactants'] = [hf.met_ids_without_comp(universal_model,x.id) for x in check_rxn_reactants]
+    rxn_dict['products'] = [hf.met_ids_without_comp(universal_model,x.id) for x in check_rxn_products]
     rxn_dict['compartment'] = list(compart)
 
     universal_dict[rxn.id] = rxn_dict
@@ -146,7 +148,7 @@ else:
 if len(rxns_to_add.keys()) != len(new_model.reactions):
     logging.info('error in universal reaction pruning')
 
-logging.info('made first draft model')
+logging.info('made first draft model, with this many reactions:')
 logging.info(len(new_model.reactions))
 logging.info('printing notes field')
 logging.info([rxn.notes for rxn in new_model.reactions])
@@ -171,16 +173,16 @@ else:
 compartment = model_compartments
 
 columns = ['species','reactions_removed1','reactions_added']
-modifications = pd.DataFrame(index = SPECIES_ID, columns=columns)
+modifications = pd.DataFrame(index = [SPECIES_ID], columns=columns)
 
-model = new_model ## SHOULD THIS BE UPDATED TO MODEL2
+model = new_model
 logging.info('finding good or bad reactions')
-not_compartments = compartment_options - set(compartment)
+not_compartments = list(set(compartment_options) - set(compartment))
 
 # get reactions that use/make at least one metabolite that is in an inappropariate compartment
 good_rxns = list()
 bad_rxns = list()
-not_compartments = [x+' ' for x in not_compartments]
+# not_compartments = [x+' ' for x in not_compartments]
 for rxn_object in model.reactions: # if a reaction does not contain any bad compartments
     rxn_bad_counter = 0
     for x in not_compartments:
@@ -230,15 +232,17 @@ x = len(model.reactions)
 y = len(model.metabolites)
 model.remove_reactions(remove_rxn)
 model.repair()
+
 if len(remove_rxn) != (x - len(model.reactions)):
     logging.info('error - reaction not removed properly')
 x1 = x - len(model.reactions)
 y1 = y - len(model.metabolites)
+x1_2 = len(model.reactions)
 
 # save this number
 inappropriate_compartments_that_remain = (len(bad_rxns_keep_rewrite)/len(model.reactions))*100
 
-modifications.species.loc[SPECIES_ID] = species
+modifications.species.loc[SPECIES_ID] = SPECIES_ID
 modifications.reactions_removed1.loc[SPECIES_ID] = x1
 
 for rxn_id in add_reaction: #there are ids in add_reaction that are in the model already
@@ -249,13 +253,7 @@ for rxn_id in add_reaction: #there are ids in add_reaction that are in the model
 rxns_to_add_list = [universal_model.reactions.get_by_id(x).copy() for x in add_reaction if x not in [r.id for r in model.reactions]]
 # if reaction is already there, it is because the reaction was in multiple compartments
 model.add_reactions(rxns_to_add_list)
-modifications.reactions_added.loc[SPECIES_ID] = len(model.reactions) - x1 # CHECK
-
-# ADD IN THIS WARNING:::
-for c in not_compartments:
-    if c in ([hf.get_comp(model,x) for x in model.metabolites]):
-        logging.info('ERROR, UNACCEPTABLE COMPARTMENTS:')
-        loggin.info(c)
+modifications.reactions_added.loc[SPECIES_ID] = len(model.reactions) - x1_2
 
 # make sure all reactions can carry flux, problem with some versions of the universal model
 for rxn in model.reactions:
@@ -317,11 +315,20 @@ for rxn in fix_these_reactions_list:
         new_rxn.notes['created for paradigm'] = 'true'
         model.add_reactions([new_rxn])
         reactions_added.append(new_rxn.id)
-
+    l = len(model.reactions)
     model.remove_reactions([rxn])
+    if len(model.reactions)>l:
+        logging.info('failed to remove a reaction')
 
 model.repair()
+model, unused = hf.prune_unused_metabolites2(model)
 logging.info('finished moving reactions to the right compartment')
+
+# ADD IN THIS WARNING:
+for c in not_compartments:
+    if c in ([hf.get_comp(model,x.id) for x in model.metabolites]):
+        logging.info('ERROR, UNACCEPTABLE COMPARTMENTS:')
+        logging.info(c)
 
 logging.info('reactions added overall:')
 logging.info(len(model.reactions) - og)
@@ -329,36 +336,17 @@ transport_for_inappropariate_compartment_dict = list(set(transport_for_inappropa
 
 l2 = list()
 for rxn in model.reactions:
-    for suffix in [hf.get_comp(model,m) for m in rxn.metabolites]:
+    for suffix in [hf.get_comp(model,m.id) for m in rxn.metabolites]:
         l2.append(suffix)
 logging.info('compartments:')
 logging.info(set(l2))
 
 os.chdir(data_path)
 modifications.to_csv('model_modifications_'+SPECIES_ID+day+'.csv')
-pd.DataFrame(inappropriate_compartments_that_remain).to_csv("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+day+".csv")
+with open("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+day+".csv", "w") as text_file:
+    text_file.write(str(inappropriate_compartments_that_remain))
 
-def prune_unused_metabolites2(cobra_model):
-    """ USE THIS UNTIL AUG 31 UPDATES ARE INTEGRATED INTO MASTER COBRAPY BRANCH
-    Remove metabolites that are not involved in any reactions and
-    returns pruned model
-    Parameters
-    ----------
-    cobra_model: class:`~cobra.core.Model.Model` object
-        the model to remove unused metabolites from
-    Returns
-    -------
-    output_model: class:`~cobra.core.Model.Model` object
-        input model with unused metabolites removed
-    inactive_metabolites: list of class:`~cobra.core.reaction.Reaction`
-        list of metabolites that were removed
-    """
-    output_model = cobra_model.copy()
-    inactive_metabolites = [m for m in output_model.metabolites if len(m.reactions) == 0]
-    output_model.remove_metabolites(inactive_metabolites)
-    return output_model, inactive_metabolites
-
-model, unused = prune_unused_metabolites2(model)
+model, unused = hf.prune_unused_metabolites2(model)
 model.solver = 'glpk'
 
 # check compartments
@@ -366,9 +354,9 @@ list_om= list()
 list_om2= list()
 for rxn in model.reactions:
     for m in rxn.metabolites:
-        list_om.append(hf.get_comp(model,m))
+        list_om.append(hf.get_comp(model,m.id))
 for m in model.metabolites:
-    list_om2.append(hf.get_comp(model,m))
+    list_om2.append(hf.get_comp(model,m.id))
 if set(list_om) != set(list_om2):
     logging.info('error - extra compartments are present, pruning of unused metabolites did not work')
 

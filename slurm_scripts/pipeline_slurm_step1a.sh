@@ -9,7 +9,7 @@ echo "downloaded models"
 
 # PREP FOR ANNOTATE GENOMES
 cd ~/paradigm/data
-get database sequence files to make protein database for annotating sequences
+# get database sequence files to make protein database for annotating sequences
 wget -O bigg_proteins.fasta 'https://github.com/cdanielmachado/carveme/raw/master/carveme/data/input/bigg_proteins.faa'
 diamond makedb --in bigg_proteins.fasta -d bigg_proteins_diamond
 wget -O aa_seqs_OrthoMCL_5.fasta 'http://orthomcl.org/common/downloads/release-5/aa_seqs_OrthoMCL-5.fasta'
