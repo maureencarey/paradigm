@@ -4,7 +4,7 @@ Code availability for the manuscript titled "title" by Carey *et al*.
 
 The article is submitted JOURNAL (DOI: XXX) and available on BioRxiv (see here: XXX).
 
-FYI some files are to large to share on github, including (but not limited to):
+FYI some files are too large to share on github, including (but not limited to):
 * genome fasta files
 * compiled diamond databases
 Please see .gitignore for specific file names or groups and feel free to email for access.
@@ -35,7 +35,7 @@ This script processes some files for visualization. The visualization is not use
 
 ### helper_functions_1.py
 
-This functions are used throughout the associated scripts and called typically as 'hf'.
+These functions are used throughout the associated scripts and called typically as 'hf'.
 
 
 ### step_2_build_de_novo_models.py
@@ -68,7 +68,7 @@ This functions are used throughout the associated scripts and called typically a
 
 ### step_4_build_generic_biomass_reaction.py
 
-This builds a generic biomass reaction from curation reconstrucitons and adds it to all models.
+This builds a generic biomass reaction from curation reconstructions and adds it to all models.
 
 
 ### step_5_orthology_based_semi_curation.py
@@ -78,7 +78,7 @@ for *Plasmodium falciparum*.
 
 ### step_6_task_based_gapfilling.py
 
-gapfilling to generic biomass, species specific biomass (if available), and any tasks idenified in FILENAME (if available)
+gapfilling to generic biomass, species specific biomass (if available), and any tasks identified in FILENAME (if available)
 
 
 ### step_6_task_based_gapfilling_plasmodium.py
@@ -106,7 +106,7 @@ This file generates the sbatch scripts for gapfilling the de novo plasmodium rec
 
 ### pipeline_auto_slurm_for_step2.sh
 
-This file generates the sbatch scripts for generating all reconstructions. Only the plasmodium recosntructions use orthology transformation.
+This file generates the sbatch scripts for generating all reconstructions. Only the plasmodium reconstructions use orthology transformation.
 
 ### pipeline_cleanup.sh
 
@@ -114,7 +114,7 @@ This script is used to interpret log files from the reconstruction process.
 
 ### pipeline_slurm_step1.slurm
 
-This slurm script runs the data acquisition scripts in subdirecotry *slurm_scripts*.
+This slurm script runs the data acquisition scripts in subdirectory *slurm_scripts*.
 
 ### update_universal_reaction_set.py
 
@@ -138,11 +138,6 @@ It first calls step_0_download_all_eupathDB_release41.r to download genomes and 
 This is used for data acquisition in pipeline_slurm_step1.slurm and calls scripts in the *data acquisition* subdirectory.
 
 This script saves annotations in table format and curates iPfal17 to generate iPfal18.
-
-
-## NOT DONE
-
-### metadata_conversion.py
 
 
 ## Contact
