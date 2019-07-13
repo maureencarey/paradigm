@@ -166,7 +166,7 @@ elif SPECIES_ID in cryptodb: # Cryptosporidium = cytosol, extracellular, pseudom
     model_compartments = ["_c","_e","_m"]
 elif SPECIES_ID in toxodb: # Toxoplasma = cytosol, extracellular, mitochondrdia, apicoplast
     model_compartments = ["_c","_e","_ap","_m"]
-elif SPECIES_ID in giardiadb or species in amoebadb: # Giardia, Entamoeba = cytosol, extracellular
+elif SPECIES_ID in giardiadb or SPECIES_ID in amoebadb: # Giardia, Entamoeba = cytosol, extracellular
     model_compartments = ["_c","_e"]
 else:
     model_compartments = ["_c","_e"]

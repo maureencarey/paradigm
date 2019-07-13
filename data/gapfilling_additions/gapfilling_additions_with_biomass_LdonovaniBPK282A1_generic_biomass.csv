@@ -1,0 +1,44 @@
+,rxns_added
+0,MCITDm: hcit_m --> b124tc_m + h2o_m
+1,FAOXC16180m: 4.0 coa_m + 3.0 fad_m + 4.0 h2o_m + hdcoa_m + 4.0 nad_m --> 4.0 accoa_m + 3.0 fadh2_m + 4.0 h_m + 4.0 nadh_m + occoa_m
+2,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+3,SO4HCOtex: 2.0 hco3_c + so4_e --> 2.0 hco3_e + so4_c
+4,C160CRNt: pmtcrn_c --> pmtcrn_m
+5,2OXOADPtim: 2oxoadp_m --> 2oxoadp_c
+6,SHKK: atp_c + skm_c --> adp_c + h_c + skm5p_c
+7,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+8,TRPS1: 3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c
+9,ACYP_2: actp_c + h2o_c --> ac_c + h_c + pi_c
+10,FAOXC80: 3.0 coa_m + 3.0 fad_m + 3.0 h2o_m + 3.0 nad_m + occoa_m --> 4.0 accoa_m + 3.0 fadh2_m + 3.0 h_m + 3.0 nadh_m
+11,GMPR: gmp_c + 2.0 h_c + nadph_c --> imp_c + nadp_c + nh4_c
+12,r2419: akg_c + pi_m --> akg_m + pi_c
+13,PEPC_m: co2_m + h2o_m + pep_m --> h_m + oaa_m + pi_m
+14,DHQTi: 3dhq_c --> 3dhsk_c + h2o_c
+15,GMPt6: gmp_e + h_e --> gmp_c + h_c
+16,FAOXC160: 7.0 coa_m + 7.0 fad_m + 7.0 h2o_m + 7.0 nad_m + pmtcoa_m --> 8.0 accoa_m + 7.0 fadh2_m + 7.0 h_m + 7.0 nadh_m
+17,IGPS: 2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c
+18,ANPRT: anth_c + prpp_c --> ppi_c + pran_c
+19,SACCD2: h2o_c + nad_c + saccrp__L_c <=> akg_c + h_c + lys__L_c + nadh_c
+20,C160CPT2: coa_m + pmtcrn_m --> crn_m + pmtcoa_m
+21,AKGCITtm: akg_c + cit_m --> akg_m + cit_c
+22,PPND2: nadp_c + pphn_c --> 34hpp_c + co2_c + nadph_c
+23,CHORM: chor_c --> pphn_c
+24,PPNDH: h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+25,AASAD2: L2aadp_c + atp_c + h_c + nadh_c --> L2aadp6sa_c + amp_c + nad_c + ppi_c
+26,PRAIi: pran_c --> 2cpr5p_c
+27,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+28,HCITSm: accoa_m + akg_m + h2o_m --> coa_m + h_m + hcit_m
+29,SACCD1: L2aadp6sa_c + glu__L_c + h_c + nadph_c --> h2o_c + nadp_c + saccrp__L_c
+30,PSCVT: pep_c + skm5p_c <=> 3psme_c + pi_c
+31,ANS2: chor_c + nh4_c --> anth_c + h2o_c + h_c + pyr_c
+32,OXAGm: h_m + oxag_m --> 2oxoadp_m + co2_m
+33,PSERT: 3php_c + glu__L_c --> akg_c + pser__L_c
+34,PSP_L: h2o_c + pser__L_c --> pi_c + ser__L_c
+35,CHORS: 3psme_c --> chor_c + pi_c
+36,HACNHm: b124tc_m + h2o_m --> hicit_m
+37,CO2tmt: co2_m <=> co2_c
+38,HICITDm: hicit_m + nad_m --> h_m + nadh_m + oxag_m
+39,C160CPT1: crn_c + pmtcoa_c --> coa_c + pmtcrn_c
+40,r2514m: crn_m + hdcea_c --> crn_c + hdcea_m
+41,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+42,AATA: 2oxoadp_c + glu__L_c --> L2aadp_c + akg_c

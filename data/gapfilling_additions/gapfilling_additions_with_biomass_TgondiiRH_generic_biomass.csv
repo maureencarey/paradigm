@@ -1,0 +1,44 @@
+,rxns_added
+0,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+1,HYPTROX: 2.0 h_c + 2.0 hyptaur_c + o2_c --> 2.0 taur_c
+2,AMETt2: amet_e + h_e --> amet_c + h_c
+3,r2041: ala__L_c + his__L_e --> ala__L_e + his__L_c
+4,SHKK: atp_c + skm_c --> adp_c + h_c + skm5p_c
+5,SACCD2: h2o_c + nad_c + saccrp__L_c <=> akg_c + h_c + lys__L_c + nadh_c
+6,HCITSm: accoa_m + akg_m + h2o_m --> coa_m + h_m + hcit_m
+7,THRt2r: h_e + thr__L_e <=> h_c + thr__L_c
+8,PSCVT: pep_c + skm5p_c <=> 3psme_c + pi_c
+9,OXAGm: h_m + oxag_m --> 2oxoadp_m + co2_m
+10,SFCYSc: cys__L_c + h_c + so3_c --> slfcys_c
+11,TYRTA: akg_c + tyr__L_c <=> 34hpp_c + glu__L_c
+12,CHORM: chor_c --> pphn_c
+13,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+14,EX_amet_e: amet_e <=> 
+15,TAUDO: akg_c + o2_c + taur_c --> aacald_c + co2_c + h_c + so3_c + succ_c
+16,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+17,SFCYSe: slfcys_c --> slfcys_e
+18,EX_his__L_e: his__L_e <=> 
+19,SHL_c: h2s_c + h_c + ser__L_c --> cys__L_c + h2o_c
+20,ORNCD: orn_c --> nh4_c + pro__L_c
+21,SPMDtex2: spmd_c --> spmd_e
+22,BPNT: h2o_c + pap_c --> amp_c + pi_c
+23,ACPS: coa_c + h2o_c --> 2.0 h_c + pan4p_c + pap_c
+24,PNTOt2: h_e + pnto__R_e <=> h_c + pnto__R_c
+25,EX_thr__L_e: thr__L_e <=> 
+26,CYSAMO_cho: cysam_c + o2_c --> h_c + hyptaur_c
+27,PHETA1: akg_c + phe__L_c <=> glu__L_c + phpyr_c
+28,SACCD1: L2aadp6sa_c + glu__L_c + h_c + nadph_c --> h2o_c + nadp_c + saccrp__L_c
+29,ALDD31: aacald_c + h2o_c + nad_c --> gly_c + 2.0 h_c + nadh_c
+30,ASNS2: asp__L_c + atp_c + nh4_c --> amp_c + asn__L_c + h_c + ppi_c
+31,HACNHm: b124tc_m + h2o_m --> hicit_m
+32,CHORS: 3psme_c --> chor_c + pi_c
+33,AASAD2: L2aadp_c + atp_c + h_c + nadh_c --> L2aadp6sa_c + amp_c + nad_c + ppi_c
+34,PPND2: nadp_c + pphn_c --> 34hpp_c + co2_c + nadph_c
+35,r1671: citr__L_c + his__L_e --> citr__L_e + his__L_c
+36,PAN4PP: h2o_c + pan4p_c --> pi_c + ptth_c
+37,PPNDH: h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+38,DHQTi: 3dhq_c --> 3dhsk_c + h2o_c
+39,PNTEH: h2o_c + ptth_c --> cysam_c + pnto__R_c
+40,HICITDm: hicit_m + nad_m --> h_m + nadh_m + oxag_m
+41,MCITDm: hcit_m --> b124tc_m + h2o_m
+42,EX_slfcys_e: slfcys_e --> 

@@ -1,0 +1,48 @@
+,rxns_added
+0,trna_gly: trnagly_c <=> 
+1,RTOTALFATPc: Rtotal_e + atp_c + coa_c --> Rtotalcoa_c + amp_c + ppi_c
+2,FAOXC1811603m: 5.0 coa_m + 4.0 fad_m + 5.0 h2o_m + 5.0 nad_m + odecoa_m --> 5.0 accoa_m + 4.0 fadh2_m + 5.0 h_m + 5.0 nadh_m + occoa_m
+3,trna_cys: trnacys_c <=> 
+4,QULNS: dhap_c + iasp_c --> 2.0 h2o_c + pi_c + quln_c
+5,trna_tyr: trnatyr_c <=> 
+6,trna_his: trnahis_c <=> 
+7,RBFSb: 2.0 dmlz_c --> 4r5au_c + ribflv_c
+8,trna_ile: trnaile_c <=> 
+9,MEPCT: 2me4p_c + ctp_c + h_c --> 4c2me_c + ppi_c
+10,trna_lys: trnalys_c <=> 
+11,DROPPRy: 25dhpp_c + h_c + nadph_c --> 25dthpp_c + nadp_c
+12,trna_asp: trnaasp_c <=> 
+13,trna_asn: trnaasn_c <=> 
+14,trna_leu: trnaleu_c <=> 
+15,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c
+16,SHK3Dr: 3dhsk_c + h_c + nadph_c <=> nadp_c + skm_c
+17,FAOXC80: 3.0 coa_m + 3.0 fad_m + 3.0 h2o_m + 3.0 nad_m + occoa_m --> 4.0 accoa_m + 3.0 fadh2_m + 3.0 h_m + 3.0 nadh_m
+18,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+19,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+20,4HBZtm: 4hbz_c --> 4hbz_m
+21,CO2tmt: co2_m <=> co2_c
+22,trna_gln: trnagln_c <=> 
+23,DHQS: 2dda7p_c --> 3dhq_c + pi_c
+24,trna_met: trnamet_c <=> 
+25,trna_thr: trnathr_c <=> 
+26,trna_arg: trnaarg_c <=> 
+27,trna_pro: trnapro_c <=> 
+28,trna_phe: trnaphe_c <=> 
+29,MET_SLV: 5mtr1p_c --> met__L_c
+30,OCTDPtmt: octdp_m <=> octdp_c
+31,CMPDAi: cmp_c + h2o_c + h_c --> nh4_c + ump_c
+32,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+33,TALA: g3p_c + s7p_c --> e4p_c + f6p_c
+34,trna_ala: trnaala_c <=> 
+35,r1467: odecoa_c --> odecoa_m
+36,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+37,trna_trp: trnatrp_c <=> 
+38,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+39,trna_ser: trnaser_c <=> 
+40,ACCOAtm_1: accoa_c <=> accoa_m
+41,PHEMEtm: pheme_m <=> pheme_c
+42,DDPA: e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+43,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+44,QMO2: 2.0 o2_c + q8h2_c --> 2.0 h_c + 2.0 o2s_c + q8_c
+45,ASPO2: asp__L_c + nad_c --> 2.0 h_c + iasp_c + nadh_c
+46,trna_val: trnaval_c <=> 

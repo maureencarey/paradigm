@@ -1,0 +1,12 @@
+,rxns_added
+0,EX_thr__L_e: thr__L_e <=> 
+1,HYPTROX: 2.0 h_c + 2.0 hyptaur_c + o2_c --> 2.0 taur_c
+2,CHORM: chor_c --> pphn_c
+3,THRabc: atp_c + h2o_c + thr__L_e --> adp_c + h_c + pi_c + thr__L_c
+4,TAURt: taur_c --> taur_e
+5,CYSAMO_cho: cysam_c + o2_c --> h_c + hyptaur_c
+6,PPNDH: h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+7,ACPS: coa_c + h2o_c --> 2.0 h_c + pan4p_c + pap_c
+8,PKETF: f6p_c + pi_c --> actp_c + e4p_c + h2o_c
+9,PAN4PP: h2o_c + pan4p_c --> pi_c + ptth_c
+10,PNTOt2: h_e + pnto__R_e <=> h_c + pnto__R_c

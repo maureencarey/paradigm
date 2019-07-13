@@ -1,0 +1,19 @@
+,rxns_added
+0,GLYCK2: atp_c + glyc__R_c --> 2pg_c + adp_c + h_c
+1,G5SADs: glu5sa_c <=> 1pyr5c_c + h2o_c + h_c
+2,ECOAR: h_c + nadph_c + od2coa_c --> nadp_c + stcoa_c
+3,FRUt1r: fru_e <=> fru_c
+4,GLYCt: glyc_c <=> glyc_e
+5,lipid2: Rtotalcoa_c <=> dcacoa_c + ddcacoa_c + hdcoa_c + hxcoa_c + occoa_c + odecoa_c + pmtcoa_c + stcoa_c + tdcoa_c + tdecoa_c
+6,ARTPLM1: Rtotalcoa_c --> pmtcoa_c
+7,AMPt: amp_e --> amp_c
+8,EX_amet_e: amet_e <=> 
+9,IGPS: 2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c
+10,CHORM: chor_c --> pphn_c
+11,HCO3E: co2_c + h2o_c --> h_c + hco3_c
+12,PYDXO: 2.0 h2o_c + nh4_c + 0.5 o2_c + pydx_c --> 2.0 h2o2_c + pydam_c
+13,PRAIi: pran_c --> 2cpr5p_c
+14,GAPP: g3p_c + h2o_c --> glyald_c + pi_c
+15,PPNDH: h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+16,AMETt2: amet_e + h_e --> amet_c + h_c
+17,HDCEAt: hdcea_e <=> hdcea_c

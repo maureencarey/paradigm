@@ -1,0 +1,35 @@
+,rxns_added
+0,EX_mal__L_e: mal__L_e <=> 
+1,EX_coa_e: coa_e <=> 
+2,EX_citr__L_e: citr__L_e <=> 
+3,EX_pdx5p_e: pdx5p_e <=> 
+4,EX_avite1_e: avite1_e <=> 
+5,MPBQ: 2m6phol_c + amet_c --> 23dmphol_c + ahcys_c + h_c
+6,GGDPR: ggdp_c + 3.0 h_c + 3.0 nadph_c --> 3.0 nadp_c + phdp_c
+7,HGPHT: h_c + hgentis_c + phdp_c --> 2m6phol_c + co2_c + ppi_c
+8,TOCOPHS1: 23dmphol_c --> gtocophe_c
+9,34HPPOR: 34hpp_c + o2_c --> co2_c + hgentis_c
+10,TOCOPHOM1: amet_c + gtocophe_c --> ahcys_c + avite1_c + h_c
+11,EX_ipdp_e: ipdp_e <=> 
+12,EX_CE5022_e: CE5022_e <=> 
+13,EX_pydxn_e: pydxn_e <=> 
+14,EX_5fthf_e: 5fthf_e <=> 
+15,5FTHFt2_1: 5fthf_e + h2o_c --> 5fthf_c + h2o_e
+16,EX_succ_e: succ_e <=> 
+17,AKO: akg_c + fad_c + h2o_c --> co2_c + fadh2_c + succ_c
+18,SUCOAACTr: ac_c + succoa_c --> accoa_c + succ_c
+19,FRD: fadh2_c + fum_c --> fad_c + succ_c
+20,KARA2: 2ahbut_c + h_c + nadph_c --> 23dhmp_c + nadp_c
+21,DHAD2: 23dhmp_c --> 3mop_c + h2o_c
+22,TYRTAi: 34hpp_c + glu__L_c --> akg_c + tyr__L_c
+23,aratyr2: 3mop_c + tyr__L_c --> 34hpp_c + ile__L_c
+24,THRD_L: thr__L_c --> 2obut_c + nh4_c
+25,ACHBS: 2obut_c + h_c + pyr_c --> 2ahbut_c + co2_c
+26,ILEtec: ile__L_e --> ile__L_c
+27,EX_lipoate_e: lipoate_e <=> 
+28,HMR_9608: lipoate_e + 2.0 na1_e --> lipoate_c + 2.0 na1_c
+29,EX_fum_e: fum_e <=> 
+30,EX_atp_e: atp_e <=> 
+31,EX_tag_e: tag_e <=> 
+32,EX_5mthf_e: 5mthf_e <=> 
+33,5MTHFt: 5mthf_e --> 5mthf_c

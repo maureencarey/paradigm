@@ -37,31 +37,31 @@
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/atp_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:ATP"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CPD0-1634"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2359"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13236"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:237958"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10841"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22249"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2359"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30616"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40938"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:237958"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10789"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57299"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10841"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40938"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22249"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/ZKHQWZAMYRWXGA-KQYNXXCUSA-J"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM3"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/6798184"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/8878982"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29358"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/5696069"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/211579"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/5632460"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113592"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113593"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/8938081"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113592"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/5696069"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/8869363"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/8878982"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/6798184"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/8938081"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/211579"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/389573"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/5632460"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29358"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00002"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -78,34 +78,34 @@
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/ppi_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PYROPHOSPHATE-GROUP"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PPI"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29888"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13420"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:8683"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45212"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18361"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33017"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45208"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45067"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45212"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33017"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18361"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33019"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42009"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33018"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:8683"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13420"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33019"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29888"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42009"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00250"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/XPPKVPWEQAFLFU-UHFFFAOYSA-K"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00013"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM11"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/111294"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/159450"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/1132084"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/2046049"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/389593"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/8878981"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/6806656"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113541"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/389593"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/159450"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/8938078"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/111294"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113542"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00012"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/1132084"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/6806656"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/8878981"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd27828"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00012"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -120,61 +120,61 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/h2o_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:HYDROXYL-GROUP"/>
-                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:OXONIUM"/>
-                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CPD-15815"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:WATER"/>
+                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:OXONIUM"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:OH"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29373"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44701"/>
+                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CPD-15815"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42043"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5594"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16234"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33813"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43228"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10743"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42857"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33811"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44701"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29375"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29356"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13365"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42043"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41981"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44292"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5585"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43228"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15377"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29374"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44641"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13352"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27313"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16234"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41979"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44292"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33806"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29374"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5585"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13365"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41981"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33811"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29412"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44819"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30490"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5594"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13419"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33813"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10743"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30490"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41979"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27313"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29373"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15377"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44641"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44819"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB02111"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/H2O/h1H2"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/XLYOFNOQVPJJNP-UHFFFAOYSA-N"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C18714"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00001"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C18714"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01328"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM2"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/351603"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/1605715"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/2022884"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/5693747"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/141343"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/5278291"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/5668574"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29356"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/189422"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/109276"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113518"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/1130930"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113518"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29356"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/5278291"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/109276"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/8851517"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113521"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/2022884"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113519"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd15275"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/189422"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/141343"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/5693747"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113521"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/5668574"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00001"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd15275"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd27222"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -190,39 +190,39 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/h_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PROTON"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5584"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10744"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29234"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29233"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5584"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24636"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13357"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15378"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10744"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13357"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB59597"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/p+1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/GPRLSGONYQIRFK-UHFFFAOYSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00080"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM1"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/428548"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/374900"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/1132304"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/70106"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/194688"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/351626"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/5668577"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/1470067"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/193465"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/428040"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/425999"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/425978"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/74722"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/2000349"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/372511"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113529"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/425969"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/2872447"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/427899"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/163953"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/156540"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/372511"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/5668577"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/428548"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/2000349"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/194688"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/74722"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/163953"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/374900"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/193465"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/2872447"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/1470067"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/428040"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113529"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/70106"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/427899"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/1132304"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/425978"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/351626"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/425999"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/425969"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00067"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -240,28 +240,28 @@
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CPD0-1651"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:ADP"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2342"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22244"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:87518"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40553"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:456216"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13222"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22244"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13222"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB01341"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/XTWYTFMLZFPYCI-KQYNXXCUSA-K"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/G11113"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/G11113"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM7"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/211606"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/114565"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/6798177"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113581"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113582"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/5632457"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/114564"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29370"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/8869360"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113582"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29370"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/5632457"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113581"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/114564"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/211606"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/5696026"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/6798177"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00008"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -276,37 +276,37 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/pi_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CPD-9010"/>
-                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PHOSPHATE-GROUP"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CPD-16459"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:Pi"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18367"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29137"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35780"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:7793"/>
+                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CPD-9010"/>
+                  <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PHOSPHATE-GROUP"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29139"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43474"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14791"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:39745"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:7793"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29137"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45024"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26078"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:39739"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35780"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:39745"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43470"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB01429"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18367"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26078"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB02105"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00973"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB02142"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB05947"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00973"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB01429"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/NBIIXXVUZAFLBC-UHFFFAOYSA-L"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00009"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C13558"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00009"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM9"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/109277"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113551"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/8851513"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/8851226"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113548"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113551"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/8851513"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd27787"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00009"/>
                 </rdf:Bag>
@@ -323,20 +323,20 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/fad_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:FAD"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57692"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16238"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42388"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:4956"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13315"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57692"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:4956"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21125"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16238"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB01248"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C27H33N9O15P2/c1-10-3-12-13(4-11(10)2)35(24-18(32-12)25(42)34-27(43)33-24)5-14(37)19(39)15(38)6-48-52(44,45)51-53(46,47)49-7-16-20(40)21(41)26(50-16)36-9-31-17-22(28)29-8-30-23(17)36/h3-4,8-9,14-16,19-21,26,37-41H,5-7H2,1-2H3,(H5,28,29,30,34,42,43,44,45,46,47)/p-3/t14-,15+,16+,19-,20+,21+,26+/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/IMGVNJNCCGXBHD-UYBVJOGSSA-K"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00016"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM33"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29386"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113597"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113596"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113597"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29386"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00015"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -352,18 +352,18 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/fadh2_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:FADH2"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42427"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21126"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:4957"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17877"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58307"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42427"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13316"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58307"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17877"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21126"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C27H35N9O15P2/c1-10-3-12-13(4-11(10)2)35(24-18(32-12)25(42)34-27(43)33-24)5-14(37)19(39)15(38)6-48-52(44,45)51-53(46,47)49-7-16-20(40)21(41)26(50-16)36-9-31-17-22(28)29-8-30-23(17)36/h3-4,8-9,14-16,19-21,26,32,37-41H,5-7H2,1-2H3,(H,44,45)(H,46,47)(H2,28,29,30)(H2,33,34,42,43)/p-2/t14-,15+,16+,19-,20+,21+,26+/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/YPZRHBJKEMOYQH-UYBVJOGSSA-L"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01352"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM38"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/31649"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/164934"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/31649"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00982"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -379,13 +379,13 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/fe2_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:FE+2"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29033"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13321"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:34754"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24876"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13319"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21129"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:49599"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:34754"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13321"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29033"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21129"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00692"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/Fe/q+2"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/CWYNVVGOOAEACU-UHFFFAOYSA-N"/>
@@ -406,19 +406,19 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/gtp_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:GTP"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5234"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15996"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13342"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24451"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42934"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15996"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:37565"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5234"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57600"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13342"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:37565"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H16N5O14P3/c11-10-13-7-4(8(18)14-10)12-2-15(7)9-6(17)5(16)3(27-9)1-26-31(22,23)29-32(24,25)28-30(19,20)21/h2-3,5-6,9,16-17H,1H2,(H,22,23)(H,24,25)(H2,19,20,21)(H3,11,13,14,18)/p-4/t3-,5-,6-,9-/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/XKMLYUALXHKNFT-UUOKFMHZSA-J"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00044"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM51"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29438"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113573"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29438"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00038"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -452,23 +452,23 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/gdp_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:GDP"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24448"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:65180"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13327"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17552"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5212"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13327"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14379"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58189"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24448"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14379"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42738"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:65180"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H15N5O11P2/c11-10-13-7-4(8(18)14-10)12-2-15(7)9-6(17)5(16)3(25-9)1-24-28(22,23)26-27(19,20)21/h2-3,5-6,9,16-17H,1H2,(H,22,23)(H2,19,20,21)(H3,11,13,14,18)/p-3/t3-,5-,6-,9-/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/QGWNDRXFNXRZMB-UUOKFMHZSA-K"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00035"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/G10620"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00035"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM30"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113525"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29420"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/205689"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/111349"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/205689"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29420"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00031"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -581,24 +581,24 @@
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/so4_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:SULFATE"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:HSO4"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9335"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15135"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45696"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29199"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16189"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45693"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26836"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15135"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16189"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45687"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45693"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45696"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9335"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB01448"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/H2O4S/c1-5(2,3)4/h(H2,1,2,3,4)/p-2"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/QAOWNCQODCNURD-UHFFFAOYSA-L"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00059"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM58"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/1609649"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/1606845"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/174375"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/427648"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/1614584"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/1606845"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/427648"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/1609649"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/174375"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00048"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -614,14 +614,14 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/aps_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:APS"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2486"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13741"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22247"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:12059"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40562"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58243"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13743"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13741"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2486"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:12059"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22247"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H14N5O10PS/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-26(18,19)25-27(20,21)22/h2-4,6-7,10,16-17H,1H2,(H,18,19)(H2,11,12,13)(H,20,21,22)/p-2/t4-,6-,7-,10-/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/IRLPACMLTUPBCL-KQYNXXCUSA-L"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00224"/>
@@ -642,12 +642,12 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/paps_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PAPS"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:19857"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58339"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:11679"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17980"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:1353"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:11679"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:19857"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:11680"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:1353"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62646"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H15N5O13P2S/c11-8-5-9(13-2-12-8)15(3-14-5)10-6(16)7(27-29(17,18)19)4(26-10)1-25-30(20,21)28-31(22,23)24/h2-4,6-7,10,16H,1H2,(H,20,21)(H2,11,12,13)(H2,17,18,19)(H,22,23,24)/p-4/t4-,6-,7-,10-/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/GACDQMDRPRGCTN-KQYNXXCUSA-J"/>
@@ -669,10 +669,10 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/2fe2s_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21134"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:49601"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:64605"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:49600"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:49601"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21134"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM151647"/>
@@ -707,36 +707,36 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/ala__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:L-ALPHA-ALANINE"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57972"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:66916"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32440"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21216"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13069"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46308"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6171"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40735"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16977"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22277"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:76050"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32432"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32431"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16449"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:132498"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2539"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46308"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16449"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32432"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40734"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13748"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22277"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13069"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40735"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32431"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16977"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6171"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57972"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:132498"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:66916"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32440"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32439"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00161"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:76050"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62251"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00161"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/QNAYBMKLOCPYGJ-REOHCLBHSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01401"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00041"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM32"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29432"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/389664"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/352036"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29432"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379697"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/389664"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00035"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01003"/>
                 </rdf:Bag>
@@ -753,34 +753,34 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/arg__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:ARG"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:133495"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32682"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29016"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32696"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22616"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32697"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:2643"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32696"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32682"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22616"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32683"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29016"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32695"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16467"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42927"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6185"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32681"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16467"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13077"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32695"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42927"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21235"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62762"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:133495"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32697"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13077"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00517"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62762"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H14N4O2/c7-4(5(11)12)2-1-3-10-6(8)9/h4H,1-3,7H2,(H,11,12)(H4,8,9,10)/p+1/t4-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/ODKSFYDXXFIFQN-BYPYZUCNSA-O"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02385"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00062"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM70"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/351977"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29468"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113530"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/374064"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00051"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29468"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/351977"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113530"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd19021"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00051"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -795,25 +795,25 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/asn__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:ASN"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32661"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58048"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32660"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13083"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21242"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32650"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22653"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32651"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22653"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32650"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13083"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6191"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32661"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40902"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21242"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17196"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58048"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00168"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C4H8N2O3/c5-2(4(8)9)1-3(6)7/h2H,1,5H2,(H2,6,7)(H,8,9)/t2-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/DCXYFEDJOCDNAF-REOHCLBHSA-N"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C16438"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00152"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C16438"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM147"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379703"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/29642"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379703"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00132"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd15142"/>
                 </rdf:Bag>
@@ -830,23 +830,23 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/asp__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:L-ASPARTATE"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40900"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29993"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29992"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21247"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40942"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40853"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22659"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35391"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6193"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:132943"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13085"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40853"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40913"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29991"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22660"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13085"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17053"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21244"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40913"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29993"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35391"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40900"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29995"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:22660"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6193"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:40942"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29992"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00191"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62501"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62186"/>
@@ -857,8 +857,8 @@
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM42"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113553"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/29448"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd19181"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00041"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd19181"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -886,27 +886,27 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/cys__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:CYS"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32445"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41700"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32443"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:4050"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32456"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21261"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41781"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32458"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14061"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32457"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17561"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13095"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32456"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35235"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32443"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:23508"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6207"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21261"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41811"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32457"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41768"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15356"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14061"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32458"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41781"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32442"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41227"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35237"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41768"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32445"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:23508"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35235"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32442"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41700"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15356"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41811"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41227"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00574"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/t2-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/XUJNEKJLAYXESH-REOHCLBHSA-N"/>
@@ -915,8 +915,8 @@
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM55"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379721"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/5668576"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/111707"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/352016"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/111707"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00084"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00547"/>
                 </rdf:Bag>
@@ -933,33 +933,33 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/gln__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:GLN"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18050"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21308"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32679"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32678"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5432"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58359"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42943"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28300"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6227"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13110"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42814"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58359"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32678"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28300"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32679"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42899"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24316"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32665"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32666"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42814"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42943"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42812"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21308"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18050"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32665"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24316"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5432"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32666"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00641"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C5H10N2O3/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H2,7,8)(H,9,10)/t3-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/ZDXPYRJPNDTMRX-VKHMYHEASA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00064"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00303"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM37"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/212615"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/29472"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113522"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/212615"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00253"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00053"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00253"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -975,31 +975,31 @@
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/glu__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:Glutamates"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:GLT"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16015"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29987"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29985"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18237"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13107"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16015"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14321"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5431"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:76051"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29985"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21304"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29988"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42825"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21301"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24314"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13107"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:76051"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5431"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21304"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14321"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21301"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6224"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00148"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29987"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB60475"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00148"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/p-1/t3-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/WHUUTDBJXJRKMK-VKHMYHEASA-M"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00302"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00025"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89557"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/210382"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113552"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/29404"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/428614"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113552"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/210382"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd27177"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00023"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd19002"/>
@@ -1017,26 +1017,26 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/gly_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:GLY"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14344"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:132194"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24368"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42964"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5460"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32507"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32508"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15428"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57305"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10792"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5460"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42964"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32508"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14344"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15428"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24368"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:132194"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32507"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00123"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/DHMQDGOQFOQNFH-UHFFFAOYSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00037"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM29"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29424"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/193446"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/159549"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113545"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/193446"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/266029"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29424"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113545"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00033"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1053,28 +1053,28 @@
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/his__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:HIS"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32529"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32532"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32512"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32513"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6240"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27570"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5733"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43118"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24598"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43048"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43114"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15971"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57595"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32511"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32530"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43190"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32510"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43239"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21324"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13117"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43048"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5733"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32531"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB03412"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32532"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27570"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32530"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6240"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24598"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13117"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32510"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57595"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21324"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43118"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32512"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43239"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15971"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43190"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32513"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43114"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00177"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB03412"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H9N3O2/c7-5(6(10)11)1-4-2-8-3-9-4/h2-3,5H,1,7H2,(H,8,9)(H,10,11)/t5-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/HNDVDQJCIGZPNO-YFKPBYRVSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00135"/>
@@ -1098,19 +1098,19 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/ile__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:ILE"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32613"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17191"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32605"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32612"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13127"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32605"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32613"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43342"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43290"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17191"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24898"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32604"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43366"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32612"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6255"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58045"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43342"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32604"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24898"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21344"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43366"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00172"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H13NO2/c1-3-4(2)5(7)6(8)9/h4-5H,3,7H2,1-2H3,(H,8,9)/t4-,5-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/AGPKZVBTJJNPAG-WHFBIAKZSA-N"/>
@@ -1134,34 +1134,34 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/leu__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:LEU"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57427"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43733"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32620"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43646"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32628"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43814"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10866"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32627"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21348"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43695"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32619"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13131"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15603"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6260"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32627"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43814"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25017"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13131"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43646"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:10866"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21348"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15603"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43733"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57427"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6260"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32619"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32628"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62203"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00687"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H13NO2/c1-4(2)3-5(7)6(8)9/h4-5H,3,7H2,1-2H3,(H,8,9)/t5-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/ROHFNLRQFUQHCH-YFKPBYRVSA-N"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C16439"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00123"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C16439"/>
                   <rdf:li rdf:resource="http://identifiers.org/lipidmaps/LMFA01100048"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM140"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113580"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/29588"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113580"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/351964"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd15143"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00107"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd15143"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1176,28 +1176,28 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/lys__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:LYS"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32552"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32564"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21351"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18019"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6264"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25094"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32551"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32550"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32563"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32552"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21351"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32551"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43950"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13135"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32565"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32563"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6264"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:133538"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32565"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32564"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25094"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13135"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62809"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H14N2O2/c7-4-2-1-3-5(8)6(9)10/h5H,1-4,7-8H2,(H,9,10)/p+1/t5-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/KDXKERNSBIXSRK-YFKPBYRVSA-O"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00047"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C16440"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00047"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM78"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/29444"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/351991"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/351979"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/29444"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd19182"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00039"/>
                 </rdf:Bag>
@@ -1214,33 +1214,33 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/met__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:MET"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43990"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14590"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25229"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16811"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32631"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6271"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13141"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32632"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32644"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:64558"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6829"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21360"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6271"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16643"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57844"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32631"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:64558"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16811"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13141"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25229"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32632"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32646"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB33951"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43990"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6829"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14590"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21360"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00696"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB33951"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C5H11NO2S/c1-9-3-2-4(6)5(7)8/h4H,2-3,6H2,1H3,(H,7,8)/t4-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/FFEARJCKVFRZRR-BYPYZUCNSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00073"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01733"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM61"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/1130765"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379705"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/174390"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00060"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/1130765"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd30746"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00060"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1255,32 +1255,32 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/phe__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PHE"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6282"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28044"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44851"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25984"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58095"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13151"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32504"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32487"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28044"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:44885"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45079"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:76052"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32504"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13151"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:8089"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58095"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21370"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6282"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25984"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17295"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32486"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32505"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:76052"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:8089"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32487"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21370"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17295"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00159"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45079"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00612"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00159"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C9H11NO2/c10-8(9(11)12)6-7-4-2-1-3-5-7/h1-5,8H,6,10H2,(H,11,12)/t8-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/COLNVLDHVKWLRT-QMMMGPOBSA-N"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02057"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00079"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02057"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM97"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379701"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/29502"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/351993"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379701"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00066"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01400"/>
                 </rdf:Bag>
@@ -1297,22 +1297,22 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/pro__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:PRO"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45040"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26271"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42067"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21373"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:60039"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:184637"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17203"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32862"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45159"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13154"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32872"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58054"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6286"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32864"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45100"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21373"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32871"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32872"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26271"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6286"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45100"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32862"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45040"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:184637"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58054"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13154"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45159"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42067"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:60039"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32864"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00162"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)/t4-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/ONIBWKKTOPOVIA-BYPYZUCNSA-N"/>
@@ -1320,10 +1320,10 @@
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C16435"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM114"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379717"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/113538"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/352033"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00129"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/113538"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd15140"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00129"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1339,41 +1339,41 @@
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/ser__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:Serines"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:SER"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45597"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35243"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32836"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33384"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32846"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45440"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13167"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45451"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32837"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45590"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45677"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9116"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21387"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17822"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13167"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32836"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45440"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45597"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21387"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15081"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32846"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45590"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26648"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32845"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33384"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45451"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9116"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:35243"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32837"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6301"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17115"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26648"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00187"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62263"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00589"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00187"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)/t2-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/MTCFGRXMJLQNBG-REOHCLBHSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00716"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00065"/>
                   <rdf:li rdf:resource="http://identifiers.org/lipidmaps/LMFA01100045"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM53"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/8932979"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379732"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/200736"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/352002"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd30743"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/8932979"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/200736"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379732"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00054"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd28171"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd30743"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1388,26 +1388,26 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/thr__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:THR"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26986"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13175"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32832"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16857"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57926"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6308"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:42083"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45983"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32820"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13175"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21403"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45983"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45843"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32833"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32822"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45843"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57926"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26986"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16857"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6308"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32820"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32832"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00167"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)/t2-,3+/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/AYFVYJQAPQTCCC-GBXIJSLDSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00188"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM142"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379706"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/352000"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379706"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/351990"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00161"/>
                 </rdf:Bag>
@@ -1424,24 +1424,24 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/trp__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:TRP"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45988"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46086"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6310"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27897"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32727"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16828"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46125"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13178"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:184633"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:64554"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32728"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46225"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27163"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9769"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21407"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27163"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27897"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:64554"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32727"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32704"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46086"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46225"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13178"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16828"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:184633"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:45988"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32702"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57912"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32704"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6310"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32728"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46125"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9769"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB30396"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00929"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C11H12N2O2/c12-9(11(14)15)5-7-6-13-10-4-2-1-3-8(7)10/h1-4,6,9,13H,5,12H2,(H,14,15)/t9-/m0/s1"/>
@@ -1468,33 +1468,33 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/tyr__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:TYR"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32760"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32785"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46070"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13181"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32784"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9800"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32786"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32762"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15277"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17895"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58315"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15277"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18186"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32786"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46161"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32760"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27176"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32761"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6313"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18186"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32762"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32784"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32785"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21411"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17895"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46070"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6313"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13181"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:9800"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00647"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00158"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C9H11NO3/c10-8(9(12)13)5-6-1-3-7(11)4-2-6/h1-4,8,11H,5,10H2,(H,12,13)/t8-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/OUYCCCASQSFEME-QMMMGPOBSA-N"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00082"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01536"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00082"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM76"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379710"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/352030"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/29506"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/352030"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/5668567"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00069"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd30745"/>
@@ -1512,27 +1512,27 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/val__L_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/biocyc/META:VAL"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32851"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46282"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46376"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21417"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32859"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32860"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13186"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:87977"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32852"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46484"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6321"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16414"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27266"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46418"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57762"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00883"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16414"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46376"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6321"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32851"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27266"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46484"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46418"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32852"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:87977"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32859"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46282"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13186"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:21417"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB34366"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00883"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C5H11NO2/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)/t4-/m0/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/KZSNJWFQEVHDMF-BYPYZUCNSA-N"/>
-                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00183"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C16436"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00183"/>
                   <rdf:li rdf:resource="http://identifiers.org/lipidmaps/LMFA01100046"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM199"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/113540"/>
@@ -1552,15 +1552,15 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/alatrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17732"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13071"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6172"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13071"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17732"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13070"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89815"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379730"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379700"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379730"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd16181"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1575,8 +1575,8 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/argtrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13079"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18366"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13079"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13080"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6189"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
@@ -1599,16 +1599,16 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/asntrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29265"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13251"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6192"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29265"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13084"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C03402"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89761"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379728"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379718"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379728"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd12313"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd16182"/>
                 </rdf:Bag>
@@ -1655,8 +1655,8 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/cystrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:74764"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29152"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:74764"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6208"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13096"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
@@ -1679,10 +1679,10 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/fmettrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:7283"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:12597"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:12510"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17119"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:7283"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C03294"/>
@@ -1703,16 +1703,16 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/glntrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29166"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13344"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13112"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5433"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13344"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29166"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02282"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89810"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379753"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379772"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379753"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd12060"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1727,9 +1727,9 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/glutrna_c"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13114"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6232"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29157"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13114"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02987"/>
@@ -1750,9 +1750,9 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/glytrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5503"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29156"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:14363"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29156"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:5503"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02412"/>
@@ -1773,9 +1773,9 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/histrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13120"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29155"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6243"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13120"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02988"/>
@@ -1797,8 +1797,8 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/iletrna_c"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13128"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29160"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6256"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29160"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C03127"/>
@@ -1819,10 +1819,10 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/leutrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13134"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6262"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16624"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13134"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13133"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16624"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02047"/>
@@ -1843,18 +1843,18 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/lystrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13138"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6267"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16047"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13137"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13138"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16047"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6267"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01931"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89922"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379795"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379736"/>
-                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01326"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd15249"/>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd01326"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1909,9 +1909,9 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/protrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29154"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13155"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6287"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29154"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02702"/>
@@ -1957,8 +1957,8 @@
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02992"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89895"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379783"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379779"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379783"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd12229"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1973,15 +1973,15 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/trptrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6312"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29159"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6312"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13179"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C03512"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89804"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379765"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379759"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379765"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd12336"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1996,15 +1996,15 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/tyrtrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6318"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29161"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13185"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29161"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6318"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02839"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM89822"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/379755"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/379785"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/379755"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd12194"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -2019,9 +2019,9 @@
               <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/bigg.metabolite/valtrna_c"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13187"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:6322"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29164"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13187"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/nan"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C02554"/>
@@ -2150,26 +2150,26 @@
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:13982"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:23204"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16113"/>
-                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:3659"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41564"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62453"/>
-                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00067"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:3659"/>
                   <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00507"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB00067"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB62453"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C27H46O/c1-18(2)7-6-8-19(3)23-11-12-24-22-10-9-20-17-21(28)13-15-26(20,4)25(22)14-16-27(23,24)5/h9,18-19,21-25,28H,6-8,10-17H2,1-5H3/t19-,21+,22+,23-,24+,25+,26+,27-/m1/s1"/>
                   <rdf:li rdf:resource="http://identifiers.org/inchikey/HVYWMOMLDIMFJA-DPAQBDIFSA-N"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00187"/>
-                  <rdf:li rdf:resource="http://identifiers.org/lipidmaps/LMST01010093"/>
                   <rdf:li rdf:resource="http://identifiers.org/lipidmaps/LMST01010001"/>
+                  <rdf:li rdf:resource="http://identifiers.org/lipidmaps/LMST01010093"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.chemical/MNXM103"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/171149"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/193384"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/8848047"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/163586"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/216762"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/193384"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/176478"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/8848047"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/171149"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/171095"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/193840"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/193156"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/171095"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/216762"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/174672"/>
                   <rdf:li rdf:resource="http://identifiers.org/seed.compound/cpd00160"/>
                 </rdf:Bag>
@@ -2434,27 +2434,27 @@
                   <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.7.4"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00529"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.reaction/MNXR104240"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-XTR-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SPO-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-BTA-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-GGA-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-RNO-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-OSA-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-DRE-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SCE-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-CEL-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-HSA-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SSC-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-DME-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-TGU-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-ATH-174392"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-MMU-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-RNO-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-CEL-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-OSA-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-HSA-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-DME-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-DRE-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-TGU-174392"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-MTU-936729"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SPO-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SCE-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-BTA-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-ATH-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-XTR-174392"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-CFA-174392"/>
-                  <rdf:li rdf:resource="http://identifiers.org/rhea/18136"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SSC-174392"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-GGA-174392"/>
                   <rdf:li rdf:resource="http://identifiers.org/rhea/18133"/>
                   <rdf:li rdf:resource="http://identifiers.org/rhea/18134"/>
                   <rdf:li rdf:resource="http://identifiers.org/rhea/18135"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/18136"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -2484,26 +2484,26 @@
                   <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.25"/>
                   <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00509"/>
                   <rdf:li rdf:resource="http://identifiers.org/metanetx.reaction/MNXR95159"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SPO-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-CFA-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SSC-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-TGU-174389"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-MMU-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-RNO-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SPO-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-HSA-174389"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-BTA-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-GGA-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SCE-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-CFA-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-TGU-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-ATH-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SSC-174389"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-XTR-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-OSA-174389"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-SCE-174389"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-DRE-174389"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-CEL-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-OSA-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-ATH-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-HSA-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-RNO-174389"/>
                   <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-DME-174389"/>
-                  <rdf:li rdf:resource="http://identifiers.org/rhea/24155"/>
-                  <rdf:li rdf:resource="http://identifiers.org/rhea/24153"/>
-                  <rdf:li rdf:resource="http://identifiers.org/rhea/24154"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_R-GGA-174389"/>
                   <rdf:li rdf:resource="http://identifiers.org/rhea/24152"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/24154"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/24153"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/24155"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
