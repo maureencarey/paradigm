@@ -1,0 +1,5 @@
+,rxns_added
+0,LEUPHELAT2tc: leu__L_e + phe__L_c --> leu__L_c + phe__L_e
+1,THRGLYexR: gly_c + thr__L_e <=> gly_e + thr__L_c
+2,r1807: gly_c + leu__L_e + na1_e --> gly_e + leu__L_c + na1_c
+3,r2041: ala__L_c + his__L_e --> ala__L_e + his__L_c

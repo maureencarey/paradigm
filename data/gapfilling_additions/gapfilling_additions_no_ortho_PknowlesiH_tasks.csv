@@ -1,0 +1,13 @@
+,rxns_added
+0,EX_gua_e: gua_e <=> 
+1,GUAt: gua_e <=> gua_c
+2,EX_gsn_e: gsn_e <=> 
+3,GSNt: gsn_e <=> gsn_c
+4,EX_dad_2_e: dad_2_e <=> 
+5,DADNt4: dad_2_e <=> dad_2_c
+6,EX_orot_e: orot_e <=> 
+7,r0839: orot_e --> orot_c
+8,EX_ade_e: ade_e <=> 
+9,ADEt: ade_e <=> ade_c
+10,EX_hxan_e: hxan_e <=> 
+11,HYXNt: hxan_e <=> hxan_c

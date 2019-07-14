@@ -1,0 +1,5 @@
+,rxns_added
+0,r1807: gly_c + leu__L_e + na1_e --> gly_e + leu__L_c + na1_c
+1,r1977: lys__L_c + na1_e + thr__L_e --> lys__L_e + na1_c + thr__L_c
+2,THRGLYexR: gly_c + thr__L_e <=> gly_e + thr__L_c
+3,HISabc: atp_c + h2o_c + his__L_e --> adp_c + h_c + his__L_c + pi_c

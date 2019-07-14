@@ -1,0 +1,51 @@
+,rxns_added
+0,trna_gln: trnagln_c <=> 
+1,r1867: gly_c + na1_e + thr__L_e --> gly_e + na1_c + thr__L_c
+2,trna_asp: trnaasp_c <=> 
+3,trna_pro: trnapro_c <=> 
+4,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+5,PHEMEtm: pheme_m <=> pheme_c
+6,DCTPD2: ctp_c + h2o_c + h_c --> nh4_c + utp_c
+7,CHRPL: chor_c --> 4hbz_c + pyr_c
+8,lipid4: cdpdag_c <=> cdpdddecg_c + cdpdhdec9eg_c + cdpdhdecg_c + cdpdodec11eg_c + cdpdodecg_c + cdpdtdec7eg_c + cdpdtdecg_c
+9,trna_ser: trnaser_c <=> 
+10,r2050: his__L_e + pro__L_c --> his__L_c + pro__L_e
+11,FTHFLi: atp_c + for_c + thf_c --> 10fthf_c + adp_c + pi_c
+12,r1807: gly_c + leu__L_e + na1_e --> gly_e + leu__L_c + na1_c
+13,ASPO6_1: asp__L_c + o2_c --> h2o2_c + iasp_c
+14,trna_leu: trnaleu_c <=> 
+15,trna_met: trnamet_c <=> 
+16,trna_thr: trnathr_c <=> 
+17,trna_cys: trnacys_c <=> 
+18,trna_his: trnahis_c <=> 
+19,trna_trp: trnatrp_c <=> 
+20,trna_gly: trnagly_c <=> 
+21,4HBZtm: 4hbz_c --> 4hbz_m
+22,RBFSa: 4r5au_c + db4p_c --> dmlz_c + 2.0 h2o_c + pi_c
+23,trna_glu: trnaglu_c <=> 
+24,MI3PP: h2o_c + mi3p__D_c --> inost_c + pi_c
+25,trna_arg: trnaarg_c <=> 
+26,trna_tyr: trnatyr_c <=> 
+27,PINOS: 0.01 cdpdag_c + inost_c --> cmp_c + h_c + 0.01 ptd1ino_c
+28,r1671: citr__L_c + his__L_e --> citr__L_e + his__L_c
+29,trna_phe: trnaphe_c <=> 
+30,DCTPD: dctp_c + h2o_c + h_c --> dutp_c + nh4_c
+31,r2040: gly_c + his__L_e --> gly_e + his__L_c
+32,trna_ala: trnaala_c <=> 
+33,PMDPHT: 5aprbu_c + h2o_c --> 4r5au_c + pi_c
+34,DROPPRx: 25dhpp_c + h_c + nadh_c --> 25dthpp_c + nad_c
+35,NADK1: gtp_c + nad_c --> gdp_c + h_c + nadp_c
+36,HBZOPTm: 4hbz_m + octdp_m --> 3ophb_m + 2.0 ppi_m
+37,trna_lys: trnalys_c <=> 
+38,OCTDPtmt: octdp_m <=> octdp_c
+39,trna_ile: trnaile_c <=> 
+40,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+41,PTD1INOt: ptd1ino_c <=> ptd1ino_e
+42,OPHHXm: 2oph_m + nadph_m + 0.5 o2_m --> 2ohph_m + h2o_m + nadp_m
+43,GTPCII: gtp_c + 3.0 h2o_c --> 25dhpp_c + for_c + 2.0 h_c + ppi_c
+44,DB4PS: ru5p__D_c --> db4p_c + for_c + h_c
+45,EX_inositol: ptd1ino_e <=> 
+46,RBFSb_1: 2.0 dmlz_c --> 4r5au_c + h_c + ribflv_c
+47,QULNS_1: dhap_c + iasp_c --> 2.0 h2o_c + h_c + pi_c + quln_c
+48,trna_asn: trnaasn_c <=> 
+49,trna_val: trnaval_c <=> 

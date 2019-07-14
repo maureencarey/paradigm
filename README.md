@@ -159,11 +159,11 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     bash ./run_these/pipeline_auto_slurm_for_step2.sh
     # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
     # # clean things up - especially log files
-    module load anaconda/5.2.0-py3.6
-    bash ./run_these/pipeline_cleanup.sh
-	# infeasible
     # # gapfill plasmodium models prior to orthology conversion to test differences
     bash ./run_these/pipeline_auto_slurm_for_plasmodium.sh
+    sbatch ./run_these/pipeline_cleanup.slurm
+        # infeasible
+    cd ./data
     # # move things to convenient locations
     # mkdir ./slurm_outputs
     mv *.out ./slurm_outputs
