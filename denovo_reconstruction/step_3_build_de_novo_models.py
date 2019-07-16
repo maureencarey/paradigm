@@ -150,27 +150,32 @@ if len(rxns_to_add.keys()) != len(new_model.reactions):
 
 logging.info('made first draft model, with this many reactions:')
 logging.info(len(new_model.reactions))
-logging.info('printing notes field')
-logging.info([rxn.notes for rxn in new_model.reactions])
-logging.info('------------------------------------------')
+#logging.info('printing notes field')
+#logging.info([rxn.notes for rxn in new_model.reactions])
+#logging.info('------------------------------------------')
     
 # remove duplciate reactions in mulitple compartments
 total_compartments = ["_c","_e","_m","_ap","_fv","_k","_glc","_pm"]
 # cytosol, extracellular, mitochondrdia, apicoplast, food vacuole, kinetoplast, glycosome, pseudomitochondria
 
 if SPECIES_ID in plasmodb: # Plasmodium = cytosol, extracellular, mitochondrdia, apicoplast, food vacuole
-    model_compartments = ["_c","_e","_m","_ap","_fv"]
+    compartment = ["_c","_e","_m","_ap","_fv"]
 elif SPECIES_ID in tritrypdb: # Leishmania = cytosol, extracellular, mitochondrdia, kinetoplast, glycosome
-    model_compartments = ["_c","_e","_m","_k","_glc"]
+    compartment = ["_c","_e","_m","_k","_glc"]
 elif SPECIES_ID in cryptodb: # Cryptosporidium = cytosol, extracellular, pseudomitochondria (USE MITO)
-    model_compartments = ["_c","_e","_m"]
+    compartment = ["_c","_e","_m"]
 elif SPECIES_ID in toxodb: # Toxoplasma = cytosol, extracellular, mitochondrdia, apicoplast
-    model_compartments = ["_c","_e","_ap","_m"]
-elif SPECIES_ID in giardiadb or SPECIES_ID in amoebadb: # Giardia, Entamoeba = cytosol, extracellular
-    model_compartments = ["_c","_e"]
+    compartment = ["_c","_e","_ap","_m"]
+elif SPECIES_ID in giardiadb: # Giardia, Entamoeba = cytosol, extracellular
+    compartment = ["_c","_e"]
+elif SPECIES_ID in amoebadb:
+    compartment = ["_c","_e"]
+elif SPECIES_ID in microsporidiadb: # I haven't researched this
+    compartment = ["_c","_e"]
+elif SPECIES_ID in piroplasmadb: # I haven't researched this
+    compartment = ["_c","_e"]
 else:
-    model_compartments = ["_c","_e"]
-compartment = model_compartments
+    compartment = ["_c","_e"]
 
 columns = ['species','reactions_removed1','reactions_added']
 modifications = pd.DataFrame(index = [SPECIES_ID], columns=columns)

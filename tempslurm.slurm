@@ -10,6 +10,4 @@
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env
 
-python3 ../denovo_reconstruction/step_3_build_de_novo_models.py TgondiiME49_BiGG.tsv
-#python3 ./model_refinement/step_4_build_generic_biomass_reaction.py final_denovo_TgondiiME49.json
-#python3 ./model_refinement/step_6_task_based_gapfilling.py with_biomass_TgondiiME49.json
+python3 ../denovo_reconstruction/step_3_build_de_novo_models.py AalgeraePRA109_BiGG.tsv
