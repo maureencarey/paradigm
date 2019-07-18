@@ -46,10 +46,9 @@ else:
 
 logger.info('BEGIN STEP 4')
 
+# modified for Rivanna: read in the model
 os.chdir(model_path)
-# modified for Rivanna: read in the models
-model_dict = {}
-model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)
+model = cobra.io.load_json_model(model_fname)
 
 # load curated models
 os.chdir(model_path)
@@ -119,7 +118,6 @@ df = pd.DataFrame( {'iPfal17': pf_biomass_mets_ids,
                   	'Leishmania 2008': leish_biomass_mets_ids })
 os.chdir(data_path)
 df.to_csv('./results/biomass_components_{}.csv'.format(str(date.today())), header=True, index=True)
-
 logger.info('wrote biomass components')
 
 # get biomass precursor ids
@@ -137,30 +135,41 @@ biomass_mets.append('bm_lipid') # plus DAG begause in all reactions
 
 logger.info('made biomass mets')
 
-for species, model in model_dict.items():
-    #biomass
-    new_rxn = Reaction()
-    met_dict = dict()
-    for met in pf_curated.reactions.biomass.metabolites:
-        if met.id.lower().split('_')[0] in biomass_mets:
-            met_dict[met] = pf_curated.reactions.biomass.metabolites[met]
-    new_rxn.add_metabolites(met_dict)
-    new_rxn.name = 'generic_biomass'
-    new_rxn.id = 'generic_biomass'
-    new_rxn.lower_bound = 0.
-    new_rxn.upper_bound = 1000.
-    model.add_reactions([new_rxn])
-    
-    logger.info('added generic biomass')
-    
-    if plasmo:
-        model.add_reactions([pf_curated.reactions.biomass.copy()])
-    logger.info('added plasmodium biomass')
+# add reactions to model
 
-    # protein production, transport, exchange
-    # biomass 'sink', lipid exchange
-    for x in ['protein_biomass', 'Protein_t','DM_bm','EX_lipid_c','lipid_biomass']: #'Protein_ex',
-        new_rxn = pf_curated.reactions.get_by_id(x).copy()
+new_rxn = Reaction()
+met_dict = dict()
+for met in pf_curated.reactions.biomass.metabolites:
+    if met.id.lower().split('_')[0] in biomass_mets:
+        met_dict[met] = pf_curated.reactions.biomass.metabolites[met]
+new_rxn.add_metabolites(met_dict)
+new_rxn.name = 'generic_biomass'
+new_rxn.id = 'generic_biomass'
+new_rxn.lower_bound = 0.
+new_rxn.upper_bound = 1000.
+model.add_reactions([new_rxn])
+logger.info('added generic biomass')
+
+if plasmo:
+    model.add_reactions([pf_curated.reactions.biomass.copy()])
+logger.info('added plasmodium biomass')
+
+# protein production, transport, exchange
+# biomass 'sink', lipid exchange
+for x in ['protein_biomass', 'Protein_t','DM_bm','EX_lipid_c','lipid_biomass']: #'Protein_ex',
+    new_rxn = pf_curated.reactions.get_by_id(x).copy()
+    for met in new_rxn.metabolites:
+        if met.id not in [x.id for x in model.metabolites]:
+            model.add_metabolites([met])
+    model.add_reactions([new_rxn])
+    if len(new_rxn.genes) > 0:
+        for gene in new_rxn.genes:
+            model.genes.remove(gene)
+
+# lipid production
+for r in pf_curated.metabolites.get_by_id('all_dgl_c').reactions:
+    if r.id != 'Lipid_prod' and r.id != 'lipid_biomass':
+        new_rxn = pf_curated.reactions.get_by_id(r.id).copy()
         for met in new_rxn.metabolites:
             if met.id not in [x.id for x in model.metabolites]:
                 model.add_metabolites([met])
@@ -168,57 +177,41 @@ for species, model in model_dict.items():
         if len(new_rxn.genes) > 0:
             for gene in new_rxn.genes:
                 model.genes.remove(gene)
-    
-    # lipid production
-    for r in pf_curated.metabolites.get_by_id('all_dgl_c').reactions:
-        if r.id != 'Lipid_prod' and r.id != 'lipid_biomass':
-            new_rxn = pf_curated.reactions.get_by_id(r.id).copy()
-            for met in new_rxn.metabolites:
-                if met.id not in [x.id for x in model.metabolites]:
-                    model.add_metabolites([met])
-            model.add_reactions([new_rxn])
-            if len(new_rxn.genes) > 0:
-                for gene in new_rxn.genes:
-                    model.genes.remove(gene)
-    new_rxn = Reaction()
-    met_dict = {pf_curated.metabolites.get_by_id('all_dgl_c'): -1,
-        pf_curated.metabolites.get_by_id('bm_lipid_c'): +1}
-    new_rxn.add_metabolites(met_dict)
-    new_rxn.name = 'lipid aggregate reaction for biomass'
-    new_rxn.id = 'lipid_biomass'
-    new_rxn.lower_bound = 0.
-    new_rxn.upper_bound = 1000.
-    for met in new_rxn.metabolites:
-        if met.id not in [x.id for x in model.metabolites]:
-            model.add_metabolites([met])
-    model.add_reactions([new_rxn])
-    
-    logger.info('added accessory reactions')
+new_rxn = Reaction()
+met_dict = {pf_curated.metabolites.get_by_id('all_dgl_c'): -1,
+    pf_curated.metabolites.get_by_id('bm_lipid_c'): +1}
+new_rxn.add_metabolites(met_dict)
+new_rxn.name = 'lipid aggregate reaction for biomass'
+new_rxn.id = 'lipid_biomass'
+new_rxn.lower_bound = 0.
+new_rxn.upper_bound = 1000.
+for met in new_rxn.metabolites:
+    if met.id not in [x.id for x in model.metabolites]:
+        model.add_metabolites([met])
+model.add_reactions([new_rxn])
+logger.info('added accessory reactions')
 
-    model.objective = model.reactions.get_by_id('generic_biomass')
-    
-    logger.info('set objective')
+model.objective = model.reactions.get_by_id('generic_biomass')
 
-    # add exchange reactions for all extracellular metabolites to accelerate gapfilling
-    for met in model.metabolites:
-        if met.id.endswith('_e'):
-            if 'EX_'+met.id not in model.reactions:
-                model.add_boundary(met, type = 'exchange')
-    for rxn in model.reactions:
-        if rxn.id.startswith('EX_'):
-            rxn.lower_bound = -1000.
-            rxn.upper_bound = 1000.
+logger.info('set objective')
 
-    logger.info('fixed exchange')
-    
-    model_dict[species] = model
-    ### SAVE MODEL
-    os.chdir(model_path)
+# add exchange reactions for all extracellular metabolites to accelerate gapfilling
+for met in model.metabolites:
+    if met.id.endswith('_e'):
+        if 'EX_'+met.id not in model.reactions:
+            model.add_boundary(met, type = 'exchange')
+for rxn in model.reactions:
+    if rxn.id.startswith('EX_'):
+        rxn.lower_bound = -1000.
+        rxn.upper_bound = 1000.
+logger.info('fixed exchange')
 
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT')
-    os.chdir(model_path)
-    cobra.io.save_json_model(model, "./with_biomass_"+species+".json")
-    cobra.io.write_sbml_model(model, "./with_biomass_"+species+".xml")
+
+### SAVE MODEL
+os.chdir(model_path)
+if 'hb_c' in [m.id for m in model.metabolites]:
+    logger.info('HEMOGLOBIN PRESENT')
+cobra.io.save_json_model(model, "./with_biomass_json/with_biomass_"+SPECIES_ID+".json")
+cobra.io.write_sbml_model(model, "./with_biomass_"+SPECIES_ID+".xml")
 
 

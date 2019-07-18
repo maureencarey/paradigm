@@ -37,8 +37,7 @@ iPfal19 = cobra.io.load_json_model("iPfal19_updated.json")
 
 logger.info(SPECIES_ID)
 # modified for Rivanna: read in the models
-pf_model_dict = {}
-pf_model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)
+model = cobra.io.load_json_model(model_fname)
 logger.info('loaded model')
 
 os.chdir(data_path)
@@ -83,38 +82,56 @@ modifications_ortho = pd.DataFrame(index = pf_model_dict.keys(), columns=columns
 logger.info('beginning model loop')
 
 # keep bounds from universal model
-for species, model in pf_model_dict.items():
 
-    logger.info(species)
-    x1 = len(model.reactions)
-    y1 = len(model.genes)
-    z1 = len(model.metabolites)
-    
-    # add reactions that are necessary for biomass (aggregation and transport rxns)
-    for x in add_these:
-        rxn = iPfal19.reactions.get_by_id(x).copy()
-        if rxn.gene_reaction_rule:
-            logger.info(rxn.id)
-            logger.info('has the following GPR:')
-            logger.info(rxn.gene_reaction_rule)
-        for met in rxn.metabolites:
-            if met.id not in [m.id for m in model.metabolites]:
-                model.add_metabolites([met.copy()])
-        model.add_reactions([rxn])
+logger.info(SPECIES_ID)
+x1 = len(model.reactions)
+y1 = len(model.genes)
+z1 = len(model.metabolites)
 
-    logger.info('added basic reactions')
-    
-    x2 = len(model.reactions)
-    y2 = len(model.genes)
-    z2 = len(model.metabolites)
+# add reactions that are necessary for biomass (aggregation and transport rxns)
+for x in add_these:
+    rxn = iPfal19.reactions.get_by_id(x).copy()
+    if rxn.gene_reaction_rule:
+        logger.info(rxn.id)
+        logger.info('has the following GPR:')
+        logger.info(rxn.gene_reaction_rule)
+    for met in rxn.metabolites:
+        if met.id not in [m.id for m in model.metabolites]:
+            model.add_metabolites([met.copy()])
+    model.add_reactions([rxn])
 
-    species_specific_mapping = mapping[mapping['Organism'] == species]
-    logger.info('pruned mapping file')
-    
-    for index, row in species_specific_mapping.iterrows():
-        new_gene = row['Gene ID']
-        if ',' not in row['Input Ortholog(s)']:
-            gene = row['Input Ortholog(s)'].strip()
+logger.info('added basic reactions')
+
+x2 = len(model.reactions)
+y2 = len(model.genes)
+z2 = len(model.metabolites)
+
+species_specific_mapping = mapping[mapping['Organism'] == SPECIES_ID]
+logger.info('pruned mapping file')
+
+for index, row in species_specific_mapping.iterrows():
+    new_gene = row['Gene ID']
+    if ',' not in row['Input Ortholog(s)']:
+        gene = row['Input Ortholog(s)'].strip()
+        if gene in [x.id for x in iPfal19.genes]:
+            gene = iPfal19.genes.get_by_id(gene)
+            rxn_to_add = gene.reactions.copy()
+            for rxn in rxn_to_add:
+                if rxn.id not in [x.id for x in model.reactions]:
+                    rxn2 = rxn.copy()
+                    test = len(model.reactions)
+                    model.add_reactions([rxn2])
+                    model.reactions.get_by_id(rxn2.id).gene_reaction_rule = new_gene
+                else: # reaction is in model
+                    if new_gene not in model.reactions.get_by_id(rxn.id).gene_reaction_rule:
+                        if model.reactions.get_by_id(rxn.id).gene_reaction_rule == '':
+                            model.reactions.get_by_id(rxn.id).gene_reaction_rule = new_gene
+                        else: model.reactions.get_by_id(rxn.id).gene_reaction_rule = \
+                            model.reactions.get_by_id(rxn.id).gene_reaction_rule + ' or ' +new_gene
+#                     else:logger.info('gene already there')
+    else:
+        for i in range(0,len(row['Input Ortholog(s)'].split(', ')),1):
+            gene = row['Input Ortholog(s)'].split(', ')[i].strip()
             if gene in [x.id for x in iPfal19.genes]:
                 gene = iPfal19.genes.get_by_id(gene)
                 rxn_to_add = gene.reactions.copy()
@@ -124,122 +141,99 @@ for species, model in pf_model_dict.items():
                         test = len(model.reactions)
                         model.add_reactions([rxn2])
                         model.reactions.get_by_id(rxn2.id).gene_reaction_rule = new_gene
-                    else: # reaction is in model
+                    else:
                         if new_gene not in model.reactions.get_by_id(rxn.id).gene_reaction_rule:
                             if model.reactions.get_by_id(rxn.id).gene_reaction_rule == '':
                                 model.reactions.get_by_id(rxn.id).gene_reaction_rule = new_gene
                             else: model.reactions.get_by_id(rxn.id).gene_reaction_rule = \
                                 model.reactions.get_by_id(rxn.id).gene_reaction_rule + ' or ' +new_gene
-    #                     else:logger.info('gene already there')
-        else:
-            for i in range(0,len(row['Input Ortholog(s)'].split(', ')),1):
-                gene = row['Input Ortholog(s)'].split(', ')[i].strip()
-                if gene in [x.id for x in iPfal19.genes]:
-                    gene = iPfal19.genes.get_by_id(gene)
-                    rxn_to_add = gene.reactions.copy()
-                    for rxn in rxn_to_add:
-                        if rxn.id not in [x.id for x in model.reactions]:
-                            rxn2 = rxn.copy()
-                            test = len(model.reactions)
-                            model.add_reactions([rxn2])
-                            model.reactions.get_by_id(rxn2.id).gene_reaction_rule = new_gene
-                        else:
-                            if new_gene not in model.reactions.get_by_id(rxn.id).gene_reaction_rule:
-                                if model.reactions.get_by_id(rxn.id).gene_reaction_rule == '':
-                                    model.reactions.get_by_id(rxn.id).gene_reaction_rule = new_gene
-                                else: model.reactions.get_by_id(rxn.id).gene_reaction_rule = \
-                                    model.reactions.get_by_id(rxn.id).gene_reaction_rule + ' or ' +new_gene
-    #                             else: #gene already there
+#                             else: #gene already there
 
-    logger.info('headed into duplicates')
-    if len(model.reactions) != len(set(model.reactions)):
-        logger.info('duplicate reactions')
+logger.info('headed into duplicates')
+if len(model.reactions) != len(set(model.reactions)):
+    logger.info('duplicate reactions')
+
+if SPECIES_ID.startswith('Pfalciparum3D7'):
+    s = 1
+else:
+    t = len(model.genes)
+    gene_list = [x.id for x in model.genes if x.id.startswith('PF3D7')]
+    gene_list_genes = [x for x in model.genes if x.id.startswith('PF3D7')]
+    print(t)
+    if len(gene_list) > 0:
+        for x in gene_list_genes:
+            if len(x.reactions) == 0:
+                # cobra.manipulation.delete.remove_genes(model,[x.id], remove_reactions=True)
+                model.genes.remove(x)
+            else:
+                logging.info(x.id+' remains in model and associated with '+[r.id for r in x.reactions])
+    # cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+    if (t==len(model.genes)):
+        logger.info('THIS DELETE PF3D7 GENES STEP DID NOT WORK')
+    gene_list = [x.id for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]
+    cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+    print(len(model.genes))
+
+# save the number of modifications
+x3 = len(model.reactions)
+y3 = len(model.genes)
+z3 = len(model.metabolites)
+modifications_ortho.species.loc[SPECIES_ID] = SPECIES_ID
+modifications_ortho.starting_genes.loc[SPECIES_ID] = y1
+modifications_ortho.reactions_added.loc[SPECIES_ID] = len(model.reactions) - x1
+modifications_ortho.mets_added.loc[SPECIES_ID] = len(model.metabolites) - z1
+modifications_ortho.genes_added.loc[SPECIES_ID] = len(model.genes) - y1
+
+logger.info('headed into exchanges')
+# add exchanges in preparation for gapfilling
+l = list()
+for rxn in model.reactions:
+    for met in rxn.metabolites:
+        if met.id.endswith('_e'):
+            l.append(met)
+for met in l:
+    if 'EX_'+met.id not in [r.id for r in model.reactions]:
+        model.add_boundary(met, type = "exchange")
+model.objective = 'biomass' # NOT USING GENERIC BIOMASS NOW
+
+os.chdir(model_path)
+cobra.io.save_json_model(model, "./ortho_json/ortho_"+SPECIES_ID+".json")
+cobra.io.write_sbml_model(model, "ortho_"+SPECIES_ID+".xml")
+
+if 'hb_c' in [m.id for m in model.metabolites]:
+    logger.info('HEMOGLOBIN PRESENT')
+
+logger.info('saved model')
+logger.info('no genes should print here (if a number, then your gene_IDs were not updated):')
+if SPECIES_ID != 'Pfalciparum3D7':
+    for x in model.genes:
+        if x.id.startswith('PF3D7'):
+            logger.info(x.id)
+    logger.info('k, moving on')
+
+# SKIP FOR NOW: FIND/ REMOVE DUPLICATE REACTIONS
+logger.info('duplicate reactions by formula')
+duplicates = dict()
+temp_dict = dict() # get products and reactants for every reaction
+for rxn in model.reactions:
+    rxn_dict = dict()
+    check_rxn_products = rxn.products
+    check_rxn_reactants = rxn.reactants
+    rxn_dict['reactants'] = [x.id for x in check_rxn_reactants]
+    rxn_dict['products'] = [x.id for x in check_rxn_products]
+    temp_dict[rxn.id] = rxn_dict
     
-    if species.startswith('Pfalciparum3D7'):
-        s = 1
-    else:
-        t = len(model.genes)
-        gene_list = [x.id for x in model.genes if x.id.startswith('PF3D7')]
-        gene_list_genes = [x for x in model.genes if x.id.startswith('PF3D7')]
-        print(t)
-        if len(gene_list) > 0:
-            for x in gene_list_genes:
-                if len(x.reactions) == 0:
-                    # cobra.manipulation.delete.remove_genes(model,[x.id], remove_reactions=True)
-                    model.genes.remove(x)
+    for key in temp_dict.keys():
+        if key != rxn.id:
+            if temp_dict[rxn.id]['reactants'] == temp_dict[key]['reactants'] and \
+            temp_dict[rxn.id]['products'] == temp_dict[key]['products']:
+                if rxn.id not in duplicates.keys():
+                    duplicates[rxn.id] = key
+                elif duplicates[rxn.id] == key or key in duplicates[rxn.id]:
+                    continue
                 else:
-                    logging.info(x.id+' remains in model and associated with '+[r.id for r in x.reactions])
-        # cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
-        if (t==len(model.genes)):
-            logger.info('THIS DELETE PF3D7 GENES STEP DID NOT WORK')
-        gene_list = [x.id for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]
-        cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
-        print(len(model.genes))
-
-    x3 = len(model.reactions)
-    y3 = len(model.genes)
-    z3 = len(model.metabolites)
-
-    modifications_ortho.species.loc[SPECIES_ID] = SPECIES_ID
-    modifications_ortho.starting_genes.loc[SPECIES_ID] = y1
-    modifications_ortho.reactions_added.loc[SPECIES_ID] = len(model.reactions) - x1
-    modifications_ortho.mets_added.loc[SPECIES_ID] = len(model.metabolites) - z1
-    modifications_ortho.genes_added.loc[SPECIES_ID] = len(model.genes) - y1
-
-    logger.info('headed into exchanges')
-    # add exchanges in preparation for gapfilling
-    l = list()
-    for rxn in model.reactions:
-        for met in rxn.metabolites:
-            if met.id.endswith('_e'):
-                l.append(met)
-    for met in l:
-        if 'EX_'+met.id not in [r.id for r in model.reactions]:
-            model.add_boundary(met, type = "exchange")
-            # logger.info(model.reactions.get_by_id('EX_'+met.id).bounds)
-    
-    model.objective = 'biomass' # NOT USING GENERIC BIOMASS NOW
-    pf_model_dict[species] = model
-    
-    os.chdir(model_path)
-    cobra.io.save_json_model(model, "ortho_"+species+".json")
-    cobra.io.write_sbml_model(model, "ortho_"+species+".xml")
-
-    if 'hb_c' in [m.id for m in model.metabolites]:
-        logger.info('HEMOGLOBIN PRESENT')
-    
-    logger.info('saved model')
-    logger.info(species)
-    logger.info('no genes should print here (if a number, then your gene_IDs were not updated')
-    if species != 'Pfalciparum3D7':
-        for x in model.genes:
-            if x.id.startswith('PF3D7'):
-                logger.info(x.id)
-        logger.info('k, moving on')
-
-    # SKIP FOR NOW: FIND/ REMOVE DUPLICATE REACTIONS
-    logger.info('duplicate reactions by formula')
-    duplicates = dict()
-    temp_dict = dict() # get products and reactants for every reaction
-    for rxn in model.reactions:
-        rxn_dict = dict()
-        check_rxn_products = rxn.products
-        check_rxn_reactants = rxn.reactants
-        rxn_dict['reactants'] = [x.id for x in check_rxn_reactants]
-        rxn_dict['products'] = [x.id for x in check_rxn_products]
-        temp_dict[rxn.id] = rxn_dict
-        
-        for key in temp_dict.keys():
-            if key != rxn.id:
-                if temp_dict[rxn.id]['reactants'] == temp_dict[key]['reactants'] and \
-                temp_dict[rxn.id]['products'] == temp_dict[key]['products']:
-                    if rxn.id not in duplicates.keys():
-                        duplicates[rxn.id] = key
-                    elif duplicates[rxn.id] == key or key in duplicates[rxn.id]:
-                        continue
-                    else:
-                        duplicates[rxn.id] = duplicates[rxn.id]+', '+key
-    logger.info(duplicates)
+                    duplicates[rxn.id] = duplicates[rxn.id]+', '+key
+logger.info(duplicates)
 
 os.chdir(data_path)
 modifications_ortho.to_csv('./orthology_modifications_plasmodium_{0}.csv'.format(SPECIES_ID))
