@@ -14,7 +14,8 @@ from datetime import datetime
 
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
-os.chdir(model_path)
+log_file_path = "/home/mac9jc/paradigm/model_generation_logs"
+os.chdir(log_file_path)
 
 parser = argparse.ArgumentParser(description='Read in the species model')
 parser.add_argument('model_file')
@@ -42,6 +43,7 @@ logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 6')
     
 # modified for Rivanna: read in the models
+os.chdir(model_path)
 model_dict = {}
 model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)
 logger.info('loaded model')

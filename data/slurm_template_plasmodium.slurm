@@ -6,6 +6,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=12000
 #SBATCH --account=csblrivanna
+#SBATCH --output=%x-%j.out
 
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env

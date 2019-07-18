@@ -175,6 +175,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     mv gapfilling_additions_* ./gapfilling_additions
     # mkdir ./percent_wrong_comp
     mv percent_reactions_in_* ./percent_wrong_comp
+    mv step*.log ../model_generation_logs/
     # # run analyses
     mkdir ./data/results/rxn_essentiality
     mkdir ./data/results/gene_essentiality

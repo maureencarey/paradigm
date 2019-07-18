@@ -15,7 +15,7 @@ import logging
 
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
-os.chdir(model_path)
+log_file_path = "/home/mac9jc/paradigm/model_generation_logs"
 
 parser = argparse.ArgumentParser(description='Read in the species model')
 parser.add_argument('model_file')
@@ -26,6 +26,7 @@ model_fname = vars(args)['model_file']
 SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 
+os.chdir(log_file_path)
 day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step4_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
@@ -45,6 +46,7 @@ else:
 
 logger.info('BEGIN STEP 4')
 
+os.chdir(model_path)
 # modified for Rivanna: read in the models
 model_dict = {}
 model_dict[SPECIES_ID] = cobra.io.load_json_model(model_fname)

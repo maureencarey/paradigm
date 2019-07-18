@@ -20,6 +20,8 @@ SPECIES_ID = annotation_fname.split('/')[-1] # ID is annotation filename minus d
 SPECIES_ID = SPECIES_ID.split('_BiGG.')[0] # get rid of extension
 
 # set up log file
+log_file_path =	"/home/mac9jc/paradigm/model_generation_logs"
+os.chdir(log_file_path)
 day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step3_{}_{}.log'.format(SPECIES_ID,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
