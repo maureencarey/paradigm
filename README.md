@@ -148,42 +148,34 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
 
     # # manually doubel check latest EuPathDB release to see if any extra files need to run
     # # get data
-    sbatch ./run_these/pipeline_slurm_step1.slurm
-    mv step2_27_02_2019.log ./model_generation_logs/
-    mkdir ./data/results
-    # # would like to run Memote here on iPfal18
-    sbatch ./run_these/update_universal_reaction_set.slurm
-    mv ./data/update.log ./model_generation_logs/update.log
-    # # would like to run Memote again on iPfal18
-    # # make all models
-    bash ./run_these/pipeline_auto_slurm_for_step2.sh
-    # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
-    # # clean things up - especially log files
+    sbatch run_these/pipeline_slurm_step1.slurm
+    # # add data to universal model
+    sbatch run_these/update_universal_reaction_set1.slurm
+    # # make all de novo models 
+    bash ./run_these/pipeline_auto_slurm_for_step2a.sh
+    # # extend universal model by de novo models
+    sbatch ./run_these/update_universal_reaction_set2.slurm
+    # # finish making all models
+    bash ./run_these/pipeline_auto_slurm_for_step2b.sh
+        # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
     # # gapfill plasmodium models prior to orthology conversion to test differences
     bash ./run_these/pipeline_auto_slurm_for_plasmodium.sh
+    # # clean things up - especially log files
     sbatch ./run_these/pipeline_cleanup.slurm
-        # infeasible
-    cd ./data
     # # move things to convenient locations
-    # mkdir ./slurm_outputs
+    cd ./data
     mv *.out ./slurm_outputs
-    # mkdir ./model_modifications
     mv model_modifications_* ./model_modifications
-    # mkdir ./ortho_modifications
     mv orthology_modifications_* ./ortho_modifications
-    # mkdir ./gapfilling_additions
     mv gapfilling_additions_* ./gapfilling_additions
-    # mkdir ./percent_wrong_comp
     mv percent_reactions_in_* ./percent_wrong_comp
-    mv step*.log ../model_generation_logs/
     # # run analyses
-    mkdir ./data/results/rxn_essentiality
-    mkdir ./data/results/gene_essentiality
     sbatch ./run_these/follow_up_analyses/analyses_part1.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part2.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part3.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part4.slurm
     sbatch ./run_these/follow_up_analyses/analyses_part5.slurm
+
     # # would like to run Memote again on all models
     ## need to move all xml gf models to other directory for memote
     # scp mac9jc@rivanna.hpc.virginia.edu:/home/mac9jc/paradigm/data/ortho_annotations_per_genome_17_05_2019.csv .    

@@ -1,5 +1,0 @@
-,rxns_added
-0,r2052: his__L_e + val__L_c --> his__L_c + val__L_e
-1,r1978: arg__L_c + na1_e + thr__L_e --> arg__L_e + na1_c + thr__L_c
-2,r1958: arg__L_c + leu__L_e + na1_e --> arg__L_e + leu__L_c + na1_c
-3,HISyLATthc: arg__L_c + h_e + his__L_e --> arg__L_e + h_c + his__L_c

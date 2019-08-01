@@ -1,5 +1,0 @@
-,rxns_added
-0,THRA: thr__L_c --> acald_c + gly_c
-1,r1863: asn__L_c + na1_e + val__L_e --> asn__L_e + na1_c + val__L_c
-2,AMPt: amp_e --> amp_c
-3,EX_val__L_e: val__L_e <=> 

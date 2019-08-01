@@ -5,7 +5,11 @@ import pandas as pd
 import requests
 import logging
 from datetime import datetime
+import helper_functions_3 as hf3
 
+log_path = "/home/mac9jc/paradigm/model_generation_logs/"
+
+os.chdir(log_path)
 day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step2_{}.log'.format(day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
@@ -172,7 +176,9 @@ logging.info('finished Anas curation')
 # Make dictionary to make all metabolite IDs compatible with bigg
 # IN FUTURE, EXPAND TO ALL MODELS # for model in [pf_curated, chominis, leish]:
 os.chdir(model_path)
-universal_model = cobra.io.load_json_model('universal_model_updated.json')
+universal_model = cobra.io.load_json_model('universal_model.json')
+rxn_list = [r.id for r in universal_model.reactions]
+met_list = [m.id for m in universal_model.metabolites]
 
 # switch _D_ to __D_ to be BiGG compatible
 for met in pf_model.metabolites:
@@ -534,12 +540,11 @@ pf_model.metabolites.get_by_id('5mti_c').charge = 0.
 pf_model.metabolites.get_by_id('5mti_c').formula = 'C11H14N4O4S'
 pf_model.metabolites.get_by_id('5mti_c').notes = {'KEGG id' : 'C19787'}
 
-
 # convert biomass to same aggregate format as for the rest of the models
-pf_model.reactions.Protein.id = 'protein_biomass'
-pf_model.reactions.protein_biomass.name = 'protein aggregate reaction for biomass'
-pf_model.reactions.Lipid_prod.id = 'lipid_biomass'
-pf_model.reactions.lipid_biomass.name   = 'lipid aggregate reaction for biomass'
+pf_model.reactions.Protein.id = 'protein_bm'
+pf_model.reactions.protein_bm.name = 'protein aggregate reaction for biomass'
+pf_model.reactions.Lipid_prod.id = 'lipid_bm'
+pf_model.reactions.lipid_bm.name   = 'lipid aggregate reaction for biomass'
 
 # bm_rna = universal_model.metabolites.get_by_id('bm_rna_c').copy()
 # bm_dna = universal_model.metabolites.get_by_id('bm_dna_c').copy()
@@ -552,6 +557,23 @@ pf_model.metabolites.lipid_c.id = 'bm_lipid_c'
 # pf_model.add_reactions([atpm])
 # pf_model.reactions.ATPM.lower_bound = 0.001
 # pf_model.reactions.ATPM.upper_bound = 1000.
+
+# fix some formatting issues that memote highlights
+model.metabolites.get_by_id('5mti_c').charge = int(model.metabolites.get_by_id('5mti_c').charge)
+model.reactions.ATPtm.annotation['kegg.reaction'] = 'R00124' # incorrect as 'R00124#2'
+model.reactions.CHSTEROLt.annotation['rhea'] = ['39051', '39052', '39054', '39053'] # ['39051#1', '39052#1', '39054#1', '39053#1']
+model.reactions.OIVD1m.annotation['ec-code'] = ['1.2.1.25'] # ['1.2.1', '1.2.1.25']
+model.reactions.OIVD3m.annotation['ec-code'] = ['1.2.1.25'] #['1.2.1', '1.2.1.25']
+model.reactions.PPM.annotation['ec-code'] = ['5.4.2.7', '5.4.2.2'] # ['5.4.2', '5.4.2.7', '5.4.2.2']
+model.reactions.UDCPDPS.annotation['ec-code'] = ['2.5.1.31'] # ['2.5.1.M1', '2.5.1.31', '2.5.1']
+model.reactions.GLUTRS.annotation['ec-code'] = ['6.1.1.17', '6.1.1.24'] # ['6.1.1.17', '6.1.1', '6.1.1.24']
+met_list_temp = ["adp_ap","adp_c","adp_m","cmp_ap","cmp_c","gdp_c","gdp_m","gdpfuc_c","gdpmann_c","malt_c","malt_e","uacgam_c","udp_c","udpg_c","gdp_ap"]
+for met_id in met_list_temp:
+    new_list_o_kegg_ids = list()
+    for option in model.metabolites.get_by_id(met_id).annotation['kegg.compound']:
+        if option.startswith('C'): # else starts with G -> glycan id
+            new_list_o_kegg_ids.append(option)
+    model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = new_list_o_kegg_ids
 
 # PRINT DUPLICATE REACTIONS
 duplicates = dict()
@@ -579,6 +601,45 @@ logging.info('\n')
 logging.info('duplicates reactions in universal')
 logging.info(duplicates)
 
+# add full met info
+met_counter = 0
+for met in model.metabolites:
+    if met_counter % 10 == 0:
+        logger.info(met_counter)
+    met_counter = met_counter +1
+    met_id = hf3.met_ids_without_comp(model,met.id)
+    if met_id+'_c' in met_list: model = hf3.add_full_met_info(model, met, met_id)
+    else: model = hf3.add_partial_met_info(model,met,met_id)
+
+# add full reaction info
+rxn_counter = 0
+for rxn in model.reactions:
+    if rxn_counter % 10 == 0:
+        logger.info(rxn_counter)
+    rxn_counter = rxn_counter +1
+    if rxn.id in rxn_list: model = hf3.add_full_rxn_info(model, rxn, rxn.id)
+    else: model = hf3.add_partial_rxn_info(model, rxn, rxn.id)
+
+# change id so that Memote doesn't think its the biomass reaction
+model.reactions.get_by_id('DM_biomass_c').name = 'unblock biomass'
+model.reactions.get_by_id('DM_biomass_c').id = 'DM_bm'
+
+# fix charges and formulas
+model = hf3.fix_charge_or_formula(model)
+
+# fix food vacucole compartement
+for met in model.metabolites:
+    if met.compartment == 'food vacuole':
+        met.compartment = 'food_vacuole'
+
+# TO DO: ask Memote to recognized EuPathDB gene IDs
+for gene in model.genes:
+    gene.annotation['EuPathDB.genes'] = [gene.id]
+
+# Add SBO terms
+model = hf3.add_sbo_terms(model)
+
 os.chdir(model_path)
+model.name = 'iPfal19, curated P. falciparum 3D7'
 cobra.io.save_json_model(pf_model, "iPfal19.json")
 cobra.io.write_sbml_model(pf_model, "iPfal19.xml")

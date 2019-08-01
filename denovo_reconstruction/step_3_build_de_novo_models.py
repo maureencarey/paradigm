@@ -152,9 +152,6 @@ if len(rxns_to_add.keys()) != len(new_model.reactions):
 
 logging.info('made first draft model, with this many reactions:')
 logging.info(len(new_model.reactions))
-#logging.info('printing notes field')
-#logging.info([rxn.notes for rxn in new_model.reactions])
-#logging.info('------------------------------------------')
     
 # remove duplciate reactions in mulitple compartments
 total_compartments = ["_c","_e","_m","_ap","_fv","_k","_glc","_pm"]
@@ -249,8 +246,9 @@ x1_2 = len(model.reactions)
 # save this number
 inappropriate_compartments_that_remain = (len(bad_rxns_keep_rewrite)/len(model.reactions))*100
 
-modifications.species.loc[SPECIES_ID] = SPECIES_ID
-modifications.reactions_removed1.loc[SPECIES_ID] = x1
+row_index = modifications.species == SPECIES_ID
+modifications.loc[row_index,'species'] = SPECIES_ID
+modifications.loc[row_index,'reactions_removed1'] = x1
 
 for rxn_id in add_reaction: #there are ids in add_reaction that are in the model already
     rxn = universal_model.reactions.get_by_id(rxn_id).copy()
@@ -260,7 +258,8 @@ for rxn_id in add_reaction: #there are ids in add_reaction that are in the model
 rxns_to_add_list = [universal_model.reactions.get_by_id(x).copy() for x in add_reaction if x not in [r.id for r in model.reactions]]
 # if reaction is already there, it is because the reaction was in multiple compartments
 model.add_reactions(rxns_to_add_list)
-modifications.reactions_added.loc[SPECIES_ID] = len(model.reactions) - x1_2
+row_index = modifications.species == SPECIES_ID
+modifications.loc[row_index,'reactions_added'] = len(model.reactions) - x1_2
 
 # make sure all reactions can carry flux, problem with some versions of the universal model
 for rxn in model.reactions:
@@ -294,7 +293,8 @@ for rxn in fix_these_reactions_list:
             if hf.get_comp(model,met.id) == '_p': # move periplasmic metabolites to extracellular instead of cytosol
                 if hf.met_ids_without_comp(model,met.id)+'_e' not in [x.id for x in model.metabolites]:
                     met2 = met.copy()
-                    met2.id = hf.met_ids_without_comp(model,met.id)+'_e'
+                    met_id_without_comp = hf.met_ids_without_comp(model,met.id)
+                    met2.id = met_id_without_comp+'_e'
                     met_dict[met2] = rxn.metabolites[met]
                     model.add_metabolites(met2) # []
                 else:
@@ -303,7 +303,8 @@ for rxn in fix_these_reactions_list:
             else: # non periplasmic metabolite
                 if hf.met_ids_without_comp(model,met.id)+'_c' not in [x.id for x in model.metabolites]:
                     met2 = met.copy()
-                    met2.id = hf.met_ids_without_comp(model,met.id)+'_c'
+                    met_id_without_comp	= hf.met_ids_without_comp(model,met.id)
+                    met2.id = met_id_without_comp+'_c'
                     met_dict[met2] = rxn.metabolites[met]
                     model.add_metabolites(met2) # []
                 else:
@@ -320,6 +321,7 @@ for rxn in fix_these_reactions_list:
         new_rxn.gene_reaction_rule = rxn.gene_reaction_rule
         new_rxn.notes = rxn.notes
         new_rxn.notes['created for paradigm'] = 'true'
+        new_rxn.annotation = rxn.annotation
         model.add_reactions([new_rxn])
         reactions_added.append(new_rxn.id)
     l = len(model.reactions)

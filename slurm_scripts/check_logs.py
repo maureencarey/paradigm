@@ -1,7 +1,4 @@
-import cobra
 import os
-from cobra import Model, Reaction, Metabolite
-import pandas as pd
 import requests
 import logging
 import argparse

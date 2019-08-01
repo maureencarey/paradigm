@@ -39,17 +39,17 @@ for key, value in annotations_dict.items():
 pd.DataFrame.from_dict(annot_count, orient="index").to_csv("annotation_count_all_species_{}.csv".format(day))
 pd.DataFrame.from_dict(annot_count_unique_genes, orient="index").to_csv("unique_gene_annotation_count_all_species_{}.csv".format(day))
 
-# ORTHO_MCL annotations
-os.chdir(data_path+'/diamond_output_orthoMCL')
-annotations_dict_ortho = dict()
-columns = ['query_gene', 'OrthoMCL_gene', 'pident', 'length', 'mismatch', 'gapopen','qstart', 'qend', 'sstart', 'send', 'evalue', 'score']
-for filename in glob.glob(os.path.join(data_path+'/diamond_output_orthoMCL', '*_orthoMCL.tsv')):
-    annotations_dict_ortho[filename.split('/')[len(filename.split('/'))-1]] = pd.read_table(filename, sep = '\t', names=columns)
-annotations_ortho_df = pd.DataFrame(index = annotations_dict_ortho.keys(), columns=['species','OrthoMCL_gene'])
-for species, annotations in annotations_dict_ortho.items():
-    annotations_ortho_df.species.loc[species] = species
-    annotations_ortho_df['OrthoMCL_gene'].loc[species] = set(annotations.OrthoMCL_gene)
-os.chdir(data_path)
-annotations_ortho_df.to_csv('ortho_annotations_per_genome_{}.csv'.format(day))
+## ORTHO_MCL annotations
+#os.chdir(data_path+'/diamond_output_orthoMCL')
+#annotations_dict_ortho = dict()
+#columns = ['query_gene', 'OrthoMCL_gene', 'pident', 'length', 'mismatch', 'gapopen','qstart', 'qend', 'sstart', 'send', 'evalue', 'score']
+#for filename in glob.glob(os.path.join(data_path+'/diamond_output_orthoMCL', '*_orthoMCL.tsv')):
+#    annotations_dict_ortho[filename.split('/')[len(filename.split('/'))-1]] = pd.read_table(filename, sep = '\t', names=columns)
+#annotations_ortho_df = pd.DataFrame(index = annotations_dict_ortho.keys(), columns=['species','OrthoMCL_gene'])
+#for species, annotations in annotations_dict_ortho.items():
+#    annotations_ortho_df.species.loc[species] = species
+#    annotations_ortho_df['OrthoMCL_gene'].loc[species] = set(annotations.OrthoMCL_gene)
+#os.chdir(data_path)
+#annotations_ortho_df.to_csv('ortho_annotations_per_genome_{}.csv'.format(day))
 
 # use resultant files for plotting

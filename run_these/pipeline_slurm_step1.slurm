@@ -7,7 +7,6 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=6000
 #SBATCH --account=csblrivanna
-#SBATCH --output=%x-%j.out
 
 module load gcc/7.1.0
 module load R/3.3.0

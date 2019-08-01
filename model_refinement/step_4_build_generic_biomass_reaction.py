@@ -55,7 +55,7 @@ os.chdir(model_path)
 chominis = cobra.io.read_sbml_model('chominis_vanee2010.xml')
 tgondii = cobra.io.read_sbml_model('tg_tymoshenko2015.xml')
 leish = cobra.io.read_sbml_model('iAC560_leishmania_Chavali2008.xml')
-pf_curated = cobra.io.load_json_model("iPfal19_updated.json")
+pf_curated = cobra.io.load_json_model("iPfal19.json")
 
 logger.info('loaded models')
 
@@ -152,7 +152,7 @@ logger.info('added generic biomass')
 
 if plasmo:
     model.add_reactions([pf_curated.reactions.biomass.copy()])
-logger.info('added plasmodium biomass')
+    logger.info('added plasmodium biomass')
 
 # protein production, transport, exchange
 # biomass 'sink', lipid exchange
@@ -211,7 +211,7 @@ logger.info('fixed exchange')
 os.chdir(model_path)
 if 'hb_c' in [m.id for m in model.metabolites]:
     logger.info('HEMOGLOBIN PRESENT')
-cobra.io.save_json_model(model, "./with_biomass_json/with_biomass_"+SPECIES_ID+".json")
-cobra.io.write_sbml_model(model, "./with_biomass_"+SPECIES_ID+".xml")
+cobra.io.save_json_model(model, "with_biomass_"+SPECIES_ID+".json")
+cobra.io.write_sbml_model(model, "with_biomass_"+SPECIES_ID+".xml")
 
 

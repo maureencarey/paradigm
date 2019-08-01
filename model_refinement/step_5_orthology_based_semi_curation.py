@@ -33,7 +33,7 @@ logger.info('BEGIN STEP 5')
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
 os.chdir(model_path)
-iPfal19 = cobra.io.load_json_model("iPfal19_updated.json")
+iPfal19 = cobra.io.load_json_model("iPfal19.json")
 
 logger.info(SPECIES_ID)
 # modified for Rivanna: read in the models
@@ -52,7 +52,6 @@ if SPECIES_ID not in mapping['Organism'].unique():
     logger.info(SPECIES_ID+'not in orthology mapping dataframe, aka we are not converting via orthology (printing infeasible to catch this error)')
 else:
     logger.info('loaded mapping')
-
 add_these = ['pe_prod1', 'pe_prod10', 'pe_prod11', 'pe_prod12', 'pe_prod13', 'pe_prod14',
              'pe_prod15', 'pe_prod16', 'pe_prod17', 'pe_prod18', 'pe_prod19', 'pe_prod20',
              'pe_prod21', 'pe_prod22','pe_prod2','pe_prod3','pe_prod4','pe_prod5',
@@ -77,13 +76,12 @@ add_these = ['pe_prod1', 'pe_prod10', 'pe_prod11', 'pe_prod12', 'pe_prod13', 'pe
 # 'Lipid_prod','dgl_prod3', 'dgl_prod4', 'dgl_prod5','dgl_prod6', 'dgl_prod7','Protein',
 
 columns = ['species','starting_genes','reactions_added', 'mets_added','genes_added']
-modifications_ortho = pd.DataFrame(index = pf_model_dict.keys(), columns=columns)
+modifications_ortho = pd.DataFrame(index = [SPECIES_ID], columns=columns)
 
 logger.info('beginning model loop')
 
 # keep bounds from universal model
 
-logger.info(SPECIES_ID)
 x1 = len(model.reactions)
 y1 = len(model.genes)
 z1 = len(model.metabolites)
@@ -106,7 +104,7 @@ x2 = len(model.reactions)
 y2 = len(model.genes)
 z2 = len(model.metabolites)
 
-species_specific_mapping = mapping[mapping['Organism'] == SPECIES_ID]
+species_specific_mapping = mapping[mapping['Organism'] == SPECIES_ID].copy()
 logger.info('pruned mapping file')
 
 for index, row in species_specific_mapping.iterrows():
@@ -114,7 +112,7 @@ for index, row in species_specific_mapping.iterrows():
     if ',' not in row['Input Ortholog(s)']:
         gene = row['Input Ortholog(s)'].strip()
         if gene in [x.id for x in iPfal19.genes]:
-            gene = iPfal19.genes.get_by_id(gene)
+            gene = iPfal19.genes.get_by_id(gene).copy()
             rxn_to_add = gene.reactions.copy()
             for rxn in rxn_to_add:
                 if rxn.id not in [x.id for x in model.reactions]:
@@ -133,7 +131,7 @@ for index, row in species_specific_mapping.iterrows():
         for i in range(0,len(row['Input Ortholog(s)'].split(', ')),1):
             gene = row['Input Ortholog(s)'].split(', ')[i].strip()
             if gene in [x.id for x in iPfal19.genes]:
-                gene = iPfal19.genes.get_by_id(gene)
+                gene = iPfal19.genes.get_by_id(gene).copy()
                 rxn_to_add = gene.reactions.copy()
                 for rxn in rxn_to_add:
                     if rxn.id not in [x.id for x in model.reactions]:
@@ -148,7 +146,6 @@ for index, row in species_specific_mapping.iterrows():
                             else: model.reactions.get_by_id(rxn.id).gene_reaction_rule = \
                                 model.reactions.get_by_id(rxn.id).gene_reaction_rule + ' or ' +new_gene
 #                             else: #gene already there
-
 logger.info('headed into duplicates')
 if len(model.reactions) != len(set(model.reactions)):
     logger.info('duplicate reactions')
@@ -159,30 +156,32 @@ else:
     t = len(model.genes)
     gene_list = [x.id for x in model.genes if x.id.startswith('PF3D7')]
     gene_list_genes = [x for x in model.genes if x.id.startswith('PF3D7')]
-    print(t)
     if len(gene_list) > 0:
+        logger.info(len(gene_list))
         for x in gene_list_genes:
             if len(x.reactions) == 0:
-                # cobra.manipulation.delete.remove_genes(model,[x.id], remove_reactions=True)
                 model.genes.remove(x)
             else:
                 logging.info(x.id+' remains in model and associated with '+[r.id for r in x.reactions])
-    # cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
-    if (t==len(model.genes)):
-        logger.info('THIS DELETE PF3D7 GENES STEP DID NOT WORK')
+                cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+        if (t==len(model.genes)) or len([x.id for x in model.genes if x.id.startswith('PF3D7')]) > 0:
+            logger.info('ERROR: (STEP 5) DELETE PF3D7 GENES STEP DID NOT WORK')
     gene_list = [x.id for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]
-    cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
-    print(len(model.genes))
+    if len(gene_list) > 0:
+        cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+        if len([x.id for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]) > 0:
+            logger.info('ERROR: (STEP 5) DELETE PF3D7 mal_mito GENES STEP DID NOT WORK')
 
 # save the number of modifications
 x3 = len(model.reactions)
 y3 = len(model.genes)
 z3 = len(model.metabolites)
-modifications_ortho.species.loc[SPECIES_ID] = SPECIES_ID
-modifications_ortho.starting_genes.loc[SPECIES_ID] = y1
-modifications_ortho.reactions_added.loc[SPECIES_ID] = len(model.reactions) - x1
-modifications_ortho.mets_added.loc[SPECIES_ID] = len(model.metabolites) - z1
-modifications_ortho.genes_added.loc[SPECIES_ID] = len(model.genes) - y1
+row_index = modifications_ortho.species == SPECIES_ID
+modifications_ortho.loc[row_index,'species'] = SPECIES_ID
+modifications_ortho.loc[row_index,'starting_genes'] = y1
+modifications_ortho.loc[row_index,'reactions_added'] = len(model.reactions) - x1 
+modifications_ortho.loc[row_index,'mets_added'] = len(model.metabolites) - z1
+modifications_ortho.loc[row_index,'genes_added'] = len(model.genes) - y1 
 
 logger.info('headed into exchanges')
 # add exchanges in preparation for gapfilling
@@ -197,7 +196,7 @@ for met in l:
 model.objective = 'biomass' # NOT USING GENERIC BIOMASS NOW
 
 os.chdir(model_path)
-cobra.io.save_json_model(model, "./ortho_json/ortho_"+SPECIES_ID+".json")
+cobra.io.save_json_model(model, "ortho_"+SPECIES_ID+".json")
 cobra.io.write_sbml_model(model, "ortho_"+SPECIES_ID+".xml")
 
 if 'hb_c' in [m.id for m in model.metabolites]:

@@ -10,5 +10,4 @@
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env
 
-#python3 ./denovo_reconstruction/step_3_build_de_novo_models.py AalgeraePRA109_BiGG.tsv
-python3 ./model
+python3 data_acquistion/update_universal_reaction_set.py universal_model_updated.json
