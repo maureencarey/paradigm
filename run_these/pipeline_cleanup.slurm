@@ -17,9 +17,9 @@ for filename in step*.log; do
     python3 ../slurm_scripts/check_logs.py $filename
 done
 
-cd ~/paradigm/data/slurm_outputs
+cd ~/paradigm/data
 for filename in *.out; do
     echo "$filename"
-    python3 ../../slurm_scripts/check_outputs.py $filename
+    python3 ../slurm_scripts/check_outputs.py $filename
 done
 

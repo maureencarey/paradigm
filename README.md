@@ -152,29 +152,28 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # add data to universal model
     sbatch run_these/update_universal_reaction_set1.slurm
     # # make all de novo models 
-    bash ./run_these/pipeline_auto_slurm_for_step2a.sh
+    bash run_these/pipeline_auto_slurm_for_step2a.sh
     # # extend universal model by de novo models
-    sbatch ./run_these/update_universal_reaction_set2.slurm
+    sbatch run_these/update_universal_reaction_set2.slurm
     # # finish making all models
-    bash ./run_these/pipeline_auto_slurm_for_step2b.sh
+    bash run_these/pipeline_auto_slurm_for_step2b.sh
         # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
     # # gapfill plasmodium models prior to orthology conversion to test differences
-    bash ./run_these/pipeline_auto_slurm_for_plasmodium.sh
+    bash run_these/pipeline_auto_slurm_for_plasmodium.sh
     # # clean things up - especially log files
-    sbatch ./run_these/pipeline_cleanup.slurm
+    sbatch run_these/pipeline_cleanup.slurm
     # # move things to convenient locations
-    cd ./data
-    mv *.out ./slurm_outputs
-    mv model_modifications_* ./model_modifications
-    mv orthology_modifications_* ./ortho_modifications
-    mv gapfilling_additions_* ./gapfilling_additions
-    mv percent_reactions_in_* ./percent_wrong_comp
+    mv data/*.out data/slurm_outputs
+    mv data/model_modifications_* data/model_modifications
+    mv data/orthology_modifications_* data/ortho_modifications
+    mv data/gapfilling_additions_* data/gapfilling_additions
+    mv data/percent_reactions_in_* data/percent_wrong_comp
     # # run analyses
-    sbatch ./run_these/follow_up_analyses/analyses_part1.slurm
-    sbatch ./run_these/follow_up_analyses/analyses_part2.slurm
-    sbatch ./run_these/follow_up_analyses/analyses_part3.slurm
-    sbatch ./run_these/follow_up_analyses/analyses_part4.slurm
-    sbatch ./run_these/follow_up_analyses/analyses_part5.slurm
+    sbatch run_these/follow_up_analyses/analyses_part1.slurm
+    sbatch run_these/follow_up_analyses/analyses_part2.slurm
+    sbatch run_these/follow_up_analyses/analyses_part3.slurm
+    sbatch run_these/follow_up_analyses/analyses_part4.slurm
+    sbatch run_these/follow_up_analyses/analyses_part5.slurm
 
     # # would like to run Memote again on all models
     ## need to move all xml gf models to other directory for memote

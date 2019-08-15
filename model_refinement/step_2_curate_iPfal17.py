@@ -20,6 +20,7 @@ model_path = "/home/mac9jc/paradigm/models"
 
 os.chdir(model_path)
 pf_model = cobra.io.read_sbml_model("iPfal17.xml")
+universal_model = cobra.io.load_json_model('universal_model.json')
 logging.info('finished loading model')
 
 ## adding notes from previous curation
@@ -182,11 +183,103 @@ met_list = [m.id for m in universal_model.metabolites]
 
 # switch _D_ to __D_ to be BiGG compatible
 for met in pf_model.metabolites:
-    if '_D_' in met.id: 
+    if '_D_' in met.id:
         met.id = met.id.replace('_D_','__D_')
-    elif '_L_' in met.id: 
+    elif '_L_' in met.id:
         met.id = met.id.replace('_L_','__L_')
-       
+
+# these reactions are missing pi, h, etc. replace formula with BiGG version
+notes = pf_model.reactions.GLUDxi.notes
+gpr = pf_model.reactions.GLUDxi.gene_reaction_rule
+pf_model.remove_reactions([pf_model.reactions.GLUDxi])
+pf_model.add_reactions([universal_model.reactions.GLUDxi.copy()])
+pf_model.reactions.GLUDxi.gene_reaction_rule = gpr
+pf_model.reactions.GLUDxi.notes = notes
+
+gpr = pf_model.reactions.trdrd_exp.gene_reaction_rule
+notes = pf_model.reactions.trdrd_exp.notes
+pf_model.remove_reactions([pf_model.reactions.trdrd_exp])
+pf_model.add_boundary(pf_model.metabolites.trdrd_c, type = "sink")
+pf_model.reactions.SK_trdrd_c.notes = notes
+pf_model.reactions.SK_trdrd_c.gene_reaction_rule = gpr
+pf_model.reactions.SK_trdrd_c.name = 'thioredoxin expression'
+
+gpr = pf_model.reactions.fldox_exp.gene_reaction_rule
+notes = pf_model.reactions.fldox_exp.notes
+pf_model.remove_reactions([pf_model.reactions.fldox_exp])
+pf_model.add_boundary(pf_model.metabolites.fldox_ap, type = "sink")
+pf_model.reactions.SK_fldox_ap.notes = notes
+pf_model.reactions.SK_fldox_ap.gene_reaction_rule = gpr
+pf_model.reactions.SK_fldox_ap.name = 'flavodoxin expression'
+
+notes = pf_model.reactions.RPE.notes
+gpr = pf_model.reactions.RPE.gene_reaction_rule
+pf_model.remove_reactions([pf_model.reactions.RPE])
+pf_model.add_reactions([universal_model.reactions.RPEc.copy()])
+pf_model.reactions.RPEc.gene_reaction_rule = gpr
+pf_model.reactions.RPEc.notes = notes
+
+#notes = pf_model.reactions.PPPGOm.notes
+#gpr = pf_model.reactions.PPPGOm.gene_reaction_rule
+#pf_model.remove_reactions([pf_model.reactions.PPPGOm])
+#pf_model.add_reactions([universal_model.reactions.PPPGOm.copy()])
+#pf_model.reactions.PPPGOm.gene_reaction_rule = gpr
+#pf_model.reactions.PPPGOm.notes = notes
+
+notes = pf_model.reactions.PDX5POi.notes
+gpr = pf_model.reactions.PDX5POi.gene_reaction_rule
+pf_model.remove_reactions([pf_model.reactions.PDX5POi])
+pf_model.add_reactions([universal_model.reactions.PDX5POi.copy()])
+pf_model.reactions.PDX5POi.gene_reaction_rule = gpr
+pf_model.reactions.PDX5POi.notes = notes
+
+notes = pf_model.reactions.PPA.notes
+gpr = pf_model.reactions.PPA.gene_reaction_rule
+pf_model.remove_reactions([pf_model.reactions.PPA])
+pf_model.add_reactions([universal_model.reactions.PPA])
+pf_model.reactions.PPA.gene_protein_rule = gpr
+pf_model.reactions.PPA.notes = notes
+
+notes = pf_model.reactions.DOLPMT.notes
+gpr = pf_model.reactions.DOLPMT.gene_reaction_rule
+pf_model.remove_reactions([pf_model.reactions.DOLPMT])
+pf_model.add_reactions([universal_model.reactions.DOLPMT.copy()])
+pf_model.reactions.DOLPMT.gene_reaction_rule = gpr
+pf_model.reactions.DOLPMT.notes = notes
+
+notes = pf_model.reactions.PIt2r.notes
+gpr = pf_model.reactions.PIt2r.gene_reaction_rule
+pf_model.remove_reactions([pf_model.reactions.PIt2r])
+pf_model.add_reactions([universal_model.reactions.PIt2r.copy()])
+pf_model.reactions.PIt2r.gene_reaction_rule = gpr
+pf_model.reactions.PIt2r.notes = notes
+
+# remove these reactions but add a related BiGG reaction
+pf_model.add_reactions([universal_model.reactions.THD2.copy()])
+pf_model.reactions.THD2.gene_reaction_rule = pf_model.reactions.THD2pp.gene_reaction_rule
+pf_model.reactions.THD2.notes = pf_model.reactions.THD2pp.notes
+pf_model.remove_reactions([pf_model.reactions.THD2pp])
+
+pf_model.add_reactions([universal_model.reactions.DOLPMT1_c.copy()])
+pf_model.reactions.DOLPMT1_c.gene_reaction_rule = pf_model.reactions.DOLPMT1.gene_reaction_rule
+pf_model.reactions.DOLPMT1_c.notes = pf_model.reactions.DOLPMT1.notes
+pf_model.remove_reactions([pf_model.reactions.DOLPMT1])
+
+pf_model.add_reactions([universal_model.reactions.G12MT3_c.copy()])
+pf_model.reactions.G12MT3_c.gene_reaction_rule = pf_model.reactions.DOLPMT2.gene_reaction_rule
+pf_model.reactions.G12MT3_c.notes = pf_model.reactions.DOLPMT2.notes
+pf_model.remove_reactions([pf_model.reactions.DOLPMT2])
+
+pf_model.add_reactions([universal_model.reactions.GLCNACPT_c.copy()])
+pf_model.reactions.GLCNACPT_c.gene_reaction_rule = pf_model.reactions.GLCNACPT.gene_reaction_rule
+pf_model.reactions.GLCNACPT_c.notes = pf_model.reactions.GLCNACPT.notes
+pf_model.remove_reactions([pf_model.reactions.GLCNACPT])
+
+pf_model.remove_reactions([pf_model.reactions.G_Protein_Ex,pf_model.reactions.HMBZ_out])
+pf_model.add_boundary(pf_model.metabolites.gthox_protein_e, type = "exchange")
+pf_model.reactions.EX_gthox_protein_e.annotation['AUTHORS'] = ['DOI: 10.3390/molecules200610511']
+pf_model.add_boundary(pf_model.metabolites.hemozoin_e, type = "exchange")
+
 met_dict = {'3oodcoa_c':'3ohodcoa_c', 'Asn_X_Ser_FSLASH_Thr_c':'Asn_X_Ser_Thr_c',
 'citrul_c':'citr__L_c','Lcystin_c':'cysi__L_c',
 'Lcystin_e':'cysi__L_e','doldp_L_c':'doldp_c',
@@ -252,6 +345,14 @@ pf_model.reactions.get_by_id('EX_dcyt_LPAREN_e_RPAREN_').remove_from_model() # n
 
 # replace some bad practice curation from iPfal17
 pf_model.reactions.get_by_id('mthgxl_s').id = 'MGSA'
+
+notes = pf_model.reactions.MGSA.notes
+gpr = pf_model.reactions.MGSA.gene_reaction_rule
+pf_model.remove_reactions([pf_model.reactions.MGSA])
+pf_model.add_reactions([universal_model.reactions.MGSA.copy()])
+pf_model.reactions.MGSA.gene_reaction_rule = gpr
+pf_model.reactions.MGSA.notes = notes
+
 pf_model.reactions.get_by_id('2_PERIOD_1_PERIOD_1_PERIOD_12').id = 'METMT'
 pf_model.reactions.get_by_id('METMT').name = 'Methionine methyltransferase'
 pf_model.reactions.get_by_id('uri_gf').id = 'ATPUP'
@@ -298,9 +399,6 @@ met_document = pd.read_table('bigg_metabolites.txt')
 
 cobra.manipulation.modify.escape_ID(pf_model)
 logging.info('finished escape')
-
-# add metabolite info 
-# this section is cut because it is done in the update_universal_reaction_set.slurm script
 
 # add some new metabolites
 change_mets = {'hb_e':{'name':'host hemoglobin','formula':[], 'charge':[]}, 
@@ -424,7 +522,6 @@ rxn_dict = {'ATPM':'NTP1',
 'trdrd_t':'r1441',
 'PLIPA2E160pp':'PLA2PE_PALM_PALM_c',
 'biomass_s':'DM_biomass_c',
-'RPE':'RPEc',
 'HEX8':'HEX4',
 'DUMPK':'URIDK2r',
 'EX_folate4':'EX_4abz_e',
@@ -467,7 +564,8 @@ rxn_dict = {'ATPM':'NTP1',
 'anth_ex':'DM_anth_c',
 'EX_glc_e':'EX_glc__D_e',
 'sperm_ex': 'DM_sprm_c',
-'AKGDHm':'AKGDm'}
+'AKGDHm':'AKGDm',
+'EX_folate2':'6HMHPTtr'}
 
 # rename reactions if not using BiGG canonical ID
 for rxn in pf_model.reactions:
@@ -511,7 +609,14 @@ for met in pf_model.metabolites:
     if met.id.endswith('_e'):
         if 'EX_'+met.id not in [r.id for r in pf_model.reactions]:
             pf_model.add_boundary(met, type="exchange")
-        
+for rxn in pf_model.reactions:
+    if rxn.id.startswith('EX_'):
+        pf_model.reactions.get_by_id(rxn.id).lower_bound = -1000.
+        pf_model.reactions.get_by_id(rxn.id).upper_bound = 1000.
+
+pf_model.reactions.get_by_id('PGK').lower_bound = -1000.
+pf_model.reactions.get_by_id('PGK').upper_bound = 1000.
+
 logging.info('these mets arent used in more than one reaction and have no GPR:')
 for met in pf_model.metabolites:
     if len(met.reactions) == 1:
@@ -559,21 +664,30 @@ pf_model.metabolites.lipid_c.id = 'bm_lipid_c'
 # pf_model.reactions.ATPM.upper_bound = 1000.
 
 # fix some formatting issues that memote highlights
-model.metabolites.get_by_id('5mti_c').charge = int(model.metabolites.get_by_id('5mti_c').charge)
-model.reactions.ATPtm.annotation['kegg.reaction'] = 'R00124' # incorrect as 'R00124#2'
-model.reactions.CHSTEROLt.annotation['rhea'] = ['39051', '39052', '39054', '39053'] # ['39051#1', '39052#1', '39054#1', '39053#1']
-model.reactions.OIVD1m.annotation['ec-code'] = ['1.2.1.25'] # ['1.2.1', '1.2.1.25']
-model.reactions.OIVD3m.annotation['ec-code'] = ['1.2.1.25'] #['1.2.1', '1.2.1.25']
-model.reactions.PPM.annotation['ec-code'] = ['5.4.2.7', '5.4.2.2'] # ['5.4.2', '5.4.2.7', '5.4.2.2']
-model.reactions.UDCPDPS.annotation['ec-code'] = ['2.5.1.31'] # ['2.5.1.M1', '2.5.1.31', '2.5.1']
-model.reactions.GLUTRS.annotation['ec-code'] = ['6.1.1.17', '6.1.1.24'] # ['6.1.1.17', '6.1.1', '6.1.1.24']
+pf_model.reactions.ATPtm.annotation['kegg.reaction'] = 'R00124'
+pf_model.metabolites.get_by_id('5mti_c').charge = int(pf_model.metabolites.get_by_id('5mti_c').charge)
+pf_model.reactions.ATPtm.annotation['kegg.reaction'] = 'R00124' # incorrect as 'R00124#2'
+pf_model.reactions.CHSTEROLt.annotation['rhea'] = ['39051', '39052', '39054', '39053'] # ['39051#1', '39052#1', '39054#1', '39053#1']
+pf_model.reactions.OIVD1m.annotation['ec-code'] = ['1.2.1.25'] # ['1.2.1', '1.2.1.25']
+pf_model.reactions.OIVD3m.annotation['ec-code'] = ['1.2.1.25'] #['1.2.1', '1.2.1.25']
+pf_model.reactions.PPM.annotation['ec-code'] = ['5.4.2.7', '5.4.2.2'] # ['5.4.2', '5.4.2.7', '5.4.2.2']
+pf_model.reactions.UDCPDPS.annotation['ec-code'] = ['2.5.1.31'] # ['2.5.1.M1', '2.5.1.31', '2.5.1']
+pf_model.reactions.GLUTRS.annotation['ec-code'] = ['6.1.1.17', '6.1.1.24'] # ['6.1.1.17', '6.1.1', '6.1.1.24']
 met_list_temp = ["adp_ap","adp_c","adp_m","cmp_ap","cmp_c","gdp_c","gdp_m","gdpfuc_c","gdpmann_c","malt_c","malt_e","uacgam_c","udp_c","udpg_c","gdp_ap"]
 for met_id in met_list_temp:
     new_list_o_kegg_ids = list()
-    for option in model.metabolites.get_by_id(met_id).annotation['kegg.compound']:
-        if option.startswith('C'): # else starts with G -> glycan id
-            new_list_o_kegg_ids.append(option)
-    model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = new_list_o_kegg_ids
+    if isinstance(pf_model.metabolites.get_by_id(met_id).annotation, dict):
+        if 'kegg.compound' in pf_model.metabolites.get_by_id(met_id).annotation.keys():
+            for option in pf_model.metabolites.get_by_id(met_id).annotation['kegg.compound']:
+                if option.startswith('C'): # else starts with G -> glycan id
+                    new_list_o_kegg_ids.append(option)
+            pf_model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = new_list_o_kegg_ids
+        else:
+            pf_model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = []
+
+# some incorrectly formated exchange reactions
+for rxn_id in ['EX_dag','EX_hb','EX_4ahmmp','EX_folate1','EX_inositol','EX_phosphatidyl1','EX_phosphatidyl2']:
+    pf_model.remove_reactions([pf_model.reactions.get_by_id(rxn_id)])
 
 # PRINT DUPLICATE REACTIONS
 duplicates = dict()
@@ -603,43 +717,124 @@ logging.info(duplicates)
 
 # add full met info
 met_counter = 0
-for met in model.metabolites:
+for met in pf_model.metabolites:
     if met_counter % 10 == 0:
         logger.info(met_counter)
     met_counter = met_counter +1
-    met_id = hf3.met_ids_without_comp(model,met.id)
-    if met_id+'_c' in met_list: model = hf3.add_full_met_info(model, met, met_id)
-    else: model = hf3.add_partial_met_info(model,met,met_id)
+    met_id = hf3.met_ids_without_comp(pf_model,met.id)
+    if met_id+'_c' in met_list: pf_model = hf3.add_full_met_info(pf_model, met, met_id)
+    else: pf_model = hf3.add_partial_met_info(pf_model,met,met_id)
+    if 'inchi' in met.annotation.keys():
+        if met.annotation['inchi'][0] == 'nan': met.annotation['inchi'] = ['']
 
 # add full reaction info
 rxn_counter = 0
-for rxn in model.reactions:
+for rxn in pf_model.reactions:
     if rxn_counter % 10 == 0:
         logger.info(rxn_counter)
     rxn_counter = rxn_counter +1
-    if rxn.id in rxn_list: model = hf3.add_full_rxn_info(model, rxn, rxn.id)
-    else: model = hf3.add_partial_rxn_info(model, rxn, rxn.id)
+    if rxn.id in rxn_list: pf_model = hf3.add_full_rxn_info(pf_model, rxn, rxn.id)
+    else: pf_model = hf3.add_partial_rxn_info(pf_model, rxn, rxn.id)
 
 # change id so that Memote doesn't think its the biomass reaction
-model.reactions.get_by_id('DM_biomass_c').name = 'unblock biomass'
-model.reactions.get_by_id('DM_biomass_c').id = 'DM_bm'
+pf_model.reactions.get_by_id('DM_biomass_c').name = 'unblock biomass'
+pf_model.reactions.get_by_id('DM_biomass_c').id = 'DM_bm'
+
+# Rename these - keep reaction and associated info but have a new name
+# the BIGG reaction with the same name is in a difference compartment or with slightly different cofactors
+dict_for_new_comp = {'SBTR':'SBTRph',
+'G3PDm':'G3PDm_pf',
+'SELCYSS':'SELCYSS_pf',
+'ACPS1':'ACPS1ap',
+'DSBGGT':'DSBGGTc',
+'DSBCGT':'DSBCGTc',
+'DSBAO1':'DSBAO1e',
+'CLPNH181pp':'CLPNH181',
+'CLPNH180pp':'CLPNH180',
+'CLPNH161pp':'CLPNH161',
+'CLPNH160pp':'CLPNH160',
+'CLPNH141pp':'CLPNH141',
+'CLPNH140pp':'CLPNH140',
+'CLPNH120pp':'CLPNH120',
+'PLIPA2G181pp':'PLIPA2G181',
+'PLIPA2G180pp':'PLIPA2G180',
+'PLIPA2G161pp':'PLIPA2G161',
+'PLIPA2G160pp':'PLIPA2G160',
+'PLIPA2G141pp':"PLIPA2G141",
+'PLIPA2G140pp':'PLIPA2G140',
+'PLIPA2G120pp':'PLIPA2G120',
+'PLIPA2E181pp':'PLIPA2E181',
+'PLIPA2E141pp':'PLIPA2E141',
+'PLIPA2E120pp':'PLIPA2E120',
+'PLIPA2A181pp':'PLIPA2A181',
+'PLIPA2A180pp':'PLIPA2A180',
+'PLIPA2A161pp':'PLIPA2A161',
+'PLIPA2A160pp':'PLIPA2A160',
+'PLIPA2A141pp':'PLIPA2A141',
+'PLIPA2A140pp':'PLIPA2A140',
+'PLIPA2A120pp':'PLIPA2A120',
+'LPLIPAL1G181pp':'LPLIPAL1G181',
+'LPLIPAL1G180pp':'LPLIPAL1G180',
+'LPLIPAL1G161pp':'LPLIPAL1G161',
+'LPLIPAL1G160pp':'LPLIPAL1G160',
+'LPLIPAL1G141pp':'LPLIPAL1G141',
+'LPLIPAL1G140pp':'LPLIPAL1G140',
+'LPLIPAL1G120pp':'LPLIPAL1G120',
+'LPLIPAL1E141pp':'LPLIPAL1E141',
+'LPLIPAL1E120pp':'LPLIPAL1E120',
+'LPLIPAL1A181pp':'LPLIPAL1A181',
+'LPLIPAL1A180pp':'LPLIPAL1A180',
+'LPLIPAL1A161pp':'LPLIPAL1A161',
+'LPLIPAL1A160pp':'LPLIPAL1A160',
+'LPLIPAL1A141pp':'LPLIPAL1A141',
+'LPLIPAL1A140pp':'LPLIPAL1A140',
+'LPLIPAL1A120pp':'LPLIPAL1A120',
+'PUNP8' : 'PUNP_pf',
+'PI4P5K': 'PI4P5K_pf',
+'GPIMTer_L': 'GPIMT',
+'CBPSam':'CBPSac',
+'DOLASNT':'DOLASNT_pf',
+'PPPGOm':'PPPGOm_pf',
+'LALDO2x':'LALDO2x_pf',
+'GLUDy':'GLUDy',
+'DOLDPP':'DOLDPP_pf'}
+
+for key, value in dict_for_new_comp.items():
+    if key in [r.id for r in pf_model.reactions]:
+        pf_model.reactions.get_by_id(key).id = value
+
+for rxn in pf_model.reactions:
+    if 'homo sapiens' in rxn.name:
+        pf_model.reactions.get_by_id(rxn.id).name = rxn.name.replace("homo sapiens", "")
 
 # fix charges and formulas
-model = hf3.fix_charge_or_formula(model)
+pf_model = hf3.fix_charge_or_formula(pf_model)
 
 # fix food vacucole compartement
-for met in model.metabolites:
+for met in pf_model.metabolites:
     if met.compartment == 'food vacuole':
         met.compartment = 'food_vacuole'
 
 # TO DO: ask Memote to recognized EuPathDB gene IDs
-for gene in model.genes:
+for gene in pf_model.genes:
     gene.annotation['EuPathDB.genes'] = [gene.id]
 
 # Add SBO terms
-model = hf3.add_sbo_terms(model)
+pf_model = hf3.add_sbo_terms(pf_model)
+
+# fix a few SBO terms
+for r_id in ["CHSTEROLt","CGMPt","SM_host","CAMPt"]:
+    pf_model.reactions.get_by_id(r_id).annotation['sbo'] = 'SBO:0000185'
+for r_id in ["perox_heme","HMGLB","CYOOm","CYOR_q8_m"]:
+    pf_model.reactions.get_by_id(r_id).annotation['sbo'] = 'SBO: 0000176'
+pf_model.reactions.SK_fldox_ap.annotation['sbo'] = 'SBO:0000631'
+pf_model.reactions.SK_trdrd_c.annotation['sbo'] = 'SBO:0000631'
 
 os.chdir(model_path)
-model.name = 'iPfal19, curated P. falciparum 3D7'
+pf_model.id = 'iPfal19_v1'
+pf_model.name = 'iPfal19'
+pf_model.compartments = {'c': 'cytoplasm', 'e': 'extracellular', 'm': 'mitochondrion', 'fv': 'food vacuole', 'ap':'apicoplast'}
+pf_model.description = 'This model is the third iteration of the asexual blood-stage Plasmodium falciparum 3D7 genome-scale metabolic network reconstruction. The original reconstruction was generated using a custom pipeline by Plata et al (DOI: 10.1038/msb.2010.60) from P. falciparum Dd2 genome and curated to P. falciparum 3D7 and Dd2 function. Multiple rounds of curation were conducted (DOI: 10.1186/s12864-017-3905-1,10.1186/s12859-019-2756-y, and unpublished by Maureen Carey). Gene IDs can be mapped to sequences on https://plasmodb.org/ and reaction and metabolite nomenclature maps to data on http://bigg.ucsd.edu/.'
+
 cobra.io.save_json_model(pf_model, "iPfal19.json")
 cobra.io.write_sbml_model(pf_model, "iPfal19.xml")

@@ -49,24 +49,37 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     # objective_reaction is a reaction id
 
     universal_model_pfba = universal_model_ex.copy()
+    rxns_to_remove = [rxn for rxn in universal_model_pfba.reactions if rxn.id \
+                      in [rxn.id for rxn in input_model.reactions]]
+    universal_model_pfba.remove_reactions(rxns_to_remove)
+    universal_model_pfba.add_reactions([rxn for rxn in input_model.reactions])
     add_pfba(universal_model_pfba)
 
     # penalize adding demand reactions
     coef = universal_model_pfba.objective.get_linear_coefficients(universal_model_pfba.variables)
     for key,value in coef.items():
         if key.name.startswith('DM_') or key.name.startswith('SK_'):
-            coef[key] = 1000.
+            coef[key] = 100.
         elif key.name.startswith('EX_'):
-            coef[key] = 50.
+            coef[key] = 10.
     for x in universal_model_pfba.variables:
         if x.name.startswith('DM_') or x.name.startswith('SK_') or x.name.startswith('EX_'):
             universal_model_pfba.objective.set_linear_coefficients(coef)
 
-    rxns_to_remove = [rxn for rxn in universal_model_pfba.reactions if rxn.id \
-                      in [rxn.id for rxn in input_model.reactions]]
-    universal_model_pfba.remove_reactions(rxns_to_remove)
-    universal_model_pfba.add_reactions([rxn for rxn in input_model.reactions])
-    universal_model_pfba.reactions.get_by_id(objective_reaction_id).lower_bound = 0.05
+    # remove penalty for reactionsn in original model
+    coef2 = universal_model_pfba.objective.get_linear_coefficients(universal_model_pfba.variables)
+    for key,value in coef2.items():
+        if key.name in [rxn.id for rxn in input_model.reactions]:
+            coef2[key] = 0.
+    for x in universal_model_pfba.variables:
+        if x.name in [rxn.id for rxn in input_model.reactions]:
+            universal_model_pfba.objective.set_linear_coefficients(coef2)
+
+#    rxns_to_remove = [rxn for rxn in universal_model_pfba.reactions if rxn.id \
+#                      in [rxn.id for rxn in input_model.reactions]]
+#    universal_model_pfba.remove_reactions(rxns_to_remove)
+#    universal_model_pfba.add_reactions([rxn for rxn in input_model.reactions])
+    universal_model_pfba.reactions.get_by_id(objective_reaction_id).lower_bound = 0.01
 
     solution = universal_model_pfba.optimize()
     if solution.status == 'infeasible':
@@ -83,7 +96,13 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     test_model.add_reactions(add_reactions_list)
     sol = test_model.optimize()
     if sol.status == 'infeasible':
-        logger.info('pFBA solution is infeasible!')
+        logger.info('pFBA solution is still infeasible after double checking!')
+    else:
+        f = test_model.slim_optimize()
+        if f > 0.0:
+            logger.info('solution is ok: {}'.format(test_model.slim_optimize()))
+        else:
+            logger.info('pFBA failed to find a solution')
     return(add_reactions_to_model)
     
 # modified for Rivanna: read in the models
@@ -95,7 +114,8 @@ if 'biomass' not in [r.id for r in model.reactions]:
     logger.info('biomass not in reactions anymore')
 
 os.chdir(model_path)
-universal_model = cobra.io.read_sbml_model("universal_model_updated_for_gapfilling.xml")
+universal_model = cobra.io.read_sbml_model("extended_universal_model_for_gapfilling.xml")
+iPfal19 = cobra.io.read_sbml_model("iPfal19.xml")
 
 ## prep for removing universal reactions that are in the wrong compartment for this model
 # database mapping - this is for release 42, must update if using a different EuPathDB release
@@ -125,6 +145,20 @@ for x in gapfilling_tasks.index:
         gapfilling_tasks['Metabolite'].iloc[x] = met_dict[gapfilling_tasks['Metabolite'].\
         iloc[x]]
 
+if SPECIES_ID in plasmodb:
+    r_len = len(universal_model.reactions)
+    for rxn_id in ['EX_hb_e','HBtr','HMGLB','HMBZ','HMBZ_out','HMBZex','EX_hemozoin_e']:
+        rxn = iPfal19.reactions.get_by_id(rxn_id).copy()
+        universal_model.add_reactions([rxn])
+        if len(rxn.genes) > 0:
+            genes = rxn.genes
+            universal_model.reactions.get_by_id(rxn.id).gene_reaction_rule = ''
+            for gene in genes:
+                if len(universal_model.genes.get_by_id(gene.id).reactions) == 0:
+                    gene_list = [universal_model.genes.get_by_id(gene.id)]
+                    cobra.manipulation.delete.remove_genes(universal_model, gene_list, remove_reactions=True)
+    if len(universal_model.reactions) != 7+r_len: logger.info('error in adding reactions and removing genes')
+
 mets_to_prod = list()
 mets_to_consume = list()
 if sum(genome_ids['strain_ID'].isin([SPECIES_ID])): # does the model have any tasks?
@@ -144,11 +178,9 @@ if sum(genome_ids['strain_ID'].isin([SPECIES_ID])): # does the model have any ta
         production_species =gf_species[gf_species[species_string].str.contains(\
         "prod|both")==True]
         
-        mets_to_prod = production_species['Metabolite'].to_list()
-        mets_to_consume = consumption_species['Metabolite'].to_list()
+        mets_to_prod = production_species['Metabolite'].tolist()
+        mets_to_consume = consumption_species['Metabolite'].tolist()
 
-if 'biomass' not in [r.id for r in model.reactions]:
-    logger.info('biomass not in reactions anymore')
 
 model.solver = 'glpk'
 if 'biomass' in [r.id for r in model.reactions]:
@@ -191,14 +223,11 @@ for met in all_mets:
     cyto_met = met+'_c'
 
     gf_model = model.copy()
-    gf_universal = universal_model_for_species.copy()
-    # make sure you are making any mets by reversing biomass production
     if 'biomass' in [r.id for r in gf_model.reactions]:
-        gf_model.reactions.get_by_id('biomass').lb = 0.
-        gf_model.reactions.get_by_id('biomass').ub = 0.
-    elif 'generic_biomass' in [r.id for r in gf_model.reactions]:
-        gf_model.reactions.get_by_id('generic_biomass').lb = 0.
-        gf_model.reactions.get_by_id('generic_biomass').ub = 0.
+       	gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
+    if 'generic_biomass' in [r.id for r in gf_model.reactions]:
+        gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass')])
+    gf_universal = universal_model_for_species.copy()
 
     # add metabolites if necessary
     if cyto_met not in gf_model.metabolites:
@@ -224,7 +253,8 @@ for met in all_mets:
             add_mets_list.append(met)
 
     # add objective reaction
-    gf_model.add_boundary(gf_model.metabolites.get_by_id(cyto_met), type = "demand")
+    if 'DM_'+cyto_met not in [r.id for r in gf_model.reactions]:
+        gf_model.add_boundary(gf_model.metabolites.get_by_id(cyto_met), type = "demand")
     gf_model.objective = 'DM_'+cyto_met
 
     # add exchange
@@ -303,9 +333,6 @@ for met in all_mets:
             -1.0, gf_model.metabolites.get_by_id(cyto_met): 1.0 })
             add_reactions_list.append(reaction)
     
-    if 'biomass' not in [r.id for r in gf_model.reactions]:
-        logger.info('biomass not in reactions anymore')
-
 # is it used in any reaction intracellularly?
 # if not, cannot do anything about it, except curate in future
 
@@ -333,15 +360,13 @@ logger.info(len(set(add_mets_list)))
 model.solver = 'glpk'
 gf_mod_list1 = list()
 gf_mod_list2 = list()
-if 'biomass' in [r.id for r in model.reactions]:
-    model.reactions.get_by_id('biomass').lb = 0.
-    model.reactions.get_by_id('biomass').ub = 1000.
-elif 'generic_biomass' in [r.id for r in model.reactions]:
-    model.reactions.get_by_id('generic_biomass').lb = 0.
-    model.reactions.get_by_id('generic_biomass').ub = 1000.
 
 if 'generic_biomass' in [r.id for r in model.reactions]:
     gf_model = model.copy()
+    gf_model.reactions.get_by_id('generic_biomass').lb = 0.
+    gf_model.reactions.get_by_id('generic_biomass').ub = 1000.
+    if 'biomass' in [r.id for r in gf_model.reactions]:
+       	gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
     gf_universal = universal_model_for_species.copy()
     gf_model.objective = 'generic_biomass'
     if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
@@ -357,16 +382,14 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
 else:
     logger.info('error: no generic biomass reaction')
 
-logger.info('biomass in reactions')
-logger.info('biomass' in [r.id for r in model.reactions])
-#    logger.info(model.objective.expression)
-
 if 'biomass' in [r.id for r in model.reactions]:
     gf_model = model.copy()
+    gf_model.reactions.get_by_id('biomass').lb = 0.
+    gf_model.reactions.get_by_id('biomass').ub = 1000.
+    if 'generic_biomass' in [r.id for r in gf_model.reactions]:
+        gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass'))])
     gf_universal = universal_model_for_species.copy()
     gf_model.objective = 'biomass'
-    logger.info('set objective, optimized at:')
-    logger.info(gf_model.slim_optimize())
     if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
          solution = pfba_gapfill_implementation(gf_model, gf_universal, 'biomass')
          if len(solution) >= 1:
@@ -381,12 +404,12 @@ if 'biomass' in [r.id for r in model.reactions]:
     logger.info("wrote species biomass file")
 
 add_reactions_list2 = list(set(hf2.flatten_mixed_list([gf_mod_list1,gf_mod_list2])))
-logger.info('going to add these reactions:')
+logger.info('going to add these reactions for biomass gapfill:')
 logger.info(add_reactions_list2)
 for rxn in add_reactions_list2:
     if rxn.id not in [r.id for r in model.reactions]:
         model.add_reactions([rxn])
-logger.info('added reactions')
+logger.info('added reactions form biomass gapfill')
 
 os.chdir(model_path)
 cobra.io.save_json_model(model, 'gf_no_ortho_'+SPECIES_ID+'.json')

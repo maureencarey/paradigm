@@ -10,4 +10,4 @@
 
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env
-python3 denovo_reconstruction/step_3B_extend_universal.p
+python3 denovo_reconstruction/step_3B_extend_universal.py

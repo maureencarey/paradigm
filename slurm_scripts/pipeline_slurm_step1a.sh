@@ -5,7 +5,7 @@
 cd ~/paradigm
 echo "changed directory"
 Rscript ./data_acquistion/step_0_download_all_eupathDB_release44.r
-echo "downloaded models"
+echo "downloaded genomes"
 
 # PREP FOR ANNOTATE GENOMES
 cd ~/paradigm/data

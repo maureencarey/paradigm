@@ -5,28 +5,26 @@ import glob
 import json
 from cobra import Model, Reaction, Metabolite
 import helper_functions_1 as hf
-import argparse
 import logging
 from datetime import datetime
 
-parser = argparse.ArgumentParser(description='Read in the species annotation filename')
-parser.add_argument('annotation_file')
-args = parser.parse_args()
-annotation_fname = vars(args)['annotation_file']
 log_file_path =	"/home/mac9jc/paradigm/model_generation_logs"
 model_path = "/home/mac9jc/paradigm/models"
 
 os.chdir(log_file_path)
 day = datetime.now().strftime('%d_%m_%Y')
-logging.basicConfig(filename='step3B_{}.log'.format(day), level=logging.INFO, filemode='w')
+logging.basicConfig(filename='extend_universal_for_gapfilling.log'.format(day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 
 # universal reaction bag for model generation
 os.chdir(model_path)
 universal_model = cobra.io.load_json_model('universal_model_updated.json')
 
+if 'bof_c' in [r.id for r in universal_model.reactions]:
+    universal_model.remove_reactions([universal_model.reactions.bof_c])
+
 # extend universal by curated model
-pf_model = cobra.io.load_json_model('iPfal19_updated.json')
+pf_model = cobra.io.load_json_model('iPfal19.json')
 len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:
@@ -38,7 +36,7 @@ for rxn in pf_model.reactions:
                 for gene in genes:
                     if len(universal_model.genes.get_by_id(gene.id).reactions) == 0:
                            gene_list = [universal_model.genes.get_by_id(gene.id)]
-                           cobra.manipulation.delete.remove_genes(universal_model, gene_list, remove_reactions=True)
+                           cobra.manipulation.delete.remove_genes(universal_model, gene_list, remove_reactions=False)
     else: #rxn.id IS in [r.id for r in universal_model but in PF its reversible and in universal its irreversible, make reversible
         if rxn.lower_bound < universal_model.reactions.get_by_id(rxn.id).lower_bound:
             universal_model.reactions.get_by_id(rxn.id).lower_bound = rxn.lower_bound
@@ -47,19 +45,27 @@ for rxn in pf_model.reactions:
 if len(universal_model.reactions) <= len_univ_rxns:
     logger.info('ERROR - universal model does not have Pf reactions added!')
 
+for rxn in pf_model.reactions:
+    if rxn.id in [r.id for r in universal_model.reactions] and rxn.reaction != universal_model.reactions.get_by_id(rxn.id).reaction:
+        logger.info('{} is in both universal and iPfal19 models, but with a different reaction string.'.format(rxn.id))
+        logger.info('universal:')
+        logger.info(universal_model.reactions.get_by_id(rxn.id).reaction)
+        logger.info('iPfal19:')
+        logger.info(rxn.reaction)
+
 # extend by reactions in all models
 # this is essential because we moved reactions in the universal model into other compartments when building each model
 # and then (for gapfilling) prune the universal model to contain only the reaction relevant to that species (ie only the
 # reactions that are in the right compartments)
 os.chdir(model_path)
-for file in glob.glob("final_denovo_*.xml"):
-    add_model = cobra.io.read_sbml_model(file)
+for file in glob.glob("final_denovo_*.json"):
+    add_model = cobra.io.load_json_model(file)
     for rxn in add_model.reactions:
         if rxn.id not in [r.id for r in universal_model.reactions]:
             universal_model.add_reactions([rxn.copy()])
             if not (rxn.gene_reaction_rule == ''):     
-                universal_model.reaction.get_by_id(rxn.id).gene_reaction_rule = ''
-    remove_genes(universal_model, universal_model.genes, remove_reactions=False)
+                universal_model.reactions.get_by_id(rxn.id).gene_reaction_rule = ''
+    cobra.manipulation.delete.remove_genes(universal_model, universal_model.genes, remove_reactions=False)
     universal_model.repair()
     logger.info('extended by_{}'.format(file))
 
