@@ -252,9 +252,6 @@ def add_partial_rxn_info(model, rxn, rxn_id):
 
     return(model)
 
-
-
-
 def add_full_met_info(model, met, met_id):
     # add full met info from BiGG api
 

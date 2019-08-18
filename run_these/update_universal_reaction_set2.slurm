@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --ntasks=1
 #SBATCH --mail-type=ALL
+#SBATCH --mail-user=mac9jc@virginia.edu
 #SBATCH --time=4-00:00:00
 #SBATCH --partition=standard
 #SBATCH --cpus-per-task=1

@@ -60,6 +60,14 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
             if rxn.lower_bound < universal_model_pfba.reactions.get_by_id(rxn.id).lower_bound:
        	       	universal_model_pfba.reactions.get_by_id(rxn.id).lower_bound = rxn.lower_bound
         else: universal_model_pfba.add_reactions([rxn])
+
+    # test if gapfilling is possible
+    universal_model_pfba.objective = objective_reaction_id
+    if universal_model_pfba.slim_optimize() < 0.1: 
+        logger.info('INFEASIBLE: this gapfilling problem will have no solution') 
+        skip = 1
+    else: skip = 0
+
     add_pfba(universal_model_pfba)
 
     # penalize adding demand reactions
@@ -82,14 +90,10 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
         if x.name in [rxn.id for rxn in input_model.reactions]:
             universal_model_pfba.objective.set_linear_coefficients(coef2)
 
-#    rxns_to_remove = [rxn for rxn in universal_model_pfba.reactions if rxn.id \
-#                      in [rxn.id for rxn in input_model.reactions]]
-#    universal_model_pfba.remove_reactions(rxns_to_remove)
-#    universal_model_pfba.add_reactions([rxn for rxn in input_model.reactions])
     universal_model_pfba.reactions.get_by_id(objective_reaction_id).lower_bound = 0.01
 
     solution = universal_model_pfba.optimize()
-    if solution.status == 'infeasible':
+    if solution.status == 'infeasible' and skip == 0:
         logger.info('pFBA gapfilling for {} is infeasible!'.format(objective_reaction_id))
     get_fluxes = set([r.id for r in universal_model_pfba.reactions]) - set([rxn.id for rxn in input_model.reactions])
     add_reactions_to_model = [rxn for rxn in get_fluxes if abs(solution.fluxes[rxn]) > 1E-8]
@@ -104,10 +108,12 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
         logger.info('pFBA solution is still infeasible after double checking!')
     else:
        	f = test_model.slim_optimize()
-       	if f > 0.0:
+       	if f > 0.0 and skip == 0:
             logger.info('solution is ok: {}'.format(test_model.slim_optimize()))
-       	else:
-       	    logger.info('pFBA failed to	find a solution')
+       	#else:
+       	elif skip == 0:
+            logger.info('INFEASIBLE: pFBA failed to find a solution')
+    if skip == 1: add_reactions_to_model = []
     return(add_reactions_to_model)
 
 if 'biomass' not in [r.id for r in model.reactions]:
@@ -117,6 +123,8 @@ if 'biomass' not in [r.id for r in model.reactions]:
 os.chdir(model_path)
 universal_model = cobra.io.read_sbml_model("extended_universal_model_for_gapfilling.xml")
 iPfal19	= cobra.io.read_sbml_model("iPfal19.xml")
+
+logger.info([r.id for r in iPfal19.reactions if r.id not in [rxn.id for rxn in universal_model.reactions]])
 
 ## prep for removing universal reactions that are in the wrong compartment for this model
 # database mapping - this is for release 42, must update if using a different EuPathDB release
@@ -148,6 +156,12 @@ elif SPECIES_ID in piroplasmadb: # I haven't researched this
     compartment = ["_c","_e"]
 else:
     compartment = ["_c","_e"]
+
+logger.info(compartment)
+logger.info(len(hf2.intersection(['sample_c','sample_e','sample_p'], compartment))>0)
+logger.info(hf2.intersection(['sample_c','sample_e','sample_p'], compartment))
+logger.info([hf2.get_comp(universal_model,m.id) for m in universal_model.reactions[0].metabolites])
+logger.info(t)
 
 # experimental data
 os.chdir(data_path)
@@ -181,7 +195,11 @@ if SPECIES_ID in plasmodb:
                 if len(universal_model.genes.get_by_id(gene.id).reactions) == 0:
                     gene_list = [universal_model.genes.get_by_id(gene.id)]
                     cobra.manipulation.delete.remove_genes(universal_model, gene_list, remove_reactions=False)
-    if len(universal_model.reactions) != 7+r_len: logger.info('error in adding reactions and removing genes')
+    if len(universal_model.reactions) <= r_len: 
+        logger.info('error in adding reactions and removing genes')
+    for rxn_id in ['EX_hb_e','HBtr','HMGLB','HMBZ','HMBZex','EX_hemozoin_e']: 
+        if rxn_id not in [r.id for r in universal_model.reactions]: 
+            logger.info('{} not correctly added to universal for gapfilling'.format(rxn_id))
 
 mets_to_prod = list()
 mets_to_consume = list()
@@ -215,6 +233,14 @@ elif 'generic_biomass' in [r.id for r in model.reactions]:
 add_reactions_list = list()
 add_mets_list = list()
 
+logger.info('TESTING')
+bm = iPfal19.reactions.biomass.copy()
+universal_model.add_reactions([bm])
+universal_model.objective = 'biomass'
+logger.info(universal_model.slim_optimize())
+universal_model.remove_reactions([universal_model.reactions.biomass])
+
+logger.info(compartment)
 # remove reactions that are not in eligible compartments
 universal_model_for_species = universal_model.copy()
 for rxn in universal_model_for_species.reactions:
@@ -222,7 +248,19 @@ for rxn in universal_model_for_species.reactions:
     if len(hf2.intersection(rxn_metabolite_list, compartment))>0:
         universal_model_for_species.remove_reactions([rxn])
 
-logger.info(set([hf2.get_comp(universal_model_for_species,m.id) for m in universal_model_for_species.metabolites]))
+for rxn in iPfal19.reactions:
+    if rxn.id not in [r.id for r in universal_model_for_species.reactions]:
+        print(rxn.id)
+
+
+logger.info('TESTING')
+bm = iPfal19.reactions.biomass.copy()
+universal_model_for_species.add_reactions([bm])
+universal_model_for_species.objective = 'biomass'
+logger.info(universal_model_for_species.slim_optimize())
+universal_model_for_species.remove_reactions([universal_model_for_species.reactions.biomass])
+
+print(t)
 
 #logger.info([r.id for r in iPfal19.reactions if r.id not in [rxn.id for rxn in universal_model_for_species.reactions]])
 

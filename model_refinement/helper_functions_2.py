@@ -36,5 +36,3 @@ def intersection(rxn_list_compartments, acceptable_compartments):
     unacceptable_comp = [value for value in rxn_list_compartments if value not in temp]
     return(unacceptable_comp)
 
-# KEEP THIS ONE IN SCRIPT SINCE IT USES LOGGER
-# pFBA based gapfilling, implementation from Greg Medlock
