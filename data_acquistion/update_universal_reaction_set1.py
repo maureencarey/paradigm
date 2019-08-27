@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 os.chdir(model_path)
 model = cobra.io.load_json_model('universal_model.json')
 cobra.manipulation.modify.escape_ID(model)
+model.repair()
 
 # remove Biomass reactions
 rxn_list_to_delete = [r.id for r in model.reactions if r.id.startswith('BIOMASS_')]
@@ -26,6 +27,7 @@ model.remove_reactions(rxn_list_to_delete)
 rxn_list_to_delete = [r.id for r in model.reactions if 'bof' in r.id]
 model.remove_reactions(rxn_list_to_delete)
 logger.info('removed biomasses from universal')
+model.repair()
 
 # add exchange reactions
 for met in model.metabolites:
@@ -53,6 +55,7 @@ model = hf3.fix_charge_or_formula(model)
 # Add SBO terms
 model = hf3.add_sbo_terms(model)
 logger.info('fixed SBO terms')
+model.repair()
 
 ## remove reactions that have met ids that are specifically human # THIS HAS TO BE DONE PRIOR TO ADDING iPFAL REACTIONS bc we want to keep SM_host and SMPD3l_host
 remove_r = list()
@@ -74,6 +77,7 @@ add_r = list(set(add_r))
 remove_r = list(set(remove_r))
 model.add_reactions(add_r)
 model.remove_reactions(remove_r)
+model.repair()
 
 os.chdir(model_path)
 cobra.io.save_json_model(model,  'universal_model_updated.json')

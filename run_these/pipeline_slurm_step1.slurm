@@ -12,7 +12,7 @@
 module load gcc/7.1.0
 module load R/3.3.0
 module load diamond
-#bash ./slurm_scripts/pipeline_slurm_step1a.sh
+bash ./slurm_scripts/pipeline_slurm_step1a.sh
 
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env

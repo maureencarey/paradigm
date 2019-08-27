@@ -128,6 +128,7 @@ if len(keep_scores.reaction) == len(set(keep_scores.reaction)):
         rxns_to_add[row['reaction']] = row['GPR']
         scores_for_rxns[row['reaction']] = row['score']
     new_model.remove_reactions([rxn for rxn in new_model.reactions if rxn.id not in rxns_to_add.keys()])
+    new_model.repair()
 
     if not [rxn.id for rxn in new_model.reactions if rxn.gene_reaction_rule != '']:
         for rxn in new_model.reactions:
@@ -369,5 +370,6 @@ for m in model.metabolites:
 if set(list_om) != set(list_om2):
     logging.info('error - extra compartments are present, pruning of unused metabolites did not work')
 
+model.repair()
 os.chdir(model_path)
 cobra.io.save_json_model(model, "final_denovo_"+SPECIES_ID+".json")

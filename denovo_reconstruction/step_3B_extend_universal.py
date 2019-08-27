@@ -30,6 +30,11 @@ len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:
         if len(set(['hb_c','hb_e','hemozoin_c','hemozoin_e','hemozoin_fv']).intersection(set([met.id for met in rxn.metabolites.keys()]))) == 0:
+            mets = [x.metabolites for x in [rxn]]
+            all_keys = set().union(*(d.keys() for d in mets))
+            for key in all_keys:
+                if key.id not in [m.id for m in universal_model.metabolites]:
+                    universal_model.add_metabolites([key.copy()])
             universal_model.add_reactions([rxn.copy()]) # extend universal by Pf reactions, but remove gene IDs
             if len(rxn.genes) > 0:
                 genes = rxn.genes
@@ -45,14 +50,16 @@ for rxn in pf_model.reactions:
             universal_model.reactions.get_by_id(rxn.id).upper_bound = rxn.upper_bound
 if len(universal_model.reactions) <= len_univ_rxns:
     logger.info('ERROR - universal model does not have Pf reactions added!')
+universal_model.repair()
 
-for rxn in pf_model.reactions:
-    if rxn.id in [r.id for r in universal_model.reactions] and rxn.reaction != universal_model.reactions.get_by_id(rxn.id).reaction:
-        logger.info('{} is in both universal and iPfal19 models, but with a different reaction string.'.format(rxn.id))
-        logger.info('universal:')
-        logger.info(universal_model.reactions.get_by_id(rxn.id).reaction)
-        logger.info('iPfal19:')
-        logger.info(rxn.reaction)
+
+#for rxn in pf_model.reactions:
+#    if rxn.id in [r.id for r in universal_model.reactions] and rxn.reaction != universal_model.reactions.get_by_id(rxn.id).reaction:
+#        logger.info('{} is in both universal and iPfal19 models, but with a different reaction string.'.format(rxn.id))
+#        logger.info('universal:')
+#        logger.info(universal_model.reactions.get_by_id(rxn.id).reaction)
+#        logger.info('iPfal19:')
+#        logger.info(rxn.reaction)
 
 # extend by reactions in all models
 # this is essential because we moved reactions in the universal model into other compartments when building each model
@@ -63,6 +70,11 @@ for file in glob.glob("final_denovo_*.json"):
     add_model = cobra.io.load_json_model(file)
     for rxn in add_model.reactions:
         if rxn.id not in [r.id for r in universal_model.reactions]:
+            mets = rxn.metabolites
+            all_keys = set().union(*(d.keys() for d in mets))
+            for key in all_keys:
+                if key.id not in [m.id for m in universal_model.metabolites]:
+       	            universal_model.add_metabolites([key.copy()])
             universal_model.add_reactions([rxn.copy()])
             if not (rxn.gene_reaction_rule == ''):     
                 universal_model.reactions.get_by_id(rxn.id).gene_reaction_rule = ''

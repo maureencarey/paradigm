@@ -158,8 +158,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # finish making all models
     bash run_these/pipeline_auto_slurm_for_step2b.sh
         # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
-    # # gapfill plasmodium models prior to orthology conversion to test differences
-    bash run_these/pipeline_auto_slurm_for_plasmodium.sh
+    # # the above script also gapfills plasmodium models prior to orthology conversion to test differences
     # # clean things up - especially log files
     sbatch run_these/pipeline_cleanup.slurm
     # # move things to convenient locations

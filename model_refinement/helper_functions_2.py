@@ -20,7 +20,7 @@ def get_comp(model,met_id):
                 id_withou_c = ''
     else:
         id_withou_c = ''
-        return(id_withou_c)
+    return(id_withou_c)
 
 def flatten_mixed_list(list_of_interest):
     new_list = list()
@@ -31,7 +31,7 @@ def flatten_mixed_list(list_of_interest):
             new_list.append(x)
     return(new_list)
 
-def intersection(rxn_list_compartments, acceptable_compartments):
+def unaccept_comp_intersection(rxn_list_compartments, acceptable_compartments):
     temp = set(acceptable_compartments)
     unacceptable_comp = [value for value in rxn_list_compartments if value not in temp]
     return(unacceptable_comp)

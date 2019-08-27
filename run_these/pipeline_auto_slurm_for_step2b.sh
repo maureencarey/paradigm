@@ -16,7 +16,6 @@ for filename in ./diamond_output_BiGG/*_BiGG.tsv; do
     #construct name for sbatch file being generated
     foo=${species_string}"_stepB.sbatch"
     cp slurm_template.slurm $foo
-    echo "python3 ../model_refinement/step_4_build_generic_biomass_reaction.py final_denovo_$species_string.json" >> $foo
     if [[ " $plasmodium_list " =~ .*\ $species_string\ .* ]]; then
     echo "python3 ../model_refinement/step_5_orthology_based_semi_curation.py with_biomass_$species_string.json" >> $foo
     echo "python3 ../model_refinement/step_6_task_based_gapfilling.py ortho_$species_string.json" >> $foo
@@ -26,4 +25,18 @@ for filename in ./diamond_output_BiGG/*_BiGG.tsv; do
     sbatch $foo
     mv $foo ./slurm_scripts_for_each_species
 done
+
+cd /home/mac9jc/paradigm/data
+mkdir ./slurm_scripts_for_without_ortho_plasmodium
+
+for filename in with_biomass_PadleriG01.json with_biomass_PbergheiANKA.json with_biomass_PbillcollinsiG01.json with_biomass_PblacklockiG01.json with_biomass_Pchabaudichabaudi.json with_biomass_PcoatneyiHackeri.json with_biomass_PcynomolgiB.json with_biomass_PcynomolgiM.json with_biomass_Pfalciparum3D7.json with_biomass_Pfalciparum7G8.json with_biomass_PfalciparumCD01.json with_biomass_PfalciparumDd2.json with_biomass_PfalciparumGA01.json with_biomass_PfalciparumGB4.json with_biomass_PfalciparumGN01.json with_biomass_PfalciparumHB3.json with_biomass_PfalciparumIT.json with_biomass_PfalciparumKE01.json with_biomass_PfalciparumKH01.json with_biomass_PfalciparumKH02.json with_biomass_PfalciparumML01.json with_biomass_PfalciparumSD01.json with_biomass_PfalciparumSN01.json with_biomass_PfalciparumTG01.json with_biomass_PfragileNilgiri.json with_biomass_PgaboniG01.json with_biomass_PgaboniSY75.json with_biomass_Pgallinaceum8A.json with_biomass_PinuiSanAntonio1.json with_biomass_PknowlesiH.json with_biomass_PknowlesiMalayanPk1A.json with_biomass_PmalariaeUG01.json with_biomass_PovalecurtisiGH01.json with_biomass_PpraefalciparumG01.json with_biomass_PreichenowiCDC.json with_biomass_PreichenowiG01.json with_biomass_PrelictumSGS1-like.json with_biomass_PvinckeipetteriCR.json with_biomass_Pvinckeivinckeivinckei.json with_biomass_PvivaxP01.json with_biomass_PvivaxSal1.json with_biomass_Pyoeliiyoelii17XNL.json with_biomass_Pyoeliiyoelii17X.json with_biomass_PyoeliiyoeliiYM.json; do
+    echo "$filename"
+    foo=${filename}".sbatch"
+    cp slurm_template_plasmodium.slurm $foo
+    echo "python3 ../model_refinement/step_6_task_based_gapfilling_plasmodium.py /home/mac9jc/paradigm/models/$filename" >> $foo
+    sbatch $foo
+    mv $foo ./slurm_scripts_for_without_ortho_plasmodium
+done
+
+
 

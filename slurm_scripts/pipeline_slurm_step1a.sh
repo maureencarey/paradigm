@@ -33,6 +33,13 @@ done
 echo "diamond annotation against BiGG done"
 mv ./*_BiGG.tsv ~/paradigm/data/diamond_output_BiGG
 
+parallel gzip ::: *.fasta
+mkdir ./zipped_protein
+mkdir ./zipped_dna
+mv *_annotatedProteins.fasta.gz ./zipped_protein
+mv *.fasta.gz ./zipped_dna
+rm *.fasta
+
 # cd ~/paradigm/data/genomes/protein
 # for filename in ./*_annotatedProteins.fasta; do
 # diamond blastp -d ~/paradigm/data/orthoMCL_proteins_diamond -q $filename -o "${filename:2:${#filename}-26}_orthoMCL.tsv"

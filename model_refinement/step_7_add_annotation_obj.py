@@ -75,7 +75,7 @@ for file in glob.glob("gf_*.json"):
 
     model.annotation["DOI"] = "pending"
     model.annotation["authors"] = ["Maureen Carey"]
-    model.annotation["corresponding_author"] = {"Maureen Carey":"mac9jc@virginia.edu"}
+    model.annotation["corresponding_author"] = "Maureen Carey, mac9jc@virginia.edu"
 
     temp_species = re.sub( r"([A-Z])", r" \1", SPECIES_ID).split()[0]
     model.annotation["species"] = temp_species[0]+'. '+temp_species[1:]   

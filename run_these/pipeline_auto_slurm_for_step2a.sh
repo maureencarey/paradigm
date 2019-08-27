@@ -17,6 +17,7 @@ for filename in ./diamond_output_BiGG/*_BiGG.tsv; do
     foo=${species_string}"_stepA.sbatch"
     cp slurm_template.slurm $foo
     echo "python3 ../denovo_reconstruction/step_3_build_de_novo_models.py $file_without_pre" >> $foo
+    echo "python3 ../model_refinement/step_4_build_generic_biomass_reaction.py final_denovo_$species_string.json" >> $foo
     sbatch $foo
     mv $foo ./slurm_scripts_for_each_species
 done

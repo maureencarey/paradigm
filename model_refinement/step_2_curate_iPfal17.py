@@ -54,6 +54,7 @@ for x in edits.index:
             pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
     elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
         pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
+    pf_model.reactions.get_by_id(rxn_id_string_use).annotation['CURATION'] = 'DOI: 10.1186/s12864-017-3905-1'
 
 # update gene identifiers to latest EuPathDB/PlasmoDB version
 os.chdir(data_path)
@@ -130,15 +131,15 @@ def rename_genes_updated(cobra_model, rename_dict):
         cobra_model.genes.remove(i)
     
 rename_genes_updated(pf_model,rename_dictionary)
-
 logging.info('finished renaming curation')
 
 # this set of curation steps comes from BioRxiv Untaroiu, Carey, Guler and Papin (2018)
 pf_model.reactions.get_by_id('HMGLB').add_metabolites(\
 {pf_model.metabolites.get_by_id('h2o2_c'):1.,
 pf_model.metabolites.get_by_id('h_c'):-2.})
-pf_model.reactions.get_by_id('HMGLB').notes['REFERENCES'] = \
+pf_model.reactions.get_by_id('HMGLB').annotation['REFERENCES'] = \
 'doi: 10.1073/pnas.0601876103; DOI: 10.1111/j.1365-2141.1975.tb00540.x'
+pf_model.reactions.get_by_id('HMGLB').annotation['CURATION'] = 'doi: 10.1186/s12859-019-2756-y'
 
 pheme_c = pf_model.metabolites.get_by_id('pheme_c')
 gthrd_c = pf_model.metabolites.get_by_id('gthrd_c')
@@ -157,7 +158,8 @@ new_rxn.add_metabolites({pheme_c : -1,gthrd_c : -1,
     gthox_c : +1,    heme_degraded_c : +1 })
 new_rxn.lower_bound = 0.
 new_rxn.upper_bound = 1000.
-new_rxn.notes['REFERENCES'] = 'doi: 10.1074/jbc.270.42.24876'
+new_rxn.annotation['REFERENCES'] = 'doi: 10.1074/jbc.270.42.24876'
+new_rxn.annotation['CURATION'] = 'doi: 10.1186/s12859-019-2756-y'
 pf_model.add_reactions([new_rxn])
 
 new_rxn = Reaction()
@@ -166,13 +168,15 @@ new_rxn.id = 'perox_heme'
 new_rxn.add_metabolites({pheme_fv : -1, h2o2_c : -1, heme_degraded_fv : +1 })
 new_rxn.lower_bound = 0.
 new_rxn.upper_bound = 1000.
-new_rxn.notes['REFERENCES'] = 'doi: 10.1042/bj1740893'
+new_rxn.annotation['REFERENCES'] = 'doi: 10.1042/bj1740893'
+new_rxn.annotation['CURATION'] = 'doi: 10.1186/s12859-019-2756-y'
 pf_model.add_reactions([new_rxn])
 
 pf_model.add_boundary(heme_degraded_c, type="sink", reaction_id="SK_heme_degraded_c",lb=0, ub=1000.0)
 pf_model.add_boundary(heme_degraded_fv, type="sink", reaction_id="SK_heme_degraded_fv",
                      lb=0, ub=1000.0)
 logging.info('finished Anas curation')
+pf_model.repair()
 
 # Make dictionary to make all metabolite IDs compatible with bigg
 # IN FUTURE, EXPAND TO ALL MODELS # for model in [pf_curated, chominis, leish]:
@@ -212,13 +216,6 @@ pf_model.reactions.SK_fldox_ap.notes = notes
 pf_model.reactions.SK_fldox_ap.gene_reaction_rule = gpr
 pf_model.reactions.SK_fldox_ap.name = 'flavodoxin expression'
 
-notes = pf_model.reactions.RPE.notes
-gpr = pf_model.reactions.RPE.gene_reaction_rule
-pf_model.remove_reactions([pf_model.reactions.RPE])
-pf_model.add_reactions([universal_model.reactions.RPEc.copy()])
-pf_model.reactions.RPEc.gene_reaction_rule = gpr
-pf_model.reactions.RPEc.notes = notes
-
 #notes = pf_model.reactions.PPPGOm.notes
 #gpr = pf_model.reactions.PPPGOm.gene_reaction_rule
 #pf_model.remove_reactions([pf_model.reactions.PPPGOm])
@@ -253,6 +250,7 @@ pf_model.remove_reactions([pf_model.reactions.PIt2r])
 pf_model.add_reactions([universal_model.reactions.PIt2r.copy()])
 pf_model.reactions.PIt2r.gene_reaction_rule = gpr
 pf_model.reactions.PIt2r.notes = notes
+pf_model.repair()
 
 # remove these reactions but add a related BiGG reaction
 pf_model.add_reactions([universal_model.reactions.THD2.copy()])
@@ -279,6 +277,7 @@ pf_model.remove_reactions([pf_model.reactions.G_Protein_Ex,pf_model.reactions.HM
 pf_model.add_boundary(pf_model.metabolites.gthox_protein_e, type = "exchange")
 pf_model.reactions.EX_gthox_protein_e.annotation['AUTHORS'] = ['DOI: 10.3390/molecules200610511']
 pf_model.add_boundary(pf_model.metabolites.hemozoin_e, type = "exchange")
+pf_model.repair()
 
 met_dict = {'3oodcoa_c':'3ohodcoa_c', 'Asn_X_Ser_FSLASH_Thr_c':'Asn_X_Ser_Thr_c',
 'citrul_c':'citr__L_c','Lcystin_c':'cysi__L_c',
@@ -303,6 +302,7 @@ for x in pf_model.metabolites:
             x.id = met_dict[x.id]
            
 logging.info('finished met renaming')
+pf_model.repair()
 
 # a few manual fixes
 pf_model.reactions.get_by_id('hcys_ex').remove_from_model() # duplicate with EX_hcys___L_e
@@ -345,6 +345,7 @@ pf_model.reactions.get_by_id('EX_dcyt_LPAREN_e_RPAREN_').remove_from_model() # n
 
 # replace some bad practice curation from iPfal17
 pf_model.reactions.get_by_id('mthgxl_s').id = 'MGSA'
+pf_model.repair()
 
 notes = pf_model.reactions.MGSA.notes
 gpr = pf_model.reactions.MGSA.gene_reaction_rule
@@ -389,13 +390,13 @@ def prune_unused_metabolites2(cobra_model):
 
 # get rid of metabolites that are never used
 pf_model, unused = prune_unused_metabolites2(pf_model)
-    
+
 # # pf_model.reactions.PUNP8 # CURATED SOMETHING WRONG
 # pf_model.reactions.UP4UH1
 # # pf_model.reactions.get_by_id('PYRDAT') # SOMETHING WRONG, genes don't make sense
         
 os.chdir(data_path)
-met_document = pd.read_table('bigg_metabolites.txt')
+#met_document = pd.read_table('bigg_metabolites.txt')
 
 cobra.manipulation.modify.escape_ID(pf_model)
 logging.info('finished escape')
@@ -476,6 +477,7 @@ for met in pf_model.metabolites:
         met.compartment = 'extracellular'
     else:
         met.compartment = 'other'
+pf_model.repair()
 
 pf_model.reactions.get_by_id('ACCOAL').id = 'ACCOAL2_temp'
 pf_model.reactions.get_by_id('ACCOAL2').id = 'ACCOAL'
@@ -604,6 +606,8 @@ for rxn in pf_model.reactions:
     if '___' in rxn.id:
         rxn.id = rxn.id.replace('___','__')
 
+pf_model.repair()
+
 # add exchange for all extracellular mets
 for met in pf_model.metabolites:
     if met.id.endswith('_e'):
@@ -625,7 +629,7 @@ for met in pf_model.metabolites:
                 logging.info(met.id)
 
 logging.info('------------------------------')
-        
+
 # these reactions are not going to be in the universal reaction bag, but we wouldnt expect
 # them to be anyways (dont print them)
 need_info_rxn = dict()
@@ -666,6 +670,7 @@ pf_model.metabolites.lipid_c.id = 'bm_lipid_c'
 # some incorrectly formated exchange reactions
 for rxn_id in ['EX_dag','EX_hb','EX_4ahmmp','EX_folate1','EX_inositol','EX_phosphatidyl1','EX_phosphatidyl2']:
     pf_model.remove_reactions([pf_model.reactions.get_by_id(rxn_id)])
+pf_model.repair()
 
 # some incorrectly formatteed exchange reactions
 for rxn_id in [r.id for r in pf_model.reactions if r.id.endswith('_e_t')]:
@@ -695,7 +700,9 @@ for rxn in universal_model.reactions:
                      duplicates[rxn.id] = duplicates[rxn.id]+', '+key
 logging.info('\n')
 logging.info('duplicates reactions in universal')
-logging.info(duplicates)
+#logging.info(duplicates)
+
+pf_model.repair()
 
 # add full met info
 met_counter = 0
@@ -743,6 +750,7 @@ for met_id in met_list_temp:
             pf_model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = new_list_o_kegg_ids
         else:
             pf_model.metabolites.get_by_id(met_id).annotation['kegg.compound'] = []
+pf_model.repair()
 
 for rxn in pf_model.reactions:
     if 'bigg.reaction' in rxn.annotation.keys():
@@ -771,6 +779,7 @@ for rxn in pf_model.reactions:
             pf_model = hf3.add_full_rxn_info(pf_model, rxn, temp_id) # in this case there is a reaction in a different compartmet in the universal
         elif temp_id+'tipp' in [r.id for r in universal_model.reactions]:
             pf_model = hf3.add_full_rxn_info(pf_model, rxn, temp_id+'tipp') # this case is if there is an analogous periplasmic transport rxn in the universal
+pf_model.repair()
 
 # Rename these - keep reaction and associated info but have a new name
 # the BIGG reaction with the same name is in a difference compartment or with slightly different cofactors
@@ -830,7 +839,8 @@ dict_for_new_comp = {'SBTR':'SBTRph',
 'LALDO2x':'LALDO2x_pf',
 'GLUDy':'GLUDy_pf',
 'PGK':'PGK_pf',
-'DOLDPP':'DOLDPP_pf'}
+'DOLDPP':'DOLDPP_pf',
+'RPE':'RPE_pf'}
 
 for key, value in dict_for_new_comp.items():
     if key in [r.id for r in pf_model.reactions]:
@@ -839,6 +849,7 @@ for key, value in dict_for_new_comp.items():
 for rxn in pf_model.reactions:
     if 'homo sapiens' in rxn.name:
         pf_model.reactions.get_by_id(rxn.id).name = rxn.name.replace("homo sapiens", "")
+pf_model.repair()
 
 # fix charges and formulas
 pf_model = hf3.fix_charge_or_formula(pf_model)
@@ -854,6 +865,8 @@ for gene in pf_model.genes:
 
 # Add SBO terms
 pf_model = hf3.add_sbo_terms(pf_model)
+
+pf_model.repair()
 
 # fix a few SBO terms
 for r_id in ["CHSTEROLt","CGMPt","SM_host","CAMPt"]:
@@ -872,6 +885,7 @@ for rxn in [r for r in pf_model.reactions if r.id.startswith('trna_')]:
 for rxn in [r for r in pf_model.reactions if '_prod' in r.id]:
     pf_model.reactions.get_by_id(rxn.id).annotation['sbo'] = 'SBO:0000631' #pseudoreaction
     logger.info('added pseudoreaction SBO')
+pf_model.repair()
 
 os.chdir(model_path)
 cobra.io.write_sbml_model(pf_model, "iPfal19_temp.xml")
@@ -879,14 +893,16 @@ cobra.io.write_sbml_model(pf_model, "iPfal19_temp.xml")
 pf_model.id = 'iPfal19_v1'
 pf_model.name = 'iPfal19'
 pf_model.compartments = {'c': 'cytoplasm', 'e': 'extracellular', 'm': 'mitochondrion', 'fv': 'food vacuole', 'ap':'apicoplast'}
-pf_model.description = 'This model is the third iteration of the asexual blood-stage Plasmodium falciparum 3D7 genome-scale metabolic network reconstruction. The original reconstruction was generated using a custom pipeline by Plata et al (DOI: 10.1038/msb.2010.60) from P. falciparum Dd2 genome and curated to P. falciparum 3D7 and Dd2 function. Multiple rounds of curation were conducted (DOI: 10.1186/s12864-017-3905-1,10.1186/s12859-019-2756-y, and unpublished by Maureen Carey). Gene IDs can be mapped to sequences on https://plasmodb.org/ and reaction and metabolite nomenclature maps to data on http://bigg.ucsd.edu/.'
+pf_model.annotation["description"] = 'This model is the third iteration of the asexual blood-stage Plasmodium falciparum 3D7 genome-scale metabolic network reconstruction. The original reconstruction was generated using a custom pipeline by Plata et al (DOI: 10.1038/msb.2010.60) from P. falciparum Dd2 genome and curated to P. falciparum 3D7 and Dd2 function. Multiple rounds of curation were conducted (DOI: 10.1186/s12864-017-3905-1,10.1186/s12859-019-2756-y, and unpublished by Maureen Carey). Gene IDs can be mapped to sequences on https://plasmodb.org/ and reaction and metabolite nomenclature maps to data on http://bigg.ucsd.edu/.'
 pf_model.annotation["taxonomy"] = "36329"
 pf_model.annotation["genome"] = "https://plasmodb.org/common/downloads/Current_Release/Pfalciparum3D7/fasta/data/PlasmoDB-44_Pfalciparum3D7_Genome.fasta"
 pf_model.annotation["DOI"] = "pending"
-pf_model.annotation["authors"] =  [
-{"familyName": "Carey","givenName": "Maureen","organisation": "University of Virginia","email": "mac9jc@virginia.edu"},
-{"familyName": "Untaroiu","givenName": "Ana","organisation": "University of Virginia","email": "amu4pv@virginia.edu"}, 
-{"familyName": "Plata","givenName": "German","organisation": "Columbia University","email": "gap2118@columbia.edu"}]
+pf_model.annotation["authors"] = 'Maureen Carey, mac9jc@virginia.edu'
+# cobrapy cannot currently handle the following:
+#pf_model.annotation["authors"] =  [
+#{"familyName": "Carey","givenName": "Maureen","organisation": "University of Virginia","email": "mac9jc@virginia.edu"},
+#{"familyName": "Untaroiu","givenName": "Ana","organisation": "University of Virginia","email": "amu4pv@virginia.edu"}, 
+#{"familyName": "Plata","givenName": "German","organisation": "Columbia University","email": "gap2118@columbia.edu"}]
 pf_model.annotation["species"] = "Plasmodium falciparum"
 pf_model.annotation["strain"] = "3D7"
 pf_model.annotation["tissue"] = "parasite in the asexual blood-stage"
@@ -895,6 +911,10 @@ pf_model.annotation["created"] = day
 pf_model.annotation["sbo"] = "SBO:0000624"
 pf_model.annotation["curation"] = ['DOI: 10.1038/msb.2010.60', 'DOI: 10.1186/s12864-017-3905-1', 'DOI: 10.1186/s12859-019-2756-y', 'unpublished by Maureen Carey']
 pf_model.annotation["notes"] = {}
+pf_model.annotation["genedb"] = "Pfalciparum"
+
+logger.info({'can the model grow?':pf_model.slim_optimize()})
+pf_model.repair()
 
 cobra.io.save_json_model(pf_model, "iPfal19.json")
 cobra.io.write_sbml_model(pf_model, "iPfal19.xml")

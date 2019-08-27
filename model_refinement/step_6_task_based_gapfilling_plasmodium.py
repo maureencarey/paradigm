@@ -199,7 +199,7 @@ add_mets_list = list()
 universal_model_for_species = universal_model.copy()
 for rxn in universal_model_for_species.reactions:
     rxn_metabolite_list = [hf2.get_comp(universal_model_for_species,m.id) for m in rxn.metabolites]
-    if len(hf2.intersection(rxn_metabolite_list, compartments))>0:
+    if len(hf2.unaccept_comp_intersection(rxn_metabolite_list, compartments))>0:
         universal_model_for_species.remove_reactions([rxn])
 
 produce_met = list()
