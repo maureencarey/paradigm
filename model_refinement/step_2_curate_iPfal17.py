@@ -5,7 +5,11 @@ import pandas as pd
 import requests
 import logging
 from datetime import datetime
-import helper_functions_3 as hf3
+#import helper_functions_3 as hf3
+import sys
+
+sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
+import helper_functions as hf
 
 log_path = "/home/mac9jc/paradigm/model_generation_logs/"
 
@@ -710,9 +714,9 @@ for met in pf_model.metabolites:
     if met_counter % 10 == 0:
         logger.info(met_counter)
     met_counter = met_counter +1
-    met_id = hf3.met_ids_without_comp(pf_model,met.id)
-    if met_id+'_c' in met_list: pf_model = hf3.add_full_met_info(pf_model, met, met_id)
-    else: pf_model = hf3.add_partial_met_info(pf_model,met,met_id)
+    met_id = hf.met_ids_without_comp(pf_model,met.id)
+    if met_id+'_c' in met_list: pf_model = hf.add_full_met_info(pf_model, met, met_id)
+    else: pf_model = hf.add_partial_met_info(pf_model,met,met_id)
     if 'inchi' in met.annotation.keys():
         if met.annotation['inchi'][0] == 'nan': met.annotation['inchi'] = ['']
 
@@ -722,8 +726,8 @@ for rxn in pf_model.reactions:
     if rxn_counter % 10 == 0:
         logger.info(rxn_counter)
     rxn_counter = rxn_counter +1
-    if rxn.id in rxn_list: pf_model = hf3.add_full_rxn_info(pf_model, rxn, rxn.id)
-    else: pf_model = hf3.add_partial_rxn_info(pf_model, rxn, rxn.id)
+    if rxn.id in rxn_list: pf_model = hf.add_full_rxn_info(pf_model, rxn, rxn.id)
+    else: pf_model = hf.add_partial_rxn_info(pf_model, rxn, rxn.id)
 
 # change id so that Memote doesn't think its the biomass reaction
 pf_model.reactions.get_by_id('DM_biomass_c').name = 'unblock biomass'
@@ -776,9 +780,9 @@ for rxn in pf_model.reactions:
 
     if temp_id != 'skip':
         if temp_id in [r.id for r in universal_model.reactions]: 
-            pf_model = hf3.add_full_rxn_info(pf_model, rxn, temp_id) # in this case there is a reaction in a different compartmet in the universal
+            pf_model = hf.add_full_rxn_info(pf_model, rxn, temp_id) # in this case there is a reaction in a different compartmet in the universal
         elif temp_id+'tipp' in [r.id for r in universal_model.reactions]:
-            pf_model = hf3.add_full_rxn_info(pf_model, rxn, temp_id+'tipp') # this case is if there is an analogous periplasmic transport rxn in the universal
+            pf_model = hf.add_full_rxn_info(pf_model, rxn, temp_id+'tipp') # this case is if there is an analogous periplasmic transport rxn in the universal
 pf_model.repair()
 
 # Rename these - keep reaction and associated info but have a new name
@@ -852,7 +856,7 @@ for rxn in pf_model.reactions:
 pf_model.repair()
 
 # fix charges and formulas
-pf_model = hf3.fix_charge_or_formula(pf_model)
+pf_model = hf.fix_charge_or_formula(pf_model)
 
 # fix food vacucole compartement
 for met in pf_model.metabolites:
@@ -864,7 +868,7 @@ for gene in pf_model.genes:
     gene.annotation['EuPathDB.genes'] = [gene.id]
 
 # Add SBO terms
-pf_model = hf3.add_sbo_terms(pf_model)
+pf_model = hf.add_sbo_terms(pf_model)
 
 pf_model.repair()
 

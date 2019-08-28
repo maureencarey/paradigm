@@ -8,7 +8,10 @@ import subprocess
 import glob
 import json
 from cobra import Model, Reaction, Metabolite
-import helper_functions_2 as hf
+#import helper_functions_2 as hf
+import sys
+sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
+import helper_functions as hf
 import argparse
 import logging
 from datetime import datetime
@@ -233,6 +236,8 @@ for rxn in model.reactions:
                 else:
                     duplicates[rxn.id] = duplicates[rxn.id]+', '+key
 logger.info(duplicates)
+
+model.repair()
 
 os.chdir(data_path)
 modifications_ortho.to_csv('./orthology_modifications_plasmodium_{0}.csv'.format(SPECIES_ID))

@@ -8,7 +8,10 @@ import glob
 import json
 from cobra import Model, Reaction, Metabolite
 from cobra.flux_analysis.parsimonious import add_pfba
-import helper_functions_2 as hf2
+#import helper_functions_2 as hf2
+import sys
+sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
+import helper_functions as hf
 import argparse
 import logging
 from datetime import datetime
@@ -47,102 +50,124 @@ logger.info('BEGIN STEP 6')
     
 os.chdir(model_path)
 model = cobra.io.load_json_model(model_fname)
+model.repair()
+model.solver = 'glpk'
 logger.info('loaded model')
 
+def validate(original_model, reactions):
+    with original_model as model:
+        mets = [x.metabolites for x in reactions]
+        all_keys = set().union(*(d.keys() for d in mets))
+        for key in all_keys:
+            if key.id not in [m.id for m in model.metabolites]:
+                model.add_metabolites([key.copy()])
+        model.add_reactions(reactions)
+        model.slim_optimize()
+        return (model.solver.status == OPTIMAL and model.solver.objective.value >= 0.0001)
+
 # write function here since it uses logger
-# pFBA based gapfilling, implementation from Greg Medlock
+# pFBA based gapfilling, implementation from Greg Medlock in his Medusa package
 def pfba_gapfill_implementation(input_model, universal_model_ex, objective_reaction_id):
     # objective_reaction is a reaction id
+    
+    gapfiller = universal_model_ex.copy()
+    if linear_reaction_coefficients(gapfiller):
+        logger.info('ERROR: universal model has an existing objective rxn')
+    
+    # get the original objective from the model being gapfilled
+    model_to_gapfill = input_model.copy()
+    original_objective = linear_reaction_coefficients(model_to_gapfill)
+    # convert to IDs to avoid issues with model membership when these reactions
+    # are added to gapfiller
+    original_objective = {rxn.id:original_objective[rxn] for rxn
+        in original_objective.keys()}
+    
+    # get the reactions in the original model, which need to be removed from
+    # the universal if present. This cannot catch identical reactions that do
+    # not share IDs, so make sure your model and universal are in the same
+    # namespace.
+    rxns_to_remove = [rxn for rxn in gapfiller.reactions if rxn.id in \
+                      [rxn.id for rxn in model_to_gapfill.reactions]]
+    gapfiller.remove_reactions(rxns_to_remove)
+    gapfiller.repair()
 
-    universal_model_pfba = universal_model_ex.copy()
-    for rxn in input_model.reactions:
-        if rxn.id in [r.id for r in universal_model_pfba.reactions]:
-            if rxn.upper_bound > universal_model_pfba.reactions.get_by_id(rxn.id).upper_bound:
-                universal_model_pfba.reactions.get_by_id(rxn.id).upper_bound = rxn.upper_bound
-            if rxn.lower_bound < universal_model_pfba.reactions.get_by_id(rxn.id).lower_bound:
-       	       	universal_model_pfba.reactions.get_by_id(rxn.id).lower_bound = rxn.lower_bound
-        else: universal_model_pfba.add_reactions([rxn])
+    # get the list of reactions currently in the gapfiller, which are the ones
+    # we will need to check for flux after solving the problem (e.g. these are
+    # the reactions we are considering adding to the model)
+    get_fluxes = [rxn.id for rxn in gapfiller.reactions]
+    
+    # add the reactions from the model to the gapfiller, which are not
+    # included in the pFBA formulation, and thus flux is not penalized
+    # through them.
+    original_model_reactions = [rxn.copy() for rxn in model_to_gapfill.reactions]
+    mets = [x.metabolites for x in original_model_reactions]
+    all_keys = set().union(*(d.keys() for d in mets))
+    for key in all_keys:
+        if key.id not in [m.id for m in gapfiller.metabolites]:
+            gapfiller.add_metabolites([key.copy()])
+    gapfiller.add_reactions(original_model_reactions)
+    original_reaction_ids = [reaction.id for reaction in original_model_reactions]
 
-    # test if gapfilling is possible
-    universal_model_pfba.objective = objective_reaction_id
-    universal_model_pfba_test = universal_model_pfba.copy()
+    # Add the pFBA constraints and objective (minimizes sum of fluxes)
+    add_pfba(gapfiller)
 
-    # if gapfilling is not possible, don't even try. identify biomass precursors that can't be made if biomass is the objective
-    sol_temp = universal_model_pfba.optimize()
-    logger.info({sol_temp.status:sol_temp.objective_value})
-    if sol_temp.status == 'infeasible' or sol_temp.objective_value < 0.1: # TEST IF WE EVER GO IN THIS LOOP
-        logger.info('INFEASIBLE: this gapfilling problem will have no solution. demands or sinks would be needed.') 
-        add_reactions_to_model = []
-        if 'biomass' in objective_reaction_id:
-            bm_rxn = universal_model_pfba.reactions.get_by_id(objective_reaction_id)
-            total = 0
-            cant = 0
-            for met in bm_rxn.reactants:
-                total = total+1
-                if 'DM_'+met.id not in [r.id for r in universal_model_pfba.reactions]:
-                    universal_model_pfba.add_boundary(met, type = "demand")
-                universal_model_pfba.objective = 'DM_'+met.id
-                if universal_model_pfba.slim_optimize() < 0.01: 
-                    logger.info('{} cannot be synthesized for biomass'.format(met.id))
-                    cant = cant+1
-            logger.info('{} out of {} biomass precursors cannot be synthesized'.format(cant,total))
-    else:   # if gapfilling is possible, try it  
-        add_pfba(universal_model_pfba, objective = objective_reaction_id, fraction_of_optimum=0.00001)
-        coef = universal_model_pfba.objective.get_linear_coefficients(universal_model_pfba.variables)
- 
-        # penalize adding demand and sink reactions
-        dm_sk_reaction_ids = [rxn.id for rxn in universal_model_pfba.reactions if rxn.id.startswith('DM_') or rxn.id.startswith('SK_')]
-        reaction_variables = (((universal_model_pfba.reactions.get_by_id(reaction).forward_variable),\
-                             (universal_model_pfba.reactions.get_by_id(reaction).reverse_variable)) for reaction in dm_sk_reaction_ids)
-        variables = chain(*reaction_variables)
-        for variable in variables: coef[variable] = 100.0
-       	
-        # penalize adding exchange reactions
-       	ex_reaction_ids = [rxn.id for rxn in universal_model_pfba.reactions if rxn.id.startswith('EX_')]
-       	reaction_variables = (((universal_model_pfba.reactions.get_by_id(reaction).forward_variable),\
-                           (universal_model_pfba.reactions.get_by_id(reaction).reverse_variable)) for reaction in ex_reaction_ids)
-        variables = chain(*reaction_variables)
-        for variable in variables: coef[variable] = 10.0   
-        
-        # remove penalty for reactions in original model # CHECK IF ZEROS ARE EXCLUDED BY DEFAULT
-        original_reaction_ids = [rxn.id for rxn in input_model.reactions]
-        reaction_variables = (((universal_model_pfba.reactions.get_by_id(reaction).forward_variable),\
-                           (universal_model_pfba.reactions.get_by_id(reaction).reverse_variable)) for reaction in original_reaction_ids)
-        variables = chain(*reaction_variables)
-        for variable in variables: coef[variable] = 0.1
-        universal_model_pfba.objective.set_linear_coefficients(coef)
+    # ORDER MATTERS HERE: penalize adding exchange reactions
+    coefficients = (gapfiller.objective.get_linear_coefficients(gapfiller.variables))
+    penalize_these_EX_reactions = [r.id for r in gapfiller.reactions if r.id.startswith('EX_')]
+    reaction_variables_ex = (((gapfiller.reactions.get_by_id(reaction).forward_variable),
+                              (gapfiller.reactions.get_by_id(reaction).reverse_variable))
+                             for reaction in penalize_these_EX_reactions)
+    variables_ex = chain(*reaction_variables_ex)
+    for variable in variables_ex: coefficients[variable] = 10.0
+                             
+    # penalize adding pseudoreactions like demand and sink reactions
+    penalize_these_PS_reactions = [r.id for r in gapfiller.reactions\
+                                   if r.id.startswith('DM_') or r.id.startswith('SK_')]
+    reaction_variables_ps = (((gapfiller.reactions.get_by_id(reaction).forward_variable),
+                            (gapfiller.reactions.get_by_id(reaction).reverse_variable))
+                             for reaction in penalize_these_PS_reactions)
+    variables_ps = chain(*reaction_variables_ps)
+    for variable in variables_ps: coefficients[variable] = 100.0
+                             
+    # set the linear coefficients for reactions in the original model to 0
+    reaction_variables = (((gapfiller.reactions.get_by_id(reaction).forward_variable),
+                         (gapfiller.reactions.get_by_id(reaction).reverse_variable))
+                         for reaction in original_reaction_ids)
+    variables = chain(*reaction_variables)
+    for variable in variables: coefficients[variable] = 0.0
+    gapfiller.objective.set_linear_coefficients(coefficients)
+                             
+    # set a constraint on flux through the original objective
+    for reaction in original_objective.keys():
+        #logger.info({'this is the objective, is it what i expect?':gapfiller.reactions.get_by_id(reaction).id})
+        gapfiller.reactions.get_by_id(reaction).lower_bound = 0.01
 
-        solution = universal_model_pfba.optimize()
-        if solution.status == 'infeasible':
-            logger.info('pFBA gapfilling for {} is infeasible!'.format(objective_reaction_id))
-        else: 
-            logger.info('pFBA solution is: {}'.format(solution.status))
-        get_fluxes = set([r.id for r in universal_model_pfba.reactions]) - set([rxn.id for rxn in input_model.reactions])
-        add_reactions_to_model = [rxn for rxn in get_fluxes if abs(solution.fluxes[rxn]) > 1E-10]
-
-        test_model = input_model.copy()
-        logger.info('add these (rxn ids): {}'.format(add_reactions_to_model))
-        add_reactions_list = [universal_model_pfba_test.reactions.get_by_id(r).copy() for r in add_reactions_to_model]
-        test_model.add_reactions(add_reactions_list)
-        test_model.objective = objective_reaction_id
-        sol = test_model.optimize()
-        if sol.status == 'infeasible':
-            logger.info('double checking pFBA solution: pFBA solution is still infeasible after double checking!')
-            add_reactions_to_model = []
-        else:
-            logger.info('double checking pFBA solution: solution is {}'.format(sol.objective_value))
-            if sol.objective_value > 0.0: 
-                logger.info('double checking pFBA solution: solution is ok: {}'.format(sol.objective_value))
-            else: 
-                add_reactions_to_model = []
-                logger.info('double checking pFBA solution: INFEASIBLE: pFBA failed to find a solution')
-    return(add_reactions_to_model)
+    # get solution
+    solution = gapfiller.optimize()
+    filtered_solution = {rxn:solution.fluxes[rxn] for rxn in\
+        get_fluxes if abs(solution.fluxes[rxn]) > 1E-10}
+    add_rxns = [universal_model_ex.reactions.get_by_id(rxn).copy() for \
+                rxn in filtered_solution.keys()]
+    cycle_reactions = set([rxn.id for rxn in add_rxns])
+                
+    # validate that the proposed solution restores flux through the
+    # objective in the original model
+    # set the bounds on the original model to represent media
+    # and validate the gapfill solution
+    if not validate(model_to_gapfill, [universal_model_ex.reactions.get_by_id(rxn_id).copy() for rxn_id in cycle_reactions]):
+        logger.info('INFEASBIBLE gapfill solution for '+objective_reaction_id)
+        #raise RuntimeError('Failed to validate gapfilled model, '
+        #                              'try lowering the flux_cutoff through '
+        #                               'inclusion_threshold')
+    return cycle_reactions
 
 os.chdir(model_path)
 universal_model = cobra.io.read_sbml_model("extended_universal_model_for_gapfilling.xml")
 iPfal19	= cobra.io.read_sbml_model("iPfal19.xml")
-
-#logger.info([r.id for r in iPfal19.reactions if r.id not in [rxn.id for rxn in universal_model.reactions]])
+universal_model.repair()
+universal_model.solver = 'glpk'
+iPfal19.repair()
+iPfal19.solver = 'glpk'
 
 ## prep for removing universal reactions that are in the wrong compartment for this model
 # database mapping - this is for release 42, must update if using a different EuPathDB release
@@ -199,8 +224,13 @@ for x in gapfilling_tasks.index:
 if SPECIES_ID in plasmodb:
     r_len = len(universal_model.reactions)
     for rxn_id in ['EX_hb_e','HBtr','HMGLB','HMBZ','HMBZex','EX_hemozoin_e']:
-       	rxn = iPfal19.reactions.get_by_id(rxn_id).copy()
-        universal_model.add_reactions([rxn])
+       	rxn = iPfal19.reactions.get_by_id(rxn_id)
+        mets = [x.metabolites for x in [rxn]]
+        all_keys = set().union(*(d.keys() for d in mets))
+        for key in all_keys:
+            if key.id not in [m.id for m in universal_model.metabolites]:
+                universal_model.add_metabolites([key.copy()])
+        universal_model.add_reactions([rxn.copy()])
         if len(rxn.genes) > 0:
             genes = rxn.genes
             universal_model.reactions.get_by_id(rxn.id).gene_reaction_rule = ''
@@ -214,8 +244,7 @@ if SPECIES_ID in plasmodb:
         if rxn_id not in [r.id for r in universal_model.reactions]: 
             logger.info('{} not correctly added to universal for gapfilling'.format(rxn_id))
 else: logger.info('not in plasmodb, thus HB reactions were not added')
-
-logger.info([r.id for r in iPfal19.reactions if r.id not in [rxn.id for rxn in universal_model.reactions]])
+universal_model.repair()
 
 mets_to_prod = list()
 mets_to_consume = list()
@@ -239,7 +268,6 @@ if sum(genome_ids['strain_ID'].isin([SPECIES_ID])): # does the model have any ta
         mets_to_prod = production_species['Metabolite'].tolist()
         mets_to_consume = consumption_species['Metabolite'].tolist()
 
-model.solver = 'glpk'
 if 'biomass' in [r.id for r in model.reactions]:
     model.objective = 'biomass' # never using this, just a test
     logger.info('was able to set objective to biomass')
@@ -262,9 +290,11 @@ universal_model_for_species = universal_model.copy()
 for rxn in universal_model_for_species.reactions:
     rxn_metabolite_list = [met.id for met in rxn.metabolites]
     # CHECK set(metabolite.compartment) # check if attribute is not blank
-    rxn_metabolite_comp_list = [hf2.get_comp(universal_model_for_species,m) for m in rxn_metabolite_list]
-    if len(hf2.unaccept_comp_intersection(rxn_metabolite_comp_list, compartment))>0:
+    rxn_metabolite_comp_list = [hf.get_comp(universal_model_for_species,m) for m in rxn_metabolite_list]
+    if len(hf.unaccept_comp_intersection(rxn_metabolite_comp_list, compartment))>0:
         universal_model_for_species.remove_reactions([rxn])
+universal_model_for_species, unused  = cobra.manipulation.delete.prune_unused_metabolites(universal_model_for_species)
+universal_model_for_species.repair()
 
 #logger.info([r.id for r in iPfal19.reactions if r.id not in [rxn.id for rxn in universal_model.reactions]])
 
@@ -294,8 +324,6 @@ if mets_to_consume:
         else:
             cannot_gapfill.append(met)
 all_mets = list(set(all_mets))
-
-logger.info('all mets = {}'.format(all_mets))
 
 if len(all_mets) > 0 : logger.info('there are mets to gapfill for')
 else: logger.info('there are no mets to gapfill for')
@@ -346,6 +374,23 @@ for met in all_mets:
         gf_model.reactions.get_by_id('EX_'+extracel_met).lower_bound = 0.
         gf_model.reactions.get_by_id('EX_'+extracel_met).upper_bound = 0.
         if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
+            # is gapfilling even possible?
+            with gf_universal as model:
+                for rxn in gf_model.reactions:
+                    if rxn.id in [r.id for r in model.reactions]:
+                        model.remove_reactions([model.reactions.get_by_id(rxn.id)])
+                    mets = [x.metabolites for x in [rxn]]
+                    all_keys = set().union(*(d.keys() for d in mets))
+                    for key in all_keys:
+                        if key.id not in [m.id for m in model.metabolites]:
+                            model.add_metabolites([key.copy()])
+                    model.add_reactions([rxn.copy()])
+                model.repair()
+                model.objective = 'biomass'
+                if model.slim_optimize() > 0.01:
+                    logger.info('INFEASBILE: gapfilling is not possible for production of '+extracel_met)
+
+            # if yes, gapfill
             solution = pfba_gapfill_implementation(gf_model, gf_universal,'DM_'+cyto_met)
             logger.info('solution to produce:')
             logger.info(solution)
@@ -400,16 +445,21 @@ for met in all_mets:
         # is it used in any reaction intracellularly?
         # if not, cannot do anything about it, except curate in future
 
-add_reactions_list = hf2.flatten_mixed_list(add_reactions_list)
+add_reactions_list = hf.flatten_mixed_list(add_reactions_list)
 df = pd.DataFrame({'rxns_added':add_reactions_list})
 df.to_csv('gapfilling_additions_{0}_tasks.csv'.format(SPECIES_ID))
 
-for met in add_mets_list:
+for met in add_mets_list: # these are copies, GOOD
     if met.id not in [m.id for m in model.metabolites]:
         model.add_metabolites([met])
 for rxn in add_reactions_list:
     if rxn.id not in [r.id for r in model.reactions]:
-        model.add_reactions([rxn])
+        mets = [x.metabolites for x in [rxn]]
+        all_keys = set().union(*(d.keys() for d in mets))
+        for key in all_keys:
+            if key.id not in [m.id for m in model.metabolites]:
+                model.add_metabolites([key.copy()])
+        model.add_reactions([rxn.copy()])
 
 logger.info("---------------------------------------------------")
 logger.info('no. reactions added:')
@@ -417,10 +467,8 @@ logger.info(len(set(add_reactions_list)))
 logger.info('no. metabolites added:')
 logger.info(len(set(add_mets_list)))
 
-#model.solver = 'glpk'
 gf_mod_list1 = list()
 gf_mod_list2 = list()
-
 os.chdir(data_path)
 if 'generic_biomass' in [r.id for r in model.reactions]:
     gf_model = model.copy()
@@ -430,17 +478,25 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
     gf_universal = universal_model_for_species.copy()
 
-    logger.info([r.id for r in iPfal19.reactions if r.id not in [rxn.id for rxn in gf_universal.reactions]])
-
-    logger.info('TESTING')
-    bm = iPfal19.reactions.biomass.copy()
-    gf_universal.add_reactions([bm])
-    gf_universal.objective = 'biomass'
-    logger.info(gf_universal.slim_optimize())
-    gf_universal.remove_reactions([gf_universal.reactions.biomass])
-
     gf_model.objective = 'generic_biomass'
     if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
+        # is gapfilling even possible?
+        with gf_universal as model:
+            for rxn in gf_model.reactions:
+                if rxn.id in [r.id for r in model.reactions]:
+                    model.remove_reactions([model.reactions.get_by_id(rxn.id)])
+                mets = [x.metabolites for x in [rxn]]
+                all_keys = set().union(*(d.keys() for d in mets))
+                for key in all_keys:
+                    if key.id not in [m.id for m in model.metabolites]:
+                        model.add_metabolites([key.copy()])
+                model.add_reactions([rxn.copy()])
+            model.repair()
+            model.objective = 'biomass'
+            if model.slim_optimize() > 0.01:
+                logger.info('INFEASBILE: gapfilling is not possible for generic biomass')
+
+        # if yes, gapfill
         solution = pfba_gapfill_implementation(gf_model, gf_universal, 'generic_biomass')
         if len(solution) >= 1:
             for rxn_id in solution:
@@ -460,17 +516,25 @@ if 'biomass' in [r.id for r in model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass')])
     gf_universal = universal_model_for_species.copy()
 
-    logger.info([r.id for r in iPfal19.reactions if r.id not in [rxn.id for rxn in gf_universal.reactions]])
-
-    logger.info('TESTING')
-    bm = iPfal19.reactions.biomass.copy()
-    gf_universal.add_reactions([bm])
-    gf_universal.objective = 'biomass'
-    logger.info(gf_universal.slim_optimize())
-    gf_universal.remove_reactions([gf_universal.reactions.biomass])
-
     gf_model.objective = 'biomass'
     if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
+        # is gapfilling even possible?
+        with gf_universal as model:
+            for rxn in gf_model.reactions:
+                if rxn.id in [r.id for r in model.reactions]:
+                    model.remove_reactions([model.reactions.get_by_id(rxn.id)])
+                mets = [x.metabolites for x in [rxn]]
+                all_keys = set().union(*(d.keys() for d in mets))
+                for key in all_keys:
+                    if key.id not in [m.id for m in model.metabolites]:
+                        model.add_metabolites([key.copy()])
+                model.add_reactions([rxn.copy()])
+            model.repair()
+            model.objective = 'biomass'
+            if model.slim_optimize() > 0.01:
+                logger.info('INFEASBILE: gapfilling is not possible for specific biomass')
+
+        # if yes, gapfill
         solution = pfba_gapfill_implementation(gf_model, gf_universal, 'biomass')
         if len(solution) >= 1:
             for rxn_id in solution:
@@ -486,17 +550,23 @@ else:
         logger.info('error: no plasmodium biomass reaction')
     else: logger.info('no plasmodium biomass reaction, which is what was intended')
 
-add_reactions_list2 = list(set(hf2.flatten_mixed_list([gf_mod_list1,gf_mod_list2])))
+add_reactions_list2 = list(set(hf.flatten_mixed_list([gf_mod_list1,gf_mod_list2])))
 logger.info('going to add these reactions for biomass gapfill:')
 logger.info(add_reactions_list2)
+
 for rxn in add_reactions_list2:
     if rxn.id not in [r.id for r in model.reactions]:
-        model.add_reactions([rxn])
+        mets = [x.metabolites for x in [rxn]]
+        all_keys = set().union(*(d.keys() for d in mets))
+        for key in all_keys:
+            if key.id not in [m.id for m in model.metabolites]:
+                model.add_metabolites([key.copy()])
+        model.add_reactions([rxn.copy()])
 logger.info('added reactions for biomass gapfill')
+model.repair()
 
 os.chdir(model_path)
 cobra.io.save_json_model(model, 'gf_'+SPECIES_ID+'.json')
-print(hippo)
 cobra.io.write_sbml_model(model,'gf_'+SPECIES_ID+'.xml')
     
     

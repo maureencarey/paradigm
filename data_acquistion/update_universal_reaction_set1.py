@@ -5,7 +5,11 @@ from cobra.core import Gene, Metabolite, Reaction
 import requests
 import time
 import logging
-import helper_functions_3 as hf3
+#import helper_functions_3 as hf3
+import sys
+
+sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
+import helper_functions as hf
 
 model_path = "/home/mac9jc/paradigm/models/"
 log_path = "/home/mac9jc/paradigm/model_generation_logs/"
@@ -42,18 +46,18 @@ for met in model.metabolites:
     if met_counter % 100 == 0:
         logger.info(met_counter)
     met_counter = met_counter + 1
-    model = hf3.add_full_met_info(model, met, hf3.met_ids_without_comp(model,met.id))
+    model = hf.add_full_met_info(model, met, hf.met_ids_without_comp(model,met.id))
 for rxn in model.reactions:
     if rxn_counter % 100 == 0:
         logger.info(rxn_counter)
     rxn_counter = rxn_counter +1
-    model = hf3.add_full_rxn_info(model, rxn, rxn.id)
+    model = hf.add_full_rxn_info(model, rxn, rxn.id)
 
 # fix charges and formulas
-model = hf3.fix_charge_or_formula(model)
+model = hf.fix_charge_or_formula(model)
 
 # Add SBO terms
-model = hf3.add_sbo_terms(model)
+model = hf.add_sbo_terms(model)
 logger.info('fixed SBO terms')
 model.repair()
 

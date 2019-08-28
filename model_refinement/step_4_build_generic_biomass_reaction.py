@@ -7,7 +7,10 @@ import subprocess
 import glob
 import json
 from cobra import Model, Reaction, Metabolite
-import helper_functions_2 as hf
+#import helper_functions_2 as hf
+import sys
+sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
+import helper_functions as hf
 import argparse
 from datetime import date
 from datetime import datetime

@@ -184,8 +184,8 @@ def get_comp(model,met_id):
                 print(m.id)
                 id_withou_c = ''
     else:
-	id_withou_c = ''
-        return(id_withou_c)
+        id_withou_c = ''
+    return(id_withou_c)
 
 def flatten_mixed_list(list_of_interest):
     new_list = list()
