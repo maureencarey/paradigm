@@ -56,15 +56,15 @@ model.solver = 'glpk'
 logger.info('loaded model')
 
 def validate(original_model, reactions):
-    with original_model as model:
+    with original_model as model2:
         mets = [x.metabolites for x in reactions]
         all_keys = set().union(*(d.keys() for d in mets))
         for key in all_keys:
-            if key.id not in [m.id for m in model.metabolites]:
-                model.add_metabolites([key.copy()])
-        model.add_reactions(reactions)
-        model.slim_optimize()
-        return (model.solver.status == OPTIMAL and model.solver.objective.value >= 0.0001)
+            if key.id not in [m.id for m in model2.metabolites]:
+                model2.add_metabolites([key.copy()])
+        model2.add_reactions(reactions)
+        model2.slim_optimize()
+        return (model2.solver.status == OPTIMAL and model2.solver.objective.value >= 0.0001)
 
 # write here because it uses logger
 # pFBA based gapfilling, implementation from Greg Medlock in his Medusa package
@@ -222,7 +222,23 @@ if SPECIES_ID in plasmodb:
         if rxn_id not in [r.id for r in universal_model.reactions]:
             logger.info('{} not correctly added to universal for gapfilling'.format(rxn_id))
 else: logger.info('not in plasmodb, thus HB reactions were not added')
+universal_model, unused  = cobra.manipulation.delete.prune_unused_metabolites(universal_model)
 universal_model.repair()
+
+for rxn_id in ['biomass','generic_biomass']:
+    with universal_model:
+        if rxn_id in [r.id for r in model.reactions]:
+       	    logger.info(rxn_id+' is present')
+            rxn = model.reactions.get_by_id(rxn_id).copy()
+            mets = [x.metabolites for x in [rxn]]
+            all_keys = set().union(*(d.keys() for d in mets))
+            for key in all_keys:
+                if key.id not in [m.id for m in universal_model.metabolites]:
+                    universal_model.add_metabolites([key.copy()])
+       	    universal_model.add_reactions([rxn.copy()])
+       	    universal_model.objective =	rxn_id 
+       	    f =	universal_model.slim_optimize()
+            logger.info('at this stage (1), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 mets_to_prod = list()
 mets_to_consume = list()
@@ -264,10 +280,20 @@ for rxn in universal_model_for_species.reactions:
 universal_model_for_species, unused  = cobra.manipulation.delete.prune_unused_metabolites(universal_model_for_species)
 universal_model_for_species.repair()
 
-if 'biomass' in [r.id for r in model.reactions]:
-    logger.info('specific biomass present')
-if 'generic_biomass' in [r.id for r in model.reactions]:
-    logger.info('generic biomass present')
+for rxn_id in ['biomass','generic_biomass']:
+    with universal_model_for_species:
+        if rxn_id in [r.id for r in model.reactions]:
+       	    logger.info(rxn_id+' is present')
+            rxn = model.reactions.get_by_id(rxn_id).copy()
+            mets = [x.metabolites for x in [rxn]]
+            all_keys = set().union(*(d.keys() for d in mets))
+            for key in all_keys:
+                if key.id not in [m.id for m in universal_model_for_species.metabolites]:
+                    universal_model_for_species.add_metabolites([key.copy()])
+       	    universal_model_for_species.add_reactions([rxn.copy()])
+       	    universal_model_for_species.objective = rxn_id 
+       	    f =	universal_model_for_species.slim_optimize()
+            logger.info('at this stage (2), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 produce_met = list()
 consume_met = list()
@@ -292,11 +318,6 @@ all_mets = list(set(all_mets))
 if len(all_mets) > 0 : logger.info('there are mets to gapfill for, beginning gapfill now')
 else: logger.info('there are no mets to gapfill for')
 
-if 'biomass' in [r.id for r in model.reactions]:
-    logger.info('specific biomass present')
-if 'generic_biomass' in [r.id for r in model.reactions]:
-    logger.info('generic biomass present')
-
 for met in all_mets:
     logger.info('')
     logger.info(met)
@@ -308,6 +329,7 @@ for met in all_mets:
        	gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
     if 'generic_biomass' in [r.id for r in gf_model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass')])
+    gf_model.repair()
     gf_universal = universal_model_for_species.copy()
 
     # add metabolites if necessary
@@ -420,6 +442,21 @@ for met in all_mets:
             -1.0, gf_model.metabolites.get_by_id(cyto_met): 1.0 })
             add_reactions_list.append(reaction)
     
+for rxn_id in ['biomass','generic_biomass']:
+    with universal_model_for_species:
+        if rxn_id in [r.id for r in model.reactions]:
+       	    logger.info(rxn_id+' is present')
+            rxn = model.reactions.get_by_id(rxn_id).copy()
+            mets = [x.metabolites for x in [rxn]]
+            all_keys = set().union(*(d.keys() for d in mets))
+            for key in all_keys:
+                if key.id not in [m.id for m in universal_model_for_species.metabolites]:
+                    universal_model_for_species.add_metabolites([key.copy()])
+            universal_model_for_species.add_reactions([rxn.copy()])
+            universal_model_for_species.objective =     rxn_id
+            f = universal_model_for_species.slim_optimize()
+            logger.info('at this stage (3), the universal model is able to make {} units of {}'.format(f,rxn_id))
+
 # is it used in any reaction intracellularly?
 # if not, cannot do anything about it, except curate in future
 
@@ -460,6 +497,7 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
     gf_model.reactions.get_by_id('generic_biomass').ub = 1000.
     if 'biomass' in [r.id for r in gf_model.reactions]:
        	gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
+        gf_model.repair()
     gf_universal = universal_model_for_species.copy()
 
     gf_model.objective = 'generic_biomass'
@@ -492,10 +530,20 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
 else:
     logger.info('error: no generic biomass reaction')
 
-if 'biomass' in [r.id for r in model.reactions]:
-    logger.info('specific biomass present')
-if 'generic_biomass' in [r.id for r in model.reactions]:
-    logger.info('generic biomass present')
+for rxn_id in ['biomass','generic_biomass']:
+    with universal_model_for_species:
+        if rxn_id in [r.id for r in model.reactions]:
+            logger.info(rxn_id+' is present')
+            rxn = model.reactions.get_by_id(rxn_id).copy()
+            mets = [x.metabolites for x in [rxn]]
+            all_keys = set().union(*(d.keys() for d in mets))
+            for key in all_keys:
+                if key.id not in [m.id for m in universal_model_for_species.metabolites]:
+                    universal_model_for_species.add_metabolites([key.copy()])
+            universal_model_for_species.add_reactions([rxn.copy()])
+            universal_model_for_species.objective =     rxn_id
+            f = universal_model_for_species.slim_optimize()
+            logger.info('at this stage (4), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 if 'biomass' in [r.id for r in model.reactions]:
     logger.info('beginning specific biomass gapfill')
@@ -504,6 +552,7 @@ if 'biomass' in [r.id for r in model.reactions]:
     gf_model.reactions.get_by_id('biomass').ub = 1000.
     if 'generic_biomass' in [r.id for r in gf_model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass')])
+        gf_model.repair()
     gf_universal = universal_model_for_species.copy()
 
     gf_model.objective = 'biomass'

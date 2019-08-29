@@ -346,6 +346,7 @@ for met in all_mets:
        	gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
     if 'generic_biomass' in [r.id for r in gf_model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass')])
+    gf_model.repair()
     gf_universal = universal_model_for_species.copy()
 
     # add metabolites if necessary
@@ -489,6 +490,7 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
     gf_model.reactions.get_by_id('generic_biomass').ub = 1000.
     if 'biomass' in [r.id for r in gf_model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
+        gf_model.repair()
     gf_universal = universal_model_for_species.copy()
 
     gf_model.objective = 'generic_biomass'
@@ -534,6 +536,7 @@ if 'biomass' in [r.id for r in model.reactions]:
     gf_model.reactions.get_by_id('biomass').ub = 1000.
     if 'generic_biomass' in [r.id for r in gf_model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass')])
+        gf_model.repair()
     gf_universal = universal_model_for_species.copy()
 
     gf_model.objective = 'biomass'

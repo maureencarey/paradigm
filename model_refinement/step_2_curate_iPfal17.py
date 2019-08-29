@@ -203,6 +203,7 @@ pf_model.remove_reactions([pf_model.reactions.GLUDxi])
 pf_model.add_reactions([universal_model.reactions.GLUDxi.copy()])
 pf_model.reactions.GLUDxi.gene_reaction_rule = gpr
 pf_model.reactions.GLUDxi.notes = notes
+pf_model.repair()
 
 gpr = pf_model.reactions.trdrd_exp.gene_reaction_rule
 notes = pf_model.reactions.trdrd_exp.notes
@@ -211,6 +212,7 @@ pf_model.add_boundary(pf_model.metabolites.trdrd_c, type = "sink")
 pf_model.reactions.SK_trdrd_c.notes = notes
 pf_model.reactions.SK_trdrd_c.gene_reaction_rule = gpr
 pf_model.reactions.SK_trdrd_c.name = 'thioredoxin expression'
+pf_model.repair()
 
 gpr = pf_model.reactions.fldox_exp.gene_reaction_rule
 notes = pf_model.reactions.fldox_exp.notes
@@ -219,6 +221,7 @@ pf_model.add_boundary(pf_model.metabolites.fldox_ap, type = "sink")
 pf_model.reactions.SK_fldox_ap.notes = notes
 pf_model.reactions.SK_fldox_ap.gene_reaction_rule = gpr
 pf_model.reactions.SK_fldox_ap.name = 'flavodoxin expression'
+pf_model.repair()
 
 #notes = pf_model.reactions.PPPGOm.notes
 #gpr = pf_model.reactions.PPPGOm.gene_reaction_rule
@@ -233,6 +236,7 @@ pf_model.remove_reactions([pf_model.reactions.PDX5POi])
 pf_model.add_reactions([universal_model.reactions.PDX5POi.copy()])
 pf_model.reactions.PDX5POi.gene_reaction_rule = gpr
 pf_model.reactions.PDX5POi.notes = notes
+pf_model.repair()
 
 notes = pf_model.reactions.PPA.notes
 gpr = pf_model.reactions.PPA.gene_reaction_rule
@@ -240,6 +244,7 @@ pf_model.remove_reactions([pf_model.reactions.PPA])
 pf_model.add_reactions([universal_model.reactions.PPA])
 pf_model.reactions.PPA.gene_protein_rule = gpr
 pf_model.reactions.PPA.notes = notes
+pf_model.repair()
 
 notes = pf_model.reactions.DOLPMT.notes
 gpr = pf_model.reactions.DOLPMT.gene_reaction_rule
@@ -247,6 +252,7 @@ pf_model.remove_reactions([pf_model.reactions.DOLPMT])
 pf_model.add_reactions([universal_model.reactions.DOLPMT.copy()])
 pf_model.reactions.DOLPMT.gene_reaction_rule = gpr
 pf_model.reactions.DOLPMT.notes = notes
+pf_model.repair()
 
 notes = pf_model.reactions.PIt2r.notes
 gpr = pf_model.reactions.PIt2r.gene_reaction_rule
@@ -261,6 +267,7 @@ pf_model.add_reactions([universal_model.reactions.THD2.copy()])
 pf_model.reactions.THD2.gene_reaction_rule = pf_model.reactions.THD2pp.gene_reaction_rule
 pf_model.reactions.THD2.notes = pf_model.reactions.THD2pp.notes
 pf_model.remove_reactions([pf_model.reactions.THD2pp])
+pf_model.repair()
 
 pf_model.add_reactions([universal_model.reactions.DOLPMT1_c.copy()])
 pf_model.reactions.DOLPMT1_c.gene_reaction_rule = pf_model.reactions.DOLPMT1.gene_reaction_rule
@@ -276,6 +283,7 @@ pf_model.add_reactions([universal_model.reactions.GLCNACPT_c.copy()])
 pf_model.reactions.GLCNACPT_c.gene_reaction_rule = pf_model.reactions.GLCNACPT.gene_reaction_rule
 pf_model.reactions.GLCNACPT_c.notes = pf_model.reactions.GLCNACPT.notes
 pf_model.remove_reactions([pf_model.reactions.GLCNACPT])
+pf_model.repair()
 
 pf_model.remove_reactions([pf_model.reactions.G_Protein_Ex,pf_model.reactions.HMBZ_out])
 pf_model.add_boundary(pf_model.metabolites.gthox_protein_e, type = "exchange")
@@ -357,6 +365,7 @@ pf_model.remove_reactions([pf_model.reactions.MGSA])
 pf_model.add_reactions([universal_model.reactions.MGSA.copy()])
 pf_model.reactions.MGSA.gene_reaction_rule = gpr
 pf_model.reactions.MGSA.notes = notes
+pf_model.repair()
 
 pf_model.reactions.get_by_id('2_PERIOD_1_PERIOD_1_PERIOD_12').id = 'METMT'
 pf_model.reactions.get_by_id('METMT').name = 'Methionine methyltransferase'
