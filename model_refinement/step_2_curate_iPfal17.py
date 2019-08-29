@@ -894,9 +894,20 @@ pf_model.repair()
 os.chdir(model_path)
 cobra.io.write_sbml_model(pf_model, "iPfal19_temp.xml")
 
+# fix another issues identified with memote (inchi strings from bigg being listed as NaN)
+for met in pf_model.metabolites:
+    if 'inchi' in met.annotation.keys():
+        if met.annotation['inchi'] == 'nan': del met.annotation['inchi']
+    if 'reactome' in met.annotation.keys(): # no reactome ID in BiGG is compliant
+        del met.annotation['reactome']
+    pf_model.metabolites.get_by_id(met.id).annotation = met.annotation
+for rxn in pf_model.reactions:
+    if rxn.id in [r.id for r in universal_model.reactions] and 'bigg.reaction' not in rxn.annotation.keys():
+        pf_model.reactions.get_by_id(rxn.id).annotation['bigg.reaction'] = rxn.id
+        
 pf_model.id = 'iPfal19_v1'
 pf_model.name = 'iPfal19'
-pf_model.compartments = {'c': 'cytoplasm', 'e': 'extracellular', 'm': 'mitochondrion', 'fv': 'food vacuole', 'ap':'apicoplast'}
+pf_model.compartments = {'cytosol': 'c', 'extracellular': 'e', 'apicoplast': 'ap', 'mitochondria': 'm', 'food_vacuole': 'fv'}
 pf_model.annotation["description"] = 'This model is the third iteration of the asexual blood-stage Plasmodium falciparum 3D7 genome-scale metabolic network reconstruction. The original reconstruction was generated using a custom pipeline by Plata et al (DOI: 10.1038/msb.2010.60) from P. falciparum Dd2 genome and curated to P. falciparum 3D7 and Dd2 function. Multiple rounds of curation were conducted (DOI: 10.1186/s12864-017-3905-1,10.1186/s12859-019-2756-y, and unpublished by Maureen Carey). Gene IDs can be mapped to sequences on https://plasmodb.org/ and reaction and metabolite nomenclature maps to data on http://bigg.ucsd.edu/.'
 pf_model.annotation["taxonomy"] = "36329"
 pf_model.annotation["genome"] = "https://plasmodb.org/common/downloads/Current_Release/Pfalciparum3D7/fasta/data/PlasmoDB-44_Pfalciparum3D7_Genome.fasta"
