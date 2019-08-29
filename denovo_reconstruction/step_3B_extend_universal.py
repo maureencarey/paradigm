@@ -6,7 +6,9 @@ import glob
 import json
 from cobra import Model, Reaction, Metabolite
 #import helper_functions_1 as hf
-import /home/mac9jc/paradigm/helper_functions as hf
+import sys
+sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
+import helper_functions as hf
 import logging
 from datetime import datetime
 
@@ -71,7 +73,7 @@ for file in glob.glob("final_denovo_*.json"):
     add_model = cobra.io.load_json_model(file)
     for rxn in add_model.reactions:
         if rxn.id not in [r.id for r in universal_model.reactions]:
-            mets = rxn.metabolites
+            mets = [x.metabolites for x in [rxn]]            
             all_keys = set().union(*(d.keys() for d in mets))
             for key in all_keys:
                 if key.id not in [m.id for m in universal_model.metabolites]:

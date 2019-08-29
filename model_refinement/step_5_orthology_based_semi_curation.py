@@ -198,6 +198,7 @@ for met in l:
         model.add_boundary(met, type = "exchange")
 model.objective = 'biomass' # NOT USING GENERIC BIOMASS NOW
 
+model.repair()
 os.chdir(model_path)
 cobra.io.save_json_model(model, "ortho_"+SPECIES_ID+".json")
 cobra.io.write_sbml_model(model, "ortho_"+SPECIES_ID+".xml")

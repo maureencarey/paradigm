@@ -17,6 +17,7 @@ import logging
 from datetime import datetime
 from itertools import chain
 from cobra.util.solver import linear_reaction_coefficients
+from optlang.interface import OPTIMAL
 
 data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
@@ -257,7 +258,7 @@ for rxn in universal_model_for_species.reactions:
     rxn_metabolite_list = [met.id for met in rxn.metabolites]
     # CHECK set(metabolite.compartment) # check if attribute is not blank
     rxn_metabolite_comp_list = [hf.get_comp(universal_model_for_species,m) for m in rxn_metabolite_list]
-    if len(hf.unaccept_comp_intersection(rxn_metabolite_comp_list, compartment))>0:
+    if len(hf.unaccept_comp_intersection(rxn_metabolite_comp_list, compartments))>0:
         universal_model_for_species.remove_reactions([rxn])
 universal_model_for_species, unused  = cobra.manipulation.delete.prune_unused_metabolites(universal_model_for_species)
 universal_model_for_species.repair()
@@ -344,8 +345,8 @@ for met in all_mets:
                             model.add_metabolites([key.copy()])
                     model.add_reactions([rxn.copy()])
                 model.repair()
-                model.objective = 'biomass'
-                if model.slim_optimize() > 0.01:
+                model.objective = 'DM_'+cyto_met
+                if model.slim_optimize() < 0.01:
                     logger.info('INFEASBILE: gapfilling is not possible for production of '+extracel_met)
         
             # if yes, gapfill
@@ -456,8 +457,8 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
                         model.add_metabolites([key.copy()])
                 model.add_reactions([rxn.copy()])
             model.repair()
-            model.objective = 'biomass'
-            if model.slim_optimize() > 0.01:
+            model.objective = 'generic_biomass'
+            if model.slim_optimize() < 0.01:
                 logger.info('INFEASBILE: gapfilling is not possible for generic biomass')
     
         # if yes, gapfill
@@ -495,7 +496,7 @@ if 'biomass' in [r.id for r in model.reactions]:
                 model.add_reactions([rxn.copy()])
             model.repair()
             model.objective = 'biomass'
-            if model.slim_optimize() > 0.01:
+            if model.slim_optimize() < 0.01:
                 logger.info('INFEASBILE: gapfilling is not possible for specific biomass')
                     
         # if yes, gapfill
