@@ -121,6 +121,11 @@ for index, row in species_specific_mapping.iterrows():
                 if rxn.id not in [x.id for x in model.reactions]:
                     rxn2 = rxn.copy()
                     test = len(model.reactions)
+                    mets = [x.metabolites for x in [rxn2]]
+                    all_keys = set().union(*(d.keys() for d in mets))
+                    for key in all_keys:
+                        if key.id not in [m.id for m in model.metabolites]:
+                            model.add_metabolites([key.copy()])
                     model.add_reactions([rxn2])
                     model.reactions.get_by_id(rxn2.id).gene_reaction_rule = new_gene
                 else: # reaction is in model
@@ -140,6 +145,11 @@ for index, row in species_specific_mapping.iterrows():
                     if rxn.id not in [x.id for x in model.reactions]:
                         rxn2 = rxn.copy()
                         test = len(model.reactions)
+                        mets = [x.metabolites for x in [rxn2]]
+                        all_keys = set().union(*(d.keys() for d in mets))
+                        for key in all_keys:
+                            if key.id not in [m.id for m in model.metabolites]:
+       	                        model.add_metabolites([key.copy()])
                         model.add_reactions([rxn2])
                         model.reactions.get_by_id(rxn2.id).gene_reaction_rule = new_gene
                     else:
@@ -152,6 +162,8 @@ for index, row in species_specific_mapping.iterrows():
 logger.info('headed into duplicates')
 if len(model.reactions) != len(set(model.reactions)):
     logger.info('duplicate reactions')
+
+model.repair()
 
 if SPECIES_ID.startswith('Pfalciparum3D7'):
     s = 1
@@ -166,12 +178,12 @@ else:
                 model.genes.remove(x)
             else:
                 logging.info(x.id+' remains in model and associated with '+[r.id for r in x.reactions])
-                cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+                cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=False)
         if (t==len(model.genes)) or len([x.id for x in model.genes if x.id.startswith('PF3D7')]) > 0:
             logger.info('ERROR: (STEP 5) DELETE PF3D7 GENES STEP DID NOT WORK')
     gene_list = [x.id for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]
     if len(gene_list) > 0:
-        cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=True)
+        cobra.manipulation.delete.remove_genes(model, gene_list, remove_reactions=False)
         if len([x.id for x in model.genes if x.id in ['mal_mito_1','mal_mito_2','mal_mito_3']]) > 0:
             logger.info('ERROR: (STEP 5) DELETE PF3D7 mal_mito GENES STEP DID NOT WORK')
 
