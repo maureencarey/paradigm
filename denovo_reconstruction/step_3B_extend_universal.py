@@ -26,6 +26,7 @@ universal_model = cobra.io.load_json_model('universal_model_updated.json')
 
 if 'bof_c' in [r.id for r in universal_model.reactions]:
     universal_model.remove_reactions([universal_model.reactions.bof_c])
+    universal_model.repair()
 
 # extend universal by curated model
 pf_model = cobra.io.read_sbml_model('iPfal19.xml')
@@ -92,6 +93,7 @@ rxn_list_to_delete = [r.id for r in universal_model.reactions if r.id.startswith
 universal_model.remove_reactions(rxn_list_to_delete)
 rxn_list_to_delete = [r.id for r in universal_model.reactions if r.id.startswith('generic_biomass')]
 universal_model.remove_reactions(rxn_list_to_delete)
+universal_model.repair()
 logger.info('removed biomasses from universal')
 
 # add exchange reactions

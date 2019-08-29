@@ -330,10 +330,10 @@ for rxn in fix_these_reactions_list:
         reactions_added.append(new_rxn.id)
     l = len(model.reactions)
     model.remove_reactions([rxn])
+    model.repair()
     if len(model.reactions)>l:
         logging.info('failed to remove a reaction')
 
-model.repair()
 model, unused = hf.prune_unused_metabolites2(model)
 logging.info('finished moving reactions to the right compartment')
 
