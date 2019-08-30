@@ -419,8 +419,8 @@ for met in all_mets:
             logger.info('no gapfilling needed')
 
     if met in list(consume_met):
-        gf_model.reactions.get_by_id('EX_'+extracel_met).lb = -1000.
-        gf_model.reactions.get_by_id('EX_'+extracel_met).ub = 1000.
+        gf_model.reactions.get_by_id('EX_'+extracel_met).lower_bound = -1000.
+        gf_model.reactions.get_by_id('EX_'+extracel_met).upper_bound = 1000.
         t = False
         if not (gf_model.slim_optimize() >= 0.01): # optimize and no growth
             # add import reaction (don't use gapfill because we want an import,
@@ -521,8 +521,8 @@ os.chdir(data_path)
 if 'generic_biomass' in [r.id for r in model.reactions]:
     logger.info('beginning generic biomass gapfill')
     gf_model = model.copy()
-    gf_model.reactions.get_by_id('generic_biomass').lb = 0.
-    gf_model.reactions.get_by_id('generic_biomass').ub = 1000.
+    gf_model.reactions.get_by_id('generic_biomass').lower_bound = 0.
+    gf_model.reactions.get_by_id('generic_biomass').upper_bound = 1000.
     if 'biomass' in [r.id for r in gf_model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('biomass')])
         gf_model.repair()
@@ -576,8 +576,8 @@ for rxn_id in ['biomass','generic_biomass']:
 if 'biomass' in [r.id for r in model.reactions]:
     logger.info('beginning specific biomass gapfill')
     gf_model = model.copy()
-    gf_model.reactions.get_by_id('biomass').lb = 0.
-    gf_model.reactions.get_by_id('biomass').ub = 1000.
+    gf_model.reactions.get_by_id('biomass').lower_bound = 0.
+    gf_model.reactions.get_by_id('biomass').upper_bound = 1000.
     if 'generic_biomass' in [r.id for r in gf_model.reactions]:
         gf_model.remove_reactions([gf_model.reactions.get_by_id('generic_biomass')])
         gf_model.repair()
