@@ -33,9 +33,11 @@ model_fname = vars(args)['model_file']
 SPECIES_ID = model_fname.split('/')[-1] # ID is model filename minus directory
 SPECIES_ID = SPECIES_ID.split('.')[0] # get rid of extension
 SPECIES_ID_old = SPECIES_ID
+ortho_temp = False
 if 'denovo_' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID.split('denovo_')[1]
 if 'with_biomass_' in SPECIES_ID:
+    ortho_temp = True
     SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 if 'ortho_' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID.split('ortho_')[1]
@@ -43,9 +45,11 @@ if 'DIY' in SPECIES_ID:
     SPECIES_ID = SPECIES_ID[5:]
 if SPECIES_ID == 'iPfal19':
     SPECIES_ID = 'Pfalciparum3D7'
+if ortho_temp: ortho = 'no_ortho_'
+else: ortho = ''
 
 day = datetime.now().strftime('%d_%m_%Y')
-logging.basicConfig(filename='step6_{}_{}.log'.format(SPECIES_ID_old,day), level=logging.INFO, filemode='w')
+logging.basicConfig(filename='step6_{}{}_{}.log'.format(ortho,SPECIES_ID_old,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 6')
     
@@ -63,7 +67,12 @@ def validate(original_model, reactions):
             if key.id not in [m.id for m in model2.metabolites]:
                 model2.add_metabolites([key.copy()])
         model2.add_reactions(reactions)
+        sol = model2.optimize()
+        logger.info(sol.objective_value)
+        logger.info(sol.status)
         model2.slim_optimize()
+        logger.info(model2.solver.objective.value)
+        logger.info(model2.solver.status == OPTIMAL)
         return (model2.solver.status == OPTIMAL and model2.solver.objective.value >= 0.0001)
 
 # write function here since it uses logger
@@ -140,11 +149,13 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
                              
     # set a constraint on flux through the original objective
     for reaction in original_objective.keys():
-        #logger.info({'this is the objective, is it what i expect?':gapfiller.reactions.get_by_id(reaction).id})
+        logger.info({'this is the objective, is it what i expect?':gapfiller.reactions.get_by_id(reaction).id})
         gapfiller.reactions.get_by_id(reaction).lower_bound = 0.01
 
     # get solution
     solution = gapfiller.optimize()
+    if solution.status != OPTIMAL: logger.info('INFEASIBLE PFBA SOLUTION')
+    logger.info(solution.status)
     filtered_solution = {rxn:solution.fluxes[rxn] for rxn in\
         get_fluxes if abs(solution.fluxes[rxn]) > 1E-10}
     add_rxns = [universal_model_ex.reactions.get_by_id(rxn).copy() for \
@@ -249,21 +260,6 @@ else: logger.info('not in plasmodb, thus HB reactions were not added')
 universal_model, unused  = cobra.manipulation.delete.prune_unused_metabolites(universal_model)
 universal_model.repair()
 
-for rxn_id in ['biomass','generic_biomass']:
-    with universal_model:
-        if rxn_id in [r.id for r in model.reactions]:
-       	    logger.info(rxn_id+' is present')
-            rxn = model.reactions.get_by_id(rxn_id).copy()
-            mets = [x.metabolites for x in [rxn]]
-            all_keys = set().union(*(d.keys() for d in mets))
-            for key in all_keys:
-                if key.id not in [m.id for m in universal_model.metabolites]:
-                    universal_model.add_metabolites([key.copy()])
-       	    universal_model.add_reactions([rxn.copy()])
-       	    universal_model.objective =	rxn_id 
-       	    f =	universal_model.slim_optimize()
-            logger.info('at this stage (1), the universal model is able to make {} units of {}'.format(f,rxn_id))
-
 mets_to_prod = list()
 mets_to_consume = list()
 if sum(genome_ids['strain_ID'].isin([SPECIES_ID])): # does the model have any tasks?
@@ -287,8 +283,8 @@ if sum(genome_ids['strain_ID'].isin([SPECIES_ID])): # does the model have any ta
         mets_to_consume = consumption_species['Metabolite'].tolist()
 
 if 'biomass' in [r.id for r in model.reactions]:
-    model.objective = 'biomass' # never using this, just a test
-    logger.info('was able to set objective to biomass')
+    model.objective = 'biomass'
+    logger.info('was able to set objective to specific biomass')
 elif 'generic_biomass' in [r.id for r in model.reactions]:
     model.objective = 'generic_biomass'
     logger.info('was able to set objective to generic biomass')
@@ -306,21 +302,6 @@ for rxn in universal_model_for_species.reactions:
         universal_model_for_species.remove_reactions([rxn])
 universal_model_for_species, unused  = cobra.manipulation.delete.prune_unused_metabolites(universal_model_for_species)
 universal_model_for_species.repair()
-
-for rxn_id in ['biomass','generic_biomass']:
-    with universal_model_for_species:
-        if rxn_id in [r.id for r in model.reactions]:
-            logger.info(rxn_id+' is present')
-            rxn = model.reactions.get_by_id(rxn_id).copy()
-            mets = [x.metabolites for x in [rxn]]
-            all_keys = set().union(*(d.keys() for d in mets))
-            for key in all_keys:
-                if key.id not in [m.id for m in universal_model_for_species.metabolites]:
-                    universal_model_for_species.add_metabolites([key.copy()])
-            universal_model_for_species.add_reactions([rxn.copy()])
-            universal_model_for_species.objective = rxn_id
-            f = universal_model_for_species.slim_optimize()
-            logger.info('at this stage (2), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 produce_met = list()
 consume_met = list()
@@ -422,7 +403,7 @@ for met in all_mets:
         gf_model.reactions.get_by_id('EX_'+extracel_met).lower_bound = -1000.
         gf_model.reactions.get_by_id('EX_'+extracel_met).upper_bound = 1000.
         t = False
-        if not (gf_model.slim_optimize() >= 0.01): # optimize and no growth
+        if not (gf_model.slim_optimize() > 0.01): # optimize and no growth
             # add import reaction (don't use gapfill because we want an import,
             # not biosynthetic solution)
             if extracel_met in gf_universal.metabolites:
@@ -463,21 +444,6 @@ for met in all_mets:
         # is it used in any reaction intracellularly?
         # if not, cannot do anything about it, except curate in future
 
-for rxn_id in ['biomass','generic_biomass']:
-    with universal_model_for_species:
-        if rxn_id in [r.id for r in model.reactions]:
-            logger.info(rxn_id+' is present')
-            rxn = model.reactions.get_by_id(rxn_id).copy()
-            mets = [x.metabolites for x in [rxn]]
-            all_keys = set().union(*(d.keys() for d in mets))
-            for key in all_keys:
-                if key.id not in [m.id for m in universal_model_for_species.metabolites]:
-                    universal_model_for_species.add_metabolites([key.copy()])
-            universal_model_for_species.add_reactions([rxn.copy()])
-            universal_model_for_species.objective = rxn_id
-            f = universal_model_for_species.slim_optimize()
-            logger.info('at this stage (3), the universal model is able to make {} units of {}'.format(f,rxn_id))
-
 add_reactions_list = hf.flatten_mixed_list(add_reactions_list)
 df = pd.DataFrame({'rxns_added':add_reactions_list})
 df.to_csv('gapfilling_additions_{0}_tasks.csv'.format(SPECIES_ID))
@@ -500,20 +466,31 @@ logger.info(len(set(add_reactions_list)))
 logger.info('no. metabolites added:')
 logger.info(len(set(add_mets_list)))
 
+universal_model_for_species_temp = universal_model_for_species.copy()
+for rxn in model.reactions:
+    if rxn.id in [r.id for r in universal_model_for_species_temp.reactions]:
+        universal_model_for_species_temp.remove_reactions([universal_model_for_species_temp.reactions.get_by_id(rxn.id)])
+    mets = [x.metabolites for x in [rxn]]
+    all_keys = set().union(*(d.keys() for d in mets))
+    for key in all_keys:
+        if key.id not in [m.id for m in universal_model_for_species_temp.metabolites]:
+            universal_model_for_species_temp.add_metabolites([key.copy()])
+    universal_model_for_species_temp.add_reactions([rxn.copy()])
+universal_model_for_species_temp.repair()
+
 for rxn_id in ['biomass','generic_biomass']:
-    with universal_model_for_species:
+    with universal_model_for_species_temp:
         if rxn_id in [r.id for r in model.reactions]:
             logger.info(rxn_id+' is present')
-            rxn = model.reactions.get_by_id(rxn_id).copy()
-            mets = [x.metabolites for x in [rxn]]
-            all_keys = set().union(*(d.keys() for d in mets))
-            for key in all_keys:
-                if key.id not in [m.id for m in universal_model_for_species.metabolites]:
-                    universal_model_for_species.add_metabolites([key.copy()])
-            universal_model_for_species.add_reactions([rxn.copy()])
-            universal_model_for_species.objective = rxn_id
-            f = universal_model_for_species.slim_optimize()
-            logger.info('at this stage (2), the universal model is able to make {} units of {}'.format(f,rxn_id))
+            if rxn_id == 'biomass':
+                universal_model_for_species_temp.remove_reactions(\
+                [universal_model_for_species_temp.reactions.get_by_id('generic_biomass')])
+            else: universal_model_for_species_temp.remove_reactions(\
+                  [universal_model_for_species_temp.reactions.get_by_id('biomass')])
+            universal_model_for_species_temp.repair()
+            universal_model_for_species_temp.objective = rxn_id
+            f = universal_model_for_species_temp.slim_optimize()
+            logger.info('at this stage (1), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 gf_mod_list1 = list()
 gf_mod_list2 = list()
@@ -551,7 +528,7 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
         if len(solution) >= 1:
             for rxn_id in solution:
                 add_reactions_list.append(gf_universal.reactions.get_by_id(rxn_id).copy())
-                gf_mod_list1.append(gf_universal.reactions.get_by_id(rxn_id).copy())
+                gf_mod_list1.append(gf_universal.reactions.get_by_id(rxn_id).id)
     df = pd.DataFrame({'rxns_added':gf_mod_list1})
     df.to_csv('gapfilling_additions_{0}_generic_biomass.csv'.format(SPECIES_ID_old))
     logger.info("wrote generic biomass file")
@@ -559,18 +536,17 @@ else:
     logger.info('error: no generic biomass reaction')
 
 for rxn_id in ['biomass','generic_biomass']:
-    with universal_model_for_species:
+    with universal_model_for_species_temp:
         if rxn_id in [r.id for r in model.reactions]:
             logger.info(rxn_id+' is present')
-            rxn = model.reactions.get_by_id(rxn_id).copy()
-            mets = [x.metabolites for x in [rxn]]
-            all_keys = set().union(*(d.keys() for d in mets))
-            for key in all_keys:
-                if key.id not in [m.id for m in universal_model_for_species.metabolites]:
-                    universal_model_for_species.add_metabolites([key.copy()])
-            universal_model_for_species.add_reactions([rxn.copy()])
-            universal_model_for_species.objective = rxn_id
-            f = universal_model_for_species.slim_optimize()
+            if rxn_id == 'biomass':
+                universal_model_for_species_temp.remove_reactions(\
+                [universal_model_for_species_temp.reactions.get_by_id('generic_biomass')])
+            else: universal_model_for_species_temp.remove_reactions(\
+                  [universal_model_for_species_temp.reactions.get_by_id('biomass')])
+            universal_model_for_species_temp.repair()
+            universal_model_for_species_temp.objective = rxn_id
+            f = universal_model_for_species_temp.slim_optimize()
             logger.info('at this stage (2), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 if 'biomass' in [r.id for r in model.reactions]:
@@ -606,7 +582,7 @@ if 'biomass' in [r.id for r in model.reactions]:
         if len(solution) >= 1:
             for rxn_id in solution:
                 add_reactions_list.append(gf_universal.reactions.get_by_id(rxn_id).copy())
-                gf_mod_list2.append(gf_universal.reactions.get_by_id(rxn_id).copy())
+                gf_mod_list2.append(gf_universal.reactions.get_by_id(rxn_id).id)
     df = pd.DataFrame({'rxns_added':gf_mod_list2})
     df.to_csv('gapfilling_additions_{0}_species_biomass.csv'.format(SPECIES_ID_old))
     if SPECIES_ID in plasmodb:
@@ -635,7 +611,7 @@ logger.info('added reactions for biomass gapfill')
 model.repair()
 
 os.chdir(model_path)
-cobra.io.save_json_model(model, 'gf_'+SPECIES_ID+'.json')
-cobra.io.write_sbml_model(model,'gf_'+SPECIES_ID+'.xml')
+#cobra.io.save_json_model(model, 'gf_{}{}.json'.format(ortho,SPECIES_ID))
+cobra.io.write_sbml_model(model,'gf_{}{}.xml'.format(ortho,SPECIES_ID))
     
     
