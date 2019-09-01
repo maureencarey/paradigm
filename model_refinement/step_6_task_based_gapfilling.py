@@ -158,7 +158,7 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     if solution.status != OPTIMAL: logger.info('INFEASIBLE PFBA SOLUTION')
     logger.info(solution.status)
     filtered_solution = {rxn:solution.fluxes[rxn] for rxn in\
-        get_fluxes if abs(solution.fluxes[rxn]) > 1E-15}
+        get_fluxes if abs(solution.fluxes[rxn]) > 0}
     add_rxns = [universal_model_ex.reactions.get_by_id(rxn).copy() for \
                 rxn in filtered_solution.keys()]
     logger.info(len(add_rxns))

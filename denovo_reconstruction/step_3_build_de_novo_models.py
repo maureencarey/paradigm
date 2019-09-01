@@ -38,7 +38,7 @@ og_path = "/home/mac9jc/paradigm/"
 
 # universal reaction bag for model generation
 os.chdir(model_path)
-universal_model = cobra.io.load_json_model('universal_model_updated.json')
+universal_model = cobra.io.read_sbml_model('universal_model_updated2.xml')
 universal_model = hf.update_universal_model(universal_model)
 os.chdir(data_path)
 logging.info('loaded universal')
@@ -372,6 +372,16 @@ for m in model.metabolites:
     list_om2.append(hf.get_comp(model,m.id))
 if set(list_om) != set(list_om2):
     logging.info('error - extra compartments are present, pruning of unused metabolites did not work')
+
+compartment_dict = {'c': 'cytoplasm', 'e': 'extracellular', 'm': 'mitochondrion', 'fv': 'food vacuole', 'ap':'apicoplast','k':'kinetoplast','glc':'glycosome', 'p':'periplasm','x$
+for met in model.metabolites:
+    if met.compartment == '':
+        comp = hf.get_comp(model,met.id)
+        comp = comp[1:]
+        if comp in compartment_dict:
+            comp_use = compartment_dict[comp]
+        else: comp_use = 'no compartment'
+        model.metabolites.get_by_id(met.id).compartment = comp_use
 
 model.repair()
 os.chdir(model_path)
