@@ -51,7 +51,7 @@ else: ortho = ''
 day = datetime.now().strftime('%d_%m_%Y')
 logging.basicConfig(filename='step6_{}{}_{}.log'.format(ortho,SPECIES_ID_old,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
-logger.info('BEGIN STEP 6')
+logger.info('BEGIN STEP 6 for '+SPECIES_ID)
     
 os.chdir(model_path)
 model = cobra.io.load_json_model(model_fname)
@@ -60,7 +60,8 @@ model.solver = 'glpk'
 logger.info('loaded model')
 
 def validate(original_model, reactions):
-    with original_model as model2:
+    model2 = original_model.copy()
+    with model2:
         mets = [x.metabolites for x in reactions]
         all_keys = set().union(*(d.keys() for d in mets))
         for key in all_keys:
@@ -157,10 +158,12 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     if solution.status != OPTIMAL: logger.info('INFEASIBLE PFBA SOLUTION')
     logger.info(solution.status)
     filtered_solution = {rxn:solution.fluxes[rxn] for rxn in\
-        get_fluxes if abs(solution.fluxes[rxn]) > 1E-10}
+        get_fluxes if abs(solution.fluxes[rxn]) > 1E-15}
     add_rxns = [universal_model_ex.reactions.get_by_id(rxn).copy() for \
                 rxn in filtered_solution.keys()]
+    logger.info(len(add_rxns))
     cycle_reactions = set([rxn.id for rxn in add_rxns])
+    logger.info(len(cycle_reactions))
                 
     # validate that the proposed solution restores flux through the
     # objective in the original model
@@ -374,19 +377,20 @@ for met in all_mets:
         gf_model.reactions.get_by_id('EX_'+extracel_met).upper_bound = 0.
         if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
             # is gapfilling even possible?
-            with gf_universal:
+            gf_universal_temp = gf_universal.copy()
+            with gf_universal_temp:
                 for rxn in gf_model.reactions:
-                    if rxn.id in [r.id for r in gf_universal.reactions]:
-                        gf_universal.remove_reactions([gf_universal.reactions.get_by_id(rxn.id)])
+                    if rxn.id in [r.id for r in gf_universal_temp.reactions]:
+                        gf_universal_temp.remove_reactions([gf_universal_temp.reactions.get_by_id(rxn.id)])
                     mets = [x.metabolites for x in [rxn]]
                     all_keys = set().union(*(d.keys() for d in mets))
                     for key in all_keys:
-                        if key.id not in [m.id for m in gf_universal.metabolites]:
-                            gf_universal.add_metabolites([key.copy()])
-                    gf_universal.add_reactions([rxn.copy()])
-                gf_universal.repair()
-                gf_universal.objective = 'DM_'+cyto_met
-                if gf_universal.slim_optimize() < 0.01:
+                        if key.id not in [m.id for m in gf_universal_temp.metabolites]:
+                            gf_universal_temp.add_metabolites([key.copy()])
+                    gf_universal_temp.add_reactions([rxn.copy()])
+                gf_universal_temp.repair()
+                gf_universal_temp.objective = 'DM_'+cyto_met
+                if gf_universal_temp.slim_optimize() < 0.01:
                     logger.info('INFEASBILE: gapfilling is not possible for production of '+extracel_met)
 
             # if yes, gapfill
@@ -445,7 +449,7 @@ for met in all_mets:
         # if not, cannot do anything about it, except curate in future
 
 add_reactions_list = hf.flatten_mixed_list(add_reactions_list)
-df = pd.DataFrame({'rxns_added':add_reactions_list})
+df = pd.DataFrame({'rxns_added':[r.id for r in add_reactions_list]})
 df.to_csv('gapfilling_additions_{0}_tasks.csv'.format(SPECIES_ID))
 
 for met in add_mets_list: # these are copies, GOOD
@@ -479,23 +483,25 @@ for rxn in model.reactions:
 universal_model_for_species_temp.repair()
 
 for rxn_id in ['biomass','generic_biomass']:
-    with universal_model_for_species_temp:
+    universal_model_for_species_temp_temp = universal_model_for_species_temp.copy()
+    with universal_model_for_species_temp_temp:
         if rxn_id in [r.id for r in model.reactions]:
             logger.info(rxn_id+' is present')
             if rxn_id == 'biomass':
-                universal_model_for_species_temp.remove_reactions(\
-                [universal_model_for_species_temp.reactions.get_by_id('generic_biomass')])
-            else: universal_model_for_species_temp.remove_reactions(\
-                  [universal_model_for_species_temp.reactions.get_by_id('biomass')])
-            universal_model_for_species_temp.repair()
-            universal_model_for_species_temp.objective = rxn_id
-            f = universal_model_for_species_temp.slim_optimize()
+                universal_model_for_species_temp_temp.remove_reactions(\
+                [universal_model_for_species_temp_temp.reactions.get_by_id('generic_biomass')])
+            else: universal_model_for_species_temp_temp.remove_reactions(\
+                  [universal_model_for_species_temp_temp.reactions.get_by_id('biomass')])
+            universal_model_for_species_temp_temp.repair()
+            universal_model_for_species_temp_temp.objective = rxn_id
+            f = universal_model_for_species_temp_temp.slim_optimize()
             logger.info('at this stage (1), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 gf_mod_list1 = list()
 gf_mod_list2 = list()
+add_reactions_list = list()
 os.chdir(data_path)
-if 'generic_biomass' in [r.id for r in model.reactions]:
+if 'generic_biomass' in [r.id for r in model.reactions] and {}:
     logger.info('beginning generic biomass gapfill')
     gf_model = model.copy()
     gf_model.reactions.get_by_id('generic_biomass').lower_bound = 0.
@@ -508,19 +514,20 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
     gf_model.objective = 'generic_biomass'
     if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
         # is gapfilling even possible?
-        with gf_universal:
+        gf_universal_temp = gf_universal.copy()
+        with gf_universal_temp:
             for rxn in gf_model.reactions:
-                if rxn.id in [r.id for r in gf_universal.reactions]:
-                    gf_universal.remove_reactions([gf_universal.reactions.get_by_id(rxn.id)])
+                if rxn.id in [r.id for r in gf_universal_temp.reactions]:
+                    gf_universal_temp.remove_reactions([gf_universal_temp.reactions.get_by_id(rxn.id)])
                 mets = [x.metabolites for x in [rxn]]
                 all_keys = set().union(*(d.keys() for d in mets))
                 for key in all_keys:
-                    if key.id not in [m.id for m in gf_universal.metabolites]:
-                        gf_universal.add_metabolites([key.copy()])
-                gf_universal.add_reactions([rxn.copy()])
-            gf_universal.repair()
-            gf_universal.objective = 'generic_biomass'
-            if gf_universal.slim_optimize() < 0.01:
+                    if key.id not in [m.id for m in gf_universal_temp.metabolites]:
+                        gf_universal_temp.add_metabolites([key.copy()])
+                gf_universal_temp.add_reactions([rxn.copy()])
+            gf_universal_temp.repair()
+            gf_universal_temp.objective = 'generic_biomass'
+            if gf_universal_temp.slim_optimize() < 0.01:
                 logger.info('INFEASBILE: gapfilling is not possible for generic biomass')
 
         # if yes, gapfill
@@ -536,17 +543,18 @@ else:
     logger.info('error: no generic biomass reaction')
 
 for rxn_id in ['biomass','generic_biomass']:
-    with universal_model_for_species_temp:
+    universal_model_for_species_temp_temp = universal_model_for_species_temp.copy()
+    with universal_model_for_species_temp_temp:
         if rxn_id in [r.id for r in model.reactions]:
             logger.info(rxn_id+' is present')
             if rxn_id == 'biomass':
-                universal_model_for_species_temp.remove_reactions(\
-                [universal_model_for_species_temp.reactions.get_by_id('generic_biomass')])
-            else: universal_model_for_species_temp.remove_reactions(\
-                  [universal_model_for_species_temp.reactions.get_by_id('biomass')])
-            universal_model_for_species_temp.repair()
-            universal_model_for_species_temp.objective = rxn_id
-            f = universal_model_for_species_temp.slim_optimize()
+                universal_model_for_species_temp_temp.remove_reactions(\
+                [universal_model_for_species_temp_temp.reactions.get_by_id('generic_biomass')])
+            else: universal_model_for_species_temp_temp.remove_reactions(\
+                  [universal_model_for_species_temp_temp.reactions.get_by_id('biomass')])
+            universal_model_for_species_temp_temp.repair()
+            universal_model_for_species_temp_temp.objective = rxn_id
+            f = universal_model_for_species_temp_temp.slim_optimize()
             logger.info('at this stage (2), the universal model is able to make {} units of {}'.format(f,rxn_id))
 
 if 'biomass' in [r.id for r in model.reactions]:
@@ -562,19 +570,20 @@ if 'biomass' in [r.id for r in model.reactions]:
     gf_model.objective = 'biomass'
     if not (gf_model.slim_optimize() > 0.01): # gapfill if can't produce
         # is gapfilling even possible?
-        with gf_universal:
+        gf_universal_temp = gf_universal.copy()
+        with gf_universal_temp:
             for rxn in gf_model.reactions:
-                if rxn.id in [r.id for r in gf_universal.reactions]:
-                    gf_universal.remove_reactions([gf_universal.reactions.get_by_id(rxn.id)])
+                if rxn.id in [r.id for r in gf_universal_temp.reactions]:
+                    gf_universal_temp.remove_reactions([gf_universal_temp.reactions.get_by_id(rxn.id)])
                 mets = [x.metabolites for x in [rxn]]
                 all_keys = set().union(*(d.keys() for d in mets))
                 for key in all_keys:
-                    if key.id not in [m.id for m in gf_universal.metabolites]:
-                        gf_universal.add_metabolites([key.copy()])
-                gf_universal.add_reactions([rxn.copy()])
-            gf_universal.repair()
-            gf_universal.objective = 'biomass'
-            if gf_universal.slim_optimize() < 0.01:
+                    if key.id not in [m.id for m in gf_universal_temp.metabolites]:
+                        gf_universal_temp.add_metabolites([key.copy()])
+                gf_universal_temp.add_reactions([rxn.copy()])
+            gf_universal_temp.repair()
+            gf_universal_temp.objective = 'biomass'
+            if gf_universal_temp.slim_optimize() < 0.01:
                 logger.info('INFEASBILE: gapfilling is not possible for specific biomass')
 
         # if yes, gapfill
@@ -599,7 +608,7 @@ logger.info(gf_mod_list1)
 logger.info('going to add these reactions for specific biomass gapfill:')
 logger.info(gf_mod_list2)
 
-for rxn in add_reactions_list2:
+for rxn in add_reactions_list:
     if rxn.id not in [r.id for r in model.reactions]:
         mets = [x.metabolites for x in [rxn]]
         all_keys = set().union(*(d.keys() for d in mets))
