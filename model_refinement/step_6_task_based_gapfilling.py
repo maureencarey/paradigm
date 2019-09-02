@@ -49,7 +49,7 @@ if ortho_temp: ortho = 'no_ortho_'
 else: ortho = ''
 
 day = datetime.now().strftime('%d_%m_%Y')
-logging.basicConfig(filename='step6_{}{}_{}.log'.format(ortho,SPECIES_ID_old,day), level=logging.INFO, filemode='w')
+logging.basicConfig(filename='step6_{}{}_{}.log'.format(ortho,SPECIES_ID,day), level=logging.INFO, filemode='w')
 logger = logging.getLogger(__name__)
 logger.info('BEGIN STEP 6 for '+SPECIES_ID)
     
@@ -120,7 +120,7 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     original_reaction_ids = [reaction.id for reaction in original_model_reactions]
 
     # Add the pFBA constraints and objective (minimizes sum of fluxes)
-    add_pfba(gapfiller)
+    add_pfba(gapfiller, objective = objective_reaction_id, fraction_of_optimum = 0.001)
 
     # ORDER MATTERS HERE: penalize adding exchange reactions
     coefficients = (gapfiller.objective.get_linear_coefficients(gapfiller.variables))
@@ -149,9 +149,9 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     gapfiller.objective.set_linear_coefficients(coefficients)
                              
     # set a constraint on flux through the original objective
-    for reaction in original_objective.keys():
-        logger.info({'this is the objective, is it what i expect?':gapfiller.reactions.get_by_id(reaction).id})
-        gapfiller.reactions.get_by_id(reaction).lower_bound = 0.01
+    #for reaction in original_objective.keys():
+        #logger.info({'this is the objective, is it what i expect?':gapfiller.reactions.get_by_id(reaction).id})
+        #gapfiller.reactions.get_by_id(reaction).lower_bound = 0.01
 
     # get solution
     solution = gapfiller.optimize()
@@ -450,7 +450,7 @@ for met in all_mets:
 
 add_reactions_list = hf.flatten_mixed_list(add_reactions_list)
 df = pd.DataFrame({'rxns_added':[r.id for r in add_reactions_list]})
-df.to_csv('gapfilling_additions_{0}_tasks.csv'.format(SPECIES_ID))
+df.to_csv('gapfilling_additions_{}{}_tasks.csv'.format(ortho,SPECIES_ID))
 
 for met in add_mets_list: # these are copies, GOOD
     if met.id not in [m.id for m in model.metabolites]:
@@ -490,8 +490,9 @@ for rxn_id in ['biomass','generic_biomass']:
             if rxn_id == 'biomass':
                 universal_model_for_species_temp_temp.remove_reactions(\
                 [universal_model_for_species_temp_temp.reactions.get_by_id('generic_biomass')])
-            else: universal_model_for_species_temp_temp.remove_reactions(\
-                  [universal_model_for_species_temp_temp.reactions.get_by_id('biomass')])
+            elif 'biomass' in [r.id for r in universal_model_for_species_temp_temp.reactions]: 
+                universal_model_for_species_temp_temp.remove_reactions(\
+                [universal_model_for_species_temp_temp.reactions.get_by_id('biomass')])
             universal_model_for_species_temp_temp.repair()
             universal_model_for_species_temp_temp.objective = rxn_id
             f = universal_model_for_species_temp_temp.slim_optimize()
@@ -501,7 +502,7 @@ gf_mod_list1 = list()
 gf_mod_list2 = list()
 add_reactions_list = list()
 os.chdir(data_path)
-if 'generic_biomass' in [r.id for r in model.reactions] and {}:
+if 'generic_biomass' in [r.id for r in model.reactions]:
     logger.info('beginning generic biomass gapfill')
     gf_model = model.copy()
     gf_model.reactions.get_by_id('generic_biomass').lower_bound = 0.
@@ -550,8 +551,9 @@ for rxn_id in ['biomass','generic_biomass']:
             if rxn_id == 'biomass':
                 universal_model_for_species_temp_temp.remove_reactions(\
                 [universal_model_for_species_temp_temp.reactions.get_by_id('generic_biomass')])
-            else: universal_model_for_species_temp_temp.remove_reactions(\
-                  [universal_model_for_species_temp_temp.reactions.get_by_id('biomass')])
+            elif 'biomass' in [r.id for r in universal_model_for_species_temp_temp.reactions]: 
+                universal_model_for_species_temp_temp.remove_reactions(\
+                [universal_model_for_species_temp_temp.reactions.get_by_id('biomass')])            
             universal_model_for_species_temp_temp.repair()
             universal_model_for_species_temp_temp.objective = rxn_id
             f = universal_model_for_species_temp_temp.slim_optimize()
