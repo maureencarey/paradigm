@@ -17,6 +17,12 @@ import logging
 from datetime import datetime
 from datetime import date
 
+
+data_path = "/home/mac9jc/paradigm/data"
+model_path = "/home/mac9jc/paradigm/models"
+log_file_path = "/home/mac9jc/paradigm/model_generation_logs"
+os.chdir(log_file_path)
+
 parser = argparse.ArgumentParser(description='Read in the species model')
 parser.add_argument('model_file')
 args = parser.parse_args()
@@ -33,8 +39,6 @@ logger = logging.getLogger(__name__)
 SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 logger.info('BEGIN STEP 5')
 
-data_path = "/home/mac9jc/paradigm/data"
-model_path = "/home/mac9jc/paradigm/models"
 os.chdir(model_path)
 iPfal19 = cobra.io.load_json_model("iPfal19.json")
 
