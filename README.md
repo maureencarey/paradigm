@@ -163,6 +163,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # clean things up - especially log files
     sbatch run_these/pipeline_cleanup.slurm
     # # move things to convenient locations
+    sbatch run_these/add_annotation.slurm 
     mv data/*.out data/slurm_outputs
     mv data/model_modifications_* data/model_modifications
     mv data/orthology_modifications_* data/ortho_modifications

@@ -48,6 +48,12 @@ for file in glob.glob("gf_*.json"):
     
     model = cobra.io.load_json_model(file)
 
+    # add exchange for all extracellular mets
+    for met in model.metabolites:
+        if met.id.endswith('_e'):
+            if 'EX_'+met.id not in [r.id for r in model.reactions]:
+                model.add_boundary(met, type="exchange", lb = -1000., ub = 1000.)
+
     compartment_use = {key:value for key, value in compartment_dict.items() if key in compartment}
     model.compartments = compartment_use
     model.repair()
@@ -94,5 +100,5 @@ for file in glob.glob("gf_*.json"):
     model.annotation["updated"] = day
     
     cobra.io.save_json_model(model,file) 
-    cobra.io.write_sbml_model(model, "extended_universal_model_for_gapfilling.xml")
+    cobra.io.write_sbml_model(model, "final_{}.xml".format(SPECIES_ID))
     logger.info('done with {}'.format(file))
