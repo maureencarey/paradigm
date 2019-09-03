@@ -1,0 +1,180 @@
+,rxns_added
+0,NH4t: nh4_e <=> nh4_c
+1,PLDPE_MYRS_MYRS_c: h2o_c + pe140_c --> etha_c + h_c + pa140_c
+2,GLCt1: glc__D_e <=> glc__D_c
+3,TRPO2: o2_c + trp__L_c --> Lfmkynr_c
+4,H2O2t: h2o2_e <=> h2o2_c
+5,UREA: h2o_c + 2.0 h_c + urea_c --> co2_c + 2.0 nh4_c
+6,FACOAE141: h2o_c + tdecoa_c --> coa_c + h_c + ttdcea_c
+7,GTHRDH_syn: gthrd_c + h2o_c --> cgly_c + glu__L_c
+8,ACITL: atp_c + cit_c + coa_c --> accoa_c + adp_c + oaa_c + pi_c
+9,lipid10: pe_e <=> pe120_e + pe140_e + pe141_e + pe160_e + pe161_e + pe180_e + pe181_e
+10,PCm: atp_m + hco3_m + pyr_m --> adp_m + h_m + oaa_m + pi_m
+11,GTHOXti: gthox_e --> gthox_c
+12,r1801: cys__L_e + na1_e + pro__L_c --> cys__L_c + na1_c + pro__L_e
+13,T4HCINNMFM: 34hpl_m --> T4hcinnm_m + h2o_m
+14,PDYXPT_c: pydam_c + pyr_c --> ala__L_c + pydx_c
+15,lipid3: dag_c <=> 12dgr120_c + 12dgr140_c + 12dgr141_c + 12dgr160_c + 12dgr161_c + 12dgr180_c + 12dgr181_c
+16,FAOXC226: c226coa_m + 10.0 coa_m + 4.0 fad_m + 10.0 h2o_m + 10.0 nad_m --> 11.0 accoa_m + 4.0 fadh2_m + 10.0 h_m + 10.0 nadh_m
+17,O2tm: o2_c --> o2_m
+18,GLPASE2a: glygn3_c + 7.0 pi_c --> Tyr_ggn_c + 7.0 g1p_c
+19,NTRIR4ppc: 2.0 h_e + 3.0 mql8_c + no2_e --> 2.0 h2o_e + 3.0 mqn8_c + nh4_e
+20,HXAt3: hxa_c --> hxa_e
+21,LYSPHEILEt: h_e + lyspheile_e --> h_c + lyspheile_c
+22,CYSLY3: cys__L_c + h_c + nadph_c --> ala__L_c + h2s_c + nadp_c
+23,FACOAE100: dcacoa_c + h2o_c --> coa_c + dca_c + h_c
+24,THRASNTYRt: h_e + thrasntyr_e --> h_c + thrasntyr_c
+25,THMMPt4_1: h2o_c + thmmp_e --> h2o_e + thmmp_c
+26,CO2tmt: co2_m <=> co2_c
+27,PEFLIP: atp_c + h2o_c + pe_e --> adp_c + h_c + pe_c + pi_c
+28,SK_trnatrp_c: trnatrp_c <=> 
+29,VALTA: akg_c + val__L_c <=> 3mob_c + glu__L_c
+30,DAGAH_DHA_DHA_c: 12dgr226n3_c + h2o_c --> crvnc_c + h_c + mag226n3_c
+31,LYSTYRILEt: h_e + lystyrile_e --> h_c + lystyrile_c
+32,4HBZFm: 4hbzcoa_m + h2o_m --> 4hbz_m + coa_m + h_m
+33,MCITLm: 2mcit_m --> pyr_m + succ_m
+34,HMR_4957: cit_m --> cit_c
+35,MAGAH1819Z_c: h2o_c + mag1819Z_c --> glyc_c + h_c + ocdcea_c
+36,SK_trnaphe_c: trnaphe_c <=> 
+37,GMPt6: gmp_e + h_e --> gmp_c + h_c
+38,SK_trnaarg_c: trnaarg_c <=> 
+39,LPLIPAL1E141: 1agpe141_c + h2o_c --> g3pe_c + h_c + ttdcea_c
+40,HKYNH: h2o_c + hLkynr_c --> 3hanthrn_c + ala__L_c
+41,PPDK: atp_c + pi_c + pyr_c --> amp_c + h_c + pep_c + ppi_c
+42,OPHHXm: 2oph_m + nadph_m + 0.5 o2_m --> 2ohph_m + h2o_m + nadp_m
+43,EX_lyspheile_e: lyspheile_e <=> 
+44,ARTFR213_cho: c226coa_c + 0.375 coa_m + 3.0 fadh2_m + 3.0 h_m + 3.0 nadph_m --> 1.375 R2coa_cho_c + 3.0 fad_m + 3.0 nadp_m
+45,PGCD: 3pg_c + nad_c --> 3php_c + h_c + nadh_c
+46,ARTPLM1: Rtotalcoa_c --> pmtcoa_c
+47,PAPA_OLE_PALM: h2o_c + pa1819Z160_c --> 12dgr1819Z160_c + pi_c
+48,DAGAH_PALM_PALM_c: 12dgr160_c + h2o_c --> h_c + hdca_c + mag160_c
+49,DAPDC: 26dap__M_c + h_c --> co2_c + lys__L_c
+50,AGPATCOA_MYRS_MYRS_c: 1tdecg3p_c + tdcoa_c --> coa_c + pa140_c
+51,PIPLC: h2o_c + pail_c --> dag_c + h_c + mi1p__D_c
+52,SK_trnatyr_c: trnatyr_c <=> 
+53,ARTCOAL1: Rtotal_c + coa_c --> Rtotalcoa_c
+54,MALS: accoa_c + glx_c + h2o_c --> coa_c + h_c + mal__L_c
+55,SK_trnaala_c: trnaala_c <=> 
+56,FACOAE160: h2o_c + pmtcoa_c --> coa_c + h_c + hdca_c
+57,SK_trnaval_c: trnaval_c <=> 
+58,HBZOPTm: 4hbz_m + octdp_m --> 3ophb_m + 2.0 ppi_m
+59,ILEARGILEr: 2.0 h2o_c + ileargile_c --> arg__L_c + 2.0 ile__L_c
+60,SK_trnagln_c: trnagln_c <=> 
+61,FACOAE80: h2o_c + occoa_c --> coa_c + h_c + octa_c
+62,GMPR: gmp_c + 2.0 h_c + nadph_c --> imp_c + nadp_c + nh4_c
+63,EX_ileargile_e: ileargile_e <=> 
+64,MMSDHir: coa_c + mmalsa__S_c + nad_c --> co2_c + nadh_c + ppcoa_c
+65,FBA: fdp_c <=> dhap_c + g3p_c
+66,SACCD1: L2aadp6sa_c + glu__L_c + h_c + nadph_c --> h2o_c + nadp_c + saccrp__L_c
+67,PAPA1819Z1819Z: h2o_c + pa1819Z1819Z_c --> 12dgr1819Z1819Z_c + pi_c
+68,EX_fadh2_c: fadh2_c <=> 
+69,PLDPE_PALM_PALM_c: h2o_c + pe160_c --> etha_c + h_c + pa160_c
+70,34HPLtm: 34hpl_c + h_c --> 34hpl_m + h_m
+71,METHFtxc:  --> h_c + methf_c
+72,THRASNTYRr: 2.0 h2o_c + thrasntyr_c --> asn__L_c + thr__L_c + tyr__L_c
+73,HMGLB: 2.0 h_c + hb_c --> 36.0 ala__L_c + 6.0 arg__L_c + 10.0 asn__L_c + 15.0 asp__L_c + 3.0 cys__L_c + 4.0 gln__L_c + 12.0 glu__L_c + 20.0 gly_c + h2o2_c + 19.0 his__L_c + 36.0 leu__L_c + 22.0 lys__L_c + 5.0 met__L_c + 15.0 phe__L_c + pheme_fv + 14.0 pro__L_c + 16.0 ser__L_c + 16.0 thr__L_c + 3.0 trp__L_c + 6.0 tyr__L_c + 31.0 val__L_c
+74,HISD_c: 3.0 h2o_c + his__L_c --> frmd_c + glu__L_c + nh4_c
+75,EX_thmmp_e: thmmp_e <=> 
+76,SK_trnamet_c: trnamet_c <=> 
+77,EX_ptd1ino_e: ptd1ino_e <=> 
+78,GLBRAN: glygn1_c --> glygn2_c
+79,EX_hb_e: hb_e <=> 
+80,TRNFE: 2.0 fe3_c + nadh_c --> 2.0 fe2_c + h_c + nad_c
+81,PLIPA2E141: h2o_c + pe141_c --> 1agpe141_c + h_c + ttdcea_c
+82,HACOADr: 3hmp_c + nad_c --> h_c + mmalsa__S_c + nadh_c
+83,R07456: g3p_c + gln__L_c + ru5p__D_c <=> glu__L_c + pydx5p_c
+84,SK_trnacys_c: trnacys_c <=> 
+85,EX_lystyrile_e: lystyrile_e <=> 
+86,MAGAH2264Z7Z10Z13Z16Z19Z_c: h2o_c + mag226n3_c --> crvnc_c + glyc_c + h_c
+87,PYDXO: 2.0 h2o_c + nh4_c + 0.5 o2_c + pydx_c --> 2.0 h2o2_c + pydam_c
+88,C226CPT1: c226coa_c + crn_c --> c226crn_c + coa_c
+89,LALGP: LalaLglu_c + h2o_c --> ala__L_c + glu__L_c
+90,PCLAD: cmusa_c + h_c --> am6sa_c + co2_c
+91,MAGAH160: h2o_c + mag160_c --> glyc_c + h_c + hdca_c
+92,FACOAE120: ddcacoa_c + h2o_c --> coa_c + ddca_c + h_c
+93,PTD1INOt: ptd1ino_c <=> ptd1ino_e
+94,EX_thrasntyr_e: thrasntyr_e <=> 
+95,LADGMDH: LalaDgluMdap_c + h2o_c --> 26dap__M_c + LalaDglu_c
+96,SK_trnagly_c: trnagly_c <=> 
+97,G3PAT140_c: glyc3p_c + tdcoa_c --> 1tdecg3p_c + coa_c
+98,PSP_L: h2o_c + pser__L_c --> pi_c + ser__L_c
+99,FACOAE60: h2o_c + hxcoa_c --> coa_c + h_c + hxa_c
+100,KYN3OX: Lkynr_c + h_c + nadph_c + o2_c --> h2o_c + hLkynr_c + nadp_c
+101,ACOADH2: 2.0 ibcoa_c + o2_c --> 2.0 2mp2coa_c + 2.0 h2o_c
+102,PTRCtex2: ptrc_c --> ptrc_e
+103,NNDPR: 2.0 h_c + prpp_c + quln_c --> co2_c + nicrnt_c + ppi_c
+104,SK_trnaasn_c: trnaasn_c <=> 
+105,PHEPHETHRr: 2.0 h2o_c + phephethr_c --> 2.0 phe__L_c + thr__L_c
+106,ILEARGILEt: h_e + ileargile_e --> h_c + ileargile_c
+107,FACOAE180: h2o_c + stcoa_c --> coa_c + h_c + ocdca_c
+108,COUCOAFm: T4hcinnm_m + atp_m + coa_m --> amp_m + coucoa_m + ppi_m
+109,NAt5: na1_c + nh4_e --> na1_e + nh4_c
+110,r1400: crn_m + ppcoa_c --> crn_c + ppcoa_m
+111,OCTDPtmt: octdp_m <=> octdp_c
+112,HCO3Em: co2_m + h2o_m --> h_m + hco3_m
+113,DAGK160: 12dgr160_c + atp_c --> adp_c + h_c + pa160_c
+114,GLPASE2: glygn3_c + 7.0 h2o_c --> Tyr_ggn_c + 7.0 glc__D_c
+115,lipid1: Rtotal_c <=> dca_c + ddca_c + hdca_c + hdcea_c + hxa_c + ocdca_c + ocdcea_c + octa_c + ttdca_c + ttdcea_c
+116,EX_phephethr_e: phephethr_e <=> 
+117,OPHBDCm: 3ophb_m + h_m --> 2oph_m + co2_m
+118,NADK: atp_c + nad_c --> adp_c + h_c + nadp_c
+119,SK_trnaile_c: trnaile_c <=> 
+120,LYSPHEILEr: 2.0 h2o_c + lyspheile_c --> ile__L_c + lys__L_c + phe__L_c
+121,SK_trnathr_c: trnathr_c <=> 
+122,GTHPe: 2.0 gthrd_e + h2o2_e --> gthox_e + 2.0 h2o_e
+123,SACCD2: h2o_c + nad_c + saccrp__L_c <=> akg_c + h_c + lys__L_c + nadh_c
+124,HIBHr: h2o_c + hibcoa_c --> 3hmp_c + coa_c + 2.0 h_c
+125,pail_uptake: pail_e <=> pail_c
+126,NDH1_3uc: co2_e + h2o_c + nadph_c + pq_c --> 3.0 h_c + hco3_c + nadp_c + pqh2_c
+127,MCITLmc: 2mcit_c --> pyr_c + succ_c
+128,GLDBRAN: dxtrn_c + h2o_c --> glc__D_c + glygn3_c
+129,4HBZCOAFm: coa_m + coucoa_m + h2o_m + nad_m --> 4hbzcoa_m + accoa_m + h_m + nadh_m
+130,FACOAL226: atp_c + coa_c + crvnc_c --> amp_c + c226coa_c + ppi_c
+131,MI1PP: h2o_c + mi1p__D_c --> inost_c + pi_c
+132,C226CRNt: c226crn_c --> c226crn_m
+133,SK_trnaleu_c: trnaleu_c <=> 
+134,H2Ot: h2o_e <=> h2o_c
+135,FADDP: fad_c + h2o_c --> amp_c + fmn_c + 2.0 h_c
+136,ACOAR7mc: h_c + hdd2coa_c + nadph_c --> nadp_c + pmtcoa_c
+137,SK_trnaser_c: trnaser_c <=> 
+138,SK_trnalys_c: trnalys_c <=> 
+139,QUILSYN: cmusa_c --> h2o_c + h_c + quln_c
+140,SK_trnapro_c: trnapro_c <=> 
+141,EX_pail_e: pail_e <=> 
+142,AM6SAD: am6sa_c + h2o_c + nad_c --> amuco_c + 2.0 h_c + nadh_c
+143,GLGNS1: ggn_c + 3.0 udpg_c --> glygn1_c + 3.0 h_c + 3.0 udp_c
+144,AMCOXO: amuco_c + h2o_c + h_c + nadph_c --> 2oxoadp_c + nadp_c + nh4_c
+145,GGNG: Tyr_ggn_c + 8.0 udpg_c --> ggn_c + 8.0 h_c + 8.0 udp_c
+146,3HAO: 3hanthrn_c + o2_c --> cmusa_c + h_c
+147,ASPTA6: ala__L_c + oaa_c --> asp__L_c + pyr_c
+148,LYSTYRILEr: 2.0 h2o_c + lystyrile_c --> ile__L_c + lys__L_c + tyr__L_c
+149,ICL: icit_c --> glx_c + succ_c
+150,Hfv: pheme_fv --> pheme_c
+151,GLNGLU: adp_c + glntrna_c + glu__L_c + pi_c <=> atp_c + gln__L_c + glutrna_c
+152,PHEMEtm: pheme_m <=> pheme_c
+153,FKYNH: Lfmkynr_c + h2o_c --> Lkynr_c + for_c + h_c
+154,AATA: 2oxoadp_c + glu__L_c --> L2aadp_c + akg_c
+155,NTRIR3ppc: 2.0 h_e + no2_e + 3.0 q8h2_c --> 2.0 h2o_e + nh4_e + 3.0 q8_c
+156,TMPK: atp_c + thmmp_c --> adp_c + thmpp_c
+157,UDPGtnic: atp_c + h2o_c --> adp_c + h_c + pi_c + udpg_c
+158,PHEPHETHRt: h_e + phephethr_e --> h_c + phephethr_c
+159,HMR_6782: 34hpp_c + h_c + nadh_c --> 34hpl_c + nad_c
+160,C226CPT2: c226crn_m + coa_m --> c226coa_m + crn_m
+161,SK_trnaasp_c: trnaasp_c <=> 
+162,lipid5: pe_c <=> pe120_c + pe140_c + pe141_c + pe160_c + pe161_c + pe180_c + pe181_c
+163,SK_trnahis_c: trnahis_c <=> 
+164,SULR_1: 3.0 h2o_c + h2s_c + 3.0 nadp_c --> 4.0 h_c + 3.0 nadph_c + so3_c
+165,lipid4: cdpdag_c <=> cdpdddecg_c + cdpdhdec9eg_c + cdpdhdecg_c + cdpdodec11eg_c + cdpdodecg_c + cdpdtdec7eg_c + cdpdtdecg_c
+166,PINOS: 0.01 cdpdag_c + inost_c --> cmp_c + h_c + 0.01 ptd1ino_c
+167,ACP1_FMN: fmn_c + h2o_c --> pi_c + ribflv_c
+168,PAPA161: h2o_c + pa161_c --> 12dgr161_c + pi_c
+169,RTOT2_cho: R2coa_cho_c --> Rtotalcoa_c
+170,lipid2: Rtotalcoa_c <=> dcacoa_c + ddcacoa_c + hdcoa_c + hxcoa_c + occoa_c + odecoa_c + pmtcoa_c + stcoa_c + tdcoa_c + tdecoa_c
+171,GLPASE1: glygn2_c + 3.0 pi_c --> dxtrn_c + 3.0 g1p_c
+172,AASAD2: L2aadp_c + atp_c + h_c + nadh_c --> L2aadp6sa_c + amp_c + nad_c + ppi_c
+173,RBK: atp_c + rib__D_c --> adp_c + h_c + r5p_c
+174,DAGAH_OLE_PALM_c: 12dgr1819Z160_c + h2o_c --> h_c + hdca_c + mag1819Z_c
+175,PGLc: 3.0 6pgl_c + 3.0 h2o_c --> 3.0 6pgc_c + 3.0 h_c
+176,HBtr: hb_e --> hb_c
+177,PSERT: 3php_c + glu__L_c --> akg_c + pser__L_c
+178,ALAGLUE: LalaDglu_c --> LalaLglu_c
