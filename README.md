@@ -164,7 +164,6 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # clean things up - especially log files
     sbatch run_these/pipeline_cleanup.slurm
     # # move things to convenient locations
-    sbatch run_these/add_annotation.slurm 
     mv data/*.out data/slurm_outputs
     mv data/model_modifications_* data/model_modifications
     mv data/orthology_modifications_* data/ortho_modifications
@@ -176,7 +175,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     sbatch run_these/follow_up_analyses/analyses_part3.slurm
     sbatch run_these/follow_up_analyses/analyses_part4.slurm
     sbatch run_these/follow_up_analyses/analyses_part5.slurm
-
+    sbatch run_these/add_annotation.slurm
     # # would like to run Memote again on all models
     ## need to move all xml gf models to other directory for memote
     # scp mac9jc@rivanna.hpc.virginia.edu:/home/mac9jc/paradigm/data/ortho_annotations_per_genome_17_05_2019.csv .    
