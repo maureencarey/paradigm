@@ -448,7 +448,7 @@ for met in all_mets:
         # if not, cannot do anything about it, except curate in future
 
 add_reactions_list = hf.flatten_mixed_list(add_reactions_list)
-df = pd.DataFrame({'rxns_added':[r.id for r in add_reactions_list]})
+df = pd.DataFrame({'rxns_added':list(set([r.id for r in add_reactions_list]))})
 df.to_csv('gapfilling_additions_{}{}_tasks.csv'.format(ortho,SPECIES_ID))
 
 for met in add_mets_list: # these are copies, GOOD
@@ -534,7 +534,7 @@ if 'generic_biomass' in [r.id for r in model.reactions]:
             for rxn_id in solution:
                 add_reactions_list.append(gf_universal.reactions.get_by_id(rxn_id).copy())
                 gf_mod_list1.append(gf_universal.reactions.get_by_id(rxn_id).id)
-    df = pd.DataFrame({'rxns_added':gf_mod_list1})
+    df = pd.DataFrame({'rxns_added':list(set(gf_mod_list1))})
     df.to_csv('gapfilling_additions_{0}_generic_biomass.csv'.format(SPECIES_ID_old))
     logger.info("wrote generic biomass file")
 else:
@@ -589,7 +589,7 @@ if 'biomass' in [r.id for r in model.reactions]:
             for rxn_id in solution:
                 add_reactions_list.append(gf_universal.reactions.get_by_id(rxn_id).copy())
                 gf_mod_list2.append(gf_universal.reactions.get_by_id(rxn_id).id)
-    df = pd.DataFrame({'rxns_added':gf_mod_list2})
+    df = pd.DataFrame({'rxns_added':list(set(gf_mod_list2))})
     df.to_csv('gapfilling_additions_{0}_species_biomass.csv'.format(SPECIES_ID_old))
     if SPECIES_ID in plasmodb:
         logger.info("wrote species biomass file")

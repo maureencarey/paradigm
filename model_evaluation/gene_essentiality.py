@@ -12,23 +12,23 @@ day = datetime.now().strftime('%d_%m_%Y')
 ## ##### get essential
 os.chdir("/home/mac9jc/paradigm/models")
 essentiality_screen_models = dict()
-essentiality_screen_models['TgondiiGT1'] = cobra.io.load_json_model('gf_TgondiiGT1.json')
-essentiality_screen_models['TgondiiME49'] = cobra.io.load_json_model('gf_TgondiiME49.json')
-essentiality_screen_models['Pfalciparum3D7'] = cobra.io.load_json_model('gf_Pfalciparum3D7.json')
-essentiality_screen_models['PbergheiANKA'] = cobra.io.load_json_model('gf_PbergheiANKA.json')
-essentiality_screen_models['PcynomolgiB'] = cobra.io.load_json_model('gf_PcynomolgiB.json')
-essentiality_screen_models['PvivaxSal1'] = cobra.io.load_json_model('gf_PvivaxSal1.json')
-essentiality_screen_models['ChominisTU502_2012'] = cobra.io.load_json_model('gf_ChominisTU502_2012.json')
-essentiality_screen_models['CparvumIowaII'] = cobra.io.load_json_model('gf_CparvumIowaII.json')
-essentiality_screen_models['PknowlesiH'] = cobra.io.load_json_model('gf_PknowlesiH.json')
-essentiality_screen_models['PcynomolgiB'] = cobra.io.load_json_model('gf_PcynomolgiB.json')
+essentiality_screen_models['TgondiiGT1'] = cobra.io.read_sbml_model('gf_no_ortho_TgondiiGT1.xml')
+essentiality_screen_models['TgondiiME49'] = cobra.io.read_sbml_model('gf_no_ortho_TgondiiME49.xml')
+essentiality_screen_models['Pfalciparum3D7'] = cobra.io.read_sbml_model('gf_Pfalciparum3D7.xml')
+essentiality_screen_models['PbergheiANKA'] = cobra.io.read_sbml_model('gf_PbergheiANKA.xml')
+essentiality_screen_models['PcynomolgiB'] = cobra.io.read_sbml_model('gf_PcynomolgiB.xml')
+essentiality_screen_models['PvivaxSal1'] = cobra.io.read_sbml_model('gf_PvivaxSal1.xml')
+essentiality_screen_models['ChominisTU502_2012'] = cobra.io.read_sbml_model('gf_no_ortho_ChominisTU502_2012.xml')
+essentiality_screen_models['CparvumIowaII'] = cobra.io.read_sbml_model('gf_no_ortho_CparvumIowaII.xml')
+essentiality_screen_models['PknowlesiH'] = cobra.io.read_sbml_model('gf_PknowlesiH.xml')
+essentiality_screen_models['PcynomolgiB'] = cobra.io.read_sbml_model('gf_PcynomolgiB.xml')
 
-essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_Pfalciparum3D7.json')
-essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PbergheiANKA.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PcynomolgiB.json')
-essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PvivaxSal1.json')
-essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PknowlesiH.json')
-essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.load_json_model('gf_no_ortho_PcynomolgiB.json')
+essentiality_screen_models['Pfalciparum3D7_without_ortho'] = cobra.io.read_sbml_model('gf_no_ortho_Pfalciparum3D7.xml')
+essentiality_screen_models['PbergheiANKA_without_ortho'] = cobra.io.read_sbml_model('gf_no_ortho_PbergheiANKA.xml')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.read_sbml_model('gf_no_ortho_PcynomolgiB.xml')
+essentiality_screen_models['PvivaxSal1_without_ortho'] = cobra.io.read_sbml_model('gf_no_ortho_PvivaxSal1.xml')
+essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.read_sbml_model('gf_no_ortho_PknowlesiH.xml')
+essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.read_sbml_model('gf_no_ortho_PcynomolgiB.xml')
 
 os.chdir("/home/mac9jc/paradigm/data/published_models")
 essentiality_screen_models['pfal2018'] = cobra.io.read_sbml_model('pfal2018_abdel_haleem.xml')
@@ -40,7 +40,7 @@ essentiality_screen_models['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chia
 essentiality_screen_models['tg2015'] = cobra.io.read_sbml_model('tg2015_tymoshenko.xml')
 
 os.chdir("/home/mac9jc/paradigm/models")
-essentiality_screen_models['iPfal19'] = cobra.io.load_json_model('iPfal19_updated.json')
+essentiality_screen_models['iPfal19'] = cobra.io.read_sbml_model('iPfal19.xml')
 
 gene_essentiality_screen_results_raw= dict()
 gene_essentiality_screen_results_interpreted = dict()
@@ -78,6 +78,7 @@ for species, model in essentiality_screen_models.items():
         model.reactions.get_by_id('biomass').lower_bound = 0.
 
     max_biomass = model.slim_optimize()
+    print(max_biomass)
     if max_biomass < 0.01:
         print('model doesnt grow')
         print(species)
@@ -99,7 +100,7 @@ for species, model in essentiality_screen_models.items():
 
     # save
     if not use_second_biomass:
-
+        print('only one biomass reaction')
         gene_essentiality_screen_results_raw[species] = raw_results
         gene_essentiality_screen_results_interpreted[species] = interpreted_results
         
@@ -108,6 +109,7 @@ for species, model in essentiality_screen_models.items():
         pd.DataFrame.from_dict(gene_essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/gene_essentiality/gene_essentiality_matrix_interpreted_{}_{}.csv".format(species,day))
 
     else:
+       	print('wroking on second biomass reactions')
         gene_essentiality_screen_results_raw[species+'_generic_biomass'] = raw_results
         gene_essentiality_screen_results_interpreted[species+'_generic_biomass'] = interpreted_results
         

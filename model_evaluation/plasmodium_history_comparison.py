@@ -11,20 +11,20 @@ day = datetime.now().strftime('%d_%m_%Y')
 model_dict = dict()
 path = "/home/mac9jc/paradigm/models/"
 os.chdir(path)
-for filename in glob.glob(os.path.join(path, 'gf_P*.json')):
+for filename in glob.glob(os.path.join(path, 'gf_P*.xml')):
     key = filename.split('/')[len(filename.split('/'))-1]
     key = key[:-5]
     key = key[4:]
     #    print(key)
     if key is not 'PconfusumCUL13' and key is not 'PneurophiliaMK1':
-        model_dict[key] = cobra.io.load_json_model(filename)
+        model_dict[key] = cobra.io.read_sbml_model(filename)
 
-for filename in glob.glob(os.path.join(path, 'gf_no_ortho_*.json')):
+for filename in glob.glob(os.path.join(path, 'gf_no_ortho_*.xml')):
     key = filename.split('/')[len(filename.split('/'))-1]
     key = key[:-5]
     key = key[12:]
     #    print(key)
-    model_dict[key] = cobra.io.load_json_model(filename)
+    model_dict[key] = cobra.io.read_sbml_model(filename)
 
 os.chdir("/home/mac9jc/paradigm/data/published_models")
 model_dict['pvfal2018'] = cobra.io.read_sbml_model('pfal2018_abdel_haleem.xml')
@@ -34,7 +34,7 @@ model_dict['pkno2018'] = cobra.io.read_sbml_model('pkno2018_abdel_haleem.xml')
 model_dict['pcyn2018'] = cobra.io.read_sbml_model('pcyn2018_abdel_haleem.xml')
 model_dict['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chiappino_pepe.xml')
 os.chdir("/home/mac9jc/paradigm/models/")
-model_dict['iPfal19'] = cobra.io.load_json_model('iPfal19_updated.json')
+model_dict['iPfal19'] = cobra.io.read_sbml_model('iPfal19.xml')
 
 reactions_in_model = dict()
 list_o_reactions = list()

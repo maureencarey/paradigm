@@ -24,9 +24,9 @@ for filename in ./diamond_output_BiGG/*_BiGG.tsv; do
     else
     echo "python3 ../model_refinement/step_6_task_based_gapfilling.py with_biomass_$species_string.json" >> $foo
     fi
-    # sbatch $foo
+#    sbatch $foo
     if [[ " $plasmodium_list " =~ .*\ $species_string\ .* ]]; then
-    # sbatch $foo2
+#    sbatch $foo2
     mv $foo2 ./slurm_scripts_for_each_species
     fi
     mv $foo ./slurm_scripts_for_each_species
