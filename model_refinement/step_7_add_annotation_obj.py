@@ -29,7 +29,7 @@ compartment_dict = {'c': 'cytoplasm', 'e': 'extracellular', 'm': 'mitochondrion'
 version = '44'
 
 os.chdir(model_path)
-for file in glob.glob("gf_*.json"):
+for file in glob.glob("gf_*.xml"):
 
     SPECIES_ID = file.split('gf_')[1] # ID is annotation filename minus directory
     SPECIES_ID = SPECIES_ID.split('.json')[0] # get rid of extension
@@ -46,7 +46,7 @@ for file in glob.glob("gf_*.json"):
         compartment = ["c","e","ap","m"]
     else: compartment = ["c","e"]
     
-    model = cobra.io.load_json_model(file)
+    model = cobra.io.read_sbml_model(file)
 
     # add exchange for all extracellular mets
     for met in model.metabolites:
@@ -99,6 +99,5 @@ for file in glob.glob("gf_*.json"):
     model.annotation["terms_of_distribution"] = "CC-BY"
     model.annotation["updated"] = day
     
-    cobra.io.save_json_model(model,file) 
     cobra.io.write_sbml_model(model, "final_{}.xml".format(SPECIES_ID))
     logger.info('done with {}'.format(file))

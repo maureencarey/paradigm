@@ -9,5 +9,5 @@
 #SBATCH --output=%x-%j.out
 
 module load anaconda/5.2.0-py3.6
-source activate paradigm_env
+conda activate annotation_env # this has the newer cobrapy
 python3 model_refinement/step_7_add_annotation_obj.py 
