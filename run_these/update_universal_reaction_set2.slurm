@@ -9,6 +9,7 @@
 #SBATCH --account=csblrivanna
 #SBATCH --output=/home/mac9jc/paradigm/step3B_update_universal_for_gapfilling.out
 
+module purge
 module load anaconda/5.2.0-py3.6
 conda activate annotation_env
 #source activate paradigm_env

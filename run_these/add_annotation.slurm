@@ -8,6 +8,7 @@
 #SBATCH --account=csblrivanna
 #SBATCH --output=%x-%j.out
 
+module purge
 module load anaconda/5.2.0-py3.6
 source activate annotation_env # this has the newer cobrapy
 python3 model_refinement/step_7_add_annotation_obj.py 

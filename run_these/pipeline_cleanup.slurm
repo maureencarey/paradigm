@@ -9,6 +9,7 @@
 #SBATCH --account=csblrivanna
 #SBATCH --output=/home/mac9jc/paradigm/generating_check_log_and_outputs.out
 
+module purge
 module load anaconda/5.2.0-py3.6
 #source activate paradigm_env
 conda activate annotation_env
