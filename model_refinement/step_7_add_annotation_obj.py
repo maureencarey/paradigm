@@ -61,10 +61,10 @@ for file in glob.glob("gf_*.xml"):
     logger.info(file)    
 
     if 'no_ortho_P' in file:
-        model.annotation["DESCRIPTION"] = 'This reconstruction represents the metabolism of {} and was generated as part of ParaDIGM, v1. it was NOT semi-curated using orthology.'.format(SPECIES_ID)
+        model.notes = 'This reconstruction represents the metabolism of {} and was generated as part of ParaDIGM, v1. it was NOT semi-curated using orthology.'.format(SPECIES_ID)
     elif SPECIES_ID in plasmodb:
-        model.annotation["DESCRIPTION"] = 'This reconstruction represents the metabolism of {} and was generated as part of ParaDIGM, v1. it was semi-curated using orthology.'.format(SPECIES_ID)
-    else: model.annotation["DESCRIPTION"] = 'This reconstruction represents the metabolism of {} and was generated as part of ParaDIGM, v1.'.format(SPECIES_ID)
+        model.notes  = 'This reconstruction represents the metabolism of {} and was generated as part of ParaDIGM, v1. it was semi-curated using orthology.'.format(SPECIES_ID)
+    else: model.notes = 'This reconstruction represents the metabolism of {} and was generated as part of ParaDIGM, v1.'.format(SPECIES_ID)
     model.annotation["taxonomy"] = "must add this ID"
 
     if SPECIES_ID in plasmodb: database = 'PlasmoDB'
