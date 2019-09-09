@@ -11,9 +11,7 @@
 
 module purge
 module load anaconda/5.2.0-py3.6
-conda activate annotation_env
-#source activate paradigm_env
-python3 ./data_acquistion/update_universal_reaction_set1a.py
-python3 ./data_acquistion/update_universal_reaction_set1b.py
+source activate paradigm_env
+python3 ./data_acquistion/update_universal_reaction_set1.py
 
 

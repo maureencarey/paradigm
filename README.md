@@ -1,6 +1,7 @@
 # models for eukaryotic organisms and semicuration approach
 
-Code availability for the manuscript titled "title" by Carey *et al*.
+Code availability for the manuscript titled "Comparative analyses of parasites 
+with a comprehensive database of genome-scale metabolic models" by Carey *et al*.
 
 The article is submitted JOURNAL (DOI: XXX) and available on BioRxiv (see here: XXX).
 
@@ -15,7 +16,23 @@ All data in subdirectory entitled data.
 
 #### plasmodium_orthology_conversion.csv
 
-This is acquired from PlasmoDB.org by doing gene search> by orthology (P. falciparum 3D7) > add step (transform by orthology (all))
+This is acquired from PlasmoDB.org by doing gene search> by orthology (P. falciparum 3D7) > 
+add step (transform by orthology (all))
+
+#### aa_seqs_OrthoMCL_5.fasta
+
+#### auxotrophies_mapping_to_genomeID.csv, auxotrophies_mapping_to_metID.csv, 
+auxotrophies_references.xlsx
+
+These files contain information about biochemical experiments used to gapfill each model.
+
+#### bigg_gprs.csv
+
+This file is part of the CarveMe package by Daniel Machado.
+
+#### Pfalciparum3D7_GeneAliases.csv
+
+This file was obtained from PlasmoDB.org and condains the history of gene IDs used by the database.
 
 ## data acquisition
 
@@ -29,18 +46,20 @@ ORF information. Note, there may be more genomes available in future releases.
 
 ### step_1_genome_annotation.py
 
-This script processes some files for visualization. The visualization is not used in this version of the document, but is still useful for spreadsheet-izing some of the data.
+This script processes some files for visualization. The visualization is not used in this 
+version of the document, but is still useful for spreadsheet-izing some of the data.
 
 ## de novo reconstruction
 
-### helper_functions_1.py
+### helper_functions.py
 
 These functions are used throughout the associated scripts and called typically as 'hf'.
 
 
 ### step_2_build_de_novo_models.py
 
-This builds models for all genomes from the universal model acquired from BiGG. See methods in publication for detail.
+This builds models for all genomes from the universal model acquired from BiGG. See 
+methods in publication for detail.
 
 ## model evaluation
 
@@ -50,7 +69,8 @@ These perform essentiality simulations on a subset of models, used in Figures XX
 
 ### plasmodium_history_comparison.py
 
-This compares structural features of the gapfilled plasmodium models with and without orthologous transformation.
+This compares structural features of the gapfilled plasmodium models with and without 
+orthologous transformation.
 
 ### production_consumption.py
 
@@ -73,36 +93,21 @@ This builds a generic biomass reaction from curation reconstructions and adds it
 
 ### step_5_orthology_based_semi_curation.py
 
-This performs orthology-based semi-curation for all *Plasmodium* reconstructions using the curated iPfal18 reconstruction
-for *Plasmodium falciparum*.
+This performs orthology-based semi-curation for all *Plasmodium* reconstructions using the 
+curated iPfal18 reconstruction for *Plasmodium falciparum*.
 
 ### step_6_task_based_gapfilling.py
 
-gapfilling to generic biomass, species specific biomass (if available), and any tasks identified in FILENAME (if available)
-
-
-### step_6_task_based_gapfilling_plasmodium.py
-
-This is the same as step_6_task_based_gapfilling.py but save the files with obviously different names when gapfilling the plasmodium models WITHOUT orthologous transformation.
+gapfilling to generic biomass, species specific biomass (if available), and any tasks 
+identified in auxotrophies_references.xlsx (if available)
 
 ### TO DO: remove futile cycles
 
-## models
-
-Interestingly enough, this directory contains the models.
-
-
 ## run these
 
-Note: I ran the model generation pipeline on the University of Virginia's High-Performance Computing system, Rivanna, which uses Slurm job management. These were the scripts I ran to implement the pipeline. They are mostly 'wrappers' for other scripts.
-
-### follow up analyses
-
-This directory contains the analyses scripts - all are self explanatory and point towards the python scripts contained in other subdirectories.
-
-### pipeline_auto_slurm_for_plasmodium.sh
-
-This file generates the sbatch scripts for gapfilling the de novo plasmodium reconstructions WITHOUT the orthology transformation.
+Note: I ran the model generation pipeline on the University of Virginia's High-
+Performance Computing system, Rivanna, which uses Slurm job management. These were 
+the scripts I ran to implement the pipeline. They are mostly 'wrappers' for other scripts.
 
 ### pipeline_auto_slurm_for_step2.sh
 
@@ -130,7 +135,7 @@ This is used in pipeline_cleanup.sh to parse through all model building log file
 
 This is used for data acquisition in pipeline_slurm_step1.slurm
 
-It first calls step_0_download_all_eupathDB_release41.r to download genomes and also downloads BiGG database files, and then annotates genomes (against the BiGG database and OrthoMCL) using diamond. BiGG is a project out of UCSD, see e.g. doi:
+It first calls step_0_download_all_eupathDB_release44.r to download genomes and also downloads BiGG database files, and then annotates genomes (against the BiGG database and OrthoMCL) using diamond. BiGG is a project out of UCSD, see e.g. doi:
 10.1093/nar/gkv1049. OrthoMCL is also a EuPathDB project, see e.g. doi: 10.1093/nar/gkj123
 
 ### pipeline_slurm_step1b.sh
@@ -146,21 +151,26 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
 
 ## RUN ORDER ON RIVANNA
 
+    conda create -n paradigm_env python=3.6 #DONE
+    conda activate paradigm_env #DONE
+    pip install -r requirements.txt #DONE
     # # manually doubel check latest EuPathDB release to see if any extra files need to run
     # # get data
-    sbatch run_these/pipeline_slurm_step1.slurm
+    sbatch run_these/pipeline_slurm_step1.slurm #DONE
+    # # curate iPfal17 model THIS CAN BE RUN CONCURRENTLY WITH PREVIOUS STEP
+    sbatch run_these/pipeline_slurm_step1b.slurm #DONE
     # # add data to universal model
-    sbatch run_these/update_universal_reaction_set1.slurm
+    sbatch run_these/update_universal_reaction_set1.slurm #DONE
     # # make all de novo models 
-    bash run_these/pipeline_auto_slurm_for_step2a.sh
+    bash run_these/pipeline_auto_slurm_for_step2a.sh #DONE
     # # extend universal model by de novo models
-    sbatch run_these/update_universal_reaction_set2.slurm
+    sbatch run_these/update_universal_reaction_set2.slurm #DONE
     # # finish making all models
-    bash run_these/pipeline_auto_slurm_for_step2b.sh
+    bash run_these/pipeline_auto_slurm_for_step2b.sh  #DONE
         # # TO DO: fix LmajorSD third line, remove ‘.1’, otherwise the script will fail
         # siwthc Pfalciparum 3D7 to largemem, mem limit 20000
     # # gapfills plasmodium models prior to orthology conversion to test differences
-    bash run_these/pipeline_auto_slurm_for_step2c.sh
+    bash run_these/pipeline_auto_slurm_for_step2c.sh #DONE
     # # clean things up - especially log files
     sbatch run_these/pipeline_cleanup.slurm
     # # move things to convenient locations
@@ -169,7 +179,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     mv data/orthology_modifications_* data/ortho_modifications
     mv data/gapfilling_additions_* data/gapfilling_additions
     mv data/percent_reactions_in_* data/percent_wrong_comp
-    # # run analyses
+    # # run analyses THESE CAN BE RUN CONCURRENTLY
     sbatch run_these/follow_up_analyses/analyses_part1.slurm
     sbatch run_these/follow_up_analyses/analyses_part2.slurm
     sbatch run_these/follow_up_analyses/analyses_part3.slurm

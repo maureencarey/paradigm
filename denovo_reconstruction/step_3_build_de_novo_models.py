@@ -38,7 +38,7 @@ og_path = "/home/mac9jc/paradigm/"
 
 # universal reaction bag for model generation
 os.chdir(model_path)
-universal_model = cobra.io.read_sbml_model('universal_model_updated2.xml')
+universal_model = cobra.io.read_sbml_model('universal_model_updated.xml')
 universal_model = hf.update_universal_model(universal_model)
 os.chdir(data_path)
 logging.info('loaded universal')
@@ -181,7 +181,7 @@ else:
     compartment = ["_c","_e"]
 
 columns = ['species','reactions_removed1','reactions_added']
-modifications = pd.DataFrame(index = [SPECIES_ID], columns=columns)
+modifications = pd.DataFrame(index = [0], columns=columns)
 
 model = new_model
 logging.info('finding good or bad reactions')
@@ -250,7 +250,7 @@ x1_2 = len(model.reactions)
 # save this number
 inappropriate_compartments_that_remain = (len(bad_rxns_keep_rewrite)/len(model.reactions))*100
 
-row_index = modifications.species == SPECIES_ID
+row_index =0 #= SPECIES_ID
 modifications.loc[row_index,'species'] = SPECIES_ID
 modifications.loc[row_index,'reactions_removed1'] = x1
 
@@ -262,7 +262,7 @@ for rxn_id in add_reaction: #there are ids in add_reaction that are in the model
 rxns_to_add_list = [universal_model.reactions.get_by_id(x).copy() for x in add_reaction if x not in [r.id for r in model.reactions]]
 # if reaction is already there, it is because the reaction was in multiple compartments
 model.add_reactions(rxns_to_add_list)
-row_index = modifications.species == SPECIES_ID
+row_index = 0#modifications.species == SPECIES_ID
 modifications.loc[row_index,'reactions_added'] = len(model.reactions) - x1_2
 
 # make sure all reactions can carry flux, problem with some versions of the universal model

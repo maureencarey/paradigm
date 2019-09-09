@@ -14,9 +14,9 @@ for filename in ./diamond_output_BiGG/*_BiGG.tsv; do
     species_string="${file_without_ext:0:${#file_without_ext}-5}"
     echo "$species_string"
     #construct name for sbatch file being generated
+    if [[ " $plasmodium_list " =~ .*\ $species_string\ .* ]]; then
     foo=${species_string}"_stepB.sbatch"
     cp slurm_template.slurm $foo
-    if [[ " $plasmodium_list " =~ .*\ $species_string\ .* ]]; then
     echo "python3 ../model_refinement/step_5_orthology_based_semi_curation.py with_biomass_$species_string.json" >> $foo
     sbatch $foo
     mv $foo ./slurm_scripts_for_each_species

@@ -24,7 +24,7 @@ model_path = "/home/mac9jc/paradigm/models"
 
 os.chdir(model_path)
 pf_model = cobra.io.read_sbml_model("iPfal17.xml")
-universal_model = cobra.io.load_json_model('universal_model.json')
+universal_model = cobra.io.read_sbml_model('universal_model_updated.xml')
 logging.info('finished loading model')
 
 ## adding notes from previous curation
@@ -49,15 +49,15 @@ for x in edits.index:
     if isinstance(edits['Confidence Score'][x],str) or str(float(edits['Confidence Score'][x])).lower() != 'nan':
         pf_model.reactions.get_by_id(rxn_id_string_use).annotation['CONFIDENCE'] = edits['Confidence Score'][x]
     if isinstance(edits['EC Number'][x],str) or str(float(edits['EC Number'][x])).lower() != 'nan':            
-        pf_model.reactions.get_by_id(rxn_id_string_use).annotation['EC_NUMBER'] = edits['EC Number'][x]
+        pf_model.reactions.get_by_id(rxn_id_string_use).annotation['ec-code'] = edits['EC Number'][x]
     if isinstance(edits.References[x],str) or str(float(edits.References[x])).lower() != 'nan':
         pf_model.reactions.get_by_id(rxn_id_string_use).annotation['REFERENCE'] = edits.References[x]
         if isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-            pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
+            pf_model.reactions.get_by_id(rxn_id_string_use).notes = {'REFERENCE': edits.References[x], 'NOTES': edits.Notes[x]}
         else:
-            pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'REFERENCE': edits.References[x]}
+            pf_model.reactions.get_by_id(rxn_id_string_use).notes = {'REFERENCE': edits.References[x]}
     elif isinstance(edits.Notes[x],str) or str(float(edits.Notes[x])).lower() != 'nan':
-        pf_model.reactions.get_by_id(rxn_id_string_use).annotation['iPfal17_notes'] = {'NOTES': edits.Notes[x]}
+        pf_model.reactions.get_by_id(rxn_id_string_use).notes = {'NOTES':edits.Notes[x]}
     pf_model.reactions.get_by_id(rxn_id_string_use).annotation['CURATION'] = 'DOI: 10.1186/s12864-017-3905-1'
 
 # update gene identifiers to latest EuPathDB/PlasmoDB version
@@ -141,7 +141,7 @@ logging.info('finished renaming curation')
 pf_model.reactions.get_by_id('HMGLB').add_metabolites(\
 {pf_model.metabolites.get_by_id('h2o2_c'):1.,
 pf_model.metabolites.get_by_id('h_c'):-2.})
-pf_model.reactions.get_by_id('HMGLB').annotation['REFERENCES'] = \
+pf_model.reactions.get_by_id('HMGLB').annotation['REFERENCE'] = \
 'doi: 10.1073/pnas.0601876103; DOI: 10.1111/j.1365-2141.1975.tb00540.x'
 pf_model.reactions.get_by_id('HMGLB').annotation['CURATION'] = 'doi: 10.1186/s12859-019-2756-y'
 
@@ -159,10 +159,10 @@ new_rxn = Reaction()
 new_rxn.name = 'gthrd_heme'
 new_rxn.id = 'gthrd_heme'
 new_rxn.add_metabolites({pheme_c : -1,gthrd_c : -1,
-    gthox_c : +1,    heme_degraded_c : +1 })
+    gthox_c : +1, heme_degraded_c : +1 })
 new_rxn.lower_bound = 0.
 new_rxn.upper_bound = 1000.
-new_rxn.annotation['REFERENCES'] = 'doi: 10.1074/jbc.270.42.24876'
+new_rxn.annotation['REFERENCE'] = 'doi: 10.1074/jbc.270.42.24876'
 new_rxn.annotation['CURATION'] = 'doi: 10.1186/s12859-019-2756-y'
 pf_model.add_reactions([new_rxn])
 
@@ -172,7 +172,7 @@ new_rxn.id = 'perox_heme'
 new_rxn.add_metabolites({pheme_fv : -1, h2o2_c : -1, heme_degraded_fv : +1 })
 new_rxn.lower_bound = 0.
 new_rxn.upper_bound = 1000.
-new_rxn.annotation['REFERENCES'] = 'doi: 10.1042/bj1740893'
+new_rxn.annotation['REFERENCE'] = 'doi: 10.1042/bj1740893'
 new_rxn.annotation['CURATION'] = 'doi: 10.1186/s12859-019-2756-y'
 pf_model.add_reactions([new_rxn])
 
@@ -260,7 +260,6 @@ pf_model.remove_reactions([pf_model.reactions.PIt2r])
 pf_model.add_reactions([universal_model.reactions.PIt2r.copy()])
 pf_model.reactions.PIt2r.gene_reaction_rule = gpr
 pf_model.reactions.PIt2r.notes = notes
-pf_model.repair()
 
 # remove these reactions but add a related BiGG reaction
 pf_model.add_reactions([universal_model.reactions.THD2.copy()])
@@ -283,11 +282,10 @@ pf_model.add_reactions([universal_model.reactions.GLCNACPT_c.copy()])
 pf_model.reactions.GLCNACPT_c.gene_reaction_rule = pf_model.reactions.GLCNACPT.gene_reaction_rule
 pf_model.reactions.GLCNACPT_c.notes = pf_model.reactions.GLCNACPT.notes
 pf_model.remove_reactions([pf_model.reactions.GLCNACPT])
-pf_model.repair()
 
 pf_model.remove_reactions([pf_model.reactions.G_Protein_Ex,pf_model.reactions.HMBZ_out])
 pf_model.add_boundary(pf_model.metabolites.gthox_protein_e, type = "exchange")
-pf_model.reactions.EX_gthox_protein_e.annotation['AUTHORS'] = ['DOI: 10.3390/molecules200610511']
+pf_model.reactions.EX_gthox_protein_e.annotation['REFERENCE'] = ['DOI: 10.3390/molecules200610511']
 pf_model.add_boundary(pf_model.metabolites.hemozoin_e, type = "exchange")
 pf_model.repair()
 
@@ -371,9 +369,9 @@ pf_model.reactions.get_by_id('2_PERIOD_1_PERIOD_1_PERIOD_12').id = 'METMT'
 pf_model.reactions.get_by_id('METMT').name = 'Methionine methyltransferase'
 pf_model.reactions.get_by_id('uri_gf').id = 'ATPUP'
 pf_model.reactions.get_by_id('ATPUP').name = 'ATP:uridine 5-phosphotransferase'
-pf_model.reactions.get_by_id('ATPUP').notes['KEGG'] = 'R00964'
-pf_model.reactions.get_by_id('ATPUP').notes['EC NUMBER'] = '2.7.1.48 or 2.7.1.213'
-pf_model.reactions.get_by_id('ATPUP').notes['RHEA'] = '16828'
+pf_model.reactions.get_by_id('ATPUP').annotation['kegg.reaction'] = 'R00964'
+pf_model.reactions.get_by_id('ATPUP').annotation['ec-code'] = ['2.7.1.48','2.7.1.213']
+pf_model.reactions.get_by_id('ATPUP').annotation['rhea'] = '16828'
 
 pf_model.reactions.get_by_id('1_7_1_1_mt').id = 'NITRm'
 pf_model.reactions.get_by_id('NITRm').name = 'Nitrate reductase (NADH), mitochondrial'
@@ -634,12 +632,13 @@ for rxn in pf_model.reactions:
 pf_model.reactions.get_by_id('PGK').lower_bound = -1000.
 pf_model.reactions.get_by_id('PGK').upper_bound = 1000.
 
-logging.info('these mets arent used in more than one reaction and have no GPR:')
-for met in pf_model.metabolites:
-    if len(met.reactions) == 1:
-        for rxn in met.reactions:
-            if len(rxn.genes) < 1:
-                logging.info(met.id)
+#logging.info('these mets arent used in more than one reaction and have no GPR:')
+#for met in pf_model.metabolites:
+#    if len(met.reactions) == 1:
+#        for rxn in met.reactions:
+#            logger.info(rxn.id)
+#            if len(rxn.genes) < 1:
+#                logging.info(met.id)
 
 logging.info('------------------------------')
 
@@ -660,7 +659,7 @@ logging.info(need_info_rxn)
 
 pf_model.metabolites.get_by_id('5mti_c').charge = 0.
 pf_model.metabolites.get_by_id('5mti_c').formula = 'C11H14N4O4S'
-pf_model.metabolites.get_by_id('5mti_c').notes = {'KEGG id' : 'C19787'}
+pf_model.metabolites.get_by_id('5mti_c').annotation['kegg.reaction'] = 'C19787'
 
 # convert biomass to same aggregate format as for the rest of the models
 pf_model.reactions.Protein.id = 'protein_bm'

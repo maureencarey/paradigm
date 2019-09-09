@@ -11,6 +11,5 @@
 
 module purge
 module load anaconda/5.2.0-py3.6
-#source activate paradigm_env
-conda activate annotation_env
+source activate paradigm_env
 python3 ./model_evaluation/reaction_matrix_and_transporter.py

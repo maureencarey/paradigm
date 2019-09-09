@@ -270,6 +270,7 @@ def add_partial_met_info(model, met, met_id):
                     met.notes[sub_list[0]] = sub_list[1]
                 else: met.notes[sub_list[0]] = [met.notes[sub_list[0]]].append(sub_list[1])
 
+    old_annot = met.annotation
     met.annotation = dict()
     met.annotation['bigg.metabolite'] = [met.id]
 
@@ -286,7 +287,10 @@ def add_partial_met_info(model, met, met_id):
                 met.annotation[id_map[key]] = list_o_ids
             else:
                 met.annotation[key] = list_o_ids
-
+    if isinstance(old_annot,dict):
+        for key in old_annot.keys():
+            if key not in met.annotation.keys():
+                met.annotation[key] = old_annot[key]
     return(model)
 
 def fix_charge_or_formula(model):
@@ -347,7 +351,8 @@ def add_full_rxn_info(model,rxn, rxn_id):
 
     if rxn.reaction == '':
         rxn.reaction = x['reaction_string']
-
+    
+    old_annot = rxn.annotation
     rxn.annotation = dict()
 
     rxn.annotation['bigg.reaction'] = [rxn.id]
@@ -370,7 +375,12 @@ def add_full_rxn_info(model,rxn, rxn_id):
                 rxn.annotation[id_map[key]] = list(set(list_o_ids))
             else: list_o_problem_types.append({met.id:key})
     # also have info on x['pseudoreaction']
-
+    
+    if isinstance(old_annot,dict):
+        for key in old_annot.keys():
+            if key not in rxn.annotation.keys():
+                rxn.annotation[key] = old_annot[key]
+          
     if len(list_o_problem_types)>0:
         print(rxn.id, ' database links is not a list')
     if len(list_o_problem_types_2)>0:
@@ -403,7 +413,7 @@ def add_partial_rxn_info(model, rxn, rxn_id):
                 if sub_list[0] not in rxn.notes.keys():
                     rxn.notes[sub_list[0]] = sub_list[1]
                 else: rxn.notes[sub_list[0]] = [rxb.notes[sub_list[0]]].append(sub_list[1])
-
+    old_annot = rxn.annotation
     rxn.annotation = dict()
     rxn.annotation['bigg.metabolite'] = [rxn.id]
 
@@ -420,6 +430,10 @@ def add_partial_rxn_info(model, rxn, rxn_id):
                 rxn.annotation[id_map[key]] = list_o_ids
             else:
                 rxn.annotation[key] = list_o_ids
+    if isinstance(old_annot,dict):
+       	for key	in old_annot.keys():
+       	    if key not in rxn.annotation.keys():
+       	       	rxn.annotation[key] = old_annot[key]
 
     return(model)
 
@@ -470,6 +484,7 @@ def add_full_met_info(model, met, met_id):
         list_o_problem_mets.append(met.id)
 
     #if met.id in universal_model.metabolites:
+    old_annot = met.annotation
     met.annotation = dict()
     met.annotation['bigg.metabolite'] = [met.id]
 
@@ -489,6 +504,11 @@ def add_full_met_info(model, met, met_id):
         met.formula = x['formulae'][0]
     if x['charges'] != [] and len(x['charges'])>0:
         met.charge = x['charges'][0]
+
+    if isinstance(old_annot,dict):
+       	for key	in old_annot.keys():
+       	    if key not in met.annotation.keys():
+       	       	met.annotation[key] = old_annot[key]
 
     if len(list_o_problem_types)>0:
         print(met.id, ' database links is not a list')

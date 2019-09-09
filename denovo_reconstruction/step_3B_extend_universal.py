@@ -5,7 +5,6 @@ import subprocess
 import glob
 import json
 from cobra import Model, Reaction, Metabolite
-#import helper_functions_1 as hf
 import sys
 sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
 import helper_functions as hf
@@ -22,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 # universal reaction bag for model generation
 os.chdir(model_path)
-universal_model = cobra.io.load_json_model('universal_model_updated.json')
+universal_model = cobra.io.read_sbml_model('universal_model_updated.xml')
 
 if 'bof_c' in [r.id for r in universal_model.reactions]:
     universal_model.remove_reactions([universal_model.reactions.bof_c])

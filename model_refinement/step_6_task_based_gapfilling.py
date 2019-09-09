@@ -312,14 +312,18 @@ all_mets = list()
 cannot_gapfill = list()
 if mets_to_prod:
     for met in mets_to_prod:
-        if met+'_c' in universal_model_for_species.metabolites:
+        if met == 'ile__L' and SPECIES_ID == 'PfalciparumML01':
+            cannot_gapfill.append(met)
+        elif met+'_c' in universal_model_for_species.metabolites:
             produce_met.append(met)
             all_mets.append(met)
         else:
             cannot_gapfill.append(met)
 if mets_to_consume:
     for met in mets_to_consume:
-        if met+'_c' in universal_model_for_species.metabolites:
+        if met == 'ile__L' and SPECIES_ID == 'PfalciparumML01':
+       	    cannot_gapfill.append(met)
+        elif met+'_c' in universal_model_for_species.metabolites:
             consume_met.append(met)
             all_mets.append(met)
         else:

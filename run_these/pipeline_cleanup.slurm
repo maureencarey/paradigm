@@ -11,8 +11,7 @@
 
 module purge
 module load anaconda/5.2.0-py3.6
-#source activate paradigm_env
-conda activate annotation_env
+source activate paradigm_env
 
 cd ~/paradigm/model_generation_logs # paradigm directory
 for filename in step*.log; do

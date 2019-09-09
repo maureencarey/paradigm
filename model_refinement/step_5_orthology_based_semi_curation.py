@@ -83,7 +83,7 @@ add_these = ['pe_prod1', 'pe_prod10', 'pe_prod11', 'pe_prod12', 'pe_prod13', 'pe
 # 'Lipid_prod','dgl_prod3', 'dgl_prod4', 'dgl_prod5','dgl_prod6', 'dgl_prod7','Protein',
 
 columns = ['species','starting_genes','reactions_added', 'mets_added','genes_added']
-modifications_ortho = pd.DataFrame(index = [SPECIES_ID], columns=columns)
+modifications_ortho = pd.DataFrame(index = [0], columns=columns)
 
 logger.info('beginning model loop')
 
@@ -119,12 +119,11 @@ for index, row in species_specific_mapping.iterrows():
     if ',' not in row['Input Ortholog(s)']:
         gene = row['Input Ortholog(s)'].strip()
         if gene in [x.id for x in iPfal19.genes]:
-            gene = iPfal19.genes.get_by_id(gene).copy()
-            rxn_to_add = gene.reactions.copy()
+            gene = iPfal19.genes.get_by_id(gene)
+            rxn_to_add = gene.reactions
             for rxn in rxn_to_add:
                 if rxn.id not in [x.id for x in model.reactions]:
                     rxn2 = rxn.copy()
-                    test = len(model.reactions)
                     mets = [x.metabolites for x in [rxn2]]
                     all_keys = set().union(*(d.keys() for d in mets))
                     for key in all_keys:
@@ -143,12 +142,11 @@ for index, row in species_specific_mapping.iterrows():
         for i in range(0,len(row['Input Ortholog(s)'].split(', ')),1):
             gene = row['Input Ortholog(s)'].split(', ')[i].strip()
             if gene in [x.id for x in iPfal19.genes]:
-                gene = iPfal19.genes.get_by_id(gene).copy()
-                rxn_to_add = gene.reactions.copy()
+                gene = iPfal19.genes.get_by_id(gene)
+                rxn_to_add = gene.reactions
                 for rxn in rxn_to_add:
                     if rxn.id not in [x.id for x in model.reactions]:
                         rxn2 = rxn.copy()
-                        test = len(model.reactions)
                         mets = [x.metabolites for x in [rxn2]]
                         all_keys = set().union(*(d.keys() for d in mets))
                         for key in all_keys:
@@ -163,9 +161,8 @@ for index, row in species_specific_mapping.iterrows():
                             else: model.reactions.get_by_id(rxn.id).gene_reaction_rule = \
                                 model.reactions.get_by_id(rxn.id).gene_reaction_rule + ' or ' +new_gene
 #                             else: #gene already there
-logger.info('headed into duplicates')
 if len(model.reactions) != len(set(model.reactions)):
-    logger.info('duplicate reactions')
+    logger.info('duplicate reactions present')
 
 model.repair()
 
@@ -195,7 +192,7 @@ else:
 x3 = len(model.reactions)
 y3 = len(model.genes)
 z3 = len(model.metabolites)
-row_index = modifications_ortho.species == SPECIES_ID
+row_index = 0#modifications_ortho.species == SPECIES_ID
 modifications_ortho.loc[row_index,'species'] = SPECIES_ID
 modifications_ortho.loc[row_index,'starting_genes'] = y1
 modifications_ortho.loc[row_index,'reactions_added'] = len(model.reactions) - x1 
