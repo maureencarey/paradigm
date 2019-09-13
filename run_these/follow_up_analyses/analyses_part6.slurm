@@ -12,4 +12,4 @@
 module purge
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env
-python3 ./model_evaluation/biomass_precursors.py
+python3 ./model_evaluation/reaction_matrix_and_transporter_after_gf.py
