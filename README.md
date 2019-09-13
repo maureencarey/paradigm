@@ -5,6 +5,10 @@ with a comprehensive database of genome-scale metabolic models" by Carey *et al*
 
 The article is submitted JOURNAL (DOI: XXX) and available on BioRxiv (see here: XXX).
 
+__Article abstract:__ Protozoan parasites cause diverse diseases with large global impacts. Research on the pathogenesis and biology of these organisms is limited by economic and experimental constraints. Accordingly, studies of one parasite are frequently extrapolated to infer knowledge about another parasite, across and within genera. Model in vitro or in vivo systems are frequently used to enhance experimental manipulability, but generally use species related to, yet distinct from, the clinically relevant causal pathogen. Characterization of functional differences among parasite species is confined to post hoc or single target studies, limiting the utility of this extrapolation approach. To address this challenge and to accelerate parasitology research broadly, we present a functional comparative analysis of 192 genomes, representing every high-quality, publicly-available protozoan parasite genome including *Plasmodium, Toxoplasma, Cryptosporidium, Entamoeba, Trypanosoma, Leishmania, Giardia,* and other species. We generated an automated metabolic network reconstruction pipeline optimized for eukaryotic organisms. These metabolic network reconstructions serve as biochemical knowledgebases for each parasite, enabling qualitative and quantitative comparisons of metabolic behavior across parasites. We identified putative differences in gene essentiality and pathway utilization to facilitate the comparison of experimental findings. This knowledgebase represents the largest collection of genome-scale metabolic models for both pathogens and eukaryotes; with this resource, we can predict species-specific functions, contextualize experimental results, and optimize selection of experimental systems for fastidious species.
+
+##### notes
+
 FYI some files are too large to share on github, including (but not limited to):
 * genome fasta files
 * compiled diamond databases
@@ -21,12 +25,11 @@ All data in subdirectory entitled data.
 This is acquired from PlasmoDB.org by doing gene search> by orthology (P. falciparum 3D7) > 
 add step (transform by orthology (all))
 
-##### auxotrophies_mapping_to_genomeID.csv, auxotrophies_mapping_to_metID.csv, 
-auxotrophies_references.xlsx
+##### auxotrophies_mapping_to_genomeID.csv, auxotrophies_mapping_to_metID.csv, auxotrophies_references.xlsx
 These files contain information about biochemical experiments used to gapfill each model.
 
 ##### bigg_gprs.csv
-This file is part of the CarveMe package by Daniel Machado.
+This file is part of the CarveMe package by Daniel Machado (check it out here: https://github.com/cdanielmachado/carveme)
 
 ##### Pfalciparum3D7_GeneAliases.csv
 This file was obtained from PlasmoDB.org and condains the history of gene IDs used by the database.
@@ -69,7 +72,10 @@ orthologous transformation.
 This is used to generate figure 5.
 
 ##### reaction_matrix_and_transporter.py
-This generates a matrix of reaction and transporter presence for ungapfilled models, used in Figure 3.
+This generates a matrix of reaction and transporter presence for ungapfilled models, used in Figure 3B.
+
+##### reaction_matrix_and_transporter_after_gf.py
+This generates a matrix of reaction and transporter presence for gapfilled models, used in Figure 3E.
 
 ## model refinement
 
@@ -93,8 +99,9 @@ This script adds a model.annotation object with model metadata to each reconstru
 ## run these
 
 Note: I ran the model generation pipeline on the University of Virginia's High-
-Performance Computing system, Rivanna, which uses Slurm job management. These were 
-the scripts I ran to implement the pipeline. They are mostly wrappers for other scripts.
+Performance Computing system, Rivanna, which uses slurm job management. These were 
+the scripts I ran to implement the pipeline. They are mostly self explanatory wrappers for other scripts.
+Feel free to contact me with any questions.
 
 ## slurm scripts
 
@@ -148,7 +155,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     sbatch run_these/follow_up_analyses/analyses_part3.slurm
     sbatch run_these/follow_up_analyses/analyses_part4.slurm
     sbatch run_these/follow_up_analyses/analyses_part5.slurm
+    sbatch run_these/follow_up_analyses/analyses_part6.slurm
     sbatch run_these/add_annotation.slurm
     # # would like to run Memote again on all models
-    ## need to move all xml gf models to other directory for memote
-    # scp mac9jc@rivanna.hpc.virginia.edu:/home/mac9jc/paradigm/data/ortho_annotations_per_genome_17_05_2019.csv .    
+    ## need to move all xml gf models to other directory for memote    
