@@ -1,4 +1,4 @@
-# models for eukaryotic organisms and semicuration approach
+# __Para__site __D__atabase __I__ncluding __G__enome-scale metabolic __M__odels 
 
 Code availability for the manuscript titled "Comparative analyses of parasites 
 with a comprehensive database of genome-scale metabolic models" by Carey *et al*.
