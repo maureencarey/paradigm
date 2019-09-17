@@ -3,14 +3,9 @@
 *.log
 *.fasta
 *.sbatch
-data/ortho_annotations_per_genome_17_05_2019.csv
-data/ortho_annotations_per_genome_29_03_2019.csv
-data/ortho_annotations_per_genome_11_03_2019.csv
-data/ortho_annotations_per_genome_06_05_2019.csv
 data/ortho_annotations_per_genome_08_07_2019.csv
 data/metanetx_chem_prop.tsv
 data/ortho_annotations_per_genome_feb2019.csv
 data/diamond_output_orthoMCL/TvaginalisG3_orthoMCL.tsv
 data/aa_seqs_OrthoMCL_5.fasta
 data/orthoMCL_proteins_diamond.dmnd
-!check_logs*_2019.log
