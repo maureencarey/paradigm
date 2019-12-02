@@ -12,4 +12,5 @@
 module purge
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env
-python3 ./model_evaluation/rxn_essentiality.py
+#python3 ./model_evaluation/rxn_essentiality.py
+python3 ./model_evaluation/rxn_essentiality_all.py
