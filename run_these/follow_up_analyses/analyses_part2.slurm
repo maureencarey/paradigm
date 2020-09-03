@@ -4,7 +4,7 @@
 #SBATCH --mail-user=mac9jc@virginia.edu
 #SBATCH --time=2-00:00:00
 #SBATCH --partition=standard
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=6000
 #SBATCH --account=csblrivanna
 #SBATCH --output=%x-%j.out

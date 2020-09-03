@@ -12,29 +12,28 @@ day = datetime.now().strftime('%d_%m_%Y')
 model_dict = dict()
 path = "/home/mac9jc/paradigm/models/"
 os.chdir(path)
+
+i = 0
 for filename in glob.glob(os.path.join(path, 'gf_P*.xml')):
     key = filename.split('/')[len(filename.split('/'))-1]
-    key = key[:-5]
-    key = key[4:]
+    key = key[:-4]
+    key = key[3:]
     #    print(key)
-    if key is not 'PconfusumCUL13' and key is not 'PneurophiliaMK1':
-        i = i+1
-        model_dict[key] = cobra.io.read_sbml_model(filename)
+#    if key is not 'PconfusumCUL13' and key is not 'PneurophiliaMK1':
+    i = i+1
+    model_dict[key] = cobra.io.read_sbml_model(filename)
 
 for filename in glob.glob(os.path.join(path, 'gf_no_ortho_*.xml')):
     key = filename.split('/')[len(filename.split('/'))-1]
-    key = key[:-5]
+    key = key[:-4]
     key = key[12:]
-    #    print(key)
     if key.startswith('P'):
-        if key is 'PconfusumCUL13' or key is 'PneurophiliaMK1':
+        if key == 'PconfusumCUL13' or key == 'PneurophiliaMK1':
             i = i+1
             model_dict[key] = cobra.io.read_sbml_model(filename)
     else:
         i = i+1
         model_dict[key] = cobra.io.read_sbml_model(filename)
-    
-print(i)
     
 essentiality_screen_models = model_dict.copy()
 essentiality_screen_results_raw= dict()
@@ -46,20 +45,13 @@ for species, model in essentiality_screen_models.items():
     
     print(species+', rxn essenitality screen')
     
-    use_second_biomass = False
-    if species.startswith('P') and key is not 'PconfusumCUL13' and key is not 'PneurophiliaMK1':
-        model.objective = 'generic_biomass'
-        model.reactions.get_by_id('generic_biomass').upper_bound = 1000.
-        model.reactions.get_by_id('generic_biomass').lower_bound = 0.
-    else:
-        model.objective = "generic_biomass"
-        model.reactions.get_by_id('generic_biomass').upper_bound = 1000.
-        model.reactions.get_by_id('generic_biomass').lower_bound = 0.
-        # don't accidentally use other biomass reaction
+    model.objective = 'generic_biomass'
+    model.reactions.get_by_id('generic_biomass').upper_bound = 1000.
+    model.reactions.get_by_id('generic_biomass').lower_bound = 0.
+    if 'biomass' in [r.id for r in model.reactions]:  
+      # don't accidentally use other biomass reaction
         model.reactions.get_by_id('biomass').upper_bound = 0.
-       	model.reactions.get_by_id('biomass').lower_bound = 0.
-
-    print('set biomass')
+        model.reactions.get_by_id('biomass').lower_bound = 0.
 
     max_biomass = model.slim_optimize()
     if max_biomass < 0.01:
@@ -67,30 +59,22 @@ for species, model in essentiality_screen_models.items():
         print(species)
 
     # knockout and record growth
-    for rxn in model.reactions:
-        if rxn.id == 'generic_biomass' or rxn.id == 'biomass':
-            continue
-        with model as cobra_model:
-            cobra_model.reactions.get_by_id(rxn.id).knock_out()
-            f = cobra_model.slim_optimize()
-            if max_biomass < 0.01:
-                print(species)
+    with model as cobra_model:
+        sol = cobra.flux_analysis.deletion.single_reaction_deletion(model,
+            method="fba", processes=8)
+        for i, row in sol.iterrows():
+            rxn_id = list(i)[0]
+            f = row['growth']
+            if f < 0.1*max_biomass:
+                interpreted_results[rxn_id] = 'lethal'
             else:
-                if f < 0.1*max_biomass:
-                    interpreted_results[rxn.id] = 'lethal'
-                else:
-                    interpreted_results[rxn.id] = 'nonlethal'
-                raw_results[rxn.id] = f/max_biomass
+                interpreted_results[rxn_id] = 'nonlethal'
+            raw_results[rxn_id] = f/max_biomass
 
     # save
-        
     essentiality_screen_results_raw[species] = raw_results
     essentiality_screen_results_interpreted[species] = interpreted_results
      
-    #pd.DataFrame.from_dict(essentiality_screen_results_raw[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_{}_{}.csv".format(species,day))
-    #pd.DataFrame.from_dict(essentiality_screen_results_interpreted[species], orient='index').to_csv("/home/mac9jc/paradigm/data/results/rxn_essentiality/rxn_essentiality_matrix_interpreted_{}_{}.csv".format(species,day))
-        
-
 list_o_reactions2 = list()
 for species, model in essentiality_screen_models.items():
     list_o_reactions2.append([x.id for x in model.reactions])
