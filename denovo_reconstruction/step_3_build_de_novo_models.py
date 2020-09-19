@@ -383,6 +383,9 @@ for met in model.metabolites:
         else: comp_use = 'no compartment'
         model.metabolites.get_by_id(met.id).compartment = comp_use
 
+for gene in model.genes:
+    if len(gene.reactions) == 0:
+        cobra.manipulation.remove_genes(model,[gene.id])
 model.repair()
 os.chdir(model_path)
 cobra.io.save_json_model(model, "final_denovo_"+SPECIES_ID+".json")

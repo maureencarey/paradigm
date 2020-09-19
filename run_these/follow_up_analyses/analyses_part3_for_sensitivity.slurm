@@ -12,4 +12,4 @@
 module purge
 module load anaconda/5.2.0-py3.6
 source activate paradigm_env
-python3 paradigm/model_evaluation/gene_essentiality_for_sensitivity.py
+python3 ~/paradigm/model_evaluation/gene_essentiality_for_sensitivity.py

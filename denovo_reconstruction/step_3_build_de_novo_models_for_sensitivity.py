@@ -188,10 +188,27 @@ for rxn_object in model.reactions: # if a reaction does not contain any bad comp
     else:
         bad_rxns.append(rxn_object.id)
 
+# how many bad rxns have genes associated with them that will be removed in this process?
+rxn_gene_dict = dict()
+for r_id in bad_rxns:
+    rxn = model.reactions.get_by_id(r_id)
+    i = 0
+    if len(rxn.genes) > 0:
+        for gene in rxn.genes:
+            if len(gene.reactions) > 1: i = i + 1
+    if i > 1: answer = 'yes' 
+    else: answer = 'no'
+    rxn_gene_dict[r_id] = {'genes':rxn.genes, 'gene_assoc_w_other_rxns?':answer}        
+df_temp = pd.DataFrame.from_dict(rxn_gene_dict, orient='index')
+df_temp.to_csv('/home/mac9jc/paradigm/data/results/genes_that_require_compartmentalization_'+SPECIES_ID+day+'.csv') 
+
 # remove reactions
 x = len(model.reactions)
 y = len(model.metabolites)
 model.remove_reactions(bad_rxns)
+for gene in model.genes:
+    if len(gene.reactions) == 0:
+        cobra.manipulation.remove_genes(model,[gene.id])
 model.repair()
 
 if len(bad_rxns) != (x - len(model.reactions)):
@@ -246,6 +263,9 @@ for met in model.metabolites:
         else: comp_use = 'no compartment'
         model.metabolites.get_by_id(met.id).compartment = comp_use
 
+for gene in model.genes:
+    if len(gene.reactions) == 0:
+        cobra.manipulation.remove_genes(model,[gene.id])
 model.repair()
 os.chdir(model_path)
 cobra.io.save_json_model(model, "for_sensitivity_denovo_"+SPECIES_ID+".json")

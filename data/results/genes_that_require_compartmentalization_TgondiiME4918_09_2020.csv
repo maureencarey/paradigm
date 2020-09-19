@@ -1,0 +1,551 @@
+,genes,gene_assoc_w_other_rxns?
+14GLUCANabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+3HAD100_1,frozenset({<Gene TGME49_321570-t26_1-p1 at 0x7fa1e457b978>}),no
+3HAD120_1,frozenset({<Gene TGME49_321570-t26_1-p1 at 0x7fa1e457b978>}),no
+3HAD80_1,frozenset({<Gene TGME49_321570-t26_1-p1 at 0x7fa1e457b978>}),no
+3OAR100_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR120_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR140_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR160_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR180_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR181_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR40_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR60_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAR80_1,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+3OAS100_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+3OAS120_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+3OAS140_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+3OAS160_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+3OAS60_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+3OAS80_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+3PG_pi_thr,frozenset({<Gene TGME49_232690-t26_1-p1 at 0x7fa1e459b0b8>}),no
+A2GALT1,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A2GALT2,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A2GALT3,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A2GALT4,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A2GALT5,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A2GALT6,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A3GALT1,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A3GALT2,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A3GALT3,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A3GALT4,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A3GALT5,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+A4GALT,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+AACP1819ZS,frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>}),no
+AACPS1_1,frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>}),no
+AACPS3_1,frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>}),no
+AACPS4_1,frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>}),no
+AACPS5_1,frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>}),no
+AACPS6_1,frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>}),no
+AAMYLpp,frozenset({<Gene TGME49_246690-t26_1-p1 at 0x7fa1e4593a58>}),no
+AASPh,frozenset({<Gene TGME49_282230-t26_1-p1 at 0x7fa1e459bc50>}),no
+AATC,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+AATG,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+ABFPTh,frozenset({<Gene TGME49_265450-t26_1-p1 at 0x7fa1e459b898>}),no
+ACACT2,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_301120-t26_1-p1 at 0x7fa1e457bcf8>})",yes
+ACACT3,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+ACACT4p,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+ACACT5p,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+ACACT6p,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+ACACT7p,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+ACACT8p,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+ACACT9p,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+ACCOAC_1,frozenset({<Gene TGME49_284190-t26_1-p1 at 0x7fa1e459b2b0>}),no
+ACCOAhi,frozenset({<Gene TGME49_284190-t26_1-p1 at 0x7fa1e459b2b0>}),no
+ACCOAth,frozenset({<Gene TGME49_215940-t26_1-p1 at 0x7fa1e4593dd8>}),no
+ACCOAtx,frozenset({<Gene TGME49_215940-t26_1-p1 at 0x7fa1e4593dd8>}),no
+ACHMSSELCYSLh,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+ACOA100OR,"frozenset({<Gene TGME49_272180-t26_1-p1 at 0x7fa1e459b588>, <Gene TGME49_231900-t26_1-p1 at 0x7fa1e459b550>, <Gene TGME49_315480-t26_1-p1 at 0x7fa1e459b5f8>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+ACOA120OR,"frozenset({<Gene TGME49_272180-t26_1-p1 at 0x7fa1e459b588>, <Gene TGME49_231900-t26_1-p1 at 0x7fa1e459b550>, <Gene TGME49_315480-t26_1-p1 at 0x7fa1e459b5f8>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+ACOA140OR,"frozenset({<Gene TGME49_272180-t26_1-p1 at 0x7fa1e459b588>, <Gene TGME49_231900-t26_1-p1 at 0x7fa1e459b550>, <Gene TGME49_315480-t26_1-p1 at 0x7fa1e459b5f8>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+ACOA160OR,"frozenset({<Gene TGME49_272180-t26_1-p1 at 0x7fa1e459b588>, <Gene TGME49_231900-t26_1-p1 at 0x7fa1e459b550>, <Gene TGME49_315480-t26_1-p1 at 0x7fa1e459b5f8>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+ACOA40OR,"frozenset({<Gene TGME49_231900-t26_1-p1 at 0x7fa1e459b550>, <Gene TGME49_205430-t26_1-p1 at 0x7fa1e457bd68>, <Gene TGME49_315480-t26_1-p1 at 0x7fa1e459b5f8>, <Gene TGME49_272180-t26_1-p1 at 0x7fa1e459b588>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+ACOA60OR,"frozenset({<Gene TGME49_231900-t26_1-p1 at 0x7fa1e459b550>, <Gene TGME49_205430-t26_1-p1 at 0x7fa1e457bd68>, <Gene TGME49_315480-t26_1-p1 at 0x7fa1e459b5f8>, <Gene TGME49_272180-t26_1-p1 at 0x7fa1e459b588>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+ACOA80OR,"frozenset({<Gene TGME49_272180-t26_1-p1 at 0x7fa1e459b588>, <Gene TGME49_231900-t26_1-p1 at 0x7fa1e459b550>, <Gene TGME49_315480-t26_1-p1 at 0x7fa1e459b5f8>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+ACOAO4p,frozenset({<Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>}),no
+ACOAO5p,frozenset({<Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>}),no
+ACOAO6p,frozenset({<Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>}),no
+ACOAO7p,frozenset({<Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>}),no
+ACOAO8p,frozenset({<Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>}),no
+ACOAO9p,frozenset({<Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>}),no
+ACOATA_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+ACOLIPAabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+ACP1619ZD9DS,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+ACP1819ZD9DS,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+ACPh,frozenset({<Gene TGME49_258940-t26_1-p1 at 0x7fa1e45b1128>}),no
+ACSERLh,frozenset({<Gene TGME49_259180-t26_1-p1 at 0x7fa1e458da20>}),no
+ACSERSULLh,"frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>, <Gene TGME49_259180-t26_1-p1 at 0x7fa1e458da20>})",yes
+ACSp,frozenset({<Gene TGME49_232580-t26_1-p1 at 0x7fa1e457be10>}),no
+ADSSh,frozenset({<Gene TGME49_279450-t26_1-p1 at 0x7fa1e45b19b0>}),no
+AGAKI,frozenset({<Gene TGME49_305030-t26_1-p1 at 0x7fa1e45b1470>}),no
+AHAL,"frozenset({<Gene TGME49_249270-t26_1-p1 at 0x7fa1e459bc18>, <Gene TGME49_270120-t26_1-p1 at 0x7fa1e458d3c8>, <Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>, <Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>})",yes
+AHHST,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+AHSL,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+ALAALAabcpp,frozenset({<Gene TGME49_325700-t26_1-p1 at 0x7fa1e45402b0>}),no
+AM6PTh,frozenset({<Gene TGME49_265450-t26_1-p1 at 0x7fa1e459b898>}),no
+AMETt2h,frozenset({<Gene TGME49_242460-t26_1-p1 at 0x7fa1e45b1320>}),no
+APNn,"frozenset({<Gene TGME49_224840-t26_1-p1 at 0x7fa1e45b1b00>, <Gene TGME49_272650-t26_1-p1 at 0x7fa1e45b1ba8>, <Gene TGME49_266920-t26_1-p1 at 0x7fa1e45b1b38>, <Gene TGME49_318675-t26_1-p1 at 0x7fa1e45b1ac8>})",yes
+APOR,frozenset({<Gene TGME49_222160-t26_1-p1 at 0x7fa1e45870b8>}),no
+APhi,frozenset({<Gene TGME49_258940-t26_1-p1 at 0x7fa1e45b1128>}),no
+ASNt7,frozenset({<Gene TGME49_227570-t26_1-p1 at 0x7fa1e4593588>}),no
+ASO4rt2rpp,frozenset({<Gene TGME49_240210-t26_1-p1 at 0x7fa1e45aaba8>}),no
+ASPATh,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+ASPCTn,frozenset({<Gene TGME49_215260-t26_1-p1 at 0x7fa1e45801d0>}),no
+ASPK_1,frozenset({<Gene TGME49_227090-t26_1-p1 at 0x7fa1e459bfd0>}),no
+ASPTAp,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+ATAMh,"frozenset({<Gene TGME49_288320-t26_1-p1 at 0x7fa1e457bf98>, <Gene TGME49_307603-t26_1-p1 at 0x7fa1e459bd30>, <Gene TGME49_233400-t26_1-p1 at 0x7fa1e459bd68>})",yes
+ATDAMh,"frozenset({<Gene TGME49_288320-t26_1-p1 at 0x7fa1e457bf98>, <Gene TGME49_307603-t26_1-p1 at 0x7fa1e459bd30>, <Gene TGME49_233400-t26_1-p1 at 0x7fa1e459bd68>})",yes
+ATP2tp_H,frozenset({<Gene TGME49_249702-t26_1-p1 at 0x7fa1e45aa7f0>}),no
+ATPS10rpp,"frozenset({<Gene TGME49_261950-t26_1-p1 at 0x7fa1e4580630>, <Gene TGME49_204400-t26_1-p1 at 0x7fa1e45805c0>, <Gene TGME49_231910-t26_1-p1 at 0x7fa1e45805f8>})",yes
+ATPS3g,"frozenset({<Gene TGME49_305290-t26_1-p1 at 0x7fa1e4540e10>, <Gene TGME49_281920-t26_1-p1 at 0x7fa1e4540e48>, <Gene TGME49_212310-t26_1-p1 at 0x7fa1e4547048>, <Gene TGME49_310960-t26_1-p1 at 0x7fa1e4540e80>, <Gene TGME49_232830-t26_1-p1 at 0x7fa1e4547080>, <Gene TGME49_259010-t26_1-p1 at 0x7fa1e4540f28>, <Gene TGME49_219800-t26_1-p1 at 0x7fa1e4540f60>, <Gene TGME49_291310-t26_1-p1 at 0x7fa1e4540f98>, <Gene TGME49_256970-t26_1-p1 at 0x7fa1e4540dd8>})",yes
+ATPS3v,"frozenset({<Gene TGME49_305290-t26_1-p1 at 0x7fa1e4540e10>, <Gene TGME49_281920-t26_1-p1 at 0x7fa1e4540e48>, <Gene TGME49_212310-t26_1-p1 at 0x7fa1e4547048>, <Gene TGME49_310960-t26_1-p1 at 0x7fa1e4540e80>, <Gene TGME49_232830-t26_1-p1 at 0x7fa1e4547080>, <Gene TGME49_259010-t26_1-p1 at 0x7fa1e4540f28>, <Gene TGME49_219800-t26_1-p1 at 0x7fa1e4540f60>, <Gene TGME49_291310-t26_1-p1 at 0x7fa1e4540f98>, <Gene TGME49_256970-t26_1-p1 at 0x7fa1e4540dd8>})",yes
+ATPS4rpp,"frozenset({<Gene TGME49_284540-t26_1-p1 at 0x7fa1e4580588>, <Gene TGME49_261950-t26_1-p1 at 0x7fa1e4580630>, <Gene TGME49_204400-t26_1-p1 at 0x7fa1e45805c0>, <Gene TGME49_231910-t26_1-p1 at 0x7fa1e45805f8>})",yes
+ATPS4rpp_1,"frozenset({<Gene TGME49_261950-t26_1-p1 at 0x7fa1e4580630>, <Gene TGME49_204400-t26_1-p1 at 0x7fa1e45805c0>, <Gene TGME49_231910-t26_1-p1 at 0x7fa1e45805f8>})",yes
+ATPSu,"frozenset({<Gene TGME49_261950-t26_1-p1 at 0x7fa1e4580630>, <Gene TGME49_204400-t26_1-p1 at 0x7fa1e45805c0>, <Gene TGME49_231910-t26_1-p1 at 0x7fa1e45805f8>})",yes
+ATPtp_H,frozenset({<Gene TGME49_249702-t26_1-p1 at 0x7fa1e45aa7f0>}),no
+BATHORHODOPSINI,frozenset({<Gene TGME49_254370-t26_1-p1 at 0x7fa1e459bcc0>}),no
+BCAROKT,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+BCT1_syn,frozenset({<Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>}),no
+BFBPh,frozenset({<Gene TGME49_235700-t26_1-p1 at 0x7fa1e4580748>}),no
+BTNC,frozenset({<Gene TGME49_284190-t26_1-p1 at 0x7fa1e459b2b0>}),no
+BTP,frozenset({<Gene TGME49_265860-t26_1-p1 at 0x7fa1e45aaa58>}),no
+BUTSO3abcpp,frozenset({<Gene TGME49_247540-t26_1-p1 at 0x7fa1e4580160>}),no
+CA2abcpp,"frozenset({<Gene TGME49_252640-t26_1-p1 at 0x7fa1e45b1198>, <Gene TGME49_230420-t26_1-p1 at 0x7fa1e45b1160>})",yes
+CA2t3pp,frozenset({<Gene TGME49_207910-t26_1-p1 at 0x7fa1e4580198>}),no
+CATp,frozenset({<Gene TGME49_232250-t26_1-p1 at 0x7fa1e4593630>}),no
+CBPSn,frozenset({<Gene TGME49_215260-t26_1-p1 at 0x7fa1e45801d0>}),no
+CD2t3pp,frozenset({<Gene TGME49_251630-t26_1-p1 at 0x7fa1e4580208>}),no
+CDPDAGS18111Z160h,"frozenset({<Gene TGME49_263785-t26_1-p1 at 0x7fa1e4580320>, <Gene TGME49_281980-t26_1-p1 at 0x7fa1e459b7b8>})",yes
+CDPDAGS1819Z160h,"frozenset({<Gene TGME49_263785-t26_1-p1 at 0x7fa1e4580320>, <Gene TGME49_281980-t26_1-p1 at 0x7fa1e459b7b8>})",yes
+CEF,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+CHITOBpts,"frozenset({<Gene TGME49_288920-t26_1-p1 at 0x7fa1e4538048>, <Gene TGME49_290580-t26_1-p1 at 0x7fa1e458db70>})",yes
+CHLDA1tu,frozenset({<Gene TGME49_320460-t26_1-p1 at 0x7fa1e45934e0>}),no
+CHLDA2tu,frozenset({<Gene TGME49_320460-t26_1-p1 at 0x7fa1e45934e0>}),no
+CHOLS_ex,frozenset({<Gene TGME49_259180-t26_1-p1 at 0x7fa1e458da20>}),no
+CHRS,frozenset({<Gene TGME49_201380-t26_1-p1 at 0x7fa1e459bb00>}),no
+CHYA2,frozenset({<Gene TGME49_218560-t26_1-p1 at 0x7fa1e45a3080>}),no
+CLIPAabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+CLPNS120pp,frozenset({<Gene TGME49_309940-t26_1-p1 at 0x7fa1e4580278>}),no
+CLPNS160pp,frozenset({<Gene TGME49_309940-t26_1-p1 at 0x7fa1e4580278>}),no
+CLPNS161pp,frozenset({<Gene TGME49_309940-t26_1-p1 at 0x7fa1e4580278>}),no
+CLPNS180pp,frozenset({<Gene TGME49_309940-t26_1-p1 at 0x7fa1e4580278>}),no
+CLPNS181pp,frozenset({<Gene TGME49_309940-t26_1-p1 at 0x7fa1e4580278>}),no
+CLt3_2pp,frozenset({<Gene TGME49_290330-t26_1-p1 at 0x7fa1e45802b0>}),no
+COBALT2t3pp,frozenset({<Gene TGME49_251630-t26_1-p1 at 0x7fa1e4580208>}),no
+COLIPAPabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+COLIPAabcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+COLIPAabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+CPPPGO_1,frozenset({<Gene TGME49_223020-t26_1-p1 at 0x7fa1e45b1978>}),no
+CRETINOLPMTACT,"frozenset({<Gene TGME49_226370-t26_1-p1 at 0x7fa1e459b630>, <Gene TGME49_275590-t26_1-p1 at 0x7fa1e459b668>})",yes
+CRO4abcpp,frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>}),no
+CSp,"frozenset({<Gene TGME49_203110-t26_1-p1 at 0x7fa1e45b1e48>, <Gene TGME49_268890-t26_1-p1 at 0x7fa1e458ddd8>})",yes
+CU1abcpp,"frozenset({<Gene TGME49_226100-t26_1-p1 at 0x7fa1e45a3400>, <Gene TGME49_201150-t26_1-p1 at 0x7fa1e45aadd8>})",yes
+CU2abcpp,frozenset({<Gene TGME49_226100-t26_1-p1 at 0x7fa1e45a3400>}),no
+CU2abcu_syn,frozenset({<Gene TGME49_201150-t26_1-p1 at 0x7fa1e45aadd8>}),no
+CUabcpp,"frozenset({<Gene TGME49_226100-t26_1-p1 at 0x7fa1e45a3400>, <Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>})",yes
+CYO1_KT,"frozenset({<Gene TGME49_330000-t26_1-p1 at 0x7fa1e45aab00>, <Gene TGME49_320220-t26_1-p1 at 0x7fa1e45aaa90>})",yes
+CYSAT,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+CYSS_1,"frozenset({<Gene TGME49_259180-t26_1-p1 at 0x7fa1e458da20>, <Gene TGME49_278910-t26_1-p1 at 0x7fa1e45a3630>})",yes
+CYSTS_1,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+CYSabc2pp,"frozenset({<Gene TGME49_305590-t26_1-p1 at 0x7fa1e4538080>, <Gene TGME49_288920-t26_1-p1 at 0x7fa1e4538048>, <Gene TGME49_290580-t26_1-p1 at 0x7fa1e458db70>})",yes
+CYSabcpp,frozenset({<Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>}),no
+CYTBD2pp,frozenset({<Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>}),no
+CYTBO3_4pp,frozenset({<Gene TGME49_255060-t26_1-p1 at 0x7fa1e45a3470>}),no
+CYTP450Rh,frozenset({<Gene TGME49_219630-t26_1-p1 at 0x7fa1e459b208>}),no
+Cobalt2abcppI,frozenset({<Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>}),no
+DAGK1601819Zh,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK160h,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK1801819Zh,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK18111Z160h,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK18111Z1819Zh,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK1819Z160h,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK1819Z1619Zh,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK1819Z18111Zh,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DAGK1819Z1819Zh,frozenset({<Gene TGME49_239250-t26_1-p1 at 0x7fa1e459b518>}),no
+DGDGD4DS1819Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGD7DS1819Z1617Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGD7DS1829Z12Z1617Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGGH1819Z160,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1819Z1617Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1819Z1619Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1819Z1627Z10Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1819Z1637Z10Z13Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1829Z12Z160,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1829Z12Z1617Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1829Z12Z1619Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1829Z12Z1627Z10Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1829Z12Z1634Z7Z10Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1829Z12Z1637Z10Z13Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1839Z12Z15Z160,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1839Z12Z15Z1627Z10Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1839Z12Z15Z1637Z10Z13Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGGH1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+DGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW3DS1839Z12Z15Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1819Z1627Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1829Z12Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1829Z12Z1617Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1829Z12Z1619Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1829Z12Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+DHAP_pi_thr,frozenset({<Gene TGME49_232690-t26_1-p1 at 0x7fa1e459b0b8>}),no
+DHORTSn,frozenset({<Gene TGME49_215260-t26_1-p1 at 0x7fa1e45801d0>}),no
+DHQS_1,frozenset({<Gene TGME49_307040-t26_1-p1 at 0x7fa1e45a34e0>}),no
+DMT,frozenset({<Gene TGME49_227660-t26_1-p1 at 0x7fa1e459b908>}),no
+DNGALh,frozenset({<Gene TGME49_269800-t26_1-p1 at 0x7fa1e4593198>}),no
+DPHS,frozenset({<Gene TGME49_221260-t26_1-p1 at 0x7fa1e4540438>}),no
+DVPCHLD450OR,frozenset({<Gene TGME49_260460-t26_1-p1 at 0x7fa1e459bba8>}),no
+DVPCHLD646OR,frozenset({<Gene TGME49_260460-t26_1-p1 at 0x7fa1e459bba8>}),no
+DXRI,frozenset({<Gene TGME49_214850-t26_1-p1 at 0x7fa1e4580390>}),no
+DXS,frozenset({<Gene TGME49_208820-t26_1-p1 at 0x7fa1e45a3940>}),no
+EAR100x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR120x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR140x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR160x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR180x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR181x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR40x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR60x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+EAR80x_1,frozenset({<Gene TGME49_251930-t26_1-p1 at 0x7fa1e4580668>}),no
+ECA4COLIPAabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+ECOAH11p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+ECOAH4p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+ECOAH5p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+ECOAH6p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+ECOAH7p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+ECOAH8p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+EHGLATp,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+EMGH,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+ENLIPAabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+ENLIPIDAt1ex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+ENOf,frozenset({<Gene TGME49_268850-t26_1-p1 at 0x7fa1e45a39e8>}),no
+FA100ACPHi_1,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA120ACPHi_1,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA140ACPHi_1,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA140COAabcp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA141COAabcp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA160ACPHi_1,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA160COAabcp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA160COAabcp_1,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA161ACPHi_1,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA161COAabcp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA180ACPHi,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA180COAabcp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA1819ZACPH,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA181ACPHi,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FA181COAabcp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA182COAabcp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FA80ACPHi_1,frozenset({<Gene TGME49_271892-t26_1-p1 at 0x7fa1e459b2e8>}),no
+FACOAL100p,frozenset({<Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>}),no
+FACOAL100t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL120p,frozenset({<Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>}),no
+FACOAL120t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL140p,frozenset({<Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>}),no
+FACOAL140t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL141p,frozenset({<Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>}),no
+FACOAL141t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL160p,frozenset({<Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>}),no
+FACOAL160t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL161p,frozenset({<Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>}),no
+FACOAL161t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL180t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL181t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL60t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FACOAL80p,frozenset({<Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>}),no
+FACOAL80t2pp,"frozenset({<Gene TGME49_310150-t26_1-p1 at 0x7fa1e459b390>, <Gene TGME49_243800-t26_1-p1 at 0x7fa1e458dba8>, <Gene TGME49_297220-t26_1-p1 at 0x7fa1e457ba58>, <Gene TGME49_247760-t26_1-p1 at 0x7fa1e45802e8>})",yes
+FAO141p_even,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_226300-t26_1-p1 at 0x7fa1e457bb70>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO141p_odd,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO161p_even,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_226300-t26_1-p1 at 0x7fa1e457bb70>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO161p_odd,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO181p_even,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_226300-t26_1-p1 at 0x7fa1e457bb70>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO181p_odd,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO182p_eveneven,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_226300-t26_1-p1 at 0x7fa1e457bb70>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO182p_evenodd,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_226300-t26_1-p1 at 0x7fa1e457bb70>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO182p_oddodd,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO240p,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FAO80p,"frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>, <Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>, <Gene TGME49_247500-t26_1-p1 at 0x7fa1e458d7f0>})",yes
+FBA3hi,frozenset({<Gene TGME49_236050-t26_1-p1 at 0x7fa1e4538eb8>}),no
+FBAf,frozenset({<Gene TGME49_236050-t26_1-p1 at 0x7fa1e4538eb8>}),no
+FBAh,frozenset({<Gene TGME49_236050-t26_1-p1 at 0x7fa1e4538eb8>}),no
+FE2t2pp,frozenset({<Gene TGME49_267270-t26_1-p1 at 0x7fa1e4538128>}),no
+FE3DCITabcpp,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+FE3abch,frozenset({<Gene TGME49_297925-t26_1-p1 at 0x7fa1e4538dd8>}),no
+FE3abcpp,frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>}),no
+FEENTER2tpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>})",yes
+FEex,"frozenset({<Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_320460-t26_1-p1 at 0x7fa1e45934e0>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>})",yes
+FEpp,"frozenset({<Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_320460-t26_1-p1 at 0x7fa1e45934e0>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>})",yes
+FNORh,"frozenset({<Gene TGME49_298990-t26_1-p1 at 0x7fa1e4547358>, <Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>})",yes
+FPGPL,frozenset({<Gene TGME49_236050-t26_1-p1 at 0x7fa1e4538eb8>}),no
+FPPSh,frozenset({<Gene TGME49_224490-t26_1-p1 at 0x7fa1e45380f0>}),no
+FRUt3,frozenset({<Gene TGME49_272500-t26_1-p1 at 0x7fa1e4593b70>}),no
+G1P_pi_th,frozenset({<Gene TGME49_232690-t26_1-p1 at 0x7fa1e459b0b8>}),no
+G3PAT160h,frozenset({<Gene TGME49_270910-t26_1-p1 at 0x7fa1e45b1518>}),no
+G3PAT180h,frozenset({<Gene TGME49_270910-t26_1-p1 at 0x7fa1e45b1518>}),no
+G3PAT1819Zh,frozenset({<Gene TGME49_270910-t26_1-p1 at 0x7fa1e45b1518>}),no
+G3PAT181h,frozenset({<Gene TGME49_270910-t26_1-p1 at 0x7fa1e45b1518>}),no
+G3PCabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+G3PD1,"frozenset({<Gene TGME49_210260-t26_1-p1 at 0x7fa1e45a3b00>, <Gene TGME49_263730-t26_1-p1 at 0x7fa1e459bf28>, <Gene TGME49_307570-t26_1-p1 at 0x7fa1e45a3ac8>})",yes
+G3PD2_1,frozenset({<Gene TGME49_307570-t26_1-p1 at 0x7fa1e45a3ac8>}),no
+G3PEabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+G3PGabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+G3PIabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+G3PO,frozenset({<Gene TGME49_263730-t26_1-p1 at 0x7fa1e459bf28>}),no
+G3PSabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+G3P_pi_thr,frozenset({<Gene TGME49_232690-t26_1-p1 at 0x7fa1e459b0b8>}),no
+G5DHx,frozenset({<Gene TGME49_270550-t26_1-p1 at 0x7fa1e45aa978>}),no
+G6PADHh,frozenset({<Gene TGME49_278830-t26_1-p1 at 0x7fa1e45b1898>}),no
+G6PA_pi_th,frozenset({<Gene TGME49_232690-t26_1-p1 at 0x7fa1e459b0b8>}),no
+G6PBDHh,frozenset({<Gene TGME49_278830-t26_1-p1 at 0x7fa1e45b1898>}),no
+G6PB_pi_th,frozenset({<Gene TGME49_232690-t26_1-p1 at 0x7fa1e459b0b8>}),no
+G6PIh,frozenset({<Gene TGME49_283780-t26_1-p1 at 0x7fa1e459b860>}),no
+GALt2pp,"frozenset({<Gene TGME49_257120-t26_1-p1 at 0x7fa1e4538240>, <Gene TGME49_214320-t26_1-p1 at 0x7fa1e45b1048>})",yes
+GCPNn,"frozenset({<Gene TGME49_272650-t26_1-p1 at 0x7fa1e45b1ba8>, <Gene TGME49_266920-t26_1-p1 at 0x7fa1e45b1b38>, <Gene TGME49_318675-t26_1-p1 at 0x7fa1e45b1ac8>})",yes
+GGGH,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+GLCt2pp,"frozenset({<Gene TGME49_257120-t26_1-p1 at 0x7fa1e4538240>, <Gene TGME49_214320-t26_1-p1 at 0x7fa1e45b1048>, <Gene TGME49_272500-t26_1-p1 at 0x7fa1e4593b70>})",yes
+GLNTRAT,frozenset({<Gene TGME49_233838-t26_1-p1 at 0x7fa1e45aacc0>}),no
+GLNabcpp,frozenset({<Gene TGME49_226790-t26_1-p1 at 0x7fa1e45a3b70>}),no
+GLNt7,frozenset({<Gene TGME49_227570-t26_1-p1 at 0x7fa1e4593588>}),no
+GLUKAh,frozenset({<Gene TGME49_265450-t26_1-p1 at 0x7fa1e459b898>}),no
+GLUKBh,frozenset({<Gene TGME49_265450-t26_1-p1 at 0x7fa1e459b898>}),no
+GLUS_ferr,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+GLUTRS_Gln,frozenset({<Gene TGME49_241870-t26_1-p1 at 0x7fa1e4580080>}),no
+GLYC2Pabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+GLYC3Pabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+GLYC3Pth,frozenset({<Gene TGME49_278800-t26_1-p1 at 0x7fa1e45b1358>}),no
+GLYCth,frozenset({<Gene TGME49_252340-t26_1-p1 at 0x7fa1e458dc18>}),no
+GM1LIPAabcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+GM2LIPAabcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+GRGT,frozenset({<Gene TGME49_283810-t26_1-p1 at 0x7fa1e459ba20>}),no
+GTHRDabc2pp,"frozenset({<Gene TGME49_305590-t26_1-p1 at 0x7fa1e4538080>, <Gene TGME49_288920-t26_1-p1 at 0x7fa1e4538048>, <Gene TGME49_290580-t26_1-p1 at 0x7fa1e458db70>})",yes
+GTHRDabcv,frozenset({<Gene TGME49_320460-t26_1-p1 at 0x7fa1e45934e0>}),no
+GTHS_1,frozenset({<Gene TGME49_226800-t26_1-p1 at 0x7fa1e459b470>}),no
+GUACn,frozenset({<Gene TGME49_254370-t26_1-p1 at 0x7fa1e459bcc0>}),no
+HACD10p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+HACD4p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+HACD5p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+HACD6p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+HACD7p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+HACD8p,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+HACDp,frozenset({<Gene TGME49_234570-t26_1-p1 at 0x7fa1e457bb38>}),no
+HDS,frozenset({<Gene TGME49_262430-t26_1-p1 at 0x7fa1e4538da0>}),no
+HEMELh,frozenset({<Gene TGME49_314042-t26_1-p1 at 0x7fa1e459bbe0>}),no
+HYDAh,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+ICDHyp,frozenset({<Gene TGME49_266760-t26_1-p1 at 0x7fa1e4538ac8>}),no
+IDPh,"frozenset({<Gene TGME49_283830-t26_1-p1 at 0x7fa1e45b1908>, <Gene TGME49_248670-t26_1-p1 at 0x7fa1e4593ac8>})",yes
+ILEt7,frozenset({<Gene TGME49_227570-t26_1-p1 at 0x7fa1e4593588>}),no
+ISETACabcpp,frozenset({<Gene TGME49_247540-t26_1-p1 at 0x7fa1e4580160>}),no
+K2L4Aabcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+K2L4Aabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+KAS14_1,frozenset({<Gene TGME49_231890-t26_1-p1 at 0x7fa1e457bc50>}),no
+KATp,frozenset({<Gene TGME49_273740-t26_1-p1 at 0x7fa1e457bb00>}),no
+LEUt7,frozenset({<Gene TGME49_227570-t26_1-p1 at 0x7fa1e4593588>}),no
+LIPACabcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+LIPAabcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+LIPAabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+LLDH_ferr_x,frozenset({<Gene TGME49_273530-t26_1-p1 at 0x7fa1e459be10>}),no
+LUMIRHODOPSINI,frozenset({<Gene TGME49_254370-t26_1-p1 at 0x7fa1e459bcc0>}),no
+MALTHXabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+MALTPTabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+MALTTRabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+MALTTTRabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+MALTabcpp,frozenset({<Gene TGME49_216790-t26_1-p1 at 0x7fa1e4580710>}),no
+MCOATA_1,frozenset({<Gene TGME49_225990-t26_1-p1 at 0x7fa1e45939b0>}),no
+METARHODOPSINH,frozenset({<Gene TGME49_254370-t26_1-p1 at 0x7fa1e459bcc0>}),no
+METDabcpp,frozenset({<Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>}),no
+METHFth,"frozenset({<Gene TGME49_231420-t26_1-p1 at 0x7fa1e4593fd0>, <Gene TGME49_205490-t26_1-p1 at 0x7fa1e4593f60>})",no
+METabcpp,frozenset({<Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>}),no
+MG2uabcpp,"frozenset({<Gene TGME49_278660-t26_1-p1 at 0x7fa1e4538710>, <Gene TGME49_284598-t26_1-p1 at 0x7fa1e45386a0>, <Gene TGME49_312100-t26_1-p1 at 0x7fa1e45386d8>, <Gene TGME49_230420-t26_1-p1 at 0x7fa1e45b1160>})",yes
+MGDGD4DS1819Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGD4DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGD7DS1819Z1617Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGD7DS1829Z12Z1617Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1839Z12Z15Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z1,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z2,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1819Z1627Z10Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1829Z12Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1829Z12Z1617Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1829Z12Z1619Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGDGW6DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+MGHA,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+MGHB,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+MI1345PKn,frozenset({<Gene TGME49_208070-t26_1-p1 at 0x7fa1e4593160>}),no
+MI1456PKn,frozenset({<Gene TGME49_208070-t26_1-p1 at 0x7fa1e4593160>}),no
+MI145P6Kn,frozenset({<Gene TGME49_208070-t26_1-p1 at 0x7fa1e4593160>}),no
+MI145PKn,frozenset({<Gene TGME49_208070-t26_1-p1 at 0x7fa1e4593160>}),no
+MLDEP1pp,frozenset({<Gene TGME49_235680-t26_1-p1 at 0x7fa1e45872b0>}),no
+MLDEP2pp,frozenset({<Gene TGME49_235680-t26_1-p1 at 0x7fa1e45872b0>}),no
+MLGH,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+MN2t3pp,frozenset({<Gene TGME49_251630-t26_1-p1 at 0x7fa1e4580208>}),no
+MNabc_1,frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>}),no
+MNt2pp,frozenset({<Gene TGME49_267270-t26_1-p1 at 0x7fa1e4538128>}),no
+MOBDabcpp,"frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>, <Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>, <Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>})",yes
+MTGH,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+NA1Hth,frozenset({<Gene TGME49_305180-t26_1-p1 at 0x7fa1e4547390>}),no
+NADS1n,frozenset({<Gene TGME49_269800-t26_1-p1 at 0x7fa1e4593198>}),no
+NAt3pp,"frozenset({<Gene TGME49_259200-t26_1-p1 at 0x7fa1e45aa080>, <Gene TGME49_299060-t26_1-p1 at 0x7fa1e45aa198>})",no
+NI2t3pp,frozenset({<Gene TGME49_251630-t26_1-p1 at 0x7fa1e4580208>}),no
+NI2uabcpp,"frozenset({<Gene TGME49_278660-t26_1-p1 at 0x7fa1e4538710>, <Gene TGME49_230420-t26_1-p1 at 0x7fa1e45b1160>, <Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>, <Gene TGME49_284598-t26_1-p1 at 0x7fa1e45386a0>, <Gene TGME49_312100-t26_1-p1 at 0x7fa1e45386d8>})",yes
+NO2R,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+NO2t2rpp,frozenset({<Gene TGME49_209800-t26_1-p1 at 0x7fa1e45a3e80>}),no
+NO3abcpp,frozenset({<Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>}),no
+O16A4COLIPAabctex,frozenset({<Gene TGME49_315560-t26_1-p1 at 0x7fa1e4580240>}),no
+OAGMIG,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+OHPHM6n,frozenset({<Gene TGME49_248200-t26_1-p1 at 0x7fa1e4540cc0>}),no
+OXOADLR,frozenset({<Gene TGME49_219550-t26_1-p1 at 0x7fa1e458d9e8>}),no
+PA120abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PA140abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PA141abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PA160abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PA161abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PA180abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PA181abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PCHLD450OR,frozenset({<Gene TGME49_260460-t26_1-p1 at 0x7fa1e459bba8>}),no
+PCHLD646OR,frozenset({<Gene TGME49_260460-t26_1-p1 at 0x7fa1e459bba8>}),no
+PDHam1hi,"frozenset({<Gene TGME49_245670-t26_1-p1 at 0x7fa1e4593a20>, <Gene TGME49_272290-t26_1-p1 at 0x7fa1e45939e8>})",yes
+PDHam2hi,"frozenset({<Gene TGME49_245670-t26_1-p1 at 0x7fa1e4593a20>, <Gene TGME49_272290-t26_1-p1 at 0x7fa1e45939e8>})",yes
+PDHe2hr,frozenset({<Gene TGME49_206610-t26_1-p1 at 0x7fa1e45b1710>}),no
+PDHe3hr,frozenset({<Gene TGME49_305980-t26_1-p1 at 0x7fa1e4587630>}),no
+PE120abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PE140abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PE141abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PE160abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PE161abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PE180abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PE181abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PEPPIth,"frozenset({<Gene TGME49_232690-t26_1-p1 at 0x7fa1e459b0b8>, <Gene TGME49_261070-t26_1-p1 at 0x7fa1e459b0f0>})",no
+PG120abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PG140abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PG141abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PG160abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PG161abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PG180abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PG181abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PGD3TDS18111Z1613E,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+PGD3TDS1819Z1613E,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+PGD3TDS1829Z12Z1613E,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+PGD3TDS1839Z12Z15Z1613E,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+PGDHh,frozenset({<Gene TGME49_307850-t26_1-p1 at 0x7fa1e45b1940>}),no
+PGIAh,frozenset({<Gene TGME49_283780-t26_1-p1 at 0x7fa1e459b860>}),no
+PGIBh,frozenset({<Gene TGME49_283780-t26_1-p1 at 0x7fa1e459b860>}),no
+PGKh,frozenset({<Gene TGME49_222020-t26_1-p1 at 0x7fa1e458d208>}),no
+PGLYCPh,frozenset({<Gene TGME49_209870-t26_1-p1 at 0x7fa1e4580eb8>}),no
+PGLYCPx,frozenset({<Gene TGME49_209870-t26_1-p1 at 0x7fa1e4580eb8>}),no
+PGLYDH,frozenset({<Gene TGME49_239820-t26_1-p1 at 0x7fa1e4587a58>}),no
+PGMTh,frozenset({<Gene TGME49_285980-t26_1-p1 at 0x7fa1e459b8d0>}),no
+PGP120abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PGP140abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PGP141abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>})",yes
+PGP160abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PGP161abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PGP180abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PGP181abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>, <Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>, <Gene TGME49_273360-t26_1-p1 at 0x7fa1e4587ba8>, <Gene TGME49_263740-t26_1-p1 at 0x7fa1e4587ac8>, <Gene TGME49_209190-t26_1-p1 at 0x7fa1e4587cf8>})",yes
+PGPS18111Z160h,frozenset({<Gene TGME49_254540-t26_1-p1 at 0x7fa1e4587908>}),no
+PGPS1819Z160h,frozenset({<Gene TGME49_254540-t26_1-p1 at 0x7fa1e4587908>}),no
+PGW3DS1839Z12Z15Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+PGW6DS1829Z12Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+PHEMEabcpp,frozenset({<Gene TGME49_316100-t26_1-p1 at 0x7fa1e4540860>}),no
+PHOMSELCYSLh,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+PIN4Kn_SC,frozenset({<Gene TGME49_296010-t26_1-p1 at 0x7fa1e4593358>}),no
+PINA1th,frozenset({<Gene TGME49_240210-t26_1-p1 at 0x7fa1e45aaba8>}),no
+PIt2p,frozenset({<Gene TGME49_240210-t26_1-p1 at 0x7fa1e45aaba8>}),no
+PIt2rpp,frozenset({<Gene TGME49_240210-t26_1-p1 at 0x7fa1e45aaba8>}),no
+PItf,frozenset({<Gene TGME49_240210-t26_1-p1 at 0x7fa1e45aaba8>}),no
+POATh,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+PPA_1pp,frozenset({<Gene TGME49_248670-t26_1-p1 at 0x7fa1e4593ac8>}),no
+PPBNGD,frozenset({<Gene TGME49_271420-t26_1-p1 at 0x7fa1e45382e8>}),no
+PPBNGS_1,frozenset({<Gene TGME49_253900-t26_1-p1 at 0x7fa1e4587be0>}),no
+PPMh,frozenset({<Gene TGME49_285980-t26_1-p1 at 0x7fa1e459b8d0>}),no
+PS120abcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+PS140abcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+PS141abcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+PS160abcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+PS161abcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+PS180abcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+PS181abcpp,frozenset({<Gene TGME49_269000-t26_1-p1 at 0x7fa1e4587b70>}),no
+PSAT,frozenset({<Gene TGME49_218780-t26_1-p1 at 0x7fa1e4587cc0>}),no
+PTRCabcpp,frozenset({<Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>}),no
+PYKf,frozenset({<Gene TGME49_256760-t26_1-p1 at 0x7fa1e4587f98>}),no
+PYRShi,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+RETINOLACACT,"frozenset({<Gene TGME49_226370-t26_1-p1 at 0x7fa1e459b630>, <Gene TGME49_275590-t26_1-p1 at 0x7fa1e459b668>})",yes
+RGH,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+RHODOPSINI,frozenset({<Gene TGME49_254370-t26_1-p1 at 0x7fa1e459bcc0>}),no
+RHODOPSINRT,frozenset({<Gene TGME49_254370-t26_1-p1 at 0x7fa1e459bcc0>}),no
+RNDR1n,"frozenset({<Gene TGME49_207060-t26_1-p1 at 0x7fa1e458d518>, <Gene TGME49_294640-t26_1-p1 at 0x7fa1e458d128>, <Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>})",yes
+RNDR2n,"frozenset({<Gene TGME49_207060-t26_1-p1 at 0x7fa1e458d518>, <Gene TGME49_294640-t26_1-p1 at 0x7fa1e458d128>, <Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>})",yes
+RNDR3n,"frozenset({<Gene TGME49_207060-t26_1-p1 at 0x7fa1e458d518>, <Gene TGME49_294640-t26_1-p1 at 0x7fa1e458d128>, <Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>})",yes
+RNDR4n,"frozenset({<Gene TGME49_207060-t26_1-p1 at 0x7fa1e458d518>, <Gene TGME49_294640-t26_1-p1 at 0x7fa1e458d128>, <Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>})",yes
+RPEh,frozenset({<Gene TGME49_247670-t26_1-p1 at 0x7fa1e45400b8>}),no
+RPIh,frozenset({<Gene TGME49_239310-t26_1-p1 at 0x7fa1e4587e80>}),no
+SALCHS4abcpp,"frozenset({<Gene TGME49_260310-t26_1-p1 at 0x7fa1e4587b00>, <Gene TGME49_239020-t26_1-p1 at 0x7fa1e4587b38>})",yes
+SBP_1,frozenset({<Gene TGME49_235700-t26_1-p1 at 0x7fa1e4580748>}),no
+SECYSTL,frozenset({<Gene TGME49_251690-t26_1-p1 at 0x7fa1e45aa2b0>}),no
+SELtpp,"frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>, <Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>, <Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>})",yes
+SERTRS2,"frozenset({<Gene TGME49_251690-t26_1-p1 at 0x7fa1e45aa2b0>, <Gene TGME49_271625-t26_1-p1 at 0x7fa1e45aa2e8>})",yes
+SHSL1h,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+SHSL2h,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+SHSL4h,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+SLNTtpp,"frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>, <Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>, <Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>})",yes
+SO3abcpp,frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>}),no
+SQDGW3DS1839Z12Z15Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+SQDGW6DS1829Z12Z160,frozenset({<Gene TGME49_215070-t26_1-p1 at 0x7fa1e459b278>}),no
+SQLErx,frozenset({<Gene TGME49_262910-t26_1-p1 at 0x7fa1e459b9b0>}),no
+STARCH300DEGR2A,"frozenset({<Gene TGME49_283490-t26_1-p1 at 0x7fa1e459beb8>, <Gene TGME49_310670-t26_1-p1 at 0x7fa1e45807f0>})",yes
+STARCH300DEGR2B,"frozenset({<Gene TGME49_283490-t26_1-p1 at 0x7fa1e459beb8>, <Gene TGME49_310670-t26_1-p1 at 0x7fa1e45807f0>})",yes
+STARCH300DEGRA,"frozenset({<Gene TGME49_283490-t26_1-p1 at 0x7fa1e459beb8>, <Gene TGME49_310670-t26_1-p1 at 0x7fa1e45807f0>})",yes
+STARCH300DEGRB,"frozenset({<Gene TGME49_283490-t26_1-p1 at 0x7fa1e459beb8>, <Gene TGME49_310670-t26_1-p1 at 0x7fa1e45807f0>})",yes
+STARCH300S,frozenset({<Gene TGME49_209960-t26_1-p1 at 0x7fa1e45b19e8>}),no
+SUCHMSSELCYSLh,frozenset({<Gene TGME49_312930-t26_1-p1 at 0x7fa1e459b198>}),no
+SULabcpp,"frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>, <Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>, <Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>})",yes
+SYGH,frozenset({<Gene TGME49_254880-t26_1-p1 at 0x7fa1e459b3c8>}),no
+TAURabcpp,frozenset({<Gene TGME49_247540-t26_1-p1 at 0x7fa1e4580160>}),no
+TCHOLAabcv,frozenset({<Gene TGME49_320460-t26_1-p1 at 0x7fa1e45934e0>}),no
+TDSRh,"frozenset({<Gene TGME49_249270-t26_1-p1 at 0x7fa1e459bc18>, <Gene TGME49_270120-t26_1-p1 at 0x7fa1e458d3c8>, <Gene TGME49_309730-t26_1-p1 at 0x7fa1e458d748>, <Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>})",yes
+THD2pp,"frozenset({<Gene TGME49_318650-t26_1-p1 at 0x7fa1e4538748>, <Gene TGME49_301210-t26_1-p1 at 0x7fa1e4538668>})",yes
+THIORDXni,frozenset({<Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>}),no
+THIORDXp,frozenset({<Gene TGME49_293870-t26_1-p1 at 0x7fa1e458d4e0>}),no
+TKT1h,frozenset({<Gene TGME49_318310-t26_1-p1 at 0x7fa1e45aa5c0>}),no
+TKT2h,frozenset({<Gene TGME49_318310-t26_1-p1 at 0x7fa1e45aa5c0>}),no
+TPIh,frozenset({<Gene TGME49_225930-t26_1-p1 at 0x7fa1e458d2e8>}),no
+TRETINOLPMTACT,"frozenset({<Gene TGME49_226370-t26_1-p1 at 0x7fa1e459b630>, <Gene TGME49_275590-t26_1-p1 at 0x7fa1e459b668>})",yes
+TSULabcpp,"frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>, <Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>, <Gene TGME49_289350-t26_1-p1 at 0x7fa1e4593978>})",yes
+TSULth,frozenset({<Gene TGME49_316320-t26_1-p1 at 0x7fa1e4587278>}),no
+TUNGSabcpp,frozenset({<Gene TGME49_244270-t26_1-p1 at 0x7fa1e458d048>}),no
+TYRTAh,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+TYRTAip,frozenset({<Gene TGME49_248600-t26_1-p1 at 0x7fa1e457bfd0>}),no
+TYRt7,frozenset({<Gene TGME49_227570-t26_1-p1 at 0x7fa1e4593588>}),no
+UDPGALth,frozenset({<Gene TGME49_254580-t26_1-p1 at 0x7fa1e45b1390>}),no
+UDPGth,frozenset({<Gene TGME49_254580-t26_1-p1 at 0x7fa1e45b1390>}),no
+UG6PGTn,frozenset({<Gene TGME49_297720-t26_1-p1 at 0x7fa1e45aa7b8>}),no
+UMPKn,frozenset({<Gene TGME49_257740-t26_1-p1 at 0x7fa1e45aa278>}),no
+URIDK2rn,frozenset({<Gene TGME49_257740-t26_1-p1 at 0x7fa1e45aa278>}),no
+VALTLh,"frozenset({<Gene TGME49_207640-t26_1-p1 at 0x7fa1e458d588>, <Gene TGME49_253290-t26_1-p1 at 0x7fa1e458d550>})",yes
+XYLt2pp,"frozenset({<Gene TGME49_201260-t26_1-p1 at 0x7fa1e458dd68>, <Gene TGME49_272500-t26_1-p1 at 0x7fa1e4593b70>})",yes
+ZHY,frozenset({<Gene TGME49_218560-t26_1-p1 at 0x7fa1e45a3080>}),no
+ZN2t3pp,frozenset({<Gene TGME49_251630-t26_1-p1 at 0x7fa1e4580208>}),no
+ZNabcpp,"frozenset({<Gene TGME49_314330-t26_1-p1 at 0x7fa1e458d390>, <Gene TGME49_318710-t26_1-p1 at 0x7fa1e458d630>})",no

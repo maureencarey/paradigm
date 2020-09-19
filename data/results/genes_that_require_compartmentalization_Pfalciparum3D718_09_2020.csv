@@ -1,0 +1,354 @@
+,genes,gene_assoc_w_other_rxns?
+3HAD100_1,frozenset({<Gene PF3D7_1323000.1-p1 at 0x7f93133a2908>}),no
+3HAD120_1,frozenset({<Gene PF3D7_1323000.1-p1 at 0x7f93133a2908>}),no
+3HAD80_1,frozenset({<Gene PF3D7_1323000.1-p1 at 0x7f93133a2908>}),no
+3OAS100_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+3OAS120_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+3OAS140_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+3OAS160_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+3OAS60_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+3OAS80_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+AACP1819ZS,frozenset({<Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>}),no
+AACPS1_1,frozenset({<Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>}),no
+AACPS3_1,frozenset({<Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>}),no
+AACPS4_1,frozenset({<Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>}),no
+AACPS5_1,frozenset({<Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>}),no
+AACPS6_1,frozenset({<Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>}),no
+ABFPTh,frozenset({<Gene PF3D7_0624000.1-p1 at 0x7f93133b3c88>}),no
+ACCOAth,frozenset({<Gene PF3D7_1036800.1-p1 at 0x7f93133b3828>}),no
+ACCOAtx,frozenset({<Gene PF3D7_1036800.1-p1 at 0x7f93133b3828>}),no
+ACOA100OR,frozenset({<Gene PF3D7_1455900.1-p1 at 0x7f93133b3b38>}),no
+ACOA120OR,frozenset({<Gene PF3D7_1455900.1-p1 at 0x7f93133b3b38>}),no
+ACOA140OR,frozenset({<Gene PF3D7_1455900.1-p1 at 0x7f93133b3b38>}),no
+ACOA160OR,frozenset({<Gene PF3D7_1455900.1-p1 at 0x7f93133b3b38>}),no
+ACOA40OR,frozenset({<Gene PF3D7_1455900.1-p1 at 0x7f93133b3b38>}),no
+ACOA60OR,frozenset({<Gene PF3D7_1455900.1-p1 at 0x7f93133b3b38>}),no
+ACOA80OR,frozenset({<Gene PF3D7_1455900.1-p1 at 0x7f93133b3b38>}),no
+ACOATA_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+ACOLIPAabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+ACP1619ZD9DS,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+ACP1819ZD9DS,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+ACPh,frozenset({<Gene PF3D7_1111500.1-p1 at 0x7f93133439b0>}),no
+ACSp,frozenset({<Gene PF3D7_0627800.1-p1 at 0x7f93133a2a90>}),no
+ADSSh,frozenset({<Gene PF3D7_1354500.1-p1 at 0x7f9313343d30>}),no
+AGPAT1601819Zh,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT160h,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT1801819Zh,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT18111Z160h,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT18111Z1819Zh,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT1819Z160h,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT1819Z1619Zh,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT1819Z18111Zh,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AGPAT1819Z1819Zh,frozenset({<Gene PF3D7_1444300.1-p1 at 0x7f93133a2b38>}),no
+AHAL,frozenset({<Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>}),no
+AM6PTh,frozenset({<Gene PF3D7_0624000.1-p1 at 0x7f93133b3c88>}),no
+AMITKPn,frozenset({<Gene PF3D7_1316100.1-p1 at 0x7f93133b30b8>}),no
+APNn,"frozenset({<Gene PF3D7_1321600.1-p1 at 0x7f9313343eb8>, <Gene PF3D7_1321500.2-p1 at 0x7f9313343e48>, <Gene PF3D7_1321500.1-p1 at 0x7f9313343ef0>})",yes
+APhi,frozenset({<Gene PF3D7_1111500.1-p1 at 0x7f93133439b0>}),no
+ASO4rt2rpp,frozenset({<Gene PF3D7_1340900.1-p1 at 0x7f93133435c0>}),no
+ASPCTn,frozenset({<Gene PF3D7_1308200.1-p1 at 0x7f93133a2cf8>}),no
+ATAMh,"frozenset({<Gene PF3D7_0111500.1-p1 at 0x7f93133ba198>, <Gene PF3D7_0415600.1-p1 at 0x7f93133a2be0>, <Gene PF3D7_0110900.1-p1 at 0x7f93133ba160>})",yes
+ATDAMh,"frozenset({<Gene PF3D7_0111500.1-p1 at 0x7f93133ba198>, <Gene PF3D7_0415600.1-p1 at 0x7f93133a2be0>, <Gene PF3D7_0110900.1-p1 at 0x7f93133ba160>})",yes
+ATPS10rpp,"frozenset({<Gene PF3D7_1235700.1-p1 at 0x7f93133a6198>, <Gene PF3D7_1311300.1-p1 at 0x7f93133a6128>, <Gene PF3D7_0217100.1-p1 at 0x7f93133a6160>})",yes
+ATPS3g,"frozenset({<Gene PF3D7_1464700.1-p1 at 0x7f9313351a20>, <Gene PF3D7_1311900.1-p1 at 0x7f9313351a58>, <Gene PF3D7_1354400.1-p1 at 0x7f9313351a90>, <Gene PF3D7_0519200.1-p1 at 0x7f9313351ac8>, <Gene PF3D7_1341900.1-p1 at 0x7f9313351b00>, <Gene PF3D7_1140100.1-p1 at 0x7f9313351b38>, <Gene PF3D7_0406100.1-p1 at 0x7f9313351978>, <Gene PF3D7_1306600.1-p1 at 0x7f93133519b0>, <Gene PF3D7_0806800.1-p1 at 0x7f93133519e8>})",yes
+ATPS3v,"frozenset({<Gene PF3D7_1464700.1-p1 at 0x7f9313351a20>, <Gene PF3D7_1311900.1-p1 at 0x7f9313351a58>, <Gene PF3D7_1354400.1-p1 at 0x7f9313351a90>, <Gene PF3D7_0519200.1-p1 at 0x7f9313351ac8>, <Gene PF3D7_1341900.1-p1 at 0x7f9313351b00>, <Gene PF3D7_1140100.1-p1 at 0x7f9313351b38>, <Gene PF3D7_0406100.1-p1 at 0x7f9313351978>, <Gene PF3D7_1306600.1-p1 at 0x7f93133519b0>, <Gene PF3D7_0806800.1-p1 at 0x7f93133519e8>})",yes
+ATPS4rpp,"frozenset({<Gene PF3D7_1235700.1-p1 at 0x7f93133a6198>, <Gene PF3D7_1311300.1-p1 at 0x7f93133a6128>, <Gene PF3D7_0217100.1-p1 at 0x7f93133a6160>})",yes
+ATPS4rpp_1,"frozenset({<Gene PF3D7_1311300.1-p1 at 0x7f93133a6128>, <Gene PF3D7_0217100.1-p1 at 0x7f93133a6160>})",yes
+ATPSu,"frozenset({<Gene PF3D7_1311300.1-p1 at 0x7f93133a6128>, <Gene PF3D7_0217100.1-p1 at 0x7f93133a6160>})",yes
+BATHORHODOPSINI,frozenset({<Gene PF3D7_1360500.1-p1 at 0x7f93133ba1d0>}),no
+BCAROKT,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+BTP,frozenset({<Gene PF3D7_0817500.1-p1 at 0x7f9313351e10>}),no
+CA2abcpp,frozenset({<Gene PF3D7_1211900.1-p1 at 0x7f93133438d0>}),no
+CA2t3pp,frozenset({<Gene PF3D7_0603500.1-p1 at 0x7f93133a2cc0>}),no
+CBFC,frozenset({<Gene PF3D7_1439400.1-p1 at 0x7f93133b3630>}),no
+CBPSn,frozenset({<Gene PF3D7_1308200.1-p1 at 0x7f93133a2cf8>}),no
+CDPDAGS18111Z160h,frozenset({<Gene PF3D7_1409900.1-p1 at 0x7f93133a2e48>}),no
+CDPDAGS1819Z160h,frozenset({<Gene PF3D7_1409900.1-p1 at 0x7f93133a2e48>}),no
+CEF,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+CHITOBpts,frozenset({<Gene PF3D7_1469000.1-p1 at 0x7f93133517b8>}),no
+CHLDA1tu,frozenset({<Gene PF3D7_1229100.1-p1 at 0x7f93133a6940>}),no
+CHLDA2tu,frozenset({<Gene PF3D7_1229100.1-p1 at 0x7f93133a6940>}),no
+CHRS,frozenset({<Gene PF3D7_0623000.1-p1 at 0x7f93133b3d30>}),no
+CHYA2,frozenset({<Gene PF3D7_1469600.1-p1 at 0x7f93133ade10>}),no
+CLIPAabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+CLPNS120pp,frozenset({<Gene PF3D7_0609400.1-p1 at 0x7f93133a2e10>}),no
+CLPNS140pp,frozenset({<Gene PF3D7_0609400.1-p1 at 0x7f93133a2e10>}),no
+CLPNS141pp,frozenset({<Gene PF3D7_0609400.1-p1 at 0x7f93133a2e10>}),no
+CLPNS160pp,frozenset({<Gene PF3D7_0609400.1-p1 at 0x7f93133a2e10>}),no
+CLPNS161pp,frozenset({<Gene PF3D7_0609400.1-p1 at 0x7f93133a2e10>}),no
+CLPNS180pp,frozenset({<Gene PF3D7_0609400.1-p1 at 0x7f93133a2e10>}),no
+CLPNS181pp,frozenset({<Gene PF3D7_0609400.1-p1 at 0x7f93133a2e10>}),no
+CMK,frozenset({<Gene PF3D7_0503100.1-p1 at 0x7f9313343b00>}),no
+COLIPAPabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+COLIPAabcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+COLIPAabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+CPPPGO_1,frozenset({<Gene PF3D7_1142400.1-p1 at 0x7f9313343cf8>}),no
+CRO4abcpp,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+CSp,frozenset({<Gene PF3D7_1022500.1-p1 at 0x7f93133b3080>}),no
+CU1abcpp,frozenset({<Gene PF3D7_0904900.1-p1 at 0x7f93133ba668>}),no
+CU2abcu_syn,frozenset({<Gene PF3D7_0904900.1-p1 at 0x7f93133ba668>}),no
+CYO1_KT,"frozenset({<Gene PF3D7_1439400.1-p1 at 0x7f93133b3630>, <Gene mal_mito_3:mRNA-p1 at 0x7f93133b35f8>})",yes
+CYO1b2_syn,frozenset({<Gene mal_mito_2:mRNA-p1 at 0x7f93133b3668>}),no
+CYO1b2pp_syn,frozenset({<Gene mal_mito_2:mRNA-p1 at 0x7f93133b3668>}),no
+CYO1b_syn,frozenset({<Gene mal_mito_2:mRNA-p1 at 0x7f93133b3668>}),no
+CYO1bpp_syn,frozenset({<Gene mal_mito_2:mRNA-p1 at 0x7f93133b3668>}),no
+CYOO2pp,frozenset({<Gene mal_mito_2:mRNA-p1 at 0x7f93133b3668>}),no
+CYTBO3_4pp,frozenset({<Gene mal_mito_2:mRNA-p1 at 0x7f93133b3668>}),no
+CYTMQOR3pp,"frozenset({<Gene PF3D7_1439400.1-p1 at 0x7f93133b3630>, <Gene mal_mito_3:mRNA-p1 at 0x7f93133b35f8>})",yes
+CYTP450Rh,frozenset({<Gene PF3D7_0923200.1-p1 at 0x7f93133adf98>}),no
+DGDGD4DS1819Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGD7DS1819Z1617Z,"frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>, <Gene PF3D7_0511200.1-p1 at 0x7f93133adc50>})",yes
+DGDGD7DS1829Z12Z1617Z,"frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>, <Gene PF3D7_0511200.1-p1 at 0x7f93133adc50>})",yes
+DGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW3DS1839Z12Z15Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1819Z1627Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1829Z12Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1829Z12Z1617Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1829Z12Z1619Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1829Z12Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+DHORTSn,frozenset({<Gene PF3D7_1308200.1-p1 at 0x7f93133a2cf8>}),no
+DNGALh,frozenset({<Gene PF3D7_0926700.1-p1 at 0x7f93133b30f0>}),no
+DOLPMTcer,frozenset({<Gene PF3D7_1141600.1-p1 at 0x7f931334a908>}),no
+DXRI,frozenset({<Gene PF3D7_1467300.1-p1 at 0x7f93133a2e80>}),no
+DXS,frozenset({<Gene PF3D7_1337200.1-p1 at 0x7f93133ba5f8>}),no
+EAR100x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR120x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR140x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR160x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR180x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR181x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR40x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR60x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+EAR80x_1,frozenset({<Gene PF3D7_0615100.1-p1 at 0x7f93133a2fd0>}),no
+ECA4COLIPAabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+ENLIPAabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+ENLIPIDAt1ex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+ENOf,frozenset({<Gene PF3D7_1015900.1-p1 at 0x7f93133ba518>}),no
+FACOAL100p,frozenset({<Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>}),no
+FACOAL100t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL120p,frozenset({<Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>}),no
+FACOAL120t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL140p,frozenset({<Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>}),no
+FACOAL140t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL141p,frozenset({<Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>}),no
+FACOAL141t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL160p,frozenset({<Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>}),no
+FACOAL160t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL161p,frozenset({<Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>}),no
+FACOAL161t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL180t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL181t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL60t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FACOAL80p,frozenset({<Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>}),no
+FACOAL80t2pp,"frozenset({<Gene PF3D7_1253400.1-p1 at 0x7f93133baa20>, <Gene PF3D7_1479000.1-p1 at 0x7f93133baa58>, <Gene PF3D7_0401900.1-p1 at 0x7f93133ba908>, <Gene PF3D7_0215000.1-p1 at 0x7f93133b3b00>, <Gene PF3D7_1238800.1-p1 at 0x7f93133ba940>, <Gene PF3D7_1372400.1-p1 at 0x7f93133a2940>, <Gene PF3D7_0301000.1-p1 at 0x7f93133ba978>, <Gene PF3D7_0731600.1-p1 at 0x7f93133ba9b0>, <Gene PF3D7_0525100.1-p1 at 0x7f93133addd8>, <Gene PF3D7_0215300.1-p1 at 0x7f93133ba9e8>})",yes
+FBA3hi,frozenset({<Gene PF3D7_1444800.1-p1 at 0x7f931334ad30>}),no
+FBAf,frozenset({<Gene PF3D7_1444800.1-p1 at 0x7f931334ad30>}),no
+FBAh,frozenset({<Gene PF3D7_1444800.1-p1 at 0x7f931334ad30>}),no
+FE2Gabcpp,frozenset({<Gene PF3D7_0722400.1-p1 at 0x7f93133b3588>}),no
+FE3Gabcpp,frozenset({<Gene PF3D7_0722400.1-p1 at 0x7f93133b3588>}),no
+FE3abch,frozenset({<Gene PF3D7_0522700.1-p1 at 0x7f931334ac18>}),no
+FEENTER2tpp,frozenset({<Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>}),no
+FNORh,"frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>, <Gene PF3D7_0623200.1-p1 at 0x7f9313351dd8>})",yes
+FORt2pp,frozenset({<Gene PF3D7_0316600.1-p1 at 0x7f93133b3860>}),no
+FORthi,frozenset({<Gene PF3D7_0316600.1-p1 at 0x7f93133b3860>}),no
+FORtppi,frozenset({<Gene PF3D7_0316600.1-p1 at 0x7f93133b3860>}),no
+FPGPL,frozenset({<Gene PF3D7_1444800.1-p1 at 0x7f931334ad30>}),no
+FPPSh,frozenset({<Gene PF3D7_1128400.1-p1 at 0x7f931334a0b8>}),no
+G3PAT160h,frozenset({<Gene PF3D7_1318200.1-p1 at 0x7f9313343b38>}),no
+G3PAT180h,frozenset({<Gene PF3D7_1318200.1-p1 at 0x7f9313343b38>}),no
+G3PAT1819Zh,frozenset({<Gene PF3D7_1318200.1-p1 at 0x7f9313343b38>}),no
+G3PAT181h,frozenset({<Gene PF3D7_1318200.1-p1 at 0x7f9313343b38>}),no
+G3PD1,"frozenset({<Gene PF3D7_1114800.1-p1 at 0x7f93133ba7b8>, <Gene PF3D7_0306400.1-p1 at 0x7f93133ba2e8>})",yes
+G3PO,frozenset({<Gene PF3D7_0306400.1-p1 at 0x7f93133ba2e8>}),no
+G6PIh,frozenset({<Gene PF3D7_1436000.1-p1 at 0x7f93133b3c50>}),no
+GALabcpp,frozenset({<Gene PF3D7_1434000.1-p1 at 0x7f93133a6978>}),no
+GALt2pp,frozenset({<Gene PF3D7_0204700.1-p1 at 0x7f931334a278>}),no
+GCPNn,"frozenset({<Gene PF3D7_1321600.1-p1 at 0x7f9313343eb8>, <Gene PF3D7_1321500.2-p1 at 0x7f9313343e48>, <Gene PF3D7_1321500.1-p1 at 0x7f9313343ef0>})",yes
+GLCt2pp,frozenset({<Gene PF3D7_0204700.1-p1 at 0x7f931334a278>}),no
+GLNTRAT,"frozenset({<Gene PF3D7_0628800.1-p1 at 0x7f9313343898>, <Gene PF3D7_0416100.1-p1 at 0x7f93133adb70>})",yes
+GLUKAh,frozenset({<Gene PF3D7_0624000.1-p1 at 0x7f93133b3c88>}),no
+GLUKBh,frozenset({<Gene PF3D7_0624000.1-p1 at 0x7f93133b3c88>}),no
+GLUS,frozenset({<Gene PF3D7_1435300.1-p1 at 0x7f93133a62e8>}),no
+GLUS_ferr,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+GLUS_nadph,frozenset({<Gene PF3D7_1435300.1-p1 at 0x7f93133a62e8>}),no
+GLUTRS_Gln,frozenset({<Gene PF3D7_1357200.1-p1 at 0x7f93133a6240>}),no
+GLYALDtpp,frozenset({<Gene PF3D7_1132800.1-p1 at 0x7f93133a60f0>}),no
+GLYCtpp,"frozenset({<Gene spontaneous at 0x7f93133ba898>, <Gene PF3D7_1132800.1-p1 at 0x7f93133a60f0>})",yes
+GM1LIPAabcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+GM2LIPAabcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+GTHRDabcv,frozenset({<Gene PF3D7_0112200.1-p1 at 0x7f93133b32e8>}),no
+GTHS_1,frozenset({<Gene PF3D7_0512200.1-p1 at 0x7f93133a6358>}),no
+GUACn,"frozenset({<Gene PF3D7_1138400.1-p1 at 0x7f93133ba128>, <Gene PF3D7_1360500.1-p1 at 0x7f93133ba1d0>})",yes
+HDS,frozenset({<Gene PF3D7_1022800.1-p1 at 0x7f931334abe0>}),no
+HEMELh,frozenset({<Gene PF3D7_1224600.1-p1 at 0x7f93133b3d68>}),no
+HYDAh,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+ICDHyp,frozenset({<Gene PF3D7_1345700.1-p1 at 0x7f93133a6630>}),no
+IDPh,"frozenset({<Gene PF3D7_0316300.2-p1 at 0x7f9313343cc0>, <Gene PF3D7_1456800.1-p1 at 0x7f93133b35c0>})",yes
+K2L4Aabcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+K2L4Aabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+KAS14_1,frozenset({<Gene PF3D7_0211400.1-p1 at 0x7f93133a2c50>}),no
+LIPACabcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+LIPAabcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+LIPAabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+LUMIRHODOPSINI,frozenset({<Gene PF3D7_1360500.1-p1 at 0x7f93133ba1d0>}),no
+MCOATA_1,frozenset({<Gene PF3D7_1312000.1-p1 at 0x7f93133b37b8>}),no
+MCS,frozenset({<Gene PF3D7_0209300.1-p1 at 0x7f93133b3a20>}),no
+METARHODOPSINH,frozenset({<Gene PF3D7_1360500.1-p1 at 0x7f93133ba1d0>}),no
+METDabcpp,"frozenset({<Gene PF3D7_1229100.1-p1 at 0x7f93133a6940>, <Gene PF3D7_1434000.1-p1 at 0x7f93133a6978>})",yes
+METHFth,frozenset({<Gene PF3D7_1116500.1-p1 at 0x7f93133b3940>}),no
+METabcpp,"frozenset({<Gene PF3D7_1229100.1-p1 at 0x7f93133a6940>, <Gene PF3D7_1434000.1-p1 at 0x7f93133a6978>})",yes
+MG2uabcpp,"frozenset({<Gene PF3D7_1211900.1-p1 at 0x7f93133438d0>, <Gene PF3D7_0106300.1-p1 at 0x7f93133439e8>})",yes
+MGDGD4DS1819Z1644Z7Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGD4DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGD7DS1819Z1617Z,"frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>, <Gene PF3D7_0511200.1-p1 at 0x7f93133adc50>})",yes
+MGDGD7DS1829Z12Z1617Z,"frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>, <Gene PF3D7_0511200.1-p1 at 0x7f93133adc50>})",yes
+MGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1839Z12Z15Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z1,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z2,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1819Z1627Z10Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1829Z12Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1829Z12Z1617Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1829Z12Z1619Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MGDGW6DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+MI1345PKn,frozenset({<Gene PF3D7_1316100.1-p1 at 0x7f93133b30b8>}),no
+MI1456PKn,frozenset({<Gene PF3D7_1316100.1-p1 at 0x7f93133b30b8>}),no
+MI145P6Kn,frozenset({<Gene PF3D7_1316100.1-p1 at 0x7f93133b30b8>}),no
+MI145PKn,frozenset({<Gene PF3D7_1316100.1-p1 at 0x7f93133b30b8>}),no
+MOBDabcpp,"frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>, <Gene PF3D7_1368200.1-p1 at 0x7f93133ad278>})",yes
+NADS1n,frozenset({<Gene PF3D7_0926700.1-p1 at 0x7f93133b30f0>}),no
+NI2uabcpp,"frozenset({<Gene PF3D7_1211900.1-p1 at 0x7f93133438d0>, <Gene PF3D7_0106300.1-p1 at 0x7f93133439e8>, <Gene PF3D7_1368200.1-p1 at 0x7f93133ad278>})",yes
+NO2R,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+O16A4COLIPAabctex,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+OHPHM6n,frozenset({<Gene PF3D7_1415800.1-p1 at 0x7f9313351898>}),no
+ORDCh,frozenset({<Gene PF3D7_1033100.1-p1 at 0x7f93133ba390>}),no
+OXFOt4pp,frozenset({<Gene PF3D7_0210300.1-p1 at 0x7f9313343940>}),no
+OXOADLR,frozenset({<Gene PF3D7_1320800.1-p1 at 0x7f93133adcf8>}),no
+PA120abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PA140abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PA141abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PA160abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PA161abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PA180abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PA181abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PDHam1hi,"frozenset({<Gene PF3D7_1446400.1-p1 at 0x7f93133b3710>, <Gene PF3D7_1124500.1-p1 at 0x7f93133b36a0>})",yes
+PDHam2hi,"frozenset({<Gene PF3D7_1446400.1-p1 at 0x7f93133b3710>, <Gene PF3D7_1124500.1-p1 at 0x7f93133b36a0>})",yes
+PDHe2hr,frozenset({<Gene PF3D7_1020800.1-p1 at 0x7f9313343be0>}),no
+PDHe3hr,frozenset({<Gene PF3D7_0815900.1-p1 at 0x7f93133a66d8>}),no
+PE120abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PE140abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PE141abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PE160abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PE161abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PE180abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PE181abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PEPPIth,frozenset({<Gene PF3D7_0508300.1-p1 at 0x7f93133b3978>}),no
+PFKh,frozenset({<Gene PF3D7_0915400.1-p1 at 0x7f93133a6ba8>}),no
+PG120abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PG140abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PG141abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PG160abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PG161abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PG180abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PG181abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PGD3TDS18111Z1613E,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+PGD3TDS1819Z1613E,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+PGD3TDS1829Z12Z1613E,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+PGD3TDS1839Z12Z15Z1613E,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+PGDHh,frozenset({<Gene PF3D7_1454700.1-p1 at 0x7f9313343c88>}),no
+PGIAh,frozenset({<Gene PF3D7_1436000.1-p1 at 0x7f93133b3c50>}),no
+PGIBh,frozenset({<Gene PF3D7_1436000.1-p1 at 0x7f93133b3c50>}),no
+PGKh,frozenset({<Gene PF3D7_0922500.1-p1 at 0x7f93133ad780>}),no
+PGLYCPh,frozenset({<Gene PF3D7_0715000.1-p1 at 0x7f93133a6470>}),no
+PGLYCPx,frozenset({<Gene PF3D7_0715000.1-p1 at 0x7f93133a6470>}),no
+PGP120abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PGP140abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PGP141abcpp,"frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>})",yes
+PGP160abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PGP161abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PGP180abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PGP181abcpp,"frozenset({<Gene PF3D7_1447900.1-p1 at 0x7f93133ad128>, <Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>, <Gene PF3D7_1352100.1-p1 at 0x7f93133ad160>, <Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>, <Gene PF3D7_1145500.1-p1 at 0x7f93133a6dd8>})",yes
+PGW3DS1839Z12Z15Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+PGW6DS1829Z12Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+PHEMEabcpp,frozenset({<Gene PF3D7_1242200.1-p1 at 0x7f9313351198>}),no
+PIN4Kn_SC,frozenset({<Gene PF3D7_0509800.1-p1 at 0x7f93133b3240>}),no
+PINA1th,frozenset({<Gene PF3D7_1340900.1-p1 at 0x7f93133435c0>}),no
+PIt2p,frozenset({<Gene PF3D7_1340900.1-p1 at 0x7f93133435c0>}),no
+PIt2rpp,frozenset({<Gene PF3D7_1340900.1-p1 at 0x7f93133435c0>}),no
+PItf,frozenset({<Gene PF3D7_1340900.1-p1 at 0x7f93133435c0>}),no
+PIuabcpp,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+PPA_1pp,frozenset({<Gene PF3D7_1456800.1-p1 at 0x7f93133b35c0>}),no
+PPBNGD,frozenset({<Gene PF3D7_1209600.1-p1 at 0x7f931334a390>}),no
+PPBNGS_1,frozenset({<Gene PF3D7_1440300.1-p1 at 0x7f93133a6c50>}),no
+PS120abcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+PS140abcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+PS141abcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+PS160abcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+PS161abcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+PS180abcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+PS181abcpp,frozenset({<Gene PF3D7_0523000.1-p1 at 0x7f93133ad198>}),no
+PTRCabcpp,frozenset({<Gene PF3D7_1368200.1-p1 at 0x7f93133ad278>}),no
+PYKf,frozenset({<Gene PF3D7_0626800.1-p1 at 0x7f93133ad438>}),no
+PYRShi,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+RHODOPSINI,frozenset({<Gene PF3D7_1360500.1-p1 at 0x7f93133ba1d0>}),no
+RHODOPSINRT,frozenset({<Gene PF3D7_1360500.1-p1 at 0x7f93133ba1d0>}),no
+RIBabcpp,"frozenset({<Gene PF3D7_0319700.1-p1 at 0x7f93133ad908>, <Gene PF3D7_1434000.1-p1 at 0x7f93133a6978>})",yes
+RNDR1n,"frozenset({<Gene PF3D7_1405600.1-p1 at 0x7f93133ad828>, <Gene PF3D7_1437200.1-p1 at 0x7f93133ad860>, <Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>})",yes
+RNDR2n,"frozenset({<Gene PF3D7_1405600.1-p1 at 0x7f93133ad828>, <Gene PF3D7_1437200.1-p1 at 0x7f93133ad860>, <Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>})",yes
+RNDR3n,"frozenset({<Gene PF3D7_1405600.1-p1 at 0x7f93133ad828>, <Gene PF3D7_1437200.1-p1 at 0x7f93133ad860>, <Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>})",yes
+RNDR4n,"frozenset({<Gene PF3D7_1405600.1-p1 at 0x7f93133ad828>, <Gene PF3D7_1437200.1-p1 at 0x7f93133ad860>, <Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>})",yes
+RPIh,frozenset({<Gene PF3D7_0514600.1-p1 at 0x7f93133ad470>}),no
+SALCHS4abcpp,frozenset({<Gene PF3D7_1339900.1-p1 at 0x7f93133ad240>}),no
+SECYSTL,frozenset({<Gene PF3D7_0717700.1-p1 at 0x7f93133515f8>}),no
+SELtpp,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+SERTRS2,frozenset({<Gene PF3D7_1216000.1-p1 at 0x7f93133bada0>}),no
+SLNTtpp,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+SO3abcpp,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+SQDGW3DS1839Z12Z15Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+SQDGW6DS1829Z12Z160,frozenset({<Gene PF3D7_1318100.1-p1 at 0x7f93133b3a90>}),no
+SQLEr,frozenset({<Gene PF3D7_0923200.1-p1 at 0x7f93133adf98>}),no
+SULabcpp,"frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>, <Gene PF3D7_1434000.1-p1 at 0x7f93133a6978>})",yes
+TCHOLAabcv,frozenset({<Gene PF3D7_0112200.1-p1 at 0x7f93133b32e8>}),no
+TDSRh,"frozenset({<Gene PF3D7_0923800.2-p1 at 0x7f93133a6550>, <Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>})",yes
+THD2pp,frozenset({<Gene PF3D7_1453500.1-p1 at 0x7f931334a4e0>}),no
+THIORDXni,"frozenset({<Gene PF3D7_1027300.1-p1 at 0x7f9313351860>, <Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>})",no
+THIORDXp,frozenset({<Gene PF3D7_1457200.1-p1 at 0x7f93133ad7f0>}),no
+THMabcpp,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+TKT1h,frozenset({<Gene PF3D7_0610800.1-p1 at 0x7f93133bae80>}),no
+TKT2h,frozenset({<Gene PF3D7_0610800.1-p1 at 0x7f93133bae80>}),no
+TPIh,frozenset({<Gene PF3D7_1439900.1-p1 at 0x7f93133ad7b8>}),no
+TSULabcpp,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+TSULth,frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>}),no
+TUNGSabcpp,"frozenset({<Gene PF3D7_1426500.1-p1 at 0x7f93133a2dd8>, <Gene PF3D7_1368200.1-p1 at 0x7f93133ad278>})",yes
+UMPKn,frozenset({<Gene PF3D7_0111500.1-p1 at 0x7f93133ba198>}),no
+UPPDC1_1,frozenset({<Gene PF3D7_0607300.1-p1 at 0x7f9313343710>}),no
+UPPDC2_1,frozenset({<Gene PF3D7_0607300.1-p1 at 0x7f9313343710>}),no
+UREAtpp,frozenset({<Gene PF3D7_1132800.1-p1 at 0x7f93133a60f0>}),no
+URIDK2rn,frozenset({<Gene PF3D7_0111500.1-p1 at 0x7f93133ba198>}),no
+VALTLh,"frozenset({<Gene PF3D7_1461900.1-p1 at 0x7f93133ad898>, <Gene PF3D7_1005000.1-p1 at 0x7f93133ad630>})",yes
+ZHY,frozenset({<Gene PF3D7_1469600.1-p1 at 0x7f93133ade10>}),no
+ZNabcpp,"frozenset({<Gene PF3D7_0319700.1-p1 at 0x7f93133ad908>, <Gene PF3D7_1121700.1-p1 at 0x7f93133ad8d0>})",yes
