@@ -30,7 +30,7 @@ essentiality_screen_models['PknowlesiH_without_ortho'] = cobra.io.read_sbml_mode
 essentiality_screen_models['PcynomolgiB_without_ortho'] = cobra.io.read_sbml_model('gf_no_ortho_PcynomolgiB.xml')
 print('model set 2 loaded')
 
-os.chdir("/home/mac9jc/paradigm/data/published_models")
+os.chdir("/home/mac9jc/paradigm/models/published")
 essentiality_screen_models['pfal2018'] = cobra.io.read_sbml_model('pfal2018_abdel_haleem.xml')
 essentiality_screen_models['pviv2018'] = cobra.io.read_sbml_model('pviv2018_abdel_haleem.xml')
 essentiality_screen_models['pber2018'] = cobra.io.read_sbml_model('pber2018_abdel_haleem.xml')
@@ -38,6 +38,9 @@ essentiality_screen_models['pkno2018'] = cobra.io.read_sbml_model('pkno2018_abde
 essentiality_screen_models['pcyn2018'] = cobra.io.read_sbml_model('pcyn2018_abdel_haleem.xml')
 essentiality_screen_models['ipfa2017'] = cobra.io.read_sbml_model('ipfa2017_chiappino_pepe.xml')
 essentiality_screen_models['tg2015'] = cobra.io.read_sbml_model('tg2015_tymoshenko.xml')
+essentiality_screen_models['itgo2020'] = cobra.io.load_matlab_model('iTgo2020_krishnan.mat')
+essentiality_screen_models['ipbe2019_blood'] = cobra.io.load_matlab_model('ipbe_blood_stanway2019.mat')
+essentiality_screen_models['ipbe2019_liver'] = cobra.io.load_matlab_model('ipbe_liver_stanway2019.mat')
 
 print('model set 3 loaded')
 
@@ -66,7 +69,13 @@ for species, model in essentiality_screen_models.items():
         model.objective == 'Biomass_rxn_c'
         model.reactions.get_by_id('Biomass_rxn_c').upper_bound = 1000.
        	model.reactions.get_by_id('Biomass_rxn_c').lower_bound = 0.
-    elif species in ['iPfal19','pfal2018','pviv2018','pber2018','pkno2018','pcyn2018']:
+    elif species == 'itgo2020':
+        model.objective == 'Biomass_c'
+        model.reactions.get_by_id('Biomass_c').upper_bound = 1000.
+        model.reactions.get_by_id('Biomass_c').lower_bound = 0.
+        model.reactions.get_by_id('Biomass').upper_bound = 0.
+        model.reactions.get_by_id('Biomass').lower_bound = 0.
+    elif species in ['iPfal19','pfal2018','pviv2018','pber2018','pkno2018','pcyn2018','ipbe2019_blood','ipbe2019_liver']:
         model.objective = "biomass"
         model.reactions.get_by_id('biomass').upper_bound = 1000.
         model.reactions.get_by_id('biomass').lower_bound = 0.
