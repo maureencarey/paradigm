@@ -33,10 +33,10 @@ done
 echo "diamond annotation against BiGG done"
 mv ./*_BiGG.tsv ~/paradigm/data/diamond_output_BiGG
 
-cd ~/paradigm/data/genomes/protein
-parallel gzip ::: *.fasta
-mkdir ./zipped_protein
-mv *_annotatedProteins.fasta.gz ./zipped_protein
+#cd ~/paradigm/data/genomes/protein
+#parallel gzip ::: *.fasta
+#mkdir ./zipped_protein
+#mv *_annotatedProteins.fasta.gz ./zipped_protein
 cd ~/paradigm/data/genomes/DNA
 mkdir ./zipped_dna
 parallel gzip ::: *.fasta
