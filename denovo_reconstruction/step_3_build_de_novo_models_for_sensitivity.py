@@ -64,20 +64,22 @@ compartment_options = [x.split()[0] for x in compartment_options]
 logging.info(compartment_options)
 
 # get metabolites involved in each reaction in universal model in dictionary format
-universal_dict = dict() 
-for rxn in universal_model.reactions:
-    rxn_dict = dict()
-
-    check_rxn_products = rxn.products
-    check_rxn_reactants = rxn.reactants
-    all_mets = rxn.metabolites
-    compart = set([hf.get_comp(universal_model,x.id) for x in all_mets])
-
-    rxn_dict['reactants'] = [hf.met_ids_without_comp(universal_model,x.id) for x in check_rxn_reactants]
-    rxn_dict['products'] = [hf.met_ids_without_comp(universal_model,x.id) for x in check_rxn_products]
-    rxn_dict['compartment'] = list(compart)
-
-    universal_dict[rxn.id] = rxn_dict
+compartment_shorthand = {'cytoplasm':'_c', 'extracellular':'_e', 'periplasm':'_p',
+                         'mitochondrion':'_m', 'peroxisome/glyoxysome':'_x', 'nucleus':'_n',
+                         'endoplasmic reticulum':'_r', 'vacuole':'_v', 'golgi apparatus':'_g',
+                         'thylakoid':'_u', 'lysosome':'_l', 'eyespot':'_s',
+                         'chloroplast':'_h', 'flagellum':'_f', 'intermembrane space of mitochondria':'_im',
+                         'thylakoid membrane':'_um', 'carboxyzome':'_cx', 'not_provided_by_bigg':'_i',
+                         'cytosolic membrane':'_cm'}
+universal_dict_test = [{rxn.id:
+         {'reactants':[m.id for m in rxn.reactants],
+          'products':[m.id for m in rxn.products],
+          'compartments':[compartment_shorthand[x] for x in rxn.compartments]}}
+        for rxn in universal_model.reactions]
+universal_dict = dict()
+for mini_dict in universal_dict_test:
+    for key, value in mini_dict.items():
+        universal_dict[key] = value
     # universal_dict = all universal model reactions, mapped to a dictionary
     # containing its compartment, products and reactants
 
