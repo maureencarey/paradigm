@@ -38,7 +38,7 @@ og_path = "/home/mac9jc/paradigm/"
 
 # universal reaction bag for model generation
 os.chdir(model_path)
-universal_model = cobra.io.read_sbml_model('universal_model_updated.xml')
+universal_model = cobra.io.read_sbml_model('/home/mac9jc/paradigm/models/universal/universal_model_updated.xml')
 universal_model = hf.update_universal_model(universal_model)
 os.chdir(data_path)
 logging.info('loaded universal')
@@ -63,9 +63,9 @@ compartment_shorthand = {'cytoplasm':'_c', 'extracellular':'_e', 'periplasm':'_p
                          'thylakoid membrane':'_um', 'carboxyzome':'_cx', 'not_provided_by_bigg':'_i', 
                          'cytosolic membrane':'_cm'}
 universal_dict_test = [{rxn.id:
-         {'reactants':[m.id for m in rxn.reactants],
-          'products':[m.id for m in rxn.products],
-          'compartments':[compartment_shorthand[x] for x in rxn.compartments]}} 
+         {'reactants':[hf.met_ids_without_comp(universal_model,m.id) for m in rxn.reactants],
+          'products':[hf.met_ids_without_comp(universal_model,m.id) for m in rxn.products],
+          'compartment':[compartment_shorthand[x] for x in rxn.compartments]}} 
         for rxn in universal_model.reactions]
 universal_dict = dict()
 for mini_dict in universal_dict_test:
@@ -187,48 +187,11 @@ modifications = pd.DataFrame(index = [0], columns=columns)
 
 model = new_model
 logging.info('finding good or bad reactions')
-not_compartments = list(set(compartment_options) - set(compartment))
-
+good_rxns, bad_rxns = hf.id_bad_compartment_rxns(model,compartment,compartment_options)
 # get reactions that use/make at least one metabolite that is in an inappropariate compartment
-good_rxns = list()
-bad_rxns = list()
-# not_compartments = [x+' ' for x in not_compartments]
-for rxn_object in model.reactions: # if a reaction does not contain any bad compartments
-    rxn_bad_counter = 0
-    for x in not_compartments:
-        if x in rxn_object.reaction or rxn_object.reaction.endswith(x):
-            rxn_bad_counter = rxn_bad_counter + 1
-    if rxn_bad_counter == 0:
-        good_rxns.append(rxn_object.id)
-    else:
-        bad_rxns.append(rxn_object.id)
 
 logging.info('found good or bad reactions, now doing things')
-bad_rxns_keep_rewrite = list()
-add_reaction = list()
-remove_rxn = list()
-for rxn_id in bad_rxns:
-    if len(universal_dict_with_alts[rxn_id]['alternative_reactions']) == 0:
-        bad_rxns_keep_rewrite.append(rxn_id) # no alternative, keep reaction - will have to change via strings
-    else:
-        alt_rxns = universal_dict_with_alts[rxn_id]['alternative_reactions']
-        keep_og = 0
-        for alt_rxn_1, locations in alt_rxns.items():
-            keep_alt = 0
-            for loc in locations:
-                if loc in compartment: keep_alt = keep_alt
-                else: keep_alt = keep_alt + 1
-            if keep_alt == 0:
-                keep_og = 1
-                add_reaction.append(alt_rxn_1)
-            else:
-                keep_og = keep_og
-        if keep_og == 0:
-            bad_rxns_keep_rewrite.append(rxn_id) # no usable alternative - will have to change via strings
-        else:
-            remove_rxn.append(rxn_id)
-add_reaction = list(set(add_reaction))
-
+remove_rxn, add_reaction, bad_rxns_keep_rewrite = hf.move_bad_rxns(model,bad_rxns,universal_dict_with_alts, compartment)
 if (len((bad_rxns)) == (len((remove_rxn)) + len((bad_rxns_keep_rewrite)))):
     logging.info('bad reactions are split into remove reactions and bad reactions to rewrite - math is good')
 
@@ -275,72 +238,20 @@ for rxn in model.reactions:
         rxn.upper_bound = 1000.
         # NOTHING SHOULD PRINT - this was a problem in CarveMe
 
-fix_these_reactions_list = list(set([model.reactions.get_by_id(x) for x in bad_rxns_keep_rewrite]))
-
-reactions_added = list()
-transport_for_inappropariate_compartment = list()
+fix_these_reactions = list(set([model.reactions.get_by_id(x) for x in bad_rxns_keep_rewrite]))
 
 og = len(model.reactions)
 og_mets= len(model.metabolites)
 
 logging.info('starting to move reactions to the right compartment')
-for rxn in fix_these_reactions_list:
-
-    if [hf.met_ids_without_comp(model,x.id) for x in rxn.reactants] == [hf.met_ids_without_comp(model,x.id) for x in rxn.products]:
-        # remove things like x_p + y_p => x_e + y_e
-        transport_for_inappropariate_compartment.append(rxn.id)
-        new_rxn = list()
-    else:
-
-        new_rxn = Reaction()
-        met_dict = dict()
-        for met in rxn.metabolites:
-
-            if hf.get_comp(model,met.id) == '_p': # move periplasmic metabolites to extracellular instead of cytosol
-                if hf.met_ids_without_comp(model,met.id)+'_e' not in [x.id for x in model.metabolites]:
-                    met2 = met.copy()
-                    met_id_without_comp = hf.met_ids_without_comp(model,met.id)
-                    met2.id = met_id_without_comp+'_e'
-                    met_dict[met2] = rxn.metabolites[met]
-                    model.add_metabolites(met2) # []
-                else:
-                    met2 = model.metabolites.get_by_id(hf.met_ids_without_comp(model,met.id)+'_e')
-                    met_dict[met2] = rxn.metabolites[met]
-            else: # non periplasmic metabolite
-                if hf.met_ids_without_comp(model,met.id)+'_c' not in [x.id for x in model.metabolites]:
-                    met2 = met.copy()
-                    met_id_without_comp	= hf.met_ids_without_comp(model,met.id)
-                    met2.id = met_id_without_comp+'_c'
-                    met_dict[met2] = rxn.metabolites[met]
-                    model.add_metabolites(met2) # []
-                else:
-                    met2 = model.metabolites.get_by_id(hf.met_ids_without_comp(model,met.id)+'_c')
-                    met_dict[met2] = rxn.metabolites[met]
-
-    # fix reaction variables
-    if new_rxn:
-        new_rxn.add_metabolites(met_dict)
-        new_rxn.name = rxn.name
-        new_rxn.id = rxn.id+'c'
-        new_rxn.lower_bound = rxn.lower_bound
-        new_rxn.upper_bound = rxn.upper_bound
-        new_rxn.gene_reaction_rule = rxn.gene_reaction_rule
-        new_rxn.notes = rxn.notes
-        new_rxn.notes['created for paradigm'] = 'true'
-        new_rxn.annotation = rxn.annotation
-        model.add_reactions([new_rxn])
-        reactions_added.append(new_rxn.id)
-    l = len(model.reactions)
-    model.remove_reactions([rxn])
-    model.repair()
-    if len(model.reactions)>l:
-        logging.info('failed to remove a reaction')
+model, error_dict_to_print, reactions_added, transport_for_inappropariate_compartment = hf.fixing_reaction_compartment(fix_these_reactions,model)
+logging.info(error_dict_to_print) 
 
 model, unused = hf.prune_unused_metabolites2(model)
 logging.info('finished moving reactions to the right compartment')
 
 # ADD IN THIS WARNING:
-for c in not_compartments:
+for c in list(set(compartment_options) - set(compartment)):
     if c in ([hf.get_comp(model,x.id) for x in model.metabolites]):
         logging.info('ERROR, UNACCEPTABLE COMPARTMENTS:')
         logging.info(c)
@@ -390,4 +301,4 @@ for gene in model.genes:
         cobra.manipulation.remove_genes(model,[gene.id])
 model.repair()
 os.chdir(model_path)
-cobra.io.save_json_model(model, "final_denovo_"+SPECIES_ID+".json")
+cobra.io.save_json_model(model, "final_denovo_"+SPECIES_ID+"_TEST.json")
