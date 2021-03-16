@@ -12,6 +12,7 @@ __Article abstract:__ Protozoan parasites cause diverse diseases with large glob
 FYI some files are too large to share on github, including (but not limited to):
 * genome fasta files
 * compiled diamond databases
+* complete VEuPathDB annotations (/data/VEuPathDB_KEGG/*.txt and zipped version of TriTryp)
 Please see .gitignore for specific file names or groups and feel free to email for access.
 
 ##### helper_functions.py
