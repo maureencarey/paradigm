@@ -528,3 +528,246 @@ def add_full_met_info(model, met, met_id):
             met.annotation['inchikey'] = [str(df.loc[df['MNX_ID'] == id_string]['InChIKey'].values[0])]
 
     return(model)
+
+
+def id_bad_compartment_rxns(cobra_model,compartment_list, compartment_options_list):
+    """ Output list of reactions that are in relevant compartments or need to be moved to a relevant comp
+    Parameters
+    ----------
+    cobra_model: class:`~cobra.core.Model.Model` object
+        the model to evaluate reactions and their compartments
+    Returns
+    -------
+    bad_rxn_list: list of class:`~cobra.core.reaction.Reaction.id`
+        list of reaction ids that need to be moved to relevant compartments
+    good_rxn_list: list of class:`~cobra.core.reaction.Reaction.id`
+        list of reaction ids that are ok
+    """
+
+    total_compartments = ["_c","_e","_m","_ap","_fv","_k","_glc","_pm"]
+    # cytosol, extracellular, mitochondrdia, apicoplast, food vacuole, kinetoplast, glycosome, pseudomitoc$
+
+    not_compartments = list(set(compartment_options_list) - set(compartment_list))
+
+    good_rxn_list = list()
+    bad_rxn_list = list()
+
+    for rxn_object in cobra_model.reactions: # if a reaction does not contain any bad compartments
+        rxn_bad_counter = 0
+        for x in not_compartments:
+            if x in rxn_object.reaction or rxn_object.reaction.endswith(x):
+                rxn_bad_counter = rxn_bad_counter + 1
+        if rxn_bad_counter == 0:
+            good_rxn_list.append(rxn_object.id)
+        else:
+            bad_rxn_list.append(rxn_object.id)
+    return good_rxn_list, bad_rxn_list
+
+def move_bad_rxns(cobra_model,bad_rxn_list,alternative_rxns, compartment_list):
+    """ Output list of reactions that are in relevant compartments or need to be moved to a relevant comp
+    Parameters
+    ----------
+    cobra_model: class:`~cobra.core.Model.Model` object
+        the model to evaluate reactions and their compartments
+    bad_rxn_list: list of class:`~cobra.core.reaction.Reaction.id`
+        list of reaction ids that need to be moved to relevant compartments
+    alternative_rxns:
+    Returns
+    -------
+    remove_rxn_ids_list: list of class:`~cobra.core.reaction.Reaction.id`
+        list of reaction ids that need to be removed, and replaced with an existing reaction in a relevant compartment
+    add_reaction_ids_list: list of class:`~cobra.core.reaction.Reaction.id`
+        list of reaction ids that need to be added, replacing an existing reaction that was located in an irrelevant compartment
+    bad_rxns_keep_rewrite_list: list of class:`~cobra.core.reaction.Reaction.id`
+        list of reaction ids that need to be removed, and replaced with a novel reaction in a relevant compartment
+    """
+
+    bad_rxns_keep_rewrite_list = list()
+    add_reaction_list = list()
+    remove_rxn_list = list()
+    for rxn_id in bad_rxn_list:
+        if len(alternative_rxns[rxn_id]['alternative_reactions']) == 0:
+            bad_rxns_keep_rewrite_list.append(rxn_id) # no alternative, keep reaction - will have to change via strings
+        else:
+            alt_rxns = alternative_rxns[rxn_id]['alternative_reactions']
+            keep_og = 0
+            for alt_rxn_1, locations in alt_rxns.items():
+                keep_alt = 0
+                for loc in locations:
+                    if loc in compartment_list: keep_alt = keep_alt
+                    else: keep_alt = keep_alt + 1
+                if keep_alt == 0:
+                    keep_og = 1
+                    add_reaction_list.append(alt_rxn_1)
+                else:
+                    keep_og = keep_og
+            if keep_og == 0:
+                bad_rxns_keep_rewrite_list.append(rxn_id) # no usable alternative - will have to change via strings
+            else:
+                remove_rxn_list.append(rxn_id)
+    add_reaction_list = list(set(add_reaction_list))
+    return remove_rxn_list, add_reaction_list, bad_rxns_keep_rewrite_list
+
+def fixing_reaction_compartment(fix_these_reactions_list,cobra_model):
+
+    # need to double check that 'hf.' is necessary for hf.met_ids_without_comp once this fxn is moved to hf
+    """ move reactions to cytosol or other appropriate compartment
+    Parameters
+    ----------
+    cobra_model: class:`~cobra.core.Model.Model` object
+        the model to modify
+    fix_these_reactions: list of class:`~cobra.core.reaction.Reaction`
+        list of reaction that need to be moved to relevant compartments
+    Returns
+    -------
+    cobra_model: class:`~cobra.core.Model.Model` object
+        the modified model
+    error_dict: class: `dict` object
+        dictionary of any errors to output into logger (key = rxn.id, value = error)
+    reactions_added_list: list of class:`~cobra.core.reaction.Reaction.id`
+    transport_for_inappropariate_compartment_list: list of class:`~cobra.core.reaction.Reaction.id`
+    """
+
+    reactions_added_list = list()
+    transport_for_inappropariate_compartment_list = list()
+    error_dict = dict()
+    for rxn in fix_these_reactions_list:
+
+        if [met_ids_without_comp(cobra_model,x.id) for x in rxn.reactants] == [met_ids_without_comp(cobra_model,x.id) for x in rxn.products]:
+            # remove things like x_p + y_p => x_e + y_e
+            transport_for_inappropariate_compartment_list.append(rxn.id)
+            new_rxn = list()
+        else:
+
+            new_rxn = Reaction()
+            met_dict = dict()
+            for met in rxn.metabolites:
+
+                if get_comp(cobra_model,met.id) == '_p': # move periplasmic metabolites to extracellular instead of cytosol
+                    if met_ids_without_comp(cobra_model,met.id)+'_e' not in [x.id for x in cobra_model.metabolites]:
+                        met2 = met.copy()
+                        met_id_without_comp = met_ids_without_comp(cobra_model,met.id)
+                        met2.id = met_id_without_comp+'_e'
+                        met2.compartment = 'extracellular'
+                        met_dict[met2] = rxn.metabolites[met]
+                        cobra_model.add_metabolites(met2) # []
+                    else:
+                        met2 = cobra_model.metabolites.get_by_id(met_ids_without_comp(cobra_model,met.id)+'_e')
+                        met_dict[met2] = rxn.metabolites[met]
+                else: # non periplasmic metabolite
+                    if met_ids_without_comp(cobra_model,met.id)+'_c' not in [x.id for x in cobra_model.metabolites]:
+                        met2 = met.copy()
+                        met_id_without_comp     = met_ids_without_comp(cobra_model,met.id)
+                        met2.id = met_id_without_comp+'_c'
+                        met2.compartment = 'cytoplasm'
+                        met_dict[met2] = rxn.metabolites[met]
+                        cobra_model.add_metabolites(met2) # []
+                    else:
+                        met2 = cobra_model.metabolites.get_by_id(met_ids_without_comp(cobra_model,met.id)+'_c')
+                        met_dict[met2] = rxn.metabolites[met]
+
+        # fix reaction variables
+        if new_rxn:
+            new_rxn.add_metabolites(met_dict)
+            new_rxn.name = rxn.name
+            new_rxn.id = rxn.id+'c'
+            new_rxn.lower_bound = rxn.lower_bound
+            new_rxn.upper_bound = rxn.upper_bound
+            new_rxn.gene_reaction_rule = rxn.gene_reaction_rule
+            new_rxn.notes = rxn.notes
+            new_rxn.notes['created for paradigm'] = 'true'
+            new_rxn.annotation = rxn.annotation
+            cobra_model.add_reactions([new_rxn])
+            reactions_added_list.append(new_rxn.id)
+        l = len(cobra_model.reactions)
+        cobra_model.remove_reactions([rxn])
+        cobra_model.repair()
+        if len(cobra_model.reactions)>l:
+            error_dict[rxn.id] = 'failed to remove a reaction'
+    return cobra_model, error_dict, reactions_added_list, transport_for_inappropariate_compartment_list
+
+
+def flatten(list_o_list):
+    # convert list of lists to flat list
+    return([item for sublist in list_o_list for item in sublist])
+
+def transcript_to_gene_id(transcript_id):
+
+    x = transcript_id
+
+    if '-t' in x:
+        y = x.split('-t')[0]
+    else: y = x
+
+    if y.endswith('-RA') or y.endswith('-T1'):
+        y2 = y[:-3]
+    else: y2 = y
+
+    if y2.endswith('.mRNA') or y2.endswith(':mRNA'):
+        y3 = y2[:-5]
+    else: y3 = y2
+
+    if y3.startswith('rna_'):
+        y4 = y3[4:]
+    else: y4 = y3
+
+    if y4.endswith('.1') or y4.endswith('-1') or y4.endswith('.2') or y4.endswith('-2') or y4.endswith('.3'):
+        y5 = y4[-2]
+    else: y5 = y4
+
+    if '.t' in y5:
+        y6 = y5.split('.t')[0]
+    else: y6 = y5
+
+    if y6.endswith(':pseudogenic_transcript'):
+        y7 = y6.split(':pseudogenic_transcript')[0]
+    else: y7 = y6
+
+    if y7.startswith('mRNA1_') or y7.startswith('mRNA2_'):
+        y8 = y7[6:]
+    else: y8 = y7
+
+    if y8.endswith('-mRNA-1-add'):
+        y9 = y8.split('-mRNA-1-add')[0]
+    else: y9 = y8
+
+    return(y9)
+
+def get_KEGG_id(gene_id, KEGG_DB):
+    # get KEGG ids associated with a gene
+    KEGG_id_list = KEGG_DB.loc[KEGG_DB['Gene ID'] == gene_id][['Reaction']] # not yet a list
+    return(flatten([x.split() for x in flatten(KEGG_id_list.values.tolist())]))
+
+def transform_universal_to_KEGG(universal_model):
+    universal_KEGG_dict = dict()
+    for rxn in universal_model.reactions:
+        annot = rxn.annotation
+        k_list = list()
+        if 'kegg.reaction' in annot.keys():
+            # sometimes list
+            if isinstance(annot['kegg.reaction'], list):
+                for x in annot['kegg.reaction']:
+                    k_list.append(x) 
+            else:
+                k_list.append(annot['kegg.reaction'])
+        universal_KEGG_dict[rxn.id] = k_list
+    return(universal_KEGG_dict)
+
+def get_rxn_from_KEGG(KEGG_string_input, universal_model_dict_input):
+    # get reactions in universal model with matching KEGG reaction ID
+    # returns a list of reaction IDs
+    # universal_model_dict is output of fxn transform_universal_to_KEGG
+    
+    r_list_list = []
+    for rxn_name_keys,KEGG_ids_values in universal_model_dict_input.items():
+        for x in KEGG_ids_values:
+            if x == KEGG_string_input:
+                r_list_list.append(rxn_name_keys)
+    return(r_list_list)
+            
+def prune_protein_to_gene_id(protein, prune_sequence):
+    if prune_sequence in protein: #'-t36_1-p1'
+        gene_id = protein[:-9]
+    else:
+        gene_id = protein
+    return(gene_id)

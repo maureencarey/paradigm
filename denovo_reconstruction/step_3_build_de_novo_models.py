@@ -43,6 +43,9 @@ universal_model = hf.update_universal_model(universal_model)
 os.chdir(data_path)
 logging.info('loaded universal')
 
+# get KEGG ids for EuPathDB annotation addition
+universal_KEGG_dict = hf.transform_universal_to_KEGG(universal_model)
+
 # compartments in universal reaction bag
 compartment_options = list()
 for string in [met.id for met in universal_model.metabolites]:
@@ -99,7 +102,69 @@ toxodb = ["CcayetanensisCHN_HEN01", "CsuisWienI","EacervulinaHoughton", "Ebrunet
 microsporidiadb = ["AalgeraePRA109", "AalgeraePRA339", "AspWSBS2006","EaedisUSNM41457", "EbieneusiH348", "EcanceriGB1","EcuniculiEC1", "EcuniculiEC2", "EcuniculiEC3","EcuniculiEcunIII-L","EcuniculiGBM1", "EhellemATCC50504", "EhellemSwiss", "EhepatopenaeiTH1","EintestinalisATCC50506", "EromaleaeSJ2008","Heriocheircanceri","HeriocheirGB1", "MdaphniaeUGP3", "NausubeliERTm2", "NausubeliERTm6", "NbombycisCQ1", "NceranaeBRL01","NceranaePA08_1199","NdisplodereJUm2807","NparisiiERTm1", "NparisiiERTm3", "OcolligataOC4", "PneurophiliaMK1", "Slophii42_110", "ThominisUnknown", "VcorneaeATCC50505", "Vculicisfloridensis"]
 piroplasmadb = ["BbigeminaBOND", "BbovisT2Bo", "Bdivergens1802A","BmicrotiRI","BovataMiyake", "CfelisWinnie", "TannulataAnkara", "TequiWA", "TorientalisShintoku", "TparvaMuguga"]
 
-# load annotation data file
+
+# remove duplciate reactions in mulitple compartments
+if SPECIES_ID in plasmodb: # Plasmodium = cytosol, extracellular, mitochondrdia, apicoplast, food vacuole
+    compartment = ["_c","_e","_m","_ap","_fv"]
+    database = "PlasmoDB"
+    df_use_name = 'PlasmoDB_Feb92021_MetPath.txt'
+    gene_string = '-t36_1-p1'
+elif SPECIES_ID in tritrypdb: # Leishmania = cytosol, extracellular, mitochondrdia, kinetoplast, glycosome
+    compartment = ["_c","_e","_m","_k","_glc"]
+    database = "TriTrypDB"
+    df_use_name = 'TriTrypDB_Feb92021_MetPath.txt'
+    gene_string = ''
+elif SPECIES_ID in cryptodb: # Cryptosporidium = cytosol, extracellular, pseudomitochondria (USE MITO)
+    compartment = ["_c","_e","_m"]
+    database = "CryptoDB"
+    df_use_name = 'CryptoDB_Feb92021_MetPath.txt'
+    gene_string = ''
+elif SPECIES_ID in toxodb: # Toxoplasma = cytosol, extracellular, mitochondrdia, apicoplast
+    compartment = ["_c","_e","_ap","_m"]
+    database = "ToxoDB"
+    df_use_name = 'ToxoDB_Feb92021_MetPath.txt'
+    gene_string = ''
+elif SPECIES_ID in giardiadb: # Giardia, Entamoeba = cytosol, extracellular
+    compartment = ["_c","_e"]
+    database = "GiardiaDB"
+    df_use_name = 'GiardiaDB_Feb92021_MetPath.txt'
+    gene_string = ''
+elif SPECIES_ID in amoebadb:
+    compartment = ["_c","_e"]
+    database = "AmoebaDB"
+    df_use_name = 'AmoebaDB_Feb92021_MetPath.txt'
+    gene_string = ''
+elif SPECIES_ID in microsporidiadb: # I haven't researched this
+    compartment = ["_c","_e"]
+    database = "MicrosporidiaDB"
+    df_use_name = 'MicrosporidiaDB_Feb92021_MetPath.txt'
+    gene_string = ''
+elif SPECIES_ID in piroplasmadb: # I haven't researched this
+    compartment = ["_c","_e"]
+    database = "PiroplasmaDB"
+    df_use_name = 'PiroplasmaDB_Feb92021_MetPath.txt'
+    gene_string = ''
+elif SPECIES_ID in trichdb: # I haven't researched this
+    compartment = ["_c","_e"]
+    database = "TrichDB"
+    df_use_name = 'TrichDB_Feb92021_MetPath.txt'
+    gene_string = ''
+else:
+    logging.info("error - species ID not in database lists - will cause problem")
+    compartment = ["_c","_e"]
+
+columns = ['species','reactions_removed1','reactions_added','genes_only_on_EuPathDB']
+modifications = pd.DataFrame(index = [0], columns=columns)
+
+## get EuPathDB annotations
+os.chdir("/home/mac9jc/paradigm/data/VEuPathDB_KEGG")
+KEGG_DB = pd.read_csv(df_use_name, sep = "\t")
+KEGG_DB = KEGG_DB.loc[KEGG_DB['Exact EC Number Match'] == 'Yes']
+KEGG_DB = KEGG_DB.loc[KEGG_DB['Source'] == 'KEGG']
+KEGG_DB = KEGG_DB[['Gene ID','Reaction']]
+
+
+# load Diamond annotation data file
 os.chdir(data_path)
 os.chdir("./diamond_output_BiGG")
 annotations_file = pd.read_table(annotation_fname)
@@ -158,33 +223,101 @@ if len(rxns_to_add.keys()) != len(new_model.reactions):
 
 logging.info('made first draft model, with this many reactions:')
 logging.info(len(new_model.reactions))
+ 
+g = new_model.genes
+   
+# now get EuPathDB annotations
+#filepath = "/home/mac9jc/paradigm/data/genomes/protein/zipped_protein/" + database +"-50_" + SPECIES_ID + "_AnnotatedProteins.fasta" 
+filepath = "/home/mac9jc/paradigm/data/genomes/protein/zipped_protein/" + SPECIES_ID + "_annotatedProteins.fasta"
+file1 = open(filepath, 'r')
+count = 0
+
+add_EuPath = list()
+EuPath_reaction_gene_dict = dict()
+while True:
+    # Get next line from file
+    line = file1.readline()
+    # if line is empty, end of file is reached
+    if not line:
+        break
+    # extract only gene ids, not protein sequences
+    if '>' in line:
+        protein = line.split(' | ')[0][1:]
+        #gene_id = hf.prune_protein_to_gene_id(protein,'-t36_1-p1')
+        gene_id = protein
+        EuPath_reaction_gene_dict[hf.transcript_to_gene_id(gene_id)] = hf.get_KEGG_id(hf.transcript_to_gene_id(gene_id),KEGG_DB)
+        for KID in EuPath_reaction_gene_dict[hf.transcript_to_gene_id(gene_id)]:
+            RXNs = hf.get_rxn_from_KEGG(KID, universal_KEGG_dict)
+            EuPath_reaction_gene_dict[hf.transcript_to_gene_id(gene_id)] = [r for r in RXNs]
+            add_EuPath.append(RXNs)
+file1.close()
+
+# remove genes with no reaction mapping
+reaction_gene_dict_keep = dict()
+for gene, rxn_list in EuPath_reaction_gene_dict.items():
+    if len(rxn_list) > 0: reaction_gene_dict_keep[gene] = rxn_list
+
+# flip dictionary to focus on reactions rather than genes
+new_dict = dict()
+for gene, rxn_list in reaction_gene_dict_keep.items():
+    for rxn in rxn_list:
+        if rxn in new_dict.keys():
+            gene_list = new_dict[rxn]
+            new_dict[rxn].extend([gene]) #([gene+'-t36_1-p1'])
+        else:
+            new_dict[rxn] = [gene] #[gene+'-t36_1-p1']
+add_to_model_from_EuPathDB = new_dict
+
+# need to move reactions in add_to_model to appropriate compartments
+# add reactions with gene association]
+in_model_already_reactions = list()
+in_model_already_genes = list()
+
+for rxn_id, gene_list in add_to_model_from_EuPathDB.items():
     
-# remove duplciate reactions in mulitple compartments
-total_compartments = ["_c","_e","_m","_ap","_fv","_k","_glc","_pm"]
-# cytosol, extracellular, mitochondrdia, apicoplast, food vacuole, kinetoplast, glycosome, pseudomitochondria
+    # prep genes
+    if rxn_id in [r.id for r in new_model.reactions]: 
+        in_model_already_reactions.append(rxn_id)
+        rxn_not_present_yet = False
+    else: rxn_not_present_yet = True
+        
+    for gene_id in gene_list: 
+        if sum([gene_id in x for x in [g.id for g in new_model.genes]]) > 0: #gene_id in [g.id for g in new_model.genes]: 
+            in_model_already_genes.append(gene_id)
+            
+    # add reaction if not in model yet
+    if rxn_not_present_yet:
+        if len(gene_list) > 1: use_gene = ' or '.join(gene_list)
+        else: use_gene = gene_list[0]
+        rxn = universal_model.reactions.get_by_id(rxn_id)
+        for met in rxn.metabolites:
+            if met.id not in new_model.metabolites:
+                new_model.add_metabolites([met])
+        rxn.notes['EuPathDB'] = 'version 50'
+        new_model.add_reactions([rxn])
+        new_model.reactions.get_by_id(rxn_id).gene_reaction_rule = use_gene
+    # add gene to reaction if rxn is already in model yet
+    else:
+        existing_genes = [g.id for g in new_model.reactions.get_by_id(rxn_id).genes]
+        for gene_id in gene_list:
+            if sum([gene_id in x for x in [g.id for g in new_model.genes]]) == 0:
+                existing_genes.extend([gene_id])
+        unique_gene_list = list(set(existing_genes))
+        new_model.reactions.get_by_id(rxn_id).gene_reaction_rule = ' or '.join(unique_gene_list)
+        
+# save genes that were on EuPathDB but not detected with Diamond
+EuPath_only = list()
+for key in reaction_gene_dict_keep.keys():
+    if list(filter(lambda x: x.startswith(key), [gene.id for gene in g])):
+        EuPath_only.append(key)
+logging.info('genes added from EuPathDB:')
+logging.info(EuPath_only)
 
-if SPECIES_ID in plasmodb: # Plasmodium = cytosol, extracellular, mitochondrdia, apicoplast, food vacuole
-    compartment = ["_c","_e","_m","_ap","_fv"]
-elif SPECIES_ID in tritrypdb: # Leishmania = cytosol, extracellular, mitochondrdia, kinetoplast, glycosome
-    compartment = ["_c","_e","_m","_k","_glc"]
-elif SPECIES_ID in cryptodb: # Cryptosporidium = cytosol, extracellular, pseudomitochondria (USE MITO)
-    compartment = ["_c","_e","_m"]
-elif SPECIES_ID in toxodb: # Toxoplasma = cytosol, extracellular, mitochondrdia, apicoplast
-    compartment = ["_c","_e","_ap","_m"]
-elif SPECIES_ID in giardiadb: # Giardia, Entamoeba = cytosol, extracellular
-    compartment = ["_c","_e"]
-elif SPECIES_ID in amoebadb:
-    compartment = ["_c","_e"]
-elif SPECIES_ID in microsporidiadb: # I haven't researched this
-    compartment = ["_c","_e"]
-elif SPECIES_ID in piroplasmadb: # I haven't researched this
-    compartment = ["_c","_e"]
-else:
-    compartment = ["_c","_e"]
+row_index =0 #= SPECIES_ID
+modifications.loc[row_index,'genes_only_on_EuPathDB'] = len(EuPath_only)
 
-columns = ['species','reactions_removed1','reactions_added']
-modifications = pd.DataFrame(index = [0], columns=columns)
 
+# moving reactions based on compartment
 model = new_model
 logging.info('finding good or bad reactions')
 good_rxns, bad_rxns = hf.id_bad_compartment_rxns(model,compartment,compartment_options)
@@ -268,8 +401,8 @@ logging.info('compartments:')
 logging.info(set(l2))
 
 os.chdir(data_path)
-modifications.to_csv('model_modifications_'+SPECIES_ID+day+'.csv')
-with open("./percent_reactions_in_wrong_compartment_"+SPECIES_ID+day+".csv", "w") as text_file:
+modifications.to_csv('model_modifications/model_modifications_'+SPECIES_ID+day+'.csv')
+with open("./percent_wrong_comp/percent_reactions_in_wrong_compartment_"+SPECIES_ID+day+".csv", "w") as text_file:
     text_file.write(str(inappropriate_compartments_that_remain))
 
 model, unused = hf.prune_unused_metabolites2(model)
@@ -301,4 +434,4 @@ for gene in model.genes:
         cobra.manipulation.remove_genes(model,[gene.id])
 model.repair()
 os.chdir(model_path)
-cobra.io.save_json_model(model, "final_denovo_"+SPECIES_ID+"_TEST.json")
+cobra.io.save_json_model(model, "final_denovo_"+SPECIES_ID+".json")
