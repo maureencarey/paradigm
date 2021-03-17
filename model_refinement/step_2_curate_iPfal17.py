@@ -23,8 +23,8 @@ data_path = "/home/mac9jc/paradigm/data"
 model_path = "/home/mac9jc/paradigm/models"
 
 os.chdir(model_path)
-pf_model = cobra.io.read_sbml_model("iPfal17.xml")
-universal_model = cobra.io.read_sbml_model('universal_model_updated.xml')
+pf_model = cobra.io.read_sbml_model("published/iPfal17.xml")
+universal_model = cobra.io.read_sbml_model('universal/universal_model_updated.xml')
 logging.info('finished loading model')
 
 ## adding notes from previous curation
@@ -151,9 +151,9 @@ gthox_c = pf_model.metabolites.get_by_id('gthox_c')
 pheme_fv = pf_model.metabolites.get_by_id('pheme_fv')
 h2o2_c = pf_model.metabolites.get_by_id('h2o2_c')
 heme_degraded_c = Metabolite('heme_degraded_c', formula='',
-    name='degraded heme', compartment='c')
+    name='degraded heme', compartment='cytoplasm')
 heme_degraded_fv = Metabolite('heme_degraded_fv',formula='',
-    name='degraded heme',compartment='fv')
+    name='degraded heme',compartment='food_vacuole')
 
 new_rxn = Reaction()
 new_rxn.name = 'gthrd_heme'
@@ -185,7 +185,7 @@ pf_model.repair()
 # Make dictionary to make all metabolite IDs compatible with bigg
 # IN FUTURE, EXPAND TO ALL MODELS # for model in [pf_curated, chominis, leish]:
 os.chdir(model_path)
-universal_model = cobra.io.load_json_model('universal_model.json')
+universal_model = cobra.io.load_json_model('universal/universal_model.json')
 rxn_list = [r.id for r in universal_model.reactions]
 met_list = [m.id for m in universal_model.metabolites]
 
@@ -479,15 +479,15 @@ for met in pf_model.metabolites:
     if met.id.endswith('_ap'):
         met.compartment = 'apicoplast'
     elif met.id.endswith('_c'):
-        met.compartment = 'cytosol'
+        met.compartment = 'cytoplasm'
     elif met.id.endswith('_fv'):
         met.compartment = 'food vacuole'
     elif met.id.endswith('_m'):
-        met.compartment = 'mitochondria'
+        met.compartment = 'mitochondrion'
     elif met.id.endswith('_e'):
         met.compartment = 'extracellular'
     else:
-        met.compartment = 'other'
+        met.compartment = 'not_provided_by_bigg'
 pf_model.repair()
 
 pf_model.reactions.get_by_id('ACCOAL').id = 'ACCOAL2_temp'
@@ -912,7 +912,12 @@ for rxn in pf_model.reactions:
 
 pf_model.id = 'iPfal19_v1'
 pf_model.name = 'iPfal19'
-pf_model.compartments = {'cytosol': 'c', 'extracellular': 'e', 'apicoplast': 'ap', 'mitochondria': 'm', 'food_vacuole': 'fv'}
+pf_model.compartments = 
+{'cytoplasm': 'c',
+ 'extracellular': 'e',
+ 'mitochondrion': 'm',
+ 'apicoplast': 'ap',
+ 'food_vacuole': 'fv'}
 pf_model.notes = 'This model is the third iteration of the asexual blood-stage Plasmodium falciparum 3D7 genome-scale metabolic network reconstruction. The original reconstruction was generated using a custom pipeline by Plata et al (DOI: 10.1038/msb.2010.60) from P. falciparum Dd2 genome and curated to P. falciparum 3D7 and Dd2 function. Multiple rounds of curation were conducted (DOI: 10.1186/s12864-017-3905-1,10.1186/s12859-019-2756-y, and unpublished by Maureen Carey). Gene IDs can be mapped to sequences on https://plasmodb.org/ and reaction and metabolite nomenclature maps to data on http://bigg.ucsd.edu/.'
 pf_model.repair()
 
@@ -939,5 +944,5 @@ pf_model.annotation["genedb"] = "Pfalciparum"
 
 logger.info({'can the model grow?':pf_model.slim_optimize()})
 
-cobra.io.save_json_model(pf_model, "iPfal19.json")
-cobra.io.write_sbml_model(pf_model, "iPfal19.xml")
+cobra.io.save_json_model(pf_model, "iPfal21.json")
+cobra.io.write_sbml_model(pf_model, "iPfal21.xml")
