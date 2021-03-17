@@ -912,12 +912,7 @@ for rxn in pf_model.reactions:
 
 pf_model.id = 'iPfal19_v1'
 pf_model.name = 'iPfal19'
-pf_model.compartments = 
-{'cytoplasm': 'c',
- 'extracellular': 'e',
- 'mitochondrion': 'm',
- 'apicoplast': 'ap',
- 'food_vacuole': 'fv'}
+pf_model.compartments = {'cytoplasm': 'c', 'extracellular': 'e', 'mitochondrion': 'm', 'apicoplast': 'ap', 'food_vacuole': 'fv'}
 pf_model.notes = 'This model is the third iteration of the asexual blood-stage Plasmodium falciparum 3D7 genome-scale metabolic network reconstruction. The original reconstruction was generated using a custom pipeline by Plata et al (DOI: 10.1038/msb.2010.60) from P. falciparum Dd2 genome and curated to P. falciparum 3D7 and Dd2 function. Multiple rounds of curation were conducted (DOI: 10.1186/s12864-017-3905-1,10.1186/s12859-019-2756-y, and unpublished by Maureen Carey). Gene IDs can be mapped to sequences on https://plasmodb.org/ and reaction and metabolite nomenclature maps to data on http://bigg.ucsd.edu/.'
 pf_model.repair()
 

@@ -17,7 +17,7 @@ logging.basicConfig(filename='update_universal_round1.log', level=logging.INFO, 
 logger = logging.getLogger(__name__)
 
 os.chdir(model_path)
-model = cobra.io.load_json_model('universal_model.json')
+model = cobra.io.load_json_model('universal/universal_model.json')
 cobra.manipulation.modify.escape_ID(model)
 model.repair()
 
@@ -93,6 +93,6 @@ for met in model.metabolites:
 model.repair()
 
 os.chdir(model_path)
-cobra.io.save_json_model(model,  'universal_model_updated.json')
-cobra.io.write_sbml_model(model,  'universal_model_updated.xml')
+cobra.io.save_json_model(model,  './universal/universal_model_updated.json')
+cobra.io.write_sbml_model(model,  './universal/universal_model_updated.xml')
 
