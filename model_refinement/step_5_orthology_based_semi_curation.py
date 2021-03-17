@@ -211,6 +211,46 @@ for met in l:
         model.add_boundary(met, type = "exchange")
 model.objective = 'biomass' # NOT USING GENERIC BIOMASS NOW
 
+# integrate BioID (localization data)
+# get data from Boucher et al 2018 paper which performed BioID for apicoplast proteins and then performed 
+# machine learning to predict other apicoplast proteins
+# experimental data will be marked as high confidence
+# predicted data will be marked as lower confidence
+apicoplast_genes_high = pd.read_csv("/home/mac9jc/paradigm/data/Boucher_BioID_exp.csv")['Reference'].tolist()
+apicoplast_genes_low = pd.read_csv("/home/mac9jc/paradigm/data/Boucher_BioID_comp.csv")['Reference'].tolist()
+
+apicoplast_genes_high = [x[:-2] for x in apicoplast_genes_high if x.endswith('.1')]
+apicoplast_genes_low = [x[:-2] for x in apicoplast_genes_low if x.endswith('.1')]
+apicoplast_genes_low = list(set(apicoplast_genes_low).difference(set(apicoplast_genes_high)))
+
+def apicoplast_confidence(gene,high,low):
+    if gene in high:
+        confidence = 'high (localization)'
+        localization = True 
+    elif gene in low:
+        confidence = 'low (localization)'
+        localization = True 
+    else:
+        confidence = NA
+        localization = False
+    return(confidence,localization)
+
+move_list = list()
+for rxn in model.reactions:
+    if len(rxn.genes) > 0:
+        for gene in rxn.genes:
+            temp_gene_id = gene.id.split('.')[0]
+            if gene.id in apicoplast_genes_high or gene.id in apicoplast_genes_low:
+                #print(rxn.id+' should be in apicoplast')
+                #print(rxn.reaction)
+                move_list.append(rxn.id)
+fix_these_reactions = list(set(move_list))
+
+logging.info('starting to move reactions to the right compartment, dictionary below contains errors')
+model, error_dict_to_print = hf.moving_to_apico(fix_these_reactions,model)
+logging.info(error_dict_to_print) 
+model, unused = hf.prune_unused_metabolites2(model)
+
 model.repair()
 os.chdir(model_path)
 cobra.io.save_json_model(model, "ortho_"+SPECIES_ID+".json")

@@ -1,0 +1,347 @@
+﻿Reference,Annotation,Novelty,OrthoMCL Conservation,Pb Essentiality,Pf Essentiality
+PF3D7_0103600.1,"ATP-dependent RNA helicase, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Mutable in CDS
+PF3D7_0208500.1,acyl carrier protein,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0208600.1,ribosome-recycling factor,Known Pathway,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0311200.1,"valine--tRNA ligase, putative",Known Pathway,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0313700.1,"conserved Plasmodium protein, unknown function, unspecified product",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0319200.1,"endonuclease/exonuclease/phosphatase family protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0408900.1,tRNA N6-adenosine threonylcarbamoyltransferase,Known Pathway,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0410700.1,"ribosome biogenesis GTPase A, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0411200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0414100.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Plasmodium Only,Slow,Mutable in CDS
+PF3D7_0414700.1,"GTP-binding protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_0416100.1,glutamyl-tRNA(Gln) amidotransferase subunit A,Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_0503100.1,"4-diphosphocytidyl-2-C-methyl-D-erythritol kinase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0505400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0509600.1,asparagine--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0514300.1,"aspartate--tRNA ligase, putative",Known Pathway,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0602400.1,elongation factor G,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0608100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0628800.1,glutamyl-tRNA(Gln) amidotransferase subunit B,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0706100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Essential,Mutable in CDS
+PF3D7_0707800.1,"RAP protein, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0727100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0727500.1,"mTERF domain-containing protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0813700.1,"ABC transporter F family member 1, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0827500.1,"apicoplast ribosomal protein L21 precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0828200.1,"leucine--tRNA ligase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0911700.1,"GTP-binding protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_0913900.1,"arginine--tRNA ligase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0920200.1,"CS domain protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0920600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0921700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0934000.1,"histidine--tRNA ligase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1032000.1,"ribosome maturation factor RimM, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1217300.1,"GTP-binding protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1223300.1,DNA gyrase subunit A,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1225100.1,"isoleucine--tRNA ligase, putative",Known Pathway,Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_1225900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1232000.1,phenylalanine--tRNA ligase,Known Pathway,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1239500.1,DNA gyrase subunit B,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1244000.1,"glucose inhibited division protein a homologue, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1244400.1,"RNA-binding protein, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1304600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Slow,Non - Mutable in CDS
+PF3D7_1313400.1,"DEAD box helicase, putative",Known Pathway,Plasmodium and Other Apicomplexa,Essential,Mutable in CDS
+PF3D7_1338600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1351800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1352000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Mutable in CDS
+PF3D7_1358300.1,rhomboid protease ROM7,"Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1364600.1,"aldehyde reductase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1405400.1,"DNA mismatch repair protein, putative",Known Pathway,Plasmodium and Other Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1413400.1,"30S ribosomal protein S9, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1427000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1472800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0204600.1,"5'-3' exonuclease, putative",Known Pathway,Plasmodium Only,Slow,Mutable in CDS
+PF3D7_0302600.1,"ABC transporter B family member 4, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0305000.1,elongation factor Ts,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0516600.1,sporozoite surface antigen MB2,"Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_0524600.1,"50S ribosomal protein L12, apicoplast, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0621000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0622700.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Plasmodium Only,ND,Mutable in CDS
+PF3D7_0704900.1,peptide chain release factor 2,Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_0719800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0906200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0914300.1,"met-10+ like protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Mutable in CDS
+PF3D7_0929900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_1018000.1,"tRNA pseudouridine synthase, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1106300.1,"exonuclease, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1145500.1,"ABC transporter B family member 3, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1220600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1221700.1,"FbpA domain protein, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_1221800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1409100.1,"aldo-keto reductase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1411600.1,"GTP-binding protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1428600.1,peptide chain release factor 1,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_1429100.1,"apicoplast ribosomal protein L15 precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1437100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0930100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1406400.1,"pentatricopeptide repeat domain-containing protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1416800.1,"lysine--tRNA ligase, putative",Known Pathway,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0321000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0420200.1,"holo-[acyl-carrier-protein] synthase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0522700.1,"iron-sulfur assembly protein, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0806900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0907900.1,peptide deformylase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1209900.1,"ABC transporter B family member 7, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0111500.1,"UMP-CMP kinase, putative",Known Pathway,Conserved Outside of Apicomplexa,Insufficient data,Non - Mutable in CDS
+PF3D7_1005000.1,"methionine--tRNA ligase, putative",Known Pathway,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1021000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1021300.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1207600.1,"tRNA delta(2)-isopentenylpyrophosphate transferase, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1305100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1313200.1,"methionyl-tRNA formyltransferase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1411800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1457300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0107900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0209300.1,"2C-methyl-D-erythritol 2,4-cyclodiphosphate synthase",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1020800.1,dihydrolipoamide acyltransferase component E2,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_1419800.1,glutathione reductase,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_1433700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0616400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0812220.1,"GTPase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1002600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Mutable in CDS
+PF3D7_1005900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1343500.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0405400.1,"pre-mRNA-processing-splicing factor 8, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0627700.1,transportin,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0815700.1,ubiquitin,Known Pathway,Plasmodium Only,Slow,Non - Mutable in CDS
+PF3D7_0508800.1,single-stranded DNA-binding protein,Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_0723700.1,"metallo-hydrolase/oxidoreductase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0827600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1229600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0516300.1,"tRNA pseudouridine synthase, putative",Known Pathway,Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_0526700.1,"conserved protein, unknown function",Unknown Function,Plasmodium Only,ND,Mutable in CDS
+PF3D7_1369600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Mutable in CDS
+PF3D7_1106500.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1350700.1,"N6-adenine-specific methylase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0728800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0518100.1,"RAP protein, putative","Annotated Gene Product, Unknown Function",Plasmodium Only,Essential,Mutable in CDS
+PF3D7_0811900.1,"RNA-binding protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1470800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0307800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0530200.1,phosphoenolpyruvate/phosphate translocator,Known Pathway,Conserved Outside of Apicomplexa,Essential,Mutable in CDS
+PF3D7_1358000.1,"patatin-like phospholipase, putative",Known Pathway,Plasmodium Only,Essential,Mutable in CDS
+PF3D7_0804400.1,"methionine aminopeptidase 1c, putative",Known Pathway,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0904700.1,bacterial histone-like protein,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1025300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1120500.1,"tRNA nucleotidyltransferase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0521400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1304100.1,DNA ligase I,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0925300.1,"proline--tRNA ligase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1413500.1,FeS assembly ATPase SufC,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0313800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1323600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1367700.1,alanine--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0624400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Insufficient data,Non - Mutable in CDS
+PF3D7_1437200.1,"ribonucleoside-diphosphate reductase large subunit, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0607900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0816600.1,chaperone protein ClpB1,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0918200.1,"50S ribosomal protein L3, apicoplast, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1440200.1,"stromal-processing peptidase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0520800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0916200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1411400.1,plastid replication-repair enzyme,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0716600.1,cysteine desulfurase,Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_0729200.1,1-cys peroxiredoxin,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1308800.1,tyrosine recombinase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1232100.1,60 kDa chaperonin,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1446200.1,M17 leucyl aminopeptidase,Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_1022800.1,4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1228700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Mutable in CDS
+PF3D7_0820800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1333000.1,20 kDa chaperonin,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0112000.1,TatD-like deoxyribonuclease,"Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1212100.1,"peripheral plastid protein 1, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1420400.1,glycine--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0504400.1,"ATP-dependent helicase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1443900.1,"heat shock protein 90, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1307600.1,"DNA-directed RNA polymerase alpha chain, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0106900.1,"2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase, putative",Known Pathway,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_1419200.1,"thioredoxin-like protein, putative",Known Pathway,Plasmodium and Other Apicomplexa,Essential,Mutable in CDS
+PF3D7_1333200.1,ubiquitin-activating enzyme,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1117500.1,tyrosine--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0913700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1205300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1037100.1,pyruvate kinase 2,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1363700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0316300.1,"inorganic pyrophosphatase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1406600.1,"ATP-dependent Clp protease regulatory subunit ClpC, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1216000.1,"serine--tRNA ligase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0104400.1,4-hydroxy-3-methylbut-2-enyl diphosphate reductase,Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1126000.1,threonine--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0601900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0203900.1,"5'-3' exonuclease, N-terminal resolvase-like domain, putative",Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_1251700.1,tryptophan--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1103400.1,"FeS cluster assembly protein SufD, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1106200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1430700.1,NADP-specific glutamate dehydrogenase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0316400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_1306200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1472700.1,"DNA-directed RNA polymerase, alpha subunit, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0721100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_1332600.1,"apurinic/apyrimidinic endonuclease Apn1, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0508300.1,triose phosphate transporter,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1015200.1,cysteine--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0403300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1460900.1,"apicoplast ribosomal protein S10, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1460900.2,"apicoplast ribosomal protein S10, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1106100.1,"apicoplast ribosomal protein S15 precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1463600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Mutable in CDS
+PF3D7_0517100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0107700.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Plasmodium Only,ND,Mutable in CDS
+PF3D7_0932600.1,"apicoplast ribosomal protein S6, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0919600.1,"dolichyl-diphosphooligosaccharide--protein glycosyltransferase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1003200.1,"ribosome-binding factor A, putative",Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_0415700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1249900.1,"apicoplast dimethyladenosine synthase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0409700.1,peptide chain release factor 2,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_1208000.1,"apicoplast ribosomal protein L29 precursor, putative",Known Pathway,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1034200.1,"apicoplast ribosomal protein L27 precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0529100.1,"thioredoxin-like protein, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0504200.1,"ATP-dependent RNA helicase DDX27, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1330200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1338900.1,"serine/threonine protein kinase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0313700.2,"conserved Plasmodium protein, unknown function, unspecified product",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0218300.1,"apicoplast RNA methyltransferase precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0108700.1,"secreted ookinete protein, putative","Annotated Gene Product, Unknown Function",Plasmodium Only,ND,Mutable in CDS
+PF3D7_1226900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Dispensable,Mutable in CDS
+PF3D7_0219500.1,"pseudouridine synthase, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0810100.1,"apicoplast ribosomal protein L33 precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1330100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1242200.1,"queuine tRNA-ribosyltransferase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0310000.1,"50S ribosomal protein L9, apicoplast, putative",Known Pathway,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0913500.1,"protease, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1248600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1127400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0409500.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0715200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Mutable in CDS
+PF3D7_0522500.1,"50S ribosomal protein L17, apicoplast, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0519900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1371500.1,"probable protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0604400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0313300.1,"apicoplast conserved ycf19 protein precursor, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0413800.1,"50S ribosomal protein L10, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0715400.1,"secreted ookinete protein, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,ND,Mutable in CDS
+PF3D7_0817100.1,"tRNA modification GTPase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1024000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0619100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0933300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0911600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0710500.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1349900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0908100.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Plasmodium Only,Dispensable,Mutable in CDS
+PF3D7_1236700.1,"S-adenosyl-methyltransferase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0820100.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_1436100.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0315400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Slow,Non - Mutable in CDS
+PF3D7_0910800.1,"cytosolic Fe-S cluster assembly factor NBP35, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1360300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Non - Mutable in CDS
+PF3D7_0102300.1,"Plasmodium exported protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1125000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0613200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Mutable in CDS
+PF3D7_1143000.1,"alpha/beta hydrolase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0622200.1,"radical SAM protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1210000.1,"50S ribosomal protein L1, apicoplast, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1304300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1248300.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Mutable in CDS
+PF3D7_1453300.1,"Yos1-like protein, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1410700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Mutable in CDS
+PF3D7_0908300.2,"conserved protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0508200.1,"longevity-assurance (LAG1) protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0908300.1,"conserved protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0306600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0313200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0623500.1,superoxide dismutase [Fe],Known Pathway,Plasmodium and Other Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0907800.1,"apicoplast ribosomal protein L35 precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0710300.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0422100.1,"transmembrane emp24 domain-containing protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0210800.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Slow,Non - Mutable in CDS
+PF3D7_1135000.2,"PQ-loop repeat-containing protein, unspecified product","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1135000.3,"PQ-loop repeat-containing protein, unspecified product","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0912400.1,"alkaline phosphatase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1121500.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0820600.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0311600.1,"dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 1, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0918800.1,"dihydrouridine synthase, putative",Known Pathway,Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_1353300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1009600.1,"protein phosphatase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0819700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0505700.1,"conserved Plasmodium membrane protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1429600.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Mutable in CDS
+PF3D7_1443700.1,"dephospho-CoA kinase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1455900.1,"polyprenol reductase, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0613400.1,"apicoplast ribosomal protein L18 precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1458100.1,"protein PET117, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1207500.1,"RNA-binding protein, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0109850.1,"phosphatidate cytidylyltransferase, putative","Annotated Gene Product, Unknown Function",Plasmodium and Other Apicomplexa,ND,ND
+PF3D7_1119000.1,"acyl-CoA-binding protein, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_0514200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Essential,Mutable in CDS
+PF3D7_0407200.1,"peptidyl-tRNA hydrolase 2, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1467400.1,"50S ribosomal protein L22, apicoplast, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1137500.1,"apicoplast ribosomal protein S14p/S29e precursor, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0525700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1340200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0914000.1,"pseudouridylate synthase, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1340800.1,"mitochondrial pyruvate carrier protein 1, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1242000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Dispensable,Non - Mutable in CDS
+PF3D7_0507200.1,subtilisin-like protease 3,"Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0731600.1,acyl-CoA synthetase,Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1133800.1,"RNA (uracil-5-)methyltransferase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1351200.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0313900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Dispensable,Mutable in CDS
+PF3D7_0604900.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0926400.1,"monocarboxylate transporter, putative","Annotated Gene Product, Unknown Function",Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_0726700.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0918400.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium Only,Dispensable,Mutable in CDS
+PF3D7_0529000.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1123500.1,"conserved Plasmodium protein, unknown function",Unknown Function,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1372400.1,acyl-CoA synthetase,Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1023300.1,"conserved Plasmodium protein, unknown function",Unknown Function,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0206100.1,cysteine desulfuration protein SufE,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0307400.1,ATP-dependent Clp protease proteolytic subunit,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1436800.1,ATP-dependent Clp protease proteolytic subunit,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1357200.1,glutamate--tRNA ligase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1469000.1,translation initiation factor IF-1,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1034600.1,"translation initiation factor IF-3, putative",Known Pathway,Plasmodium and Other Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0408900.2,tRNA N6-adenosine threonylcarbamoyltransferase,Known Pathway,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_0409400.1,chaperone protein DnaJ,Known Pathway,Conserved Outside of Apicomplexa,Essential,Mutable in CDS
+PF3D7_0529300.1,apicoplast TIC22 protein,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_1452300.1,DER1-like protein,Known Pathway,Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_0314300.1,DER1-like protein,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0711000.1,"AAA family ATPase, CDC48 subfamily",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1124500.1,pyruvate dehydrogenase E1 component subunit alpha,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0815900.1,"dihydrolipoyl dehydrogenase, apicoplast",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1440300.1,porphobilinogen synthase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1209600.1,porphobilinogen deaminase,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0615100.1,enoyl-acyl carrier reductase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1360800.1,falcilysin,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1469600.1,"biotin carboxylase subunit of acetyl CoA carboxylase, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Mutable in CDS
+PF3D7_1345500.1,ubiquitin-conjugating enzyme E2,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0316900.1,"E3 ubiquitin-protein ligase, putative",Known Pathway,Plasmodium and Other Apicomplexa,Essential,Mutable in CDS
+PF3D7_0312100.1,"E3 ubiquitin-protein ligase, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0607300.1,uroporphyrinogen III decarboxylase,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0921400.1,"NifU-like scaffold protein, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0211400.1,beta-ketoacyl-ACP synthase III,Known Pathway,Conserved Outside of Apicomplexa,Slow,Mutable in CDS
+PF3D7_1318100.1,"ferredoxin, putative",Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_0604700.1,glyoxalase I,Known Pathway,Plasmodium Only,ND,Non - Mutable in CDS
+PF3D7_1205700.1,targeted glyoxalase II,Known Pathway,Plasmodium Only,Dispensable,Mutable in CDS
+PF3D7_1212000.1,glutathione peroxidase-like thioredoxin peroxidase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1419800.2,glutathione reductase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1344600.1,lipoyl synthase,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0923600.1,lipoate-protein ligase 2,Known Pathway,Conserved Outside of Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_1446400.1,pyruvate dehydrogenase E1 component subunit beta,Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1312000.1,malonyl CoA-acyl carrier protein transacylase,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0626300.1,3-oxoacyl-acyl-carrier protein synthase I/II,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_0922900.1,3-oxoacyl-[acyl-carrier-protein] reductase,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1323000.1,beta-hydroxyacyl-ACP dehydratase,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_0823600.1,lipoate-protein ligase B,Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Mutable in CDS
+PF3D7_1114800.1,"glycerol-3-phosphate dehydrogenase, putative",Known Pathway,Conserved Outside of Apicomplexa,Dispensable,Non - Mutable in CDS
+PF3D7_1318200.1,glycerol-3-phosphate 1-O-acyltransferase,Known Pathway,Conserved Outside of Apicomplexa,ND,Mutable in CDS
+PF3D7_1320100.1,ATP-dependent Clp protease adapter protein ClpS,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1337200.1,1-deoxy-D-xylulose 5-phosphate synthase,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1467300.1,1-deoxy-D-xylulose 5-phosphate reductoisomerase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1144700.1,"apicoplast import protein Tic20, putative",Known Pathway,Plasmodium and Other Apicomplexa,Slow,Non - Mutable in CDS
+PF3D7_0623200.1,ferredoxin--NADP reductase,Known Pathway,Conserved Outside of Apicomplexa,Essential,Non - Mutable in CDS
+PF3D7_1234600.1,"protein TOC75, putative",Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_0916500.1,ubiquitin fusion degradation protein 1,Known Pathway,Conserved Outside of Apicomplexa,ND,Non - Mutable in CDS
+PF3D7_1329700.1,apicoplast calcium binding protein 1,"Annotated Gene Product, Unknown Function",Plasmodium Only,ND,Mutable in CDS

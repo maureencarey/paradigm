@@ -610,7 +610,6 @@ def move_bad_rxns(cobra_model,bad_rxn_list,alternative_rxns, compartment_list):
 
 def fixing_reaction_compartment(fix_these_reactions_list,cobra_model):
 
-    # need to double check that 'hf.' is necessary for hf.met_ids_without_comp once this fxn is moved to hf
     """ move reactions to cytosol or other appropriate compartment
     Parameters
     ----------
@@ -771,3 +770,72 @@ def prune_protein_to_gene_id(protein, prune_sequence):
     else:
         gene_id = protein
     return(gene_id)
+
+
+def moving_to_apico(fix_these_reactions_list,cobra_model):
+
+    """ move reactions to apicoplast
+    Parameters
+    ----------
+    cobra_model: class:`~cobra.core.Model.Model` object
+        the model to modify
+    fix_these_reactions: list of class:`~cobra.core.reaction.Reaction.id`
+        list of reaction ids that need to be moved to apicoplast
+    Returns
+    -------
+    cobra_model: class:`~cobra.core.Model.Model` object
+        the modified model
+    error_dict: class: `dict` object
+        dictionary of any errors to output into logger (key = rxn.id, value = error)
+    """
+
+    error_dict = dict()
+    for rxn_id in fix_these_reactions_list:
+        rxn = cobra_model.reactions.get_by_id(rxn_id)
+
+        if [met_ids_without_comp(cobra_model,x.id) for x in rxn.reactants] == [met_ids_without_comp(cobra_model,x.id) for x in rxn.products]:
+            # x_p + y_p => x_e + y_e
+            new_rxn = list()
+            error = 'reaction was too complex to move'
+            
+        elif rxn.compartments == {'apicoplast'}: 
+            new_rxn = list()
+            error = 'already in apicoplast'
+            
+        else:
+
+            new_rxn = Reaction()
+            met_dict = dict()
+            for met in rxn.metabolites:
+
+                if met_ids_without_comp(cobra_model,met.id)+'_ap' not in [x.id for x in cobra_model.metabolites]:
+                    met2 = met.copy()
+                    met_id_without_comp = met_ids_without_comp(cobra_model,met.id)
+                    met2.id = met_id_without_comp+'_ap'
+                    met2.compartment = 'apicoplast'
+                    met_dict[met2] = rxn.metabolites[met]
+                    cobra_model.add_metabolites(met2) # []
+                else:
+                    met2 = cobra_model.metabolites.get_by_id(met_ids_without_comp(cobra_model,met.id)+'_ap')
+                    met_dict[met2] = rxn.metabolites[met]
+
+        # fix reaction variables
+        if new_rxn:
+            new_rxn.add_metabolites(met_dict)
+            new_rxn.name = rxn.name
+            new_rxn.id = rxn.id+'ap'
+            new_rxn.lower_bound = rxn.lower_bound
+            new_rxn.upper_bound = rxn.upper_bound
+            new_rxn.gene_reaction_rule = rxn.gene_reaction_rule
+            new_rxn.notes = rxn.notes
+            new_rxn.notes['moved'] = 'Based on BioID'
+            new_rxn.annotation = rxn.annotation
+            cobra_model.add_reactions([new_rxn])
+            l = len(cobra_model.reactions)
+            cobra_model.remove_reactions([rxn])
+            cobra_model.repair()
+            if len(cobra_model.reactions)>l:
+                error_dict[rxn.id] = 'failed to remove a reaction'
+        else: error_dict[rxn.id] = error
+        
+    return cobra_model, error_dict
