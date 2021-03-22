@@ -43,7 +43,7 @@ essentiality_screen_models['ipbe2019_blood'] = cobra.io.load_matlab_model('ipbe_
 essentiality_screen_models['ipbe2019_liver'] = cobra.io.load_matlab_model('ipbe_liver_stanway2019.mat')
 
 os.chdir("/home/mac9jc/paradigm/models")
-essentiality_screen_models['iPfal19'] = cobra.io.read_sbml_model('iPfal19.xml')
+essentiality_screen_models['iPfal19'] = cobra.io.read_sbml_model('iPfal21.xml')
 
 gene_essentiality_screen_results_raw= dict()
 gene_essentiality_screen_results_interpreted = dict()

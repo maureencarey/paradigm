@@ -28,7 +28,7 @@ if 'bof_c' in [r.id for r in universal_model.reactions]:
     universal_model.repair()
 
 # extend universal by curated model
-pf_model = cobra.io.read_sbml_model('iPfal19.xml')
+pf_model = cobra.io.read_sbml_model('iPfal21.xml')
 len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
     if rxn.id not in [r.id for r in universal_model.reactions]:

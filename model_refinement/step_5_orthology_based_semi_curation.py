@@ -40,7 +40,7 @@ SPECIES_ID = SPECIES_ID.split('with_biomass_')[1]
 logger.info('BEGIN STEP 5')
 
 os.chdir(model_path)
-iPfal19 = cobra.io.load_json_model("iPfal19.json")
+iPfal19 = cobra.io.load_json_model("iPfal21.json")
 
 logger.info(SPECIES_ID)
 # modified for Rivanna: read in the models

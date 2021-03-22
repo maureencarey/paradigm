@@ -54,11 +54,12 @@ os.chdir(model_path)
 model = cobra.io.load_json_model(model_fname)
 
 # load curated models
-os.chdir(model_path)
+os.chdir(model_path+'/published')
 chominis = cobra.io.read_sbml_model('chominis_vanee2010.xml')
 tgondii = cobra.io.read_sbml_model('tg_tymoshenko2015.xml')
 leish = cobra.io.read_sbml_model('iAC560_leishmania_Chavali2008.xml')
-pf_curated = cobra.io.load_json_model("iPfal19.json")
+os.chdir(model_path)
+pf_curated = cobra.io.load_json_model("iPfal21.json")
 
 logger.info('loaded models')
 
@@ -115,7 +116,7 @@ for index, x in enumerate(leish_biomass_mets_ids):
 
 tgondii_biomass_mets_ids = sorted(tgondii_also_add_mets_names, key=str.lower) + \
 ['' for _ in range(max_length-len(tgondii_also_add_mets_names))]
-df = pd.DataFrame( {'iPfal17': pf_biomass_mets_ids,
+df = pd.DataFrame( {'iPfal21': pf_biomass_mets_ids,
 					'C. hominis 2010': chominis_biomass_mets_ids,
                   	'T. gondii 2015': tgondii_biomass_mets_ids, 
                   	'Leishmania 2008': leish_biomass_mets_ids })
