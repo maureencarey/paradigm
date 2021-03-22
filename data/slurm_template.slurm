@@ -5,7 +5,7 @@
 #SBATCH --partition=standard
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=12000
-#SBATCH --account=csblrivanna
+#SBATCH --account=tumi
 #SBATCH --output=%x-%j.out
 
 module purge
