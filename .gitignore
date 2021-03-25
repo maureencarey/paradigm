@@ -4,6 +4,8 @@
 *.fasta
 *.sbatch
 *.ipynb_checkpoints/
+data/genomes/DNA/
+data/VEuPathDB_KEGG/TriTrypDB_Feb92021_MetPath.zip
 data/VEuPathDB_KEGG/*.txt
 data/ortho_annotations_per_genome_08_07_2019.csv
 data/metanetx_chem_prop.tsv
