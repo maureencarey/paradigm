@@ -32,7 +32,10 @@ os.chdir(model_path)
 for file in glob.glob("gf_*.xml"):
 
     SPECIES_ID = file.split('gf_')[1] # ID is annotation filename minus directory
-    SPECIES_ID = SPECIES_ID.split('.json')[0] # get rid of extension
+    if SPECIES_ID.endswith('.json'):
+        SPECIES_ID = SPECIES_ID.split('.json')[0] # get rid of extension
+    elif SPECIES_ID.endswith('.xml'):
+        SPECIES_ID = SPECIES_ID.split('.xml')[0] # get rid of extension
     if SPECIES_ID.startswith('no_ortho'):
         SPECIES_ID = SPECIES_ID.split('no_ortho_')[1] # get rid of no_ortho
 
