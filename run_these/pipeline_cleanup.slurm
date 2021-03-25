@@ -15,13 +15,14 @@ source activate paradigm_env
 
 cd ~/paradigm/model_generation_logs # paradigm directory
 for filename in step*.log; do
-    echo "$filename"
+#    echo "$filename"
     python3 ../slurm_scripts/check_logs.py $filename
 done
 
-cd ~/paradigm/data
+cd ~/paradigm/data/slurm_outputs
 for filename in *.out; do
-    echo "$filename"
-    python3 ../slurm_scripts/check_outputs.py $filename
+#    echo "$filename"
+    python3 ~/paradigm/slurm_scripts/check_outputs.py $filename
 done
 
+echo 'done'

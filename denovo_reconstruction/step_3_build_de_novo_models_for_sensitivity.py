@@ -72,9 +72,9 @@ compartment_shorthand = {'cytoplasm':'_c', 'extracellular':'_e', 'periplasm':'_p
                          'thylakoid membrane':'_um', 'carboxyzome':'_cx', 'not_provided_by_bigg':'_i',
                          'cytosolic membrane':'_cm'}
 universal_dict_test = [{rxn.id:
-         {'reactants':[m.id for m in rxn.reactants],
-          'products':[m.id for m in rxn.products],
-          'compartments':[compartment_shorthand[x] for x in rxn.compartments]}}
+         {'reactants':[hf.met_ids_without_comp(universal_model,m.id) for m in rxn.reactants],
+          'products':[hf.met_ids_without_comp(universal_model,m.id) for m in rxn.products],
+          'compartment':[compartment_shorthand[x] for x in rxn.compartments]}}
         for rxn in universal_model.reactions]
 universal_dict = dict()
 for mini_dict in universal_dict_test:

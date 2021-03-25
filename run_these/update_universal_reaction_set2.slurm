@@ -6,7 +6,7 @@
 #SBATCH --partition=standard
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=6000
-#SBATCH --account=csblrivanna
+#SBATCH --account=tumi
 #SBATCH --output=/home/mac9jc/paradigm/step3B_update_universal_for_gapfilling.out
 
 module purge

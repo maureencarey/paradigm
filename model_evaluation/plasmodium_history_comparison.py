@@ -26,7 +26,7 @@ for filename in glob.glob(os.path.join(path, 'gf_no_ortho_*.xml')):
     #    print(key)
     model_dict[key] = cobra.io.read_sbml_model(filename)
 
-os.chdir("/home/mac9jc/paradigm/data/published_models")
+os.chdir("/home/mac9jc/paradigm/models/published")
 model_dict['pvfal2018'] = cobra.io.read_sbml_model('pfal2018_abdel_haleem.xml')
 model_dict['pviv2018'] = cobra.io.read_sbml_model('pviv2018_abdel_haleem.xml')
 model_dict['pber2018'] = cobra.io.read_sbml_model('pber2018_abdel_haleem.xml')

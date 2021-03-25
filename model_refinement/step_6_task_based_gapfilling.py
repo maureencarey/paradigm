@@ -178,7 +178,7 @@ def pfba_gapfill_implementation(input_model, universal_model_ex, objective_react
     return cycle_reactions
 
 os.chdir(model_path)
-universal_model = cobra.io.read_sbml_model("extended_universal_model_for_gapfilling.xml")
+universal_model = cobra.io.read_sbml_model("universal/extended_universal_model_for_gapfilling.xml")
 iPfal19	= cobra.io.read_sbml_model("iPfal21.xml")
 universal_model.repair()
 universal_model.solver = 'glpk'

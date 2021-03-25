@@ -20,7 +20,7 @@ logging.basicConfig(filename='extend_universal_for_gapfilling.log'.format(day), 
 logger = logging.getLogger(__name__)
 
 # universal reaction bag for model generation
-os.chdir(model_path)
+os.chdir(model_path+'/universal')
 universal_model = cobra.io.read_sbml_model('universal_model_updated.xml')
 
 if 'bof_c' in [r.id for r in universal_model.reactions]:
@@ -28,6 +28,7 @@ if 'bof_c' in [r.id for r in universal_model.reactions]:
     universal_model.repair()
 
 # extend universal by curated model
+os.chdir(model_path)
 pf_model = cobra.io.read_sbml_model('iPfal21.xml')
 len_univ_rxns = len(universal_model.reactions)
 for rxn in pf_model.reactions:
@@ -54,7 +55,6 @@ for rxn in pf_model.reactions:
 if len(universal_model.reactions) <= len_univ_rxns:
     logger.info('ERROR - universal model does not have Pf reactions added!')
 universal_model.repair()
-
 
 #for rxn in pf_model.reactions:
 #    if rxn.id in [r.id for r in universal_model.reactions] and rxn.reaction != universal_model.reactions.get_by_id(rxn.id).reaction:
@@ -114,6 +114,6 @@ for rxn in universal_model.reactions:
         rxn.upper_bound = 1000.
         # NOTHING SHOULD PRINT - this was a problem in CarveMe
 
-os.chdir(model_path)
+os.chdir(model_path+'/universal')
 cobra.io.save_json_model(universal_model, "extended_universal_model_for_gapfilling.json")
 cobra.io.write_sbml_model(universal_model, "extended_universal_model_for_gapfilling.xml")
