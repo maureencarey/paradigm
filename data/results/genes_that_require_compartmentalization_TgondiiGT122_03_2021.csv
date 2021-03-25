@@ -1,0 +1,551 @@
+,genes,gene_assoc_w_other_rxns?
+14GLUCANabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+3HAD100_1,frozenset({<Gene TGGT1_321570-t26_1-p1 at 0x2abd68c065f8>}),no
+3HAD120_1,frozenset({<Gene TGGT1_321570-t26_1-p1 at 0x2abd68c065f8>}),no
+3HAD80_1,frozenset({<Gene TGGT1_321570-t26_1-p1 at 0x2abd68c065f8>}),no
+3OAR100_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR120_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR140_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR160_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR180_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR181_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR40_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR60_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAR80_1,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+3OAS100_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+3OAS120_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+3OAS140_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+3OAS160_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+3OAS60_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+3OAS80_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+3PG_pi_thr,frozenset({<Gene TGGT1_232690-t26_1-p1 at 0x2abd68c44da0>}),no
+A2GALT1,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A2GALT2,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A2GALT3,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A2GALT4,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A2GALT5,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A2GALT6,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A3GALT1,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A3GALT2,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A3GALT3,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A3GALT4,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A3GALT5,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+A4GALT,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+AACP1819ZS,frozenset({<Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>}),no
+AACPS1_1,frozenset({<Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>}),no
+AACPS3_1,frozenset({<Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>}),no
+AACPS4_1,frozenset({<Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>}),no
+AACPS5_1,frozenset({<Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>}),no
+AACPS6_1,frozenset({<Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>}),no
+AAMYLpp,frozenset({<Gene TGGT1_246690-t26_1-p1 at 0x2abd68c44748>}),no
+AASPh,frozenset({<Gene TGGT1_282230-t26_1-p1 at 0x2abd68c58908>}),no
+AATC,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+AATG,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+ABFPTh,frozenset({<Gene TGGT1_265450-t26_1-p1 at 0x2abd68c58550>}),no
+ACACT2,"frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_301120-t26_1-p1 at 0x2abd68c06978>})",yes
+ACACT3,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+ACACT4p,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+ACACT5p,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+ACACT6p,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+ACACT7p,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+ACACT8p,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+ACACT9p,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+ACCOAC_1,frozenset({<Gene TGGT1_284190-t26_1-p1 at 0x2abd68c44f28>}),no
+ACCOAhi,frozenset({<Gene TGGT1_284190-t26_1-p1 at 0x2abd68c44f28>}),no
+ACCOAth,frozenset({<Gene TGGT1_215940-t26_1-p1 at 0x2abd68c44ac8>}),no
+ACCOAtx,frozenset({<Gene TGGT1_215940-t26_1-p1 at 0x2abd68c44ac8>}),no
+ACHMSSELCYSLh,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+ACOA100OR,"frozenset({<Gene TGGT1_272180-t26_1-p1 at 0x2abd68c58208>, <Gene TGGT1_315480-t26_1-p1 at 0x2abd68c582b0>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>, <Gene TGGT1_231900-t26_1-p1 at 0x2abd68c58278>})",yes
+ACOA120OR,"frozenset({<Gene TGGT1_272180-t26_1-p1 at 0x2abd68c58208>, <Gene TGGT1_315480-t26_1-p1 at 0x2abd68c582b0>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>, <Gene TGGT1_231900-t26_1-p1 at 0x2abd68c58278>})",yes
+ACOA140OR,"frozenset({<Gene TGGT1_272180-t26_1-p1 at 0x2abd68c58208>, <Gene TGGT1_315480-t26_1-p1 at 0x2abd68c582b0>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>, <Gene TGGT1_231900-t26_1-p1 at 0x2abd68c58278>})",yes
+ACOA160OR,"frozenset({<Gene TGGT1_272180-t26_1-p1 at 0x2abd68c58208>, <Gene TGGT1_315480-t26_1-p1 at 0x2abd68c582b0>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>, <Gene TGGT1_231900-t26_1-p1 at 0x2abd68c58278>})",yes
+ACOA40OR,"frozenset({<Gene TGGT1_272180-t26_1-p1 at 0x2abd68c58208>, <Gene TGGT1_231900-t26_1-p1 at 0x2abd68c58278>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>, <Gene TGGT1_205430-t26_1-p1 at 0x2abd68c06a90>, <Gene TGGT1_315480-t26_1-p1 at 0x2abd68c582b0>})",yes
+ACOA60OR,"frozenset({<Gene TGGT1_272180-t26_1-p1 at 0x2abd68c58208>, <Gene TGGT1_231900-t26_1-p1 at 0x2abd68c58278>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>, <Gene TGGT1_205430-t26_1-p1 at 0x2abd68c06a90>, <Gene TGGT1_315480-t26_1-p1 at 0x2abd68c582b0>})",yes
+ACOA80OR,"frozenset({<Gene TGGT1_272180-t26_1-p1 at 0x2abd68c58208>, <Gene TGGT1_315480-t26_1-p1 at 0x2abd68c582b0>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>, <Gene TGGT1_231900-t26_1-p1 at 0x2abd68c58278>})",yes
+ACOAO4p,frozenset({<Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>}),no
+ACOAO5p,frozenset({<Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>}),no
+ACOAO6p,frozenset({<Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>}),no
+ACOAO7p,frozenset({<Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>}),no
+ACOAO8p,frozenset({<Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>}),no
+ACOAO9p,frozenset({<Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>}),no
+ACOATA_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+ACOLIPAabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+ACP1619ZD9DS,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+ACP1819ZD9DS,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+ACPh,frozenset({<Gene TGGT1_258940-t26_1-p1 at 0x2abd68c7ac88>}),no
+ACSERLh,frozenset({<Gene TGGT1_259180-t26_1-p1 at 0x2abd68c336a0>}),no
+ACSERSULLh,"frozenset({<Gene TGGT1_259180-t26_1-p1 at 0x2abd68c336a0>, <Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>})",yes
+ACSp,frozenset({<Gene TGGT1_232580-t26_1-p1 at 0x2abd68c06a58>}),no
+ADSSh,frozenset({<Gene TGGT1_279450-t26_1-p1 at 0x2abd68c8c5c0>}),no
+AGAKI,frozenset({<Gene TGGT1_305030-t26_1-p1 at 0x2abd68c7afd0>}),no
+AHAL,"frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>, <Gene TGGT1_270120-t26_1-p1 at 0x2abd68c331d0>, <Gene TGGT1_249270-t26_1-p1 at 0x2abd68c588d0>, <Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>})",yes
+AHHST,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+AHSL,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+AM6PTh,frozenset({<Gene TGGT1_265450-t26_1-p1 at 0x2abd68c58550>}),no
+AMETt2h,frozenset({<Gene TGGT1_242460-t26_1-p1 at 0x2abd68c7aeb8>}),no
+APNn,"frozenset({<Gene TGGT1_318675-t26_1-p1 at 0x2abd68c8c780>, <Gene TGGT1_272650-t26_1-p1 at 0x2abd68c8c710>, <Gene TGGT1_224840-t26_1-p1 at 0x2abd68c8c748>, <Gene TGGT1_266920-t26_1-p1 at 0x2abd68c8c6d8>})",yes
+APOR,frozenset({<Gene TGGT1_222160-t26_1-p1 at 0x2abd68c12cf8>}),no
+APhi,frozenset({<Gene TGGT1_258940-t26_1-p1 at 0x2abd68c7ac88>}),no
+ASNt7,frozenset({<Gene TGGT1_227570-t26_1-p1 at 0x2abd68c442b0>}),no
+ASO4rt2rpp,frozenset({<Gene TGGT1_240210-t26_1-p1 at 0x2abd68c7a7b8>}),no
+ASPATh,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+ASPCTn,frozenset({<Gene TGGT1_215260-t26_1-p1 at 0x2abd68c06dd8>}),no
+ASPK_1,frozenset({<Gene TGGT1_227090-t26_1-p1 at 0x2abd68c58c88>}),no
+ASPTAp,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+ATAMh,"frozenset({<Gene TGGT1_307603-t26_1-p1 at 0x2abd68c58a58>, <Gene TGGT1_233400-t26_1-p1 at 0x2abd68c589e8>, <Gene TGGT1_288320-t26_1-p1 at 0x2abd68c06b70>})",yes
+ATDAMh,"frozenset({<Gene TGGT1_307603-t26_1-p1 at 0x2abd68c58a58>, <Gene TGGT1_233400-t26_1-p1 at 0x2abd68c589e8>, <Gene TGGT1_288320-t26_1-p1 at 0x2abd68c06b70>})",yes
+ATP2tp_H,frozenset({<Gene TGGT1_249702-t26_1-p1 at 0x2abd68c7a320>}),no
+ATPS10rpp,"frozenset({<Gene TGGT1_231910-t26_1-p1 at 0x2abd68c12208>, <Gene TGGT1_261950-t26_1-p1 at 0x2abd68c12240>, <Gene TGGT1_204400-t26_1-p1 at 0x2abd68c12278>})",yes
+ATPS3g,"frozenset({<Gene TGGT1_212310-t26_1-p1 at 0x2abd68cafa20>, <Gene TGGT1_291310-t26_1-p1 at 0x2abd68cafa58>, <Gene TGGT1_259010-t26_1-p1 at 0x2abd68cafa90>, <Gene TGGT1_219800-t26_1-p1 at 0x2abd68cafac8>, <Gene TGGT1_256970-t26_1-p1 at 0x2abd68cafb00>, <Gene TGGT1_310960-t26_1-p1 at 0x2abd68cafbe0>, <Gene TGGT1_305290-t26_1-p1 at 0x2abd68cafba8>, <Gene TGGT1_232830-t26_1-p1 at 0x2abd68caf9b0>, <Gene TGGT1_281920-t26_1-p1 at 0x2abd68caf9e8>})",yes
+ATPS3v,"frozenset({<Gene TGGT1_212310-t26_1-p1 at 0x2abd68cafa20>, <Gene TGGT1_291310-t26_1-p1 at 0x2abd68cafa58>, <Gene TGGT1_259010-t26_1-p1 at 0x2abd68cafa90>, <Gene TGGT1_219800-t26_1-p1 at 0x2abd68cafac8>, <Gene TGGT1_256970-t26_1-p1 at 0x2abd68cafb00>, <Gene TGGT1_310960-t26_1-p1 at 0x2abd68cafbe0>, <Gene TGGT1_305290-t26_1-p1 at 0x2abd68cafba8>, <Gene TGGT1_232830-t26_1-p1 at 0x2abd68caf9b0>, <Gene TGGT1_281920-t26_1-p1 at 0x2abd68caf9e8>})",yes
+ATPS4rpp,"frozenset({<Gene TGGT1_231910-t26_1-p1 at 0x2abd68c12208>, <Gene TGGT1_261950-t26_1-p1 at 0x2abd68c12240>, <Gene TGGT1_284540-t26_1-p1 at 0x2abd68c121d0>, <Gene TGGT1_204400-t26_1-p1 at 0x2abd68c12278>})",yes
+ATPS4rpp_1,"frozenset({<Gene TGGT1_231910-t26_1-p1 at 0x2abd68c12208>, <Gene TGGT1_261950-t26_1-p1 at 0x2abd68c12240>, <Gene TGGT1_204400-t26_1-p1 at 0x2abd68c12278>})",yes
+ATPSu,"frozenset({<Gene TGGT1_231910-t26_1-p1 at 0x2abd68c12208>, <Gene TGGT1_261950-t26_1-p1 at 0x2abd68c12240>, <Gene TGGT1_204400-t26_1-p1 at 0x2abd68c12278>})",yes
+ATPtp_H,frozenset({<Gene TGGT1_249702-t26_1-p1 at 0x2abd68c7a320>}),no
+BATHORHODOPSINI,frozenset({<Gene TGGT1_254370-t26_1-p1 at 0x2abd68c58978>}),no
+BCAROKT,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+BCT1_syn,frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>}),no
+BFBPh,frozenset({<Gene TGGT1_235700-t26_1-p1 at 0x2abd68c123c8>}),no
+BTNC,frozenset({<Gene TGGT1_284190-t26_1-p1 at 0x2abd68c44f28>}),no
+BTP,frozenset({<Gene TGGT1_265860-t26_1-p1 at 0x2abd68c7a668>}),no
+BUTSO3abcpp,frozenset({<Gene TGGT1_247540-t26_1-p1 at 0x2abd68c06d68>}),no
+CA2abcpp,"frozenset({<Gene TGGT1_230420-t26_1-p1 at 0x2abd68c7acc0>, <Gene TGGT1_284602-t26_1-p1 at 0x2abd68c7ad68>})",yes
+CA2t3pp,frozenset({<Gene TGGT1_207910-t26_1-p1 at 0x2abd68c06da0>}),no
+CATp,frozenset({<Gene TGGT1_232250-t26_1-p1 at 0x2abd68c442e8>}),no
+CBPSn,frozenset({<Gene TGGT1_215260-t26_1-p1 at 0x2abd68c06dd8>}),no
+CD2t3pp,frozenset({<Gene TGGT1_251630-t26_1-p1 at 0x2abd68c06e10>}),no
+CDPDAGS18111Z160h,"frozenset({<Gene TGGT1_281980-t26_1-p1 at 0x2abd68c58470>, <Gene TGGT1_263785-t26_1-p1 at 0x2abd68c06ef0>})",yes
+CDPDAGS1819Z160h,"frozenset({<Gene TGGT1_281980-t26_1-p1 at 0x2abd68c58470>, <Gene TGGT1_263785-t26_1-p1 at 0x2abd68c06ef0>})",yes
+CEF,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+CHITOBpts,"frozenset({<Gene TGGT1_288920-t26_1-p1 at 0x2abd68c8cba8>, <Gene TGGT1_290580-t26_1-p1 at 0x2abd68c337f0>})",yes
+CHLDA1tu,frozenset({<Gene TGGT1_320460-t26_1-p1 at 0x2abd68c44198>}),no
+CHLDA2tu,frozenset({<Gene TGGT1_320460-t26_1-p1 at 0x2abd68c44198>}),no
+CHOLS_ex,frozenset({<Gene TGGT1_259180-t26_1-p1 at 0x2abd68c336a0>}),no
+CHRS,frozenset({<Gene TGGT1_201380-t26_1-p1 at 0x2abd68c587f0>}),no
+CHYA2,frozenset({<Gene TGGT1_218560-t26_1-p1 at 0x2abd68c58cf8>}),no
+CLIPAabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+CLPNS120pp,frozenset({<Gene TGGT1_309940-t26_1-p1 at 0x2abd68c06e80>}),no
+CLPNS160pp,frozenset({<Gene TGGT1_309940-t26_1-p1 at 0x2abd68c06e80>}),no
+CLPNS161pp,frozenset({<Gene TGGT1_309940-t26_1-p1 at 0x2abd68c06e80>}),no
+CLPNS180pp,frozenset({<Gene TGGT1_309940-t26_1-p1 at 0x2abd68c06e80>}),no
+CLPNS181pp,frozenset({<Gene TGGT1_309940-t26_1-p1 at 0x2abd68c06e80>}),no
+CLt3_2pp,frozenset({<Gene TGGT1_290330-t26_1-p1 at 0x2abd68c06eb8>}),no
+COBALT2t3pp,frozenset({<Gene TGGT1_251630-t26_1-p1 at 0x2abd68c06e10>}),no
+COLIPAPabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+COLIPAabcpp,"frozenset({<Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+COLIPAabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+CPPPGO_1,frozenset({<Gene TGGT1_223020-t26_1-p1 at 0x2abd68c8c588>}),no
+CRETINOLPMTACT,"frozenset({<Gene TGGT1_275600-t26_1-p1 at 0x2abd68c58320>, <Gene TGGT1_226370-t26_1-p1 at 0x2abd68c582e8>})",yes
+CRO4abcpp,frozenset({<Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>}),no
+CSp,"frozenset({<Gene TGGT1_268890-t26_1-p1 at 0x2abd68c33a20>, <Gene TGGT1_203110-t26_1-p1 at 0x2abd68c8ca58>})",yes
+CU1abcpp,"frozenset({<Gene TGGT1_226100-t26_1-p1 at 0x2abd68c690b8>, <Gene TGGT1_201150-t26_1-p1 at 0x2abd68c7a940>})",yes
+CU2abcpp,frozenset({<Gene TGGT1_226100-t26_1-p1 at 0x2abd68c690b8>}),no
+CU2abcu_syn,frozenset({<Gene TGGT1_201150-t26_1-p1 at 0x2abd68c7a940>}),no
+CUabcpp,"frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>, <Gene TGGT1_226100-t26_1-p1 at 0x2abd68c690b8>})",yes
+CYO1_KT,"frozenset({<Gene TGGT1_410170-t26_1-p1 at 0x2abd68c7a710>, <Gene TGGT1_320220-t26_1-p1 at 0x2abd68c7a6a0>})",yes
+CYSAT,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+CYSS_1,"frozenset({<Gene TGGT1_259180-t26_1-p1 at 0x2abd68c336a0>, <Gene TGGT1_278910-t26_1-p1 at 0x2abd68c691d0>})",yes
+CYSTS_1,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+CYSabc2pp,"frozenset({<Gene TGGT1_288920-t26_1-p1 at 0x2abd68c8cba8>, <Gene TGGT1_305590-t26_1-p1 at 0x2abd68c8cc50>, <Gene TGGT1_290580-t26_1-p1 at 0x2abd68c337f0>})",yes
+CYSabcpp,frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>}),no
+CYTBD2pp,frozenset({<Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>}),no
+CYTP450Rh,frozenset({<Gene TGGT1_219630-t26_1-p1 at 0x2abd68c44550>}),no
+Cobalt2abcppI,frozenset({<Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>}),no
+DAGK1601819Zh,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK160h,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK1801819Zh,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK18111Z160h,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK18111Z1819Zh,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK1819Z160h,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK1819Z1619Zh,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK1819Z18111Zh,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DAGK1819Z1819Zh,frozenset({<Gene TGGT1_239250-t26_1-p1 at 0x2abd68c581d0>}),no
+DGDGD4DS1819Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGD7DS1819Z1617Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGD7DS1829Z12Z1617Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGGH1819Z160,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1819Z1617Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1819Z1619Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1819Z1627Z10Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1819Z1637Z10Z13Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1829Z12Z160,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1829Z12Z1617Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1829Z12Z1619Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1829Z12Z1627Z10Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1829Z12Z1634Z7Z10Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1829Z12Z1637Z10Z13Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1839Z12Z15Z160,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1839Z12Z15Z1627Z10Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1839Z12Z15Z1637Z10Z13Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGGH1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+DGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW3DS1839Z12Z15Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1819Z1627Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1829Z12Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1829Z12Z1617Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1829Z12Z1619Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1829Z12Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+DHAP_pi_thr,frozenset({<Gene TGGT1_232690-t26_1-p1 at 0x2abd68c44da0>}),no
+DHORTSn,frozenset({<Gene TGGT1_215260-t26_1-p1 at 0x2abd68c06dd8>}),no
+DHQS_1,frozenset({<Gene TGGT1_307040-t26_1-p1 at 0x2abd68c69160>}),no
+DMT,frozenset({<Gene TGGT1_227660-t26_1-p1 at 0x2abd68c585c0>}),no
+DNGALh,frozenset({<Gene TGGT1_269800-t26_1-p1 at 0x2abd68c33da0>}),no
+DPHS,frozenset({<Gene TGGT1_221260-t26_1-p1 at 0x2abd68caf048>}),no
+DVPCHLD450OR,frozenset({<Gene TGGT1_260460-t26_1-p1 at 0x2abd68c58860>}),no
+DVPCHLD646OR,frozenset({<Gene TGGT1_260460-t26_1-p1 at 0x2abd68c58860>}),no
+DXRI,frozenset({<Gene TGGT1_214850-t26_1-p1 at 0x2abd68c06fd0>}),no
+DXS,frozenset({<Gene TGGT1_208820-t26_1-p1 at 0x2abd68c69588>}),no
+EAR100x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR120x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR140x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR160x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR180x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR181x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR40x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR60x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+EAR80x_1,frozenset({<Gene TGGT1_251930-t26_1-p1 at 0x2abd68c122e8>}),no
+ECA4COLIPAabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+ECOAH11p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+ECOAH4p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+ECOAH5p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+ECOAH6p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+ECOAH7p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+ECOAH8p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+EHGLATp,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+EMGH,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+ENLIPAabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+ENLIPIDAt1ex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+ENOf,frozenset({<Gene TGGT1_268850-t26_1-p1 at 0x2abd68c695c0>}),no
+FA100ACPHi_1,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA120ACPHi_1,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA140ACPHi_1,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA140COAabcp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA141COAabcp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA160ACPHi_1,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA160COAabcp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA160COAabcp_1,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA161ACPHi_1,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA161COAabcp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA180ACPHi,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA180COAabcp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA1819ZACPH,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA181ACPHi,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FA181COAabcp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA182COAabcp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FA80ACPHi_1,frozenset({<Gene TGGT1_271892-t26_1-p1 at 0x2abd68c44fd0>}),no
+FACOAL100p,frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>}),no
+FACOAL100t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL120p,frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>}),no
+FACOAL120t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL140p,frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>}),no
+FACOAL140t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL141p,frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>}),no
+FACOAL141t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL160p,frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>}),no
+FACOAL160t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL161p,frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>}),no
+FACOAL161t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL180t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL181t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL60t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FACOAL80p,frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>}),no
+FACOAL80t2pp,"frozenset({<Gene TGGT1_243800-t26_1-p1 at 0x2abd68c33828>, <Gene TGGT1_297220-t26_1-p1 at 0x2abd68c06630>, <Gene TGGT1_310150-t26_1-p1 at 0x2abd68c58048>, <Gene TGGT1_247760-t26_1-p1 at 0x2abd68c06f60>})",yes
+FAO141p_even,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_226300-t26_1-p1 at 0x2abd68c067b8>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO141p_odd,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO161p_even,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_226300-t26_1-p1 at 0x2abd68c067b8>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO161p_odd,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO181p_even,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_226300-t26_1-p1 at 0x2abd68c067b8>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO181p_odd,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO182p_eveneven,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_226300-t26_1-p1 at 0x2abd68c067b8>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO182p_evenodd,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_226300-t26_1-p1 at 0x2abd68c067b8>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO182p_oddodd,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO240p,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FAO80p,"frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>, <Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>, <Gene TGGT1_247500-t26_1-p1 at 0x2abd68c33470>})",yes
+FBA3hi,frozenset({<Gene TGGT1_236050-t26_1-p1 at 0x2abd68c9cb00>}),no
+FBAf,frozenset({<Gene TGGT1_236050-t26_1-p1 at 0x2abd68c9cb00>}),no
+FBAh,frozenset({<Gene TGGT1_236050-t26_1-p1 at 0x2abd68c9cb00>}),no
+FE2t2pp,frozenset({<Gene TGGT1_267270-t26_1-p1 at 0x2abd68c8ccf8>}),no
+FE3DCITabcpp,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+FE3abch,frozenset({<Gene TGGT1_297925-t26_1-p1 at 0x2abd68c9cac8>}),no
+FE3abcpp,frozenset({<Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>}),no
+FEENTER2tpp,"frozenset({<Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+FEex,"frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_320460-t26_1-p1 at 0x2abd68c44198>, <Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>})",yes
+FEpp,"frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_320460-t26_1-p1 at 0x2abd68c44198>, <Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>})",yes
+FNORh,"frozenset({<Gene TGGT1_298990-t26_1-p1 at 0x2abd68cafef0>, <Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>})",yes
+FPGPL,frozenset({<Gene TGGT1_236050-t26_1-p1 at 0x2abd68c9cb00>}),no
+FPPSh,frozenset({<Gene TGGT1_224490-t26_1-p1 at 0x2abd68c8ccc0>}),no
+FRUt3,frozenset({<Gene TGGT1_272500-t26_1-p1 at 0x2abd68c44978>}),no
+G1P_pi_th,frozenset({<Gene TGGT1_232690-t26_1-p1 at 0x2abd68c44da0>}),no
+G3PAT160h,frozenset({<Gene TGGT1_270910-t26_1-p1 at 0x2abd68c8c128>}),no
+G3PAT180h,frozenset({<Gene TGGT1_270910-t26_1-p1 at 0x2abd68c8c128>}),no
+G3PAT1819Zh,frozenset({<Gene TGGT1_270910-t26_1-p1 at 0x2abd68c8c128>}),no
+G3PAT181h,frozenset({<Gene TGGT1_270910-t26_1-p1 at 0x2abd68c8c128>}),no
+G3PCabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+G3PD1,"frozenset({<Gene TGGT1_307570-t26_1-p1 at 0x2abd68c69710>, <Gene TGGT1_210260-t26_1-p1 at 0x2abd68c696a0>, <Gene TGGT1_263730-t26_1-p1 at 0x2abd68c58be0>})",yes
+G3PD2_1,frozenset({<Gene TGGT1_307570-t26_1-p1 at 0x2abd68c69710>}),no
+G3PEabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+G3PGabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+G3PIabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+G3PO,frozenset({<Gene TGGT1_263730-t26_1-p1 at 0x2abd68c58be0>}),no
+G3PSabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+G3P_pi_thr,frozenset({<Gene TGGT1_232690-t26_1-p1 at 0x2abd68c44da0>}),no
+G5DHx,frozenset({<Gene TGGT1_270550-t26_1-p1 at 0x2abd68c7a518>}),no
+G6PADHh,frozenset({<Gene TGGT1_278830-t26_1-p1 at 0x2abd68c8c470>}),no
+G6PA_pi_th,frozenset({<Gene TGGT1_232690-t26_1-p1 at 0x2abd68c44da0>}),no
+G6PBDHh,frozenset({<Gene TGGT1_278830-t26_1-p1 at 0x2abd68c8c470>}),no
+G6PB_pi_th,frozenset({<Gene TGGT1_232690-t26_1-p1 at 0x2abd68c44da0>}),no
+G6PIh,frozenset({<Gene TGGT1_283780-t26_1-p1 at 0x2abd68c58518>}),no
+GALt2pp,"frozenset({<Gene TGGT1_214320-t26_1-p1 at 0x2abd68c7ac18>, <Gene TGGT1_257120-t26_1-p1 at 0x2abd68c8ce10>})",yes
+GCPNn,"frozenset({<Gene TGGT1_318675-t26_1-p1 at 0x2abd68c8c780>, <Gene TGGT1_272650-t26_1-p1 at 0x2abd68c8c710>, <Gene TGGT1_266920-t26_1-p1 at 0x2abd68c8c6d8>})",yes
+GGGH,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+GLCt2pp,"frozenset({<Gene TGGT1_214320-t26_1-p1 at 0x2abd68c7ac18>, <Gene TGGT1_257120-t26_1-p1 at 0x2abd68c8ce10>, <Gene TGGT1_272500-t26_1-p1 at 0x2abd68c44978>})",yes
+GLNTRAT,frozenset({<Gene TGGT1_233838-t26_1-p1 at 0x2abd68c7aa90>}),no
+GLNabcpp,frozenset({<Gene TGGT1_226790-t26_1-p1 at 0x2abd68c69748>}),no
+GLNt7,frozenset({<Gene TGGT1_227570-t26_1-p1 at 0x2abd68c442b0>}),no
+GLUKAh,frozenset({<Gene TGGT1_265450-t26_1-p1 at 0x2abd68c58550>}),no
+GLUKBh,frozenset({<Gene TGGT1_265450-t26_1-p1 at 0x2abd68c58550>}),no
+GLUS_ferr,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+GLUTRS_Gln,frozenset({<Gene TGGT1_241870-t26_1-p1 at 0x2abd68c06c50>}),no
+GLYC2Pabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+GLYC3Pabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+GLYC3Pth,frozenset({<Gene TGGT1_278800-t26_1-p1 at 0x2abd68c7aef0>}),no
+GLYCth,frozenset({<Gene TGGT1_252340-t26_1-p1 at 0x2abd68c33898>}),no
+GM1LIPAabcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+GM2LIPAabcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+GRGT,frozenset({<Gene TGGT1_283810-t26_1-p1 at 0x2abd68c586d8>}),no
+GTHRDabc2pp,"frozenset({<Gene TGGT1_288920-t26_1-p1 at 0x2abd68c8cba8>, <Gene TGGT1_305590-t26_1-p1 at 0x2abd68c8cc50>, <Gene TGGT1_290580-t26_1-p1 at 0x2abd68c337f0>})",yes
+GTHRDabcv,frozenset({<Gene TGGT1_320460-t26_1-p1 at 0x2abd68c44198>}),no
+GTHS_1,frozenset({<Gene TGGT1_226800-t26_1-p1 at 0x2abd68c58128>}),no
+GUACn,frozenset({<Gene TGGT1_254370-t26_1-p1 at 0x2abd68c58978>}),no
+HACD10p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+HACD4p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+HACD5p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+HACD6p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+HACD7p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+HACD8p,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+HACDp,frozenset({<Gene TGGT1_234570-t26_1-p1 at 0x2abd68c06828>}),no
+HDS,frozenset({<Gene TGGT1_262430-t26_1-p1 at 0x2abd68c9c978>}),no
+HEMELh,frozenset({<Gene TGGT1_314042-t26_1-p1 at 0x2abd68c58898>}),no
+HYDAh,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+ICDHyp,frozenset({<Gene TGGT1_266760-t26_1-p1 at 0x2abd68c9c6d8>}),no
+IDPh,"frozenset({<Gene TGGT1_283830-t26_1-p1 at 0x2abd68c8c4a8>, <Gene TGGT1_248670-t26_1-p1 at 0x2abd68c447f0>})",yes
+ILEt7,frozenset({<Gene TGGT1_227570-t26_1-p1 at 0x2abd68c442b0>}),no
+ISETACabcpp,frozenset({<Gene TGGT1_247540-t26_1-p1 at 0x2abd68c06d68>}),no
+K2L4Aabcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+K2L4Aabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+KAS14_1,frozenset({<Gene TGGT1_231890-t26_1-p1 at 0x2abd68c06908>}),no
+KATp,frozenset({<Gene TGGT1_273740-t26_1-p1 at 0x2abd68c06748>}),no
+LEUt7,frozenset({<Gene TGGT1_227570-t26_1-p1 at 0x2abd68c442b0>}),no
+LIPACabcpp,"frozenset({<Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+LIPAabcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+LIPAabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+LLDH_ferr_x,frozenset({<Gene TGGT1_273530-t26_1-p1 at 0x2abd68c58ac8>}),no
+LUMIRHODOPSINI,frozenset({<Gene TGGT1_254370-t26_1-p1 at 0x2abd68c58978>}),no
+MALTHXabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+MALTPTabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+MALTTRabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+MALTTTRabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+MALTabcpp,frozenset({<Gene TGGT1_216790-t26_1-p1 at 0x2abd68c12390>}),no
+MCOATA_1,frozenset({<Gene TGGT1_225990-t26_1-p1 at 0x2abd68c44668>}),no
+METARHODOPSINH,frozenset({<Gene TGGT1_254370-t26_1-p1 at 0x2abd68c58978>}),no
+METDabcpp,frozenset({<Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>}),no
+METHFth,"frozenset({<Gene TGGT1_205490-t26_1-p1 at 0x2abd68c44d30>, <Gene TGGT1_231420-t26_1-p1 at 0x2abd68c44cf8>})",no
+METabcpp,frozenset({<Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>}),no
+MG2uabcpp,"frozenset({<Gene TGGT1_284598-t26_1-p1 at 0x2abd68c9c320>, <Gene TGGT1_252640-t26_1-p1 at 0x2abd68c9c358>, <Gene TGGT1_284602-t26_1-p1 at 0x2abd68c7ad68>, <Gene TGGT1_230420-t26_1-p1 at 0x2abd68c7acc0>, <Gene TGGT1_312100-t26_1-p1 at 0x2abd68c9c2e8>})",yes
+MGDGD4DS1819Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGD4DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGD7DS1819Z1617Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGD7DS1829Z12Z1617Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1839Z12Z15Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z1,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z2,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1819Z1627Z10Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1829Z12Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1829Z12Z1617Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1829Z12Z1619Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGDGW6DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+MGHA,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+MGHB,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+MI1345PKn,frozenset({<Gene TGGT1_208070-t26_1-p1 at 0x2abd68c33a90>}),no
+MI1456PKn,frozenset({<Gene TGGT1_208070-t26_1-p1 at 0x2abd68c33a90>}),no
+MI145P6Kn,frozenset({<Gene TGGT1_208070-t26_1-p1 at 0x2abd68c33a90>}),no
+MI145PKn,frozenset({<Gene TGGT1_208070-t26_1-p1 at 0x2abd68c33a90>}),no
+MLDEP1pp,frozenset({<Gene TGGT1_235680-t26_1-p1 at 0x2abd68c12ef0>}),no
+MLDEP2pp,frozenset({<Gene TGGT1_235680-t26_1-p1 at 0x2abd68c12ef0>}),no
+MLGH,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+MN2t3pp,frozenset({<Gene TGGT1_251630-t26_1-p1 at 0x2abd68c06e10>}),no
+MNabc_1,frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>}),no
+MNt2pp,frozenset({<Gene TGGT1_267270-t26_1-p1 at 0x2abd68c8ccf8>}),no
+MOBDabcpp,"frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>, <Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>})",yes
+MTGH,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+NA1Hth,frozenset({<Gene TGGT1_305180-t26_1-p1 at 0x2abd68caff28>}),no
+NADS1n,frozenset({<Gene TGGT1_269800-t26_1-p1 at 0x2abd68c33da0>}),no
+NAt3pp,"frozenset({<Gene TGGT1_259200A-t26_1-p1 at 0x2abd68c69d68>, <Gene TGGT1_299060-t26_1-p1 at 0x2abd68c69b70>})",no
+NI2t3pp,frozenset({<Gene TGGT1_251630-t26_1-p1 at 0x2abd68c06e10>}),no
+NI2uabcpp,"frozenset({<Gene TGGT1_284598-t26_1-p1 at 0x2abd68c9c320>, <Gene TGGT1_252640-t26_1-p1 at 0x2abd68c9c358>, <Gene TGGT1_284602-t26_1-p1 at 0x2abd68c7ad68>, <Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>, <Gene TGGT1_230420-t26_1-p1 at 0x2abd68c7acc0>, <Gene TGGT1_312100-t26_1-p1 at 0x2abd68c9c2e8>})",yes
+NO2R,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+NO2t2rpp,frozenset({<Gene TGGT1_209800-t26_1-p1 at 0x2abd68c69a90>}),no
+NO3abcpp,frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>}),no
+O16A4COLIPAabctex,frozenset({<Gene TGGT1_315560-t26_1-p1 at 0x2abd68c06e48>}),no
+OAGMIG,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+OHPHM6n,frozenset({<Gene TGGT1_248200-t26_1-p1 at 0x2abd68caf908>}),no
+OXOADLR,frozenset({<Gene TGGT1_219550-t26_1-p1 at 0x2abd68c33630>}),no
+PA120abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PA140abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PA141abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PA160abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PA161abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PA180abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PA181abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PCHLD450OR,frozenset({<Gene TGGT1_260460-t26_1-p1 at 0x2abd68c58860>}),no
+PCHLD646OR,frozenset({<Gene TGGT1_260460-t26_1-p1 at 0x2abd68c58860>}),no
+PDHam1hi,"frozenset({<Gene TGGT1_272290-t26_1-p1 at 0x2abd68c44710>, <Gene TGGT1_245670-t26_1-p1 at 0x2abd68c446d8>})",yes
+PDHam2hi,"frozenset({<Gene TGGT1_272290-t26_1-p1 at 0x2abd68c44710>, <Gene TGGT1_245670-t26_1-p1 at 0x2abd68c446d8>})",yes
+PDHe2hr,frozenset({<Gene TGGT1_206610-t26_1-p1 at 0x2abd68c8c160>}),no
+PDHe3hr,frozenset({<Gene TGGT1_305980-t26_1-p1 at 0x2abd68c23390>}),no
+PE120abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PE140abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PE141abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PE160abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PE161abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PE180abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PE181abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PEPPIth,"frozenset({<Gene TGGT1_232690-t26_1-p1 at 0x2abd68c44da0>, <Gene TGGT1_261070-t26_1-p1 at 0x2abd68c44d68>})",no
+PG120abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PG140abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PG141abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PG160abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PG161abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PG180abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PG181abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGD3TDS18111Z1613E,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+PGD3TDS1819Z1613E,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+PGD3TDS1829Z12Z1613E,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+PGD3TDS1839Z12Z15Z1613E,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+PGDHh,frozenset({<Gene TGGT1_307850-t26_1-p1 at 0x2abd68c8c518>}),no
+PGIAh,frozenset({<Gene TGGT1_283780-t26_1-p1 at 0x2abd68c58518>}),no
+PGIBh,frozenset({<Gene TGGT1_283780-t26_1-p1 at 0x2abd68c58518>}),no
+PGKh,frozenset({<Gene TGGT1_222020-t26_1-p1 at 0x2abd68c33208>}),no
+PGLYCPh,frozenset({<Gene TGGT1_209870-t26_1-p1 at 0x2abd68c12b00>}),no
+PGLYCPx,frozenset({<Gene TGGT1_209870-t26_1-p1 at 0x2abd68c12b00>}),no
+PGLYDH,frozenset({<Gene TGGT1_239820-t26_1-p1 at 0x2abd68c236d8>}),no
+PGMTh,frozenset({<Gene TGGT1_285980A-t26_1-p1 at 0x2abd68c58588>}),no
+PGP120abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGP140abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGP141abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGP160abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGP161abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGP180abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGP181abcpp,"frozenset({<Gene TGGT1_263740-t26_1-p1 at 0x2abd68c23828>, <Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_209190-t26_1-p1 at 0x2abd68c23978>, <Gene TGGT1_273360-t26_1-p1 at 0x2abd68c23780>, <Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+PGPS18111Z160h,frozenset({<Gene TGGT1_254540-t26_1-p1 at 0x2abd68c23588>}),no
+PGPS1819Z160h,frozenset({<Gene TGGT1_254540-t26_1-p1 at 0x2abd68c23588>}),no
+PGW3DS1839Z12Z15Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+PGW6DS1829Z12Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+PHEMEabcpp,frozenset({<Gene TGGT1_316100-t26_1-p1 at 0x2abd68caf438>}),no
+PHOMSELCYSLh,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+PIN4Kn_SC,frozenset({<Gene TGGT1_296010-t26_1-p1 at 0x2abd68c33fd0>}),no
+PINA1th,frozenset({<Gene TGGT1_240210-t26_1-p1 at 0x2abd68c7a7b8>}),no
+PIt2p,frozenset({<Gene TGGT1_240210-t26_1-p1 at 0x2abd68c7a7b8>}),no
+PIt2rpp,frozenset({<Gene TGGT1_240210-t26_1-p1 at 0x2abd68c7a7b8>}),no
+PItf,frozenset({<Gene TGGT1_240210-t26_1-p1 at 0x2abd68c7a7b8>}),no
+POATh,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+PPA_1pp,frozenset({<Gene TGGT1_248670-t26_1-p1 at 0x2abd68c447f0>}),no
+PPBNGD,frozenset({<Gene TGGT1_271420-t26_1-p1 at 0x2abd68c8ceb8>}),no
+PPBNGS_1,frozenset({<Gene TGGT1_253900-t26_1-p1 at 0x2abd68c23860>}),no
+PPMh,frozenset({<Gene TGGT1_285980A-t26_1-p1 at 0x2abd68c58588>}),no
+PS120abcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+PS140abcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+PS141abcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+PS160abcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+PS161abcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+PS180abcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+PS181abcpp,frozenset({<Gene TGGT1_269000-t26_1-p1 at 0x2abd68c237b8>}),no
+PSAT,frozenset({<Gene TGGT1_218780-t26_1-p1 at 0x2abd68c23940>}),no
+PTRCabcpp,"frozenset({<Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>})",yes
+PYKf,frozenset({<Gene TGGT1_256760-t26_1-p1 at 0x2abd68c23c18>}),no
+PYRShi,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+RETINOLACACT,"frozenset({<Gene TGGT1_275600-t26_1-p1 at 0x2abd68c58320>, <Gene TGGT1_226370-t26_1-p1 at 0x2abd68c582e8>})",yes
+RGH,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+RHODOPSINI,frozenset({<Gene TGGT1_254370-t26_1-p1 at 0x2abd68c58978>}),no
+RHODOPSINRT,frozenset({<Gene TGGT1_254370-t26_1-p1 at 0x2abd68c58978>}),no
+RNDR1n,"frozenset({<Gene TGGT1_207060-t26_1-p1 at 0x2abd68c33198>, <Gene TGGT1_294640-t26_1-p1 at 0x2abd68c23dd8>, <Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>})",yes
+RNDR2n,"frozenset({<Gene TGGT1_207060-t26_1-p1 at 0x2abd68c33198>, <Gene TGGT1_294640-t26_1-p1 at 0x2abd68c23dd8>, <Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>})",yes
+RNDR3n,"frozenset({<Gene TGGT1_207060-t26_1-p1 at 0x2abd68c33198>, <Gene TGGT1_294640-t26_1-p1 at 0x2abd68c23dd8>, <Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>})",yes
+RNDR4n,"frozenset({<Gene TGGT1_207060-t26_1-p1 at 0x2abd68c33198>, <Gene TGGT1_294640-t26_1-p1 at 0x2abd68c23dd8>, <Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>})",yes
+RPEh,frozenset({<Gene TGGT1_247670-t26_1-p1 at 0x2abd68c9ccc0>}),no
+RPIh,frozenset({<Gene TGGT1_239310-t26_1-p1 at 0x2abd68c23b00>}),no
+SALCHS4abcpp,"frozenset({<Gene TGGT1_239020-t26_1-p1 at 0x2abd68c23748>, <Gene TGGT1_260310-t26_1-p1 at 0x2abd68c237f0>})",yes
+SBP_1,frozenset({<Gene TGGT1_235700-t26_1-p1 at 0x2abd68c123c8>}),no
+SECYSTL,frozenset({<Gene TGGT1_251690-t26_1-p1 at 0x2abd68c69e48>}),no
+SELtpp,"frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>, <Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>})",yes
+SERTRS2,"frozenset({<Gene TGGT1_271625B-t26_1-p1 at 0x2abd68c69eb8>, <Gene TGGT1_251690-t26_1-p1 at 0x2abd68c69e48>})",yes
+SHSL1h,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+SHSL2h,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+SHSL4h,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+SLNTtpp,"frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>, <Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>})",yes
+SO3abcpp,frozenset({<Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>}),no
+SPMDabcpp,frozenset({<Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>}),no
+SQDGW3DS1839Z12Z15Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+SQDGW6DS1829Z12Z160,frozenset({<Gene TGGT1_215070-t26_1-p1 at 0x2abd68c44ef0>}),no
+SQLEr,frozenset({<Gene TGGT1_249320-t26_1-p1 at 0x2abd68c33ef0>}),no
+SQLErx,frozenset({<Gene TGGT1_262910-t26_1-p1 at 0x2abd68c586a0>}),no
+STARCH300DEGR2A,"frozenset({<Gene TGGT1_283490-t26_1-p1 at 0x2abd68c58ba8>, <Gene TGGT1_310670-t26_1-p1 at 0x2abd68c12470>})",yes
+STARCH300DEGR2B,"frozenset({<Gene TGGT1_283490-t26_1-p1 at 0x2abd68c58ba8>, <Gene TGGT1_310670-t26_1-p1 at 0x2abd68c12470>})",yes
+STARCH300DEGRA,"frozenset({<Gene TGGT1_283490-t26_1-p1 at 0x2abd68c58ba8>, <Gene TGGT1_310670-t26_1-p1 at 0x2abd68c12470>})",yes
+STARCH300DEGRB,"frozenset({<Gene TGGT1_283490-t26_1-p1 at 0x2abd68c58ba8>, <Gene TGGT1_310670-t26_1-p1 at 0x2abd68c12470>})",yes
+STARCH300S,frozenset({<Gene TGGT1_209960-t26_1-p1 at 0x2abd68c8c5f8>}),no
+SUCHMSSELCYSLh,frozenset({<Gene TGGT1_312930-t26_1-p1 at 0x2abd68c44e48>}),no
+SULabcpp,"frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>, <Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>})",yes
+SYGH,frozenset({<Gene TGGT1_254880-t26_1-p1 at 0x2abd68c58080>}),no
+TAURabcpp,frozenset({<Gene TGGT1_247540-t26_1-p1 at 0x2abd68c06d68>}),no
+TCHOLAabcv,frozenset({<Gene TGGT1_320460-t26_1-p1 at 0x2abd68c44198>}),no
+TDSRh,"frozenset({<Gene TGGT1_309730-t26_1-p1 at 0x2abd68c33400>, <Gene TGGT1_270120-t26_1-p1 at 0x2abd68c331d0>, <Gene TGGT1_249270-t26_1-p1 at 0x2abd68c588d0>, <Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>})",yes
+THD2pp,"frozenset({<Gene TGGT1_301210-t26_1-p1 at 0x2abd68c9c2b0>, <Gene TGGT1_318650-t26_1-p1 at 0x2abd68c9c278>})",yes
+THIORDXni,frozenset({<Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>}),no
+THIORDXp,frozenset({<Gene TGGT1_293870-t26_1-p1 at 0x2abd68c33160>}),no
+TKT1h,frozenset({<Gene TGGT1_318310-t26_1-p1 at 0x2abd68c7a160>}),no
+TKT2h,frozenset({<Gene TGGT1_318310-t26_1-p1 at 0x2abd68c7a160>}),no
+TPIh,frozenset({<Gene TGGT1_225930-t26_1-p1 at 0x2abd68c23f28>}),no
+TRETINOLPMTACT,"frozenset({<Gene TGGT1_275600-t26_1-p1 at 0x2abd68c58320>, <Gene TGGT1_226370-t26_1-p1 at 0x2abd68c582e8>})",yes
+TSULabcpp,"frozenset({<Gene TGGT1_289350-t26_1-p1 at 0x2abd68c446a0>, <Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>, <Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>})",yes
+TSULth,frozenset({<Gene TGGT1_316320-t26_1-p1 at 0x2abd68c12eb8>}),no
+TUNGSabcpp,frozenset({<Gene TGGT1_244270-t26_1-p1 at 0x2abd68c23b38>}),no
+TYRTAh,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+TYRTAip,frozenset({<Gene TGGT1_248600-t26_1-p1 at 0x2abd68c06c18>}),no
+TYRt7,frozenset({<Gene TGGT1_227570-t26_1-p1 at 0x2abd68c442b0>}),no
+UDPGALth,frozenset({<Gene TGGT1_254580-t26_1-p1 at 0x2abd68c7af60>}),no
+UDPGth,frozenset({<Gene TGGT1_254580-t26_1-p1 at 0x2abd68c7af60>}),no
+UG6PGTn,frozenset({<Gene TGGT1_297720-t26_1-p1 at 0x2abd68c7a2e8>}),no
+UMPKn,frozenset({<Gene TGGT1_257740-t26_1-p1 at 0x2abd68c69e10>}),no
+URIDK2rn,frozenset({<Gene TGGT1_257740-t26_1-p1 at 0x2abd68c69e10>}),no
+VALTLh,"frozenset({<Gene TGGT1_253290-t26_1-p1 at 0x2abd68c332b0>, <Gene TGGT1_207640-t26_1-p1 at 0x2abd68c332e8>})",yes
+XYLt2pp,"frozenset({<Gene TGGT1_201260-t26_1-p1 at 0x2abd68c339e8>, <Gene TGGT1_272500-t26_1-p1 at 0x2abd68c44978>})",yes
+ZHY,frozenset({<Gene TGGT1_218560-t26_1-p1 at 0x2abd68c58cf8>}),no
+ZN2t3pp,frozenset({<Gene TGGT1_251630-t26_1-p1 at 0x2abd68c06e10>}),no
+ZNabcpp,"frozenset({<Gene TGGT1_314330-t26_1-p1 at 0x2abd68c33390>, <Gene TGGT1_318710-t26_1-p1 at 0x2abd68c33278>})",no

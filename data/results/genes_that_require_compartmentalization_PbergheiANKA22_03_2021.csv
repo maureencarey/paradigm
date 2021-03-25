@@ -1,0 +1,350 @@
+,genes,gene_assoc_w_other_rxns?
+3HAD100_1,frozenset({<Gene PBANKA_1338200.1-p1 at 0x2afeeb98e630>}),no
+3HAD120_1,frozenset({<Gene PBANKA_1338200.1-p1 at 0x2afeeb98e630>}),no
+3HAD80_1,frozenset({<Gene PBANKA_1338200.1-p1 at 0x2afeeb98e630>}),no
+3OAS100_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+3OAS120_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+3OAS140_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+3OAS160_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+3OAS60_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+3OAS80_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+AATC,frozenset({<Gene PBANKA_0302300.1-p1 at 0x2afeeb98e978>}),no
+AATG,frozenset({<Gene PBANKA_0302300.1-p1 at 0x2afeeb98e978>}),no
+ABFPTh,frozenset({<Gene PBANKA_1122900.1-p1 at 0x2afeeb9bc780>}),no
+ACCOAth,frozenset({<Gene PBANKA_0519800.1-p1 at 0x2afeeb9bc2b0>}),no
+ACCOAtx,frozenset({<Gene PBANKA_0519800.1-p1 at 0x2afeeb9bc2b0>}),no
+ACOA100OR,frozenset({<Gene PBANKA_1319600.1-p1 at 0x2afeeb9bc550>}),no
+ACOA120OR,frozenset({<Gene PBANKA_1319600.1-p1 at 0x2afeeb9bc550>}),no
+ACOA140OR,frozenset({<Gene PBANKA_1319600.1-p1 at 0x2afeeb9bc550>}),no
+ACOA160OR,frozenset({<Gene PBANKA_1319600.1-p1 at 0x2afeeb9bc550>}),no
+ACOA40OR,frozenset({<Gene PBANKA_1319600.1-p1 at 0x2afeeb9bc550>}),no
+ACOA60OR,frozenset({<Gene PBANKA_1319600.1-p1 at 0x2afeeb9bc550>}),no
+ACOA80OR,frozenset({<Gene PBANKA_1319600.1-p1 at 0x2afeeb9bc550>}),no
+ACOATA_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+ACP1619ZD9DS,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+ACP1819ZD9DS,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+ACPh,frozenset({<Gene PBANKA_0936100.1-p1 at 0x2afeeb9e02e8>}),no
+ACSp,frozenset({<Gene PBANKA_1126500.1-p1 at 0x2afeeb98e6a0>}),no
+ADECn,frozenset({<Gene PBANKA_1227600.1-p1 at 0x2afeeb9bc940>}),no
+ADSSh,frozenset({<Gene PBANKA_1131100.1-p1 at 0x2afeeb9e05c0>}),no
+AGPAT1601819Zh,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT160h,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT1801819Zh,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT18111Z160h,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT18111Z1819Zh,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT1819Z160h,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT1819Z1619Zh,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT1819Z18111Zh,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AGPAT1819Z1819Zh,frozenset({<Gene PBANKA_1308200.1-p1 at 0x2afeeb98e860>}),no
+AHAL,frozenset({<Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>}),no
+ALLabcpp,frozenset({<Gene PBANKA_1218800.1-p1 at 0x2afeeb9cc550>}),no
+AM6PTh,frozenset({<Gene PBANKA_1122900.1-p1 at 0x2afeeb9bc780>}),no
+AMITKPn,frozenset({<Gene PBANKA_1414600.1-p1 at 0x2afeeb9acc18>}),no
+APNn,"frozenset({<Gene PBANKA_1419900.1-p1 at 0x2afeeb9e0710>, <Gene PBANKA_1419800.1-p1 at 0x2afeeb9e06d8>})",yes
+APhi,frozenset({<Gene PBANKA_0936100.1-p1 at 0x2afeeb9e02e8>}),no
+ASO4rt2rpp,frozenset({<Gene PBANKA_1354300.1-p1 at 0x2afeeb9ccdd8>}),no
+ASPATh,frozenset({<Gene PBANKA_0302300.1-p1 at 0x2afeeb98e978>}),no
+ASPCTn,frozenset({<Gene PBANKA_1406700.1-p1 at 0x2afeeb98eac8>}),no
+ATAMh,"frozenset({<Gene PBANKA_0202300.1-p1 at 0x2afeeb9bc9b0>, <Gene PBANKA_0717600.1-p1 at 0x2afeeb98e8d0>, <Gene PBANKA_0202800.1-p1 at 0x2afeeb9bc978>})",yes
+ATDAMh,"frozenset({<Gene PBANKA_0202300.1-p1 at 0x2afeeb9bc9b0>, <Gene PBANKA_0717600.1-p1 at 0x2afeeb98e8d0>, <Gene PBANKA_0202800.1-p1 at 0x2afeeb9bc978>})",yes
+ATPS10rpp,"frozenset({<Gene PBANKA_0313800.1-p1 at 0x2afeeb98ee80>, <Gene PBANKA_1450300.1-p1 at 0x2afeeb98ee10>, <Gene PBANKA_1409800.1-p1 at 0x2afeeb98ee48>})",yes
+ATPS3g,"frozenset({<Gene PBANKA_1131000.1-p1 at 0x2afeeba03208>, <Gene PBANKA_1234000.1-p1 at 0x2afeeba03048>, <Gene PBANKA_1410400.1-p1 at 0x2afeeba03240>, <Gene PBANKA_0908900.1-p1 at 0x2afeeba03080>, <Gene PBANKA_1405100.1-p1 at 0x2afeeba031d0>, <Gene PBANKA_1223800.1-p1 at 0x2afeeba030b8>, <Gene PBANKA_1328100.1-p1 at 0x2afeeba030f0>, <Gene PBANKA_1355000.1-p1 at 0x2afeeba03128>, <Gene PBANKA_1003800.1-p1 at 0x2afeeba03160>, <Gene PBANKA_0835300.1-p1 at 0x2afeeb9f1fd0>})",yes
+ATPS3v,"frozenset({<Gene PBANKA_1131000.1-p1 at 0x2afeeba03208>, <Gene PBANKA_1234000.1-p1 at 0x2afeeba03048>, <Gene PBANKA_1410400.1-p1 at 0x2afeeba03240>, <Gene PBANKA_0908900.1-p1 at 0x2afeeba03080>, <Gene PBANKA_1405100.1-p1 at 0x2afeeba031d0>, <Gene PBANKA_1223800.1-p1 at 0x2afeeba030b8>, <Gene PBANKA_1328100.1-p1 at 0x2afeeba030f0>, <Gene PBANKA_1355000.1-p1 at 0x2afeeba03128>, <Gene PBANKA_1003800.1-p1 at 0x2afeeba03160>, <Gene PBANKA_0835300.1-p1 at 0x2afeeb9f1fd0>})",yes
+ATPS4rpp,"frozenset({<Gene PBANKA_0313800.1-p1 at 0x2afeeb98ee80>, <Gene PBANKA_1450300.1-p1 at 0x2afeeb98ee10>, <Gene PBANKA_1409800.1-p1 at 0x2afeeb98ee48>})",yes
+ATPS4rpp_1,"frozenset({<Gene PBANKA_0313800.1-p1 at 0x2afeeb98ee80>, <Gene PBANKA_1450300.1-p1 at 0x2afeeb98ee10>, <Gene PBANKA_1409800.1-p1 at 0x2afeeb98ee48>})",yes
+ATPSu,"frozenset({<Gene PBANKA_0313800.1-p1 at 0x2afeeb98ee80>, <Gene PBANKA_1450300.1-p1 at 0x2afeeb98ee10>, <Gene PBANKA_1409800.1-p1 at 0x2afeeb98ee48>})",yes
+BATHORHODOPSINI,frozenset({<Gene PBANKA_0910300.1-p1 at 0x2afeeb9bc9e8>}),no
+BCAROKT,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+BTP,frozenset({<Gene PBANKA_0713300.1-p1 at 0x2afeeba034e0>}),no
+BUTSO3abcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+CA2abcpp,frozenset({<Gene PBANKA_0610400.1-p1 at 0x2afeeb9e02b0>}),no
+CA2t3pp,frozenset({<Gene PBANKA_0102300.1-p1 at 0x2afeeb98ea90>}),no
+CBFC,frozenset({<Gene PBANKA_1303300.1-p1 at 0x2afeeb9bc080>}),no
+CBPSn,frozenset({<Gene PBANKA_1406700.1-p1 at 0x2afeeb98eac8>}),no
+CDPDAGS18111Z160h,frozenset({<Gene PBANKA_1032600.1-p1 at 0x2afeeb98eb38>}),no
+CDPDAGS1819Z160h,frozenset({<Gene PBANKA_1032600.1-p1 at 0x2afeeb98eb38>}),no
+CEF,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+CHITOBpts,frozenset({<Gene PBANKA_1332200.1-p1 at 0x2afeeb9f1b70>}),no
+CHLDA1tu,frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>}),no
+CHLDA2tu,frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>}),no
+CHLabcpp,frozenset({<Gene PBANKA_1144100.1-p1 at 0x2afeeb99afd0>}),no
+CHRS,frozenset({<Gene PBANKA_1121900.1-p1 at 0x2afeeb9bc860>}),no
+CHYA2,frozenset({<Gene PBANKA_1332800.1-p1 at 0x2afeeb9ac978>}),no
+CMK,frozenset({<Gene PBANKA_1102800.1-p1 at 0x2afeeb9e03c8>}),no
+COLIPAabcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+CPPPGO_1,frozenset({<Gene PBANKA_0906600.1-p1 at 0x2afeeb9e0588>}),no
+CRETINOLPMTACT,frozenset({<Gene PBANKA_1216200.1-p1 at 0x2afeeb9bc5c0>}),no
+CSp,frozenset({<Gene PBANKA_0506700.1-p1 at 0x2afeeb9acba8>}),no
+CU1abcpp,frozenset({<Gene PBANKA_0416500.1-p1 at 0x2afeeb9cc2b0>}),no
+CYO1_KT,"frozenset({<Gene PBANKA_1303300.1-p1 at 0x2afeeb9bc080>, <Gene PBANKA_MIT01900.1-p1 at 0x2afeeb9bc0b8>})",yes
+CYO1b2_syn,frozenset({<Gene PBANKA_MIT01800.1-p1 at 0x2afeeb9bc160>}),no
+CYO1b2pp_syn,frozenset({<Gene PBANKA_MIT01800.1-p1 at 0x2afeeb9bc160>}),no
+CYO1b_syn,frozenset({<Gene PBANKA_MIT01800.1-p1 at 0x2afeeb9bc160>}),no
+CYO1bpp_syn,frozenset({<Gene PBANKA_MIT01800.1-p1 at 0x2afeeb9bc160>}),no
+CYOO2pp,frozenset({<Gene PBANKA_MIT01800.1-p1 at 0x2afeeb9bc160>}),no
+CYSAT,frozenset({<Gene PBANKA_0302300.1-p1 at 0x2afeeb98e978>}),no
+CYSabc2pp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+CYTBD2pp,frozenset({<Gene PBANKA_1144100.1-p1 at 0x2afeeb99afd0>}),no
+CYTBO3_4pp,frozenset({<Gene PBANKA_MIT01800.1-p1 at 0x2afeeb9bc160>}),no
+CYTMQOR3pp,"frozenset({<Gene PBANKA_1303300.1-p1 at 0x2afeeb9bc080>, <Gene PBANKA_MIT01900.1-p1 at 0x2afeeb9bc0b8>})",yes
+CYTP450Rh,frozenset({<Gene PBANKA_0824100.1-p1 at 0x2afeeb9acb38>}),no
+DGDGD4DS1819Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGD7DS1819Z1617Z,"frozenset({<Gene PBANKA_1110700.1-p1 at 0x2afeeb9ac828>, <Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>})",yes
+DGDGD7DS1829Z12Z1617Z,"frozenset({<Gene PBANKA_1110700.1-p1 at 0x2afeeb9ac828>, <Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>})",yes
+DGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW3DS1839Z12Z15Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1819Z1627Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1829Z12Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1829Z12Z1617Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1829Z12Z1619Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1829Z12Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+DHORTSn,frozenset({<Gene PBANKA_1406700.1-p1 at 0x2afeeb98eac8>}),no
+DNGALh,frozenset({<Gene PBANKA_0827500.1-p1 at 0x2afeeb9acc50>}),no
+DXRI,frozenset({<Gene PBANKA_1330600.1-p1 at 0x2afeeb98eb70>}),no
+DXS,frozenset({<Gene PBANKA_1351000.1-p1 at 0x2afeeb9cc208>}),no
+EAR100x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR120x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR140x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR160x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR180x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR181x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR40x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR60x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+EAR80x_1,frozenset({<Gene PBANKA_1229800.1-p1 at 0x2afeeb98ecc0>}),no
+ENOf,frozenset({<Gene PBANKA_1214300.1-p1 at 0x2afeeb9cc0f0>}),no
+ETHSO3abcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+FACOAL100p,frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>}),no
+FACOAL100t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL120p,frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>}),no
+FACOAL120t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL140p,frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>}),no
+FACOAL140t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL141p,frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>}),no
+FACOAL141t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL160p,frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>}),no
+FACOAL160t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL161p,frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>}),no
+FACOAL161t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL180t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL181t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL60t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FACOAL80p,frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>}),no
+FACOAL80t2pp,"frozenset({<Gene PBANKA_1239900.1-p1 at 0x2afeeb98e5c0>, <Gene PBANKA_1453300.1-p1 at 0x2afeeb9cc358>})",yes
+FBA3hi,frozenset({<Gene PBANKA_1308600.1-p1 at 0x2afeeb9f1438>}),no
+FBAf,frozenset({<Gene PBANKA_1308600.1-p1 at 0x2afeeb9f1438>}),no
+FBAh,frozenset({<Gene PBANKA_1308600.1-p1 at 0x2afeeb9f1438>}),no
+FE2Gabcpp,frozenset({<Gene PBANKA_1432900.1-p1 at 0x2afeeb9acfd0>}),no
+FE3Gabcpp,frozenset({<Gene PBANKA_1432900.1-p1 at 0x2afeeb9acfd0>}),no
+FE3abch,frozenset({<Gene PBANKA_1237400.1-p1 at 0x2afeeb9f1400>}),no
+FEex,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+FEpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+FNORh,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+FORthi,frozenset({<Gene PBANKA_0414400.1-p1 at 0x2afeeb9bc2e8>}),no
+FORtxi,frozenset({<Gene PBANKA_0414400.1-p1 at 0x2afeeb9bc2e8>}),no
+FPGPL,frozenset({<Gene PBANKA_1308600.1-p1 at 0x2afeeb9f1438>}),no
+FPPSh,frozenset({<Gene PBANKA_0919800.1-p1 at 0x2afeeb9e09e8>}),no
+G3PAT160h,frozenset({<Gene PBANKA_1416700.1-p1 at 0x2afeeb9e0400>}),no
+G3PAT180h,frozenset({<Gene PBANKA_1416700.1-p1 at 0x2afeeb9e0400>}),no
+G3PAT1819Zh,frozenset({<Gene PBANKA_1416700.1-p1 at 0x2afeeb9e0400>}),no
+G3PAT181h,frozenset({<Gene PBANKA_1416700.1-p1 at 0x2afeeb9e0400>}),no
+G3PCabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+G3PD1,"frozenset({<Gene PBANKA_0932900.1-p1 at 0x2afeeb9cc400>, <Gene PBANKA_0404800.1-p1 at 0x2afeeb9bca90>})",yes
+G3PD2_1,frozenset({<Gene PBANKA_1431900.1-p1 at 0x2afeeb9cc3c8>}),no
+G3PEabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+G3PGabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+G3PIabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+G3PO,frozenset({<Gene PBANKA_0404800.1-p1 at 0x2afeeb9bca90>}),no
+G3PSabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+G6PIh,frozenset({<Gene PBANKA_1008800.1-p1 at 0x2afeeb9bc710>}),no
+GCPNn,"frozenset({<Gene PBANKA_1419900.1-p1 at 0x2afeeb9e0710>, <Gene PBANKA_1419800.1-p1 at 0x2afeeb9e06d8>})",yes
+GLCabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+GLNTRAT,"frozenset({<Gene PBANKA_0718100.1-p1 at 0x2afeeb9ac6d8>, <Gene PBANKA_1127500.1-p1 at 0x2afeeb9e0278>})",yes
+GLNabcpp,"frozenset({<Gene PBANKA_1018100.1-p1 at 0x2afeeb9ac940>, <Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>})",yes
+GLUKAh,frozenset({<Gene PBANKA_1122900.1-p1 at 0x2afeeb9bc780>}),no
+GLUKBh,frozenset({<Gene PBANKA_1122900.1-p1 at 0x2afeeb9bc780>}),no
+GLUS,frozenset({<Gene PBANKA_1009500.1-p1 at 0x2afeeb98ef28>}),no
+GLUS_ferr,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+GLUS_nadph,frozenset({<Gene PBANKA_1009500.1-p1 at 0x2afeeb98ef28>}),no
+GLYALDtpp,frozenset({<Gene PBANKA_0915600.1-p1 at 0x2afeeb98eda0>}),no
+GLYATx,frozenset({<Gene PBANKA_1027000.1-p1 at 0x2afeeb9bcf98>}),no
+GLYBabcpp,frozenset({<Gene PBANKA_1144100.1-p1 at 0x2afeeb99afd0>}),no
+GLYC2Pabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+GLYC3Pabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+GLYCtpp,"frozenset({<Gene PBANKA_0915600.1-p1 at 0x2afeeb98eda0>, <Gene spontaneous at 0x2afeeb9cc4e0>})",no
+GM1LIPAabcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+GM2LIPAabcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+GTHRDabc2pp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+GTHRDabcv,frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>}),no
+GTHS_1,frozenset({<Gene PBANKA_1111800.1-p1 at 0x2afeeb98efd0>}),no
+GUACn,"frozenset({<Gene PBANKA_1227600.1-p1 at 0x2afeeb9bc940>, <Gene PBANKA_0910300.1-p1 at 0x2afeeb9bc9e8>})",yes
+HDS,frozenset({<Gene PBANKA_0507000.1-p1 at 0x2afeeb9f1208>}),no
+HEMELh,frozenset({<Gene PBANKA_1439500.1-p1 at 0x2afeeb9bc898>}),no
+HYDAh,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+ICDHyp,frozenset({<Gene PBANKA_1358600.1-p1 at 0x2afeeb99a240>}),no
+IDPh,"frozenset({<Gene PBANKA_1320500.1-p1 at 0x2afeeb9bc048>, <Gene PBANKA_0414100.1-p1 at 0x2afeeb9e0550>})",yes
+ILEabcpp,frozenset({<Gene PBANKA_1218800.1-p1 at 0x2afeeb9cc550>}),no
+ISETACabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+K2L4Aabcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+KAS14_1,frozenset({<Gene PBANKA_0308200.1-p1 at 0x2afeeb98e780>}),no
+LEUabcpp,"frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>, <Gene PBANKA_1218800.1-p1 at 0x2afeeb9cc550>})",yes
+LIPACabcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+LIPAabcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+LUMIRHODOPSINI,frozenset({<Gene PBANKA_0910300.1-p1 at 0x2afeeb9bc9e8>}),no
+MCOATA_1,frozenset({<Gene PBANKA_1410500.1-p1 at 0x2afeeb9bc240>}),no
+MCS,frozenset({<Gene PBANKA_0306400.1-p1 at 0x2afeeb9bc4a8>}),no
+METARHODOPSINH,frozenset({<Gene PBANKA_0910300.1-p1 at 0x2afeeb9bc9e8>}),no
+METDabcpp,"frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>, <Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>})",yes
+METHFth,"frozenset({<Gene PBANKA_0931500.1-p1 at 0x2afeeb9bc438>, <Gene PBANKA_0702100.1-p1 at 0x2afeeb9bc470>})",no
+METabcpp,"frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>, <Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>})",yes
+MG2uabcpp,"frozenset({<Gene PBANKA_0207000.1-p1 at 0x2afeeb9e0320>, <Gene PBANKA_0610400.1-p1 at 0x2afeeb9e02b0>})",yes
+MGDGD4DS1819Z1644Z7Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGD4DS1829Z12Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGD4DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGD4DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGD4DS1839Z12Z15Z1644Z7Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGD7DS1819Z1617Z,"frozenset({<Gene PBANKA_1110700.1-p1 at 0x2afeeb9ac828>, <Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>})",yes
+MGDGD7DS1829Z12Z1617Z,"frozenset({<Gene PBANKA_1110700.1-p1 at 0x2afeeb9ac828>, <Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>})",yes
+MGDGW3DS1819Z1637Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1839Z12Z15Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1839Z12Z15Z1627Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1839Z12Z15Z1634Z7Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z1,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1839Z12Z15Z1637Z10Z13Z2,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z1,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW3DS1839Z12Z15Z1644Z7Z10Z13Z2,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1819Z1627Z10Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1829Z12Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1829Z12Z1617Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1829Z12Z1619Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1829Z12Z1627Z10Z1,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1829Z12Z1627Z10Z2,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1829Z12Z1637Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MGDGW6DS1829Z12Z1644Z7Z10Z13Z,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+MI1345PKn,frozenset({<Gene PBANKA_1414600.1-p1 at 0x2afeeb9acc18>}),no
+MI1456PKn,frozenset({<Gene PBANKA_1414600.1-p1 at 0x2afeeb9acc18>}),no
+MI145P6Kn,frozenset({<Gene PBANKA_1414600.1-p1 at 0x2afeeb9acc18>}),no
+MI145PKn,frozenset({<Gene PBANKA_1414600.1-p1 at 0x2afeeb9acc18>}),no
+MOBDabcpp,frozenset({<Gene PBANKA_1144100.1-p1 at 0x2afeeb99afd0>}),no
+MSO3abcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+NADS1n,frozenset({<Gene PBANKA_0827500.1-p1 at 0x2afeeb9acc50>}),no
+NI2uabcpp,"frozenset({<Gene PBANKA_0207000.1-p1 at 0x2afeeb9e0320>, <Gene PBANKA_0610400.1-p1 at 0x2afeeb9e02b0>, <Gene PBANKA_1144100.1-p1 at 0x2afeeb99afd0>})",yes
+NO2R,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+OHPHM6n,frozenset({<Gene PBANKA_1026900.1-p1 at 0x2afeeb9f1da0>}),no
+ORDCh,frozenset({<Gene PBANKA_0516900.1-p1 at 0x2afeeb9bcef0>}),no
+OXOADLR,frozenset({<Gene PBANKA_1419100.1-p1 at 0x2afeeb9ac7b8>}),no
+PA120abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PA140abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PA141abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PA160abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PA161abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PA180abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PA181abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PDHam1hi,"frozenset({<Gene PBANKA_0923800.1-p1 at 0x2afeeb9acf28>, <Gene PBANKA_1310100.1-p1 at 0x2afeeb9bc128>})",yes
+PDHam2hi,"frozenset({<Gene PBANKA_0923800.1-p1 at 0x2afeeb9acf28>, <Gene PBANKA_1310100.1-p1 at 0x2afeeb9bc128>})",yes
+PDHe2hr,frozenset({<Gene PBANKA_0505000.1-p1 at 0x2afeeb9e0470>}),no
+PDHe3hr,frozenset({<Gene PBANKA_0714900.1-p1 at 0x2afeeb99a438>}),no
+PE120abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PE140abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PE141abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PE160abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PE161abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PE180abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PE181abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PEPPIth,frozenset({<Gene PBANKA_1107900.1-p1 at 0x2afeeb9bc320>}),no
+PFKh,frozenset({<Gene PBANKA_0816400.1-p1 at 0x2afeeb99a6a0>}),no
+PG120abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PG140abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PG141abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PG160abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PG161abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PG180abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PG181abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGD3TDS18111Z1613E,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+PGD3TDS1819Z1613E,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+PGD3TDS1829Z12Z1613E,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+PGD3TDS1839Z12Z15Z1613E,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+PGDHh,frozenset({<Gene PBANKA_1318400.1-p1 at 0x2afeeb9e0518>}),no
+PGIAh,frozenset({<Gene PBANKA_1008800.1-p1 at 0x2afeeb9bc710>}),no
+PGIBh,frozenset({<Gene PBANKA_1008800.1-p1 at 0x2afeeb9bc710>}),no
+PGKh,frozenset({<Gene PBANKA_0823400.1-p1 at 0x2afeeb9ac160>}),no
+PGLYCPh,frozenset({<Gene PBANKA_1421300.1-p1 at 0x2afeeb99a0f0>}),no
+PGLYCPx,frozenset({<Gene PBANKA_1421300.1-p1 at 0x2afeeb99a0f0>}),no
+PGP120abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGP140abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGP141abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGP160abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGP161abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGP180abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGP181abcpp,"frozenset({<Gene PBANKA_1364800.1-p1 at 0x2afeeb99ab00>, <Gene PBANKA_0401200.1-p1 at 0x2afeeb99ae10>, <Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>, <Gene PBANKA_1237800.1-p1 at 0x2afeeb99acc0>, <Gene PBANKA_0608300.1-p1 at 0x2afeeb99ab38>, <Gene PBANKA_1311700.1-p1 at 0x2afeeb99aac8>, <Gene PBANKA_1353300.1-p1 at 0x2afeeb99acf8>})",yes
+PGW3DS1839Z12Z15Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+PGW6DS1829Z12Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+PHEMEabcpp,frozenset({<Gene PBANKA_1455600.1-p1 at 0x2afeeb9f1710>}),no
+PIN4Kn_SC,frozenset({<Gene PBANKA_1109400.1-p1 at 0x2afeeb9acdd8>}),no
+PINA1th,frozenset({<Gene PBANKA_1354300.1-p1 at 0x2afeeb9ccdd8>}),no
+PIt2p,frozenset({<Gene PBANKA_1354300.1-p1 at 0x2afeeb9ccdd8>}),no
+PIt2rpp,frozenset({<Gene PBANKA_1354300.1-p1 at 0x2afeeb9ccdd8>}),no
+PItf,frozenset({<Gene PBANKA_1354300.1-p1 at 0x2afeeb9ccdd8>}),no
+POATh,frozenset({<Gene PBANKA_0302300.1-p1 at 0x2afeeb98e978>}),no
+PPA_1pp,frozenset({<Gene PBANKA_1320500.1-p1 at 0x2afeeb9bc048>}),no
+PPBNGD,frozenset({<Gene PBANKA_0608000.1-p1 at 0x2afeeb9e0ba8>}),no
+PPBNGS_1,frozenset({<Gene PBANKA_1304100.1-p1 at 0x2afeeb99a710>}),no
+PS120abcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+PS140abcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+PS141abcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+PS160abcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+PS161abcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+PS180abcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+PS181abcpp,frozenset({<Gene PBANKA_0903500.1-p1 at 0x2afeeb99ac18>}),no
+PYKf,frozenset({<Gene PBANKA_1125600.1-p1 at 0x2afeeb99ae48>}),no
+PYRShi,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+RETINOLACACT,frozenset({<Gene PBANKA_1216200.1-p1 at 0x2afeeb9bc5c0>}),no
+RHODOPSINI,frozenset({<Gene PBANKA_0910300.1-p1 at 0x2afeeb9bc9e8>}),no
+RHODOPSINRT,frozenset({<Gene PBANKA_0910300.1-p1 at 0x2afeeb9bc9e8>}),no
+RIBabcpp,frozenset({<Gene PBANKA_1218800.1-p1 at 0x2afeeb9cc550>}),no
+RNDR1n,"frozenset({<Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>, <Gene PBANKA_0611600.1-p1 at 0x2afeeb9ac3c8>, <Gene PBANKA_1036600.1-p1 at 0x2afeeb9ac470>})",yes
+RNDR2n,"frozenset({<Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>, <Gene PBANKA_0611600.1-p1 at 0x2afeeb9ac3c8>, <Gene PBANKA_1036600.1-p1 at 0x2afeeb9ac470>})",yes
+RNDR3n,"frozenset({<Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>, <Gene PBANKA_0611600.1-p1 at 0x2afeeb9ac3c8>, <Gene PBANKA_1036600.1-p1 at 0x2afeeb9ac470>})",yes
+RNDR4n,"frozenset({<Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>, <Gene PBANKA_0611600.1-p1 at 0x2afeeb9ac3c8>, <Gene PBANKA_1036600.1-p1 at 0x2afeeb9ac470>})",yes
+RPIh,frozenset({<Gene PBANKA_1114200.1-p1 at 0x2afeeb99ae80>}),no
+SECYSTL,frozenset({<Gene PBANKA_0615400.1-p1 at 0x2afeeb9f1cc0>}),no
+SERTRS2,frozenset({<Gene PBANKA_1431700.1-p1 at 0x2afeeb9cc668>}),no
+SQDGW3DS1839Z12Z15Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+SQDGW6DS1829Z12Z160,frozenset({<Gene PBANKA_1416600.1-p1 at 0x2afeeb9bc4e0>}),no
+SQLEr,frozenset({<Gene PBANKA_0824100.1-p1 at 0x2afeeb9acb38>}),no
+SULFACabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+SULabcpp,frozenset({<Gene PBANKA_1018100.1-p1 at 0x2afeeb9ac940>}),no
+TCHOLAabcv,frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>}),no
+TDSRh,"frozenset({<Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>, <Gene PBANKA_0824700.1-p1 at 0x2afeeb99a1d0>})",yes
+THD2pp,frozenset({<Gene PBANKA_1317200.1-p1 at 0x2afeeb9e0cf8>}),no
+THIORDXni,"frozenset({<Gene PBANKA_0511400.1-p1 at 0x2afeeb9f1e10>, <Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>})",no
+THIORDXp,frozenset({<Gene PBANKA_1320900.1-p1 at 0x2afeeb9ac4a8>}),no
+THMabcpp,frozenset({<Gene PBANKA_1443800.1-p1 at 0x2afeeb99a550>}),no
+TKT1h,frozenset({<Gene PBANKA_0109100.1-p1 at 0x2afeeb9cc6d8>}),no
+TKT2h,frozenset({<Gene PBANKA_0109100.1-p1 at 0x2afeeb9cc6d8>}),no
+TPIh,frozenset({<Gene PBANKA_1303800.1-p1 at 0x2afeeb9ac278>}),no
+TRETINOLPMTACT,frozenset({<Gene PBANKA_1216200.1-p1 at 0x2afeeb9bc5c0>}),no
+TSULth,frozenset({<Gene PBANKA_1018100.1-p1 at 0x2afeeb9ac940>}),no
+TUNGSabcpp,frozenset({<Gene PBANKA_1144100.1-p1 at 0x2afeeb99afd0>}),no
+TYRTAh,frozenset({<Gene PBANKA_0302300.1-p1 at 0x2afeeb98e978>}),no
+UMPKn,frozenset({<Gene PBANKA_0202300.1-p1 at 0x2afeeb9bc9b0>}),no
+UREAtpp,frozenset({<Gene PBANKA_0915600.1-p1 at 0x2afeeb98eda0>}),no
+URIDK2rn,frozenset({<Gene PBANKA_0202300.1-p1 at 0x2afeeb9bc9b0>}),no
+VALTLh,frozenset({<Gene PBANKA_1325600.1-p1 at 0x2afeeb9ac048>}),no
+VALabcpp,frozenset({<Gene PBANKA_1218800.1-p1 at 0x2afeeb9cc550>}),no
+XYLabcpp,frozenset({<Gene PBANKA_1010800.1-p1 at 0x2afeeb98ea58>}),no
+ZHY,frozenset({<Gene PBANKA_1332800.1-p1 at 0x2afeeb9ac978>}),no
+ZNabcpp,frozenset({<Gene PBANKA_0926600.1-p1 at 0x2afeeb9ac128>}),no

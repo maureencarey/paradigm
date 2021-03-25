@@ -1,9 +1,9 @@
 ,rxns_added
-0,EX_4abut_e
+0,EX_mal__L_e
 1,FRD
-2,EX_succ_e
-3,EX_mal__L_e
-4,SUCOAACTr
-5,5AOPt2
-6,AKO
-7,EX_5aop_e
+2,EX_4abut_e
+3,SUCOAACTr
+4,EX_5aop_e
+5,AKO
+6,5AOPt2
+7,EX_succ_e
