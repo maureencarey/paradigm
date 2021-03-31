@@ -165,6 +165,6 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     sbatch run_these/add_annotation.slurm
     # # would like to run Memote again on all models
     ## need to move all xml gf models to other directory for memote    
-
+    # also need to run blocked_reactions.ipynb  check_unique_reactions.ipynb  compartmentalization_comparison.ipynb  completeness_score.ipynb  EuPathDB_comparison.ipynb  gapfilling_coverage.ipynb
 
 ## STILL NEED TO MAKE SENSITITIVTY SCRIPTS AS EFFICIENT AS REGULAR VERSION
