@@ -156,6 +156,7 @@ Feedback and questions to Maureen Carey - mac9jc [at] virginia [dot] edu
     # # run analyses THESE CAN BE RUN CONCURRENTLY
     sbatch run_these/follow_up_analyses/analyses_part1.slurm
     sbatch run_these/follow_up_analyses/analyses_part2.slurm
+    sbatch run_these/follow_up_analyses/analyses_part2b.slurm
     sbatch run_these/follow_up_analyses/analyses_part3.slurm
     sbatch run_these/follow_up_analyses/analyses_part3_for_sensitivity.slurm
     sbatch run_these/follow_up_analyses/analyses_part4.slurm
