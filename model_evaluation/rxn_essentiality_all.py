@@ -59,7 +59,7 @@ for species, model in essentiality_screen_models.items():
         print(species)
 
     # knockout and record growth
-    with model as cobra_model:
+    with model:
         sol = cobra.flux_analysis.deletion.single_reaction_deletion(model,
             method="fba", processes=8)
         for i, row in sol.iterrows():
