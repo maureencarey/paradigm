@@ -1,0 +1,871 @@
+reaction ids,reaction formulas,genes,upper_bounds,lower_bounds
+ACCOAL,atp_c + coa_c + ppa_c --> adp_c + pi_c + ppcoa_c,"['M153_236710001-t31_1-p1', 'M153_9253000998-t31_1-p1']",1000.0,0.0
+ALATRS,ala__L_c + atp_c + trnaala_c --> alatrna_c + amp_c + ppi_c,['M153_1490006452-t31_1-p1'],1000.0,0.0
+ARGTRS,arg__L_c + atp_c + trnaarg_c --> amp_c + argtrna_c + ppi_c,['M153_210004843-t31_1-p1'],1000.0,0.0
+ASPTRS,asp__L_c + atp_c + trnaasp_c --> amp_c + asptrna_c + ppi_c,['M153_9400015697-t31_1-p1'],1000.0,0.0
+DASYN161,ctp_c + h_c + pa161_c --> cdpdhdec9eg_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+DSERDHr,nadp_c + ser__D_c --> 2amsa_c + h_c + nadph_c,['M153_8950002643-t31_1-p1'],1000.0,0.0
+DUTPDP,dutp_c + h2o_c --> dump_c + h_c + ppi_c,['M153_6500017573-t31_1-p1'],1000.0,0.0
+E4PD,e4p_c + h2o_c + nad_c --> 4per_c + 2.0 h_c + nadh_c,['M153_5947000186-t31_1-p1'],1000.0,0.0
+G1PACT,accoa_c + gam1p_c --> acgam1p_c + coa_c + h_c,['M153_1295900081-t31_1-p1'],1000.0,0.0
+GLNS,atp_c + glu__L_c + nh4_c --> adp_c + gln__L_c + h_c + pi_c,['M153_726000583-t31_1-p1'],1000.0,0.0
+GLUTRS,atp_c + glu__L_c + trnaglu_c --> amp_c + glutrna_c + ppi_c,['M153_1800003755-t31_1-p1'],1000.0,0.0
+GMHEPAT,atp_c + gmhep1p_c + h_c --> adphep_DD_c + ppi_c,['M153_2740000635-t31_1-p1'],1000.0,0.0
+GRXR,grxox_c + 2.0 gthrd_c --> grxrd_c + gthox_c,['M153_887000939-t31_1-p1'],1000.0,0.0
+GTHOr,gthox_c + h_c + nadph_c --> 2.0 gthrd_c + nadp_c,"['M153_887000939-t31_1-p1', 'M153_1000120258', 'M153_22300011454', 'M153_7880003079-t31_1-p1', 'M153_1238000268', 'M153_4190006709']",1000.0,0.0
+I4FE4ST,4.0 h_c + iscu_4fe4s_c --> 4fe4s_c + iscu_c,['M153_1640008755-t31_1-p1'],1000.0,0.0
+LALDO3,h_c + mthgxl_c + nadph_c --> lald__L_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+LYSTRS,atp_c + lys__L_c + trnalys_c --> amp_c + lystrna_c + ppi_c,"['M153_1100062646-t31_1-p1', 'M153_65170001-t31_1-p1', 'M153_2289000809-t31_1-p1', 'M153_814000782-t31_1-p1', 'M153_12698000833-t31_1-p1', 'M153_11240003342-t31_1-p1']",1000.0,0.0
+MAN1PT2,gdp_c + h_c + man1p_c --> gdpmann_c + pi_c,['M153_1295900081-t31_1-p1'],1000.0,0.0
+METAT,atp_c + h2o_c + met__L_c --> amet_c + pi_c + ppi_c,"['M153_5740002994-t31_1-p1', 'M153_4750005693', 'M153_211000210-t31_1-p1']",1000.0,0.0
+MOADSUx,iscssh_c + moadamp_c + nadh_c --> amp_c + iscs_c + moadcosh_c + nad_c,['M153_3660002060-t31_1-p1'],1000.0,0.0
+MPTSS,atp_c + h_c + moadcoo_c --> moadamp_c + ppi_c,['M153_110006348-t31_1-p1'],1000.0,0.0
+NDPK3,atp_c + cdp_c --> adp_c + ctp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+NDPK5,atp_c + dgdp_c --> adp_c + dgtp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+NDPK6,atp_c + dudp_c --> adp_c + dutp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+NTP1,atp_c + h2o_c --> adp_c + h_c + pi_c,"['M153_7950001396-t31_1-p1', 'M153_19600011630-t31_1-p1', 'M153_3510005249-t31_1-p1', 'M153_213700093-t31_1-p1', 'M153_35100001-t31_1-p1']",1000.0,0.0
+PANTS,ala_B_c + atp_c + pant__R_c --> amp_c + h_c + pnto__R_c + ppi_c,['M153_110007909-t31_1-p1'],1000.0,0.0
+PFK,atp_c + f6p_c --> adp_c + fdp_c + h_c,['M153_3910005435-t31_1-p1'],1000.0,0.0
+PSD120,h_c + ps120_c --> co2_c + pe120_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+PSD160,h_c + ps160_c --> co2_c + pe160_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+PYK,adp_c + h_c + pep_c --> atp_c + pyr_c,['M153_100058818-t31_1-p1'],1000.0,0.0
+RNDR1b,adp_c + grxrd_c --> dadp_c + grxox_c + h2o_c,"['M153_887000939-t31_1-p1', 'M153_6680004595-t31_1-p1']",1000.0,0.0
+RNDR2b,gdp_c + grxrd_c --> dgdp_c + grxox_c + h2o_c,"['M153_887000939-t31_1-p1', 'M153_6680004595-t31_1-p1']",1000.0,0.0
+RNDR3,cdp_c + trdrd_c --> dcdp_c + h2o_c + trdox_c,"['M153_6680004595-t31_1-p1', 'M153_19030001338-t31_1-p1']",1000.0,0.0
+RNDR3b,cdp_c + grxrd_c --> dcdp_c + grxox_c + h2o_c,"['M153_887000939-t31_1-p1', 'M153_6680004595-t31_1-p1']",1000.0,0.0
+RNDR4b,grxrd_c + udp_c --> dudp_c + grxox_c + h2o_c,"['M153_887000939-t31_1-p1', 'M153_6680004595-t31_1-p1']",1000.0,0.0
+THFAT,h2o_c + methf_c --> 5fthf_c + h_c,['M153_3268000477-t31_1-p1'],1000.0,0.0
+TPI,dhap_c --> g3p_c,['M153_2100013203-t31_1-p1'],1000.0,0.0
+TRDR,h_c + nadph_c + trdox_c --> nadp_c + trdrd_c,['M153_3180006388-t31_1-p1'],1000.0,0.0
+VALTRS,atp_c + trnaval_c + val__L_c --> amp_c + ppi_c + valtrna_c,"['M153_27570001651-t31_1-p1', 'M153_23820002-t31_1-p1']",1000.0,0.0
+THZPSN,atp_c + cys__L_c + dxyl5p_c + tyr__L_c --> 4hba_c + 4mpetz_c + ala__L_c + amp_c + co2_c + h2o_c + h_c + ppi_c,"['M153_3660002060-t31_1-p1', 'M153_110009793-t31_1-p1', 'M153_110006348-t31_1-p1']",1000.0,0.0
+ACGAMPM,acgam6p_c --> acgam1p_c,['M153_23090002134-t31_1-p1'],1000.0,0.0
+ALCD19y,glyald_c + h_c + nadph_c --> glyc_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+ARAB1D2,arab__D_c + nadp_c --> Dara14lac_c + h_c + nadph_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+CHTNS,udpacgal_c --> chitin_c + h_c + udp_c,['M153_15700013990-t31_1-p1'],1000.0,0.0
+ERGSTt,ergst_e --> ergst_c,"['M153_7890002214-t31_1-p1', 'M153_4020004482-t31_1-p1']",1000.0,0.0
+FAS120,dca_c + 3.0 h_c + malcoa_c + 2.0 nadph_c --> co2_c + coa_c + ddca_c + h2o_c + 2.0 nadp_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS160,3.0 h_c + malcoa_c + 2.0 nadph_c + ttdca_c --> co2_c + coa_c + h2o_c + hdca_c + 2.0 nadp_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+GLYCDy,glyc_c + nadp_c --> dha_c + h_c + nadph_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+H2Ot,h2o_e --> h2o_c,"['spontaneous', 'M153_9933000924-t31_1-p1']",1000.0,0.0
+INSTt2,h_e + inost_e --> h_c + inost_c,['M153_1188000788-t31_1-p1'],1000.0,0.0
+NTP4,dgtp_c + h2o_c --> dgdp_c + h_c + pi_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+PI35BP5P_SC,h2o_c + 0.01 ptd135bp_SC_c --> pi_c + 0.01 ptd3ino_SC_c,['M153_19240002-t31_1-p1'],1000.0,0.0
+PIN3K_SC,atp_c + 0.01 ptd1ino_SC_c --> adp_c + h_c + 0.01 ptd3ino_SC_c,['M153_10270003-t31_1-p1'],1000.0,0.0
+ZYMSTt,zymst_e --> zymst_c,"['M153_7890002214-t31_1-p1', 'M153_4020004482-t31_1-p1']",1000.0,0.0
+CRNabc,atp_c + crn_e + h2o_c --> adp_c + crn_c + h_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+G3PCT,ctp_c + glyc3p_c + h_c --> cdpglyc_c + ppi_c,['M153_2740000635-t31_1-p1'],1000.0,0.0
+MOBDabc,atp_c + h2o_c + mobd_e --> adp_c + h_c + mobd_c + pi_c,"['M153_1300005994-t31_1-p1', 'M153_5000037947-t31_1-p1', 'M153_7890002214-t31_1-p1']",1000.0,0.0
+SULabc,atp_c + h2o_c + so4_e --> adp_c + h_c + pi_c + so4_c,"['M153_5000037947-t31_1-p1', 'M153_7890002214-t31_1-p1']",1000.0,0.0
+ARABDI,arab__D_c --> rbl__D_c,['M153_2100019407-t31_1-p1'],1000.0,0.0
+PDHa,h_c + lpam_c + pyr_c --> adhlam_c + co2_c,['M153_2350009583-t31_1-p1'],1000.0,0.0
+DASYN_HP,ctp_c + h_c + pa_Hp_c --> cdpdag_HP_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+TSULabc,atp_c + h2o_c + tsul_e --> adp_c + h_c + pi_c + tsul_c,"['M153_5000037947-t31_1-p1', 'M153_7890002214-t31_1-p1']",1000.0,0.0
+CAATPS,atp_c + 2.0 ca2_c + h2o_c --> adp_c + 2.0 ca2_e + h_e + pi_c,['M153_2880002575-t31_1-p1'],1000.0,0.0
+METDabc,atp_c + h2o_c + met__D_e --> adp_c + h_c + met__D_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+FACOAL1821,atp_c + coa_c + lnlc_c --> amp_c + lnlccoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+NTP2,datp_c + h2o_c --> dadp_c + h_c + pi_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+NTP9,dttp_c + h2o_c --> dtdp_c + h_c + pi_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+HCO3abc,atp_c + h2o_c + hco3_e --> adp_c + h_c + hco3_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+PE1801829Z12Zt,atp_c + h2o_c + pe1801829Z12Z_c --> adp_c + h_c + pe1801829Z12Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE18111Z1829Z12Zt,atp_c + h2o_c + pe18111Z1829Z12Z_c --> adp_c + h_c + pe18111Z1829Z12Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE18111Z1835Z9Z12Zt,atp_c + h2o_c + pe18111Z1835Z9Z12Z_c --> adp_c + h_c + pe18111Z1835Z9Z12Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE1819Z1819Zt,atp_c + h2o_c + pe1819Z1819Z_c --> adp_c + h_c + pe1819Z1819Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE1819Z1845Z9Z12Z15Zt,atp_c + h2o_c + pe1819Z1845Z9Z12Z15Z_c --> adp_c + h_c + pe1819Z1845Z9Z12Z15Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PGP18111Z160t,atp_c + h2o_c + pgp18111Z160_c --> adp_c + h_c + pgp18111Z160_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+MEGLYXYLAMH,h2o_e + meglyxyl_e --> 26dmani_e + egly_e + h_e,['M153_13480000801-t31_1-p1'],1000.0,0.0
+FACOAL18111Z,atp_c + coa_c + ocdcea_c --> amp_c + ocdcecoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+G3PAT180_1,glyc3p_c + ocdccoa_c --> 1odecg3p_c + coa_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z1819Z2,12dgr16018111Z_c + pa1801819Z_c --> 1odecg3p_c + tag16018111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z1819Z4,12dgr16018111Z_c + pa1819Z1819Z_c --> 1odec9eg3p_c + tag16018111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z1601,12dgr1601819Z_c + pa18111Z160_c --> 1odec11eg3p_c + tag1601819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z18111Z1,12dgr1601819Z_c + pa16018111Z_c --> 1hdecg3p_c + tag1601819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z1819Z3,12dgr1601819Z_c + pa18111Z1819Z_c --> 1odec11eg3p_c + tag1601819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z1819Z4,12dgr1601819Z_c + pa1819Z1819Z_c --> 1odec9eg3p_c + tag1601819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z1601,12dgr18111Z1819Z_c + pa18111Z160_c --> 1odec11eg3p_c + tag18111Z1819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z1602,12dgr18111Z1819Z_c + pa1819Z160_c --> 1odec9eg3p_c + tag18111Z1819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z18111Z1,12dgr18111Z1819Z_c + pa16018111Z_c --> 1hdecg3p_c + tag18111Z1819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z1601,12dgr1819Z18111Z_c + pa18111Z160_c --> 1odec11eg3p_c + tag1819Z18111Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z1819Z1,12dgr1819Z18111Z_c + pa1601819Z_c --> 1hdecg3p_c + tag1819Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z1819Z4,12dgr1819Z18111Z_c + pa1819Z1819Z_c --> 1odec9eg3p_c + tag1819Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z18111Z1,12dgr1819Z1819Z_c + pa16018111Z_c --> 1hdecg3p_c + tag1819Z1819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z18111Z2,12dgr1819Z1819Z_c + pa18111Z18111Z_c --> 1odec11eg3p_c + tag1819Z1819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z18111Z3,12dgr1819Z1819Z_c + pa1819Z18111Z_c --> 1odec9eg3p_c + tag1819Z1819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+1AGPEAT1801835Z9Z12Z,1agpe180_c + pacoa_c --> coa_c + pe1801835Z9Z12Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT1819Z1829Z12Z,1agpe1819Z_c + lnlccoa_c --> coa_c + pe1819Z1829Z12Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT1819Z1835Z9Z12Z,1agpe1819Z_c + pacoa_c --> coa_c + pe1819Z1835Z9Z12Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+CDPDAGS1819Z160,ctp_c + 3.0 h_c + pa1819Z160_c --> cdp12dgr1819Z160_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+ETHAPT1801819Z,12dgr1801819Z_c + cdpea_c --> cmp_c + h_c + pe1801819Z_c,['M153_320001940-t31_1-p1'],1000.0,0.0
+ETHAPT18111Z1819Z,12dgr18111Z1819Z_c + cdpea_c --> cmp_c + h_c + pe18111Z1819Z_c,['M153_320001940-t31_1-p1'],1000.0,0.0
+GLUKA,Glc_aD_c + atp_c --> adp_c + g6p_A_c + h_c,['M153_2710002389-t31_1-p1'],1000.0,0.0
+G3PD4,glyc3p_c + mqn7_c --> dhap_c + mql7_c,['M153_2299000267-t31_1-p1'],1000.0,0.0
+PHCYT_BS,0.01 12dag3p_BS_c + ctp_c + h_c --> 0.01 cdpdag_BS_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+ACCOAC,accoa_c + atp_c + hco3_c --> adp_c + h_c + malcoa_c + pi_c,"['M153_60700001256', 'M153_30675000501', 'M153_44890001475-t31_1-p1', 'M153_288920003-t31_1-p1', 'M153_25710000387']",1000.0,0.0
+ACS,ac_c + atp_c + coa_c --> accoa_c + amp_c + ppi_c,"['M153_236710001-t31_1-p1', 'M153_9253000998-t31_1-p1']",1000.0,0.0
+AMPTASECG,cgly_c + h2o_c --> cys__L_c + gly_c,"['M153_2650005012-t31_1-p1', 'M153_4610006319-t31_1-p1']",1000.0,0.0
+ASNS1,asp__L_c + atp_c + gln__L_c + h2o_c --> amp_c + asn__L_c + glu__L_c + h_c + ppi_c,"['M153_9931000960-t31_1-p1', 'M153_12960000132']",1000.0,0.0
+CTPS2,atp_c + gln__L_c + h2o_c + utp_c --> adp_c + ctp_c + glu__L_c + 2.0 h_c + pi_c,['M153_2460003419-t31_1-p1'],1000.0,0.0
+DADK,atp_c + damp_c --> adp_c + dadp_c,"['M153_100072765-t31_1-p1', 'M153_2500013096-t31_1-p1']",1000.0,0.0
+DASYN120,ctp_c + h_c + pa120_c --> cdpdddecg_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+DASYN141,ctp_c + h_c + pa141_c --> cdpdtdec7eg_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+DASYN160,ctp_c + h_c + pa160_c --> cdpdhdecg_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+DHQTi,3dhq_c --> 3dhsk_c + h2o_c,['M153_21200012089-t31_1-p1'],1000.0,0.0
+DNMPPA,dhpmp_c + h2o_c --> dhnpt_c + pi_c,['M153_56170001305-t31_1-p1'],1000.0,0.0
+DPCOAK,atp_c + dpcoa_c --> adp_c + coa_c + h_c,['M153_19900011672-t31_1-p1'],1000.0,0.0
+ENO,2pg_c --> h2o_c + pep_c,['M153_21200012089-t31_1-p1'],1000.0,0.0
+FLVR,h_c + nadph_c + ribflv_c --> nadp_c + rbflvrd_c,['M153_261900001-t31_1-p1'],1000.0,0.0
+FMNRx2,fmn_c + h_c + nadph_c --> fmnh2_c + nadp_c,['M153_261900001-t31_1-p1'],1000.0,0.0
+G3PD2,glyc3p_c + nadp_c --> dhap_c + h_c + nadph_c,['M153_5470004277-t31_1-p1'],1000.0,0.0
+G3PD6,glyc3p_c + mqn8_c --> dhap_c + mql8_c,['M153_2299000267-t31_1-p1'],1000.0,0.0
+GALUi,g1p_c + h_c + utp_c --> ppi_c + udpg_c,"['M153_838000997', 'M153_1295900081-t31_1-p1', 'M153_3750002323-t31_1-p1']",1000.0,0.0
+GAPD,g3p_c + nad_c + pi_c --> 13dpg_c + h_c + nadh_c,['M153_5947000186-t31_1-p1'],1000.0,0.0
+GK1,atp_c + gmp_c --> adp_c + gdp_c,['M153_3024000570-t31_1-p1'],1000.0,0.0
+GLYAT,accoa_c + gly_c --> 2aobut_c + coa_c,['M153_4900002287-t31_1-p1'],1000.0,0.0
+GTHPi,2.0 gthrd_c + h2o2_c --> gthox_c + 2.0 h2o_c,['M153_7390003494-t31_1-p1'],1000.0,0.0
+HEX1,atp_c + glc__D_c --> adp_c + g6p_c + h_c,['M153_2710002389-t31_1-p1'],1000.0,0.0
+I2FE2SS,fadh2_c + 2.0 fe2_c + 2.0 iscssh_c + iscu_c --> fad_c + 6.0 h_c + 2.0 iscs_c + iscu_2fe2s_c,"['M153_3660002060-t31_1-p1', 'M153_1640008755-t31_1-p1']",1000.0,0.0
+I2FE2SS2,fadh2_c + 2.0 fe2_c + 2.0 iscssh_c + iscu_2fe2s_c --> fad_c + 6.0 h_c + 2.0 iscs_c + iscu_2fe2s2_c,"['M153_3660002060-t31_1-p1', 'M153_1640008755-t31_1-p1']",1000.0,0.0
+I2FE2ST,4.0 h_c + iscu_2fe2s_c --> 2fe2s_c + iscu_c,['M153_1640008755-t31_1-p1'],1000.0,0.0
+I4FE4SR,fadh2_c + 2.0 h_c + iscu_2fe2s2_c --> fad_c + iscu_4fe4s_c,['M153_1640008755-t31_1-p1'],1000.0,0.0
+MAN6PI,man6p_c --> f6p_c,['M153_1295900081-t31_1-p1'],1000.0,0.0
+NDPK4,atp_c + dtdp_c --> adp_c + dttp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+NTP3,gtp_c + h2o_c --> gdp_c + h_c + pi_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+PFK_2,atp_c + tag6p__D_c --> adp_c + h_c + tagdp__D_c,['M153_3910005435-t31_1-p1'],1000.0,0.0
+PGM,2pg_c --> 3pg_c,"['M153_19600013693-t31_1-p1', 'M153_147730001-t31_1-p1']",1000.0,0.0
+PHETRS,atp_c + phe__L_c + trnaphe_c --> amp_c + phetrna_c + ppi_c,"['M153_29300084-t31_1-p1', 'M153_21710002204-t31_1-p1']",1000.0,0.0
+PSD140,h_c + ps140_c --> co2_c + pe140_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+PSD161,h_c + ps161_c --> co2_c + pe161_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+SADT2,atp_c + gtp_c + h2o_c + so4_c --> aps_c + gdp_c + pi_c + ppi_c,['M153_7190003529-t31_1-p1'],1000.0,0.0
+SPODM,2.0 h_c + 2.0 o2s_c --> h2o2_c + o2_c,['M153_3200031050-t31_1-p1'],1000.0,0.0
+THIORDXi,h2o2_c + trdrd_c --> 2.0 h2o_c + trdox_c,['M153_54830001324-t31_1-p1'],1000.0,0.0
+TKT1,r5p_c + xu5p__D_c --> g3p_c + s7p_c,"['M153_110006077-t31_1-p1', 'M153_2350009056-t31_1-p1']",1000.0,0.0
+TRE6PS,g6p_c + udpg_c --> h_c + tre6p_c + udp_c,"['M153_60220001-t31_1-p1', 'M153_9500001603-t31_1-p1', 'M153_1750001674-t31_1-p1', 'M153_163450001-t31_1-p1']",1000.0,0.0
+UMPK,atp_c + ump_c --> adp_c + udp_c,['M153_110007909-t31_1-p1'],1000.0,0.0
+AOXSr,ala__L_c + h_c + pmcoa_c --> 8aonn_c + co2_c + coa_c,['M153_4900002287-t31_1-p1'],1000.0,0.0
+ARABR,arab__L_c + h_c + nadph_c --> abt_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+DAGCPT_SC,0.01 12dgr_SC_c + cdpchol_c --> cmp_c + h_c + 0.01 pc_SC_c,['M153_320001940-t31_1-p1'],1000.0,0.0
+DCMPDA,dcmp_c + h2o_c + h_c --> dump_c + nh4_c,['M153_8950003783-t31_1-p1'],1000.0,0.0
+DPGM,13dpg_c --> 23dpg_c + h_c,['M153_147730001-t31_1-p1'],1000.0,0.0
+DRTPPD,25dthpp_c + h2o_c + h_c --> 5aprbu_c + nh4_c,['M153_1960007616-t31_1-p1'],1000.0,0.0
+ETHAPT_SC,0.01 12dgr_SC_c + cdpea_c --> cmp_c + h_c + 0.01 pe_SC_c,['M153_320001940-t31_1-p1'],1000.0,0.0
+FAS160COA,3.0 h_c + malcoa_c + 2.0 nadph_c + tdcoa_c --> co2_c + coa_c + h2o_c + 2.0 nadp_c + pmtcoa_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS180,3.0 h_c + hdca_c + malcoa_c + 2.0 nadph_c --> co2_c + coa_c + h2o_c + 2.0 nadp_c + ocdca_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS80_L,accoa_c + 8.0 h_c + 3.0 malcoa_c + 6.0 nadph_c --> 3.0 co2_c + 4.0 coa_c + 2.0 h2o_c + 6.0 nadp_c + octa_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FECOSTt,fecost_e --> fecost_c,"['M153_7890002214-t31_1-p1', 'M153_4020004482-t31_1-p1']",1000.0,0.0
+PEPDt3,h_e + pepd_e --> h_c + pepd_c,['M153_1780009179-t31_1-p1'],1000.0,0.0
+PETHCT,ctp_c + ethamp_c + h_c --> cdpea_c + ppi_c,['M153_2740000635-t31_1-p1'],1000.0,0.0
+PI3P5K_SC,atp_c + 0.01 ptd3ino_SC_c --> adp_c + h_c + 0.01 ptd135bp_SC_c,['M153_3750007133-t31_1-p1'],1000.0,0.0
+PI45BP5P_SC,h2o_c + 0.01 ptd145bp_SC_c --> pi_c + 0.01 ptd4ino_SC_c,['M153_19240002-t31_1-p1'],1000.0,0.0
+SADT,atp_c + h_c + so4_c --> aps_c + ppi_c,['M153_7190003529-t31_1-p1'],1000.0,0.0
+URIK1,atp_c + uri_c --> adp_c + h_c + ump_c,['M153_17800012203-t31_1-p1'],1000.0,0.0
+XYLR,h_c + nadph_c + xyl__D_c --> nadp_c + xylt_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+PIabc,atp_c + h2o_c + pi_e --> adp_c + h_c + 2.0 pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+SPMDabc,atp_c + h2o_c + spmd_e --> adp_c + h_c + pi_c + spmd_c,"['M153_5000037947-t31_1-p1', 'M153_4240003533-t31_1-p1', 'M153_1890002928-t31_1-p1']",1000.0,0.0
+G1PCTYT,ctp_c + g1p_c + h_c --> cdpglc_c + ppi_c,['M153_1295900081-t31_1-p1'],1000.0,0.0
+ACS2,atp_c + coa_c + ppa_c --> amp_c + ppcoa_c + ppi_c,['M153_236710001-t31_1-p1'],1000.0,0.0
+ALCD2y,etoh_c + nadp_c --> acald_c + h_c + nadph_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+FE3abc,atp_c + fe3_e + h2o_c --> adp_c + fe3_c + h_c + pi_c,"['M153_17680002173-t31_1-p1', 'M153_1890002928-t31_1-p1', 'M153_4240003080-t31_1-p1']",1000.0,0.0
+NTP7,h2o_c + utp_c --> h_c + pi_c + udp_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+PTRCabc,atp_c + h2o_c + ptrc_e --> adp_c + h_c + pi_c + ptrc_c,"['M153_5000037947-t31_1-p1', 'M153_4240003533-t31_1-p1']",1000.0,0.0
+GLUK_syn,atp_c + glc__bD_c --> adp_c + g6p_B_c + h_c,['M153_2710002389-t31_1-p1'],1000.0,0.0
+NaKt_1,atp_c + h2o_c + k_e + na1_c --> adp_c + h_c + k_c + na1_e + pi_c,['M153_2540002421-t31_1-p1'],1000.0,0.0
+ASPTRS_Asn,asp__L_c + atp_c + trnaasn_c --> amp_c + asptrna_asn_c + ppi_c,['M153_9400015697-t31_1-p1'],1000.0,0.0
+ATPS10_3,3.0 adp_c + 10.0 h_e + 3.0 pi_c --> 3.0 atp_c + 3.0 h2o_c + 7.0 h_c,['M153_30000001842-t31_1-p1'],1000.0,0.0
+PAIL1819Z160t,atp_c + h2o_c + pail1819Z160_c --> adp_c + h_c + pail1819Z160_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE1801819Zt,atp_c + h2o_c + pe1801819Z_c --> adp_c + h_c + pe1801819Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE1819Z1829Z12Zt,atp_c + h2o_c + pe1819Z1829Z12Z_c --> adp_c + h_c + pe1819Z1829Z12Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PG18111Z160t,atp_c + h2o_c + pg18111Z160_c --> adp_c + h_c + pg18111Z160_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PG1819Z160t,atp_c + h2o_c + pg1819Z160_c --> adp_c + h_c + pg1819Z160_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PGP1819Z160t,atp_c + h2o_c + pgp1819Z160_c --> adp_c + h_c + pgp1819Z160_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+GF6PTA_1,f6p_B_c + gln__L_c --> gam6p_c + glu__L_c,['M153_4970005531-t31_1-p1'],1000.0,0.0
+LIDOAMH,h2o_e + lido_e --> 26dmani_e + degly_e + h_e,['M153_13480000801-t31_1-p1'],1000.0,0.0
+G3PAT160_1,glyc3p_c + pmtcoa_c --> 1hdecg3p_c + coa_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z1601,12dgr16018111Z_c + pa18111Z160_c --> 1odec11eg3p_c + tag16018111Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z1602,12dgr16018111Z_c + pa1819Z160_c --> 1odec9eg3p_c + tag16018111Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z18111Z2,12dgr1601819Z_c + pa18111Z18111Z_c --> 1odec11eg3p_c + tag1601819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z18111Z3,12dgr1601819Z_c + pa1819Z18111Z_c --> 1odec9eg3p_c + tag1601819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z18111Z1,12dgr1801819Z_c + pa16018111Z_c --> 1hdecg3p_c + tag1801819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z1819Z3,12dgr1801819Z_c + pa18111Z1819Z_c --> 1odec11eg3p_c + tag1801819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z1601,12dgr18111Z18111Z_c + pa18111Z160_c --> 1odec11eg3p_c + tag18111Z18111Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z18111Z2,12dgr18111Z18111Z_c + pa18111Z18111Z_c --> 1odec11eg3p_c + tag18111Z18111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z1819Z4,12dgr18111Z18111Z_c + pa1819Z1819Z_c --> 1odec9eg3p_c + tag18111Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z1819Z1,12dgr18111Z1819Z_c + pa1601819Z_c --> 1hdecg3p_c + tag18111Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z1819Z3,12dgr18111Z1819Z_c + pa18111Z1819Z_c --> 1odec11eg3p_c + tag18111Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z1819Z4,12dgr18111Z1819Z_c + pa1819Z1819Z_c --> 1odec9eg3p_c + tag18111Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z1819Z2,12dgr1819Z18111Z_c + pa1801819Z_c --> 1odecg3p_c + tag1819Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z1601,12dgr1819Z1819Z_c + pa18111Z160_c --> 1odec11eg3p_c + tag1819Z1819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z1819Z1,12dgr1819Z1819Z_c + pa1601819Z_c --> 1hdecg3p_c + tag1819Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z1819Z2,12dgr1819Z1819Z_c + pa1801819Z_c --> 1odecg3p_c + tag1819Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z1819Z3,12dgr1819Z1819Z_c + pa18111Z1819Z_c --> 1odec11eg3p_c + tag1819Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z1819Z4,12dgr1819Z1819Z_c + pa1819Z1819Z_c --> 1odec9eg3p_c + tag1819Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+1AGPEAT18111Z1819Z,1agpe18111Z_c + ocdce9coa_c --> coa_c + pe18111Z1819Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+ABFPT,atp_c + fru_B_c --> adp_c + f6p_B_c + h_c,['M153_2710002389-t31_1-p1'],1000.0,0.0
+ARABRr,arab__L_c + h_c + nadph_c --> abt__L_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+CA2abc1,atp_c + ca2_c + h2o_c --> adp_c + ca2_e + h_c + pi_c,['M153_2540002421-t31_1-p1'],1000.0,0.0
+FERRICHabc,atp_c + ferrich_e + h2o_c --> adp_c + ferrich_c + h_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+ADSK,aps_c + atp_c --> adp_c + h_c + paps_c,['M153_7190003529-t31_1-p1'],1000.0,0.0
+ALATA_D2,ala__D_c + pydx5p_c --> pyam5p_c + pyr_c,"['M153_16180001441-t31_1-p1', 'M153_3268000477-t31_1-p1']",1000.0,0.0
+ALATA_L2,ala__L_c + pydx5p_c --> pyam5p_c + pyr_c,"['M153_16180001441-t31_1-p1', 'M153_3268000477-t31_1-p1']",1000.0,0.0
+AP4AS,2.0 atp_c + h_c --> ap4a_c + ppi_c,"['M153_1100062646-t31_1-p1', 'M153_2289000809-t31_1-p1', 'M153_814000782-t31_1-p1', 'M153_12698000833-t31_1-p1', 'M153_11240003342-t31_1-p1']",1000.0,0.0
+ASNS2,asp__L_c + atp_c + nh4_c --> amp_c + asn__L_c + h_c + ppi_c,"['M153_278920001-t31_1-p1', 'M153_13590002-t31_1-p1', 'M153_278640001-t31_1-p1']",1000.0,0.0
+ATHRDHr,athr__L_c + nadp_c --> 2aobut_c + h_c + nadph_c,['M153_8950002643-t31_1-p1'],1000.0,0.0
+CSND,csn_c + h2o_c + h_c --> nh4_c + ura_c,['M153_2565000230-t31_1-p1'],1000.0,0.0
+CYSTRS,atp_c + cys__L_c + trnacys_c --> amp_c + cystrna_c + ppi_c,"['M153_3340005162-t31_1-p1', 'M153_107720001-t31_1-p1']",1000.0,0.0
+DASYN140,ctp_c + h_c + pa140_c --> cdpdtdecg_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+DCTPD,dctp_c + h2o_c + h_c --> dutp_c + nh4_c,['M153_8950003783-t31_1-p1'],1000.0,0.0
+DGK1,atp_c + dgmp_c --> adp_c + dgdp_c,['M153_3024000570-t31_1-p1'],1000.0,0.0
+DHFR,dhf_c + h_c + nadph_c --> nadp_c + thf_c,"['M153_4900005145-t31_1-p1', 'M153_2710004390-t31_1-p1']",1000.0,0.0
+DKGLCNR1,25dkglcn_c + h_c + nadph_c --> 2dhguln_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+DTMPK,atp_c + dtmp_c --> adp_c + dtdp_c,['M153_10111000324-t31_1-p1'],1000.0,0.0
+FADRx2,fad_c + h_c + nadph_c --> fadh2_c + nadp_c,['M153_261900001-t31_1-p1'],1000.0,0.0
+G1PTT,dttp_c + g1p_c + h_c --> dtdpglu_c + ppi_c,['M153_1295900081-t31_1-p1'],1000.0,0.0
+G3PD5,glyc3p_c + q8_c --> dhap_c + q8h2_c,['M153_2299000267-t31_1-p1'],1000.0,0.0
+G6PDH2r,g6p_c + nadp_c --> 6pgl_c + h_c + nadph_c,['M153_15800001114-t31_1-p1'],1000.0,0.0
+GHMT2r,ser__L_c + thf_c --> gly_c + h2o_c + mlthf_c,"['M153_16180001441-t31_1-p1', 'M153_3268000477-t31_1-p1']",1000.0,0.0
+GLGC,atp_c + g1p_c + h_c --> adpglc_c + ppi_c,"['M153_9476000826', 'M153_1295900081-t31_1-p1', 'M153_8870003818']",1000.0,0.0
+GLUCYS,atp_c + cys__L_c + glu__L_c --> adp_c + glucys_c + h_c + pi_c,['M153_11890002475-t31_1-p1'],1000.0,0.0
+GLYOX,h2o_c + lgt__S_c --> gthrd_c + h_c + lac__D_c,['M153_20470001323-t31_1-p1'],1000.0,0.0
+GMHEPK,atp_c + gmhep7p_c --> adp_c + gmhep17bp_c + h_c,['M153_2740000635-t31_1-p1'],1000.0,0.0
+GND,6pgc_c + nadp_c --> co2_c + nadph_c + ru5p__D_c,['M153_15140001179-t31_1-p1'],1000.0,0.0
+HEX4,atp_c + man_c --> adp_c + h_c + man6p_c,['M153_2710002389-t31_1-p1'],1000.0,0.0
+I2FE2SR,2fe1s_c + iscssh_c + iscu_c --> 4.0 h_c + iscs_c + iscu_2fe2s_c,"['M153_3660002060-t31_1-p1', 'M153_1640008755-t31_1-p1']",1000.0,0.0
+ICYSDS,cys__L_c + iscs_c --> ala__L_c + iscssh_c,['M153_3660002060-t31_1-p1'],1000.0,0.0
+LEUTRS,atp_c + leu__L_c + trnaleu_c --> amp_c + leutrna_c + ppi_c,"['M153_107720001-t31_1-p1', 'M153_22570001062-t31_1-p1']",1000.0,0.0
+METTRS,atp_c + met__L_c + trnamet_c --> amp_c + mettrna_c + ppi_c,"['M153_10008200-t31_1-p1', 'M153_107720001-t31_1-p1', 'M153_12730001974-t31_1-p1']",1000.0,0.0
+MSAR,h_c + msa_c + nadph_c --> 3hpp_c + nadp_c,['M153_8950002643-t31_1-p1'],1000.0,0.0
+NDPK1,atp_c + gdp_c --> adp_c + gtp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+NDPK2,atp_c + udp_c --> adp_c + utp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+NTP5,ctp_c + h2o_c --> cdp_c + h_c + pi_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+OPHHX,2oph_c + 0.5 o2_c --> 2ohph_c,['M153_8730001424-t31_1-p1'],1000.0,0.0
+PGAMT,gam1p_c --> gam6p_c,['M153_23090002134-t31_1-p1'],1000.0,0.0
+PGI,g6p_c --> f6p_c,['M153_6470001780-t31_1-p1'],1000.0,0.0
+PGL,6pgl_c + h2o_c --> 6pgc_c + h_c,['M153_2590009013-t31_1-p1'],1000.0,0.0
+PSD181,h_c + ps181_c --> co2_c + pe181_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+RNDR2,gdp_c + trdrd_c --> dgdp_c + h2o_c + trdox_c,"['M153_6680004595-t31_1-p1', 'M153_19030001338-t31_1-p1']",1000.0,0.0
+THRTRS,atp_c + thr__L_c + trnathr_c --> amp_c + ppi_c + thrtrna_c,['M153_844000203-t31_1-p1'],1000.0,0.0
+TKT2,e4p_c + xu5p__D_c --> f6p_c + g3p_c,"['M153_2350009056-t31_1-p1', 'M153_110006077-t31_1-p1']",1000.0,0.0
+TRPTRS,atp_c + trnatrp_c + trp__L_c --> amp_c + ppi_c + trptrna_c,['M153_14718000255-t31_1-p1'],1000.0,0.0
+UAGDP,acgam1p_c + h_c + utp_c --> ppi_c + uacgam_c,['M153_1295900081-t31_1-p1'],1000.0,0.0
+URIDK2r,atp_c + dump_c --> adp_c + dudp_c,['M153_110007909-t31_1-p1'],1000.0,0.0
+ACGAM6PS,accoa_c + gam6p_c --> acgam6p_c + coa_c + h_c,['M153_11090002604-t31_1-p1'],1000.0,0.0
+ALCD22yi,2mbald_c + h_c + nadph_c --> 2mbtoh_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+CHLPCTD,cholp_c + ctp_c + h_c --> cdpchol_c + ppi_c,['M153_4758000583-t31_1-p1'],1000.0,0.0
+DIPS,amet_c + caphis_c --> ahcys_c + cmaphis_c + h_c,['M153_9400011546-t31_1-p1'],1000.0,0.0
+EPISTt,epist_e --> epist_c,"['M153_7890002214-t31_1-p1', 'M153_4020004482-t31_1-p1']",1000.0,0.0
+ETHAK,atp_c + etha_c --> adp_c + ethamp_c + h_c,"['M153_23930001055', 'M153_12800018639-t31_1-p1']",1000.0,0.0
+FAS100COA,3.0 h_c + malcoa_c + 2.0 nadph_c + occoa_c --> co2_c + coa_c + dcacoa_c + h2o_c + 2.0 nadp_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS120COA,dcacoa_c + 3.0 h_c + malcoa_c + 2.0 nadph_c --> co2_c + coa_c + ddcacoa_c + h2o_c + 2.0 nadp_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS140,ddca_c + 3.0 h_c + malcoa_c + 2.0 nadph_c --> co2_c + coa_c + h2o_c + 2.0 nadp_c + ttdca_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS140COA,ddcacoa_c + 3.0 h_c + malcoa_c + 2.0 nadph_c --> co2_c + coa_c + h2o_c + 2.0 nadp_c + tdcoa_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+G3PD1ir,dhap_c + h_c + nadh_c --> glyc3p_c + nad_c,['M153_5470004277-t31_1-p1'],1000.0,0.0
+GLUK,atp_c + glc__D_c --> adp_c + g6p_B_c + h_c,['M153_2710002389-t31_1-p1'],1000.0,0.0
+MAN1PT,gtp_c + h_c + man1p_c --> gdpmann_c + ppi_c,['M153_1295900081-t31_1-p1'],1000.0,0.0
+NAt3_1,h_e + na1_c --> h_c + na1_e,['M153_7820001379-t31_1-p1'],1000.0,0.0
+NDPK9,atp_c + idp_c --> adp_c + itp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+PC,atp_c + hco3_c + pyr_c --> adp_c + h_c + oaa_c + pi_c,['M153_44890001475-t31_1-p1'],1000.0,0.0
+SBTR,glc__D_c + h_c + nadph_c --> nadp_c + sbt__D_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+SERPT,h_c + pmtcoa_c + ser__L_c --> 3dsphgn_c + co2_c + coa_c,"['M153_880007894-t31_1-p1', 'M153_4900002287-t31_1-p1']",1000.0,0.0
+CHLabc,atp_c + chol_e + h2o_c --> adp_c + chol_c + h_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+COabc,atp_c + cobalt2_e + h2o_c --> adp_c + cobalt2_c + h_c + pi_c,"['M153_1300005994-t31_1-p1', 'M153_1890002928-t31_1-p1']",1000.0,0.0
+DASYN_SA,ctp_c + h_c + 0.02 pa_SA_c --> 0.02 cdpdag_SA_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+OIVD1r,4mop_c + coa_c + nad_c --> co2_c + ivcoa_c + nadh_c,"['M153_1780006516-t31_1-p1', 'M153_2350009583-t31_1-p1']",1000.0,0.0
+OIVD2,3mob_c + coa_c + nad_c --> co2_c + ibcoa_c + nadh_c,"['M153_1780006516-t31_1-p1', 'M153_2350009583-t31_1-p1']",1000.0,0.0
+PROabc,atp_c + h2o_c + pro__L_e --> adp_c + h_c + pi_c + pro__L_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+URIK3,itp_c + uri_c --> h_c + idp_c + ump_c,['M153_17800012203-t31_1-p1'],1000.0,0.0
+ZNabc,atp_c + h2o_c + zn2_e --> adp_c + h_c + pi_c + zn2_c,"['M153_7510001393-t31_1-p1', 'M153_5000037947-t31_1-p1', 'M153_1890002928-t31_1-p1']",1000.0,0.0
+ARAB1D1,arab__D_c + nad_c --> Dara14lac_c + h_c + nadh_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+HBZOPT6,4hbz_c + octdp_5_c --> 3ophb_5_c + ppi_c,"['M153_66960001119-t31_1-p1', 'M153_110001842-t31_1-p1']",1000.0,0.0
+OBDHc,2obut_c + coa_c + nad_c --> co2_c + nadh_c + ppcoa_c,"['M153_1780006516-t31_1-p1', 'M153_2350009583-t31_1-p1']",1000.0,0.0
+FEDCabc,atp_c + 2.0 cit_e + fe3_e + h2o_c --> adp_c + 2.0 cit_c + fe3_c + h_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+GLNabc,atp_c + gln__L_e + h2o_c --> adp_c + gln__L_c + h_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+NTRARz,no3_c + trdrd_c --> h2o_c + no2_c + trdox_c,['M153_54830001324-t31_1-p1'],1000.0,0.0
+PPCOAC,atp_c + hco3_c + ppcoa_c --> adp_c + h_c + mmcoa__S_c + pi_c,['M153_44890001475-t31_1-p1'],1000.0,0.0
+MCSNAH,5mcsn_c + h2o_c + h_c --> nh4_c + thym_c,['M153_2565000230-t31_1-p1'],1000.0,0.0
+FACOAL1831,atp_c + coa_c + lnlncg_c --> amp_c + lnlncgcoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+CA2abc,atp_c + ca2_e + h2o_c --> adp_c + ca2_c + h_c + pi_c,['M153_2540002421-t31_1-p1'],1000.0,0.0
+NTP8,dutp_c + h2o_c --> dudp_c + h_c + pi_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+PE1801835Z9Z12Zt,atp_c + h2o_c + pe1801835Z9Z12Z_c --> adp_c + h_c + pe1801835Z9Z12Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE1801845Z9Z12Z15Zt,atp_c + h2o_c + pe1801845Z9Z12Z15Z_c --> adp_c + h_c + pe1801845Z9Z12Z15Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE18111Z1819Zt,atp_c + h2o_c + pe18111Z1819Z_c --> adp_c + h_c + pe18111Z1819Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE18111Z1845Z9Z12Z15Zt,atp_c + h2o_c + pe18111Z1845Z9Z12Z15Z_c --> adp_c + h_c + pe18111Z1845Z9Z12Z15Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE1829Z12Z1835Z9Z12Zt,atp_c + h2o_c + pe1829Z12Z1835Z9Z12Z_c --> adp_c + h_c + pe1829Z12Z1835Z9Z12Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+CACOAL,atp_c + ca_c + coa_c --> amp_c + cacoa_c + h_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+FACOAL181_1,atp_c + coa_c + ocdce9a_c --> amp_c + ocdce9coa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+G3PAT181_1,glyc3p_c + ocdcecoa_c --> 1odec11eg3p_c + coa_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+G3PAT1819Z,glyc3p_c + ocdce9coa_c --> 1odec9eg3p_c + coa_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z18111Z1,12dgr16018111Z_c + pa16018111Z_c --> 1hdecg3p_c + tag16018111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z18111Z2,12dgr16018111Z_c + pa18111Z18111Z_c --> 1odec11eg3p_c + tag16018111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z1819Z3,12dgr16018111Z_c + pa18111Z1819Z_c --> 1odec11eg3p_c + tag16018111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z1819Z2,12dgr1801819Z_c + pa1801819Z_c --> 1odecg3p_c + tag1801819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z1819Z3,12dgr18111Z18111Z_c + pa18111Z1819Z_c --> 1odec11eg3p_c + tag18111Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z18111Z2,12dgr18111Z1819Z_c + pa18111Z18111Z_c --> 1odec11eg3p_c + tag18111Z1819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z18111Z3,12dgr18111Z1819Z_c + pa1819Z18111Z_c --> 1odec9eg3p_c + tag18111Z1819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z1602,12dgr1819Z18111Z_c + pa1819Z160_c --> 1odec9eg3p_c + tag1819Z18111Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z18111Z1,12dgr1819Z18111Z_c + pa16018111Z_c --> 1hdecg3p_c + tag1819Z18111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z18111Z3,12dgr1819Z18111Z_c + pa1819Z18111Z_c --> 1odec9eg3p_c + tag1819Z18111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z1819Z3,12dgr1819Z18111Z_c + pa18111Z1819Z_c --> 1odec11eg3p_c + tag1819Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+1AGPEAT18111Z1829Z12Z,1agpe18111Z_c + lnlccoa_c --> coa_c + pe18111Z1829Z12Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT18111Z1835Z9Z12Z,1agpe18111Z_c + pacoa_c --> coa_c + pe18111Z1835Z9Z12Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT18111Z1845Z9Z12Z15Z,1agpe18111Z_c + cacoa_c --> coa_c + pe18111Z1845Z9Z12Z15Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT1829Z12Z1835Z9Z12Z,1agpe1829Z12Z_c + pacoa_c --> coa_c + pe1829Z12Z1835Z9Z12Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+CDPDAGS18111Z160,ctp_c + 3.0 h_c + pa18111Z160_c --> cdp12dgr18111Z160_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+ETHAPT1819Z1819Z,12dgr1819Z1819Z_c + cdpea_c --> cmp_c + h_c + pe1819Z1819Z_c,['M153_320001940-t31_1-p1'],1000.0,0.0
+DHFR2i,dhf_c + h_c + nadh_c --> nad_c + thf_c,['M153_4900005145-t31_1-p1'],1000.0,0.0
+FOLR2_1,fol_c + h_c + nadph_c --> dhf_c + nadp_c,['M153_4900005145-t31_1-p1'],1000.0,0.0
+AGPOP,dgdp_c + h_c + pep_c --> dgtp_c + pyr_c,['M153_100058818-t31_1-p1'],1000.0,0.0
+UG6PGT,g6p_A_c + udpg_c --> h_c + tre6p_c + udp_c,"['M153_9500001603-t31_1-p1', 'M153_1750002982', 'M153_163480001', 'M153_163450001-t31_1-p1']",1000.0,0.0
+ADK1,amp_c + atp_c --> 2.0 adp_c,['M153_100072765-t31_1-p1'],1000.0,0.0
+ALCD19,glyald_c + h_c + nadh_c --> glyc_c + nad_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+ALR2,h_c + mthgxl_c + nadph_c --> acetol_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+AMPTASEPG,h2o_c + progly_c --> gly_c + pro__L_c,"['M153_2650005012-t31_1-p1', 'M153_4610006319-t31_1-p1']",1000.0,0.0
+ASNTRS,asn__L_c + atp_c + trnaasn_c --> amp_c + asntrna_c + ppi_c,['M153_15470001139-t31_1-p1'],1000.0,0.0
+CYTDK2,cytd_c + gtp_c --> cmp_c + gdp_c + h_c,"['M153_17800012203-t31_1-p1', 'M153_8880002509-t31_1-p1']",1000.0,0.0
+CYTK1,atp_c + cmp_c --> adp_c + cdp_c,['M153_110007909-t31_1-p1'],1000.0,0.0
+CYTK2,atp_c + dcmp_c --> adp_c + dcdp_c,['M153_110007909-t31_1-p1'],1000.0,0.0
+DASYN180,ctp_c + h_c + pa180_c --> cdpdodecg_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+DASYN181,ctp_c + h_c + pa181_c --> cdpdodec11eg_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+DNTPPA,ahdt_c + h2o_c --> dhpmp_c + h_c + ppi_c,['M153_56170001305-t31_1-p1'],1000.0,0.0
+G3PD7,2dmmq8_c + glyc3p_c --> 2dmmql8_c + dhap_c,['M153_2299000267-t31_1-p1'],1000.0,0.0
+GF6PTA,f6p_c + gln__L_c --> gam6p_c + glu__L_c,['M153_4970005531-t31_1-p1'],1000.0,0.0
+GLNTRS,atp_c + gln__L_c + trnagln_c --> amp_c + glntrna_c + ppi_c,"['M153_6500029603-t31_1-p1', 'M153_1800003755-t31_1-p1']",1000.0,0.0
+GLYTRS,atp_c + gly_c + trnagly_c --> amp_c + glytrna_c + ppi_c,['M153_1401000182-t31_1-p1'],1000.0,0.0
+HISTRS,atp_c + his__L_c + trnahis_c --> amp_c + histrna_c + ppi_c,"['M153_13700000794-t31_1-p1', 'M153_282490001-t31_1-p1']",1000.0,0.0
+ILETRS,atp_c + ile__L_c + trnaile_c --> amp_c + iletrna_c + ppi_c,['M153_11200017358-t31_1-p1'],1000.0,0.0
+LSERDHr,nadp_c + ser__L_c --> 2amsa_c + h_c + nadph_c,['M153_8950002643-t31_1-p1'],1000.0,0.0
+NDPK7,atp_c + dcdp_c --> adp_c + dctp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+NDPK8,atp_c + dadp_c --> adp_c + datp_c,['M153_14900013446-t31_1-p1'],1000.0,0.0
+PAPSR2,grxrd_c + paps_c --> grxox_c + 2.0 h_c + pap_c + so3_c,['M153_887000939-t31_1-p1'],1000.0,0.0
+PDH,coa_c + nad_c + pyr_c --> accoa_c + co2_c + nadh_c,"['M153_1780006516-t31_1-p1', 'M153_2350009583-t31_1-p1']",1000.0,0.0
+PFK_3,atp_c + s7p_c --> adp_c + h_c + s17bp_c,['M153_3910005435-t31_1-p1'],1000.0,0.0
+PGK,3pg_c + atp_c --> 13dpg_c + adp_c,"['M153_2100013203-t31_1-p1', 'M153_82770001060-t31_1-p1']",1000.0,0.0
+PGMT,g1p_c --> g6p_c,['M153_147730001-t31_1-p1'],1000.0,0.0
+PMANM,man1p_c --> man6p_c,"['M153_2449000812-t31_1-p1', 'M153_1295900081-t31_1-p1']",1000.0,0.0
+PPA,h2o_c + ppi_c --> h_c + 2.0 pi_c,['M153_3860006633-t31_1-p1'],1000.0,0.0
+PROTRS,atp_c + pro__L_c + trnapro_c --> amp_c + ppi_c + protrna_c,"['M153_18310001337-t31_1-p1', 'M153_193870002']",1000.0,0.0
+PSD180,h_c + ps180_c --> co2_c + pe180_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+RNDR1,adp_c + trdrd_c --> dadp_c + h2o_c + trdox_c,"['M153_6680004595-t31_1-p1', 'M153_19030001338-t31_1-p1']",1000.0,0.0
+RNDR4,trdrd_c + udp_c --> dudp_c + h2o_c + trdox_c,"['M153_6680004595-t31_1-p1', 'M153_19030001338-t31_1-p1']",1000.0,0.0
+SERTRS,atp_c + ser__L_c + trnaser_c --> amp_c + ppi_c + sertrna_c,"['M153_15867000729-t31_1-p1', 'M153_19630001192-t31_1-p1']",1000.0,0.0
+THZPSN3,atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_c + ppi_c,"['M153_3660002060-t31_1-p1', 'M153_110009793-t31_1-p1']",1000.0,0.0
+TMDS,dump_c + mlthf_c --> dhf_c + dtmp_c,['M153_4900005145-t31_1-p1'],1000.0,0.0
+TRE6PP,h2o_c + tre6p_c --> pi_c + tre_c,"['M153_9500001603-t31_1-p1', 'M153_1750001674-t31_1-p1']",1000.0,0.0
+TYRTRS,atp_c + trnatyr_c + tyr__L_c --> amp_c + ppi_c + tyrtrna_c,['M153_4378000159-t31_1-p1'],1000.0,0.0
+URIK2,gtp_c + uri_c --> gdp_c + h_c + ump_c,"['M153_17800012203-t31_1-p1', 'M153_8880002509-t31_1-p1']",1000.0,0.0
+CHOLK,atp_c + chol_c --> adp_c + cholp_c + h_c,['M153_12800018639-t31_1-p1'],1000.0,0.0
+CTPS1,atp_c + nh4_c + utp_c --> adp_c + ctp_c + 2.0 h_c + pi_c,['M153_2460003419-t31_1-p1'],1000.0,0.0
+DASYN_SC,ctp_c + h_c + 0.01 pa_SC_c --> 0.01 cdpdag_SC_c + ppi_c,['M153_13780002107-t31_1-p1'],1000.0,0.0
+FACOAL160,atp_c + coa_c + hdca_c --> amp_c + pmtcoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+FAS100,3.0 h_c + malcoa_c + 2.0 nadph_c + octa_c --> co2_c + coa_c + dca_c + h2o_c + 2.0 nadp_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS180COA,3.0 h_c + malcoa_c + 2.0 nadph_c + pmtcoa_c --> co2_c + coa_c + h2o_c + 2.0 nadp_c + stcoa_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+FAS80COA_L,accoa_c + 9.0 h_c + 3.0 malcoa_c + 6.0 nadph_c --> 3.0 co2_c + 3.0 coa_c + 3.0 h2o_c + 6.0 nadp_c + occoa_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+LANOSTt,lanost_e --> lanost_c,"['M153_7890002214-t31_1-p1', 'M153_4020004482-t31_1-p1']",1000.0,0.0
+PI4P5K_SC,atp_c + 0.01 ptd4ino_SC_c --> adp_c + h_c + 0.01 ptd145bp_SC_c,['M153_3750007133-t31_1-p1'],1000.0,0.0
+PIN4K_SC,atp_c + 0.01 ptd1ino_SC_c --> adp_c + h_c + 0.01 ptd4ino_SC_c,"['M153_3770007529-t31_1-p1', 'M153_523000877-t31_1-p1']",1000.0,0.0
+YUMPS,r5p_c + ura_c --> h2o_c + psd5p_c,"['M153_1893300083-t31_1-p1', 'M153_25900011123-t31_1-p1', 'M153_666000567-t31_1-p1']",1000.0,0.0
+ATPS4r,adp_c + 4.0 h_e + pi_c --> atp_c + h2o_c + 3.0 h_c,"['M153_45900001458-t31_1-p1', 'M153_1650009954-t31_1-p1', 'M153_30000001842-t31_1-p1']",1000.0,0.0
+FE2abc,atp_c + fe2_e + h2o_c --> adp_c + fe2_c + h_c + pi_c,"['M153_17680002173-t31_1-p1', 'M153_15630002498-t31_1-p1']",1000.0,0.0
+GLUabc,atp_c + glu__L_e + h2o_c --> adp_c + glu__L_c + h_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+GLYBabc,atp_c + glyb_e + h2o_c --> adp_c + glyb_c + h_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+METabc,atp_c + h2o_c + met__L_e --> adp_c + h_c + met__L_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+MG2abc,atp_c + h2o_c + mg2_e --> adp_c + h_c + mg2_c + pi_c,['M153_2540002421-t31_1-p1'],1000.0,0.0
+MNabc,atp_c + h2o_c + mn2_e --> adp_c + h_c + mn2_c + pi_c,"['M153_7510001393-t31_1-p1', 'M153_5000037947-t31_1-p1', 'M153_1890002928-t31_1-p1']",1000.0,0.0
+OIVD3,3mop_c + coa_c + nad_c --> 2mbcoa_c + co2_c + nadh_c,"['M153_1780006516-t31_1-p1', 'M153_2350009583-t31_1-p1']",1000.0,0.0
+PSUDS,2.0 h_c + r5p_c + ura_c --> h2o_c + psd5p_c,['M153_1960007616-t31_1-p1'],1000.0,0.0
+G3PD,fad_c + glyc3p_c --> dhap_c + fadh2_c,['M153_2299000267-t31_1-p1'],1000.0,0.0
+G6PBDH,g6p_B_c + nadp_c --> 6pgl_c + h_c + nadph_c,['M153_15800001114-t31_1-p1'],1000.0,0.0
+ATPS1,atp_c + h2o_c + h_c --> adp_c + 2.0 h_e + pi_c,"['M153_45900001458-t31_1-p1', 'M153_2880002575-t31_1-p1', 'M153_30000001842-t31_1-p1']",1000.0,0.0
+CMPDAi,cmp_c + h2o_c + h_c --> nh4_c + ump_c,['M153_8950003783-t31_1-p1'],1000.0,0.0
+PYK3,gdp_c + h_c + pep_c --> gtp_c + pyr_c,['M153_100058818-t31_1-p1'],1000.0,0.0
+FACOAL1832,atp_c + coa_c + lnlnca_c --> amp_c + lnlncacoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+NTP6,dctp_c + h2o_c --> dcdp_c + h_c + pi_c,['M153_19600011630-t31_1-p1'],1000.0,0.0
+PAIL18111Z160t,atp_c + h2o_c + pail18111Z160_c --> adp_c + h_c + pail18111Z160_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PE1819Z1835Z9Z12Zt,atp_c + h2o_c + pe1819Z1835Z9Z12Z_c --> adp_c + h_c + pe1819Z1835Z9Z12Z_e + pi_c,['M153_2750007406-t31_1-p1'],1000.0,0.0
+PACOAL,atp_c + coa_c + pa_c --> amp_c + pacoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+DHFOR,fol_c + h_c + nadh_c --> dhf_c + nad_c,['M153_4900005145-t31_1-p1'],1000.0,0.0
+THFOR1,fol_c + 2.0 h_c + 2.0 nadh_c --> 2.0 nad_c + thf_c,['M153_4900005145-t31_1-p1'],1000.0,0.0
+THFOR2,fol_c + 2.0 h_c + 2.0 nadph_c --> 2.0 nadp_c + thf_c,['M153_4900005145-t31_1-p1'],1000.0,0.0
+FACOAL180_1,atp_c + coa_c + ocdca_c --> amp_c + ocdccoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z18111Z3,12dgr16018111Z_c + pa1819Z18111Z_c --> 1odec9eg3p_c + tag16018111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT16018111Z1819Z1,12dgr16018111Z_c + pa1601819Z_c --> 1hdecg3p_c + tag16018111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z1602,12dgr1601819Z_c + pa1819Z160_c --> 1odec9eg3p_c + tag1601819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z1819Z1,12dgr1601819Z_c + pa1601819Z_c --> 1hdecg3p_c + tag1601819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1601819Z1819Z2,12dgr1601819Z_c + pa1801819Z_c --> 1odecg3p_c + tag1601819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z1601,12dgr1801819Z_c + pa18111Z160_c --> 1odec11eg3p_c + tag1801819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z1602,12dgr1801819Z_c + pa1819Z160_c --> 1odec9eg3p_c + tag1801819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z18111Z2,12dgr1801819Z_c + pa18111Z18111Z_c --> 1odec11eg3p_c + tag1801819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z18111Z3,12dgr1801819Z_c + pa1819Z18111Z_c --> 1odec9eg3p_c + tag1801819Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z1819Z1,12dgr1801819Z_c + pa1601819Z_c --> 1hdecg3p_c + tag1801819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1801819Z1819Z4,12dgr1801819Z_c + pa1819Z1819Z_c --> 1odec9eg3p_c + tag1801819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z1602,12dgr18111Z18111Z_c + pa1819Z160_c --> 1odec9eg3p_c + tag18111Z18111Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z18111Z1,12dgr18111Z18111Z_c + pa16018111Z_c --> 1hdecg3p_c + tag18111Z18111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z18111Z3,12dgr18111Z18111Z_c + pa1819Z18111Z_c --> 1odec9eg3p_c + tag18111Z18111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z1819Z1,12dgr18111Z18111Z_c + pa1601819Z_c --> 1hdecg3p_c + tag18111Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z18111Z1819Z2,12dgr18111Z18111Z_c + pa1801819Z_c --> 1odecg3p_c + tag18111Z18111Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT18111Z1819Z1819Z2,12dgr18111Z1819Z_c + pa1801819Z_c --> 1odecg3p_c + tag18111Z1819Z1819Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z18111Z18111Z2,12dgr1819Z18111Z_c + pa18111Z18111Z_c --> 1odec11eg3p_c + tag1819Z18111Z18111Z_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+PLDAGAT1819Z1819Z1602,12dgr1819Z1819Z_c + pa1819Z160_c --> 1odec9eg3p_c + tag1819Z1819Z160_c,['M153_869000619-t31_1-p1'],1000.0,0.0
+1AGPEAT1801819Z,1agpe180_c + ocdce9coa_c --> coa_c + pe1801819Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT1801829Z12Z,1agpe180_c + lnlccoa_c --> coa_c + pe1801829Z12Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT1801845Z9Z12Z15Z,1agpe180_c + cacoa_c --> coa_c + pe1801845Z9Z12Z15Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT1819Z1819Z,1agpe1819Z_c + ocdce9coa_c --> coa_c + pe1819Z1819Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+1AGPEAT1819Z1845Z9Z12Z15Z,1agpe1819Z_c + cacoa_c --> coa_c + pe1819Z1845Z9Z12Z15Z_c,['M153_12580001917-t31_1-p1'],1000.0,0.0
+DOLPMT,dolp_c + gdpmann_c --> dolmanp_c + gdp_c,['M153_210007846-t31_1-p1'],1000.0,0.0
+ACTD2,actn__R_c + coa_c + nad_c --> acald_c + accoa_c + h_c + nadh_c,"['M153_2500027507-t31_1-p1', 'M153_1780006516-t31_1-p1']",1000.0,0.0
+METSRabc,atp_c + h2o_c + metox__R_e --> adp_c + h_c + metox__R_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+METSabc,atp_c + h2o_c + metox_e --> adp_c + h_c + metox_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+r0777,HC01652_c + 4.0 h_c --> HC01710_c,['M153_1000123620'],1000.0,0.0
+TDP,h2o_c + thmpp_c --> h_c + pi_c + thmmp_c,"['M153_16390001705', 'M153_478100073', 'M153_18000010351', 'M153_1100018673']",1000.0,0.0
+FALGTHLs,fald_c + gthrd_c --> hmgth_c,['M153_2100011244'],1000.0,0.0
+IPPS,3mob_c + accoa_c + h2o_c --> 3c3hmp_c + coa_c + h_c,['M153_2200021801'],1000.0,0.0
+PI3P5K_cho,atp_c + pail3p_cho_c --> adp_c + h_c + pail35p_cho_c,"['M153_7700016425', 'M153_1590007318', 'M153_11750001718', 'M153_25430001788']",1000.0,0.0
+MI3PP,h2o_c + mi3p__D_c --> inost_c + pi_c,['M153_7700020125'],1000.0,0.0
+SELNPS,atp_c + h2o_c + seln_c --> amp_c + pi_c + selnp_c,['M153_770006077'],1000.0,0.0
+SELNPS_cho,atp_c + h2o_c + seln_c --> amp_c + 2.0 h_c + pi_c + selnp_c,['M153_770006077'],1000.0,0.0
+GUACYC,gtp_c --> 35cgmp_c + ppi_c,"['M153_34390001706', 'M153_11600012468', 'M153_5940004863']",1000.0,0.0
+GUAC,gtp_c --> 35cgmp_c + h_c + ppi_c,"['M153_34390001706', 'M153_11600012468', 'M153_5940004863']",1000.0,0.0
+ASNNe,asn__L_e + h2o_e --> asp__L_e + nh4_e,['M153_1550009038'],1000.0,0.0
+ASNN,asn__L_c + h2o_c --> asp__L_c + nh4_c,['M153_1550009038'],1000.0,0.0
+3DSPHR,3dsphgn_c + h_c + nadph_c --> nadp_c + sphgn_c,['M153_1780008721'],1000.0,0.0
+NTPP7,dttp_c + h2o_c --> dtmp_c + h_c + ppi_c,"['M153_5070002149', 'M153_19600011630', 'M153_5070002902']",1000.0,0.0
+ADMDC,amet_c + h_c --> ametam_c + co2_c,['M153_2140005522'],1000.0,0.0
+ACPS,coa_c + h2o_c --> 2.0 h_c + pan4p_c + pap_c,"['M153_2880008669', 'M153_880000125']",1000.0,0.0
+UAGPT2,uaGgla_c + uacgam_c --> h_c + uaaGgla_c + udp_c,['M153_3430001967'],1000.0,0.0
+PI4P5K_cho,atp_c + pail4p_cho_c --> adp_c + h_c + pail45p_cho_c,['M153_3750007133'],1000.0,0.0
+PIK4_cho,atp_c + pail_cho_c --> adp_c + h_c + pail4p_cho_c,"['M153_735000501', 'M153_3770007529', 'M153_523000877']",1000.0,0.0
+TREH,h2o_c + tre_c --> 2.0 glc__D_c,"['M153_6880003052', 'M153_4200004736']",1000.0,0.0
+TREHe,h2o_e + tre_e --> 2.0 glc__D_e,"['M153_6880003052', 'M153_4200004736']",1000.0,0.0
+ANPRT,anth_c + prpp_c --> ppi_c + pran_c,['M153_4420001905'],1000.0,0.0
+PI45P5P_cho,h2o_c + pail45p_cho_c --> pail4p_cho_c + pi_c,['M153_6230001201'],1000.0,0.0
+GPDDA2,g3pe_c + h2o_c --> etha_c + glyc3p_c + h_c,['M153_6420003267'],1000.0,0.0
+G6PI3,g6p_B_c --> f6p_c,['M153_6470001780'],1000.0,0.0
+G6PI2,g6p_B_c --> f6p_B_c,['M153_6470001780'],1000.0,0.0
+FBA2,f1p_c --> dhap_c + glyald_c,['M153_7370004195'],1000.0,0.0
+CDIPTr_cho,cdpdag_cho_c + inost_c --> cmp_c + h_c + pail_cho_c,['M153_8380001700'],1000.0,0.0
+r0016,4.0 fe2_e + 4.0 h_e + o2_e --> 4.0 fe3_e + 2.0 h2o_e,['M153_12980001942'],1000.0,0.0
+FEROc,4.0 fe2_c + 4.0 h_c + o2_c --> 4.0 fe3_c + 2.0 h2o_c,['M153_12980001942'],1000.0,0.0
+NT5C,h2o_c + nicrnt_c --> nicrns_c + pi_c,['M153_15220002717'],1000.0,0.0
+ASNTRS_1,asn__L_c + atp_c + trnaasn_c --> amp_c + asntrna_c + h_c + ppi_c,['M153_15470001139'],1000.0,0.0
+PIK3_cho,atp_c + pail_cho_c --> adp_c + h_c + pail3p_cho_c,['M153_1563000286'],1000.0,0.0
+ATPM,atp_c + h2o_c --> adp_c + h_c + pi_c,"['M153_38690003', 'M153_35100001', 'M153_213700093', 'M153_3462000440']",1000.0,0.0
+ATPS,atp_c + h2o_c --> adp_c + h_e + pi_c,"['M153_38690003', 'M153_35100001', 'M153_213700093', 'M153_3462000440']",1000.0,0.0
+SACCD1,L2aadp6sa_c + glu__L_c + h_c + nadph_c --> h2o_c + nadp_c + saccrp__L_c,['M153_23400001920'],1000.0,0.0
+DNTP,apppa_c + h2o_c --> adp_c + amp_c + 2.0 h_c,"['M153_16223000720', 'M153_3424000482']",1000.0,0.0
+GLUDy,glu__L_c + h2o_c + nadp_c --> akg_c + h_c + nadph_c + nh4_c,['M153_39420002'],1000.0,0.0
+BSORy,btnso_c + h_c + nadph_c --> btn_c + h2o_c + nadp_c,['M153_5552000405'],1000.0,0.0
+GAPDi_nadp,13dpg_c + h_c + nadph_c --> g3p_c + nadp_c + pi_c,['M153_5947000186'],1000.0,0.0
+HYDA,2.0 fdxrd_c --> 2.0 fdxox_c + h2_c + 2.0 h_c,[],1000.0,0.0
+SUCRabc,atp_c + h2o_c + sucr_e --> adp_c + h_c + pi_c + sucr_c,[],1000.0,0.0
+ASPt2_2,asp__L_e + 2.0 h_e --> asp__L_c + 2.0 h_c,[],1000.0,0.0
+r1162,atp_c + h2o_c + so4_c --> adp_c + h_c + pi_c + so4_e,[],1000.0,0.0
+FEROt,4.0 fe2_e + 4.0 h_e + o2_e --> 4.0 fe3_c + 2.0 h2o_e,[],1000.0,0.0
+MNt2,h_e + mn2_e --> h_c + mn2_c,[],1000.0,0.0
+ACLSa,h_c + pyr_c + thmpp_c --> 2ahethmpp_c + co2_c,[],1000.0,0.0
+MALTabc,atp_c + h2o_c + malt_e --> adp_c + h_c + malt_c + pi_c,[],1000.0,0.0
+CYSabc,atp_c + cys__L_e + h2o_c --> adp_c + cys__L_c + h_c + pi_c,[],1000.0,0.0
+ATPS3r,adp_c + 3.0 h_e + pi_c --> atp_c + h2o_c + 2.0 h_c,[],1000.0,0.0
+CAATPS_1,atp_c + ca2_c + h2o_c --> adp_c + ca2_e + h_e + pi_c,[],1000.0,0.0
+PGLc,3.0 6pgl_c + 3.0 h2o_c --> 3.0 6pgc_c + 3.0 h_c,[],1000.0,0.0
+NIabc,atp_c + h2o_c + ni2_e --> adp_c + h_c + ni2_c + pi_c,[],1000.0,0.0
+MALTPTabc,atp_c + h2o_c + maltpt_e --> adp_c + h_c + maltpt_c + pi_c,[],1000.0,0.0
+THMabc,atp_c + h2o_c + thm_e --> adp_c + h_c + pi_c + thm_c,[],1000.0,0.0
+MSO3abc,atp_c + h2o_c + mso3_e --> adp_c + h_c + mso3_c + pi_c,[],1000.0,0.0
+PALFATPtc,atp_c + coa_c + hdca_e --> amp_c + pmtcoa_c + ppi_c,[],1000.0,0.0
+r0280,dadp_c + h_c + pep_c --> datp_c + pyr_c,[],1000.0,0.0
+GGTAe2,gthrd_e + h2o_e --> cgly_e + glu__L_e,[],1000.0,0.0
+ASPt2r,asp__L_e + h_e --> asp__L_c + h_c,[],1000.0,0.0
+GTHRDH_syn,gthrd_c + h2o_c --> cgly_c + glu__L_c,[],1000.0,0.0
+MALTHXabc,atp_c + h2o_c + malthx_e --> adp_c + h_c + malthx_c + pi_c,[],1000.0,0.0
+PPA_1,h2o_c + ppi_c --> h_e + 2.0 pi_c,[],1000.0,0.0
+CDPDAGS_OLE_PALM,ctp_c + h_c + pa1819Z160_c --> cdp12dgr1819Z160_c + ppi_c,[],1000.0,0.0
+MALTTTRabc,atp_c + h2o_c + maltttr_e --> adp_c + h_c + maltttr_c + pi_c,[],1000.0,0.0
+GLUt2r,glu__L_e + h_e --> glu__L_c + h_c,[],1000.0,0.0
+MALTTRabc,atp_c + h2o_c + malttr_e --> adp_c + h_c + malttr_c + pi_c,[],1000.0,0.0
+THMATPe,atp_c + h2o_c + thm_c --> adp_c + h_c + pi_c + thm_e,[],1000.0,0.0
+NAabcO,atp_c + h2o_c + na1_c --> adp_c + h_c + na1_e + pi_c,[],1000.0,0.0
+r1530,atp_c + gthrd_c + h2o_c --> adp_c + gthrd_e + h_c + pi_c,[],1000.0,0.0
+CYTBD2,2.0 h_c + mql8_c + 0.5 o2_c --> h2o_c + 2.0 h_e + mqn8_c,[],1000.0,0.0
+ASPt2_3,asp__L_e + 3.0 h_e --> asp__L_c + 3.0 h_c,[],1000.0,0.0
+SELTORc,6.0 fdxrd_c + slnt_c --> 6.0 fdxox_c + 3.0 h2o_c + 6.0 h_c + seln_c,[],1000.0,0.0
+ALCDH_nadp_hic,acald_c + h_c + nadph_c --> etoh_c + nadp_c,['M153_2100048694-t31_1-p1'],1000.0,0.0
+ENLIPIDAt1exc,LptA_e + enlipidA_e --> enlipidA_LptA_e,['M153_7890002214-t31_1-p1'],1000.0,0.0
+PE140abcppc,atp_c + h2o_c + pe140_c --> adp_c + h_c + pe140_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+ANTPPTc,anth_c + prpp_c --> h_c + ppi_c + pran_c,['M153_4420001905'],1000.0,0.0
+14GLUCANabcppc,14glucan_e + atp_c + h2o_c --> 14glucan_c + adp_c + h_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+PE160abcppc,atp_c + h2o_c + pe160_c --> adp_c + h_c + pe160_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PG160abcppc,atp_c + h2o_c + pg160_c --> adp_c + h_c + pg160_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PE161abcppc,atp_c + h2o_c + pe161_c --> adp_c + h_c + pe161_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PGKhc,13dpg_c + adp_c --> 3pg_c + atp_c,"['M153_2800006986', 'M153_987200024', 'M153_82770001060']",1000.0,0.0
+PGP120abcppc,atp_c + h2o_c + pgp120_c --> adp_c + h_c + pgp120_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PG120abcppc,atp_c + h2o_c + pg120_c --> adp_c + h_c + pg120_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PGP141abcppc,atp_c + h2o_c + pgp141_c --> adp_c + h_c + pgp141_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PG140abcppc,atp_c + h2o_c + pg140_c --> adp_c + h_c + pg140_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PG181abcppc,atp_c + h2o_c + pg181_c --> adp_c + h_c + pg181_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+GLPThic,atp_c + g1p_c --> adpglc_c + ppi_c,"['M153_9476000826', 'M153_8870003818']",1000.0,0.0
+DXHPScmc,h2o_c + q6_c + spmd_c --> 13dampp_c + 4abutn_c + q6h2_c,['M153_3370006219-t31_1-p1'],1000.0,0.0
+SACCD4mc,h2o_c + nadp_c + saccrp__L_c --> L2aadp6sa_c + glu__L_c + h_c + nadph_c,['M153_23400001920'],1000.0,0.0
+PGP161abcppc,atp_c + h2o_c + pgp161_c --> adp_c + h_c + pgp161_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PGP180abcppc,atp_c + h2o_c + pgp180_c --> adp_c + h_c + pgp180_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+ENLIPAabctexc,atp_c + enlipa_e + h2o_c --> adp_c + enlipa_c + h_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+K2L4Aabcppc,atp_c + h2o_c + kdo2lipid4_c --> adp_c + h_c + kdo2lipid4_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+K2L4Aabctexc,atp_c + h2o_c + kdo2lipid4_e --> adp_c + h_c + kdo2lipid4_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+PS181abcppc,atp_c + h2o_c + ps181_c --> adp_c + h_c + pi_c + ps181_e,['M153_544000377-t31_1-p1'],1000.0,0.0
+MCTCc,3mb2coa_c + atp_c + hco3_c --> 3mgcoa_c + adp_c + pi_c,['M153_44890001475-t31_1-p1'],1000.0,0.0
+FACOAL140t2ppc,atp_c + coa_c + h_e + ttdca_e --> amp_c + h_c + ppi_c + tdcoa_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+GLCGLYCabcpp_sync,atp_c + glcglyc_e + h2o_c --> adp_c + glcglyc_c + h_c + pi_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+MOD_4mopc,4mop_c + h_c + thmpp_c --> 3mhtpp_c + co2_c,['M153_2350009583-t31_1-p1'],1000.0,0.0
+FACOAL141t2ppc,atp_c + coa_c + h_e + ttdcea_e --> amp_c + h_c + ppi_c + tdecoa_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+FACOAL160t2ppc,atp_c + coa_c + h_e + hdca_e --> amp_c + h_c + pmtcoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+FACOAL181t2ppc,atp_c + coa_c + h_e + ocdcea_e --> amp_c + h_c + odecoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+FACOAL60t2ppc,atp_c + coa_c + h_e + hxa_e --> amp_c + h_c + hxcoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+PGMfc,3pg_c --> 2pg_c,"['M153_147730001', 'M153_19600013693']",1000.0,0.0
+LIPAabctexc,atp_c + h2o_c + lipa_e --> adp_c + h_c + lipa_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+FBA3hic,dhap_c + e4p_c --> s17bp_c,['M153_7370004195-t31_1-p1'],1000.0,0.0
+SALCHS4abcppc,atp_c + h2o_c + salchs4_c --> adp_c + h_c + pi_c + salchs4_e,['M153_7510001393-t31_1-p1'],1000.0,0.0
+ASPSEc,asn__L_c + h2o_c + h_c --> asp__L_c + nh4_c,['M153_1550009038'],1000.0,0.0
+ACOLIPAabctexc,acolipa_e + atp_c + h2o_c --> acolipa_c + adp_c + h_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+MODc,3mob_c + h_c + thmpp_c --> 2mhop_c + co2_c,['M153_2350009583-t31_1-p1'],1000.0,0.0
+MATmc,atp_c + h2o_c + met__L_c --> amet_c + h_c + pi_c + ppi_c,['M153_5740002994-t31_1-p1'],1000.0,0.0
+MOD_3mopc,3mop_c + h_c + thmpp_c --> 2mhob_c + co2_c,['M153_2350009583-t31_1-p1'],1000.0,0.0
+G3PD2_1c,dhap_c + h_c + nadph_c --> glyc3p_c + nadp_c,['M153_5470004277-t31_1-p1'],1000.0,0.0
+PGMmc,3pg_c --> 2pg_c,"['M153_147730001', 'M153_19600013693']",1000.0,0.0
+FACOAL100t2ppc,atp_c + coa_c + dca_e + h_e --> amp_c + dcacoa_c + h_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+LIPACabcppc,atp_c + h2o_c + lipa_cold_c --> adp_c + h_c + lipa_cold_e + pi_c,['M153_17680002173-t31_1-p1'],1000.0,0.0
+FACOAL161t2ppc,atp_c + coa_c + h_e + hdcea_e --> amp_c + h_c + hdcoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+LIPAabcppc,atp_c + h2o_c + lipa_c --> adp_c + h_c + lipa_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+COLIPAabcppc,atp_c + colipa_c + h2o_c --> adp_c + colipa_e + h_c + pi_c,['M153_17680002173-t31_1-p1'],1000.0,0.0
+FACOAL180t2ppc,atp_c + coa_c + h_e + ocdca_e --> amp_c + h_c + ppi_c + stcoa_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+ECA4COLIPAabctexc,atp_c + eca4colipa_e + h2o_c --> adp_c + eca4colipa_c + h_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+COLIPAabctexc,atp_c + colipa_e + h2o_c --> adp_c + colipa_c + h_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+ETHSO3abcppc,atp_c + ethso3_e + h2o_c --> adp_c + ethso3_c + h_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+CDPDGPm_SCc,0.01 cdpdag_SC_c + glyc3p_c --> cmp_c + h_c + 0.01 pgp_SC_c,['M153_123140001-t31_1-p1'],1000.0,0.0
+IDPhc,h2o_c + ppi_c --> 2.0 pi_c,['M153_3860006633-t31_1-p1'],1000.0,0.0
+IDPmc,h2o_c + ppi_c --> 2.0 pi_c,['M153_3860006633-t31_1-p1'],1000.0,0.0
+GLYATxc,accoa_c + gly_c --> 2aobut_c + coa_c + h_c,['M153_880007894-t31_1-p1'],1000.0,0.0
+G12MT2gc,gdpmann_c + m3macchitppdol_c --> gdp_c + h_c + m4macchitppdol_c,['M153_3440000528-t31_1-p1'],1000.0,0.0
+FACOAL120t2ppc,atp_c + coa_c + ddca_e + h_e --> amp_c + ddcacoa_c + h_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+FACOAL80t2ppc,atp_c + coa_c + h_e + octa_e --> amp_c + h_c + occoa_c + ppi_c,['M153_1313000491-t31_1-p1'],1000.0,0.0
+PA141abcppc,atp_c + h2o_c + pa141_c --> adp_c + h_c + pa141_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+MOD_2mbdhlc,2mhob_c + lpam_c --> 2mbdhl_c + thmpp_c,['M153_2350009583-t31_1-p1'],1000.0,0.0
+PA140abcppc,atp_c + h2o_c + pa140_c --> adp_c + h_c + pa140_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+FBAfc,fdp_B_c --> dhap_c + g3p_c,['M153_7370004195-t31_1-p1'],1000.0,0.0
+FBAhc,fdp_B_c --> dhap_c + g3p_c,['M153_7370004195-t31_1-p1'],1000.0,0.0
+PA160abcppc,atp_c + h2o_c + pa160_c --> adp_c + h_c + pa160_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+FEENTER2tppc,atp_c + enter_c + h2o_c --> adp_c + enter_e + h_c + pi_c,['M153_7510001393-t31_1-p1'],1000.0,0.0
+FBAmc,fdp_B_c --> dhap_c + g3p_c,['M153_7370004195-t31_1-p1'],1000.0,0.0
+FE3DCITabcppc,atp_c + fe3dcit_e + h2o_c --> adp_c + 2.0 cit_c + fe3_c + h_c + pi_c,['M153_13100013916-t31_1-p1'],1000.0,0.0
+PDHam2hic,2ahethmpp_c + lpam_c --> adhlam_c + thmpp_c,"['M153_1780006516-t31_1-p1', 'M153_2350009056-t31_1-p1']",1000.0,0.0
+G3POc,dhap_c + h2o2_c --> glyc3p_c + o2_c,['M153_2299000267-t31_1-p1'],1000.0,0.0
+PDHam2mic,2ahethmpp_c + lpam_c --> adhlam_c + thmpp_c,"['M153_1780006516-t31_1-p1', 'M153_2350009583-t31_1-p1']",1000.0,0.0
+SERTRS2c,atp_c + ser__L_c + trnasecys_c --> amp_c + ppi_c + sertrna_sec_c,['M153_15867000729-t31_1-p1'],1000.0,0.0
+DOLPMMerc,dolmanp_c --> dolp_c + h_c + mannan_c,['M153_11592000877-t31_1-p1'],1000.0,0.0
+CHITOBptsc,chitob_e + pep_c --> chit6p_c + pyr_c,['M153_1890002928-t31_1-p1'],1000.0,0.0
+CRO4abcppc,atp_c + cro4_e + h2o_c --> adp_c + cro4_c + h_c + pi_c,['M153_5000037947-t31_1-p1'],1000.0,0.0
+PGKmc,13dpg_c + adp_c --> 3pg_c + atp_c,"['M153_2800006986', 'M153_987200024', 'M153_82770001060']",1000.0,0.0
+SULFACabcppc,atp_c + h2o_c + sulfac_e --> adp_c + h_c + pi_c + sulfac_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+HEMEOMOmc,hemeO_c + nadh_c + o2_c --> h2o_c + hemeA_c + nad_c,['M153_16050001744-t31_1-p1'],1000.0,0.0
+GM1LIPAabcppc,atp_c + h2o_c + hghhlipa_c --> adp_c + h_c + hghhlipa_e + pi_c,['M153_544000377-t31_1-p1'],1000.0,0.0
+GM2LIPAabcppc,atp_c + h2o_c + hghhlipan_c --> adp_c + h_c + hghhlipan_e + pi_c,['M153_544000377-t31_1-p1'],1000.0,0.0
+PA120abcppc,atp_c + h2o_c + pa120_c --> adp_c + h_c + pa120_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+BUTSO3abcppc,atp_c + butso3_e + h2o_c --> adp_c + butso3_c + h_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+PA180abcppc,atp_c + h2o_c + pa180_c --> adp_c + h_c + pa180_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PA181abcppc,atp_c + h2o_c + pa181_c --> adp_c + h_c + pa181_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PSERDv_SCc,h_c + 0.01 ps_SC_c --> co2_c + 0.01 pe_SC_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+TUNGSabcppc,atp_c + h2o_c + tungs_e --> adp_c + h_c + pi_c + tungs_c,['M153_5000037947-t31_1-p1'],1000.0,0.0
+PE120abcppc,atp_c + h2o_c + pe120_c --> adp_c + h_c + pe120_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PE180abcppc,atp_c + h2o_c + pe180_c --> adp_c + h_c + pe180_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PE181abcppc,atp_c + h2o_c + pe181_c --> adp_c + h_c + pe181_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+O16A4COLIPAabctexc,atp_c + h2o_c + o16a4colipa_e --> adp_c + h_c + o16a4colipa_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+PFKhc,atp_c + f6p_B_c --> adp_c + fdp_B_c + h_c,"['M153_3910005435', 'M153_1000126364']",1000.0,0.0
+GCLDHc,fdxox_c + glyclt_c --> fdxrd_c + glx_c,['M153_16050001744-t31_1-p1'],1000.0,0.0
+PG141abcppc,atp_c + h2o_c + pg141_c --> adp_c + h_c + pg141_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+CLIPAabctexc,atp_c + h2o_c + lipa_cold_e --> adp_c + h_c + lipa_cold_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+PG180abcppc,atp_c + h2o_c + pg180_c --> adp_c + h_c + pg180_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+ALAALAabcppc,alaala_e + atp_c + h2o_c --> adp_c + alaala_c + h_c + pi_c,['M153_4240003080-t31_1-p1'],1000.0,0.0
+PGP140abcppc,atp_c + h2o_c + pgp140_c --> adp_c + h_c + pgp140_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+COLIPAPabctexc,atp_c + colipap_e + h2o_c --> adp_c + colipap_c + h_c + pi_c,['M153_7890002214-t31_1-p1'],1000.0,0.0
+G12MT1gc,gdpmann_c + m2macchitppdol_c --> gdp_c + h_c + m3macchitppdol_c,['M153_3440000528-t31_1-p1'],1000.0,0.0
+PS140abcppc,atp_c + h2o_c + ps140_c --> adp_c + h_c + pi_c + ps140_e,['M153_544000377-t31_1-p1'],1000.0,0.0
+r0202c,glyc3p_c + nad_c --> dhap_c + h_c + nadh_c,['M153_5470004277'],1000.0,0.0
+PS180abcppc,atp_c + h2o_c + ps180_c --> adp_c + h_c + pi_c + ps180_e,['M153_544000377-t31_1-p1'],1000.0,0.0
+PA161abcppc,atp_c + h2o_c + pa161_c --> adp_c + h_c + pa161_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+TKT2hc,e4p_c + xu5p__D_c --> f6p_B_c + g3p_c,['M153_110006077-t31_1-p1'],1000.0,0.0
+CHYA2c,acaro_c + h_c + nadph_c + o2_c --> crpxan_c + h2o_c + nadp_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+SO3abcppc,atp_c + h2o_c + so3_e --> adp_c + h_c + pi_c + so3_c,['M153_5000037947-t31_1-p1'],1000.0,0.0
+PPACOALhc,atp_c + coa_c + ppa_c --> amp_c + h_c + ppcoa_c + ppi_c,['M153_236710001-t31_1-p1'],1000.0,0.0
+PE141abcppc,atp_c + h2o_c + pe141_c --> adp_c + h_c + pe141_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+OHPHM6nc,2ohph_5_c + amet_c --> 2omph_5_c + ahcys_c + h_c,['M153_3420002183-t31_1-p1'],1000.0,0.0
+ZHYc,h_c + nadph_c + o2_c + zxan_c --> h2o_c + lut_c + nadp_c,['M153_288920003-t31_1-p1'],1000.0,0.0
+PG161abcppc,atp_c + h2o_c + pg161_c --> adp_c + h_c + pg161_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+UREAabcppc,atp_c + h2o_c + urea_e --> adp_c + h_c + pi_c + urea_c,['M153_544000377-t31_1-p1'],1000.0,0.0
+PGP160abcppc,atp_c + h2o_c + pgp160_c --> adp_c + h_c + pgp160_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+PGP181abcppc,atp_c + h2o_c + pgp181_c --> adp_c + h_c + pgp181_e + pi_c,"['M153_17680002173-t31_1-p1', 'M153_544000377-t31_1-p1']",1000.0,0.0
+MOD_2mhopc,2mhop_c + lpam_c --> 2mpdhl_c + thmpp_c,['M153_2350009583-t31_1-p1'],1000.0,0.0
+PGKfc,13dpg_c + adp_c --> 3pg_c + atp_c,"['M153_2800006986', 'M153_987200024', 'M153_82770001060']",1000.0,0.0
+MOD_3mhtppc,3mhtpp_c + lpam_c --> 3mbdhl_c + thmpp_c,['M153_2350009583-t31_1-p1'],1000.0,0.0
+PSERDg_SCc,h_c + 0.01 ps_SC_c --> co2_c + 0.01 pe_SC_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+PSERDm_SCc,h_c + 0.01 ps_SC_c --> co2_c + 0.01 pe_SC_c,['M153_2200026179-t31_1-p1'],1000.0,0.0
+ISETACabcppc,atp_c + h2o_c + isetac_e --> adp_c + h_c + isetac_c + pi_c,['M153_1300005994-t31_1-p1'],1000.0,0.0
+PS120abcppc,atp_c + h2o_c + ps120_c --> adp_c + h_c + pi_c + ps120_e,['M153_544000377-t31_1-p1'],1000.0,0.0
+ALASmc,gly_c + h_c + succoa_c --> 5aop_c + co2_c + coa_c,['M153_4900002287-t31_1-p1'],1000.0,0.0
+PS160abcppc,atp_c + h2o_c + ps160_c --> adp_c + h_c + pi_c + ps160_e,['M153_544000377-t31_1-p1'],1000.0,0.0
+ACCOAhic,accoa_c + atp_c + hco3_c --> adp_c + malcoa_c + pi_c,"['M153_60700001256', 'M153_30675000501', 'M153_288920003', 'M153_44890001475', 'M153_25710000387']",1000.0,0.0
+PS141abcppc,atp_c + h2o_c + ps141_c --> adp_c + h_c + pi_c + ps141_e,['M153_544000377-t31_1-p1'],1000.0,0.0
+PS161abcppc,atp_c + h2o_c + ps161_c --> adp_c + h_c + pi_c + ps161_e,['M153_544000377-t31_1-p1'],1000.0,0.0
+generic_biomass,0.1364 ala__L_c + 0.1349 arg__L_c + 0.6245 asn__L_c + 0.2994 asp__L_c + 60.01 atp_c + 0.0674 cys__L_c + 0.1353 gln__L_c + 0.3505 glu__L_c + 0.1827 gly_c + 0.1063 his__L_c + 0.3566 ile__L_c + 0.3405 leu__L_c + 0.5124 lys__L_c + 0.1019 met__L_c + 0.1823 phe__L_c + 0.1085 pro__L_c + 0.3055 ser__L_c + 0.2045 thr__L_c + 0.02095 trp__L_c + 0.1379 tyr__L_c + 0.203 val__L_c --> 59.81 adp_c + biomass_c + 59.81 h_c + 59.806 pi_c,[],1000.0,0.0
+protein_bm,0.1364 alatrna_c + 0.1349 argtrna_c + 0.6245 asntrna_c + 0.2994 asptrna_c + 0.0674 cystrna_c + 0.1 fmettrna_c + 0.1353 glntrna_c + 0.3505 glutrna_c + 0.1827 glytrna_c + 0.1063 histrna_c + 0.3566 iletrna_c + 0.3405 leutrna_c + 0.5124 lystrna_c + 0.1019 mettrna_c + 0.1823 phetrna_c + 0.1085 protrna_c + 0.3055 sertrna_c + 0.2045 thrtrna_c + 0.02095 trptrna_c + 0.1379 tyrtrna_c + 0.203 valtrna_c --> bm_protein_c,[],1000.0,0.0
+Protein_t,bm_protein_c --> protein_e,[],1000.0,0.0
+DM_bm,biomass_c --> ,[],1000.0,0.0
+dgl_prod2,12dgr120_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod5,12dgr160_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod8,12dgr181_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod3,12dgr140_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod6,12dgr161_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod4,12dgr141_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod1,dag_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod7,12dgr180_c --> all_dgl_c,[],1000.0,0.0
+lipid_bm,all_dgl_c --> bm_lipid_c,[],1000.0,0.0
+EX_alaala_e,alaala_e <=> ,[],1000.0,-1000.0
+EX_asn__L_e,asn__L_e <=> ,[],1000.0,-1000.0
+EX_asp__L_e,asp__L_e <=> ,[],1000.0,-1000.0
+EX_cys__L_e,cys__L_e <=> ,[],1000.0,-1000.0
+EX_ddca_e,ddca_e <=> ,[],1000.0,-1000.0
+EX_enlipa_e,enlipa_e <=> ,[],1000.0,-1000.0
+EX_fe3_e,fe3_e <=> ,[],1000.0,-1000.0
+EX_fe3dcit_e,fe3dcit_e <=> ,[],1000.0,-1000.0
+EX_inost_e,inost_e <=> ,[],1000.0,-1000.0
+EX_isetac_e,isetac_e <=> ,[],1000.0,-1000.0
+EX_k_e,k_e <=> ,[],1000.0,-1000.0
+EX_malttr_e,malttr_e <=> ,[],1000.0,-1000.0
+EX_maltttr_e,maltttr_e <=> ,[],1000.0,-1000.0
+EX_na1_e,na1_e <=> ,[],1000.0,-1000.0
+EX_o16a4colipa_e,o16a4colipa_e <=> ,[],1000.0,-1000.0
+EX_ptrc_e,ptrc_e <=> ,[],1000.0,-1000.0
+EX_ttdca_e,ttdca_e <=> ,[],1000.0,-1000.0
+EX_urea_e,urea_e <=> ,[],1000.0,-1000.0
+EX_zn2_e,zn2_e <=> ,[],1000.0,-1000.0
+EX_h_e,h_e <=> ,[],1000.0,-1000.0
+EX_cit_e,cit_e <=> ,[],1000.0,-1000.0
+EX_lipa_cold_e,lipa_cold_e <=> ,[],1000.0,-1000.0
+EX_colipap_e,colipap_e <=> ,[],1000.0,-1000.0
+EX_crn_e,crn_e <=> ,[],1000.0,-1000.0
+EX_enter_e,enter_e <=> ,[],1000.0,-1000.0
+EX_gthrd_e,gthrd_e <=> ,[],1000.0,-1000.0
+EX_malthx_e,malthx_e <=> ,[],1000.0,-1000.0
+EX_maltpt_e,maltpt_e <=> ,[],1000.0,-1000.0
+EX_mg2_e,mg2_e <=> ,[],1000.0,-1000.0
+EX_mn2_e,mn2_e <=> ,[],1000.0,-1000.0
+EX_mobd_e,mobd_e <=> ,[],1000.0,-1000.0
+EX_ocdcea_e,ocdcea_e <=> ,[],1000.0,-1000.0
+EX_pi_e,pi_e <=> ,[],1000.0,-1000.0
+EX_so4_e,so4_e <=> ,[],1000.0,-1000.0
+EX_sulfac_e,sulfac_e <=> ,[],1000.0,-1000.0
+EX_tre_e,tre_e <=> ,[],1000.0,-1000.0
+EX_kdo2lipid4_e,kdo2lipid4_e <=> ,[],1000.0,-1000.0
+EX_h2o_e,h2o_e <=> ,[],1000.0,-1000.0
+EX_ergst_e,ergst_e <=> ,[],1000.0,-1000.0
+EX_hdca_e,hdca_e <=> ,[],1000.0,-1000.0
+EX_hdcea_e,hdcea_e <=> ,[],1000.0,-1000.0
+EX_ocdca_e,ocdca_e <=> ,[],1000.0,-1000.0
+EX_glu__L_e,glu__L_e <=> ,[],1000.0,-1000.0
+EX_malt_e,malt_e <=> ,[],1000.0,-1000.0
+EX_o2_e,o2_e <=> ,[],1000.0,-1000.0
+EX_pro__L_e,pro__L_e <=> ,[],1000.0,-1000.0
+EX_so3_e,so3_e <=> ,[],1000.0,-1000.0
+EX_thm_e,thm_e <=> ,[],1000.0,-1000.0
+EX_zymst_e,zymst_e <=> ,[],1000.0,-1000.0
+EX_glc__D_e,glc__D_e <=> ,[],1000.0,-1000.0
+EX_nh4_e,nh4_e <=> ,[],1000.0,-1000.0
+EX_sucr_e,sucr_e <=> ,[],1000.0,-1000.0
+EX_spmd_e,spmd_e <=> ,[],1000.0,-1000.0
+EX_hco3_e,hco3_e <=> ,[],1000.0,-1000.0
+EX_tsul_e,tsul_e <=> ,[],1000.0,-1000.0
+EX_ca2_e,ca2_e <=> ,[],1000.0,-1000.0
+EX_met__D_e,met__D_e <=> ,[],1000.0,-1000.0
+EX_fe2_e,fe2_e <=> ,[],1000.0,-1000.0
+EX_cgly_e,cgly_e <=> ,[],1000.0,-1000.0
+EX_gln__L_e,gln__L_e <=> ,[],1000.0,-1000.0
+EX_glyb_e,glyb_e <=> ,[],1000.0,-1000.0
+EX_ni2_e,ni2_e <=> ,[],1000.0,-1000.0
+EX_pe1801829Z12Z_e,pe1801829Z12Z_e <=> ,[],1000.0,-1000.0
+EX_pe18111Z1829Z12Z_e,pe18111Z1829Z12Z_e <=> ,[],1000.0,-1000.0
+EX_pe18111Z1835Z9Z12Z_e,pe18111Z1835Z9Z12Z_e <=> ,[],1000.0,-1000.0
+EX_pe1819Z1819Z_e,pe1819Z1819Z_e <=> ,[],1000.0,-1000.0
+EX_pe1819Z1845Z9Z12Z15Z_e,pe1819Z1845Z9Z12Z15Z_e <=> ,[],1000.0,-1000.0
+EX_pgp18111Z160_e,pgp18111Z160_e <=> ,[],1000.0,-1000.0
+EX_26dmani_e,26dmani_e <=> ,[],1000.0,-1000.0
+EX_meglyxyl_e,meglyxyl_e <=> ,[],1000.0,-1000.0
+EX_egly_e,egly_e <=> ,[],1000.0,-1000.0
+EX_met__L_e,met__L_e <=> ,[],1000.0,-1000.0
+EX_mso3_e,mso3_e <=> ,[],1000.0,-1000.0
+EX_dca_e,dca_e <=> ,[],1000.0,-1000.0
+EX_butso3_e,butso3_e <=> ,[],1000.0,-1000.0
+EX_chol_e,chol_e <=> ,[],1000.0,-1000.0
+EX_eca4colipa_e,eca4colipa_e <=> ,[],1000.0,-1000.0
+EX_ethso3_e,ethso3_e <=> ,[],1000.0,-1000.0
+EX_hxa_e,hxa_e <=> ,[],1000.0,-1000.0
+EX_colipa_e,colipa_e <=> ,[],1000.0,-1000.0
+EX_lipa_e,lipa_e <=> ,[],1000.0,-1000.0
+EX_octa_e,octa_e <=> ,[],1000.0,-1000.0
+EX_tungs_e,tungs_e <=> ,[],1000.0,-1000.0
+EX_fecost_e,fecost_e <=> ,[],1000.0,-1000.0
+EX_pepd_e,pepd_e <=> ,[],1000.0,-1000.0
+EX_salchs4_e,salchs4_e <=> ,[],1000.0,-1000.0
+EX_enlipidA_e,enlipidA_e <=> ,[],1000.0,-1000.0
+EX_cro4_e,cro4_e <=> ,[],1000.0,-1000.0
+EX_pail1819Z160_e,pail1819Z160_e <=> ,[],1000.0,-1000.0
+EX_pe1801819Z_e,pe1801819Z_e <=> ,[],1000.0,-1000.0
+EX_pe1819Z1829Z12Z_e,pe1819Z1829Z12Z_e <=> ,[],1000.0,-1000.0
+EX_pg18111Z160_e,pg18111Z160_e <=> ,[],1000.0,-1000.0
+EX_pg1819Z160_e,pg1819Z160_e <=> ,[],1000.0,-1000.0
+EX_pgp1819Z160_e,pgp1819Z160_e <=> ,[],1000.0,-1000.0
+EX_degly_e,degly_e <=> ,[],1000.0,-1000.0
+EX_lido_e,lido_e <=> ,[],1000.0,-1000.0
+EX_metox__R_e,metox__R_e <=> ,[],1000.0,-1000.0
+EX_metox_e,metox_e <=> ,[],1000.0,-1000.0
+EX_ferrich_e,ferrich_e <=> ,[],1000.0,-1000.0
+EX_ttdcea_e,ttdcea_e <=> ,[],1000.0,-1000.0
+EX_acolipa_e,acolipa_e <=> ,[],1000.0,-1000.0
+EX_epist_e,epist_e <=> ,[],1000.0,-1000.0
+EX_cobalt2_e,cobalt2_e <=> ,[],1000.0,-1000.0
+EX_pe1801835Z9Z12Z_e,pe1801835Z9Z12Z_e <=> ,[],1000.0,-1000.0
+EX_pe1801845Z9Z12Z15Z_e,pe1801845Z9Z12Z15Z_e <=> ,[],1000.0,-1000.0
+EX_pe18111Z1819Z_e,pe18111Z1819Z_e <=> ,[],1000.0,-1000.0
+EX_pe18111Z1845Z9Z12Z15Z_e,pe18111Z1845Z9Z12Z15Z_e <=> ,[],1000.0,-1000.0
+EX_pe1829Z12Z1835Z9Z12Z_e,pe1829Z12Z1835Z9Z12Z_e <=> ,[],1000.0,-1000.0
+EX_14glucan_e,14glucan_e <=> ,[],1000.0,-1000.0
+EX_lanost_e,lanost_e <=> ,[],1000.0,-1000.0
+EX_chitob_e,chitob_e <=> ,[],1000.0,-1000.0
+EX_glcglyc_e,glcglyc_e <=> ,[],1000.0,-1000.0
+EX_pail18111Z160_e,pail18111Z160_e <=> ,[],1000.0,-1000.0
+EX_pe1819Z1835Z9Z12Z_e,pe1819Z1835Z9Z12Z_e <=> ,[],1000.0,-1000.0
+EX_LptA_e,LptA_e <=> ,[],1000.0,-1000.0
+EX_enlipidA_LptA_e,enlipidA_LptA_e <=> ,[],1000.0,-1000.0
+EX_pe140_e,pe140_e <=> ,[],1000.0,-1000.0
+EX_pe160_e,pe160_e <=> ,[],1000.0,-1000.0
+EX_pg160_e,pg160_e <=> ,[],1000.0,-1000.0
+EX_pe161_e,pe161_e <=> ,[],1000.0,-1000.0
+EX_pgp120_e,pgp120_e <=> ,[],1000.0,-1000.0
+EX_pg120_e,pg120_e <=> ,[],1000.0,-1000.0
+EX_pgp141_e,pgp141_e <=> ,[],1000.0,-1000.0
+EX_pg140_e,pg140_e <=> ,[],1000.0,-1000.0
+EX_pg181_e,pg181_e <=> ,[],1000.0,-1000.0
+EX_pgp161_e,pgp161_e <=> ,[],1000.0,-1000.0
+EX_pgp180_e,pgp180_e <=> ,[],1000.0,-1000.0
+EX_ps181_e,ps181_e <=> ,[],1000.0,-1000.0
+EX_pa141_e,pa141_e <=> ,[],1000.0,-1000.0
+EX_pa140_e,pa140_e <=> ,[],1000.0,-1000.0
+EX_pa160_e,pa160_e <=> ,[],1000.0,-1000.0
+EX_hghhlipa_e,hghhlipa_e <=> ,[],1000.0,-1000.0
+EX_hghhlipan_e,hghhlipan_e <=> ,[],1000.0,-1000.0
+EX_pa120_e,pa120_e <=> ,[],1000.0,-1000.0
+EX_pa180_e,pa180_e <=> ,[],1000.0,-1000.0
+EX_pa181_e,pa181_e <=> ,[],1000.0,-1000.0
+EX_pe120_e,pe120_e <=> ,[],1000.0,-1000.0
+EX_pe180_e,pe180_e <=> ,[],1000.0,-1000.0
+EX_pe181_e,pe181_e <=> ,[],1000.0,-1000.0
+EX_pg141_e,pg141_e <=> ,[],1000.0,-1000.0
+EX_pg180_e,pg180_e <=> ,[],1000.0,-1000.0
+EX_pgp140_e,pgp140_e <=> ,[],1000.0,-1000.0
+EX_ps140_e,ps140_e <=> ,[],1000.0,-1000.0
+EX_ps180_e,ps180_e <=> ,[],1000.0,-1000.0
+EX_pa161_e,pa161_e <=> ,[],1000.0,-1000.0
+EX_pe141_e,pe141_e <=> ,[],1000.0,-1000.0
+EX_pg161_e,pg161_e <=> ,[],1000.0,-1000.0
+EX_pgp160_e,pgp160_e <=> ,[],1000.0,-1000.0
+EX_pgp181_e,pgp181_e <=> ,[],1000.0,-1000.0
+EX_ps120_e,ps120_e <=> ,[],1000.0,-1000.0
+EX_ps160_e,ps160_e <=> ,[],1000.0,-1000.0
+EX_ps141_e,ps141_e <=> ,[],1000.0,-1000.0
+EX_ps161_e,ps161_e <=> ,[],1000.0,-1000.0
+EX_protein_e,protein_e <=> ,[],1000.0,-1000.0
+LYSTYRILEr,2.0 h2o_c + lystyrile_c --> ile__L_c + lys__L_c + tyr__L_c,[],1000.0,0.0
+ATNAHc,alltn_c + h2o_c + h_c --> alltt_c,[],1000.0,0.0
+NH4ti,nh4_c --> nh4_e,[],1000.0,0.0
+LYSTYRILEt,h_e + lystyrile_e --> h_c + lystyrile_c,[],1000.0,0.0
+EX_adprib_e,adprib_e <=> ,[],1000.0,-1000.0
+TRSARr,2h3oppan_c + h_c + nadh_c --> glyc__R_c + nad_c,[],1000.0,0.0
+NADHDH,3.0 h_c + nadh_c + q_c --> 2.0 h_e + nad_c + qh2_c,[],1000.0,0.0
+XAO,h2o_c + o2_c + xan_c --> h2o2_c + urate_c,[],1000.0,0.0
+HISLYSILEt,h_e + hislysile_e --> h_c + hislysile_c,[],1000.0,0.0
+CYOO3,2.0 focytcc_c + 6.0 h_c + 0.5 o2_c --> 2.0 ficytcc_c + h2o_c + 4.0 h_e,[],1000.0,0.0
+NTPTP1,dgtp_c + h2o_c --> dgsn_c + pppi_c,[],1000.0,0.0
+PSP_L,h2o_c + pser__L_c --> pi_c + ser__L_c,[],1000.0,0.0
+r1600,cys__L_c + met__L_e --> cys__L_e + met__L_c,[],1000.0,0.0
+LEULEUTRPr,2.0 h2o_c + leuleutrp_c --> 2.0 leu__L_c + trp__L_c,[],1000.0,0.0
+URIC,2.0 h2o_c + o2_c + urate_c --> alltn_c + co2_c + h2o2_c,[],1000.0,0.0
+HCO3E,co2_c + h2o_c --> h_c + hco3_c,[],1000.0,0.0
+BPNT,h2o_c + pap_c --> amp_c + pi_c,[],1000.0,0.0
+CYSLEUTHRt,cysleuthr_e + h_e --> cysleuthr_c + h_c,[],1000.0,0.0
+EX_glucan1500_e,glucan1500_e <=> ,[],1000.0,-1000.0
+DRPA,2dr5p_c --> acald_c + g3p_c,[],1000.0,0.0
+ACALD,acald_c + coa_c + nad_c --> accoa_c + h_c + nadh_c,[],1000.0,0.0
+GLYCK,atp_c + glyc__R_c --> 3pg_c + adp_c + h_c,[],1000.0,0.0
+GLCt1,glc__D_e <=> glc__D_c,[],1000.0,-1000.0
+PYDXO,2.0 h2o_c + nh4_c + 0.5 o2_c + pydx_c --> 2.0 h2o2_c + pydam_c,[],1000.0,0.0
+RPI,r5p_c <=> ru5p__D_c,[],1000.0,-1000.0
+FDH3,for_c + 3.0 h_c + mqn8_c --> co2_c + 2.0 h_e + mql8_c,[],1000.0,0.0
+VALLEUPHEr,2.0 h2o_c + valleuphe_c --> leu__L_c + phe__L_c + val__L_c,[],1000.0,0.0
+GTHOXti,gthox_e --> gthox_c,[],1000.0,0.0
+FORAMD,frmd_c + h2o_c --> for_c + nh4_c,[],1000.0,0.0
+ADPRDP,adprib_c + h2o_c --> amp_c + 2.0 h_c + r5p_c,[],1000.0,0.0
+ILEARGILEr,2.0 h2o_c + ileargile_c --> arg__L_c + 2.0 ile__L_c,[],1000.0,0.0
+HISD_c,3.0 h2o_c + his__L_c --> frmd_c + glu__L_c + nh4_c,[],1000.0,0.0
+PUNP4,dgsn_c + pi_c <=> 2dr1p_c + gua_c,[],1000.0,-1000.0
+LYSLYSLYSr,2.0 h2o_c + lyslyslys_c --> 3.0 lys__L_c,[],1000.0,0.0
+ALATA_L,akg_c + ala__L_c --> glu__L_c + pyr_c,[],1000.0,0.0
+GTHPe,2.0 gthrd_e + h2o2_e --> gthox_e + 2.0 h2o_e,[],1000.0,0.0
+r2532,asn__L_e --> asn__L_c,[],1000.0,0.0
+HSDxi,aspsa_c + h_c + nadh_c --> hom__L_c + nad_c,[],1000.0,0.0
+EX_leuleutrp_e,leuleutrp_e <=> ,[],1000.0,-1000.0
+ALR,h2o_c + mthgxl_c + nadp_c --> 2.0 h_c + nadph_c + pyr_c,[],1000.0,0.0
+PDYXPT_c,pydam_c + pyr_c --> ala__L_c + pydx_c,[],1000.0,0.0
+LYSLYSLYSt,h_e + lyslyslys_e --> h_c + lyslyslys_c,[],1000.0,0.0
+EX_ileargile_e,ileargile_e <=> ,[],1000.0,-1000.0
+ILEARGILEt,h_e + ileargile_e --> h_c + ileargile_c,[],1000.0,0.0
+RPEc,2.0 ru5p__D_c --> 2.0 xu5p__D_c,[],1000.0,0.0
+AOBUTDs,2aobut_c + h_c --> aact_c + co2_c,[],1000.0,0.0
+LEULEUTRPt,h_e + leuleutrp_e --> h_c + leuleutrp_c,[],1000.0,0.0
+ADPRIBt,adprib_e --> adprib_c,[],1000.0,0.0
+CYOR3m,2.0 ficytcc_c + h_c + mql7_c --> 2.0 focytcc_c + 3.0 h_e + mqn7_c,[],1000.0,0.0
+SO4HCOtex,2.0 hco3_c + so4_e --> 2.0 hco3_e + so4_c,[],1000.0,0.0
+CYSGLUexR,cys__L_e + gln__L_c <=> cys__L_c + gln__L_e,[],1000.0,-1000.0
+CYSLEUTHRr,cysleuthr_c + 2.0 h2o_c --> cys__L_c + leu__L_c + thr__L_c,[],1000.0,0.0
+EX_hislysile_e,hislysile_e <=> ,[],1000.0,-1000.0
+EX_lysargleu_e,lysargleu_e <=> ,[],1000.0,-1000.0
+PYDXO_1,h2o_c + o2_c + pydam_c --> h2o2_c + nh4_c + pydx_c,[],1000.0,0.0
+ASPK,asp__L_c + atp_c --> 4pasp_c + adp_c,[],1000.0,0.0
+PSERT,3php_c + glu__L_c --> akg_c + pser__L_c,[],1000.0,0.0
+PROPAT4te,pro__L_e --> pro__L_c,[],1000.0,0.0
+LYSARGLEUr,2.0 h2o_c + h_c + lysargleu_c --> arg__L_c + leu__L_c + lys__L_c,[],1000.0,0.0
+EX_hislysval_e,hislysval_e <=> ,[],1000.0,-1000.0
+GUAD_1,gua_c + h2o_c + 2.0 h_c --> nh4_c + xan_c,[],1000.0,0.0
+THRS,h2o_c + phom_c --> pi_c + thr__L_c,[],1000.0,0.0
+VALLEUPHEt,h_e + valleuphe_e --> h_c + valleuphe_c,[],1000.0,0.0
+HISLYSVALr,2.0 h2o_c + hislysval_c --> his__L_c + lys__L_c + val__L_c,[],1000.0,0.0
+GLS2,glucan6_c + 5.0 h2o_c --> 6.0 glc__D_c,[],1000.0,0.0
+DGTPtmc, --> dgdp_c + dgtp_c + h_c,[],1000.0,0.0
+PAPt,pap_e <=> pap_c,[],1000.0,-1000.0
+EX_valleuphe_e,valleuphe_e <=> ,[],1000.0,-1000.0
+EX_lyslyslys_e,lyslyslys_e <=> ,[],1000.0,-1000.0
+UGLYCH,h2o_c + 2.0 h_c + urdglyc_c --> co2_c + glx_c + 2.0 nh4_c,[],1000.0,0.0
+AMOc,aact_c + h2o_c + h_c + o2_c --> h2o2_c + mthgxl_c + nh4_c,[],1000.0,0.0
+ADK2,amp_c + pppi_c --> adp_c + ppi_c,[],1000.0,0.0
+GLUCAN2abc,atp_c + glucan6_e + h2o_c --> adp_c + glucan6_c + h_c + pi_c,[],1000.0,0.0
+ASADHc,4pasp_c + h_c + nadph_c --> aspsa_c + nadp_c + pi_c,[],1000.0,0.0
+LYSARGLEUt,h_e + lysargleu_e --> h_c + lysargleu_c,[],1000.0,0.0
+EX_pap_e,pap_e <=> ,[],1000.0,-1000.0
+H2O2t,h2o2_e <=> h2o2_c,[],1000.0,-1000.0
+FERIRDe,2.0 fe3_e + qh2_c --> 2.0 fe2_e + 2.0 h_e + q_c,[],1000.0,0.0
+EX_cysleuthr_e,cysleuthr_e <=> ,[],1000.0,-1000.0
+STPT1,hom__L_c + pser__L_c --> phom_c + ser__L_c,[],1000.0,0.0
+PPM2,2dr1p_c --> 2dr5p_c,[],1000.0,0.0
+GLYO1,gly_c + h2o_c + o2_c --> glx_c + h2o2_c + nh4_c,[],1000.0,0.0
+SO4t_e,2.0 h_c + so4_c --> 2.0 h_e + so4_e,[],1000.0,0.0
+TAhc,g3p_c + s7p_c --> e4p_c + f6p_B_c,[],1000.0,0.0
+EX_lystyrile_e,lystyrile_e <=> ,[],1000.0,-1000.0
+PGCD,3pg_c + nad_c --> 3php_c + h_c + nadh_c,[],1000.0,0.0
+GLS2e,glucan1500_e + 249.0 h2o_e --> 250.0 glucan6_e,[],1000.0,0.0
+HISLYSILEr,2.0 h2o_c + hislysile_c --> his__L_c + ile__L_c + lys__L_c,[],1000.0,0.0
+HISLYSVALt,h_e + hislysval_e --> h_c + hislysval_c,[],1000.0,0.0
+GLXCL,2.0 glx_c + h_c --> 2h3oppan_c + co2_c,[],1000.0,0.0
+ALLTAMH,alltt_c + 2.0 h2o_c + 2.0 h_c --> co2_c + 2.0 nh4_c + urdglyc_c,[],1000.0,0.0

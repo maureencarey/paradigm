@@ -1,0 +1,421 @@
+reaction ids,reaction formulas,genes,upper_bounds,lower_bounds
+2AGPGAT120,2agpg120_c + atp_c + ddca_c --> amp_c + pg120_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPGAT141,2agpg141_c + atp_c + ttdcea_c --> amp_c + pg141_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPGAT180,2agpg180_c + atp_c + ocdca_c --> amp_c + pg180_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+3OAR120,3oddecACP_c + h_c + nadph_c --> 3hddecACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR141,3ocmrs7eACP_c + h_c + nadph_c --> 3hcmrs7eACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR161,3ocpalm9eACP_c + h_c + nadph_c --> 3hcpalm9eACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+AACPS5,ACP_c + atp_c + ocdcea_c --> amp_c + octeACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+AACPS6,ACP_c + atp_c + ocdca_c --> amp_c + ocdcaACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+AACPS9,ACP_c + atp_c + octa_c --> amp_c + ocACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+ACCOAL,atp_c + coa_c + ppa_c --> adp_c + pi_c + ppcoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+ACODA,acorn_c + h2o_c --> ac_c + orn_c,"['TcCLB.510837.9:mRNA-p1', 'TcCLB.510837.20:mRNA-p1']",1000.0,0.0
+ALCD2x,etoh_c + nad_c --> acald_c + h_c + nadh_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+AP5AH,ap5a_c + h2o_c --> adp_c + atp_c + 2.0 h_c,['TcCLB.504411.30:mRNA-p1'],1000.0,0.0
+GLYCL,gly_c + nad_c + thf_c --> co2_c + mlthf_c + nadh_c + nh4_c,"['TcCLB.506843.50:pseudogenic_transcript-p1', 'TcCLB.506919.110:pseudogenic_transcript-p1', 'TcCLB.505919.70:pseudogenic_transcript-p1', 'TcCLB.506349.40:pseudogenic_transcript-p1', 'TcCLB.506169.10:pseudogenic_transcript-p1']",1000.0,0.0
+NACODA,acg5sa_c + h2o_c --> ac_c + glu5sa_c,"['TcCLB.510837.9:mRNA-p1', 'TcCLB.510837.20:mRNA-p1']",1000.0,0.0
+VALTRS,atp_c + trnaval_c + val__L_c --> amp_c + ppi_c + valtrna_c,['TcCLB.511449.20:mRNA-p1'],1000.0,0.0
+ALCD23yi,2mppal_c + h_c + nadph_c --> ibutoh_c + nadp_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD24yi,3mbald_c + h_c + nadph_c --> iamoh_c + nadp_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD26xim,h_m + id3acald_m + nadh_m --> ind3eth_m + nad_m,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+FACOAL180,atp_c + coa_c + ocdca_c --> amp_c + ppi_c + stcoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+GCC2cm,dhlam_m + nad_m --> h_m + lpam_m + nadh_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+GCCa,gly_c + h_c + lpro_c --> alpro_c + co2_c,['TcCLB.506349.40:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL1821,atp_c + coa_c + lnlc_c --> amp_c + lnlccoa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+DAGAH1801819Z,12dgr1801819Z_c + h2o_c --> h_c + mag180_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL18111Z,atp_c + coa_c + ocdcea_c --> amp_c + ocdcecoa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+TAGAH16018111Z18111Z,h2o_c + tag16018111Z18111Z_c --> 12dgr16018111Z_c + h_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH16018111Z1835Z9Z12Z,h2o_c + tag16018111Z1835Z9Z12Z_c --> 12dgr16018111Z_c + h_c + pa_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1801819Z1819Z,h2o_c + tag1801819Z1819Z_c --> 12dgr1801819Z_c + h_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z18111Z180,h2o_c + tag18111Z18111Z180_c --> 12dgr18111Z18111Z_c + h_c + ocdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z18111Z1819Z,h2o_c + tag18111Z18111Z1819Z_c --> 12dgr18111Z18111Z_c + h_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z18111Z160,h2o_c + tag1819Z18111Z160_c --> 12dgr1819Z18111Z_c + h_c + hdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z18111Z18111Z,h2o_c + tag1819Z18111Z18111Z_c --> 12dgr1819Z18111Z_c + h_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z18111Z1835Z9Z12Z,h2o_c + tag1819Z18111Z1835Z9Z12Z_c --> 12dgr1819Z18111Z_c + h_c + pa_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z18111Z1845Z9Z12Z15Z,h2o_c + tag1819Z18111Z1845Z9Z12Z15Z_c --> 12dgr1819Z18111Z_c + ca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z1819Z160,h2o_c + tag1819Z1819Z160_c --> 12dgr1819Z1819Z_c + h_c + hdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z1819Z1819Z,h2o_c + tag1819Z1819Z1819Z_c --> 12dgr1819Z1819Z_c + h_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL140_ISO,atp_c + coa_c + fa1_c --> amp_c + fa1coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL150_anteiso,atp_c + coa_c + fa4_c --> amp_c + fa4coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL160_ISO,atp_c + coa_c + fa6_c --> amp_c + fa6coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL170_ISO,atp_c + coa_c + fa11_c --> amp_c + fa11coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL170_anteiso,atp_c + coa_c + fa12_c --> amp_c + fa12coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL180_2,atp_c + coa_c + ocdca_c --> amp_c + ppi_c + strcoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+2AGPEAT140,2agpe140_c + atp_c + ttdca_c --> amp_c + pe140_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPEAT160,2agpe160_c + atp_c + hdca_c --> amp_c + pe160_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPGAT161,2agpg161_c + atp_c + hdcea_c --> amp_c + pg161_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+3OAR140,3omrsACP_c + h_c + nadph_c --> 3hmrsACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR80,3ooctACP_c + h_c + nadph_c --> 3hoctACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+AACPS1,ACP_c + atp_c + ttdca_c --> amp_c + myrsACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+AACPS3,ACP_c + atp_c + hdca_c --> amp_c + palmACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+AACPS4,ACP_c + atp_c + hdcea_c --> amp_c + hdeACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+AACPS7,ACP_c + atp_c + ddca_c --> amp_c + ddcaACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+ACS,ac_c + atp_c + coa_c --> accoa_c + amp_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+ALCD22xim,2mbald_m + h_m + nadh_m --> 2mbtoh_m + nad_m,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD23xi,2mppal_c + h_c + nadh_c --> ibutoh_c + nad_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD23xim,2mppal_m + h_m + nadh_m --> ibutoh_m + nad_m,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD26xi,h_c + id3acald_c + nadh_c --> ind3eth_c + nad_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD2irm,acald_m + h_m + nadh_m --> etoh_m + nad_m,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+FACOAL182,atp_c + coa_c + ocdcya_c --> amp_c + ocdycacoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+GCC2bim,alpam_m + thf_m --> dhlam_m + mlthf_m + nh4_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+GCCam,gly_m + h_m + lpro_m --> alpro_m + co2_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+GCCbim,alpro_m + thf_m --> dhlpro_m + mlthf_m + nh4_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+HEMEOMOm,hemeO_m + nadh_m + o2_m --> h2o_m + hemeA_m + nad_m,['TcCLB.421057.10:mRNA-p1'],1000.0,0.0
+PI3P5K_SC,atp_c + 0.01 ptd3ino_SC_c --> adp_c + h_c + 0.01 ptd135bp_SC_c,['TcCLB.505919.31:pseudogenic_transcript-p1'],1000.0,0.0
+ALCD2y,etoh_c + nadp_c --> acald_c + h_c + nadph_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+FE3abc,atp_c + fe3_e + h2o_c --> adp_c + fe3_c + h_c + pi_c,"['TcCLB.457101.30:mRNA-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+FACOAL80,atp_c + coa_c + octa_c --> amp_c + occoa_c + ppi_c,['TcCLB.494675.10:mRNA-p1'],1000.0,0.0
+DAGAH16018111Z,12dgr16018111Z_c + h2o_c --> h_c + mag160_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+DAGAH18111Z18111Z,12dgr18111Z18111Z_c + h2o_c --> h_c + mag18111Z_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1601819Z18111Z,h2o_c + tag1601819Z18111Z_c --> 12dgr1601819Z_c + h_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1601819Z1835Z9Z12Z,h2o_c + tag1601819Z1835Z9Z12Z_c --> 12dgr1601819Z_c + h_c + pa_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1801819Z180,h2o_c + tag1801819Z180_c --> 12dgr1801819Z_c + h_c + ocdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z18111Z160,h2o_c + tag18111Z18111Z160_c --> 12dgr18111Z18111Z_c + h_c + hdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z18111Z18111Z,h2o_c + tag18111Z18111Z18111Z_c --> 12dgr18111Z18111Z_c + h_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z1819Z160,h2o_c + tag18111Z1819Z160_c --> 12dgr18111Z1819Z_c + h_c + hdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z1819Z18111Z,h2o_c + tag18111Z1819Z18111Z_c --> 12dgr18111Z1819Z_c + h_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z18111Z1819Z,h2o_c + tag1819Z18111Z1819Z_c --> 12dgr1819Z18111Z_c + h_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z1819Z180,h2o_c + tag1819Z1819Z180_c --> 12dgr1819Z1819Z_c + h_c + ocdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z1819Z1835Z9Z12Z,h2o_c + tag1819Z1819Z1835Z9Z12Z_c --> 12dgr1819Z1819Z_c + h_c + pa_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+CA2abc1,atp_c + ca2_c + h2o_c --> adp_c + ca2_e + h_c + pi_c,['TcCLB.505763.19:mRNA-p1'],1000.0,0.0
+FACOAL171_anteiso,atp_c + coa_c + fa10_c --> amp_c + fa10coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+2AGPEAT141,2agpe141_c + atp_c + ttdcea_c --> amp_c + pe141_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPGAT160,2agpg160_c + atp_c + hdca_c --> amp_c + pg160_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+3OAR121,3ocddec5eACP_c + h_c + nadph_c --> 3hcddec5eACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR160,3opalmACP_c + h_c + nadph_c --> 3hpalmACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR180,3ooctdACP_c + h_c + nadph_c --> 3hoctaACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+GP4GH,gp4g_c + h2o_c --> 2.0 gdp_c + 2.0 h_c,['TcCLB.504411.30:mRNA-p1'],1000.0,0.0
+TRPTRS,atp_c + trnatrp_c + trp__L_c --> amp_c + ppi_c + trptrna_c,"['TcCLB.509963.30:pseudogenic_transcript-p1', 'TcCLB.510779.10:pseudogenic_transcript-p1']",1000.0,0.0
+ALCD22xi,2mbald_c + h_c + nadh_c --> 2mbtoh_c + nad_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD22yi,2mbald_c + h_c + nadph_c --> 2mbtoh_c + nadp_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD25yi,h_c + nadph_c + pacald_c --> 2phetoh_c + nadp_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+FACOAL161,atp_c + coa_c + hdcea_c --> amp_c + hdcoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+GCC2am,gly_m + h_m + lpam_m --> alpam_m + co2_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+THFATm,h2o_m + methf_m --> 5fthf_m + h_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL1831,atp_c + coa_c + lnlncg_c --> amp_c + lnlncgcoa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+CACOAL,atp_c + ca_c + coa_c --> amp_c + cacoa_c + h_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+DAGAH1819Z18111Z,12dgr1819Z18111Z_c + h2o_c --> h_c + mag1819Z_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL181_1,atp_c + coa_c + ocdce9a_c --> amp_c + ocdce9coa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+TAGAH16018111Z180,h2o_c + tag16018111Z180_c --> 12dgr16018111Z_c + h_c + ocdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH16018111Z1845Z9Z12Z15Z,h2o_c + tag16018111Z1845Z9Z12Z15Z_c --> 12dgr16018111Z_c + ca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1601819Z160,h2o_c + tag1601819Z160_c --> 12dgr1601819Z_c + h_c + hdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1601819Z180,h2o_c + tag1601819Z180_c --> 12dgr1601819Z_c + h_c + ocdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1801819Z1835Z9Z12Z,h2o_c + tag1801819Z1835Z9Z12Z_c --> 12dgr1801819Z_c + h_c + pa_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1801819Z1845Z9Z12Z15Z,h2o_c + tag1801819Z1845Z9Z12Z15Z_c --> 12dgr1801819Z_c + ca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z1819Z1835Z9Z12Z,h2o_c + tag18111Z1819Z1835Z9Z12Z_c --> 12dgr18111Z1819Z_c + h_c + pa_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z1819Z1845Z9Z12Z15Z,h2o_c + tag18111Z1819Z1845Z9Z12Z15Z_c --> 12dgr18111Z1819Z_c + ca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z18111Z180,h2o_c + tag1819Z18111Z180_c --> 12dgr1819Z18111Z_c + h_c + ocdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z1819Z18111Z,h2o_c + tag1819Z1819Z18111Z_c --> 12dgr1819Z1819Z_c + h_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+GLYDHD,gly_m + lpro_m --> alpro_m + co2_m,['TcCLB.506349.40:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL161_ISO,atp_c + coa_c + fa5_c --> amp_c + fa5coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+2AGPEAT120,2agpe120_c + atp_c + ddca_c --> amp_c + pe120_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPEAT161,2agpe161_c + atp_c + hdcea_c --> amp_c + pe161_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPEAT180,2agpe180_c + atp_c + ocdca_c --> amp_c + pe180_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPEAT181,2agpe181_c + atp_c + ocdcea_c --> amp_c + pe181_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPGAT140,2agpg140_c + atp_c + ttdca_c --> amp_c + pg140_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+2AGPGAT181,2agpg181_c + atp_c + ocdcea_c --> amp_c + pg181_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+3OAR100,3odecACP_c + h_c + nadph_c --> 3hdecACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR181,3ocvac11eACP_c + h_c + nadph_c --> 3hcvac11eACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR40,actACP_c + h_c + nadph_c --> 3haACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+3OAR60,3ohexACP_c + h_c + nadph_c --> 3hhexACP_c + nadp_c,['TcCLB.510785.20:pseudogenic_transcript-p1'],1000.0,0.0
+AACPS2,ACP_c + atp_c + ttdcea_c --> amp_c + ppi_c + tdeACP_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+AACPS8,ACP_c + atp_c + dca_c --> amp_c + dcaACP_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+AP4AH,ap4a_c + h2o_c --> 2.0 adp_c + 2.0 h_c,['TcCLB.504411.30:mRNA-p1'],1000.0,0.0
+SUCBZL,atp_c + coa_c + sucbz_c --> amp_c + ppi_c + sbzcoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+TYRTRS,atp_c + trnatyr_c + tyr__L_c --> amp_c + ppi_c + tyrtrna_c,['TcCLB.510779.10:pseudogenic_transcript-p1'],1000.0,0.0
+ACtr,ac_e --> ac_c,['TcCLB.505757.20:mRNA-p1'],1000.0,0.0
+ALCD24xi,3mbald_c + h_c + nadh_c --> iamoh_c + nad_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD24xim,3mbald_m + h_m + nadh_m --> iamoh_m + nad_m,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD25xi,h_c + nadh_c + pacald_c --> 2phetoh_c + nad_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD25xim,h_m + nadh_m + pacald_m --> 2phetoh_m + nad_m,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ALCD2ir,acald_c + h_c + nadh_c --> etoh_c + nad_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+ATPS,atp_c + h2o_c --> adp_c + h_e + pi_c,['TcCLB.505763.19:mRNA-p1'],1000.0,0.0
+FACOAL140,atp_c + coa_c + ttdca_c --> amp_c + ppi_c + tdcoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL141,atp_c + coa_c + ttdcea_c --> amp_c + ppi_c + tdecoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL160,atp_c + coa_c + hdca_c --> amp_c + pmtcoa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+FACOAL181,atp_c + coa_c + ocdcea_c --> amp_c + odecoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+GCCcm,dhlpro_m + nad_m --> h_m + lpro_m + nadh_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+GLYCLm,gly_m + nad_m + thf_m --> co2_m + mlthf_m + nadh_m + nh4_m,['TcCLB.505919.70:pseudogenic_transcript-p1'],1000.0,0.0
+PI4P5K_SC,atp_c + 0.01 ptd4ino_SC_c --> adp_c + h_c + 0.01 ptd145bp_SC_c,['TcCLB.505919.31:pseudogenic_transcript-p1'],1000.0,0.0
+FE2abc,atp_c + fe2_e + h2o_c --> adp_c + fe2_c + h_c + pi_c,"['TcCLB.457101.30:mRNA-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+ATPS1,atp_c + h2o_c + h_c --> adp_c + 2.0 h_e + pi_c,['TcCLB.505763.19:mRNA-p1'],1000.0,0.0
+ALDD1,fald_c + h2o_c + nad_c --> for_c + 2.0 h_c + nadh_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+FACOAL1832,atp_c + coa_c + lnlnca_c --> amp_c + lnlncacoa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+ALCD20y,2ppoh_c + nadp_c --> acetone_c + h_c + nadph_c,['TcCLB.504339.19:mRNA-p1'],1000.0,0.0
+PACOAL,atp_c + coa_c + pa_c --> amp_c + pacoa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+DAGAH1601819Z,12dgr1601819Z_c + h2o_c --> h_c + mag160_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+DAGAH18111Z1819Z,12dgr18111Z1819Z_c + h2o_c --> h_c + mag18111Z_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+DAGAH1819Z1819Z,12dgr1819Z1819Z_c + h2o_c --> h_c + mag1819Z_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL180_1,atp_c + coa_c + ocdca_c --> amp_c + ocdccoa_c + ppi_c,"['TcCLB.494675.10:mRNA-p1', 'TcCLB.506261.10:mRNA-p1']",1000.0,0.0
+TAGAH16018111Z160,h2o_c + tag16018111Z160_c --> 12dgr16018111Z_c + h_c + hdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH16018111Z1819Z,h2o_c + tag16018111Z1819Z_c --> 12dgr16018111Z_c + h_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1601819Z1819Z,h2o_c + tag1601819Z1819Z_c --> 12dgr1601819Z_c + h_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1601819Z1845Z9Z12Z15Z,h2o_c + tag1601819Z1845Z9Z12Z15Z_c --> 12dgr1601819Z_c + ca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1801819Z160,h2o_c + tag1801819Z160_c --> 12dgr1801819Z_c + h_c + hdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1801819Z18111Z,h2o_c + tag1801819Z18111Z_c --> 12dgr1801819Z_c + h_c + ocdcea_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z18111Z1835Z9Z12Z,h2o_c + tag18111Z18111Z1835Z9Z12Z_c --> 12dgr18111Z18111Z_c + h_c + pa_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z18111Z1845Z9Z12Z15Z,h2o_c + tag18111Z18111Z1845Z9Z12Z15Z_c --> 12dgr18111Z18111Z_c + ca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z1819Z180,h2o_c + tag18111Z1819Z180_c --> 12dgr18111Z1819Z_c + h_c + ocdca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH18111Z1819Z1819Z,h2o_c + tag18111Z1819Z1819Z_c --> 12dgr18111Z1819Z_c + h_c + ocdce9a_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+TAGAH1819Z1819Z1845Z9Z12Z15Z,h2o_c + tag1819Z1819Z1845Z9Z12Z15Z_c --> 12dgr1819Z1819Z_c + ca_c,['TcCLB.505615.20:pseudogenic_transcript-p1'],1000.0,0.0
+FACOAL150_ISO,atp_c + coa_c + fa3_c --> amp_c + fa3coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL171_ISO,atp_c + coa_c + fa9_c --> amp_c + fa9coa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+CAATPS,atp_c + 2.0 ca2_c + h2o_c --> adp_c + 2.0 ca2_e + h_e + pi_c,[],1000.0,0.0
+HMR_0180,atp_c + coa_c + dca_c --> amp_c + dcacoa_c + ppi_c,[],1000.0,0.0
+TTDCAFATPc,atp_c + coa_c + ttdca_e --> amp_c + ppi_c + tdcoa_c,[],1000.0,0.0
+FACOAL_160_m,atp_m + coa_m + hdca_m --> amp_m + pmtcoa_m + ppi_m,[],1000.0,0.0
+CA2abc,atp_c + ca2_e + h2o_c --> adp_c + ca2_c + h_c + pi_c,[],1000.0,0.0
+GTHRDt,atp_c + gthrd_c + h2o_c --> adp_c + gthrd_m + h_c + pi_c,[],1000.0,0.0
+PALFATPtc,atp_c + coa_c + hdca_e --> amp_c + pmtcoa_c + ppi_c,[],1000.0,0.0
+RE2912M,atp_m + coa_m + hdcea_m --> amp_m + hdcoa_m + ppi_m,[],1000.0,0.0
+TCHOLAt3,atp_c + h2o_c + tchola_c --> adp_c + h_c + pi_c + tchola_e,[],1000.0,0.0
+CAATPS_1,atp_c + ca2_c + h2o_c --> adp_c + ca2_e + h_e + pi_c,[],1000.0,0.0
+NIabc,atp_c + h2o_c + ni2_e --> adp_c + h_c + ni2_c + pi_c,[],1000.0,0.0
+VALTRSm,atp_m + trnaval_m + val__L_m --> amp_m + ppi_m + valtrna_m,[],1000.0,0.0
+TCHOLABCtc,atp_c + h2o_c + tchola_e --> adp_c + h_c + pi_c + tchola_c,[],1000.0,0.0
+MG2abc,atp_c + h2o_c + mg2_e --> adp_c + h_c + mg2_c + pi_c,[],1000.0,0.0
+r1530,atp_c + gthrd_c + h2o_c --> adp_c + gthrd_e + h_c + pi_c,[],1000.0,0.0
+CYSabc,atp_c + cys__L_e + h2o_c --> adp_c + cys__L_c + h_c + pi_c,[],1000.0,0.0
+HMR_0188,atp_c + coa_c + ddca_c --> amp_c + ddcacoa_c + ppi_c,[],1000.0,0.0
+PA161abcppc,atp_c + h2o_c + pa161_c --> adp_c + h_c + pa161_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PS180abcppc,atp_c + h2o_c + ps180_c --> adp_c + h_c + pi_c + ps180_e,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+PGP120abcppc,atp_c + h2o_c + pgp120_c --> adp_c + h_c + pgp120_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PG120abcppc,atp_c + h2o_c + pg120_c --> adp_c + h_c + pg120_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PGP141abcppc,atp_c + h2o_c + pgp141_c --> adp_c + h_c + pgp141_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PG140abcppc,atp_c + h2o_c + pg140_c --> adp_c + h_c + pg140_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PG181abcppc,atp_c + h2o_c + pg181_c --> adp_c + h_c + pg181_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+FACOAL100t2ppc,atp_c + coa_c + dca_e + h_e --> amp_c + dcacoa_c + h_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+LIPACabcppc,atp_c + h2o_c + lipa_cold_c --> adp_c + h_c + lipa_cold_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PE141abcppc,atp_c + h2o_c + pe141_c --> adp_c + h_c + pe141_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+FACOAL161t2ppc,atp_c + coa_c + h_e + hdcea_e --> amp_c + h_c + hdcoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+LIPAabcppc,atp_c + h2o_c + lipa_c --> adp_c + h_c + lipa_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+COLIPAabcppc,atp_c + colipa_c + h2o_c --> adp_c + colipa_e + h_c + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+FACOAL180t2ppc,atp_c + coa_c + h_e + ocdca_e --> amp_c + h_c + ppi_c + stcoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+CHLDA2tuc,atp_c + h2o_c --> adp_c + chlld_c + h_c + pi_c,['TcCLB.457101.30:mRNA-p1'],1000.0,0.0
+GM1LIPAabcppc,atp_c + h2o_c + hghhlipa_c --> adp_c + h_c + hghhlipa_e + pi_c,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+PE161abcppc,atp_c + h2o_c + pe161_c --> adp_c + h_c + pe161_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PG161abcppc,atp_c + h2o_c + pg161_c --> adp_c + h_c + pg161_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PGP161abcppc,atp_c + h2o_c + pgp161_c --> adp_c + h_c + pgp161_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+GM2LIPAabcppc,atp_c + h2o_c + hghhlipan_c --> adp_c + h_c + hghhlipan_e + pi_c,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+PGP180abcppc,atp_c + h2o_c + pgp180_c --> adp_c + h_c + pgp180_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PA120abcppc,atp_c + h2o_c + pa120_c --> adp_c + h_c + pa120_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PGP160abcppc,atp_c + h2o_c + pgp160_c --> adp_c + h_c + pgp160_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+K2L4Aabcppc,atp_c + h2o_c + kdo2lipid4_c --> adp_c + h_c + kdo2lipid4_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PA180abcppc,atp_c + h2o_c + pa180_c --> adp_c + h_c + pa180_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PGP181abcppc,atp_c + h2o_c + pgp181_c --> adp_c + h_c + pgp181_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PA181abcppc,atp_c + h2o_c + pa181_c --> adp_c + h_c + pa181_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PS181abcppc,atp_c + h2o_c + ps181_c --> adp_c + h_c + pi_c + ps181_e,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+AACP1819ZSc,ACP_c + atp_c + ocdce9a_c --> amp_c + h_c + octe9ACP_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL140t2ppc,atp_c + coa_c + h_e + ttdca_e --> amp_c + h_c + ppi_c + tdcoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+AACPS1_1c,ACP_c + atp_c + ttdca_c --> amp_c + h_c + myrsACP_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL141t2ppc,atp_c + coa_c + h_e + ttdcea_e --> amp_c + h_c + ppi_c + tdecoa_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+AACPS3_1c,ACP_c + atp_c + hdca_c --> amp_c + h_c + palmACP_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL160t2ppc,atp_c + coa_c + h_e + hdca_e --> amp_c + h_c + pmtcoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+AACPS4_1c,ACP_c + atp_c + hdcea_c --> amp_c + h_c + hdeACP_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL181t2ppc,atp_c + coa_c + h_e + ocdcea_e --> amp_c + h_c + odecoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL60t2ppc,atp_c + coa_c + h_e + hxa_e --> amp_c + h_c + hxcoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+FACOAL120t2ppc,atp_c + coa_c + ddca_e + h_e --> amp_c + ddcacoa_c + h_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+PE120abcppc,atp_c + h2o_c + pe120_c --> adp_c + h_c + pe120_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+FACOAL80t2ppc,atp_c + coa_c + h_e + octa_e --> amp_c + h_c + occoa_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+PA141abcppc,atp_c + h2o_c + pa141_c --> adp_c + h_c + pa141_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PE180abcppc,atp_c + h2o_c + pe180_c --> adp_c + h_c + pe180_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PS120abcppc,atp_c + h2o_c + ps120_c --> adp_c + h_c + pi_c + ps120_e,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+PE181abcppc,atp_c + h2o_c + pe181_c --> adp_c + h_c + pe181_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PS160abcppc,atp_c + h2o_c + ps160_c --> adp_c + h_c + pi_c + ps160_e,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+AACPS5_1c,ACP_c + atp_c + ocdcea_c --> amp_c + h_c + octeACP_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+PA140abcppc,atp_c + h2o_c + pa140_c --> adp_c + h_c + pa140_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+AACPS6_1c,ACP_c + atp_c + ocdca_c --> amp_c + h_c + ocdcaACP_c + ppi_c,['TcCLB.506261.10:mRNA-p1'],1000.0,0.0
+PA160abcppc,atp_c + h2o_c + pa160_c --> adp_c + h_c + pa160_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PG141abcppc,atp_c + h2o_c + pg141_c --> adp_c + h_c + pg141_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PG180abcppc,atp_c + h2o_c + pg180_c --> adp_c + h_c + pg180_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PS141abcppc,atp_c + h2o_c + ps141_c --> adp_c + h_c + pi_c + ps141_e,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+PS161abcppc,atp_c + h2o_c + ps161_c --> adp_c + h_c + pi_c + ps161_e,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+PGP140abcppc,atp_c + h2o_c + pgp140_c --> adp_c + h_c + pgp140_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+PE140abcppc,atp_c + h2o_c + pe140_c --> adp_c + h_c + pe140_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+CHLDA1tuc,atp_c + h2o_c --> adp_c + chlld_c + h_c + pi_c,['TcCLB.457101.30:mRNA-p1'],1000.0,0.0
+PE160abcppc,atp_c + h2o_c + pe160_c --> adp_c + h_c + pe160_e + pi_c,"['TcCLB.506417.10:pseudogenic_transcript-p1', 'TcCLB.510785.10:mRNA-p1', 'TcCLB.506417.83:pseudogenic_transcript-p1']",1000.0,0.0
+PS140abcppc,atp_c + h2o_c + ps140_c --> adp_c + h_c + pi_c + ps140_e,['TcCLB.506417.10:pseudogenic_transcript-p1'],1000.0,0.0
+PG160abcppc,atp_c + h2o_c + pg160_c --> adp_c + h_c + pg160_e + pi_c,"['TcCLB.506417.83:pseudogenic_transcript-p1', 'TcCLB.506417.10:pseudogenic_transcript-p1']",1000.0,0.0
+generic_biomass,0.1364 ala__L_c + 0.1349 arg__L_c + 0.6245 asn__L_c + 0.2994 asp__L_c + 60.01 atp_c + 0.0674 cys__L_c + 0.1353 gln__L_c + 0.3505 glu__L_c + 0.1827 gly_c + 0.1063 his__L_c + 0.3566 ile__L_c + 0.3405 leu__L_c + 0.5124 lys__L_c + 0.1019 met__L_c + 0.1823 phe__L_c + 0.1085 pro__L_c + 0.3055 ser__L_c + 0.2045 thr__L_c + 0.02095 trp__L_c + 0.1379 tyr__L_c + 0.203 val__L_c --> 59.81 adp_c + biomass_c + 59.81 h_c + 59.806 pi_c,[],1000.0,0.0
+protein_bm,0.1364 alatrna_c + 0.1349 argtrna_c + 0.6245 asntrna_c + 0.2994 asptrna_c + 0.0674 cystrna_c + 0.1 fmettrna_c + 0.1353 glntrna_c + 0.3505 glutrna_c + 0.1827 glytrna_c + 0.1063 histrna_c + 0.3566 iletrna_c + 0.3405 leutrna_c + 0.5124 lystrna_c + 0.1019 mettrna_c + 0.1823 phetrna_c + 0.1085 protrna_c + 0.3055 sertrna_c + 0.2045 thrtrna_c + 0.02095 trptrna_c + 0.1379 tyrtrna_c + 0.203 valtrna_c --> bm_protein_c,[],1000.0,0.0
+Protein_t,bm_protein_c --> protein_e,[],1000.0,0.0
+DM_bm,biomass_c --> ,[],1000.0,0.0
+dgl_prod7,12dgr180_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod1,dag_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod4,12dgr141_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod5,12dgr160_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod2,12dgr120_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod6,12dgr161_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod8,12dgr181_c --> all_dgl_c,[],1000.0,0.0
+dgl_prod3,12dgr140_c --> all_dgl_c,[],1000.0,0.0
+lipid_bm,all_dgl_c --> bm_lipid_c,[],1000.0,0.0
+EX_cys__L_e,cys__L_e <=> ,[],1000.0,-1000.0
+EX_ddca_e,ddca_e <=> ,[],1000.0,-1000.0
+EX_fe3_e,fe3_e <=> ,[],1000.0,-1000.0
+EX_ttdca_e,ttdca_e <=> ,[],1000.0,-1000.0
+EX_ac_e,ac_e <=> ,[],1000.0,-1000.0
+EX_h_e,h_e <=> ,[],1000.0,-1000.0
+EX_lipa_cold_e,lipa_cold_e <=> ,[],1000.0,-1000.0
+EX_gthrd_e,gthrd_e <=> ,[],1000.0,-1000.0
+EX_mg2_e,mg2_e <=> ,[],1000.0,-1000.0
+EX_ocdcea_e,ocdcea_e <=> ,[],1000.0,-1000.0
+EX_kdo2lipid4_e,kdo2lipid4_e <=> ,[],1000.0,-1000.0
+EX_hdca_e,hdca_e <=> ,[],1000.0,-1000.0
+EX_hdcea_e,hdcea_e <=> ,[],1000.0,-1000.0
+EX_ocdca_e,ocdca_e <=> ,[],1000.0,-1000.0
+EX_ca2_e,ca2_e <=> ,[],1000.0,-1000.0
+EX_fe2_e,fe2_e <=> ,[],1000.0,-1000.0
+EX_tchola_e,tchola_e <=> ,[],1000.0,-1000.0
+EX_ni2_e,ni2_e <=> ,[],1000.0,-1000.0
+EX_dca_e,dca_e <=> ,[],1000.0,-1000.0
+EX_hxa_e,hxa_e <=> ,[],1000.0,-1000.0
+EX_colipa_e,colipa_e <=> ,[],1000.0,-1000.0
+EX_lipa_e,lipa_e <=> ,[],1000.0,-1000.0
+EX_octa_e,octa_e <=> ,[],1000.0,-1000.0
+EX_ttdcea_e,ttdcea_e <=> ,[],1000.0,-1000.0
+EX_pa161_e,pa161_e <=> ,[],1000.0,-1000.0
+EX_ps180_e,ps180_e <=> ,[],1000.0,-1000.0
+EX_pgp120_e,pgp120_e <=> ,[],1000.0,-1000.0
+EX_pg120_e,pg120_e <=> ,[],1000.0,-1000.0
+EX_pgp141_e,pgp141_e <=> ,[],1000.0,-1000.0
+EX_pg140_e,pg140_e <=> ,[],1000.0,-1000.0
+EX_pg181_e,pg181_e <=> ,[],1000.0,-1000.0
+EX_pe141_e,pe141_e <=> ,[],1000.0,-1000.0
+EX_hghhlipa_e,hghhlipa_e <=> ,[],1000.0,-1000.0
+EX_pe161_e,pe161_e <=> ,[],1000.0,-1000.0
+EX_pg161_e,pg161_e <=> ,[],1000.0,-1000.0
+EX_pgp161_e,pgp161_e <=> ,[],1000.0,-1000.0
+EX_hghhlipan_e,hghhlipan_e <=> ,[],1000.0,-1000.0
+EX_pgp180_e,pgp180_e <=> ,[],1000.0,-1000.0
+EX_pa120_e,pa120_e <=> ,[],1000.0,-1000.0
+EX_pgp160_e,pgp160_e <=> ,[],1000.0,-1000.0
+EX_pa180_e,pa180_e <=> ,[],1000.0,-1000.0
+EX_pgp181_e,pgp181_e <=> ,[],1000.0,-1000.0
+EX_pa181_e,pa181_e <=> ,[],1000.0,-1000.0
+EX_ps181_e,ps181_e <=> ,[],1000.0,-1000.0
+EX_pe120_e,pe120_e <=> ,[],1000.0,-1000.0
+EX_pa141_e,pa141_e <=> ,[],1000.0,-1000.0
+EX_pe180_e,pe180_e <=> ,[],1000.0,-1000.0
+EX_ps120_e,ps120_e <=> ,[],1000.0,-1000.0
+EX_pe181_e,pe181_e <=> ,[],1000.0,-1000.0
+EX_ps160_e,ps160_e <=> ,[],1000.0,-1000.0
+EX_pa140_e,pa140_e <=> ,[],1000.0,-1000.0
+EX_pa160_e,pa160_e <=> ,[],1000.0,-1000.0
+EX_pg141_e,pg141_e <=> ,[],1000.0,-1000.0
+EX_pg180_e,pg180_e <=> ,[],1000.0,-1000.0
+EX_ps141_e,ps141_e <=> ,[],1000.0,-1000.0
+EX_ps161_e,ps161_e <=> ,[],1000.0,-1000.0
+EX_pgp140_e,pgp140_e <=> ,[],1000.0,-1000.0
+EX_pe140_e,pe140_e <=> ,[],1000.0,-1000.0
+EX_pe160_e,pe160_e <=> ,[],1000.0,-1000.0
+EX_ps140_e,ps140_e <=> ,[],1000.0,-1000.0
+EX_pg160_e,pg160_e <=> ,[],1000.0,-1000.0
+EX_protein_e,protein_e <=> ,[],1000.0,-1000.0
+THRTHRARGt,h_e + thrthrarg_e --> h_c + thrthrarg_c,[],1000.0,0.0
+LYSPHEILEr,2.0 h2o_c + lyspheile_c --> ile__L_c + lys__L_c + phe__L_c,[],1000.0,0.0
+LGTHL,gthrd_c + mthgxl_c --> lgt__S_c,[],1000.0,0.0
+EX_lanost_e,lanost_e <=> ,[],1000.0,-1000.0
+PYDXO,2.0 h2o_c + nh4_c + 0.5 o2_c + pydx_c --> 2.0 h2o2_c + pydam_c,[],1000.0,0.0
+SPODM,2.0 h_c + 2.0 o2s_c --> h2o2_c + o2_c,[],1000.0,0.0
+EX_leuasnasp_e,leuasnasp_e <=> ,[],1000.0,-1000.0
+EX_ileprolys_e,ileprolys_e <=> ,[],1000.0,-1000.0
+GLNASNGLNr,glnasngln_c + 2.0 h2o_c --> asn__L_c + 2.0 gln__L_c,[],1000.0,0.0
+G3POc,dhap_c + h2o2_c --> glyc3p_c + o2_c,[],1000.0,0.0
+TMPt6,h_e + tmp_e --> h_c + tmp_c,[],1000.0,0.0
+EX_lanostest_SC_e,lanostest_SC_e <=> ,[],1000.0,-1000.0
+EX_thrthrarg_e,thrthrarg_e <=> ,[],1000.0,-1000.0
+ADPRIBt,adprib_e --> adprib_c,[],1000.0,0.0
+CHOLESTTDe,chsterol_c --> chsterol_e,[],1000.0,0.0
+SERPHELYSt,h_e + serphelys_e --> h_c + serphelys_c,[],1000.0,0.0
+NADHDH,3.0 h_c + nadh_c + q_c --> 2.0 h_e + nad_c + qh2_c,[],1000.0,0.0
+VALLEUPHEr,2.0 h2o_c + valleuphe_c --> leu__L_c + phe__L_c + val__L_c,[],1000.0,0.0
+EX_lysargleu_e,lysargleu_e <=> ,[],1000.0,-1000.0
+GHMT2r,ser__L_c + thf_c <=> gly_c + h2o_c + mlthf_c,[],1000.0,-1000.0
+EX_aspvalasn_e,aspvalasn_e <=> ,[],1000.0,-1000.0
+ILEPROLYSt,h_e + ileprolys_e --> h_c + ileprolys_c,[],1000.0,0.0
+LEUASNASPt,h_e + leuasnasp_e --> h_c + leuasnasp_c,[],1000.0,0.0
+CYSTBLc,h2s_c + h_c + nh4_c + pyr_c --> cys__L_c + h2o_c,[],1000.0,0.0
+ALAASNLEUt,alaasnleu_e + h_e --> alaasnleu_c + h_c,[],1000.0,0.0
+EX_adprib_e,adprib_e <=> ,[],1000.0,-1000.0
+ADK2,amp_c + pppi_c --> adp_c + ppi_c,[],1000.0,0.0
+ALALYSTHRr,alalysthr_c + 2.0 h2o_c --> ala__L_c + lys__L_c + thr__L_c,[],1000.0,0.0
+CYSLY3,cys__L_c + h_c + nadph_c --> ala__L_c + h2s_c + nadp_c,[],1000.0,0.0
+IDPhc,h2o_c + ppi_c --> 2.0 pi_c,[],1000.0,0.0
+CYOR3m,2.0 ficytcc_c + h_c + mql7_c --> 2.0 focytcc_c + 3.0 h_e + mqn7_c,[],1000.0,0.0
+GTHRDt2,gthrd_e --> gthrd_c,[],1000.0,0.0
+ATPH1e,atp_e + 2.0 h2o_e --> amp_e + 2.0 h_e + 2.0 pi_e,[],1000.0,0.0
+ARGSERSERr,argserser_c + 2.0 h2o_c --> arg__L_c + 2.0 ser__L_c,[],1000.0,0.0
+GLNASNGLNt,glnasngln_e + h_e --> glnasngln_c + h_c,[],1000.0,0.0
+ILEASNHISr,2.0 h2o_c + ileasnhis_c --> asn__L_c + his__L_c + ile__L_c,[],1000.0,0.0
+CYOO3,2.0 focytcc_c + 6.0 h_c + 0.5 o2_c --> 2.0 ficytcc_c + h2o_c + 4.0 h_e,[],1000.0,0.0
+HEXCt,hexc_e <=> hexc_c,[],1000.0,-1000.0
+EX_metmetile_e,metmetile_e <=> ,[],1000.0,-1000.0
+BC10_new,2.0 ficytcc553_c + 2.0 h_c + mql6_c --> 2.0 focytcc553_c + 4.0 h_e + mqn6_c,[],1000.0,0.0
+CYSt2r,cys__L_e + h_e <=> cys__L_c + h_c,[],1000.0,-1000.0
+LDH_D,lac__D_c + nad_c --> h_c + nadh_c + pyr_c,[],1000.0,0.0
+CYOO_HP,4.0 focytcc553_c + 5.98 h_c + o2_c --> 4.0 ficytcc553_c + 1.99 h2o_c + 2.0 h_e + 0.005 o2s_c,[],1000.0,0.0
+ILEASNHISt,h_e + ileasnhis_e --> h_c + ileasnhis_c,[],1000.0,0.0
+LYSLYSLYSt,h_e + lyslyslys_e --> h_c + lyslyslys_c,[],1000.0,0.0
+METMETILEt,h_e + metmetile_e --> h_c + metmetile_c,[],1000.0,0.0
+RPI,r5p_c <=> ru5p__D_c,[],1000.0,-1000.0
+FERIRDe,2.0 fe3_e + qh2_c --> 2.0 fe2_e + 2.0 h_e + q_c,[],1000.0,0.0
+EX_alaasnleu_e,alaasnleu_e <=> ,[],1000.0,-1000.0
+ARTFR52_cho,0.625 coa_m + hexccoa_c --> 1.625 R5coa_cho_c,[],1000.0,0.0
+LYSARGLEUt,h_e + lysargleu_e --> h_c + lysargleu_c,[],1000.0,0.0
+PRUK,atp_c + ru5p__D_c --> adp_c + h_c + rb15bp_c,[],1000.0,0.0
+EX_trpthrile_e,trpthrile_e <=> ,[],1000.0,-1000.0
+r2136,na1_e + pi_e --> na1_c + pi_c,[],1000.0,0.0
+EX_argserser_e,argserser_e <=> ,[],1000.0,-1000.0
+TRPTHRILEr,2.0 h2o_c + trpthrile_c --> ile__L_c + thr__L_c + trp__L_c,[],1000.0,0.0
+ENO,2pg_c <=> h2o_c + pep_c,[],1000.0,-1000.0
+EX_lyslyslys_e,lyslyslys_e <=> ,[],1000.0,-1000.0
+GTHRDH_syn,gthrd_c + h2o_c --> cgly_c + glu__L_c,[],1000.0,0.0
+FATP1t,hdca_c + na1_c --> hdca_e + na1_e,[],1000.0,0.0
+ASPVALASNr,aspvalasn_c + 2.0 h2o_c --> asn__L_c + asp__L_c + val__L_c,[],1000.0,0.0
+EX_ileasnhis_e,ileasnhis_e <=> ,[],1000.0,-1000.0
+AMPt,amp_e --> amp_c,[],1000.0,0.0
+PDYXPT_c,pydam_c + pyr_c --> ala__L_c + pydx_c,[],1000.0,0.0
+METMETILEr,2.0 h2o_c + metmetile_c --> ile__L_c + 2.0 met__L_c,[],1000.0,0.0
+GLYOX_2,h2o_c + lgt__S_c --> gthrd_c + h_c + lac__D_c + mthgxl_c,[],1000.0,0.0
+ASNTYRTHRt,asntyrthr_e + h_e --> asntyrthr_c + h_c,[],1000.0,0.0
+NDH_1,3.0 h_c + mqn6_c + nadph_c --> 2.0 h_e + mql6_c + nadp_c,[],1000.0,0.0
+THRTHRARGr,2.0 h2o_c + thrthrarg_c --> arg__L_c + 2.0 thr__L_c,[],1000.0,0.0
+EX_atp_e,atp_e <=> ,[],1000.0,-1000.0
+LEUASNASPr,2.0 h2o_c + leuasnasp_c --> asn__L_c + asp__L_c + leu__L_c,[],1000.0,0.0
+G3PD4,glyc3p_c + mqn7_c --> dhap_c + mql7_c,[],1000.0,0.0
+CHSTEROLt,atp_c + chsterol_c + h2o_c <=> adp_c + chsterol_e + h_c + pi_c,[],1000.0,-1000.0
+ARGSERSERt,argserser_e + h_e --> argserser_c + h_c,[],1000.0,0.0
+EX_serphelys_e,serphelys_e <=> ,[],1000.0,-1000.0
+ILEPROLYSr,2.0 h2o_c + ileprolys_c --> ile__L_c + lys__L_c + pro__L_c,[],1000.0,0.0
+H2Ot,h2o_e <=> h2o_c,[],1000.0,-1000.0
+RBPC,co2_c + h2o_c + rb15bp_c --> 2.0 3pg_c + 2.0 h_c,[],1000.0,0.0
+LYSLYSLYSr,2.0 h2o_c + lyslyslys_c --> 3.0 lys__L_c,[],1000.0,0.0
+LYSPHEILEt,h_e + lyspheile_e --> h_c + lyspheile_c,[],1000.0,0.0
+EX_asntyrthr_e,asntyrthr_e <=> ,[],1000.0,-1000.0
+EX_alalysthr_e,alalysthr_e <=> ,[],1000.0,-1000.0
+TRPTHRILEt,h_e + trpthrile_e --> h_c + trpthrile_c,[],1000.0,0.0
+EX_valleuphe_e,valleuphe_e <=> ,[],1000.0,-1000.0
+ACChex,coa_c + h_c + hexc_c --> h2o_c + hexccoa_c,[],1000.0,0.0
+ALALYSTHRt,alalysthr_e + h_e --> alalysthr_c + h_c,[],1000.0,0.0
+SERPHELYSr,2.0 h2o_c + serphelys_c --> lys__L_c + phe__L_c + ser__L_c,[],1000.0,0.0
+EX_lyspheile_e,lyspheile_e <=> ,[],1000.0,-1000.0
+TMPHi,h2o_c + tmp_c --> h_c + pppi_c,[],1000.0,0.0
+RTOT5_cho,R5coa_cho_c --> Rtotalcoa_c,[],1000.0,0.0
+EX_tmp_e,tmp_e <=> ,[],1000.0,-1000.0
+EX_glnasngln_e,glnasngln_e <=> ,[],1000.0,-1000.0
+ASNTYRTHRr,asntyrthr_c + 2.0 h2o_c --> asn__L_c + thr__L_c + tyr__L_c,[],1000.0,0.0
+VALLEUPHEt,h_e + valleuphe_e --> h_c + valleuphe_c,[],1000.0,0.0
+ADK1,amp_c + atp_c <=> 2.0 adp_c,[],1000.0,-1000.0
+LANOSTESTH_SCe,h2o_e + 0.01 lanostest_SC_e --> h_e + 0.02 hdca_e + 0.655 hdcea_e + 0.01 hexc_e + 0.01 lanost_e + 0.03 ocdca_e + 0.27 ocdcea_e + 0.015 ttdca_e,[],1000.0,0.0
+LYSARGLEUr,2.0 h2o_c + h_c + lysargleu_c --> arg__L_c + leu__L_c + lys__L_c,[],1000.0,0.0
+COAtmt,coa_m <=> coa_c,[],1000.0,-1000.0
+ASPTA6,ala__L_c + oaa_c --> asp__L_c + pyr_c,[],1000.0,0.0
+PPC,co2_c + h2o_c + pep_c --> h_c + oaa_c + pi_c,[],1000.0,0.0
+ADPRDP,adprib_c + h2o_c --> amp_c + 2.0 h_c + r5p_c,[],1000.0,0.0
+FACOAE160,h2o_c + pmtcoa_c --> coa_c + h_c + hdca_c,[],1000.0,0.0
+PGMfc,3pg_c --> 2pg_c,[],1000.0,0.0
+HDCAt,hdca_e <=> hdca_c,[],1000.0,-1000.0
+AMPTASECG,cgly_c + h2o_c --> cys__L_c + gly_c,[],1000.0,0.0
+ALAASNLEUr,alaasnleu_c + 2.0 h2o_c --> ala__L_c + asn__L_c + leu__L_c,[],1000.0,0.0
+ARTPLM1,Rtotalcoa_c --> pmtcoa_c,[],1000.0,0.0
+ASPVALASNt,aspvalasn_e + h_e --> aspvalasn_c + h_c,[],1000.0,0.0
