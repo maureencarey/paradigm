@@ -5,6 +5,9 @@ import numpy as np
 import glob
 from cobra.core import Gene, Metabolite, Reaction
 from datetime import datetime
+import sys
+sys.path.append(os.path.abspath("/home/mac9jc/paradigm/"))
+import helper_functions as hf
 
 day = datetime.now().strftime('%d_%m_%Y')
 
@@ -47,6 +50,20 @@ for species, imported_mets in imported_mets_dict.items():
             presence_matrix_of_transporters.loc[met,species] = 0
 presence_matrix_of_transporters.to_csv("/home/mac9jc/paradigm/data/results/transporter_presence_before_gapfilling_{}.csv".format(day))
 
+# intracellular transport
+intracel_transport_dict = dict()
+for species, model in model_dict.items():
+    intracel_transport = list()
+    for rxn in model.reactions:
+        compartments = list()
+        reactants = set([hf.met_ids_without_comp(model,x.id) for x in rxn.reactants])
+        products = set([hf.met_ids_without_comp(model,x.id) for x in rxn.products])
+        compartments.extend([m.id[:-2] for m in rxn.metabolites])
+        if len(reactants.union(products)) == len(reactants.intersection(products)):
+            if '_e' not in compartments:
+                intracel_transport.extend([rxn.id])
+    intracel_transport_dict[species] = intracel_transport
+
 # get matrix of reactions
 reactions_in_model = dict()
 list_o_reactions = list()
@@ -56,6 +73,7 @@ for species, model in model_dict.items():
 list_o_reactions = [val for sublist in list_o_reactions for val in sublist]
 list_o_reactions = list(set(list_o_reactions))
 presence_matrix_of_reactions = pd.DataFrame(index = list_o_reactions,columns=model_dict.keys())
+transport_matrix_of_reactions = pd.DataFrame(index = list_o_reactions,columns=model_dict.keys())
 for species, rxn_list in reactions_in_model.items():
     for rxn in rxn_list:
         if rxn in list_o_reactions:
@@ -63,3 +81,10 @@ for species, rxn_list in reactions_in_model.items():
         else:
             presence_matrix_of_reactions.loc[rxn,species] = 0
 presence_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/results/rxn_presence_before_gapfilling_{}.csv".format(day))
+for species, rxn_list in intracel_transport_dict.items():
+    for rxn in rxn_list:
+        if rxn in list_o_reactions:
+            transport_matrix_of_reactions.loc[rxn,species] = 1
+        else:
+            transport_matrix_of_reactions.loc[rxn,species] = 0
+transport_matrix_of_reactions.to_csv("/home/mac9jc/paradigm/data/results/intracel_transporter_presence_before_gapfilling_{}.csv".format(day))
