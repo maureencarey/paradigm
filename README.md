@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/160858734.svg)](https://zenodo.org/badge/latestdoi/160858734)
+
 # ParaDIGM: Parasite Database Including Genome-scale metabolic Models 
 
 Code availability for the manuscript titled "Comparative analyses of parasites 
