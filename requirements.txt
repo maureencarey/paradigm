@@ -1,7 +1,7 @@
 cobra==0.14.1
 depinfo==1.4.0
 future==0.17.1
-mpmath==1.1.0
+mpmath==1.3.0
 numpy==1.15.4
 optlang==1.4.3
 pandas==0.23.4
